@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <li><a href="contacts.html">Contacts</a></li>
                 <div class="divider"></div>
                 <div class="buttons-burger-menu">
-                    <a class="action-button pro " href="#">Welcome!</a>
+                    <a class="action-button-pr " href="#">Welcome!</a>
                     <a class="action-button" href="#">A propos</a>
                 </div>
             </ul>
@@ -181,7 +181,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </form>
         </div>
     </div>
-J'a
+
 
     <!--burgerMenuButton-->
 

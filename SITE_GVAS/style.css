@@ -130,10 +130,10 @@ header {
 }
 
 .burger-menu li {
-    padding: 0.7rem;
+    padding: 0.5rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: 0;
+    justify-content: 0;
 
 }
 
@@ -141,15 +141,14 @@ header {
     height: 1px;
     background: #fff;
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: -30px;
     margin-bottom: 1rem;
 }
 
 
 
 .burger-menu .action-button {
-    width: 80%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -158,8 +157,7 @@ header {
 .buttons-burger-menu {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin-left: -5px;
     gap: 10px;
 }
 
@@ -487,7 +485,7 @@ header {
 .options {
     position: absolute;
     top: 0;
-    left: 100%;
+    left: 28%;
     /* 👉 colle à droite du bouton */
     margin-left: 10px;
     /* petit espace */
@@ -552,7 +550,87 @@ input:focus {
     /* espace entre bouton et texte */
 }
 
-
 .radio-group {
     margin-bottom: 10px;
 }
+
+
+
+/*pour la première page*/
+
+@media (max-width: 1366px) {
+    .table {
+        margin-top: 30px;
+    }
+
+    .buttons {
+        position: relative;
+        left: 90px;
+    }
+
+    .links {
+        position: relative;
+        left: 50px;
+    }
+
+    .btn-primary {
+        margin-left: 1px;
+    }
+}
+
+@media (max-width: 820px) {
+    .table {
+        margin-top: 30px;
+        margin-left: 100px;
+    }
+
+    .table1 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .table2 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .btn-primary {
+        margin-left: -40px;
+    }
+
+    .burger-menu-button {
+        background: #ccc900;
+        margin-right: 1px;
+    }
+}
+
+@media (max-width: 768px) {
+    .table {
+        margin-top: 30px;
+        margin-left: 100px;
+    }
+
+    .table1 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .table2 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .btn-primary {
+        margin-left: -40px;
+    }
+
+    .burger-menu-button {
+        background: #ccc900;
+        margin-right: 1px;
+    }
+}
+
+@media (max-width: 414px) {}
+
+/*Apple iPhone XS*/
+@media (max-width: 375px) {}
