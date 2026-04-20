@@ -59,7 +59,7 @@
     <section class="formations">
 
         <div class="card">
-            <img src="images/Formation/5.png" alt="Reseau informatique">
+            <img src="images/Formation/5.jpg" alt="Reseau informatique">
             <div class="text-hover">RESEAU INFORMATIQUE</div>
             <h3>RESEAU INFORMATIQUE</h3>
             <p>Installation, maintenance, sécurité</p>
@@ -73,7 +73,7 @@
         </div>
 
         <div class="card">
-            <img src="images/Formation/7.png" alt="">
+            <img src="images/Formation/7.jpg" alt="La Comptabilité">
             <div class="text-hover">LA COMPTABILITE</div>
             <h3>COMPTABILITE</h3>
             <p>Maîtrisez la gestion comptable et <br>le suivi financier de votre entreprise</p>

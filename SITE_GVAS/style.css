@@ -466,26 +466,13 @@ header {
     cursor: pointer;
 }
 
-.options {
-    margin-top: -60px;
-    list-style: none;
-    background: rgb(192, 191, 188);
-    width: 100%;
-    /* prend toute la largeur du parent */
-    max-width: 300px;
-    /* limite propre */
-    display: none;
-    position: absolute;
-    z-index: 100;
-    border-radius: 8px;
-    padding: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+
 
 .options {
     position: absolute;
     top: 0;
     left: 28%;
+    margin-top: -60px;
     /* 👉 colle à droite du bouton */
     margin-left: 10px;
     /* petit espace */
@@ -610,6 +597,14 @@ input:focus {
         margin-left: 100px;
     }
 
+    /*body {
+        height: 100vh;
+        background-image: url(images/Formation/BG2/chat.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+*/
     .table1 {
         width: 150px;
         height: 150px;
@@ -630,7 +625,50 @@ input:focus {
     }
 }
 
-@media (max-width: 414px) {}
+@media (max-width: 414px) {
+    .table {
+        margin-top: 40px;
+        margin-left: 130px;
+    }
+
+    .table1 {
+        width: 150px;
+        height: 150px;
+        left: 2px;
+    }
+
+    .table2 {
+        width: 150px;
+        height: 150px;
+        right: 30px;
+    }
+
+    .modal-content {
+        width: 320px;
+    }
+
+    .options {
+        left: 80px;
+        width: 200px;
+    }
+}
 
 /*Apple iPhone XS*/
-@media (max-width: 375px) {}
+@media (max-width: 375px) {
+    .table {
+        margin-top: 40px;
+        margin-left: 115px;
+    }
+
+    .table1 {
+        width: 130px;
+        height: 130px;
+        left: 2px;
+    }
+
+    .table2 {
+        width: 130px;
+        height: 130px;
+        right: 30px;
+    }
+}
