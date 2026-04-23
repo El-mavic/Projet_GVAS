@@ -1,20 +1,23 @@
 <?php
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
     //1) Validations des données;
     $errors = [];
-
-    if (!isset($_POST['username']) || empty($_POST['username'])) $errors['username'] = "Ce champs est obligatoire";
+    if (!isset($_POST['nom']) || empty($_POST['nom'])) $errors['nom'] = "Ce champs est obligatoire";
     if (!isset($_POST['prenom']) || empty($_POST['prenom'])) $errors['prenom'] = "Ce champs est obligatoire";
     if (!isset($_POST['date']) || empty($_POST['date'])) $errors['date'] = "Ce champs est obligatoire";
-    if (!isset($_POST['quater']) || empty($_POST['quater'])) $errors['quater'] = "Ce champs est obligatoire";
-    if (!isset($_POST['comp']) || empty($_POST['comp'])) $errors['comp'] = "Ce champs est obligatoire";
+    if (!isset($_POST['quartier']) || empty($_POST['quartier'])) $errors['quartier'] = "Ce champs est obligatoire";
+    if (!isset($_POST['telephone']) || empty($_POST['telephone'])) $errors['telephone'] = "Ce champs est obligatoire";
 
-    if (!isset($_POST['inf']) && !isset($_POST['ang']) && !isset($_POST['exc']) && !isset($_POST['comp']))
-        $errors['formation'] = "Selectionne un module";
-
+    if (empty($_POST['sexe'])) {
+        $errors['sexe'] = "Selectionnez votre sexe";
+    }
+    if (empty($_POST['formation'])) {
+        $errors['formation'] = "Veuillez choisir une formation";
+    }
     if (empty($errors)) {
+        echo "Validé";
+    } else {
+        print_r($errors);
     }
 }
 
@@ -93,23 +96,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             <h2 class="modal-title">Page d'inscription</h2>
 
-            <form class="form-group" action="formulaire.php" method="post">
+            <form class="form-group" action="Traitement.php" method="post">
                 <div class="input-box">
                     <label>Nom</label>
-                    <input type="text" name="username" placeholder="Entrez votre nom" value="<?= $_POST['username'] ?? '' ?>">
-                    <span class="Erreur"><?= $errors['username'] ?? "" ?></span>
+                    <input type="text" name="nom" placeholder="Entrez votre nom" value="<?= $_POST['nom'] ?? '' ?> " required>
+                    <span class="Erreur"><?= $errors['nom'] ?? "" ?></span>
 
                 </div>
 
                 <div class="input-box">
                     <label>Prénom</label>
-                    <input type="text" name="prenom" placeholder="Entrez votre prénom" value="<?= $_POST['prenom'] ?? '' ?>">
+                    <input type="text" name="prenom" placeholder="Entrez votre prénom" value="<?= $_POST['prenom'] ?? '' ?>" required>
                     <span class="Erreur"><?= $errors['prenom'] ?? "" ?></span>
                 </div>
 
                 <div class="input-box">
                     <label>Date de naissance</label>
-                    <input type="date" name="date" value="<?= $_POST['date'] ?? '' ?>">
+                    <input type="date" name="date" value="<?= $_POST['date'] ?? '' ?>" required>
                     <span class="Erreur"><?= $errors['date'] ?? "" ?></span>
                 </div>
 
@@ -118,24 +121,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     <div class="radio-group">
                         <label>
-                            <input type="radio" name="sexe" value="Masculin"> Masculin
+                            <input type="radio" name="sexe" value="Masculin"
+                                <?= (isset($_POST['sexe'])) && ($_POST['sexe'] == "Masculin") ? "checked" : "" ?> required> Masculin
                         </label>
 
                         <label>
-                            <input type="radio" name="sexe" value="Féminin"> Féminin
+                            <input type="radio" name="sexe" value="Féminin"
+                                <?= (isset($_POST['sexe'])) && ($_POST['sexe'] == "Feminin") ? "checked" : "" ?>> Féminin
                         </label>
                     </div>
 
                     <div class="input-box">
                         <label>Téléphone</label>
-                        <input type="tel" name="tel" placeholder="Entrez votre numero" value="<?= $_POST['tel'] ?? '' ?>">
-                        <span class="Erreur"><?= $errors['tel'] ?? "" ?></span>
+                        <input type="tel" name="telephone" placeholder="Entrez votre numero" value="<?= $_POST['telephone'] ?? '' ?>" required>
+                        <span class="Erreur"><?= $errors['telephone'] ?? "" ?></span>
 
                     </div>
                     <div class="input-box">
                         <label>Quartier</label>
-                        <input type="text" name="quater" placeholder="Votre quartier" value="<?= $_POST['quater'] ?? '' ?>">
-                        <span class="Erreur"><?= $errors['quater'] ?? "" ?></span>
+                        <input type="text" name="quartier" placeholder="Votre quartier" value="<?= $_POST['quartier'] ?? '' ?>" required>
+                        <span class="Erreur"><?= $errors['quartier'] ?? "" ?></span>
                     </div>
 
                     <div class="dropdown-container">
@@ -146,31 +151,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                         <ul id="optionsList" class="options">
                             <li>
-                                <input type="checkbox" value="Informatique" id="inf">
+                                <input type="checkbox" value="Informatique" id="inf" name="formation[]">
                                 <label for="inf">Informatique Bureautique</label>
                             </li>
 
                             <li>
-                                <input type="checkbox" value="Anglais" id="ang">
+                                <input type="checkbox" value="Anglais" id="ang" name="formation[]">
                                 <label for="ang">Anglais</label>
                             </li>
 
                             <li>
-                                <input type="checkbox" value="reseau" id="rx">
-                                <label for="excel">Réseau informatique </label>
+                                <input type="checkbox" value="Reseau" id="rx" name="formation[]">
+                                <label for="rx">Réseau informatique </label>
                             </li>
 
                             <li>
-                                <input type="checkbox" value="logistique" id="log">
-                                <label for="compta">Logistique</label>
+                                <input type="checkbox" value="Logistique" id="log" name="formation[]">
+                                <label for="log">Logistique</label>
                             </li>
 
                             <li>
-                                <input type="checkbox" value="maintenance" id="maint">
-                                <label for="compta">Maintenance des Ordinateurs</label>
+                                <input type="checkbox" value="Maintenance" id="maint" name="formation[]">
+                                <label for="maint">Maintenance des Ordinateurs</label>
                             </li>
                             <li>
-                                <input type="checkbox" value="maintenance" id="maint">
+                                <input type="checkbox" value="Comptabilite" id="compta" name="formation[]">
                                 <label for="compta">Comptabilité</label>
                             </li>
                         </ul>
