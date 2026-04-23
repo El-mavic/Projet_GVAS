@@ -97,6 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <h2 class="modal-title">Page d'inscription</h2>
 
             <form class="form-group" action="Traitement.php" method="post">
+                <input type="hidden" name="type" value="inscription">
                 <div class="input-box">
                     <label>Nom</label>
                     <input type="text" name="nom" placeholder="Entrez votre nom" value="<?= $_POST['nom'] ?? '' ?> " required>

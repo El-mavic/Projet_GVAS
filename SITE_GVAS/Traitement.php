@@ -47,22 +47,3 @@ if ($exists > 0) {
         die("erreur SQL : " . $e->getMessage());
     }
 }
-?>
-
-<?php
-/*
-echo (htmlspecialchars($_POST["nom"] ?? "")). "<br>";
-echo (htmlspecialchars($_POST["prenom"] ?? "")) . "<br>";
-echo (htmlspecialchars($_POST["date"]?? "")). "<br>";
-echo (htmlspecialchars($_POST["telephone"]?? "")). "<br>";
-echo (htmlspecialchars($_POST["quater"]?? "")). "<br>";
-if(!empty($_POST['formation'])){
-foreach($_POST['fomation'] as $f){
-echo htmlspecialchars($f). "<br>";
-}
-}else{
-echo "aucune formation choisie";
-
-}
-?>
-*/
