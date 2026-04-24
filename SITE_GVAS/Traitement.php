@@ -27,6 +27,8 @@ $stmtCheck->execute([
 $exists = $stmtCheck->fetchColumn();
 if ($exists > 0) {
     echo "Cet utilisateur est déjà inscrit";
+    /*header("location:Formation.php");
+    exit;*/
 } else {
     $formations = implode(", ", $_POST['formation']);
     $sql = "INSERT INTO inscriptions
@@ -47,3 +49,4 @@ if ($exists > 0) {
         die("erreur SQL : " . $e->getMessage());
     }
 }
+?>
