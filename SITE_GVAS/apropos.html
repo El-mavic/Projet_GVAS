@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Lora:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <title>à propos</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --jaune: #e8db1e;
+        --noir: #0d0d0d;
+        --noir-card: #1a1a1a;
+        --blanc: #ffffff;
+        --gris: #cccccc;
+        --bleu: #0609aa;
+      }
+
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: var(--noir);
+        color: var(--blanc);
+        overflow-x: hidden;
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 48px;
+        background: rgba(10, 10, 20, 0.85);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+      .logo span {
+        color: var(--jaune);
+      }
+      .logo {
+        font-size: 40px;
+        font-weight: 900;
+        letter-spacing: -1px;
+        color: var(--blanc);
+      }
+
+      .liens a {
+        color: var(--gris);
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        transition: color 0.3s;
+      }
+
+      .liens a:hover {
+        color: var(--bleu);
+      }
+      .liens {
+        display: flex;
+        gap: 32px;
+        list-style: none;
+      }
+      .bouton {
+        background: none;
+        color: var(--blanc);
+        border: none;
+        padding: 10px 24px;
+        border-radius: 50px;
+        font-size: 17px;
+        font-weight: 700;
+        cursor: pointer;
+        transition:
+          background 0.3s,
+          transform 0.2s;
+        text-decoration: none;
+      }
+
+      .bouton:hover {
+        background: #0609aa;
+        transform: scale(1.04);
+      }
+
+      .hero {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .h-background {
+        position: absolute;
+        inset: 0;
+        background-image: url("images/download1.jpg");
+        background-size: cover;
+        background-position: center;
+        animation: zoomIn 10s ease-out forwards;
+      }
+
+      @keyframes zoomIn {
+        from { transform: scale(1.12); }
+        to   { transform: scale(1); }
+      }
+        
+      
+      .h-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to right,
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0.65) 60%,
+          rgba(0, 0, 0, 0.75) 100%
+        );
+      }
+      .h-content h1 {
+        font-size: 4em;
+      }
+      .h-content p {
+        font-size: 30px;
+      }
+
+      .h-content {
+        position: absolute;
+        bottom: 30%;
+        right: 8%;
+        width: 42%;
+        animation: slideUp 1s ease 0.4s forwards;
+        opacity: 0;
+        margin-bottom: 16px;
+      }
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .link {
+        background: none;
+        color: var(--blanc);
+        padding: 10px 24px;
+        border-radius: 50px;
+        border-style: groove;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition:
+          background 0.3s,
+          transform 0.2s;
+        text-decoration: none;
+      }
+      .link {
+        display: inline-block;
+        margin-top: 30px;
+      }
+      .link:hover {
+        background: #0609aa;
+        transform: scale(1.04);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo"><span>G.V.A.S</span></div>
+      <ul class="liens">
+        <li><a href="index.php">Accueil</a></li>
+        <li><a href="Formation.php">Formations</a></li>
+        <li><a href="Galerie.php">Galerie</a></li>
+        <li><a href="contacts.php">Contacts</a></li>
+      </ul>
+      <!-- <button class="bouton">Nous rejoindre</button> -->
+      <a href="index.php" class="bouton">Nous rejoindre</a>
+    </nav>
+
+    <section class="hero">
+      <div class="h-background"></div>
+      <div class="h-overlay"></div>
+      <div class="h-content">
+        <h1>A propos</h1>
+        <p></p>
+        <p>
+          Nous croyons en un monde où chaque personne a la possibilité de
+          développer ses talents, de valoriser ses compétences et de construire
+          un avenir meilleur grâce à l’accompagnement, à l’innovation et à des
+          opportunités accessibles à tous.
+        </p>
+        <a href="#manifeste" class="link">Découvrez notre histoire</a>
+      </div>
+    </section>
+
+    <div class="content">
+      <a href="#manifeste">Manifeste</a>
+      <!-- <a href='#manifestre" class="active" -->
+      <a href="#histoire">Notre histoire</a>
+      <a href="#chiffres">Chiffres clés</a>
+    </div>
+
+    <div id="manifeste" class="section">
+      <h2 class="section-title">Notre manifeste</h2>
+      <div class="">
+        <span class="griffes">''</span>
+        <p>
+          Nous nous engageons à aider les talents de demain à révéler tout leur
+          potentiel dès aujourd'hui. Nous pensons que la prochaine génération de
+          leaders doit bénéficier du soutien, des outils et du cadre nécessaires
+          pour prendre son destin en main, développer des compétences utiles
+          tout au long de sa vie et contribuer à rendre le monde meilleur.
+        </p>
+        <p>
+          Nous les accompagnons à travers un écosystème d'apprentissage unique,
+          hybride et centré sur l'humain, qui allie rigueur et formation
+          d'excellence.
+        </p>
+      </div>
+    </div>
+
+    <div id="histoire" class="section2">
+      <h2 class="section-title">Notre histoire</h2>
+    </div>
+
+    <div id="chiffres" class="section3">
+      <h2 class="section-title">Chiffres clés</h2>
+    </div>
+  </body>
+</html>
+<!-- Accueil formation, galerie, contact -->

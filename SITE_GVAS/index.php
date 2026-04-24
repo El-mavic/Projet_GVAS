@@ -49,12 +49,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <ul class="links">
                 <li><a href="index.php">Accueil</a></li>
                 <li><a href="Formation.php">Formations</a></li>
-                <li><a href="Galerie.php">Gallérie</a></li>
+                <li><a href="Galerie.php">Galerie</a></li>
                 <li><a href="contacts.php">Contacts</a></li>
             </ul>
             <div class="buttons">
                 <a class="action-button pro " href="#">Welcome</a>
-                <a class="action-button" href="#">A propos</a>
+                <a class="action-button" href="apropos.html">A propos</a>
             </div>
             <div class="burger-menu-button">
                 <i class="fa-solid fa-bars"></i>
