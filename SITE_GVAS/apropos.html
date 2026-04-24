@@ -21,6 +21,7 @@
         --blanc: #ffffff;
         --gris: #cccccc;
         --bleu: #0609aa;
+        --rouge: #ce1c28;
       }
 
       body {
@@ -106,26 +107,56 @@
       }
 
       @keyframes zoomIn {
-        from { transform: scale(1.12); }
-        to   { transform: scale(1); }
+        from {
+          transform: scale(1.2);
+        }
+        to {
+          transform: scale(1);
+        }
       }
-        
-      
+
+      .h-frame {
+        position: absolute;
+        top: 12%;
+        left: 5%;
+        right: 5%;
+        bottom: 8%;
+        border: 2px solid var(--rouge);
+        border-radius: 24px;
+        pointer-events: none;
+        animation: fadeInFrame 1.5s ease forwards;
+        opacity: 0;
+      }
+
+      @keyframes fadeInFrame {
+        from { opacity: 0; transform: scale(0.97); }
+        to   { opacity: 1; transform: scale(1); }
+      }
+
       .h-overlay {
         position: absolute;
         inset: 0;
         background: linear-gradient(
           to right,
-          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0.2) 50%,
           rgba(0, 0, 0, 0.65) 60%,
           rgba(0, 0, 0, 0.75) 100%
         );
       }
       .h-content h1 {
-        font-size: 4em;
+        font-size: clamp(3rem, 6vw, 5.5rem);
+        font-weight: 900;
+        line-height: 1.05;
+        margin-bottom: 20px;
+        letter-spacing: -2px;
       }
       .h-content p {
-        font-size: 30px;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: rgba(255,255,255,0.85);
+        margin-bottom: 28px;
+        font-family: 'Lora', serif;
+        font-style: italic;
       }
 
       .h-content {
@@ -170,6 +201,160 @@
         background: #0609aa;
         transform: scale(1.04);
       }
+      .content {
+        position: sticky;
+        top: 62px;
+        z-index: 90;
+        background: #111116;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+        display: flex;
+        gap: 0;
+        padding: 0 48px;
+      }
+
+      .content a {
+        color: var(--gris);
+        text-decoration: none;
+        font-size: 0.85rem;
+        font-weight: 600;
+        padding: 18px 20px;
+        border-bottom: 3px solid transparent;
+        transition: color 0.3s, border-color 0.3s;
+      }
+       .content:hover{
+        color: var(--blanc);
+        border-bottom-color: var(--rouge);
+       }
+      .section-title {
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 900;
+        text-align: center;
+        margin-bottom: 60px;
+        letter-spacing: -1px;
+      }
+
+      .manifeste-section {
+        background: var(--noir);
+        padding: 100px 48px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .histoire-section {
+        background: #111116;
+        padding: 100px 48px;
+      }
+
+      .histoire-inner{
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .timeline {
+        position: relative;
+        margin-top: 60px;
+        padding-left: 32px;
+        border-left: 2px solid var(--rouge);
+      }
+      .timeline-item {
+        position: relative;
+        margin-bottom: 48px;
+        opacity: 0;
+        transform: translateX(-20px);
+        animation: fadeLeft 0.6s ease forwards;
+      }
+
+      .timeline-item:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .timeline-item:nth-child(2) {
+        animation-delay: 0.3s;
+      }
+      .timeline-item:nth-child(3) {
+        animation-delay: 0.5s;
+      }
+      .timeline-item:nth-child(4) {
+        animation-delay: 0.7s;
+      }
+      .timeline-item:nth-child(5) {
+        animation-delay: 0.9s;
+      }
+
+      @keyframes fadeLeft {
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      .timeline-dot {
+        position: absolute;
+        left: -40px;
+        top: 4px;
+        width: 14px;
+        height: 14px;
+        background: var(--rouge);
+        border-radius: 50%;
+        border: 2px solid var(--noir);
+      }
+      .timeline-date {
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--rouge);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+      }
+      .timeline-text {
+        font-size: 0.9rem;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.75);
+      }
+      .chiffres-section {
+        background: var(--noir);
+        padding: 100px 48px;
+      }
+      .chiffres-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .chiffres-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+        margin-top: 60px;
+      }
+
+      .chiffres-card {
+        background: var(--noir-card);
+        border-radius: 16px;
+        padding: 48px 32px;
+        text-align: center;
+        border: 1px solid rgba(255,255,255,0.06);
+        transition: transform 0.3s, border-color 0.3s;
+      }
+
+      .chiffres-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--rouge);
+      }
+
+      .chiffres-number {
+        font-size: 3.5rem;
+        font-weight: 900;
+        color: var(--rouge);
+        letter-spacing: -2px;
+        display: block;
+      }
+
+      .chiffres-label {
+        font-size: 0.85rem;
+        color: var(--gris);
+        margin-top: 8px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
     </style>
   </head>
   <body>
@@ -188,6 +373,7 @@
     <section class="hero">
       <div class="h-background"></div>
       <div class="h-overlay"></div>
+      <div class="h-frame"></div>
       <div class="h-content">
         <h1>A propos</h1>
         <p></p>
@@ -208,10 +394,9 @@
       <a href="#chiffres">Chiffres clés</a>
     </div>
 
-    <div id="manifeste" class="section">
+    <div id="manifeste" class="manifeste-section">
       <h2 class="section-title">Notre manifeste</h2>
-      <div class="">
-        <span class="griffes">''</span>
+        
         <p>
           Nous nous engageons à aider les talents de demain à révéler tout leur
           potentiel dès aujourd'hui. Nous pensons que la prochaine génération de
@@ -226,13 +411,81 @@
         </p>
       </div>
     </div>
-
-    <div id="histoire" class="section2">
+    <div id="histoire" class="histoire-section">
+        <div class="histoire-inner">
       <h2 class="section-title">Notre histoire</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Mai 2022</div>
+          <div class="timeline-text">
+            Fondation de G.V.A.S — Groupe Vision d'Aigle Services. Début des
+            activités avec la vente de produits alimentaires et divers.
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Juin 2022</div>
+          <div class="timeline-text">
+            Intégration des services informatiques et de la formation. Mise en
+            place d'un nouveau logo et d'une charte graphique.
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Juin 2023</div>
+          <div class="timeline-text">
+            Lancement de la première édition des formations « promo-vacances »
+            en informatique et en anglais.
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Novembre 2023</div>
+          <div class="timeline-text">
+            Extension et rénovation du local. Acquisition d'un lot d'ordinateurs
+            pour améliorer la qualité des formations.
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2024</div>
+          <div class="timeline-text">
+            Obtention du NUI, lancement de la 2ème édition promo-vacances,
+            cérémonie de clôture à la salle Ivan Mamingui.
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2026</div>
+          <div class="timeline-text">
+            Poursuite de la Vision d'Aigle
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div id="chiffres" class="section3">
-      <h2 class="section-title">Chiffres clés</h2>
+    <div id="chiffres" class="chiffres-section">
+      <div class="chiffres-inner">
+        <h2 class="section-title">Chiffres clés</h2>
+
+        <div class="chiffres-grid">
+          <div class="chiffres-card">
+            <span class="chiffres-number">2022</span>
+            <div class="chiffres-label">Année de fondation</div>
+          </div>
+
+          <div class="chiffres-card">
+            <span class="chiffres-number">+30</span>
+            <div class="chiffres-label">étudiants formés</div>
+          </div>
+
+          <div class="chiffres-card">
+            <span class="chiffres-number">6</span>
+            <div class="chiffres-label">Domaines de formation</div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
