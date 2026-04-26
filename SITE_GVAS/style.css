@@ -672,3 +672,122 @@ input:focus {
         right: 30px;
     }
 }
+
+
+.fab-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Bouton principal */
+.fab-main {
+    width: 60px;
+    height: 60px;
+    background: #ccc900;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Actions */
+.fab-actions {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.fab-container.active .fab-actions {
+    display: flex;
+}
+
+/* Boutons */
+.fab-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.fab-btn {
+    width: 55px;
+    height: 55px;
+    background: #ccc900;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+}
+
+/* Label (hover effet) */
+.fab-label {
+    position: absolute;
+    right: 70px;
+    background: #0f172a;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 30px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+/* Effet hover */
+.fab-item:hover .fab-label {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fab-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+/*la suite*/
+
+.fab-main {
+    animation: tiltMove 4s ease-in-out infinite;
+}
+
+@keyframes tiltMove {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-6px) rotate(3deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(-6px) rotate(-3deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+
+/*s’arrête quand ouvert)*/
+.fab-container.active .fab-main {
+    animation: none;
+}

@@ -26,7 +26,8 @@ $stmtCheck->execute([
 ]);
 $exists = $stmtCheck->fetchColumn();
 if ($exists > 0) {
-    echo "Cet utilisateur est déjà inscrit";
+    header("Location: Succes.php?message=existe");
+    exit();
     /*header("location:Formation.php");
     exit;*/
 } else {
@@ -44,9 +45,30 @@ if ($exists > 0) {
             $_POST['sexe'],
             $formations
         ]);
-        echo "INSCRIPTION VALIDE";
+        header("Location: Succes.php?message=ok");
+        exit();
     } catch (PDOException $e) {
         die("erreur SQL : " . $e->getMessage());
     }
 }
 ?>
+
+<?php
+if (isset($_GET['message'])) {
+    if ($_GET['message'] == 'ok') {
+        echo "<p style='color:green;'>Message envoyé avec succès</p>";
+    } elseif ($_GET['message'] == 'existe') {
+        echo "<p style='color:red;'>Cet utilisateur est déjà inscrit</p>";
+    }
+}
+?>
+<script>
+    fetch("traitement.php", {
+            method: "POST",
+            body: new FormData(document.querySelector("form"))
+        })
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("message").innerHTML = data;
+        });
+</script>

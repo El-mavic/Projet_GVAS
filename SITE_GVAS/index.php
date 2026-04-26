@@ -20,7 +20,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         print_r($errors);
     }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -188,9 +187,63 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
     </div>
 
+    <div class="fab-container">
+        <!-- Bouton principal -->
+        <div class="fab-main" onclick="toggleFab()">
+            <i class="fa-solid fa-comments"></i>
+        </div>
+
+        <!-- Actions -->
+        <div class="fab-actions">
+
+            <!-- MESSAGE -->
+            <a href="contacts.php" class="fab-item">
+                <span class="fab-label">Envoyer un message</span>
+                <div class="fab-btn">
+                    <i class="fa-solid fa-message"></i>
+                </div>
+            </a>
+
+            <!-- WHATSAPP -->
+            <a href="https://wa.me/242064201415" target="_blank" class="fab-item">
+                <span class="fab-label">Contactez via WhatsApp</span>
+                <div class="fab-btn">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+            </a>
+
+            <!-- RENDEZ-VOUS -->
+            <a href="##########" class="fab-item">
+                <span class="fab-label">Prendre rendez-vous</span>
+                <div class="fab-btn">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+
+
+    <script>
+        function toggleFab() {
+            document.querySelector(".fab-container").classList.toggle("active");
+        }
+
+        // Fermer si on clique en dehors
+        document.addEventListener("click", function(e) {
+            const fab = document.querySelector(".fab-container");
+
+            // Vérifie si le clic est en dehors du fab
+            if (!fab.contains(e.target)) {
+                fab.classList.remove("active");
+            }
+        });
+    </script>
+
+
 
     <!--burgerMenuButton-->
-
     <script>
         const burgerMenuButton = document.querySelector('.burger-menu-button')
         const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i')
