@@ -12,46 +12,84 @@ try {
     die("erreur de connexion : " . $e->getMessage());
 }
 
-//Verifie si un user existe déjà 
-$sqlCheck = "SELECT COUNT(*) FROM inscriptions
+// 👉 AJOUT ICI (sans modifier ton code)
+if (isset($_POST['form_type']) && $_POST['form_type'] === 'inscriptions') {
+
+    //Verifie si un user existe déjà 
+    $sqlCheck = "SELECT COUNT(*) FROM inscriptions
 WHERE nom = ? AND prenom = ? AND date = ? AND telephone = ? AND quartier = ? AND sexe =?";
-$stmtCheck = $pdo->prepare($sqlCheck);
-$stmtCheck->execute([
-    $_POST['nom'],
-    $_POST['prenom'],
-    $_POST['date'],
-    $_POST['telephone'],
-    $_POST['quartier'],
-    $_POST['sexe'],
-]);
-$exists = $stmtCheck->fetchColumn();
-if ($exists > 0) {
-    header("Location: Succes.php?message=existe");
-    exit();
-    /*header("location:Formation.php");
-    exit;*/
-} else {
-    $formations = implode(", ", $_POST['formation']);
-    $sql = "INSERT INTO inscriptions
-    (nom, prenom, date, telephone, quartier, sexe, formation)  VALUES (?, ?, ?, ?, ?, ?, ?)";
-    $stmt = $pdo->prepare($sql);
-    try {
-        $stmt->execute([
-            $_POST['nom'],
-            $_POST['prenom'],
-            $_POST['date'],
-            $_POST['telephone'],
-            $_POST['quartier'],
-            $_POST['sexe'],
-            $formations
-        ]);
-        header("Location: Succes.php?message=ok");
+    $stmtCheck = $pdo->prepare($sqlCheck);
+    $stmtCheck->execute([
+        $_POST['nom'],
+        $_POST['prenom'],
+        $_POST['date'],
+        $_POST['telephone'],
+        $_POST['quartier'],
+        $_POST['sexe'],
+    ]);
+    $exists = $stmtCheck->fetchColumn();
+
+    if ($exists > 0) {
+        header("Location: Succes.php?message=existe");
         exit();
-    } catch (PDOException $e) {
-        die("erreur SQL : " . $e->getMessage());
+    } else {
+        $formations = implode(", ", $_POST['formation']);
+        $sql = "INSERT INTO inscriptions
+    (nom, prenom, date, telephone, quartier, sexe, formation)  VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $stmt = $pdo->prepare($sql);
+
+        try {
+            $stmt->execute([
+                $_POST['nom'],
+                $_POST['prenom'],
+                $_POST['date'],
+                $_POST['telephone'],
+                $_POST['quartier'],
+                $_POST['sexe'],
+                $formations
+            ]);
+            header("Location: Succes.php?message=ok");
+            exit();
+        } catch (PDOException $e) {
+            die("erreur SQL : " . $e->getMessage());
+        }
     }
+} elseif (isset($_POST['form_type']) && $_POST['form_type'] === 'contact') {
+    $nom = $_POST['nom'];
+    $email = $_POST['email'];
+    $sujet = $_POST['sujet'];
+    $message = $_POST['message'];
+
+    $sqlCheck = "SELECT COUNT(*) FROM utilisateurs WHERE sujet = ? AND message = ?";
+    $stmtCheck = $pdo->prepare($sqlCheck);
+    $stmtCheck->execute([$sujet, $message]);
+
+    $exists = $stmtCheck->fetchColumn();
+
+    if ($exists > 0) {
+        header("Location: Succes.php?message=existe");
+        exit();
+    }
+    // Insertion
+    $sql = "INSERT INTO utilisateurs (nom, email, sujet, message) VALUES (?, ?, ?, ?)";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$nom, $email, $sujet, $message]);
+
+    header("Location: Succes.php?message=contact_ok");
+    exit();
 }
+
 ?>
+
+
+
+
+
+
+
+
+
+
 
 <?php
 if (isset($_GET['message'])) {
@@ -62,13 +100,3 @@ if (isset($_GET['message'])) {
     }
 }
 ?>
-<script>
-    fetch("traitement.php", {
-            method: "POST",
-            body: new FormData(document.querySelector("form"))
-        })
-        .then(res => res.text())
-        .then(data => {
-            document.getElementById("message").innerHTML = data;
-        });
-</script>

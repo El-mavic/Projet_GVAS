@@ -118,7 +118,7 @@
                 message.style.color = "#555";
             <?php elseif ($_GET['message'] == 'existe'): ?>
                 title.innerText = "Erreur";
-                message.innerText = "Cet utilisateur est déjà inscrit";
+                message.innerText = "Je retrouve déjà ce contenu dans la base de données";
                 icon.innerHTML = "❌";
                 icon.classList.remove("success");
                 icon.classList.add("error");

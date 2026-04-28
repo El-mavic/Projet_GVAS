@@ -96,6 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <h2 class="modal-title">Page d'inscription</h2>
 
             <form class="form-group" action="Traitement.php" method="post">
+                 <input type="hidden" name="form_type" value="inscriptions">
                 <input type="hidden" name="type" value="inscription">
                 <div class="input-box">
                     <label>Nom</label>
@@ -224,87 +225,98 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
 
 
-
+    <!--Pour la petite fenetre quant le formulaire est envoyer-->
     <script>
-        function toggleFab() {
-            document.querySelector(".fab-container").classList.toggle("active");
-        }
+        fetch("traitement.php", {
+                method: "POST",
+                body: new FormData(document.querySelector("form"))
+            })
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("message").innerHTML = data;
+            });
+    </script>
 
-        // Fermer si on clique en dehors
-        document.addEventListener("click", function(e) {
-            const fab = document.querySelector(".fab-container");
-
-            // Vérifie si le clic est en dehors du fab
-            if (!fab.contains(e.target)) {
-                fab.classList.remove("active");
+    <!Pour le chatbot>
+        <script>
+            function toggleFab() {
+                document.querySelector(".fab-container").classList.toggle("active");
             }
-        });
-    </script>
+
+            // Fermer si on clique en dehors
+            document.addEventListener("click", function(e) {
+                const fab = document.querySelector(".fab-container");
+
+                // Vérifie si le clic est en dehors du fab
+                if (!fab.contains(e.target)) {
+                    fab.classList.remove("active");
+                }
+            });
+        </script>
 
 
+        <!--burgerMenuButton-->
+        <script>
+            const burgerMenuButton = document.querySelector('.burger-menu-button')
+            const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i')
+            const burgerMenu = document.querySelector('.burger-menu')
 
-    <!--burgerMenuButton-->
-    <script>
-        const burgerMenuButton = document.querySelector('.burger-menu-button')
-        const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i')
-        const burgerMenu = document.querySelector('.burger-menu')
-
-        burgerMenuButton.onclick = function() {
-            burgerMenu.classList.toggle('open')
-            const isOpen = burgerMenu.classList.contains('open')
-            burgerMenuButtonIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
-        }
-    </script>
+            burgerMenuButton.onclick = function() {
+                burgerMenu.classList.toggle('open')
+                const isOpen = burgerMenu.classList.contains('open')
+                burgerMenuButtonIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
+            }
+        </script>
 
 
-    <!--Script pour la fenêtre d'inscription-->
-    <script>
-        // ouvrir
-        document.getElementById("btnInscription").onclick = function() {
-            document.getElementById("modal").style.display = "flex";
-        }
+        <!--Script pour la fenêtre d'inscription-->
+        <script>
+            // ouvrir
+            document.getElementById("btnInscription").onclick = function() {
+                document.getElementById("modal").style.display = "flex";
+            }
 
-        // fermer
-        document.getElementById("closeBtn").onclick = function() {
-            document.getElementById("modal").style.display = "none";
-        }
-
-        // fermer si on clique en dehors
-        window.onclick = function(event) {
-            if (event.target === document.getElementById("modal")) {
+            // fermer
+            document.getElementById("closeBtn").onclick = function() {
                 document.getElementById("modal").style.display = "none";
             }
-        }
-    </script>
 
-
-    <script>
-        const btn = document.getElementById("dropdownBtn");
-        const list = document.getElementById("optionsList");
-
-        btn.addEventListener("click", () => {
-            list.style.display = list.style.display === "block" ? "none" : "block";
-        });
-
-        // Met à jour le texte du bouton quand les choix changent
-        document.querySelectorAll("input[type='checkbox']").forEach(check => {
-            check.addEventListener("change", () => {
-                const selected = [...document.querySelectorAll("input[type='checkbox']:checked")]
-                    .map(item => item.value);
-
-                btn.textContent = selected.length > 0 ?
-                    selected.join(", ") :
-                    "Sélectionnez des matières";
-            });
-        });
-
-        // Ferme si on clique ailleurs
-        document.addEventListener("click", (e) => {
-            if (!btn.parentElement.contains(e.target)) {
-                list.style.display = "none";
+            // fermer si on clique en dehors
+            window.onclick = function(event) {
+                if (event.target === document.getElementById("modal")) {
+                    document.getElementById("modal").style.display = "none";
+                }
             }
-        });
-    </script>
+        </script>
+
+        <!--Pour la selection des matières-->
+        <script>
+            const btn = document.getElementById("dropdownBtn");
+            const list = document.getElementById("optionsList");
+
+            btn.addEventListener("click", () => {
+                list.style.display = list.style.display === "block" ? "none" : "block";
+            });
+
+            // Met à jour le texte du bouton quand les choix changent
+            document.querySelectorAll("input[type='checkbox']").forEach(check => {
+                check.addEventListener("change", () => {
+                    const selected = [...document.querySelectorAll("input[type='checkbox']:checked")]
+                        .map(item => item.value);
+
+                    btn.textContent = selected.length > 0 ?
+                        selected.join(", ") :
+                        "Sélectionnez des matières";
+                });
+            });
+
+            // Ferme si on clique ailleurs
+            document.addEventListener("click", (e) => {
+                if (!btn.parentElement.contains(e.target)) {
+                    list.style.display = "none";
+                }
+            });
+        </script>
 </body>
 
 </html>
