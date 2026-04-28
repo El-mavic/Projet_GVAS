@@ -55,21 +55,34 @@ WHERE nom = ? AND prenom = ? AND date = ? AND telephone = ? AND quartier = ? AND
         }
     }
 } elseif (isset($_POST['form_type']) && $_POST['form_type'] === 'contact') {
-    $nom = $_POST['nom'];
-    $email = $_POST['email'];
-    $sujet = $_POST['sujet'];
-    $message = $_POST['message'];
 
+    $nom = trim($_POST['nom'] ?? '');
+    $email = trim($_POST['email'] ?? '');
+    $sujet = trim($_POST['sujet'] ?? '');
+    $message = trim($_POST['message'] ?? '');
+
+    // Vérifier format email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        header("Location: Succes.php?message=email_invalide");
+        exit();
+    }
+
+    // Vérifier Gmail uniquement
+    if (!preg_match('/^[a-zA-Z0-9._%+-]+@gmail\.com$/i', $email)) {
+        header("Location: Succes.php?message=email_gmail_only");
+        exit();
+    }
+
+    // Vérifier doublon
     $sqlCheck = "SELECT COUNT(*) FROM utilisateurs WHERE sujet = ? AND message = ?";
     $stmtCheck = $pdo->prepare($sqlCheck);
     $stmtCheck->execute([$sujet, $message]);
 
-    $exists = $stmtCheck->fetchColumn();
-
-    if ($exists > 0) {
+    if ($stmtCheck->fetchColumn() > 0) {
         header("Location: Succes.php?message=existe");
         exit();
     }
+
     // Insertion
     $sql = "INSERT INTO utilisateurs (nom, email, sujet, message) VALUES (?, ?, ?, ?)";
     $stmt = $pdo->prepare($sql);
