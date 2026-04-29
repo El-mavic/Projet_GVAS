@@ -96,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <h2 class="modal-title">Page d'inscription</h2>
 
             <form class="form-group" action="Traitement.php" method="post">
-                 <input type="hidden" name="form_type" value="inscriptions">
+                <input type="hidden" name="form_type" value="inscriptions">
                 <input type="hidden" name="type" value="inscription">
                 <div class="input-box">
                     <label>Nom</label>
@@ -198,8 +198,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="fab-actions">
 
             <!-- MESSAGE -->
-            <a href="contacts.php" class="fab-item">
-                <span class="fab-label">Envoyer un message</span>
+            <a href="temoignage.php" class="fab-item">
+                <span class="fab-label">Ecrivez votre temoignage </span>
                 <div class="fab-btn">
                     <i class="fa-solid fa-message"></i>
                 </div>
@@ -214,8 +214,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </a>
 
             <!-- RENDEZ-VOUS -->
-            <a href="##########" class="fab-item">
-                <span class="fab-label">Prendre rendez-vous</span>
+            <a href="https://www.google.com/maps/place/4%C2%B049'21.0%22S+11%C2%B054'19.7%22E/@-4.8224385,11.9053312,80m/
+            data=!3m1!1e3!4m4!3m3!8m2!3d-4.82249!4d11.9054683?hl=
+            fr&entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D" class="fab-item">
+                <span class="fab-label">Notre localisation</span>
                 <div class="fab-btn">
                     <i class="fa-solid fa-location-dot"></i>
                 </div>
