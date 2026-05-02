@@ -21,7 +21,7 @@
 
         <div class="buttons">
             <a class="action-button pro" href="index.php">Inscription</a>
-
+            <a class="action-button pro" href="index.php">Inscription</a>
         </div>
 
     </header>

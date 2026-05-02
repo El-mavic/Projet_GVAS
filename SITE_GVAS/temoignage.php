@@ -38,18 +38,21 @@
     <section class="temoignage">
         <h2>LAISSER UN TEMOIGNAGE DE VOTRE PASSAGE A GVAS</h2>
         <div class="temoignage-box">
-            <form>
+
+            <form onsubmit="ajouterTemoignage(event)">
                 <textarea id="message" placeholder="Votre témoignage..."></textarea>
                 <input class="change" type="text" name="nom" placeholder="Veuillez saisir votre nom" required>
-                <button onclick="ajouterTemoignage()" type="submit">Envoyer</button>
+                <button type="submit">Envoyer</button>
             </form>
+
         </div>
         <table id="table-temoignage">
             <thead>
                 <tr>
                     <th>N°</th>
-                    <th>TEMOIGNAGE</th>
                     <th>Nom(s)</th>
+                    <th>TEMOIGNAGE</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -57,22 +60,21 @@
         </table>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
+    <section class="partners">
         <div class="footer-container">
-
             <div class="footer-col">
-                <h3>MonEntreprise</h3>
+                <h4>MonEntreprise</h4>
                 <p>Solution professionnelle pour vos besoins digitaux. Performance, sécurité et innovation.</p>
             </div>
 
             <div class="footer-col">
                 <h4>Liens rapides</h4>
                 <ul>
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">À propos</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="index.php">Accueil</a></li>
+                    <li><a href="Formation.php">Formations</a></li>
+                    <li><a href="galerie.php">Galerie</a></li>
+                    <li><a href="contacts.php">Contact</a></li>
+                    <li><a href="a-propos.php">À propos</a></li>
                 </ul>
             </div>
 
@@ -93,26 +95,23 @@
 
         </div>
 
-    </footer>
 
-    <!-- PARTENAIRES -->
-    <section class="partners">
         <h2>Nos partenaires</h2>
         <div class="partners-container">
-            <div class="partner"><img src="images/Formation/2.jpg" alt="partenaire">
-                <h3>Bon</h3>
+            <div class="partner"><img src="images/Partenaires/R.jpg" alt="partenaire">
+                <h3>Airtel Congo</h3>
             </div>
-            <div class="partner"><img src="images/Formation/2.jpg" alt="partenaire">
-                <h3>Bon</h3>
+            <div class="partner"><img src="images/Partenaires/Ecole.png" alt="partenaire">
+                <h3>Ecole Privée la MANINGUETTE</h3>
             </div>
-            <div class="partner"><img src="images/Formation/2.jpg" alt="partenaire">
-                <h3>Bon</h3>
+            <div class="partner"><img src="images/Partenaires/VIP.png" alt="partenaire">
+                <h3>VIP Consult</h3>
             </div>
-            <div class="partner"><img src="images/Formation/2.jpg" alt="partenaire">
-                <h3>Bon</h3>
+            <div class="partner"><img src="images/Partenaires/AJEC.jpeg" alt="partenaire">
+                <h3>A.J.E.C</h3>
             </div>
-            <div class="partner"><img src="images/Formation/2.jpg" alt="partenaire">
-                <h3>Bon</h3>
+            <div class="partner"><img src="images/Partenaires/cvmc.png" alt="partenaire">
+                <h3>NKOMBO -(CVMC)</h3>
             </div>
         </div>
     </section>
@@ -126,22 +125,29 @@
 
             const table = document.querySelector('#table-temoignage tbody');
 
-            temoignages.forEach((msg, index) => {
+            temoignages.forEach((item, index) => {
                 const row = document.createElement('tr');
+
                 row.innerHTML = `
             <td>${index + 1}</td>
-            <td>${msg}</td>
+            <td>${item.nom}</td>
+            <td>${item.message}</td>
         `;
+
                 table.appendChild(row);
             });
+
             compteur = temoignages.length + 1;
-        }
+        };
 
-        function ajouterTemoignage() {
+        function ajouterTemoignage(event) {
+            event.preventDefault(); // 🔥 empêche le rechargement
+
             const message = document.getElementById('message').value;
+            const nom = document.querySelector('input[name="nom"]').value;
 
-            if (message.trim() === '') {
-                alert('Veuillez saisir un témoignage');
+            if (message.trim() === '' || nom.trim() === '') {
+                alert('Veuillez remplir tous les champs');
                 return;
             }
 
@@ -151,16 +157,25 @@
 
             row.innerHTML = `
         <td>${compteur++}</td>
-        <td>${message}</td>`;
+        <td>${nom}</td>
+        <td>${message}</td>
+    `;
 
             table.appendChild(row);
 
-            // Sauvegarde dans localStorage
+            // Sauvegarde dans localStorage (objet)
             let temoignages = JSON.parse(localStorage.getItem('temoignages')) || [];
-            temoignages.push(message);
+
+            temoignages.push({
+                nom: nom,
+                message: message
+            });
+
             localStorage.setItem('temoignages', JSON.stringify(temoignages));
 
+            // reset champs
             document.getElementById('message').value = '';
+            document.querySelector('input[name="nom"]').value = '';
         }
     </script>
 
