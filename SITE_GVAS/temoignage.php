@@ -11,7 +11,7 @@
 
 <body class="body">
 
-    <header classe="header">
+    <header>
         <div class="container">
             <div class="logo">Groupe Vision d'Aigle Services</div>
 
@@ -30,6 +30,7 @@
                 <span></span>
                 <span></span>
                 <span></span>
+
             </div>
         </div>
     </header>
@@ -92,10 +93,7 @@
                     <button type="submit">S'inscrire</button>
                 </form>
             </div>
-
         </div>
-
-
         <h2>Nos partenaires</h2>
         <div class="partners-container">
             <div class="partner"><img src="images/Partenaires/R.jpg" alt="partenaire">

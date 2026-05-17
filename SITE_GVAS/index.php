@@ -41,9 +41,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 
 <body>
+
     <header>
         <div class="navbar">
-            <div class="logo"><a href="#"></a></div>
             <div class="logo">
                 <img class="gvas" src="images/Images/GVAS.png" alt="GVAS">
             </div>
@@ -77,7 +77,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
     </header>
 
-
+    <!--La première page qui survole-->
+    <div id="welcome-screen">
+        <img class="welcome-image" src="images/Images/GVAS.png" alt="Bienvenue">
+        <h1>Bienvenue au Groupe Vision d'Aigle Services</h1>
+        <p> Qui ne se forme pas se déforme. </p>
+    </div>
 
     <!--Image + Animation-->
     <p class="texte">Bienvenue au Groupe Vision d'Aigle Services </p>
@@ -96,7 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <h2 class="modal-title">Page d'inscription</h2>
 
             <form class="form-group" action="Traitement.php" method="post">
-                <input type="hidden" name="form_type" value="inscriptions">
+                <input type="hidden" name="form_type" value="inscriptions" placeholder="Entrez votre nom">
                 <input type="hidden" name="type" value="inscription">
                 <div class="input-box">
                     <label>Nom</label>
@@ -225,7 +230,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         </div>
     </div>
-
+    <div class="contentes"></div>
 
     <!--Pour la petite fenetre quant le formulaire est envoyer-->
     <script>

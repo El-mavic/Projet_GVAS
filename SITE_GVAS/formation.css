@@ -154,8 +154,12 @@
     }
 
     .action-button {
-        margin-left: -10px;
+        margin-left: px;
         width: 100px;
+    }
+
+    .action-button1 {
+        display: none;
     }
 }
 
@@ -346,6 +350,7 @@ body {
 }
 
 .action-button {
+    position: relative;
     background-color: #fff200;
     color: black;
     border: 1px solid #fff200;
@@ -355,6 +360,25 @@ body {
     font-size: 0.9rem;
     font-weight: bold;
     cursor: pointer;
+    right: 30px;
+
+}
+
+.action-button1 {
+    position: relative;
+    right: 40px;
+    background-color: #fff200;
+    color: black;
+    border: 1px solid #fff200;
+    padding: 0.5rem 1.2rem;
+    outline: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointe;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #fff200;
 
 }
 
@@ -365,6 +389,11 @@ body {
 }
 
 .pro:hover {
+    background-color: #fff200;
+    color: rgb(10, 10, 10);
+}
+
+.action-button1:hover {
     background-color: #fff200;
     color: rgb(10, 10, 10);
 }
