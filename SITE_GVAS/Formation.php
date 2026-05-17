@@ -95,6 +95,7 @@
                 header.classList.remove("hide");
             }
 
+
             lastScroll = currentScroll;
         });
     </script>
