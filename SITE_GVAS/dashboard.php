@@ -44,12 +44,22 @@ $temoignages = $pdo->query(
 <body>
 
     <div class="dashboard">
+        <header class="dashboard-header">
+            <div class="header-left">
+                <img src="images/Images/GVAS.png" alt="GVAS" class="gvas">
+                <div class="header-text">
+                    <h1>Table d'Administrateur</h1>
+                    <p>Groupe Vision d'Aigle Services</p>
+                </div>
+            </div>
 
-        <header>
-            <h1>Groupe Vision d'Aigle Services</h1>
-            <p>Tableau de bord administratif</p>
-            <button id="theme-toggle">🌙 Mode sombre</button>
-            <a href="logout.php" class="logout-btn">Déconnexion</a>
+            <div class="header-right">
+                <button id="theme-toggle" class="header-btn">🌙</button>
+                <button onclick="printSection('inscriptions')" class="header-btn">
+                    Imprimer
+                </button>
+                <a href="logout.php" class="logout-btn">Déconnexion</a>
+            </div>
         </header>
 
         <!-- Cartes statistiques -->
@@ -85,7 +95,7 @@ $temoignages = $pdo->query(
             <canvas id="myChart"></canvas>
         </section>
 
-<!--Gestion d'impression-->
+        <!--Gestion d'impression-->
         <div class="table-header">
             <h2>Dernières inscriptions</h2>
             <button onclick="printSection('inscriptions')" class="print-btn">
@@ -100,51 +110,54 @@ $temoignages = $pdo->query(
                 <table>
                     <thead>
                         <tr>
-                            <th>Nom</th>
-                            <th>Prénom</th>
-                            <th>Date</th>
+                            <th>Nom(s)</th>
+                            <th>Prénom(s)</th>
+                            <th>Date de Naissance</th>
                             <th>Sexe</th>
                             <th>Téléphone</th>
                             <th>Quartier</th>
                             <th>Formation</th>
+                            <th>Date</th>
                             <th>Action</th>
                         </tr>
                     </thead>
-        
-        <tbody>
-            <?php foreach ($inscriptions as $inscription): ?>
-                <tr>
-                    <td><?= htmlspecialchars($inscription['nom']) ?></td>
-                    <td><?= htmlspecialchars($inscription['prenom']) ?></td>
-                    <td><?= htmlspecialchars($inscription['date']) ?></td>
-                    <td><?= htmlspecialchars($inscription['sexe']) ?></td>
-                    <td><?= htmlspecialchars($inscription['telephone']) ?></td>
-                    <td><?= htmlspecialchars($inscription['quartier']) ?></td>
-                    <td><?= htmlspecialchars($inscription['formation']) ?></td>
-                    <td>
-                        <a href="delete.php?id=<?= $inscription['id'] ?>&type=inscription"
-                            class="delete-btn"
-                            onclick="return confirm('Supprimer cette inscription ?')">
-                            Supprimer
-                        </a>
 
-                    </td>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-        </table>
-        </section>
-</div>
+                    <tbody>
+                        <?php foreach ($inscriptions as $inscription): ?>
+                            <tr>
+                                <td><?= htmlspecialchars($inscription['nom']) ?></td>
+                                <td><?= htmlspecialchars($inscription['prenom']) ?></td>
+                                <td><?= date('d/m/Y', strtotime($inscription['date'])) ?></td>
+                                <td><?= htmlspecialchars($inscription['sexe']) ?></td>
+                                <td><?= htmlspecialchars($inscription['telephone']) ?></td>
+                                <td><?= htmlspecialchars($inscription['quartier']) ?></td>
+                                <td><?= htmlspecialchars($inscription['formation']) ?></td>
+                                <td><?= date('d/m/Y H:i', strtotime($inscription['date_creation'])) ?></td>
+                                <td>
+                                    <a href="delete.php?id=<?= $inscription['id'] ?>&type=inscription"
+                                        class="delete-btn"
+                                        onclick="return confirm('Supprimer cette inscription ?')">
+                                        Delete
+                                    </a>
+
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </section>
+        </div>
         <!-- Messages -->
         <section class="table-section">
             <h2>Messages reçus</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>Nom</th>
+                        <th>Nom(s)</th>
                         <th>Email</th>
                         <th>Sujet</th>
                         <th>Message</th>
+                        <th>Date</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -155,11 +168,12 @@ $temoignages = $pdo->query(
                             <td><?= htmlspecialchars($msg['email']) ?></td>
                             <td><?= htmlspecialchars($msg['sujet']) ?></td>
                             <td><?= htmlspecialchars($msg['message']) ?></td>
+                            <td><?= date('d/m/Y H:i', strtotime($msg['date_creation'])) ?></td>
                             <td>
                                 <a href="delete.php?id=<?= $msg['id'] ?>&type=contact"
                                     class="delete-btn"
                                     onclick="return confirm('Supprimer ce message ?')">
-                                    Supprimer
+                                    Delete
                                 </a>
                             </td>
                         </tr>
@@ -167,37 +181,41 @@ $temoignages = $pdo->query(
                 </tbody>
             </table>
         </section>
-    </div>
-    <section class="table-section">
-        <h2>Témoignages reçus</h2>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>N°</th>
-                    <th>Nom(s)</th>
-                    <th>Témoignage</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
+        <section class="table-section">
+            <h2>Témoignages reçus</h2>
 
-            <tbody>
-                <?php foreach ($temoignages as $tem): ?>
+            <table>
+                <thead>
                     <tr>
-                        <td><?= htmlspecialchars($tem['id']) ?></td>
-                        <td><?= htmlspecialchars($tem['nom']) ?></td>
-                        <td><?= htmlspecialchars($tem['message']) ?></td>
-                        <td>
-                            <a href="delete.php?id=<?= $tem['id'] ?>&type=temoignage"
-                                class="delete-btn"
-                                onclick="return confirm('Supprimer ce témoignage ?')">
-                                Supprimer
-                            </a>
-                        </td>
+                        <th>N°</th>
+                        <th>Nom(s)</th>
+                        <th>Témoignage</th>
+                        <th>Date</th>
+                        <th>Action</th>
                     </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
+                </thead>
+
+                <tbody>
+                    <?php foreach ($temoignages as $tem): ?>
+                        <tr>
+                            <td><?= htmlspecialchars($tem['id']) ?></td>
+                            <td><?= htmlspecialchars($tem['nom']) ?></td>
+                            <td><?= htmlspecialchars($tem['message']) ?></td>
+                            <td><?= date('d/m/Y H:i', strtotime($tem['date_creation'])) ?></td>
+                            <td>
+                                <a href="delete.php?id=<?= $tem['id'] ?>&type=temoignage"
+                                    class="delete-btn"
+                                    onclick="return confirm('Supprimer ce témoignage ?')">
+                                    Delete
+                                </a>
+                            </td>
+
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+    </div>
     </section>
     <script>
         const ctx = document.getElementById('myChart');
@@ -208,7 +226,7 @@ $temoignages = $pdo->query(
                 labels: ['Hommes', 'Femmes'],
                 datasets: [{
                     data: [<?= $totalHommes ?>, <?= $totalFemmes ?>],
-                    backgroundColor: ['#2563eb', '#ec4899'],
+                    backgroundColor: ['#2563eb', 'yellow'],
                     borderWidth: 0
                 }]
             },
@@ -229,9 +247,9 @@ $temoignages = $pdo->query(
             document.body.classList.toggle('dark-mode');
 
             if (document.body.classList.contains('dark-mode')) {
-                toggleBtn.textContent = '☀️ Mode clair';
+                toggleBtn.textContent = '☀️';
             } else {
-                toggleBtn.textContent = '🌙 Mode sombre';
+                toggleBtn.textContent = '🌙 ';
             }
         });
     </script>

@@ -4,10 +4,109 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #f1f5f9;
-    color: #1e293b;
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--header);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.gvas {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    padding: 6px;
+}
+
+.header-text h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.header-text p {
+    font-size: 28px;
+    color: #cbd5e1;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-right #theme-toggle {
+    margin-top: 3px;
+}
+
+.header-btn,
+.logout-btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.header-btn {
+    background: white;
+    color: #0f172a;
+}
+
+.header-btn:hover {
+    transform: translateY(-2px);
+}
+
+.logout-btn {
+    background: #ef4444;
+    color: white;
+}
+
+
+/* Les responsives */
+@media screen and (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .header-left {
+        flex-direction: column;
+    }
+
+    .header-right {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .header-btn,
+    .logout-btn {
+        width: 100%;
+    }
+
+    .header-text h1 {
+        margin-top: -20px;
+    }
+
+    .dashboard-header .gvas {
+        width: 110px;
+        height: 110px;
+    }
 }
 
 .dashboard {
@@ -17,19 +116,6 @@ body {
     padding: 30px 0;
 }
 
-header {
-    margin-bottom: 30px;
-}
-
-header h1 {
-    font-size: 32px;
-    color: #0f172a;
-}
-
-header p {
-    color: #64748b;
-    margin-top: 5px;
-}
 
 /* CARTES */
 .cards {
@@ -55,12 +141,14 @@ header p {
     font-size: 16px;
     color: #64748b;
     margin-bottom: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .card p {
     font-size: 32px;
     font-weight: bold;
     color: #0f172a;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /* GRAPHIQUE */
@@ -74,13 +162,14 @@ header p {
 }
 
 #myChart {
-    max-width: 280px;
-    max-height: 280px;
+    max-width: 250px;
+    max-height: 250px;
     margin: 20px auto;
 }
 
 .chart-container h2 {
     margin-bottom: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /* TABLES */
@@ -95,19 +184,26 @@ header p {
 
 .table-section h2 {
     margin-bottom: 20px;
-    color: #0f172a;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 table {
     width: 100%;
+    max-width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+
 
 table th {
     background: #0f172a;
     color: white;
     padding: 14px;
     text-align: left;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 table td {
@@ -116,7 +212,7 @@ table td {
 }
 
 table tr:hover {
-    background: #f8fafc;
+    background: #3190ee;
 }
 
 /* RESPONSIVE */
@@ -131,14 +227,16 @@ table tr:hover {
 }
 
 :root {
+    --header: #0f172a;
     --bg: #f1f5f9;
-    --text: #1e293b;
+    --text: black;
     --card: white;
     --table-header: #0f172a;
     --shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 .dark-mode {
+    --header: #0e0d0c;
     --bg: #0f172a;
     --text: #f8fafc;
     --card: #1e293b;
@@ -147,7 +245,6 @@ table tr:hover {
 }
 
 body {
-    font-family: Arial, sans-serif;
     background: var(--bg);
     color: var(--text);
     transition: 0.3s;
@@ -166,7 +263,7 @@ table th {
 }
 
 table tr:hover {
-    background: rgba(148, 163, 184, 0.1);
+    background: rgba(255, 255, 0, 0.74);
 }
 
 /* bouton */
@@ -176,9 +273,19 @@ table tr:hover {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    background: #2563eb;
+    background: linear-gradient(135deg, #0a0a0a, #635b5b);
     color: white;
     font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#theme-toggle:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #696565, #bbcf08);
+}
+
+#theme-toggle:active {
+    transform: scale(0.97);
 }
 
 .table-section:last-child td:nth-child(3) {
@@ -191,7 +298,7 @@ table tr:hover {
 .logout-btn {
     display: inline-block;
     padding: 12px 22px;
-    background: linear-gradient(135deg, #ef4444, #dc2626);
+    background: linear-gradient(135deg, #ef4444, #635b5b);
     color: white;
     text-decoration: none;
     font-weight: 600;
@@ -201,12 +308,12 @@ table tr:hover {
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .logout-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 22px rgba(220, 38, 38, 0.35);
-    background: linear-gradient(135deg, #dc2626, #b91c1c);
+    background: linear-gradient(135deg, #dc2626, #bbcf08);
 }
 
 .logout-btn:active {
@@ -251,4 +358,101 @@ table tr:hover {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
+}
+
+
+/*Les responsives*/
+/* ===== TABLETTE ===== */
+@media screen and (max-width: 1024px) {
+    .dashboard {
+        padding: 15px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .gvas {
+        width: 90px;
+    }
+
+    header h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .table-section {
+        padding: 15px;
+        overflow-x: auto;
+    }
+}
+
+/* ===== MOBILE ===== */
+@media screen and (max-width: 768px) {
+    .dashboard {
+        padding: 10px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .gvas {
+        width: 75px;
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+    .logout-btn,
+    #theme-toggle,
+    .print-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    table {
+        min-width: 700px;
+    }
+
+    .table-section {
+        overflow-x: auto;
+    }
+}
+
+/* ===== PETITS TÉLÉPHONES ===== */
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 18px;
+    }
+
+    .gvas {
+        width: 60px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+    }
+
+    .card p {
+        font-size: 20px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        font-size: 12px;
+    }
 }
