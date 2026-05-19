@@ -21,7 +21,7 @@
 
         <div class="buttons">
             <a class="action-button1" href="temoignage.php">Temoignage</a>
-            <a class="action-button pro" href="index.php">Inscription</a>
+            <a class="action-button pro" >Inscription</a>
         </div>
 
     </header>
@@ -99,6 +99,7 @@
             lastScroll = currentScroll;
         });
     </script>
+
 </body>
 
 </html>

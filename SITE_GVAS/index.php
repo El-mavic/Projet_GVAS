@@ -49,7 +49,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
 
             <ul class="links">
-                <li><a href="index.php">Accueil</a></li>
                 <li><a href="Formation.php">Formations</a></li>
                 <li><a href="Galerie.php">Gallérie</a></li>
                 <li><a href="contacts.php">Contacts</a></li>
@@ -105,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <input type="hidden" name="type" value="inscription">
                 <div class="input-box">
                     <label>Nom</label>
-                    <input type="text" name="nom" placeholder="Entrez votre nom" value="<?= $_POST['nom'] ?? '' ?> " required>
+                    <input type="text" name="nom" placeholder="Entrez votre nom" value="<?= $_POST['nom'] ?? '' ?>" required>
                     <span class="Erreur"><?= $errors['nom'] ?? "" ?></span>
 
                 </div>

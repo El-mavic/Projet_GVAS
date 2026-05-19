@@ -1,3 +1,12 @@
+<?php
+require 'traitement.php';
+
+$temoignages = $pdo->query(
+    "SELECT * FROM temoignages ORDER BY id ASC"
+)->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -40,9 +49,23 @@
         <h2>LAISSER UN TEMOIGNAGE DE VOTRE PASSAGE A GVAS</h2>
         <div class="temoignage-box">
 
-            <form onsubmit="ajouterTemoignage(event)">
-                <textarea id="message" placeholder="Votre témoignage..."></textarea>
-                <input class="change" type="text" name="nom" placeholder="Veuillez saisir votre nom" required>
+            <form action="traitement.php" method="POST">
+                <input type="hidden" name="form_type" value="temoignage">
+
+                <textarea
+                    name="message"
+                    id="message"
+                    placeholder="Votre témoignage..."
+                    required>
+    </textarea>
+
+                <input
+                    class="change"
+                    type="text"
+                    name="nom"
+                    placeholder="Veuillez saisir votre nom"
+                    required>
+
                 <button type="submit">Envoyer</button>
             </form>
 
@@ -57,10 +80,20 @@
                 </tr>
             </thead>
             <tbody>
+                <?php foreach ($temoignages as $tem): ?>
+                    <tr>
+                        <td><?= htmlspecialchars($tem['id']) ?></td>
+                        <td><?= htmlspecialchars($tem['nom']) ?></td>
+                        <td><?= htmlspecialchars($tem['message']) ?></td>
+                        <td>
+                          
+                    </tr>
+                <?php endforeach; ?>
             </tbody>
         </table>
     </section>
 
+    </table>
     <section class="partners">
         <div class="footer-container">
             <div class="footer-col">
@@ -114,68 +147,7 @@
         </div>
     </section>
     </footer>
-    <script>
-        let compteur = 1;
 
-        // Charger les témoignages au démarrage
-        window.onload = function() {
-            const temoignages = JSON.parse(localStorage.getItem('temoignages')) || [];
-
-            const table = document.querySelector('#table-temoignage tbody');
-
-            temoignages.forEach((item, index) => {
-                const row = document.createElement('tr');
-
-                row.innerHTML = `
-            <td>${index + 1}</td>
-            <td>${item.nom}</td>
-            <td>${item.message}</td>
-        `;
-
-                table.appendChild(row);
-            });
-
-            compteur = temoignages.length + 1;
-        };
-
-        function ajouterTemoignage(event) {
-            event.preventDefault(); // 🔥 empêche le rechargement
-
-            const message = document.getElementById('message').value;
-            const nom = document.querySelector('input[name="nom"]').value;
-
-            if (message.trim() === '' || nom.trim() === '') {
-                alert('Veuillez remplir tous les champs');
-                return;
-            }
-
-            const table = document.querySelector('#table-temoignage tbody');
-
-            const row = document.createElement('tr');
-
-            row.innerHTML = `
-        <td>${compteur++}</td>
-        <td>${nom}</td>
-        <td>${message}</td>
-    `;
-
-            table.appendChild(row);
-
-            // Sauvegarde dans localStorage (objet)
-            let temoignages = JSON.parse(localStorage.getItem('temoignages')) || [];
-
-            temoignages.push({
-                nom: nom,
-                message: message
-            });
-
-            localStorage.setItem('temoignages', JSON.stringify(temoignages));
-
-            // reset champs
-            document.getElementById('message').value = '';
-            document.querySelector('input[name="nom"]').value = '';
-        }
-    </script>
 
     <script>
         const toggle = document.getElementById('menu-toggle');

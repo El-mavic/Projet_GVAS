@@ -1558,10 +1558,12 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(135deg,
-            #020b2d 0%,
-            #0a2472 50%,
-            #29b6ff 100%);
+    background-image: url(images/Images/Educattion1.png);
+    /*background: linear-gradient(to right, #1e43a8, #1a1a1a, #333333);*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1569,26 +1571,68 @@ nav ul li a:hover {
     z-index: 9999;
     color: white;
     animation: fadeOut 2s ease forwards;
-    animation-delay: 3s;
+    animation-delay: 7s;
 }
 
-#welcome-screen h1 {
-    font-size: 45px;
-    color: yellow;
-    text-align: center;
-}
-
-#welcome-screen p {
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-/* Animation disparition */
+/* Disparition */
 @keyframes fadeOut {
     to {
         opacity: 0;
         visibility: hidden;
     }
+}
+
+#welcome-screen h1 {
+    font-size: 50px;
+    color: yellow;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    opacity: 0;
+    animation: zoomIn 2s ease-out forwards;
+}
+
+/* Animation du titre */
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(2) translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+#welcome-screen p {
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    opacity: 0;
+    animation: texteApparition 2s ease forwards;
+    animation-delay: 2s;
+}
+
+/* Animation du paragraphe */
+@keyframes texteApparition {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        letter-spacing: 4px;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: 1px;
+    }
+}
+
+#welcome-screen p,
+#welcome-screen h1,
+.welcome-image {
+    position: relative;
+    z-index: 1;
 }
 
 /* Contenu du site */
@@ -1600,5 +1644,21 @@ nav ul li a:hover {
 .welcome-image {
     width: 200px;
     height: 200px;
-    margin-top: -50px;
+    margin-top: 30px;
+    opacity: 0;
+    animation: imageAnimation 2s ease forwards;
+    animation-delay: 2s;
+}
+
+/* Animation image */
+@keyframes imageAnimation {
+    from {
+        opacity: 0;
+        transform: scale(0.5) rotate(-20deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
 }
