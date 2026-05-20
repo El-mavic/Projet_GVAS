@@ -301,6 +301,7 @@ body {
 
 /* texte caché */
 .text-hover {
+    margin-top: -30px;
     position: absolute;
     top: 100px;
     /* centré sur l'image (ajuste si besoin) */
@@ -308,7 +309,7 @@ body {
     transform: translateX(-50%);
 
     color: white;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
 
     opacity: 0;

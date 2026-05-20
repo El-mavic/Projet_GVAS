@@ -6,7 +6,6 @@ $temoignages = $pdo->query(
 )->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -85,8 +84,8 @@ $temoignages = $pdo->query(
                         <td><?= htmlspecialchars($tem['id']) ?></td>
                         <td><?= htmlspecialchars($tem['nom']) ?></td>
                         <td><?= htmlspecialchars($tem['message']) ?></td>
-                        <td>
-                          
+
+
                     </tr>
                 <?php endforeach; ?>
             </tbody>
@@ -121,24 +120,28 @@ $temoignages = $pdo->query(
             </div>
 
             <div class="footer-col">
-                <h4>Newsletter</h4>
                 <form action="index.php" method="GET">
-                    <button type="submit">S'inscrire</button>
+                    <button type="button" class="open-inscription">S'inscrire</button>
                 </form>
             </div>
         </div>
         <h2>Nos partenaires</h2>
         <div class="partners-container">
-            <div class="partner"><img src="images/Partenaires/R.jpg" alt="partenaire">
+
+            <div class="partner"> <a href="https://www.airtel.cg/">
+                    <img src="images/Partenaires/R.jpg" alt="partenaire"></a>
                 <h3>Airtel Congo</h3>
             </div>
-            <div class="partner"><img src="images/Partenaires/Ecole.png" alt="partenaire">
+            <div class="partner"><a href="https://www.africabizinfo.com/fr-CG/private-school-la-maniguette">
+                    <img src="images/Partenaires/Ecole.png" alt="partenaire"></a>
                 <h3>Ecole Privée la MANINGUETTE</h3>
             </div>
-            <div class="partner"><img src="images/Partenaires/VIP.png" alt="partenaire">
+            <div class="partner"><a href="https://www.facebook.com/vipconsultscongob/">
+                    <img src="images/Partenaires/VIP.png" alt="partenaire"></a>
                 <h3>VIP Consult</h3>
             </div>
-            <div class="partner"><img src="images/Partenaires/AJEC.jpeg" alt="partenaire">
+            <div class="partner"><a href="https://www.facebook.com/people/Association-des-Jeunes-Eveill%C3%A9s-du-Congo-AJEC/100064026428804/">
+                    <img src="images/Partenaires/AJEC.jpeg" alt="partenaire"></a>
                 <h3>A.J.E.C</h3>
             </div>
             <div class="partner"><img src="images/Partenaires/cvmc.png" alt="partenaire">
@@ -170,6 +173,7 @@ $temoignages = $pdo->query(
             e.stopPropagation();
         });
     </script>
+
 </body>
 
 </html>

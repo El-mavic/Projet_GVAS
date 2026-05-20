@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <li><a href="contacts.php">Contacts</a></li>
             </ul>
             <div class="buttons">
-                <a class="action-button pro " href="#">Welcome</a>
+                <a class="action-button pro " href="#">Pub</a>
                 <a class="action-button" href="#">A propos</a>
             </div>
             <div class="burger-menu-button">
@@ -91,8 +91,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
 
     <!--Boutton d'inscription-->
-    <button id="btnInscription" class="btn-primary">Inscription</button>
-
+    <button id="btnInscription" class="btn-primary">
+        Inscription
+    </button>
     <div id="modal" class="modal">
         <div class="modal-content animate">
             <span id="closeBtn" class="close">&times;</span>
@@ -209,6 +210,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
             </a>
 
+            <!-- RENDEZ-VOUS -->
+            <a href="https://www.google.com/maps/place/4%C2%B049'21.0%22S+11%C2%B054'19.7%22E/@-4.8224385,11.9053312,80m/
+            data=!3m1!1e3!4m4!3m3!8m2!3d-4.82249!4d11.9054683?hl=
+            fr&entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D" class="fab-item">
+                <span class="fab-label">Notre localisation</span>
+                <div class="fab-btn">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+            </a>
+
             <!-- WHATSAPP -->
             <a href="https://wa.me/242064201415" target="_blank" class="fab-item">
                 <span class="fab-label">Contactez via WhatsApp</span>
@@ -217,13 +228,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
             </a>
 
-            <!-- RENDEZ-VOUS -->
-            <a href="https://www.google.com/maps/place/4%C2%B049'21.0%22S+11%C2%B054'19.7%22E/@-4.8224385,11.9053312,80m/
-            data=!3m1!1e3!4m4!3m3!8m2!3d-4.82249!4d11.9054683?hl=
-            fr&entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D" class="fab-item">
-                <span class="fab-label">Notre localisation</span>
+            <!-- E-MAIL -->
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@gvas.fr" target="_blank" class="fab-item">
+                <span class="fab-label">Contactez via E-mail</span>
                 <div class="fab-btn">
-                    <i class="fa-solid fa-location-dot"></i>
+                    <i class="fa-solid fa-envelope"></i>
                 </div>
             </a>
 

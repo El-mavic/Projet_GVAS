@@ -356,13 +356,121 @@
 
   .gallery-item.hidden {
     display: none;
+
+  }
+</style>
+
+<style>
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  /* Section */
+  .gallery-section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 15px 8%;
+    background: linear-gradient(135deg, #6d6b6b, #eef3f8);
+  }
+
+  /* Header */
+  .gallery-header {
+    background: linear-gradient(135deg, #31313185, #eef3f8, #45454686);
+    padding: 25px 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
+  }
+
+  /* Title */
+  .gallery-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  }
+
+  /* Navigation */
+  #nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+  }
+
+  #nav ul li a {
+    text-decoration: none;
+    color: #334155;
+    font-weight: 500;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    background: #f2f3f3;
+  }
+
+  #nav ul li a:hover {
+    background: yellow;
+    color: black;
+  }
+
+  /* Description */
+  .gallery-section p {
+    margin-top: 20px;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .gallery-header h2 {
+      font-size: 24px;
+    }
+
+    #nav ul {
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .gallery-header {
+      text-align: center;
+    }
+
+    #nav {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    #nav li {
+      display: inline-block;
+    }
   }
 </style>
 
 <section class="gallery-section">
   <div class="gallery-header">
     <h2>GROUPE VISION D'AIGLE SERVICES</h2>
+    <nav id="nav">
+      <ul>
+        <li><a href="index.php">Accueil</a></li>
+        <li><a href="Formation.php">Formations</a></li>
+        <li><a href="galerie.php">Galerie</a></li>
+        <li><a href="contacts.php">Contact</a></li>
+        <li><a href="a-propos.php">À propos</a></li>
+      </ul>
+    </nav>
     <p>Vivre une galerie speciale pour nos activitées</p>
+  </div>
+
   </div>
 
   <div class="gallery-grid" id="gallery"></div>

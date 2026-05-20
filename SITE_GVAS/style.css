@@ -1126,6 +1126,7 @@ nav ul li a:hover {
     font-size: 18px;
     position: relative;
     left: 60px;
+    margin-top: -60px;
 }
 
 .footer-col button:hover {
