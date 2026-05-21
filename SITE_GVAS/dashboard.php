@@ -14,19 +14,45 @@ $totalHommes = $pdo->query("SELECT COUNT(*) FROM inscriptions WHERE sexe='Mascul
 $totalFemmes = $pdo->query("SELECT COUNT(*) FROM inscriptions WHERE sexe='Féminin'")->fetchColumn();
 $totalTemoignages = $pdo->query("SELECT COUNT(*) FROM temoignages")->fetchColumn();
 
+
+// Inscriptions par formation
+$formationsData = $pdo->query("
+    SELECT formation, COUNT(*) as total
+    FROM inscriptions
+    GROUP BY formation
+")->fetchAll(PDO::FETCH_ASSOC);
+
+$formationLabels = [];
+$formationTotals = [];
+
+foreach ($formationsData as $row) {
+    $formationLabels[] = $row['formation'];
+    $formationTotals[] = $row['total'];
+}
+
+
 // Dernières inscriptions
 $inscriptions = $pdo->query(
-    "SELECT * FROM inscriptions ORDER BY id DESC LIMIT 10"
+    "SELECT * FROM inscriptions 
+     WHERE deleted = 0
+     ORDER BY id DESC 
+     LIMIT 10"
 )->fetchAll(PDO::FETCH_ASSOC);
 
 // Derniers messages
 $messages = $pdo->query(
-    "SELECT * FROM utilisateurs ORDER BY id DESC LIMIT 5"
+    "SELECT * FROM utilisateurs 
+     WHERE deleted = 0
+     ORDER BY id DESC 
+     LIMIT 5"
 )->fetchAll(PDO::FETCH_ASSOC);
 
 // Derniers témoignages
 $temoignages = $pdo->query(
-    "SELECT * FROM temoignages ORDER BY id ASC LIMIT 10"
+    "SELECT * FROM temoignages 
+     WHERE deleted = 0
+     ORDER BY id ASC 
+     LIMIT 10"
 )->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
@@ -54,6 +80,9 @@ $temoignages = $pdo->query(
             </div>
 
             <div class="header-right">
+                <a href="corbeille.php" id="theme-toggle" class="header-btn">
+                    <button>🗑</button>
+                </a>
                 <button id="theme-toggle" class="header-btn">🌙</button>
                 <button onclick="printSection('inscriptions')" class="header-btn">
                     Imprimer
@@ -91,18 +120,19 @@ $temoignages = $pdo->query(
 
         <!-- Graphique -->
         <section class="chart-container">
-            <h2>Répartition par sexe</h2>
-            <canvas id="myChart"></canvas>
+            <div class="charts-flex">
+                <div class="chart-box">
+                    <h2>Répartition par sexe</h2>
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="chart-box">
+                    <h1>Inscriptions</h1>
+                    <canvas id="formationChart"></canvas>
+                </div>
+            </div>
         </section>
 
-        <!--Gestion d'impression-->
-        <div class="table-header">
-            <h2>Dernières inscriptions</h2>
-            <button onclick="printSection('inscriptions')" class="print-btn">
-                Imprimer
-            </button>
 
-        </div>
         <!-- Inscriptions -->
         <div id="inscriptions">
             <section class="table-section">
@@ -226,7 +256,7 @@ $temoignages = $pdo->query(
                 labels: ['Hommes', 'Femmes'],
                 datasets: [{
                     data: [<?= $totalHommes ?>, <?= $totalFemmes ?>],
-                    backgroundColor: ['#2563eb', 'yellow'],
+                    backgroundColor: ['#2563eb', 'pink'],
                     borderWidth: 0
                 }]
             },
@@ -293,6 +323,40 @@ $temoignages = $pdo->query(
             printWindow.document.close();
             printWindow.print();
         }
+    </script>
+    <script>
+        const formationCtx = document.getElementById('formationChart');
+        new Chart(formationCtx, {
+            type: 'doughnut',
+            data: {
+                labels: <?= json_encode($formationLabels) ?>,
+                datasets: [{
+                    data: <?= json_encode($formationTotals) ?>,
+                    backgroundColor: [
+                        '#2563eb',
+                        '#16a34a',
+                        '#f59e0b',
+                        '#dc2626',
+                        '#7c3aed',
+                        '#0891b2'
+                    ],
+                    borderWidth: 0,
+
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        display: window.innerWidth > 768,
+                        position: 'right'
+                    }
+                }
+
+            }
+
+        });
     </script>
 </body>
 

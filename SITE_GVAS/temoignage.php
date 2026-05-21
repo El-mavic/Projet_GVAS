@@ -128,19 +128,19 @@ $temoignages = $pdo->query(
         <h2>Nos partenaires</h2>
         <div class="partners-container">
 
-            <div class="partner"> <a href="https://www.airtel.cg/">
+            <div class="partner"> <a href="https://www.airtel.cg/" target="_blank">
                     <img src="images/Partenaires/R.jpg" alt="partenaire"></a>
                 <h3>Airtel Congo</h3>
             </div>
-            <div class="partner"><a href="https://www.africabizinfo.com/fr-CG/private-school-la-maniguette">
+            <div class="partner"><a href="https://www.africabizinfo.com/fr-CG/private-school-la-maniguette" target="_blank">
                     <img src="images/Partenaires/Ecole.png" alt="partenaire"></a>
                 <h3>Ecole Privée la MANINGUETTE</h3>
             </div>
-            <div class="partner"><a href="https://www.facebook.com/vipconsultscongob/">
+            <div class="partner"><a href="https://www.facebook.com/vipconsultscongob/" target="_blank">
                     <img src="images/Partenaires/VIP.png" alt="partenaire"></a>
                 <h3>VIP Consult</h3>
             </div>
-            <div class="partner"><a href="https://www.facebook.com/people/Association-des-Jeunes-Eveill%C3%A9s-du-Congo-AJEC/100064026428804/">
+            <div class="partner"><a href="https://www.facebook.com/people/Association-des-Jeunes-Eveill%C3%A9s-du-Congo-AJEC/100064026428804/" target="_blank">
                     <img src="images/Partenaires/AJEC.jpeg" alt="partenaire"></a>
                 <h3>A.J.E.C</h3>
             </div>

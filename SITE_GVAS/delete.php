@@ -14,10 +14,16 @@ if (isset($_GET['id']) && isset($_GET['type'])) {
     ];
 
     if (array_key_exists($type, $tables)) {
+
         $table = $tables[$type];
 
-        $sql = "DELETE FROM $table WHERE id = ?";
+        $sql = "UPDATE $table 
+                SET deleted = 1,
+                    deleted_at = NOW()
+                WHERE id = ?";
+
         $stmt = $pdo->prepare($sql);
+
         $stmt->execute([$id]);
     }
 
@@ -27,3 +33,4 @@ if (isset($_GET['id']) && isset($_GET['type'])) {
 
 header("Location: dashboard.php");
 exit();
+?>
