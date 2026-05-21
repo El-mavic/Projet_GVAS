@@ -80,11 +80,11 @@ $temoignages = $pdo->query(
             </div>
 
             <div class="header-right">
-                <a href="corbeille.php" id="theme-toggle" class="header-btn">
-                    <button>🗑</button>
+                <a href="corbeille.php" id="theme-toggle" class="logout-btn">Corbeile
+
                 </a>
-                <button id="theme-toggle" class="header-btn">🌙</button>
-                <button onclick="printSection('inscriptions')" class="header-btn">
+                <button id="theme-toggl" class="logout-btn">☀️Dark🌙</button>
+                <button onclick="printSection('inscriptions')" class="logout-btn">
                     Imprimer
                 </button>
                 <a href="logout.php" class="logout-btn">Déconnexion</a>
@@ -271,7 +271,7 @@ $temoignages = $pdo->query(
         });
     </script>
     <script>
-        const toggleBtn = document.getElementById('theme-toggle');
+        const toggleBtn = document.getElementById('theme-toggl');
 
         toggleBtn.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');

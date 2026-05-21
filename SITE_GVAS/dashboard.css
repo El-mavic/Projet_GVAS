@@ -387,7 +387,7 @@ table tr:hover {
 }
 
 /* bouton */
-#theme-toggle {
+/* #theme-toggle {
     margin-top: 15px;
     padding: 10px 18px;
     border: none;
@@ -412,14 +412,14 @@ table tr:hover {
     max-width: 400px;
     word-wrap: break-word;
     white-space: normal;
-}
+} */
 
 /* Bouton de déconnexion */
 .logout-btn {
     display: inline-block;
     padding: 12px 22px;
-    background: linear-gradient(135deg, #ef4444, #635b5b);
-    color: white;
+    background: linear-gradient(135deg, yellow, #635b5b);
+    color: black;
     text-decoration: none;
     font-weight: 600;
     border-radius: 12px;
