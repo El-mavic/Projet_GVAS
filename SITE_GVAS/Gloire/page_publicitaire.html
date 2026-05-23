@@ -16,7 +16,7 @@
 <body>
     <header>
         <!-- **************header************** -->
-        <section id="retour" class="flouter">
+        <section class="flouter">
             <div class="section_navbar">
                 <div class="Partie_logo">
                     <div id="sous_class_contact">
@@ -68,53 +68,108 @@
         </section>
 
         <!--**************ruban déroulant**************-->
-        <section class="section_pub">
-            <div class="ad-banner">
-                <div class="ad-track">
-                    <!-- Contenu répété pour effet infini -->
-                    <div class="ad-item">#Service de Livraison</div>
-                    <div class="ad-item">#Paiement sécurisé</div>
-                    <div class="ad-item">#+10 000 clients satisfaits</div>
+        <!-- <section class="section_pub">
+            <div class="ad-banners"></div> -->
+        <!-- Premiere partie -->
+        <!-- <div class="ad-track">
+                <div class="ad-item">
+                    <span>✦ Service de Livraison</span>
+                    <span>✦ Paiement sécurisé</span>
+                    <span>✦ +10 000 clients satisfaits</span>
+                    <span>✦ Formation professionnelle</span>
+                    <span>✦ Promo vacances</span>
+                    <span>✦ Service d'orientation inclus</span>
+                    <span>✦ Vente d'articles</span>
+                </div>
+            </div>
+        </section> -->
 
-                    <!-- DUPLICATION (important pour boucle fluide) -->
-                    <div class="ad-item">#Formation professionnels</div>
+        <!-- <section class="section_pub">
+            <div class="ad-banner">
+                <div class="ad-track"> -->
+        <!-- Contenu répété pour effet infini -->
+        <!-- <div class="ad-item">#Service de Livraison</div>
+                    <div class="ad-item">#Paiement sécurisé</div>
+                    <div class="ad-item">#+10 000 clients satisfaits</div> -->
+
+        <!-- DUPLICATION (important pour boucle fluide) -->
+        <!-- <div class="ad-item">#Formation professionnels</div>
                     <div class="ad-item">#Promo vacances</div>
                     <div class="ad-item">#Service d'orientation inclu</div>
                     <div class="ad-item">#Vente d'articles</div>
                 </div>
             </div>
-        </section>
+        </section> -->
+        <!--**************ruban déroulant**************-->
+
     </header>
 
-    <main>
-
-
-
+    <main id="ancre">
         <section id="classeur">
             <div class="classe">
                 <div class="defilements">
+                    <section class="section_pub">
+                        <div class="ad-banner">
+                            <div class="ad-track">
+                                <!-- Contenu répété pour effet infini -->
+                                <div class="ad-item">#Service de Livraison</div>
+                                <div class="ad-item">#Paiement sécurisé</div>
+                                <div class="ad-item">#+10 000 clients satisfaits</div>
+
+                                <!-- DUPLICATION (important pour boucle fluide) -->
+                                <div class="ad-item">#Formation professionnels</div>
+                                <div class="ad-item">#Promo vacances</div>
+                                <div class="ad-item">#Service d'orientation inclu</div>
+                                <div class="ad-item">#Vente d'articles</div>
+                            </div>
+                        </div>
+                    </section>
 
                 </div>
                 <div class="rondeurs">
+
+                    <div class="contien">
+
+                        <!-- LIKE -->
+                        <button class="like-btn" id="likeBtn">
+                            J'aime <span id="likeCount">0</span>
+                        </button>
+
+                        <!-- ABONNEMENT -->
+                        <button class="subscribe-btn" id="subscribeBtn">
+                            Abonnez-vous
+                        </button>
+
+                        <!-- PARTAGE -->
+                        <button class="share-btn" id="shareBtn">
+                            Partager
+                        </button>
+
+                    </div>
+
                     <div>
-                        <div>
-                            <h1>il y'a 01 folowers</h1>
+                        <h1>
+                            nombre d'abonnée : XXXX
+                        </h1>
+                    </div>
+
+                    <!-- POPUP -->
+
+                    <div class="popup" id="popup">
+
+                        <div class="popup-top">
+                            <h2>Abonnement</h2>
+
+                            <span class="close" id="closePopup">
+                                ✖
+                            </span>
                         </div>
 
-                        <div class="liked">
-                            <div>
-                                <h1>Aimez</h1>
-                            </div>
-                            <div>
-                                <h1>Likez</h1>
-                            </div>
-                        </div>
+                        <input type="email" id="email" placeholder="Entrez votre adresse mail">
 
-                        <div>
-                            <div>
-                                <h1>Abonnez-vous !</h1>
-                            </div>
-                        </div>
+                        <button id="valider">
+                            Valider
+                        </button>
 
                     </div>
                 </div>
@@ -122,7 +177,7 @@
         </section>
 
         <div class="parie_publicitaire">
-            <h1>REPARTITION DES BESOINS</h1>
+            <h1>DECOUVREZ NOS ARTICLES</h1>
         </div>
         <!--carousel avec infos en bref-->
         <!-- <section class="section_carousel">
@@ -200,8 +255,15 @@
                              <img src="Assets/Img/img pub./Articles informatiques/19de124bdfd877c8cabdef3183f927e7.jpg" alt="">
                         </div>
                         <div class="dav">
-                            <h1>Prix unitaire : 1 500Frs </h1>
-                            <a href="#">reserver votre commande ! </a>
+                            <h1>DESCRIPTION</h1>
+                            <h2>Ordinateur Bureautique</h2>
+                            <p>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                            </p>
+                                <h3>Prix unitaire : 1 500Frs </h3>
                         </div>
                     </div>
 
@@ -211,8 +273,15 @@
                         </div>
 
                         <div class="dav">
-                            <h1>Prix unitaire : 1 500Frs </h1>
-                            <a href="#">reserver votre commande ! </a>
+                            <h1>DESCRIPTION</h1>
+                            <h2>Ordinateur Bureautique</h2>
+                            <p>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                            </p>
+                                <h3>Prix unitaire : 1 500Frs </h3>
                         </div>
                     </div>
 
@@ -222,8 +291,15 @@
                         </div>
 
                         <div class="dav">
-                            <h1>Prix unitaire : 1 500Frs </h1>
-                            <a href="#">reserver votre commande ! </a>
+                            <h1>DESCRIPTION</h1>
+                            <h2>Ordinateur Bureautique</h2>
+                            <p>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                            </p>
+                                <h3>Prix unitaire : 1 500Frs </h3>
                         </div>
                     </div>
 
@@ -233,8 +309,15 @@
                         </div>
 
                         <div class="dav">
-                            <h1>Prix unitaire : 1 500Frs </h1>
-                            <a href="#">reserver votre commande ! </a>
+                            <h1>DESCRIPTION</h1>
+                            <h2>Ordinateur Bureautique</h2>
+                            <p>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                            </p>
+                                <h3>Prix unitaire : 1 500Frs </h3>
                         </div>
                     </div>
 
@@ -244,8 +327,15 @@
                         </div>
 
                         <div class="dav">
-                            <h1>Prix unitaire : 1 500Frs </h1>
-                            <a href="#">reserver votre commande ! </a>
+                            <h1>DESCRIPTION</h1>
+                            <h2>Ordinateur Bureautique</h2>
+                            <p>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                            </p>
+                                <h3>Prix unitaire : 1 500Frs </h3>
                         </div>
                     </div>
 
@@ -257,8 +347,15 @@
                         </div>
 
                         <div class="dav">
-                            <h1>Prix unitaire : 1 500Frs </h1>
-                            <a href="#">reserver votre commande ! </a>
+                            <h1>DESCRIPTION</h1>
+                            <h2>Ordinateur Bureautique</h2>
+                            <p>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                            </p>
+                                <h3>Prix unitaire : 1 500Frs </h3>
                         </div>
                     </div>
 
@@ -269,8 +366,15 @@
                         </div>
 
                         <div class="dav">
-                            <h1>Prix unitaire : 1 500Frs </h1>
-                            <a href="#">reserver votre commande ! </a>
+                            <h1>DESCRIPTION</h1>
+                            <h2>Ordinateur Bureautique</h2>
+                            <p>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                            </p>
+                                <h3>Prix unitaire : 1 500Frs </h3>
                         </div>
                         
                     </div>
@@ -281,8 +385,15 @@
                         </div>
 
                         <div class="dav">
-                            <h1>Prix unitaire : 1 500Frs </h1>
-                            <a href="#">reserver votre commande ! </a>
+                            <h1>DESCRIPTION</h1>
+                            <h2>Ordinateur Bureautique</h2>
+                            <p>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                            </p>
+                                <h3>Prix unitaire : 1 500Frs </h3>
                         </div>
                     </div>
 
@@ -292,8 +403,15 @@
                         </div>
 
                         <div class="dav">
-                            <h1>Prix unitaire : 1 500Frs </h1>
-                            <a href="#">reserver votre commande ! </a>
+                            <h1>DESCRIPTION</h1>
+                            <h2>Ordinateur Bureautique</h2>
+                            <p>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                            </p>
+                                <h3>Prix unitaire : 1 500Frs </h3>
                         </div>
                     </div>
 
@@ -303,8 +421,15 @@
                         </div>
 
                         <div class="dav">
-                            <h1>Prix unitaire : 1 500Frs </h1>
-                            <a href="#">reserver votre commande ! </a>
+                            <h1>DESCRIPTION</h1>
+                            <h2>Ordinateur Bureautique</h2>
+                            <p>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                            </p>
+                                <h3>Prix unitaire : 1 500Frs </h3>
                         </div>
                     </div>
 
@@ -314,8 +439,15 @@
                         </div>
 
                         <div class="dav">
-                            <h1>Prix unitaire : 1 500Frs </h1>
-                            <a href="#">reserver votre commande ! </a>
+                            <h1>DESCRIPTION</h1>
+                            <h2>Ordinateur Bureautique</h2>
+                            <p>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                            </p>
+                                <h3>Prix unitaire : 1 500Frs </h3>
                         </div>
                     </div>
 
@@ -325,8 +457,15 @@
                         </div>
 
                         <div class="dav">
-                            <h1>Prix unitaire : 1 500Frs </h1>
-                            <a href="#">reserver votre commande ! </a>
+                            <h1>DESCRIPTION</h1>
+                            <h2>Ordinateur Bureautique</h2>
+                            <p>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                            </p>
+                                <h3>Prix unitaire : 1 500Frs </h3>
                         </div>
                     </div>
 
@@ -337,8 +476,15 @@
                         </div>
 
                         <div class="dav">
-                            <h1>Prix unitaire : 1 500Frs </h1>
-                            <a href="#">reserver votre commande ! </a>
+                            <h1>DESCRIPTION</h1>
+                            <h2>Ordinateur Bureautique</h2>
+                            <p>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                            </p>
+                                <h3>Prix unitaire : 1 500Frs </h3>
                         </div>
                     </div>                
                 </div>
@@ -361,7 +507,7 @@
                         </div>
 
                         <div class="bas">
-                            <button onclick="ouvrir()">S'inscrire ! </button>
+                            
                         </div>
                     </div>
                 </div>
@@ -497,10 +643,7 @@
             </div>
 
         `;
-            }
-
-                
-                
+                }
             }
         </script>
 
@@ -508,7 +651,7 @@
             <!-- Partie gauche -->
             <div class="menu">
 
-                <h1>Découverte</h1>
+                <h1>Onglets</h1>
 
                 <button onclick="changerContenu('Produits')">
                     Produits
@@ -517,24 +660,32 @@
                 <button onclick="changerContenu('Services')">
                     Services
                 </button>
+
+                <a href="#">
+                    plus d'infos
+                </a>
+
+                <a href="#">
+                    S'incrire
+                </a>
             </div>
 
             <!-- Partie droite -->
             <div class="contenu" id="contenu">
                 <div class="Acceuil">
-                        <div>
-                            <img src="Assets/Img/icon_logo/logo-GVAS.png" alt="logo-GVAS">
-                            <h1>GROUPE VISION D'AIGLE SERVICE</h1>
-                            <P>Spécialiser dans la vente des produits et services</P>
-                        </div>
+                    <div>
+                        <img src="Assets/Img/icon_logo/logo-GVAS.png" alt="logo-GVAS">
+                        <h1>GROUPE VISION D'AIGLE SERVICE</h1>
+                        <P>Spécialiser dans la vente des produits et services</P>
                     </div>
+                </div>
             </div>
         </div>
 
 
         <section>
-            <div class="partie_publicitaire">
-                <h1>PARTIE PUBLICITAIRE</h1>
+            <div class="parie_publicitaire">
+                <h1>NOS ANNONCES </h1>
             </div>
 
             <div class="partie_recrutement">
@@ -548,8 +699,17 @@
                                 </video>
                             </div>
                             <div class="p_bas">
-                                <h1>Vidéo Démo</h1>
-                                <p>ijpojpodcclijq</p>
+                                <h1>Découvrez notre démo <br>
+                                    concernant les avis de recrutement</h1>
+
+                                <p>
+                                    Explorez notre interface de recrutement et découvrez ses fonctionnalités. <br>
+                                    <i> Service disponible uniquement pendant certaines périodes. </i>
+                                </p>
+
+                                <h2>
+                                    Cliquez <a href="#">ICI</a> pour éxécuter la démo.
+                                </h2>
                             </div>
                         </div>
 
@@ -561,15 +721,38 @@
                                 </video>
                             </div>
                             <div class="p_bas">
-                                <h1>Découvrez notre démo recrutement</h1>
+                                <h1>Découvrez notre démo <br> concernant la disponsation des cours en ligne</h1>
 
                                 <p>
-                                    Explorez notre interface de recrutement et découvrez ses fonctionnalités. <br>
-                                    Service disponible uniquement à certaines périodes.
+                                    Accéder à nôtre salle de classe depuis chez vous !! <br>
+                                    <i> Service disponible uniquement aux élèves inscrit en fonction des emplois du
+                                        temps des cours. </i>
                                 </p>
 
                                 <h2>
-                                    Cliquez <a href="#">ICI</a> pour voir la démo.
+                                    Cliquez <a href="#">ICI</a> pour éxécuter la démo.
+                                </h2>
+                            </div>
+                        </div>
+
+                        <div class="bg">
+                            <div class="hauteur">
+                                <video autoplay controls muted>
+                                    <source
+                                        src="Assets/video/Marshmello & Bastille - Happier - Traduction Française & Paroles.mp4">
+                                </video>
+                            </div>
+                            <div class="p_bas">
+                                <h1>Découvrez notre démo <br>
+                                    concernant les avis de recrutement</h1>
+
+                                <p>
+                                    Explorez notre interface de recrutement et découvrez ses fonctionnalités. <br>
+                                    <i> Service disponible uniquement pendant certaines périodes. </i>
+                                </p>
+
+                                <h2>
+                                    Cliquez <a href="#">ICI</a> pour éxécuter la démo.
                                 </h2>
                             </div>
                         </div>
@@ -645,14 +828,11 @@
             </div>
         </section>
 
-        <div id="foot">
-            <a href="#retour" class="bouton_retour">
-                <h1>
-                    RETOUR AU SOMMET
-                </h1>
-            </a>
-        </div>
-
+        <a href="#ancre" id="foot">
+            <h1>
+                RETOUR AU SOMMET
+            </h1>
+        </a>
     </main>
 
     <!-- footer -->
@@ -748,6 +928,7 @@
     </footer>
 
     <script src="Assets/js/index.js"></script>
+
 </body>
 
 </html>
