@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
-
+Bonjour
 <!DOCTYPE html>
 <html lang="fr">
 
