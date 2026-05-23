@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 :root {
@@ -31,6 +32,8 @@
     --couleur-lien2: #ffffffff;
     --couleur-lien3: #FFB501;
 }
+
+
 
 @keyframes back {
     0% {
@@ -101,6 +104,11 @@
     }
 }
 
+/* @keyframes ruban-pub {
+    20%   { transform: translateX(20%); }
+    50% { transform: translateX(0%); }
+} */
+
 @keyframes ruban_pub {
     20% {
         transform: translateX(20%);
@@ -111,7 +119,7 @@
     } 
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -240,7 +248,7 @@ header {
 }
 
 .partie_navbar nav li:hover {
-    background-color: rgb(255, 255, 0,0.3);
+    background-color: rgb(255, 255, 0, 0.3);
     border-left: 2px solid rgb(255, 255, 255);
     border-right: 2px solid rgb(255, 255, 255);
     border-bottom: none;
@@ -254,13 +262,42 @@ header {
     transition: 1s;
 }
 
-/*Partie Publicitaire*/
+/*ruban déroulant*/
+/* .ad-item {
+    display: flex;
+    gap: 20px;
+    background: black;
+    animation: ruban-pub 30s linear infinite;
+    padding: 8px;
+    height: 100%;
+    background: black;
+    overflow: hidden;
+    position: sticky;
+    width: 100%;
+}
+
+.ad-item span {
+    color: var(--couleur-lien2);
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.ad-track {
+    width: 100vw;background: black;
+    border-bottom: 3px solid yellow;
+    border-top: 3px solid yellow;
+}
+*/
+
+
 .section_pub {
     background-color: var(--color-background4);
-    border-top: 4px solid yellow;
-    border-bottom: 4px solid yellow;
+    border: 4px solid yellow;
+    border-radius: 5px;
     color: var(--couleur-titre2);
-    width: 100%;
+    width: 1500px;
     padding: 5px;
 }
 
@@ -292,17 +329,19 @@ header {
 }
 
 .defilements {
-    height: 500px;
+    height: 200px;
     width: 100%;
+    display: flex;
+    justify-content: center;
     animation: caro 120s linear infinite 5s;
+    border-bottom: 5px solid yellow;
 }
 
 .rondeurs {
-    height: 90px;
-    width: 300px;
-    border-radius: 80px;
-    position: absolute;
-    bottom: -50px;
+    height: 160px;
+    width: 350px;
+    border-radius: 60px;
+    bottom: -80px;
 
     padding: 15px;
     background: white;
@@ -310,6 +349,21 @@ header {
     box-shadow:
         0 5px 10px rgba(0, 0, 0, 0.1),
         0 5px 10px rgba(0, 0, 0, 0.2);
+    border: 5px solid yellow;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    transition: 0.25s;
+}
+
+.rondeurs:hover {
+    box-shadow:
+        0 5px 10px rgb(255, 251, 0);
+        transform: scale(1.05);
 }
 
 .rondeurs h1 {
@@ -399,23 +453,184 @@ header {
     cursor: pointer;
 
     transition: 0.5s;
-} 
+}
 
 .partenaires .float:hover {
     box-shadow:
         0 5px 10px rgb(255, 251, 0);
     border-top-left-radius: 35px;
     border-bottom-right-radius: 35px;
+    transform: scale(1.05);
+
+}
+
+/* partage */
+.contien {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.contien button {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+button {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+
+}
+
+/* ================= LIKE ================= */
+
+.like-btn {
+    background: #ff5f8f;
+    color: white;
+}
+
+.like-active {
+    background: #ff5f8f;
+    transform: scale(1.15);
+    box-shadow: 0 0 20px #ff5f8f;
+}
+
+/* ================= ABONNEMENT ================= */
+
+.subscribe-btn {
+    background: #e0ff70;
+    color: white;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: black;
+    padding: 25px;
+    border-radius: 15px;
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 320px;
+    animation: popupAnim 0.3s ease;
+}
+
+.popup-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close {
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.popup input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid gray;
+}
+
+.popup button {
+    background: #0066ff;
+    color: white;
+}
+
+@keyframes popupAnim {
+
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+/* ================= PARTAGE ================= */
+
+.share-btn {
+    background: #00aa66;
+    color: white;
 }
 
 /*repartitions des besoins*/
 /*pub sur service*/
 .section_service .sous_section_service .principal {
-    height: 300px;
-    width: 300px;
+    height: 600px;
+    width: 390px;
     border: 1px solid black;
-    border-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
+
+ /* height: 600px;
+    width: 400px;
+    border-radius: 15px;
+    border: 2px solid yellow;
+    transition: transform 0.25s ease-in-out;
+    padding: 15px;
+    border-radius: 10px;
+    background: white;
+
+    transition: 0.4s ease;
+
+    box-shadow:
+        0 5px 10px rgba(0, 0, 0, 0.1),
+        0 15px 30px rgba(0, 0, 0, 0.2);
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+}
+
+.produits .list_produits .part:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.2),
+        0 25px 40px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+}
+
+.produits .list_produits .part .dav {
+    height: auto%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.produits .list_produits .part .div {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
 
 .section_service .principal h1 {
     font-size: 20px;
@@ -526,11 +741,11 @@ p {
 
 /* produits */
 .produits .list_produits .part {
-    height: 300px;
-    width: 300px;
+    height: 600px;
+    width: 400px;
     border-radius: 15px;
-
-        transition: transform 0.25s ease-in-out;
+    border: 2px solid yellow;
+    transition: transform 0.25s ease-in-out;
     padding: 15px;
     border-radius: 10px;
     background: white;
@@ -540,6 +755,12 @@ p {
     box-shadow:
         0 5px 10px rgba(0, 0, 0, 0.1),
         0 15px 30px rgba(0, 0, 0, 0.2);
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
 }
 
 .produits .list_produits .part:hover {
@@ -550,42 +771,32 @@ p {
     cursor: pointer;
 }
 
-.produits .list_produits .part .div {
-    height: 200px;
-    width: 100%;
-}
-
 .produits .list_produits .part .dav {
-    height: 100px;
+    height: auto%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.produits .list_produits .part .div {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-.produits .dav a {
-    padding: 0.5rem 1.2rem;
-    border: 5px solid white;
-    border-radius: 5px;
-    transition-property: background-color;
-    transition: all 0.3s ease;
-    background-color: rgb(175, 173, 173);
-    text-decoration: none;
-    color: var(--couleur-lien1);
-}
-
-.produits .dav a:hover {
-    background-color: var(--color-background3);
-    border: 5px solid white;
-    transform: scale(1.01);
-    box-shadow:
-        0 5px 10px rgb(255, 251, 0),
-        0 5px 10px rgb(255, 251, 0);
-    cursor: pointer;
-}
-
 .produits .dav h1 {
+    font-size: 20px;
+}
+
+.produits .dav h2,h3 {
     font-size: 15px;
 }
 
@@ -606,31 +817,30 @@ p {
 }
 
 
-/* partie publicitaire */
+/* NOS ANNONCES */
 .redirections {
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
+    text-align: justify;
 }
 
 .redirections .bg .hauteur {
-    height: 200px;
-    width: 300px;
+    height: 300px;
 }
 
 .redirections .bg .p_bas {
-    height: 200px;
-    width: 300px;
+    height: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: justify;
     padding: 15px;
 }
 
-.redirections .p_bas h1,h2 {
+.redirections .p_bas h1,
+h2 {
     font-size: 15px;
 }
 
@@ -638,10 +848,15 @@ p {
     font-size: 15px;
 }
 
+.redirections .p_bas p {
+    width: auto;
+}
+
+
 .redirections .bg {
-    height: 300px;
-    width: 600px;
-    padding: 15px;
+    height: 480px;
+    width: 400px;
+    padding: 25px;
     border-radius: 1px;
     background: white;
     text-decoration: none;
@@ -655,22 +870,24 @@ p {
     transition: 0.5s;
 
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 15px;
+
+    text-align: center;
 }
 
-.redirections .bg:hover{
+.redirections .bg:hover {
     box-shadow:
         0 5px 10px rgb(255, 251, 0);
-    border-top-left-radius: 35px;
-    border-bottom-right-radius: 35px;
+        transform: scale(1.01);
 }
 
-.redirections video { 
+.redirections video {
     width: 100%;
     height: 100%;
-    border-radius: 5px;
+    border-radius: 15px;
 }
 
 .pub {
@@ -699,18 +916,24 @@ p {
 
 
 .partie_recrutement .central {
-    gap: 15px;
-    height: 600px;
+    height: 580px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 25px;
 }
 
 /* footer */
 #foot {
+    color: var(--couleur-lien1);
+    text-decoration: none;
+}
+
+#foot h1{
     background-image: linear-gradient(to right, rgb(235, 253, 134), rgb(255, 255, 104));
-    margin-bottom: none;
+    padding: 7px 0 7px 7px;
+    text-align: left;
 }
 
 footer {
@@ -718,16 +941,6 @@ footer {
     color: var(--couleur-titre2);
     height: 630px;
     padding: 15px;
-}
-
-.bouton_retour {
-    color: var(--couleur-lien1);
-    text-decoration: none;
-}
-
-.bouton_retour h1 {
-    text-align: left;
-    padding: 7px 0 7px 7px;
 }
 
 .footer_part2 {
@@ -748,7 +961,7 @@ footer {
     width: 350px;
 }
 
-.footer_part2 form button{
+.footer_part2 form button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -759,7 +972,7 @@ footer {
     transition: 0.4s ease;
 }
 
-.footer_part2 form button:hover{
+.footer_part2 form button:hover {
     background-color: white;
 
     box-shadow:
@@ -783,7 +996,7 @@ footer {
 .aigle,
 p {
     height: 60%;
-    width: 60%; 
+    width: 60%;
 }
 
 .aigle a,
