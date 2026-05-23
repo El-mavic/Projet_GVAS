@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/Css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="Assets/Img/icon_logo/logo-GVAS.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Page Publicitaire</title>
+</head>
+
+<body>
+        <script>
+            function changerContenu(section) {
+
+                let contenu = document.getElementById("contenu");
+
+                if (section === "Produits") {
+                    contenu.innerHTML = `
+            
+            <div class="produits">
+                <div class="parie_publicitaire">
+                    <h1>NOS PRODUITS EN VENTE</h1>
+                </div>
+                <div class="list_produits">
+                    <div>
+                        <div class="div">
+
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
+
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        `;
+                }
+
+                else if (section === "Services") {
+                    contenu.innerHTML = `
+            <div class="parie_publicitaire">
+                <h1>PARTIE PUBLICITAIRE</h1>
+            </div>
+            <div class="section_service">
+
+                <div class="sous_section_service">
+                    <div class="principal">
+                        <div class="haut haut1">
+                            <h1>INFORMATIQUE</h1>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Ad tenetur voluptatibus
+                                saepe obcaecati nostrum voluptate error dolor eum quos eveniet,
+                                maxime cupiditate, neque repellendus recusandae illo! Iure
+                                voluptate
+                                omnis error ipsa, inventore quam perspiciatis
+                                exercitationem!
+                            </p>
+
+                            <h2>Information en vue d'une inscription</h2>
+                            <button onclick="ouvrir()">S'inscrire ! </button>
+                        </div>
+
+                        <div class="bas">
+                            <h1>suivez notre actualité sur le domaine informatique</h1>
+                            <a href="Actus.html">actus</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="sous_section_service">
+                    <div class="principal">
+                        <div class="haut haut2">
+                            <h1>ANGLAIS</h1>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Ad tenetur voluptatibus
+                                saepe obcaecati nostrum voluptate error dolor eum quos eveniet,
+                                maxime cupiditate, neque repellendus recusandae illo! Iure
+                                voluptate
+                                omnis error ipsa, inventore quam perspiciatis
+                                exercitationem!
+                            </p>
+
+                            <h2>Information en vue d'une inscription</h2>
+                            <a href="#">S'inscrire !</a>
+                        </div>
+
+                        <div class="bas">
+                            <h1>suivez notre actualité sur le domaine informatique</h1>
+                            <a href="#">actus</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sous_section_service">
+                    <div class="principal">
+                        <div class="haut haut3">
+                            <h1>SECRETARIAT BUREAUTIQUE</h1>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Ad tenetur voluptatibus
+                                saepe obcaecati nostrum voluptate error dolor eum quos eveniet,
+                                maxime cupiditate, neque repellendus recusandae illo! Iure
+                                voluptate
+                                omnis error ipsa, inventore quam perspiciatis
+                                exercitationem!
+                            </p>
+
+                            <h2>Information en vue d'une inscription</h2>
+                            <a href="#">S'inscrire !</a>
+                        </div>
+
+                        <div class="bas">
+                            <h1>suivez notre actualité sur le domaine informatique</h1>
+                            <a href="#">actus</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sous_section_service">
+                    <div class="principal">
+                        <div class="haut haut4">
+                            <h1>MAINTENANCE INFORMATIQUE</h1>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Ad tenetur voluptatibus
+                                saepe obcaecati nostrum voluptate error dolor eum quos eveniet,
+                                maxime cupiditate, neque repellendus recusandae illo! Iure
+                                voluptate
+                                omnis error ipsa, inventore quam perspiciatis
+                                exercitationem!
+                            </p>
+
+                            <h2>Information en vue d'une inscription</h2>
+                            <a href="#">S'inscrire !</a>
+                        </div>
+
+                        <div class="bas">
+                            <h1>suivez notre actualité sur le domaine informatique</h1>
+                            <a href="#">actus</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sous_section_service">
+                    <div class="principal">
+                        <div class="haut haut5">
+                            <h1>QUALITE HYGENE SECURITE ENVIRONNEMENT (QHSE)</h1>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Ad tenetur voluptatibus
+                                saepe obcaecati nostrum voluptate error dolor eum quos eveniet,
+                                maxime cupiditate, neque repellendus recusandae illo! Iure
+                                voluptate
+                                omnis error ipsa, inventore quam perspiciatis
+                                exercitationem!
+                            </p>
+
+                            <h2>Information en vue d'une inscription</h2>
+                            <a href="#">S'inscrire !</a>
+                        </div>
+
+                        <div class="bas">
+                            <h1>suivez notre actualité sur le domaine informatique</h1>
+                            <a href="#">actus</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sous_section_service">
+                    <div class="principal">
+                        <div class="haut haut6">
+                            <h1>CONTABILITE</h1>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Ad tenetur voluptatibus
+                                saepe obcaecati nostrum voluptate error dolor eum quos eveniet,
+                                maxime cupiditate, neque repellendus recusandae illo! Iure
+                                voluptate
+                                omnis error ipsa, inventore quam perspiciatis
+                                exercitationem!
+                            </p>
+
+                            <h2>Information en vue d'une inscription</h2>
+                            <a href="#">S'inscrire !</a>
+                        </div>
+
+                        <div class="bas">
+                            <h1>suivez notre actualité sur le domaine informatique</h1>
+                            <a href="#">actus</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sous_section_service">
+                    <div class="principal">
+                        <div class="haut haut7">
+                            <h1>Informatique</h1>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Ad tenetur voluptatibus
+                                saepe obcaecati nostrum voluptate error dolor eum quos eveniet,
+                                maxime cupiditate, neque repellendus recusandae illo! Iure
+                                voluptate
+                                omnis error ipsa, inventore quam perspiciatis
+                                exercitationem!
+                            </p>
+
+                            <h2>Information en vue d'une inscription</h2>
+                            <a href="#">S'inscrire !</a>
+                        </div>
+
+                        <div class="bas">
+                            <h1>suivez notre actualité sur le domaine informatique</h1>
+                            <a href="#">actus</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sous_section_service">
+                    <div class="principal">
+                        <div class="haut haut8">s
+                            <h1>Informatique</h1>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Ad tenetur voluptatibus
+                                saepe obcaecati nostrum voluptate error dolor eum quos eveniet,
+                                maxime cupiditate, neque repellendus recusandae illo! Iure
+                                voluptate
+                                omnis error ipsa, inventore quam perspiciatis
+                                exercitationem!
+                            </p>
+
+                            <h2>Information en vue d'une inscription</h2>
+                            <a href="#">S'inscrire !</a>
+                        </div>
+
+                        <div class="bas">
+                            <h1>suivez notre actualité sur le domaine informatique</h1>
+                            <a href="#">actus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        `;
+                }
+
+                else if (section === "Nouveautée") {
+                    contenu.innerHTML = `
+            <h1>Paramètres</h1>
+            <p>Configuration de l'application.</p>
+        `;
+                }
+            }
+        </script>
+
+
+            <div id="container">
+                <!-- Partie gauche -->
+                <div class="menu">
+                    <button onclick="changerContenu('Produits')">
+                        Produits
+                    </button>
+
+                    <button onclick="changerContenu('Services')">
+                        Services
+                    </button>
+
+                    <button onclick="changerContenu('Nouveautée')">
+                        Nouveautée
+                    </button>
+                </div>
+
+                <!-- Partie droite -->
+                <div class="contenu" id="contenu">
+                    Bienvenue 😎
+                </div>
+            </div>
+
+
+
+            <div class="sous_section_service">
+                    <div class="principal">
+                        <div class="haut haut8">s
+                            <h1>Informatique</h1>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Ad tenetur voluptatibus
+                                saepe obcaecati nostrum voluptate error dolor eum quos eveniet,
+                                maxime cupiditate, neque repellendus recusandae illo! Iure
+                                voluptate
+                                omnis error ipsa, inventore quam perspiciatis
+                                exercitationem!
+                            </p>
+
+                            <h2>Information en vue d'une inscription</h2>
+                            <a href="#">S'inscrire !</a>
+                        </div>
+
+                        <div class="bas">
+                            <h1>suivez notre actualité sur le domaine informatique</h1>
+                            <a href="#">actus</a>
+                        </div>
+                    </div>
+                </div>
+
+            <script src="script.js"></script>
+
+
+</body>
+
+</html>
