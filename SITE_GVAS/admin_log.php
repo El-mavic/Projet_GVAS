@@ -26,6 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/Images/GVAS.png">
+    <link rel="icon" href="images/Images/GVAS.png">
     <title>Connexion Admin</title>
 
     <style>
@@ -33,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: cambria, serif;
         }
 
         body {
@@ -45,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
 
         .login-box {
-            background: white;
+            background: #ffffff;
             padding: 40px;
             width: 400px;
             border-radius: 20px;
@@ -79,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
 
         button:hover {
-            background: #1d4ed8;
+            background: green;
         }
 
         .error {
@@ -91,7 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 
 <body>
-
+    <div class="slider"></div>
     <div class="login-box">
         <h2>Connexion Administrateur</h2>
 

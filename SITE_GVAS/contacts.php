@@ -7,7 +7,6 @@
         <title>Groupe Vision d'Aigle Services</title>
         <link rel="icon" href="images/Images/GVAS.png">
         <link href="flow.css" rel="stylesheet">
-
     </head>
 
     <body>
@@ -16,7 +15,16 @@
         <section id="contact" class="section">
             <div class="contact-content">
                 <div class="contact-header">
-                    <h2>Groupe Vision d'Aigle Services</h2>
+                    <h2>Groupe Vision d'Aigle Services</h2><br>
+                    <nav id="nav">
+                        <ul>
+                            <li><a href="index.php">Accueil</a></li>
+                            <li><a href="Formation.php">Formations</a></li>
+                            <li><a href="galerie.php">Galerie</a></li>
+                            <li><a href="contacts.php">Contact</a></li>
+                            <li><a href="a-propos.php">À propos</a></li>
+                        </ul>
+                    </nav><br>
                     <p>Prêt à transformer vos idées en réalité ? Contactez-nous dès maintenant.</p>
                 </div>
 
