@@ -445,8 +445,11 @@
     }
 
     #nav ul {
-      flex-direction: column;
-      gap: 25px;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      justify-content: center;
+      row-gap: 30px;
+      column-gap: 15px;
     }
 
     .gallery-header {

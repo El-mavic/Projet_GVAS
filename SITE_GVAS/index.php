@@ -76,12 +76,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
     </header>
 
-    <!--La première page qui survole-->
+    <!--La première page qui survole--
     <div id="welcome-screen">
         <img class="welcome-image" src="images/Images/GVAS.png" alt="Bienvenue">
         <h1>Bienvenue au Groupe Vision d'Aigle Services</h1>
         <p> Qui ne se forme pas se déforme. </p>
-    </div>
+    </div>-->
 
     <!--Image + Animation-->
     <p class="texte">Bienvenue au Groupe Vision d'Aigle Services </p>
