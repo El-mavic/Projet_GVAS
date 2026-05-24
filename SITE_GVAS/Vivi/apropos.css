@@ -13,6 +13,7 @@
   --gris: #cccccc;
   --bleu: #0609aa;
   --rouge: #ce1c28;
+
 }
 
 body {
@@ -44,8 +45,13 @@ nav {
   border: none;
   cursor: pointer;
   padding: 4px;
-}
-
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(15px);
+  overflow: hidden;
+  transition: height cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 35px
+  }
+    
 .burger span {
   display: block;
   width: 25px;
@@ -116,11 +122,17 @@ nav {
   transform: scale(1.04);
 }
 
-/* Responsive du header, pc */
 
+/* Responsive du header, tablette1 */
 
+@media (max-width: 820px){
+  .liens {
+    display: flex;
+    gap: 16px;
+  }
 
-/* Responsive du header, tablette */
+}
+/* Responsive du header, tablette2 */
 @media (max-width: 768px) {
   nav {
     padding: 14px 20px;
@@ -133,7 +145,7 @@ nav {
   }
 
   .liens {
-    gap: 14px;
+    gap: 20px;
   }
 
   .liens a {
@@ -145,13 +157,100 @@ nav {
     padding: 8px 16px;
   }
 }
-
 /* Responsive du header, mobile */
-@media (max-width: 375px){
+@media (max-width: 414px){
+  .burger {
+    display: flex;
+    background: rgba(31, 31, 62, 0.97);
+    z-index: 100;
+
+    /* border-radius: 10%; */
+  }
+  .burger span {
+    background-color: #b6b6b1;
+  }
+
+  .liens {
+    display: none;
+    position: absolute;
+    top: 40px;
+    border-radius: 10%;
+    /* max-block-size: 100%; */
+    right: 0;
+    background: rgba(31, 31, 62, 0.97);
+    flex-direction: column;
+    padding: 20px 24px;
+    gap: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* z-index: 80; */
+  }
+
+  .liens.open {
+    display: flex;
+  }
+  .liens.open li:hover{
+    cursor: pointer;
+    color: var(--jaune);
+  }
+
+  .bouton {
+    display: none; /* caché sur très petit écran */
+  }
+
   .logo {
     font-size: 20px;
   }
 }
+
+
+
+
+/* Responsive du header, mobile avec 375 */
+
+@media (max-width: 375px){
+  .burger {
+    display: flex;
+    background: rgba(31, 31, 62, 0.97);
+    z-index: 100;
+
+  }
+  .burger span {
+    background-color: #b6b6b1;
+  }
+
+  .liens {
+    display: none;
+    position: absolute;
+    top: 40px;
+    border-radius: 10%;
+    /* max-block-size: 100%; */
+    right: 0;
+    background: rgba(31, 31, 62, 0.97);
+    flex-direction: column;
+    padding: 20px 24px;
+    gap: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* z-index: 80; */
+
+  }
+  .liens.open {
+    display: flex;
+  }
+  .liens.open li:hover{
+    cursor: pointer;
+    color: var(--jaune);
+  }
+
+  .bouton {
+    display: none; /* caché sur très petit écran */
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+}
+
 
 /* Section hero */
 .hero {
@@ -381,8 +480,9 @@ nav {
   }
 
   .h-content a {
-    font-size: 1.4rem;
+    font-size: 20px;
     top: 0;
+    margin-top: 20px;
   }
 
 }
@@ -463,8 +563,8 @@ nav {
   }
 
   .h-manager {
-    flex: 0 0 150px;  
-    width: 400px;
+    flex: 0 0 400px;  
+    width: 300px;
     margin: 10px 10px 0 10px;
     border-radius: 1rem;
   }
@@ -476,58 +576,59 @@ nav {
   }
 
   .h-content h1 {
-    font-size: 1.3rem;
+    font-size: 25px;
     margin-bottom: 16px;
     letter-spacing: -0.5px;
   }
 
   .h-content span {
-    font-size: 0.85rem;
+    font-size: 20px;
     top: -10px;
     padding: 2px 6px;
   }
 
   .h-content p {
-    font-size: 0.82rem;
+    font-size: 17px;
     line-height: 1.5;
     top: -4px;
     margin-top: 8px;
   }
 
   .h-content a {
-    font-size: 0.82rem;
+    font-size: 15px;
     padding: 8px 14px;
     top: 0;
-    margin-top: 8px;
+    margin-top: 15px;
   }
 }
 
 /* Responsive sur Petit mobile*/
 @media (max-width: 375px) {
   .h-manager {
-    flex: 0 0 120px;
+    flex: 0 0 300px;
+    width: 260px;
   }
 
   .h-content h1 {
-    font-size: 1.1rem;
+    font-size:25px;
     margin-bottom: 10px;
   }
 
   .h-content span {
-    font-size: 0.78rem;
+    font-size: 20px;
     top: -8px;
   }
 
   .h-content p {
-    font-size: 0.75rem;
+    font-size: 17px;
     top: 0;
-    margin-top: 6px;
+    margin-top: 8px;
   }
 
   .h-content a {
-    font-size: 0.75rem;
+    font-size: 18px;
     padding: 6px 12px;
-    margin-top: 6px;
+    margin-top: 20px;
   }
 }
 
@@ -589,23 +690,34 @@ nav {
 }
 
 
-
 /* Responsive sur le hero, tablette */
 
 @media (max-width: 820px){
-
+  .content a {
+    font-size: 1.3rem;
+    padding: 14px 14px;
+    white-space: nowrap;
+    margin-top: 15px;
+  }
 }
 
 /* Responsive sur le hero, mobile */
 
 @media (max-width: 414px){
-
+  .content a {
+    font-size: 11px;
+    padding: 8px 8px;
+    white-space: nowrap;
+    margin-top: 7px;
+  }
 }
 
 @media (max-width: 375px){
   .content a {
-    font-size: 0.78rem;
-    padding: 10px 8px;
+    font-size: 25px;
+    padding: 8px 6px;
+    white-space: nowrap;
+    margin-top: 15px;
   }
 
 }
@@ -613,13 +725,20 @@ nav {
 .section-title{
   display: flex;
   justify-content: center;
-  font-family: "Montserrat", serif;
   font-size: 50px;
   font-weight: 900;
   margin-bottom: 60px;
   letter-spacing: -1px;
 }
+ /* RESPONSIVE SUR LES SOUS TITRES  */
 
+ @media (max-width: 414px){
+  .section-title {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+ }
 .team-section {
   background: var(--noir);
   padding: 130px 0 10px;
@@ -680,6 +799,34 @@ nav {
   16% { opacity: 0; z-index: 0; }
 }
  
+/* Responsives sur l'equipe */
+@media (max-width: 1366px){
+  .team-carousel{
+    width: 650px;
+    height: 450px;
+  }
+}
+
+/* Responsives sur tablette*/
+@media (max-width: 820px){
+  .team-carousel{
+    width: 85vw;
+    height: 420px;
+  }
+}
+
+/* Responsive sur mobile */
+
+@media (max-width: 414px){
+  .team-carousel{
+    width: 85vw;
+    height: 420px;
+  }
+}
+
+/* Section hidtooire de gvas */
+
+
 .histoire-section {
   background: #111116;
   padding: 100px 48px;
@@ -697,6 +844,11 @@ nav {
     padding: 60px 24px;
   }
 }
+
+
+/* Frise chronologique  */
+
+
 .timeline {
   position: relative;
   margin-top: 60px;
@@ -767,6 +919,35 @@ nav {
   font-size: 20px;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.75);
+}
+
+/* RESPONSIVES DESKTOP */
+
+@media (max-width: 1366px){
+  .timeline-date {
+    font-size: 18px;
+  }
+
+  .timeline-text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 414px){
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-dot {
+    left: -28px;
+  }
+
+  .timeline-date {
+    font-size: 15px;
+  }
+
+  .timeline-text {
+    font-size: 14px;
+  }
 }
 
 /* Partie des chiffres clés */
@@ -971,7 +1152,7 @@ nav {
   width: 200px;
   height: 100px;
   object-fit: contain;
-  filter: brightness(1.5);
+  /* filter: brightness(1.5); */
   transition: filter 0.3s;
   border-radius: 35px;
 }
@@ -987,7 +1168,20 @@ nav {
   letter-spacing: 0.05em;
   text-align: center;
 }
+/* RESPONSIVE TABLETTE */
+@media (max-width: 820px){
+  .carousel-item {
+    min-width: 110px;
+    padding: 16px 12px;
+  }
 
+  .carousel-item img {
+    width: 200px;
+    height: 100px;
+
+  }
+
+}
 /* Responsive desktop , partenaire */
 
 @media (max-width: 1366px){
@@ -1003,9 +1197,6 @@ nav {
     font-size: 42px;
   }
   .partenaires-subtitle{font-size: 25px;}
-}
-@media (max-width: 375px){
-  
 }
 
 
@@ -1186,46 +1377,6 @@ nav {
   .footer-encadre {
     grid-column: 1 / -1;
   }
-/*
-  .manifeste-card {
-    padding: 40px;
-  }
-
-  .manifeste-card p {
-    font-size: 1.3rem;
-  }
-*/
-}
-
-
-
-  /* Sections */
-  /* .manifeste-section { 
-    padding: 60px 24px;
-  }
-
-  .manifeste-card {
-    padding: 32px 24px;
-    border-radius: 24px;
-  }
-
-  .manifeste-card p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-  }
-  */
-
-  .timeline-date {
-    font-size: 18px;
-  }
-
-  .timeline-text {
-    font-size: 16px;
-  }
-
-  /* Partenaires */
-
-  /* Footer */
   .footer-container {
     padding: 40px 24px 30px;
     gap: 28px;
@@ -1240,120 +1391,9 @@ nav {
   }
 }
 
+
 /* Mobile (iPhone XR, iPhone 14...) */
-@media (max-width: 480px) {
-  nav {
-    padding: 12px 16px;
-  }
-
-  .logo {
-    font-size: 24px;
-  }
-
-  .liens {
-    display: none;
-  }
-
-  .bouton {
-    font-size: 13px;
-    padding: 7px 14px;
-  }
-
-  /* Hero */
-  .h-content {
-    width: 90%;
-    right: 5%;
-    left: 5%;
-    bottom: 15%;
-  }
-
-  .h-content h1 {
-    font-size: 2rem;
-    letter-spacing: -1px;
-  }
-
-  .h-content p {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
-  .h-frame {
-    top: 8%;
-    bottom: 5%;
-  }
-
-  /* Barre nav interne */
-  .content {
-    padding: 0 12px;
-    top: 50px;
-  }
-
-  .content a {
-    font-size: 0.85rem;
-    padding: 12px 10px;
-    margin-top: 10px;
-  }
-
-  /* Manifeste */
-  .manifeste-section {
-    padding: 50px 16px;
-  }
-
-  .manifeste-card {
-    padding: 24px 16px;
-    border-radius: 16px;
-  }
-
-  .manifeste-card p {
-    font-size: 0.95rem;
-    line-height: 1.7;
-  }
-
-  .section-title {
-    font-size: 1.8rem;
-    margin-bottom: 40px;
-  }
- .team-carousel {
-    width: 85vw;
-    height: 420px;
-  }
-  .team-card img {
-    height: 310px;
-  }
-
-  /* Timeline */
-  .histoire-section {
-    padding: 50px 16px;
-  }
-
-  .timeline {
-    padding-left: 20px;
-  }
-
-  .timeline-dot {
-    left: -28px;
-  }
-
-  .timeline-date {
-    font-size: 15px;
-  }
-
-  .timeline-text {
-    font-size: 14px;
-  }
-
-  /* Chiffres */
-  
-  /* Carousel */
-  .carousel-item {
-    min-width: 110px;
-    padding: 16px 12px;
-  }
-
-  .carousel-item img {
-    width: 60px;
-    height: 45px;
-  }
+@media (max-width: 414px) {
 
   /* Footer */
   .footer-container {
@@ -1385,47 +1425,3 @@ nav {
     font-size: 0.75rem;
   }
 }
-
-/* small mobile (iPhone SE) */
-@media (max-width: 375px) {
-
-  .manifeste-card p {
-    font-size: 0.88rem;
-  }
-
-  
-}
-/* Sur mobile */
-@media (max-width: 820px) {
-  .burger {
-    display: block;
-  }
-
-  .liens {
-    display: none;
-    position: absolute;
-    top: 60px;
-    max-block-size: 100%;
-    right: 0;
-    background: rgba(31, 31, 62, 0.97);
-    flex-direction: column;
-    padding: 20px 24px;
-    gap: 16px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    z-index: 99;
-  }
-
-  .liens.open {
-    display: flex;
-  }
-  .liens.open li:hover{
-    cursor: pointer;
-    color: var(--jaune);
-  }
-
-  .bouton {
-    display: none; /* caché sur très petit écran */
-  }
-}
-
-
