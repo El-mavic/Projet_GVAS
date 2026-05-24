@@ -35,6 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="icon" href="images/Images/GVAS.png">
     <link rel="stylesheet" href="style.css">
     <title>Groupe Vision d'Aigle Servive </title>
 </head>
@@ -53,8 +54,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <li><a href="contacts.php">Contacts</a></li>
             </ul>
             <div class="buttons">
-                <a class="action-button pro " href="#">Pub</a>
-                <a class="action-button" href="#">A propos</a>
+                <a class="action-button pro " href="Gloire/page_publicitaire.html">Pub</a>
+                <a class="action-button" href="vivi/apropos.html">A propos</a>
             </div>
             <div class="burger-menu-button">
                 <i class="fa-solid fa-bars"></i>

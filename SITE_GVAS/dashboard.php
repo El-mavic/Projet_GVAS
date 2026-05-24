@@ -64,6 +64,7 @@ $temoignages = $pdo->query(
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard GVAS</title>
     <link rel="stylesheet" href="dashboard.css">
+    <link rel="icon" href="images/Images/GVAS.png">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 

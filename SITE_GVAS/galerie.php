@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <link rel="icon" href="images/Images/GVAS.png">
+</head>
+
+
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
 
