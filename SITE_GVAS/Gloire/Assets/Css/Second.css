@@ -18,7 +18,7 @@
 }
 
 .menu {
-  width: 15%;
+  width: 25%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -64,17 +64,21 @@
 #contenu {
   overflow-y: scroll;
   height: 100%;
-  width: 85%;
-}
-
-.Acceuil {
-  display: flex;
+  width: 75%;
+    display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.Acceuil div {
+.Acceuil {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+}
+
+.Acceuil .cent {
   display: flex;
   flex-direction: column;
   justify-content: center;

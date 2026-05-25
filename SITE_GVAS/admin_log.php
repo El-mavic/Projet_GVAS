@@ -21,78 +21,82 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/Images/GVAS.png">
+    <link rel="icon" href="images/Images/GVAS.png">
     <title>Connexion Admin</title>
 
     <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial,sans-serif;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: cambria, serif;
         }
 
-        body{
-            background:#f1f5f9;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            height:100vh;
+        body {
+            background: #f1f5f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
-        .login-box{
-            background:white;
-            padding:40px;
-            width:400px;
-            border-radius:20px;
-            box-shadow:0 8px 25px rgba(0,0,0,0.08);
+        .login-box {
+            background: #ffffff;
+            padding: 40px;
+            width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
         }
 
-        h2{
-            text-align:center;
-            margin-bottom:25px;
-            color:#0f172a;
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #0f172a;
         }
 
-        input{
-            width:100%;
-            padding:14px;
-            margin-bottom:15px;
-            border:1px solid #cbd5e1;
-            border-radius:10px;
-            outline:none;
+        input {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            outline: none;
         }
 
-        button{
-            width:100%;
-            padding:14px;
-            border:none;
-            background:#2563eb;
-            color:white;
-            font-weight:bold;
-            border-radius:10px;
-            cursor:pointer;
+        button {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            background: #2563eb;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
         }
 
-        button:hover{
-            background:#1d4ed8;
+        button:hover {
+            background: green;
         }
 
-        .error{
-            color:red;
-            text-align:center;
-            margin-bottom:15px;
+        .error {
+            color: red;
+            text-align: center;
+            margin-bottom: 15px;
         }
     </style>
 </head>
-<body>
 
+<body>
+    <div class="slider"></div>
     <div class="login-box">
         <h2>Connexion Administrateur</h2>
 
-        <?php if($error): ?>
+        <?php if ($error): ?>
             <p class="error"><?= $error ?></p>
         <?php endif; ?>
 
@@ -104,4 +108,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </div>
 
 </body>
+
 </html>

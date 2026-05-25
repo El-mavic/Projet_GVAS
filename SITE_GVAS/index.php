@@ -35,8 +35,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="icon" href="images/Images/GVAS.png">
     <link rel="stylesheet" href="style.css">
-    <title>Groupe Vision d'Aigle Servive </title>
+    <title>Groupe Vision d'Aigle Servives
+    </title>
 </head>
 
 <body>
@@ -48,13 +50,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
 
             <ul class="links">
+                <li><a href="Formation.php">Temoignage</a></li>
                 <li><a href="Formation.php">Formations</a></li>
                 <li><a href="Galerie.php">Gallérie</a></li>
                 <li><a href="contacts.php">Contacts</a></li>
             </ul>
             <div class="buttons">
-                <a class="action-button pro " href="#">Pub</a>
-                <a class="action-button" href="#">A propos</a>
+                <a class="action-button pro " href="Gloire/page_publicitaire.html">Pub</a>
+                <a class="action-button" href="vivi/apropos.html">A propos</a>
             </div>
             <div class="burger-menu-button">
                 <i class="fa-solid fa-bars"></i>
@@ -75,12 +78,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
     </header>
 
-    <!--La première page qui survole-->
+    <!--La première page qui survole--
     <div id="welcome-screen">
         <img class="welcome-image" src="images/Images/GVAS.png" alt="Bienvenue">
         <h1>Bienvenue au Groupe Vision d'Aigle Services</h1>
         <p> Qui ne se forme pas se déforme. </p>
-    </div>
+    </div>-->
 
     <!--Image + Animation-->
     <p class="texte">Bienvenue au Groupe Vision d'Aigle Services </p>
@@ -201,13 +204,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <!-- Actions -->
         <div class="fab-actions">
 
-            <!-- MESSAGE -->
-            <a href="temoignage.php" class="fab-item">
-                <span class="fab-label">Ecrivez votre temoignage </span>
-                <div class="fab-btn">
-                    <i class="fa-solid fa-message"></i>
-                </div>
-            </a>
 
             <!-- RENDEZ-VOUS -->
             <a href="https://www.google.com/maps/place/4%C2%B049'21.0%22S+11%C2%B054'19.7%22E/@-4.8224385,11.9053312,80m/
