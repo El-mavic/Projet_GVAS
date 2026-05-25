@@ -3,6 +3,7 @@
 
 <head>
   <link rel="icon" href="images/Images/GVAS.png">
+  <title>Galerie - GVAS</title>
 </head>
 
 
