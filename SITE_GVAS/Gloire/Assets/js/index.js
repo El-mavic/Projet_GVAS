@@ -40,15 +40,15 @@ likeBtn.addEventListener("click", () => {
 
   /* Effet animation à chaque clic */
 
-//   likeBtn.style.transform = "scale(1.25)";
+  //   likeBtn.style.transform = "scale(1.25)";
   likeBtn.style.boxShadow = "0 0 25px #ff004c";
 
   setTimeout(() => {
     if (liked) {
-    //   likeBtn.style.transform = "scale(1.15)";
+      //   likeBtn.style.transform = "scale(1.15)";
       likeBtn.style.boxShadow = "0 0 20px #ff004c";
     } else {
-    //   likeBtn.style.transform = "scale(1)";
+      //   likeBtn.style.transform = "scale(1)";
       likeBtn.style.boxShadow = "none";
     }
   }, 200);
@@ -96,7 +96,7 @@ valider.addEventListener("click", () => {
     /* Effet retour */
 
     setTimeout(() => {
-    //   subscribeBtn.style.transform = "scale(1)";
+      //   subscribeBtn.style.transform = "scale(1)";
       subscribeBtn.style.boxShadow = "0 0 15px #00ff88";
     }, 250);
   } else {
@@ -107,7 +107,7 @@ valider.addEventListener("click", () => {
 /* Animation à chaque clic du bouton abonnement */
 
 subscribeBtn.addEventListener("click", () => {
-//   subscribeBtn.style.transform = "scale(1.12)";
+  //   subscribeBtn.style.transform = "scale(1.12)";
   subscribeBtn.style.boxShadow = "0 0 20px #0066ff";
 
   setTimeout(() => {
@@ -123,7 +123,7 @@ let shareBtn = document.getElementById("shareBtn");
 shareBtn.addEventListener("click", async () => {
   /* Animation */
 
-//   shareBtn.style.transform = "scale(1.15)";
+  //   shareBtn.style.transform = "scale(1.15)";
   shareBtn.style.boxShadow = "0 0 20px #00ff99";
 
   setTimeout(() => {
@@ -141,3 +141,21 @@ shareBtn.addEventListener("click", async () => {
     alert("Le partage n'est pas supporté sur ce navigateur.");
   }
 });
+
+
+
+// 
+// 
+// menuBurger
+let burger = document.getElementById("burger");
+
+let menu = document.getElementById("menu");
+
+burger.addEventListener("click", () => {
+
+  menu.classList.toggle("active");
+
+  burger.classList.toggle("active");
+
+});
+
