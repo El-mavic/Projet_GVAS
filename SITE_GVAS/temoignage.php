@@ -39,8 +39,8 @@ $temoignages = $pdo->query(
                 <span></span>
                 <span></span>
                 <span></span>
-
             </div>
+            
         </div>
     </header>
 
