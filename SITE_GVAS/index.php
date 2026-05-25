@@ -37,8 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         rel="stylesheet">
     <link rel="icon" href="images/Images/GVAS.png">
     <link rel="stylesheet" href="style.css">
-    <title>Groupe Vision d'Aigle Servives
-    </title>
+    <title>Groupe Vision d'Aigle Services</title>
 </head>
 
 <body>
@@ -50,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
 
             <ul class="links">
-                <li><a href="Formation.php">Temoignage</a></li>
+                <li><a href="Temoignage.php">Temoignage</a></li>
                 <li><a href="Formation.php">Formations</a></li>
                 <li><a href="Galerie.php">Gallérie</a></li>
                 <li><a href="contacts.php">Contacts</a></li>
@@ -102,7 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             <h2 class="modal-title">Page d'inscription</h2>
 
-            <form class="form-group" action="Traitement.php" method="post">
+            <form class="form-group" action="Traitement.php" method="POST">
                 <input type="hidden" name="form_type" value="inscriptions" placeholder="Entrez votre nom">
                 <input type="hidden" name="type" value="inscription">
                 <div class="input-box">
@@ -170,7 +169,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                             <li>
                                 <input type="checkbox" value="Reseau" id="rx" name="formation[]">
-                                <label for="rx">Réseau informatique </label>
+                                <label for="rx">Réseau Informatique </label>
                             </li>
 
                             <li>
@@ -235,9 +234,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
     <div class="contentes"></div>
 
-    <!--Pour la petite fenetre quant le formulaire est envoyer-->
+    <!--Pour la petite fenetre quant le formulaire est envoyer
     <script>
-        fetch("traitement.php", {
+        fetch("Traitement.php", {
                 method: "POST",
                 body: new FormData(document.querySelector("form"))
             })
@@ -245,7 +244,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             .then(data => {
                 document.getElementById("message").innerHTML = data;
             });
-    </script>
+    </script>-->
 
     <!Pour le chatbot>
         <script>
