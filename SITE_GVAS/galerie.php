@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <link rel="icon" href="images/Images/GVAS.png">
+  <title>Galerie - GVAS</title>
+</head>
+
+
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
 
@@ -437,8 +446,11 @@
     }
 
     #nav ul {
-      flex-direction: column;
-      gap: 25px;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      justify-content: center;
+      row-gap: 30px;
+      column-gap: 15px;
     }
 
     .gallery-header {

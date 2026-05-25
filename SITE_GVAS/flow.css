@@ -659,7 +659,90 @@ body {
 }
 
 
-/*Les responsive par dimension*/
+/*  Pour le header de la page contact*****************************************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation */
+#nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+#nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    background: #323333;
+    font-family: cambria, cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#nav ul li a:hover {
+    background: yellow;
+    color: black;
+}
+
+
+/* Responsive pour le header ****************************************************/
+@media (max-width: 768px) {
+    .gallery-header h2 {
+        font-size: 24px;
+    }
+
+    #nav ul {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .gallery-header {
+        text-align: center;
+    }
+
+    #nav {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    #nav li {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .gallery-header h2 {
+        font-size: 24px;
+    }
+
+    #nav ul {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        justify-content: center;
+        row-gap: 30px;
+        column-gap: 15px;
+    }
+
+    .gallery-header {
+        text-align: center;
+    }
+
+    #nav {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/*Les responsive par dimension********************************************************/
 
 @media (max-width: 1366px) {}
 

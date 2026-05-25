@@ -15,6 +15,7 @@ $temoignages = $pdo->query(
     <title>Temoignage</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/Images/GVAS.png">
 </head>
 
 <body class="body">

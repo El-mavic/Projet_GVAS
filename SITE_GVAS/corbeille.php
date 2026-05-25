@@ -37,6 +37,8 @@ $temoignages = $pdo->query(
     <meta charset="UTF-8">
     <title>Corbeille</title>
     <link rel="stylesheet" href="dashboard.css">
+    <link rel="icon" href="images/Images/GVAS.png">
+    <title>Corbeille - GVAS</title>
 </head>
 
 <body>

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/Images/GVAS.png">
     <title>Groupe Vision d'Aigle Services</title>
     <link rel="stylesheet" href="formation.css">
 </head>
@@ -21,15 +22,12 @@
 
         <div class="buttons">
             <a class="action-button1" href="temoignage.php">En savoir plus</a>
-            <a class="action-button pro">Inscription</a>
+            <a class="action-button pro" href="index.php">Inscription</a>
         </div>
 
     </header>
 
     <!-- SECTION -->
-
-
-
 
     <!-- GRID DES FORMATIONS -->
     <section class="formations">
