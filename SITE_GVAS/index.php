@@ -37,7 +37,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         rel="stylesheet">
     <link rel="icon" href="images/Images/GVAS.png">
     <link rel="stylesheet" href="style.css">
-    <title>Groupe Vision d'Aigle Servive </title>
+    <title>Groupe Vision d'Aigle Servives
+    </title>
 </head>
 
 <body>
@@ -49,6 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
 
             <ul class="links">
+                <li><a href="Formation.php">Temoignage</a></li>
                 <li><a href="Formation.php">Formations</a></li>
                 <li><a href="Galerie.php">Gallérie</a></li>
                 <li><a href="contacts.php">Contacts</a></li>
@@ -202,13 +204,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <!-- Actions -->
         <div class="fab-actions">
 
-            <!-- MESSAGE -->
-            <a href="temoignage.php" class="fab-item">
-                <span class="fab-label">Ecrivez votre temoignage </span>
-                <div class="fab-btn">
-                    <i class="fa-solid fa-message"></i>
-                </div>
-            </a>
 
             <!-- RENDEZ-VOUS -->
             <a href="https://www.google.com/maps/place/4%C2%B049'21.0%22S+11%C2%B054'19.7%22E/@-4.8224385,11.9053312,80m/
