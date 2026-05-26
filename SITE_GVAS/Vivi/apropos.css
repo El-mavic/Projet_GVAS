@@ -49,7 +49,7 @@ nav {
   backdrop-filter: blur(15px);
   overflow: hidden;
   transition: height cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  width: 35px
+  width: 35px;
   }
     
 .burger span {
@@ -173,7 +173,7 @@ nav {
   .liens {
     display: none;
     position: absolute;
-    top: 40px;
+    top: 70px;
     border-radius: 10%;
     /* max-block-size: 100%; */
     right: 0;
@@ -371,7 +371,7 @@ nav {
 }
 
 .h-content p {
-  font-size: 2em;
+  font-size: 2rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.85);
   /* margin-bottom: 58px; */
@@ -410,19 +410,40 @@ nav {
 
 /* Responsive sur le hero, desktop */
 @media (max-width: 1366px){
-  .h-content {
-    width: 80%;
-    right: 10%;
-    bottom: 20%;
+ @media (max-width: 1366px){
+
+  .h-line{
+    gap: 1.5rem;
+    padding-block: 2rem;
   }
 
-  .h-content h1 {
+  .h-manager{
+    flex: 1;
+    margin: 30px;
+  }
+
+  .h-content{
+    flex: 1;
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .h-content h1{
     font-size: 2.5rem;
+    margin-bottom: 80px;
   }
 
-  .h-content p {
-    font-size: 1.2rem;
+  .h-content span{
+    font-size: 2rem;
+    top: -50px;
   }
+
+  .h-content p{
+    font-size: 1.2rem;
+    top: -30px;
+  }
+
+}
 }
 
 
@@ -447,7 +468,8 @@ nav {
 
   .h-manager {
     flex: 0 0 500px;
-    width: 500px;         
+    width: 100%;
+    max-width: 500px;         
     margin: 20px 20px 0 75px;
     border-radius: 1.2rem;
     
@@ -714,7 +736,7 @@ nav {
 
 @media (max-width: 375px){
   .content a {
-    font-size: 25px;
+    font-size: 12px;
     padding: 8px 6px;
     white-space: nowrap;
     margin-top: 15px;
@@ -734,7 +756,7 @@ nav {
 
  @media (max-width: 414px){
   .section-title {
-    font-size: 20px;
+    font-size: 1rem;
     margin-bottom: 40px;
   }
 
