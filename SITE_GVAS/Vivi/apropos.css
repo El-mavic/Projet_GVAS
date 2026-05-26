@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: "Cambria", serif;
 }
-/* Variables ***************************************s */
+
 :root {
   --jaune: #e8db1e;
   --noir: #0d0d0d;
@@ -772,13 +772,18 @@ nav {
   display: block;
 }
 
+.card-2 img{
+  object-fit: cover;
+  object-position: top;
+}
+
 .team-content {
   padding: 16px;
   text-align: center;
 }
 
 .team-content h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: white;
   font-weight: 700;
 }
@@ -798,12 +803,21 @@ nav {
   
   16% { opacity: 0; z-index: 0; }
 }
- 
+ /*  
+.card-3 img{
+    object-fit: cover;
+    object-position: center;
+  }
+ */
 /* Responsives sur l'equipe */
 @media (max-width: 1366px){
   .team-carousel{
     width: 650px;
     height: 450px;
+  }
+  .card-3 img{
+    object-fit: cover;
+    object-position: bottom;
   }
 }
 
