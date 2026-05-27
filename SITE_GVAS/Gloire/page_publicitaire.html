@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Assets/Css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" href="Assets/Img/icon_logo/logo-GVAS.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -46,6 +46,7 @@
                     </div>
 
                     <div class="sous_class_logo">
+                        <img src="Assets/Img/icon_logo/logo-GVAS.png" alt="logo-GVAS">
                         <h1>GROUPE VISION D'AIGLE SERVICE</h1>
                     </div>
 
@@ -100,10 +101,6 @@
                 <div class="rondeurs">
                     <div class="contien">
 
-                        <!-- LIKE -->
-                        <button class="like-btn" id="likeBtn">
-                            J'aime <span id="likeCount">0</span>
-                        </button>
 
                         <!-- ABONNEMENT -->
                         <button class="subscribe-btn" id="subscribeBtn">
@@ -125,7 +122,7 @@
 
                     <!-- POPUP -->
 
-                    <div class="popup" id="popup">
+                    <form action="" class="popup" id="popup">
 
                         <div class="popup-top">
                             <h2>Abonnement</h2>
@@ -141,7 +138,7 @@
                             Valider
                         </button>
 
-                    </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -149,29 +146,6 @@
         <div class="parie_publicitaire">
             <h1>DECOUVREZ NOS ARTICLES</h1>
         </div>
-        <!--carousel avec infos en bref-->
-        <!-- <section class="section_carousel">
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="Assets/Img/Cérémonie/1.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="Assets/Img/Cérémonie/4.JPG" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="Assets/Img/Cérémonie/3.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="Assets/Img/Cérémonie/2.jpg" class="d-block w-100" alt="...">
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-
-        <!--pub sur service-->
-
         <!-- Fenêtre -->
         <div id="fenetre" class="modal">
             <div class="contenu">
@@ -850,7 +824,7 @@
 
             <form action="">
                 <label for="envoie">
-                    <h1>
+                    <h1 class="hid">
                         Envoyez votre commentaire
                     </h1>
                 </label>
@@ -864,6 +838,33 @@
                     </li>
                 </ul>
             </form>
+
+            <!-- <div id="sous_class_contact2">
+                <div class="a">
+                    <a href="../index.php">
+                        <i class="fa-solid fa-house" style="color: rgb(0, 0, 0);"></i>
+                    </a>
+                </div>
+
+                <div class="a">
+                    <a href="https://www.facebook.com/profile.php?id=61583138888176" target="_blank">
+                        <i class="fa-brands fa-square-facebook" style="color: rgb(0, 0, 0);"></i>
+                    </a>
+                </div>
+
+                <div class="a">
+                    <a href="#">
+                        <i class="fa-brands fa-youtube" style="color: rgb(0, 0, 0);"></i>
+                    </a>
+                </div>
+
+                <div class="a">
+                    <a href="https://wa.me/242064201415" target="_blank">
+                        <i class="fa-brands fa-whatsapp" style="color: rgb(0, 0, 0);"></i>
+                    </a>
+                </div>
+            </div> -->
+
         </div>
 
         <div class="bas">
