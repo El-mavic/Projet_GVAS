@@ -410,7 +410,6 @@ nav {
 
 /* Responsive sur le hero, desktop */
 @media (max-width: 1366px){
- @media (max-width: 1366px){
 
   .h-line{
     gap: 1.5rem;
@@ -443,7 +442,7 @@ nav {
     top: -30px;
   }
 
-}
+
 }
 
 
@@ -727,21 +726,28 @@ nav {
 
 @media (max-width: 414px){
   .content a {
-    font-size: 11px;
-    padding: 8px 8px;
+    font-size: 12px;
+    padding: 8px 4px;
     white-space: nowrap;
     margin-top: 7px;
+  }
+   .content {
+    top: 50px;
   }
 }
 
 @media (max-width: 375px){
   .content a {
-    font-size: 12px;
+    font-size: 0.6rem;
     padding: 8px 6px;
     white-space: nowrap;
     margin-top: 15px;
   }
-
+/*  
+  .content {
+    top: 70px;
+  }
+*/
 }
 
 .section-title{
@@ -755,8 +761,36 @@ nav {
  /* RESPONSIVE SUR LES SOUS TITRES  */
 
  @media (max-width: 414px){
-  .section-title {
-    font-size: 1rem;
+
+  #team .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  #histoire .section-title{
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  #chiffres .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+ }
+  /* sur les petits mobiles */
+
+@media (max-width: 375px){
+
+  #team .section-title {
+    font-size: 1.7rem;
+    margin-bottom: 40px;
+  }
+
+  #histoire .section-title{
+    font-size: 1.7rem;
+    margin-bottom: 40px;
+  }
+  #chiffres .section-title {
+    font-size: 1.7rem;
     margin-bottom: 40px;
   }
 
