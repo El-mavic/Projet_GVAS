@@ -1,3 +1,17 @@
+<?php
+session_start();
+require 'traitement.php';
+
+$page = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
+
+if (!isset($_SESSION['visite_' . $page])) {
+
+    $stmt = $pdo->prepare("INSERT INTO visites (page) VALUES (?)");
+    $stmt->execute([$page]);
+
+    $_SESSION['visite_' . $page] = true;
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -135,7 +149,7 @@
                             </span>
                         </div>
 
-                        <input type="email" id="email" placeholder="Entrez votre adresse mail">
+                        <input type="email" name="email" id="email" placeholder="Entrez votre adresse mail" required>
 
                         <button id="valider">
                             Valider
@@ -460,9 +474,7 @@
                 </div>
             </div>
         `;
-                }
-
-                else if (section === "Services") {
+                } else if (section === "Services") {
                     contenu.innerHTML = `
             <div class="section_service">
 

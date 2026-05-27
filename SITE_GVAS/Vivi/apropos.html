@@ -1,10 +1,26 @@
+<?php
+session_start();
+require 'traitement.php';
+
+$page = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
+
+if (!isset($_SESSION['visite_' . $page])) {
+
+    $stmt = $pdo->prepare("INSERT INTO visites (page) VALUES (?)");
+    $stmt->execute([$page]);
+
+    $_SESSION['visite_' . $page] = true;
+}
+?>
+
 <!doctype html>
 <html lang="fr">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Lora:ital@0;1&display=swap" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Lora:ital@0;1&display=swap" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -12,6 +28,7 @@
   <link rel="icon" href="../images/Images/GVAS.png">
   <title>à propos</title>
 </head>
+
 <body>
   <nav>
     <div class="logo"><span>G.V.A.S</span></div>
@@ -72,7 +89,7 @@
           <h2><span>DISSIVOULOUD Tatchiana</span></h2>
           <h3>Vice Présidente</h3>
         </div>
-        
+
       </div>
       <div class="team-card card-2">
         <img src="images/admin/Mavic.jpg" alt="Informatique">

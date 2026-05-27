@@ -17,20 +17,34 @@ if (isset($_GET['id']) && isset($_GET['type'])) {
 
         $table = $tables[$type];
 
-        $sql = "UPDATE $table 
-                SET deleted = 1,
-                    deleted_at = NOW()
-                WHERE id = ?";
+        // Vérifier si l'élément est déjà dans la corbeille
+        $check = $pdo->prepare("SELECT deleted FROM $table WHERE id = ?");
+        $check->execute([$id]);
+        $item = $check->fetch();
 
-        $stmt = $pdo->prepare($sql);
+        if ($item && $item['deleted'] == 1) {
+            // Suppression définitive
+            $sql = "DELETE FROM $table WHERE id = ?";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute([$id]);
 
-        $stmt->execute([$id]);
+            header("Location: corbeille.php?delete=success&t=" . time());
+        } else {
+            // Envoyer à la corbeille
+            $sql = "UPDATE $table 
+                    SET deleted = 1,
+                        deleted_at = NOW()
+                    WHERE id = ?";
+
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute([$id]);
+
+            header("Location: dashboard.php?delete=success&t=" . time());
+        }
+
+        exit();
     }
-
-    header("Location: dashboard.php?delete=success");
-    exit();
 }
 
 header("Location: dashboard.php");
 exit();
-?>

@@ -21,6 +21,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
+
+<?php
+session_start();
+require 'traitement.php';
+
+$page = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
+
+if (!isset($_SESSION['visite_' . $page])) {
+
+    $stmt = $pdo->prepare("INSERT INTO visites (page) VALUES (?)");
+    $stmt->execute([$page]);
+
+    $_SESSION['visite_' . $page] = true;
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -55,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <li><a href="contacts.php">Contacts</a></li>
             </ul>
             <div class="buttons">
-                <a class="action-button pro " href="Gloire/page_publicitaire.html">Pub</a>
+                <a class="action-button pro " href="Gloire/page_publicitaire.php">Pub</a>
                 <a class="action-button" href="vivi/apropos.html">A propos</a>
             </div>
             <div class="burger-menu-button">
@@ -70,8 +85,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <li><a href="contacts.html">Contacts</a></li>
                 <div class="divider"></div>
                 <div class="buttons-burger-menu">
-                    <a class="action-button-pr " href="#">Welcome!</a>
-                    <a class="action-button" href="#">A propos</a>
+                    <a class="action-button" href="Gloire/page_publicitaire.php">Pub</a>
+                    <a class="action-button" href="vivi/apropos.html">A propos</a>
                 </div>
             </ul>
         </div>
