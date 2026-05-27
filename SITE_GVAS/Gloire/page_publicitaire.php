@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'traitement.php';
+require '../traitement.php';
 
 $page = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
 
@@ -23,7 +23,7 @@ if (!isset($_SESSION['visite_' . $page])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" href="Assets/Img/icon_logo/logo-GVAS.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="Assets/Css/Second.css">
+    <link rel="stylesheet" href="Assets/Css/stilisation.css">
     <title>Page Publicitaire</title>
 </head>
 
@@ -790,7 +790,6 @@ if (!isset($_SESSION['visite_' . $page])) {
                     travers des formations qualifiantes et certifiantes mais aussi dans un suivi quelconque en vue
                     d’un domaine professionnel donné.
                 </p>
-                <!-- <a href="#">lorem</a> -->
             </div>
 
             <div class="aigle">
@@ -808,8 +807,9 @@ if (!isset($_SESSION['visite_' . $page])) {
                 </a>
             </div>
 
-            <h1>Suivez nous sur nos pages</h1>
-
+           <div class="hide">
+             <h1>Suivez nous sur nos pages</h1>
+           </div>
             <div id="sous_class_contact">
                 <div class="a">
                     <a href="../index.php">
@@ -894,25 +894,6 @@ if (!isset($_SESSION['visite_' . $page])) {
     </footer>
 
     <script src="Assets/js/index.js"></script>
-
-
-    <!-- <script>
-        const burger = document.getElementById("burger");
-        const menu = document.getElementById("menu");
-
-        burger.addEventListener("click", (e) => {
-            e.stopPropagation();
-            burger.classList.toggle("active");
-            menu.classList.toggle("active");
-        });
-
-        document.addEventListener("click", (e) => {
-            if (!menu.contains(e.target) && !burger.contains(e.target)) {
-                burger.classList.remove("active");
-                menu.classList.remove("active");
-            }
-        });
-    </script> -->
 </body>
 
 </html>
