@@ -70,7 +70,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                 <li><a href="contacts.php">Contacts</a></li>
             </ul>
             <div class="buttons">
-                <a class="action-button pro " href="Gloire/page_publicitaire.html">Pub</a>
+                <a class="action-button pro " href="Gloire/page_publicitaire.php">Pub</a>
                 <a class="action-button" href="vivi/apropos.html">A propos</a>
             </div>
             <div class="burger-menu-button">
@@ -85,7 +85,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                 <li><a href="contacts.html">Contacts</a></li>
                 <div class="divider"></div>
                 <div class="buttons-burger-menu">
-                    <a class="action-button" href="Gloire/page_publicitaire.html">Pub</a>
+                    <a class="action-button" href="Gloire/page_publicitaire.php">Pub</a>
                     <a class="action-button" href="vivi/apropos.html">A propos</a>
                 </div>
             </ul>
