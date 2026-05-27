@@ -6,6 +6,20 @@ $temoignages = $pdo->query(
 )->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
+<?php
+session_start();
+require 'traitement.php';
+
+$page = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
+
+if (!isset($_SESSION['visite_' . $page])) {
+
+    $stmt = $pdo->prepare("INSERT INTO visites (page) VALUES (?)");
+    $stmt->execute([$page]);
+
+    $_SESSION['visite_' . $page] = true;
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -40,7 +54,7 @@ $temoignages = $pdo->query(
                 <span></span>
                 <span></span>
             </div>
-            
+
         </div>
     </header>
 
@@ -121,9 +135,7 @@ $temoignages = $pdo->query(
             </div>
 
             <div class="footer-col">
-                <form action="index.php" method="GET">
-                    <button type="button" class="open-inscription">S'inscrire</button>
-                </form>
+                <a href="index.php"> <button type="button" class="open-inscription">S'inscrire</button></a>
             </div>
         </div>
         <h2>Nos partenaires</h2>
