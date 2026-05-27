@@ -364,8 +364,8 @@ button {
 /*repartitions des besoins*/
 /*pub sur service*/
 .section_service .sous_section_service .principal {
-  height: 600px;
-  width: 390px;
+  height: 400px;
+  width: 290px;
   border: 1px solid black;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -409,7 +409,7 @@ p {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 25px;
+  gap: 15px;
   padding: 15px;
 }
 
@@ -480,8 +480,8 @@ p {
 
 /* produits */
 .produits .list_produits .part {
-  height: 600px;
-  width: 400px;
+  height: 400px;
+  width: 290px;
   border-radius: 15px;
   border: 2px solid yellow;
   transition: transform 0.25s ease-in-out;
@@ -511,7 +511,7 @@ p {
 }
 
 .produits .list_produits .part .dav {
-  height: auto;
+  height: 50%;
   width: 100%;
   display: flex;
   flex-direction: column;
