@@ -180,25 +180,6 @@ if (isset($_POST['form_type']) && $_POST['form_type'] === 'inscriptions') {
 ?>
 
 
-
-<?php
-//La gestion des messages de succès ou d'erreur ou si le mail existe déjà
-if (isset($_GET['message'])) {
-
-    if ($_GET['message'] == 'ok') {
-        echo "<p style='color:green;'>Message envoyé avec succès</p>";
-    } elseif ($_GET['message'] == 'existe') {
-        echo "<p style='color:red;'>Cet utilisateur est déjà inscrit</p>";
-    } elseif ($_GET['message'] == 'abonnement_ok') {
-        echo "<p style='color:green;'>Abonnement réussi</p>";
-    } elseif ($_GET['message'] == 'abonne_existe') {
-        echo "<p style='color:red;'>Cet email est déjà abonné</p>";
-    } elseif ($_GET['message'] == 'email_invalide') {
-        echo "<p style='color:red;'>Adresse email invalide</p>";
-    }
-}
-?>
-
 <?php
 //Message de validation quand le formulaire d'inscription est envoyé avec succès ou si l'utilisateur existe déjà
 if (isset($_GET['message'])) {

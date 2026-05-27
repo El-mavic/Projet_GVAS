@@ -19,17 +19,17 @@ window.onclick = function (event) {
 
 let subscribeBtn = document.getElementById("subscribeBtn");
 let popup = document.getElementById("popup");
-let closePopup = document.getElementById("closePopup");
 let valider = document.getElementById("valider");
 
 subscribeBtn.addEventListener("click", () => {
   popup.style.display = "flex";
 });
 
-/* Fermer avec X */
-
-closePopup.addEventListener("click", () => {
-  popup.style.display = "none";
+/* Fermer en cliquant à côté */
+popup.addEventListener("click", (e) => {
+  if (e.target === popup) {
+    popup.style.display = "none";
+  }
 });
 /* ================= PARTAGE ================= */
 
