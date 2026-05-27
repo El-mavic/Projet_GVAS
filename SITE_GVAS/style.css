@@ -1065,7 +1065,7 @@ nav ul li a:hover {
     color: #38bdf8;
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
-    margin-top: -70px;
+    margin-top: -50px;
 
 }
 
@@ -1127,7 +1127,6 @@ nav ul li a:hover {
     font-size: 18px;
     position: relative;
     left: 60px;
-    margin-top: -60px;
 }
 
 .footer-col button:hover {

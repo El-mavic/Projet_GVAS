@@ -135,9 +135,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             </div>
 
             <div class="footer-col">
-                <form action="index.php" method="GET">
-                    <button type="button" class="open-inscription">S'inscrire</button>
-                </form>
+                <a href="index.php"> <button type="button" class="open-inscription">S'inscrire</button></a>
             </div>
         </div>
         <h2>Nos partenaires</h2>

@@ -36,7 +36,6 @@
                             <li><a href="index.php">Accueil</a></li>
                             <li><a href="Formation.php">Formations</a></li>
                             <li><a href="galerie.php">Galerie</a></li>
-                            <li><a href="contacts.php">Contact</a></li>
                             <li><a href="a-propos.php">À propos</a></li>
                         </ul>
                     </nav><br>

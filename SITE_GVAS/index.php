@@ -70,7 +70,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                 <li><a href="contacts.php">Contacts</a></li>
             </ul>
             <div class="buttons">
-                <a class="action-button pro " href="Gloire/page_publicitaire.php">Pub</a>
+                <a class="action-button pro " href="Gloire/page_publicitaire.html">Pub</a>
                 <a class="action-button" href="vivi/apropos.html">A propos</a>
             </div>
             <div class="burger-menu-button">
@@ -85,7 +85,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                 <li><a href="contacts.html">Contacts</a></li>
                 <div class="divider"></div>
                 <div class="buttons-burger-menu">
-                    <a class="action-button" href="Gloire/page_publicitaire.php">Pub</a>
+                    <a class="action-button" href="Gloire/page_publicitaire.html">Pub</a>
                     <a class="action-button" href="vivi/apropos.html">A propos</a>
                 </div>
             </ul>
@@ -281,15 +281,37 @@ if (!isset($_SESSION['visite_' . $page])) {
 
         <!--burgerMenuButton-->
         <script>
-            const burgerMenuButton = document.querySelector('.burger-menu-button')
-            const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i')
-            const burgerMenu = document.querySelector('.burger-menu')
+            const burgerMenuButton = document.querySelector('.burger-menu-button');
+            const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i');
+            const burgerMenu = document.querySelector('.burger-menu');
 
-            burgerMenuButton.onclick = function() {
-                burgerMenu.classList.toggle('open')
-                const isOpen = burgerMenu.classList.contains('open')
-                burgerMenuButtonIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
-            }
+            burgerMenuButton.onclick = function(e) {
+                e.stopPropagation();
+
+                burgerMenu.classList.toggle('open');
+
+                const isOpen = burgerMenu.classList.contains('open');
+
+                burgerMenuButtonIcon.classList = isOpen ?
+                    'fa-solid fa-xmark' :
+                    'fa-solid fa-bars';
+            };
+
+            /* fermer si on clique à côté */
+            document.addEventListener('click', function(e) {
+                if (
+                    !burgerMenu.contains(e.target) &&
+                    !burgerMenuButton.contains(e.target)
+                ) {
+                    burgerMenu.classList.remove('open');
+                    burgerMenuButtonIcon.classList = 'fa-solid fa-bars';
+                }
+            });
+
+            /* empêcher fermeture si clic dans le menu */
+            burgerMenu.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
         </script>
 
 
