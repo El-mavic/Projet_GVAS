@@ -1282,7 +1282,7 @@ footer a {
 }
 
 body {
-<<<<<<< HEAD
+/* <<<<<<< HEAD */
   background-image:
     repeating-linear-gradient(
       45deg,
@@ -1297,11 +1297,11 @@ body {
       rgb(255, 255, 255),
       rgb(255, 255, 255)
     );
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat;
   background-size: cover;
   margin: 0px;
   padding: 0px;
-}
+} */
 
 .sous_class_contact2 .a i {
     display: none;
@@ -1398,7 +1398,7 @@ body {
   align-items: center;
 } */
 =======
-    background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.1) 0px, rgba(0, 0, 0, 0.1) 2px, transparent 2px, transparent 4px), linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255));
+    /* background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.1) 0px, rgba(0, 0, 0, 0.1) 2px, transparent 2px, transparent 4px), linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255));
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0px;
@@ -1406,4 +1406,4 @@ body {
 }
 
 
->>>>>>> 3eef9a0539c15d756f6730f8c4ee4ceb9b493d7a
+>>>>>>> 3eef9a0539c15d756f6730f8c4ee4ceb9b493d7a */
