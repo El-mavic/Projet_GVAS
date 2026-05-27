@@ -73,13 +73,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                     required>
     </textarea>
 
-                <input
-                    class="change"
-                    type="text"
-                    name="nom"
-                    placeholder="Veuillez saisir votre nom"
-                    required>
-
+                <input class="change" type="text" name="nom" placeholder="Veuillez saisir votre nom" required>
                 <button type="submit">Envoyer</button>
             </form>
 

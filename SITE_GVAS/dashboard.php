@@ -13,6 +13,8 @@ $totalMessages = $pdo->query("SELECT COUNT(*) FROM utilisateurs WHERE deleted = 
 $totalHommes = $pdo->query("SELECT COUNT(*) FROM inscriptions WHERE sexe='Masculin' AND deleted = 0")->fetchColumn();
 $totalFemmes = $pdo->query("SELECT COUNT(*) FROM inscriptions WHERE sexe='Féminin' AND deleted = 0")->fetchColumn();
 $totalTemoignages = $pdo->query("SELECT COUNT(*) FROM temoignages WHERE deleted = 0")->fetchColumn();
+$stmt = $pdo->query("SELECT * FROM abonnements ORDER BY date_abonnement DESC");
+$abonnements = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
 // Inscriptions par formation
@@ -274,51 +276,82 @@ $pagePlusVisitee = $stmt->fetch(PDO::FETCH_ASSOC);
                     <?php endforeach; ?>
                 </tbody>
             </table>
-    </div>
-    </section>
-    <script>
-        const ctx = document.getElementById('myChart');
+        </section>
+        <section class="table-section">
+            <h2>Abonnements</h2>
 
-        new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: ['Hommes', 'Femmes'],
-                datasets: [{
-                    data: [<?= $totalHommes ?>, <?= $totalFemmes ?>],
-                    backgroundColor: ['#2563eb', 'pink'],
-                    borderWidth: 0
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'bottom'
+            <table>
+                <thead>
+                    <tr>
+                        <th>N°</th>
+                        <th>Email</th>
+                        <th>Date d'abonnement</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <?php foreach ($abonnements as $abo): ?>
+                        <tr>
+                            <td><?= htmlspecialchars($abo['id']) ?></td>
+                            <td><?= htmlspecialchars($abo['email']) ?></td>
+                            <td><?= date('d/m/Y H:i', strtotime($abo['date_abonnement'])) ?></td>
+                            <td>
+                                <a href="delete.php?id=<?= $abo['id'] ?>&type=abonnement"
+                                    class="delete-btn"
+                                    onclick="return confirm('Supprimer cet abonnement ?')">
+                                    Delete
+                                </a>
+                            </td>
+
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </section>
+        <script>
+            const ctx = document.getElementById('myChart');
+
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Hommes', 'Femmes'],
+                    datasets: [{
+                        data: [<?= $totalHommes ?>, <?= $totalFemmes ?>],
+                        backgroundColor: ['#2563eb', 'pink'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
                     }
                 }
-            }
-        });
-    </script>
-    <script>
-        const toggleBtn = document.getElementById('theme-toggl');
+            });
+        </script>
+        <script>
+            const toggleBtn = document.getElementById('theme-toggl');
 
-        toggleBtn.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
+            toggleBtn.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
 
-            if (document.body.classList.contains('dark-mode')) {
-                toggleBtn.textContent = '☀️';
-            } else {
-                toggleBtn.textContent = '🌙 ';
-            }
-        });
-    </script>
-    <script>
-        function printSection(sectionId) {
-            const content = document.getElementById(sectionId).innerHTML;
+                if (document.body.classList.contains('dark-mode')) {
+                    toggleBtn.textContent = '☀️';
+                } else {
+                    toggleBtn.textContent = '🌙 ';
+                }
+            });
+        </script>
+        <script>
+            function printSection(sectionId) {
+                const content = document.getElementById(sectionId).innerHTML;
 
-            const printWindow = window.open('', '', 'width=900,height=700');
+                const printWindow = window.open('', '', 'width=900,height=700');
 
-            printWindow.document.write(`
+                printWindow.document.write(`
         <html>
         <head>
             <title>Impression</title>
@@ -349,46 +382,46 @@ $pagePlusVisitee = $stmt->fetch(PDO::FETCH_ASSOC);
         </body>
         </html>
     `);
-            printWindow.document.close();
-            printWindow.print();
-        }
-    </script>
+                printWindow.document.close();
+                printWindow.print();
+            }
+        </script>
 
-    <script>
-        const formationCtx = document.getElementById('formationChart');
-        new Chart(formationCtx, {
-            type: 'doughnut',
-            data: {
-                labels: <?= json_encode($formationLabels) ?>,
-                datasets: [{
-                    data: <?= json_encode($formationTotals) ?>,
-                    backgroundColor: [
-                        '#2563eb',
-                        '#16a34a',
-                        '#f59e0b',
-                        '#dc2626',
-                        '#7c3aed',
-                        '#0891b2'
-                    ],
-                    borderWidth: 0,
+        <script>
+            const formationCtx = document.getElementById('formationChart');
+            new Chart(formationCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: <?= json_encode($formationLabels) ?>,
+                    datasets: [{
+                        data: <?= json_encode($formationTotals) ?>,
+                        backgroundColor: [
+                            '#2563eb',
+                            '#16a34a',
+                            '#f59e0b',
+                            '#dc2626',
+                            '#7c3aed',
+                            '#0891b2'
+                        ],
+                        borderWidth: 0,
 
 
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: true,
-                plugins: {
-                    legend: {
-                        display: window.innerWidth > 768,
-                        position: 'right'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: {
+                            display: window.innerWidth > 768,
+                            position: 'right'
+                        }
                     }
+
                 }
 
-            }
-
-        });
-    </script>
+            });
+        </script>
 </body>
 
 </html>

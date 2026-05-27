@@ -1,4 +1,3 @@
-
 <?php
 // Connexion à la base de données
 $host = "localhost";
@@ -144,10 +143,64 @@ if (isset($_POST['form_type']) && $_POST['form_type'] === 'inscriptions') {
     header("Location: temoignage.php?message=temoignage_ok");
     exit();
 }
+
+
+
+
+/* =========================
+   FORMULAIRE ABONNEMENT
+========================= */ elseif (isset($_POST['form_type']) && $_POST['form_type'] === 'abonnement') {
+
+    $email = trim($_POST['email'] ?? '');
+
+    // Vérifier email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        header("Location: Succes.php?message=email_invalide");
+        exit();
+    }
+
+    // Vérifier doublon
+    $sqlCheck = "SELECT COUNT(*) FROM abonnements WHERE email = ?";
+    $stmtCheck = $pdo->prepare($sqlCheck);
+    $stmtCheck->execute([$email]);
+
+    if ($stmtCheck->fetchColumn() > 0) {
+        header("Location: Succes.php?message=abonne_existe");
+        exit();
+    }
+
+    // Insertion
+    $sql = "INSERT INTO abonnements (email) VALUES (?)";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$email]);
+
+    header("Location: Succes.php?message=abonnement_ok");
+    exit();
+}
 ?>
 
 
+
 <?php
+//La gestion des messages de succès ou d'erreur ou si le mail existe déjà
+if (isset($_GET['message'])) {
+
+    if ($_GET['message'] == 'ok') {
+        echo "<p style='color:green;'>Message envoyé avec succès</p>";
+    } elseif ($_GET['message'] == 'existe') {
+        echo "<p style='color:red;'>Cet utilisateur est déjà inscrit</p>";
+    } elseif ($_GET['message'] == 'abonnement_ok') {
+        echo "<p style='color:green;'>Abonnement réussi</p>";
+    } elseif ($_GET['message'] == 'abonne_existe') {
+        echo "<p style='color:red;'>Cet email est déjà abonné</p>";
+    } elseif ($_GET['message'] == 'email_invalide') {
+        echo "<p style='color:red;'>Adresse email invalide</p>";
+    }
+}
+?>
+
+<?php
+//Message de validation quand le formulaire d'inscription est envoyé avec succès ou si l'utilisateur existe déjà
 if (isset($_GET['message'])) {
     if ($_GET['message'] == 'ok') {
         echo "<p style='color:green;'>Message envoyé avec succès</p>";
