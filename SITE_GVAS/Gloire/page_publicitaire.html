@@ -61,19 +61,20 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                     <div class="sous_class_logo">
                         <img src="Assets/Img/icon_logo/logo-GVAS.png" alt="logo-GVAS">
-                        <h1>GROUPE VISION D'AIGLE SERVICE</h1>
+                        <h1>GROUPE VISION D'AIGLE SERVICES</h1>
                     </div>
 
                     <div class="contacter">
                         <a href="../Formation.php">Formations</a>
                     </div>
+
+                    <div class="burger" id="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
 
-                <div class="burger" id="burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
                 <div class="partie_navbar">
                     <div>
                         <nav id="menu">
@@ -118,7 +119,6 @@ if (!isset($_SESSION['visite_' . $page])) {
                 <div class="rondeurs">
                     <div class="contien">
 
-
                         <!-- ABONNEMENT -->
                         <button class="subscribe-btn" id="subscribeBtn">
                             Abonnez-vous
@@ -139,23 +139,27 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                     <!-- POPUP -->
 
-                    <form action="" class="popup" id="popup">
+                    <div class="popup" id="popup">
+                        <form action="">
 
-                        <div class="popup-top">
-                            <h2>Abonnement</h2>
+                            <div class="popup-top pap">
+                                <label class="pap" for="email">Abonnement</label>
 
-                            <span class="close" id="closePopup">
-                                ✖
-                            </span>
-                        </div>
+                                <span class="close " id="closePopup">
+                                    ✖
+                                </span>
+                            </div>
 
-                        <input type="email" name="email" id="email" placeholder="Entrez votre adresse mail" required>
+                            <input class="up_top" type="email" name="email" id="email"
+                                placeholder="Entrez votre adresse mail" required>
 
-                        <button id="valider">
-                            Valider
-                        </button>
+                            <input class="down_bottom" type="submit" value="Valider" id="valider">
+                            </input>
+                        </form>
+                    </div>
 
-                    </form>
+
+
                 </div>
             </div>
         </section>
@@ -634,7 +638,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                 <div class="Acceuil">
                     <div class="cent">
                         <img src="Assets/Img/icon_logo/logo-GVAS.png" alt="logo-GVAS">
-                        <h1>GROUPE VISION D'AIGLE SERVICE</h1>
+                        <h1>GROUPE VISION D'AIGLE SERVICES</h1>
                         <P>Spécialiser dans la vente des produits et services</P>
                     </div>
                 </div>
@@ -803,6 +807,36 @@ if (!isset($_SESSION['visite_' . $page])) {
                     </h1>
                 </a>
             </div>
+
+            <h1>Suivez nous sur nos pages</h1>
+
+            <div id="sous_class_contact">
+                <div class="a">
+                    <a href="../index.php">
+                        <i class="fa-solid fa-house" style="color: rgb(0, 0, 0);"></i>
+                    </a>
+                </div>
+
+                <div class="a">
+                    <a href="https://www.facebook.com/profile.php?id=61583138888176" target="_blank">
+                        <i class="fa-brands fa-square-facebook" style="color: rgb(0, 0, 0);"></i>
+                    </a>
+                </div>
+
+                <div class="a">
+                    <a href="#">
+                        <i class="fa-brands fa-youtube" style="color: rgb(0, 0, 0);"></i>
+                    </a>
+                </div>
+
+                <div class="a">
+                    <a href="https://wa.me/242064201415" target="_blank">
+                        <i class="fa-brands fa-whatsapp" style="color: rgb(0, 0, 0);"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
         </div>
 
         <div class="footer_part2">
@@ -843,43 +877,13 @@ if (!isset($_SESSION['visite_' . $page])) {
                         Envoyez votre commentaire
                     </h1>
                 </label>
-                <ul>
-                    <li>
-                        <input type="text" name="envoie" id="envoie">
-                    </li>
 
-                    <li>
-                        <button>soumettre !</button>
-                    </li>
-                </ul>
+                <div>
+                    <input class="tim" placeholder="Votre commentaire ici" type="text" name="envoie" id="envoie">
+
+                    <input class="tom" type="submit" value="soumettre !"></input>
+                </div>
             </form>
-
-            <!-- <div id="sous_class_contact2">
-                <div class="a">
-                    <a href="../index.php">
-                        <i class="fa-solid fa-house" style="color: rgb(0, 0, 0);"></i>
-                    </a>
-                </div>
-
-                <div class="a">
-                    <a href="https://www.facebook.com/profile.php?id=61583138888176" target="_blank">
-                        <i class="fa-brands fa-square-facebook" style="color: rgb(0, 0, 0);"></i>
-                    </a>
-                </div>
-
-                <div class="a">
-                    <a href="#">
-                        <i class="fa-brands fa-youtube" style="color: rgb(0, 0, 0);"></i>
-                    </a>
-                </div>
-
-                <div class="a">
-                    <a href="https://wa.me/242064201415" target="_blank">
-                        <i class="fa-brands fa-whatsapp" style="color: rgb(0, 0, 0);"></i>
-                    </a>
-                </div>
-            </div> -->
-
         </div>
 
         <div class="bas">
@@ -892,7 +896,7 @@ if (!isset($_SESSION['visite_' . $page])) {
     <script src="Assets/js/index.js"></script>
 
 
-    <script>
+    <!-- <script>
         const burger = document.getElementById("burger");
         const menu = document.getElementById("menu");
 
@@ -908,7 +912,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                 menu.classList.remove("active");
             }
         });
-    </script>
+    </script> -->
 </body>
 
 </html>
