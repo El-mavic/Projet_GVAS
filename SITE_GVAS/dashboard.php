@@ -81,6 +81,7 @@ $pagePlusVisitee = $stmt->fetch(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="dashboard.css">
     <link rel="icon" href="images/Images/GVAS.png">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
@@ -352,6 +353,7 @@ $pagePlusVisitee = $stmt->fetch(PDO::FETCH_ASSOC);
             printWindow.print();
         }
     </script>
+
     <script>
         const formationCtx = document.getElementById('formationChart');
         new Chart(formationCtx, {
