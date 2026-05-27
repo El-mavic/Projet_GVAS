@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'traitement.php';
+require '../traitement.php';
 
 $page = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
 
@@ -140,26 +140,24 @@ if (!isset($_SESSION['visite_' . $page])) {
                     <!-- POPUP -->
 
                     <div class="popup" id="popup">
-                        <form action="">
 
-                            <div class="popup-top pap">
-                                <label class="pap" for="email">Abonnement</label>
 
-                                <span class="close " id="closePopup">
-                                    ✖
-                                </span>
-                            </div>
+                        <div class="popup-top pap">
+                            <label class="pap" for="email">Abonnement</label>
 
+                            <span class="close " id="closePopup">
+                                ✖
+                            </span>
+                        </div>
+                        <form action="traitement.php" method="POST">
+                            <input type="hidden" name="form_type" value="abonnement">
                             <input class="up_top" type="email" name="email" id="email"
                                 placeholder="Entrez votre adresse mail" required>
-
-                            <input class="down_bottom" type="submit" value="Valider" id="valider">
-                            </input>
+                            <button class="down_bottom" type="submit" id="valider">
+                                Valider
+                            </button>
                         </form>
                     </div>
-
-
-
                 </div>
             </div>
         </section>
