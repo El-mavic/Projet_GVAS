@@ -60,7 +60,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                     </div>
 
                     <div class="sous_class_logo">
-                        <img src="Assets/Img/icon_logo/logo-GVAS.png" alt="logo-GVAS">
+                        <!-- <img src="Assets/Img/icon_logo/logo-GVAS.png" alt="logo-GVAS"> -->
                         <h1>GROUPE VISION D'AIGLE SERVICES</h1>
                     </div>
 
@@ -128,20 +128,10 @@ if (!isset($_SESSION['visite_' . $page])) {
                         <button class="share-btn" id="shareBtn">
                             Partager
                         </button>
-
-                    </div>
-
-                    <div>
-                        <h1>
-                            nombre d'abonnée : XXXX
-                        </h1>
                     </div>
 
                     <!-- POPUP -->
-
                     <div class="popup" id="popup">
-
-
                         <div class="popup-top pap">
                             <label class="pap" for="email">Abonnement</label>
 
