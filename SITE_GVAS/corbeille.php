@@ -28,6 +28,14 @@ $temoignages = $pdo->query(
      WHERE deleted = 1
      ORDER BY id DESC"
 )->fetchAll(PDO::FETCH_ASSOC);
+
+/* Abonnements supprimés */
+$abonnements = $pdo->query(
+    "SELECT * FROM abonnements
+     WHERE deleted = 1
+     ORDER BY id DESC"
+)->fetchAll(PDO::FETCH_ASSOC);
+?>
 ?>
 
 <!DOCTYPE html>
@@ -204,7 +212,38 @@ $temoignages = $pdo->query(
         </table>
 
     </section>
+    <section class="table-section">
+        <h2>Abonnements</h2>
 
+        <table>
+            <thead>
+                <tr>
+                    <th>N°</th>
+                    <th>Email</th>
+                    <th>Date d'abonnement</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <?php foreach ($abonnements as $abo): ?>
+                    <tr>
+                        <td><?= htmlspecialchars($abo['id']) ?></td>
+                        <td><?= htmlspecialchars($abo['email']) ?></td>
+                        <td><?= date('d/m/Y H:i', strtotime($abo['date_abonnement'])) ?></td>
+                        <td>
+                            <a href="delete.php?id=<?= $abo['id'] ?>&type=abonnement"
+                                class="delete-btn"
+                                onclick="return confirm('Supprimer cet abonnement ?')">
+                                Delete
+                            </a>
+                        </td>
+
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </section>
     </div>
     <style>
         /* RESET */
