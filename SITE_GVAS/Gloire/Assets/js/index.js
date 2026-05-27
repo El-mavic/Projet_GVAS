@@ -31,10 +31,6 @@ subscribeBtn.addEventListener("click", () => {
 closePopup.addEventListener("click", () => {
   popup.style.display = "none";
 });
-
-
-
-
 /* ================= PARTAGE ================= */
 
 let shareBtn = document.getElementById("shareBtn");
