@@ -254,12 +254,12 @@ header {
 .rondeurs h1 {
   font-size: 15px;
 }
-
+/* 
 .rondeurs .liked {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 
 /* partage */
@@ -304,7 +304,7 @@ button {
   color: black;
   padding: 25px;
   border-radius: 15px;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 15px;
   min-width: 320px;

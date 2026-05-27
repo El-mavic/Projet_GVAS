@@ -132,14 +132,14 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                     <!-- POPUP -->
                     <div class="popup" id="popup">
-                        <div class="popup-top pap">
-                            <label class="pap" for="email">Abonnement</label>
+                        <div class="popup-top">
+                            <label for="email">Abonnement</label>
 
                             <span class="close " id="closePopup">
                                 ✖
                             </span>
                         </div>
-                        <form action="../Traitement.php" method="POST">
+                        <form action="traitement.php" method="POST">
                             <input type="hidden" name="form_type" value="abonnement">
                             <input class="up_top" type="email" name="email" id="email"
                                 placeholder="Entrez votre adresse mail" required>
@@ -795,9 +795,9 @@ if (!isset($_SESSION['visite_' . $page])) {
                 </a>
             </div>
 
-            <div class="hide">
-                <h1>Suivez nous sur nos pages</h1>
-            </div>
+           <div class="hide">
+             <h1>Suivez nous sur nos pages</h1>
+           </div>
             <div id="sous_class_contact">
                 <div class="a">
                     <a href="../index.php">
