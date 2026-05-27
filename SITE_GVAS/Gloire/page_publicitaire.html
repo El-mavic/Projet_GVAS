@@ -1,3 +1,17 @@
+<?php
+session_start();
+require 'traitement.php';
+
+$page = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
+
+if (!isset($_SESSION['visite_' . $page])) {
+
+    $stmt = $pdo->prepare("INSERT INTO visites (page) VALUES (?)");
+    $stmt->execute([$page]);
+
+    $_SESSION['visite_' . $page] = true;
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -55,6 +69,11 @@
                     </div>
                 </div>
 
+                <div class="burger" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <div class="partie_navbar">
                     <div>
                         <nav id="menu">
@@ -63,13 +82,11 @@
                                 <li><a href="../Vivi/apropos.html">A-propos</a></li>
                                 <li><a href="../contacts.php">Contacts</a></li>
                                 <li><a href="../galerie.php">Galerie</a></li>
+                                <li><a href="../Formation.php">Formations</a></li>
                             </ul>
                         </nav>
                     </div>
 
-                    <div class="burger" id="burger">
-                        <i class="fa-solid fa-bars" style="color: red;"></i>
-                    </div>
                 </div>
             </div>
         </section>
@@ -132,7 +149,7 @@
                             </span>
                         </div>
 
-                        <input type="email" id="email" placeholder="Entrez votre adresse mail">
+                        <input type="email" name="email" id="email" placeholder="Entrez votre adresse mail" required>
 
                         <button id="valider">
                             Valider
@@ -434,9 +451,7 @@
                 </div>
             </div>
         `;
-                }
-
-                else if (section === "Services") {
+                } else if (section === "Services") {
                     contenu.innerHTML = `
             <div class="section_service">
 
@@ -876,6 +891,24 @@
 
     <script src="Assets/js/index.js"></script>
 
+
+    <script>
+        const burger = document.getElementById("burger");
+        const menu = document.getElementById("menu");
+
+        burger.addEventListener("click", (e) => {
+            e.stopPropagation();
+            burger.classList.toggle("active");
+            menu.classList.toggle("active");
+        });
+
+        document.addEventListener("click", (e) => {
+            if (!menu.contains(e.target) && !burger.contains(e.target)) {
+                burger.classList.remove("active");
+                menu.classList.remove("active");
+            }
+        });
+    </script>
 </body>
 
 </html>

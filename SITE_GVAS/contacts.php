@@ -1,3 +1,18 @@
+    <?php
+    session_start();
+    require 'traitement.php';
+
+    $page = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
+
+    if (!isset($_SESSION['visite_' . $page])) {
+
+        $stmt = $pdo->prepare("INSERT INTO visites (page) VALUES (?)");
+        $stmt->execute([$page]);
+
+        $_SESSION['visite_' . $page] = true;
+    }
+    ?>
+
     <!DOCTYPE html>
     <html lang="fr">
 
@@ -21,7 +36,6 @@
                             <li><a href="index.php">Accueil</a></li>
                             <li><a href="Formation.php">Formations</a></li>
                             <li><a href="galerie.php">Galerie</a></li>
-                            <li><a href="contacts.php">Contact</a></li>
                             <li><a href="a-propos.php">À propos</a></li>
                         </ul>
                     </nav><br>

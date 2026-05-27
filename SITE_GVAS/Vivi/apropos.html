@@ -1,10 +1,25 @@
+<?php
+session_start();
+require 'traitement.php';
+
+$page = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
+
+if (!isset($_SESSION['visite_' . $page])) {
+
+    $stmt = $pdo->prepare("INSERT INTO visites (page) VALUES (?)");
+    $stmt->execute([$page]);
+
+    $_SESSION['visite_' . $page] = true;
+}
+?>
+
 <!doctype html>
 <html lang="fr">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link
+  <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Lora:ital@0;1&display=swap" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -13,6 +28,7 @@
   <link rel="icon" href="../images/Images/GVAS.png">
   <title>à propos</title>
 </head>
+
 <body>
   <nav>
     <div class="logo"><span>G.V.A.S</span></div>
@@ -30,6 +46,8 @@
     <!-- <button class="bouton">Nous rejoindre</button> -->
     <a href="../Gloire/page_publicitaire.html" class="bouton">En savoir plus</a>
   </nav>
+
+  <!-- SECTION HERROO -->
 
   <section class="hero">
     <div class="h-background"></div>
@@ -49,6 +67,7 @@
           <a href="#team">Découvrir notre équipe</a>
         </div>
       </div>
+    </div>
   </section>
 
   <div class="content">
@@ -67,37 +86,44 @@
       <div class="team-card card-1">
         <img src="images/BG/17.JPG" alt="Vice Présidente">
         <div class="team-content">
+          <h2><span>DISSIVOULOUD Tatchiana</span></h2>
           <h3>Vice Présidente</h3>
         </div>
+
       </div>
       <div class="team-card card-2">
-        <img src="images/BG/17.JPG" alt="Informatique">
+        <img src="images/admin/Mavic.jpg" alt="Informatique">
         <div class="team-content">
-          <h3>Informatique</h3>
+          <h2><span>Mr BAKALA El-Mavic De Marfred</span></h2>
+          <h3>Responsable informatique et Technique</h3>
         </div>
       </div>
       <div class="team-card card-3">
-        <img src="images/BG/17.JPG" alt="Superviseur">
+        <img src="images/admin/Israel.png" alt="Superviseur">
         <div class="team-content">
-          <h3>Superviseur</h3>
+          <h2><span>Mr NZAOU MAFOUA Israel</span></h2>
+          <h3>Responsable Marketing et commercial</h3>
         </div>
       </div>
       <div class="team-card card-4">
-        <img src="images/BG/17.JPG" alt="Comptable">
+        <img src="images/admin/Bénie.png" alt="Sécrétaire">
         <div class="team-content">
-          <h3>SECRETaire</h3>
+          <h2><span>Mme NGOUALA Bénie</span></h2>
+          <h3>Secrétaire administrative & Coordinatrice pédagogique</h3>
         </div>
       </div>
       <div class="team-card card-5">
-        <img src="images/BG/17.JPG" alt="Communication">
+        <img src="images/BG/17.JPG" alt="Comptable">
         <div class="team-content">
-          <h3>Communication</h3>
+          <h2><span>Mme KOMPANI Suza</span></h2>
+          <h3>Secrétaire caissière</h3>
         </div>
       </div>
       <div class="team-card card-6">
-        <img src="images/BG/17.JPG" alt="Directeur">
+        <img src="images/BG/17.JPG" alt="communication">
         <div class="team-content">
-          <h3>Anglais</h3>
+          <h2><span>Mme Ruth</span></h2>
+          <h3>communication</h3>
         </div>
       </div>
     </div>

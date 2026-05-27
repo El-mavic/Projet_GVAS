@@ -8,18 +8,19 @@ if (!isset($_SESSION['admin'])) {
 require 'traitement.php';
 
 // Statistiques
-$totalInscriptions = $pdo->query("SELECT COUNT(*) FROM inscriptions")->fetchColumn();
-$totalMessages = $pdo->query("SELECT COUNT(*) FROM utilisateurs")->fetchColumn();
-$totalHommes = $pdo->query("SELECT COUNT(*) FROM inscriptions WHERE sexe='Masculin'")->fetchColumn();
-$totalFemmes = $pdo->query("SELECT COUNT(*) FROM inscriptions WHERE sexe='Féminin'")->fetchColumn();
-$totalTemoignages = $pdo->query("SELECT COUNT(*) FROM temoignages")->fetchColumn();
+$totalInscriptions = $pdo->query("SELECT COUNT(*) FROM inscriptions WHERE deleted = 0")->fetchColumn();
+$totalMessages = $pdo->query("SELECT COUNT(*) FROM utilisateurs WHERE deleted = 0")->fetchColumn();
+$totalHommes = $pdo->query("SELECT COUNT(*) FROM inscriptions WHERE sexe='Masculin' AND deleted = 0")->fetchColumn();
+$totalFemmes = $pdo->query("SELECT COUNT(*) FROM inscriptions WHERE sexe='Féminin' AND deleted = 0")->fetchColumn();
+$totalTemoignages = $pdo->query("SELECT COUNT(*) FROM temoignages WHERE deleted = 0")->fetchColumn();
 
 
 // Inscriptions par formation
 $formationsData = $pdo->query("
-    SELECT formation, COUNT(*) as total
-    FROM inscriptions
-    GROUP BY formation
+SELECT formation, COUNT(*) as total
+FROM inscriptions
+WHERE deleted = 0
+GROUP BY formation
 ")->fetchAll(PDO::FETCH_ASSOC);
 
 $formationLabels = [];
@@ -54,7 +55,21 @@ $temoignages = $pdo->query(
      ORDER BY id ASC 
      LIMIT 10"
 )->fetchAll(PDO::FETCH_ASSOC);
+
+// recupère le nombre total de visites et la page la plus visitée
+$totalVisites = $pdo->query("SELECT COUNT(*) FROM visites")->fetchColumn();
+
+// Recupère la page la plus visitée
+$stmt = $pdo->query("
+    SELECT page, COUNT(*) as total
+    FROM visites
+    GROUP BY page
+    ORDER BY total DESC
+    LIMIT 1
+");
+$pagePlusVisitee = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -66,6 +81,7 @@ $temoignages = $pdo->query(
     <link rel="stylesheet" href="dashboard.css">
     <link rel="icon" href="images/Images/GVAS.png">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
@@ -84,7 +100,7 @@ $temoignages = $pdo->query(
                 <a href="corbeille.php" id="theme-toggle" class="logout-btn">Corbeile
 
                 </a>
-                <button id="theme-toggl" class="logout-btn">☀️Dark🌙</button>
+                <button id="theme-toggl" class="logout-btn">Dark</button>
                 <button onclick="printSection('inscriptions')" class="logout-btn">
                     Imprimer
                 </button>
@@ -116,6 +132,18 @@ $temoignages = $pdo->query(
             <div class="card">
                 <h3>Total Témoignages</h3>
                 <p><?= $totalTemoignages ?></p>
+            </div>
+
+            <div class="card">
+                <h3>Total Visites</h3>
+                <p><?= $totalVisites ?></p>
+            </div>
+
+            <div class="card">
+                <h3>Page la plus visitée</h3>
+                <p>
+                    <?= $pagePlusVisitee ? $pagePlusVisitee['page'] : 'Aucune visite' ?>
+                </p>
             </div>
         </section>
 
@@ -325,6 +353,7 @@ $temoignages = $pdo->query(
             printWindow.print();
         }
     </script>
+
     <script>
         const formationCtx = document.getElementById('formationChart');
         new Chart(formationCtx, {
@@ -342,6 +371,7 @@ $temoignages = $pdo->query(
                         '#0891b2'
                     ],
                     borderWidth: 0,
+
 
                 }]
             },
