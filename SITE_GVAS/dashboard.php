@@ -370,6 +370,7 @@ $pagePlusVisitee = $stmt->fetch(PDO::FETCH_ASSOC);
                     ],
                     borderWidth: 0,
 
+
                 }]
             },
             options: {
