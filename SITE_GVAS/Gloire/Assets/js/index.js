@@ -15,45 +15,6 @@ window.onclick = function (event) {
   }
 };
 
-// /* ================= LIKE ================= */
-
-// let likeBtn = document.getElementById("likeBtn");
-// let likeCount = document.getElementById("likeCount");
-
-// let liked = false;
-// let compteur = 0;
-
-// likeBtn.addEventListener("click", () => {
-//   if (!liked) {
-//     compteur++;
-//     liked = true;
-
-//     likeBtn.classList.add("like-active");
-//   } else {
-//     compteur--;
-//     liked = false;
-
-//     likeBtn.classList.remove("like-active");
-//   }
-
-//   likeCount.textContent = compteur;
-
-//   /* Effet animation à chaque clic */
-
-//   //   likeBtn.style.transform = "scale(1.25)";
-//   likeBtn.style.boxShadow = "0 0 25px #ff004c";
-
-//   setTimeout(() => {
-//     if (liked) {
-//       //   likeBtn.style.transform = "scale(1.15)";
-//       likeBtn.style.boxShadow = "0 0 20px #ff004c";
-//     } else {
-//       //   likeBtn.style.transform = "scale(1)";
-//       likeBtn.style.boxShadow = "none";
-//     }
-//   }, 200);
-// });
-
 /* ================= ABONNEMENT ================= */
 
 let subscribeBtn = document.getElementById("subscribeBtn");
@@ -99,9 +60,7 @@ valider.addEventListener("click", () => {
       //   subscribeBtn.style.transform = "scale(1)";
       subscribeBtn.style.boxShadow = "0 0 15px #00ff88";
     }, 250);
-  } else {
-    alert("Veuillez entrer une adresse mail.");
-  }
+  } 
 });
 
 /* Animation à chaque clic du bouton abonnement */
@@ -144,23 +103,18 @@ shareBtn.addEventListener("click", async () => {
 
 
 // closing
+// let popu = document.getElementById("pap");
 
-let popu = document.getElementById("pap");
+// window.addEventListener("click", (event)=>{
 
-window.addEventListener("click", (event)=>{
+//     if(event.target != popu){
 
-    if(event.target != popu){
+//         popup.style.display = "none";
 
-        popup.style.display = "none";
+//     }
 
-    }
+// });
 
-});
-
-
-
-// 
-// 
 // menuBurger
 let burger = document.getElementById("burger");
 
