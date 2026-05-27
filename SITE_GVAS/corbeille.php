@@ -67,6 +67,7 @@ $temoignages = $pdo->query(
                     <th>Formation</th>
                     <th>Supprimé le</th>
                     <th>Action</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
 
@@ -89,6 +90,13 @@ $temoignages = $pdo->query(
                             </a>
 
                         </td>
+                        <td>
+                            <a href="delete.php?id=<?= $item['id'] ?>&type=inscription"
+                                class="delete-btn"
+                                onclick="return confirm('Supprimer cette inscription définitivement ?')">
+                                Delete
+                            </a>
+                        </td>
                     </tr>
 
                 <?php endforeach; ?>
@@ -109,6 +117,7 @@ $temoignages = $pdo->query(
                     <th>Message</th>
                     <th>Supprimé le</th>
                     <th>Action</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
 
@@ -124,13 +133,17 @@ $temoignages = $pdo->query(
                         <td><?= date('d/m/Y H:i', strtotime($msg['deleted_at'])) ?></td>
 
                         <td>
-
                             <a href="restore.php?id=<?= $msg['id'] ?>&type=contact">
                                 Restaurer
                             </a>
-
                         </td>
-
+                        <td>
+                            <a href="delete.php?id=<?= $msg['id'] ?>&type=contact"
+                                class="delete-btn"
+                                onclick="return confirm('Supprimer ce message définitivement ?')">
+                                Delete
+                            </a>
+                        </td>
                     </tr>
 
                 <?php endforeach; ?>
@@ -152,6 +165,7 @@ $temoignages = $pdo->query(
                     <th>Témoignage</th>
                     <th>Supprimé le</th>
                     <th>Action</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
 
@@ -174,7 +188,13 @@ $temoignages = $pdo->query(
                             </a>
 
                         </td>
-
+                        <td>
+                            <a href="delete.php?id=<?= $tem['id'] ?>&type=temoignage"
+                                class="delete-btn"
+                                onclick="return confirm('Supprimer ce témoignage définitivement ?')">
+                                Delete
+                            </a>
+                        </td>
                     </tr>
 
                 <?php endforeach; ?>
