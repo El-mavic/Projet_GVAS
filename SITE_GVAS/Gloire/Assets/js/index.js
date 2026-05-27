@@ -15,44 +15,44 @@ window.onclick = function (event) {
   }
 };
 
-/* ================= LIKE ================= */
+// /* ================= LIKE ================= */
 
-let likeBtn = document.getElementById("likeBtn");
-let likeCount = document.getElementById("likeCount");
+// let likeBtn = document.getElementById("likeBtn");
+// let likeCount = document.getElementById("likeCount");
 
-let liked = false;
-let compteur = 0;
+// let liked = false;
+// let compteur = 0;
 
-likeBtn.addEventListener("click", () => {
-  if (!liked) {
-    compteur++;
-    liked = true;
+// likeBtn.addEventListener("click", () => {
+//   if (!liked) {
+//     compteur++;
+//     liked = true;
 
-    likeBtn.classList.add("like-active");
-  } else {
-    compteur--;
-    liked = false;
+//     likeBtn.classList.add("like-active");
+//   } else {
+//     compteur--;
+//     liked = false;
 
-    likeBtn.classList.remove("like-active");
-  }
+//     likeBtn.classList.remove("like-active");
+//   }
 
-  likeCount.textContent = compteur;
+//   likeCount.textContent = compteur;
 
-  /* Effet animation à chaque clic */
+//   /* Effet animation à chaque clic */
 
-  //   likeBtn.style.transform = "scale(1.25)";
-  likeBtn.style.boxShadow = "0 0 25px #ff004c";
+//   //   likeBtn.style.transform = "scale(1.25)";
+//   likeBtn.style.boxShadow = "0 0 25px #ff004c";
 
-  setTimeout(() => {
-    if (liked) {
-      //   likeBtn.style.transform = "scale(1.15)";
-      likeBtn.style.boxShadow = "0 0 20px #ff004c";
-    } else {
-      //   likeBtn.style.transform = "scale(1)";
-      likeBtn.style.boxShadow = "none";
-    }
-  }, 200);
-});
+//   setTimeout(() => {
+//     if (liked) {
+//       //   likeBtn.style.transform = "scale(1.15)";
+//       likeBtn.style.boxShadow = "0 0 20px #ff004c";
+//     } else {
+//       //   likeBtn.style.transform = "scale(1)";
+//       likeBtn.style.boxShadow = "none";
+//     }
+//   }, 200);
+// });
 
 /* ================= ABONNEMENT ================= */
 
@@ -140,6 +140,21 @@ shareBtn.addEventListener("click", async () => {
   } else {
     alert("Le partage n'est pas supporté sur ce navigateur.");
   }
+});
+
+
+// closing
+
+let popu = document.getElementById("pap");
+
+window.addEventListener("click", (event)=>{
+
+    if(event.target != popu){
+
+        popup.style.display = "none";
+
+    }
+
 });
 
 
