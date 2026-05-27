@@ -56,6 +56,11 @@
 }
 
 @media (max-width: 820px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
   .baba1,
   .baba2,
   .baba3 {
@@ -399,6 +404,11 @@ iframe {
 }
 
 @media (max-width: 414px) {
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+
   .burger {
     display: flex;
   }
