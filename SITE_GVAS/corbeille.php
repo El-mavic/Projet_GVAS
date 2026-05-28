@@ -222,6 +222,7 @@ $abonnements = $pdo->query(
                     <th>Email</th>
                     <th>Date d'abonnement</th>
                     <th>Action</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
 
@@ -231,6 +232,12 @@ $abonnements = $pdo->query(
                         <td><?= htmlspecialchars($abo['id']) ?></td>
                         <td><?= htmlspecialchars($abo['email']) ?></td>
                         <td><?= date('d/m/Y H:i', strtotime($abo['date_abonnement'])) ?></td>
+                        <td>
+                            <a href="restore.php?id=<?= $abo['id'] ?>&type=abonnement">
+                                Restaurer
+                            </a>
+
+                        </td>
                         <td>
                             <a href="delete.php?id=<?= $abo['id'] ?>&type=abonnement"
                                 class="delete-btn"

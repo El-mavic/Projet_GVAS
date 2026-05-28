@@ -131,7 +131,7 @@
             popup.style.display = "flex";
 
             function closePopup() {
-                window.location.href = "index.php";
+                window.location.href = document.referrer;
             }
         </script>
     <?php endif; ?>
