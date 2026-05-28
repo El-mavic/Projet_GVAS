@@ -13,7 +13,7 @@ $totalMessages = $pdo->query("SELECT COUNT(*) FROM utilisateurs WHERE deleted = 
 $totalHommes = $pdo->query("SELECT COUNT(*) FROM inscriptions WHERE sexe='Masculin' AND deleted = 0")->fetchColumn();
 $totalFemmes = $pdo->query("SELECT COUNT(*) FROM inscriptions WHERE sexe='Féminin' AND deleted = 0")->fetchColumn();
 $totalTemoignages = $pdo->query("SELECT COUNT(*) FROM temoignages WHERE deleted = 0")->fetchColumn();
-$stmt = $pdo->query("SELECT * FROM abonnements ORDER BY date_abonnement DESC");
+$stmt = $pdo->query("SELECT * FROM abonnements WHERE deleted = 0 ORDER BY date_abonnement DESC");
 $abonnements = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
