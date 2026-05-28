@@ -20,6 +20,11 @@ if ($type == 'inscription') {
     $stmt = $pdo->prepare(
         "UPDATE temoignages SET deleted = 0 WHERE id = ?"
     );
+} elseif ($type == 'abonnement') {
+
+    $stmt = $pdo->prepare(
+        "UPDATE abonnements SET deleted = 0 WHERE id = ?"
+    );
 }
 
 $stmt->execute([$id]);
