@@ -80,7 +80,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                         <nav id="menu">
                             <ul>
                                 <li><a href="../index.php">Acceuil</a></li>
-                                <li><a href="../Vivi/apropos.html">A-propos</a></li>
+                                <li><a href="../Vivi/apropos.php">A-propos</a></li>
                                 <li><a href="../contacts.php">Contacts</a></li>
                                 <li><a href="../galerie.php">Galerie</a></li>
                                 <li class="liNone" ><a href="../Formation.php">Formations</a></li>
@@ -440,7 +440,6 @@ if (!isset($_SESSION['visite_' . $page])) {
                 } else if (section === "Services") {
                     contenu.innerHTML = `
             <div class="section_service">
-
                 <div class="sous_section_service">
                     <div class="principal">
                         <div class="haut haut1">
@@ -763,9 +762,9 @@ if (!isset($_SESSION['visite_' . $page])) {
             <div class="aigle ">
                 <div class="flex">
                     <img src="Assets/Img/icon_logo/logo-GVAS.png" alt="icon_logo">
-                    <h1>Groupe vision d'Aigle Service</h1>
+                    <h1>Groupe vision d'Aigle Services</h1>
                 </div>
-                <p>
+                <p id="justP" >
                     De réfférence, GVAS est une structure professionnelle composée d’un personnel de qualité agréé
                     par
                     l’État. spécialisé dans la vente des produits et services, l'accompagnement professionnelle à
@@ -778,10 +777,10 @@ if (!isset($_SESSION['visite_' . $page])) {
                 <h1>Notre localisation</h1>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d527.374828563409!2d11.9053312!3d-4.8224385!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDknMjEuMCJTIDExwrA1NCcxOS43IkU!5e1!3m2!1sfr!2scg!4v1778953131197!5m2!1sfr!2scg"
-                    width="500" height="225" allowfullscreen="" loading="lazy"
+                    width="100%" height="225" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
-                <a href="https://www.google.com/maps/place/4%C2%B049'21.0%22S+11%C2%B054'19.7%22E/@-4.8224385,11.9053312,121m/data=!3m1!1e3!4m4!3m3!8m2!3d-4.8225!4d11.9054722?hl=fr&entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
+                <a class="Hici" href="https://www.google.com/maps/place/4%C2%B049'21.0%22S+11%C2%B054'19.7%22E/@-4.8224385,11.9053312,121m/data=!3m1!1e3!4m4!3m3!8m2!3d-4.8225!4d11.9054722?hl=fr&entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank">
                     <h1>
                         " Cliquez ici pour Agrandir la MAPS "
@@ -827,8 +826,8 @@ if (!isset($_SESSION['visite_' . $page])) {
                 <ul>
                     <li><a href="../index.php">Acceuil</a></li>
                     <li><a href="../formation.php">Formations</a></li>
-                    <li><a href="../vivi/apropos">A_Propos</a></li>
-                    <li><a href="page_publicitaire">Page Publicitaire</a></li>
+                    <li><a href="../vivi/apropos.php">A_Propos</a></li>
+                    <li><a href="page_publicitaire.php">Page Publicitaire</a></li>
                     <li><a href="../galerie.php">Galerie</a></li>
                     <li><a href="../contacts.php">Contacts</a></li>
                     <li><a href="../temoignage.php">Témoignage</a></li>

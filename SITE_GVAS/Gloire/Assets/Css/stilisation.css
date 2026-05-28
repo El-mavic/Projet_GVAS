@@ -33,6 +33,19 @@
   --couleur-lien3: #ffb501;
 }
 
+@media (min-width: 768px) {
+  #container:hover {
+  transition: transform 0.25s ease-in-out;
+  padding: 10px;
+  background: white;
+
+  transition-delay: 5s;
+  box-shadow:
+    0 5px 10px rgba(0, 0, 0, 0.1),
+    0 15px 30px rgba(0, 0, 0, 0.2);
+}
+}
+
 @media (max-width: 1366px) {
   .ad-track {
     gap: 5px;
@@ -65,6 +78,14 @@
   .baba2,
   .baba3 {
     display: none;
+  }
+
+    .aigle .flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35% !important; 
   }
 
   .footer_part1 {
@@ -124,6 +145,15 @@
 
   .pat {
   display: none;
+}
+
+
+.Acceuil .cent p {
+  width: 500px;
+} 
+
+.Acceuil .cent h1 {
+  width: 500px;
 }
 
   .footer_part1 #sous_class_contact {
@@ -209,10 +239,10 @@
   .redirections .bg {
   width: 330px;
 }
-
+/* 
 #contenu {
-  width: 65%;
-}
+  width: auto;
+} */
 
 .menu {
   width: 35%;
@@ -239,9 +269,9 @@
   font-size: 20px;
 }
 
-iframe {
+/* iframe {
   width: 320px;
-}
+} */
 
 .aigle h1 {
   font-size: 20px;
@@ -256,13 +286,16 @@ iframe {
 }
 
 #container {
-  width: 95%;
+  width: auto;
 }
 
    #sous_class_contact a{
     display: none;
   }
 
+ .partie_navbar nav .liNone {
+  display: block;
+}
 }
 
 @media (max-width: 768px) {
@@ -353,9 +386,9 @@ iframe {
   width: 330px;
 }
 
-#contenu {
+/* #contenu {
   width: 65%;
-}
+} */
 
 .menu {
   width: 35%;
@@ -382,9 +415,9 @@ iframe {
   font-size: 20px;
 }
 
-iframe {
+/* iframe {
   width: 320px;
-}
+} */
 
 .aigle h1 {
   font-size: 20px;
@@ -399,7 +432,26 @@ iframe {
 }
 
 #container {
-  width: 95%;
+  width: 100%;
+}
+/* 
+.Acceuil .cent p {
+  width: 500px;
+} 
+
+.Acceuil .cent h1 {
+  width: 500px;
+} */
+
+#container:hover {
+  transition: transform 0.25s ease-in-out;
+  padding: 10px;
+  background: white;
+
+  transition-delay: 5s;
+  box-shadow:
+    0 5px 10px rgba(0, 0, 0, 0.1),
+    0 15px 30px rgba(0, 0, 0, 0.2);
 }
 }
 
@@ -437,6 +489,24 @@ iframe {
   }
 }
 
+@media (max-width: 375px) {
+  /* iframe {
+    width: 100px;
+  } */
+
+  .aigle .Hici h1 {
+  font-size: 20px;
+}
+
+  #justP {
+  width: 200px;
+}
+
+  .redirections .bg {
+    width:auto !important;
+  }
+}
+
 @media (max-width: 414px) {
   .partie_navbar nav ul {
     display: flex;
@@ -468,8 +538,12 @@ iframe {
 
   .section_pub,
   .ad-banner,
-  .ad-track,
   .ad-item {
+    display: block;
+    height: 2px;
+  }
+
+  .ad-track div {
     display: none;
   }
 
@@ -481,9 +555,9 @@ iframe {
     font-size: 15px;
   }
 
-  iframe {
+  /* iframe {
     width: 360px;
-  }
+  } */
 
   .footer_part1 h1 {
     font-size: 25px;
@@ -507,14 +581,6 @@ iframe {
     justify-content: center;
     gap: 25px;
     padding: 10px 10px 10px 10px;
-  }
-
-  .aigle .flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
   }
 
   .aigle P {
