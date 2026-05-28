@@ -60,7 +60,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                     </div>
 
                     <div class="sous_class_logo">
-                        <img src="Assets/Img/icon_logo/logo-GVAS.png" alt="logo-GVAS">
+                        <!-- <img src="Assets/Img/icon_logo/logo-GVAS.png" alt="logo-GVAS"> -->
                         <h1>GROUPE VISION D'AIGLE SERVICES</h1>
                     </div>
 
@@ -128,28 +128,22 @@ if (!isset($_SESSION['visite_' . $page])) {
                         <button class="share-btn" id="shareBtn">
                             Partager
                         </button>
-
-                    </div>
-
-                    <div>
-                        <h1>
-                            nombre d'abonnée : XXXX
-                        </h1>
                     </div>
 
                     <!-- POPUP -->
-
                     <div class="popup" id="popup">
-                        <form action="../Traitement.php" method="POST">
-                            <input type="hidden" name="form_type" value="abonnement">
 
-                            <input class="up_top" type="email" name="email" id="email"
-                                placeholder="Entrez votre adresse mail" required>
+                            <div class="popup" id="popup">
+                            <form action="../Traitement.php" method="POST">
+                                <input type="hidden" name="form_type" value="abonnement">
 
-                            <button class="down_bottom" type="submit" id="valider">
-                                Valider
-                            </button>
-                        </form>
+                                <input class="up_top" type="email" name="email" id="email"
+                                    placeholder="Entrez votre adresse mail" required>
+
+                                <button class="down_bottom" type="submit" id="valider">
+                                    Valider
+                                </button>
+                            </form>
                     </div>
                 </div>
             </div>

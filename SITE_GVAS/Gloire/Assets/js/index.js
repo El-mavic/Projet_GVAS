@@ -31,10 +31,6 @@ popup.addEventListener("click", (e) => {
     popup.style.display = "none";
   }
 });
-
-
-
-
 /* ================= PARTAGE ================= */
 
 let shareBtn = document.getElementById("shareBtn");

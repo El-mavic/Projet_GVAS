@@ -400,12 +400,12 @@ iframe {
 
 @media (max-width: 414px) {
   .burger {
-    display: block;
+    display: flex;
   }
 
-  .section_pub {
+  /* .section_pub {
     display: none;
-  }
+  } */
 
   .contacter {
     display: none;
@@ -442,9 +442,9 @@ iframe {
     display: none;
   }
 
-  .burger.active + .partie_navbar nav ul {
+  /* .burger.active + .partie_navbar nav ul {
     display: flex;
-  }
+  } */
 
   #sous_class_contact {
     display: none;
