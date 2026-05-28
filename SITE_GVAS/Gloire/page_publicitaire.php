@@ -132,20 +132,17 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                     <!-- POPUP -->
                     <div class="popup" id="popup">
+                        <form action="../Traitement.php" method="POST">
+                            <input type="hidden" name="form_type" value="abonnement">
 
-                            <div class="popup" id="popup">
-                            <form action="../Traitement.php" method="POST">
-                                <input type="hidden" name="form_type" value="abonnement">
+                            <input class="up_top" type="email" name="email" id="email"
+                                placeholder="Entrez votre adresse mail" required>
 
-                                <input class="up_top" type="email" name="email" id="email"
-                                    placeholder="Entrez votre adresse mail" required>
-
-                                <button class="down_bottom" type="submit" id="valider">
-                                    Valider
-                                </button>
-                            </form>
+                            <button class="down_bottom" type="submit" id="valider">
+                                Valider
+                            </button>
+                        </form>
                     </div>
-                </div>
             </div>
         </section>
 
