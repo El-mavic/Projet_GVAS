@@ -22,6 +22,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
+<!-- gestion de la signalisation -->
+<?php
+require 'traitement.php';
+
+$signal = $pdo->query(
+    "SELECT message FROM signalisation 
+     WHERE actif = 1 
+     AND date_expiration > NOW()
+     ORDER BY id DESC 
+     LIMIT 1"
+)->fetch(PDO::FETCH_ASSOC);
+?>
+
+<!--Gestion des visites-->
 <?php
 session_start();
 require 'traitement.php';
@@ -36,6 +50,7 @@ if (!isset($_SESSION['visite_' . $page])) {
     $_SESSION['visite_' . $page] = true;
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -91,7 +106,11 @@ if (!isset($_SESSION['visite_' . $page])) {
             </ul>
         </div>
     </header>
-
+    <?php if ($signal): ?>
+        <div class="signal-box">
+            <p><?= htmlspecialchars($signal['message']) ?></p>
+        </div>
+    <?php endif; ?>
     <!--La première page qui survole--
     <div id="welcome-screen">
         <img class="welcome-image" src="images/Images/GVAS.png" alt="Bienvenue">
