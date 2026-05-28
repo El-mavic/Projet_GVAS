@@ -71,7 +71,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             </ul>
             <div class="buttons">
                 <a class="action-button pro " href="Gloire/page_publicitaire.php">Pub</a>
-                <a class="action-button" href="vivi/apropos.html">A propos</a>
+                <a class="action-button" href="vivi/apropos.php">A propos</a>
             </div>
             <div class="burger-menu-button">
                 <i class="fa-solid fa-bars"></i>
@@ -79,14 +79,14 @@ if (!isset($_SESSION['visite_' . $page])) {
         </div>
         <div class="burger-menu ">
             <ul class="links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="Formation.html">Formations</a></li>
-                <li><a href="Galerie.html">Gallérie</a></li>
-                <li><a href="contacts.html">Contacts</a></li>
+                <li><a href="index.php">Accueil</a></li>
+                <li><a href="Formation.php">Formations</a></li>
+                <li><a href="Galerie.php">Gallérie</a></li>
+                <li><a href="contacts.php">Contacts</a></li>
                 <div class="divider"></div>
                 <div class="buttons-burger-menu">
                     <a class="action-button" href="Gloire/page_publicitaire.php">Pub</a>
-                    <a class="action-button" href="vivi/apropos.html">A propos</a>
+                    <a class="action-button" href="vivi/apropos.php">A propos</a>
                 </div>
             </ul>
         </div>
