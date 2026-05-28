@@ -44,7 +44,7 @@ if (!isset($_SESSION['visite_' . $page])) {
       <li><a href="../contacts.php">Contacts</a></li>
     </ul>
     <!-- <button class="bouton">Nous rejoindre</button> -->
-    <a href="../Gloire/page_publicitaire.html" class="bouton">En savoir plus</a>
+    <a href="../Gloire/page_publicitaire.php" class="bouton">En savoir plus</a>
   </nav>
 
   <!-- SECTION HERROO -->
@@ -283,17 +283,19 @@ if (!isset($_SESSION['visite_' . $page])) {
             </div>
           </div>-->
             <div class="footer-social">
-              <a class="fb" href="https://www.facebook.com/share/v/1E8xRbZ7MA/" target="_blank">
+              <a class="fb" href="https://www.facebook.com/profile.php?id=61583138888176" target="_blank">
                 <ion-icon name="logo-facebook"></ion-icon>
               </a>
               <a class="fb" href="https://youtube.com/dcodeyt" target="_blank">
                 <ion-icon name="logo-youtube"></ion-icon>
               </a>
+              <!--  
               <a class="fb" href="https://instagram.com/dcodeyt" target="_blank">
                 <ion-icon name="logo-instagram"></ion-icon>
               </a>
-              <a class="fb" href="https://twitter.com/dcodeyt" target="_blank">
-                <ion-icon name="logo-twitter"></ion-icon>
+              -->
+              <a class="fb" href="https://whatsapp.com/dcodeyt" target="_blank">
+                <ion-icon name="logo-whatsapp"></ion-icon>
               </a>
               <a class="fb" href="https://tiktok.com/dcodeyt" target="_blank">
                 <ion-icon name="logo-tiktok"></ion-icon>
@@ -304,10 +306,10 @@ if (!isset($_SESSION['visite_' . $page])) {
           <div class="footer-col">
             <h4>À propos</h4>
             <ul>
-              <li><a href="apropos.html#histoire">Notre histoire</a></li>
-              <li><a href="apropos.html#team">Notre équipe</a></li>
-              <li><a href="apropos.html#chiffres">Chiffres clés</a></li>
-              <li><a href="apropos.html#partenaires">Nos partenaires</a></li>
+              <li><a href="apropos.php#histoire">Notre histoire</a></li>
+              <li><a href="apropos.php#team">Notre équipe</a></li>
+              <li><a href="apropos.php#chiffres">Chiffres clés</a></li>
+              <li><a href="apropos.php#partenaires">Nos partenaires</a></li>
             </ul>
           </div>
 
@@ -316,7 +318,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             <ul>
               <li><a href="Formation.php">Nos programmes</a></li>
               <li><a href="index.php">Inscription</a></li>
-              <li><a href="bon.html">En savoir plus sur nos services</a></li>
+              <li><a href="Gloire/page_publicitaire.php">En savoir plus sur nos services</a></li>
             </ul>
           </div>
 
