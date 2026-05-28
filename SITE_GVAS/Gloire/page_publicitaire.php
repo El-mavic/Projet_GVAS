@@ -143,7 +143,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                             </button>
                         </form>
                     </div>
-            </div>
+                </div>
         </section>
 
         <div class="parie_publicitaire">
@@ -854,16 +854,15 @@ if (!isset($_SESSION['visite_' . $page])) {
                 </Ul>
             </div>
 
-            <form action="">
+            <form action="../Traitement.php" method="POST">
+                <input type="hidden" name="form_type" value="commentaire">
                 <label for="envoie">
                     <h1 class="hid">
                         Envoyez votre commentaire
                     </h1>
                 </label>
-
                 <div>
-                    <input class="tim" placeholder="Votre commentaire ici" type="text" name="envoie" id="envoie">
-
+                    <input class="tim" placeholder="Votre commentaire ici" type="text" name="envoie" id="envoie" required>
                     <input class="tom" type="submit" value="soumettre !"></input>
                 </div>
             </form>

@@ -33,7 +33,6 @@ if (!isset($_SESSION['visite_' . $page])) {
 </head>
 
 <body class="body">
-
     <header>
         <div class="container">
             <div class="logo">Groupe Vision d'Aigle Services</div>
