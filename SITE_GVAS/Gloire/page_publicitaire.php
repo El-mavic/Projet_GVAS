@@ -83,7 +83,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                                 <li><a href="../Vivi/apropos.php">A-propos</a></li>
                                 <li><a href="../contacts.php">Contacts</a></li>
                                 <li><a href="../galerie.php">Galerie</a></li>
-                                <li><a href="../Formation.php">Formations</a></li>
+                                <li class="liNone" ><a href="../Formation.php">Formations</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -606,11 +606,11 @@ if (!isset($_SESSION['visite_' . $page])) {
                     Services
                 </button>
 
-                <a href="#">
+                <a href="../contacts.php">
                     plus d'infos
                 </a>
 
-                <a href="#">
+                <a href="../index.php">
                     S'incrire
                 </a>
             </div>
@@ -823,33 +823,35 @@ if (!isset($_SESSION['visite_' . $page])) {
 
         <div class="footer_part2">
             <div class="pat">
-                <h1>Entreprise</h1>
+                <h1>Nos pages</h1>
                 <ul>
-                    <li><a href="">Acceuil</a></li>
-                    <li><a href="">Formations</a></li>
-                    <li><a href="">Propos</a></li>
-                    <li><a href="">Page Publicitaire</a></li>
-                    <li><a href="">Galerie</a></li>
+                    <li><a href="../index.php">Acceuil</a></li>
+                    <li><a href="../formation.php">Formations</a></li>
+                    <li><a href="../vivi/apropos">A_Propos</a></li>
+                    <li><a href="page_publicitaire">Page Publicitaire</a></li>
+                    <li><a href="../galerie.php">Galerie</a></li>
+                    <li><a href="../contacts.php">Contacts</a></li>
+                    <li><a href="../temoignage.php">Témoignage</a></li>
                 </ul>
             </div>
 
             <div class="pat">
-                <h1>Services</h1>
+                <h1>Nos Services</h1>
                 <ul>
-                    <li><a href="">Langues</a></li>
-                    <li><a href="">Informatique</a></li>
-                    <li><a href="">Pôle Commercial</a></li>
+                    <li><a href="../formation.php">Langues</a></li>
+                    <li><a href="../formation.php">Informatique</a></li>
+                    <li><a href="../formation.php">Pôle Commercial</a></li>
                 </ul>
             </div>
 
 
             <div class="pat">
-                <h1>Contacts</h1>
+                <h1>Nos Contacts</h1>
                 <Ul>
                     <li>info@gvas.fr</li>
-                    <li>05 344 40 20</li>
-                    <li>06 420 14 15</li>
-                    <li>06 416 36 21</li>
+                    <li>(+242) 05 344 40 20</li>
+                    <li>(+242) 06 420 14 15</li>
+                    <li>(+242) 06 416 36 21</li>
                 </Ul>
             </div>
 
