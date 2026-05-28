@@ -32,48 +32,8 @@ closePopup.addEventListener("click", () => {
   popup.style.display = "none";
 });
 
-/* Validation */
 
-valider.addEventListener("click", () => {
-  let email = document.getElementById("email").value;
 
-  if (email !== "") {
-    alert("Merci pour ce geste !!");
-
-    popup.style.display = "none";
-
-    /* Changement du texte */
-
-    subscribeBtn.innerHTML = "Vous êtes abonné";
-
-    /* Animation lumineuse */
-
-    subscribeBtn.style.background = "#00cc66";
-
-    // subscribeBtn.style.transform = "scale(1.15)";
-
-    subscribeBtn.style.boxShadow = "0 0 25px #00ff88";
-
-    /* Effet retour */
-
-    setTimeout(() => {
-      //   subscribeBtn.style.transform = "scale(1)";
-      subscribeBtn.style.boxShadow = "0 0 15px #00ff88";
-    }, 250);
-  } 
-});
-
-/* Animation à chaque clic du bouton abonnement */
-
-subscribeBtn.addEventListener("click", () => {
-  //   subscribeBtn.style.transform = "scale(1.12)";
-  subscribeBtn.style.boxShadow = "0 0 20px #0066ff";
-
-  setTimeout(() => {
-    // subscribeBtn.style.transform = "scale(1)";
-    subscribeBtn.style.boxShadow = "none";
-  }, 200);
-});
 
 /* ================= PARTAGE ================= */
 
