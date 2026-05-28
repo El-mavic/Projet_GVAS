@@ -1662,4 +1662,91 @@ nav ul li a:hover {
         opacity: 1;
         transform: scale(1) rotate(0deg);
     }
+}*/
+
+.signal-box {
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    font-weight: 600;
+    background-color: rgba(19, 22, 22, 0.61);
+    border-radius: 50px;
+    margin: 1px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.signal-box p {
+    display: inline-block;
+    animation: defilement 10s linear infinite;
+}
+
+@keyframes defilement {
+    0% {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+
+    45% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
+    90% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+/* Responsive tablette pour le bando d'information*/
+@media screen and (max-width: 768px) {
+    .signal-box {
+        padding: 12px 18px;
+        border-radius: 30px;
+        width: 95%;
+        margin: 8px auto;
+    }
+
+    .signal-box p {
+        font-size: 15px;
+        animation-duration: 10s;
+    }
+}
+
+/* Responsive mobile */
+@media screen and (max-width: 480px) {
+    .signal-box {
+        padding: 10px 14px;
+        border-radius: 20px;
+        width: 98%;
+        min-height: 55px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .signal-box p {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 1.4;
+        animation-duration: 8s;
+        max-width: 100%;
+    }
+}
+
+/* Très petits écrans */
+@media screen and (max-width: 320px) {
+    .signal-box p {
+        font-size: 12px;
+        animation-duration: 7s;
+    }
 }
