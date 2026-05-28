@@ -44,7 +44,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                     <li><a href="Formation.php">Formations</a></li>
                     <li><a href="galerie.php">Galerie</a></li>
                     <li><a href="contacts.php">Contact</a></li>
-                    <li><a href="a-propos.php">À propos</a></li>
+                    <li><a href="Vivi/apropos.php">À propos</a></li>
 
                 </ul>
             </nav>

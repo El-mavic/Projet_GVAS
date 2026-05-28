@@ -36,7 +36,7 @@
                             <li><a href="index.php">Accueil</a></li>
                             <li><a href="Formation.php">Formations</a></li>
                             <li><a href="galerie.php">Galerie</a></li>
-                            <li><a href="a-propos.php">À propos</a></li>
+                            <li><a href="Vivi/apropos.php">À propos</a></li>
                         </ul>
                     </nav><br>
                     <p>Prêt à transformer vos idées en réalité ? Contactez-nous dès maintenant.</p>
