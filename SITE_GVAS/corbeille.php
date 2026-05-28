@@ -35,7 +35,14 @@ $abonnements = $pdo->query(
      WHERE deleted = 1
      ORDER BY id DESC"
 )->fetchAll(PDO::FETCH_ASSOC);
-?>
+
+
+/* Commentaires supprimés */
+$commentaires = $pdo->query(
+    "SELECT * FROM commentaires
+     WHERE deleted = 1
+     ORDER BY id DESC"
+)->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -130,11 +137,8 @@ $abonnements = $pdo->query(
             </thead>
 
             <tbody>
-
                 <?php foreach ($messages as $msg): ?>
-
                     <tr>
-
                         <td><?= htmlspecialchars($msg['nom']) ?></td>
                         <td><?= htmlspecialchars($msg['email']) ?></td>
                         <td><?= htmlspecialchars($msg['message']) ?></td>
@@ -246,6 +250,47 @@ $abonnements = $pdo->query(
                             </a>
                         </td>
 
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </section>
+    </section>
+
+    <section class="table-section">
+        <h2>Commentaires</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>N°</th>
+                    <th>Commentaire</th>
+                    <th>Date d'envoi</th>
+                    <th>Action</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <?php foreach ($commentaires as $commentaire): ?>
+                    <tr>
+                        <td><?= htmlspecialchars($commentaire['id']) ?></td>
+                        <td><?= htmlspecialchars($commentaire['message']) ?></td>
+                        <td><?= date('d/m/Y H:i', strtotime($commentaire['date_envoi'])) ?></td>
+
+                        <td>
+                            <a href="restore.php?id=<?= $commentaire['id'] ?>&type=commentaire">
+                                Restaurer
+                            </a>
+                        </td>
+
+                        <td>
+                            <a href="delete.php?id=<?= $commentaire['id'] ?>&type=commentaire"
+                                class="delete-btn"
+                                onclick="return confirm('Supprimer ce commentaire ?')">
+                                Delete
+                            </a>
+                        </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

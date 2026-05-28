@@ -36,7 +36,7 @@ if (!isset($_SESSION['visite_' . $page])) {
         </a>
 
         <div class="buttons">
-            <a class="action-button1" href="temoignage.php">En savoir plus</a>
+            <a class="action-button1" href="Gloire/page_publicitaire.php">En savoir plus</a>
             <a class="action-button pro" href="index.php">Inscription</a>
         </div>
 

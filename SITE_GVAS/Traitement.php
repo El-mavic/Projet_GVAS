@@ -177,6 +177,35 @@ if (isset($_POST['form_type']) && $_POST['form_type'] === 'inscriptions') {
     header("Location: Succes.php?message=abonnement_ok");
     exit();
 }
+/* =========================
+   FORMULAIRE COMMENTAIRE
+========================= */ elseif (isset($_POST['form_type']) && $_POST['form_type'] === 'commentaire') {
+
+    $message = trim($_POST['envoie'] ?? '');
+
+    if (empty($message)) {
+        header("Location: Succes.php?message=champ_vide");
+        exit();
+    }
+
+    // Vérifier doublon
+    $sqlCheck = "SELECT COUNT(*) FROM commentaires WHERE message = ?";
+    $stmtCheck = $pdo->prepare($sqlCheck);
+    $stmtCheck->execute([$message]);
+
+    if ($stmtCheck->fetchColumn() > 0) {
+        header("Location: Succes.php?message=existe");
+        exit();
+    }
+
+    // Insertion
+    $sql = "INSERT INTO commentaires (message) VALUES (?)";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$message]);
+
+    header("Location: Succes.php?message=commentaire_ok");
+    exit();
+}
 ?>
 
 
