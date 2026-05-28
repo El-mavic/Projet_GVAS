@@ -11,7 +11,8 @@ if (isset($_GET['id']) && isset($_GET['type'])) {
         'temoignage' => 'temoignages',
         'inscription' => 'inscriptions',
         'abonnement' => 'abonnements',
-        'contact' => 'utilisateurs'
+        'contact' => 'utilisateurs',
+        'commentaire' => 'commentaires'
     ];
 
     if (array_key_exists($type, $tables)) {
