@@ -132,6 +132,10 @@ header {
   padding: 5px;
 }
 
+.partie_navbar nav .liNone {
+  display: none;
+}
+
 .partie_navbar nav li:hover {
   background-color: rgb(255, 255, 0, 0.3);
   border-left: 2px solid rgb(255, 255, 255);
@@ -653,7 +657,8 @@ h3 {
 
 
 .Acceuil .cent p {
-  font-size: 10px;
+  font-size: 20px;
+  width: 75%;
 }
 
 

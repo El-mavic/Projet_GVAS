@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: cambria, cochin, georgia, times, 'times new roman', serif;
 }
 
 
@@ -594,4 +595,116 @@ table tr:hover {
         padding: 10px;
         font-size: 12px;
     }
+}
+
+
+/** Popup de signalement*/
+
+.signal-popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+}
+
+.signal-box {
+    width: 420px;
+    background: #6b6a6a;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+    animation: popupFade 0.3s ease;
+}
+
+.signal-box textarea {
+    width: 100%;
+    height: 140px;
+    border: 2px solid #140202;
+    border-radius: 12px;
+    padding: 15px;
+    resize: none;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.signal-box textarea:focus {
+    border-color: #0dc955;
+}
+
+.signal-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.signal-actions button {
+    background: #0dc955;
+    color: rgb(7, 7, 7);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.signal-actions button:hover {
+    background: yellow;
+    transform: translateY(-2px);
+}
+
+@keyframes popupFade {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Contrôles de signalisation par rapport au temps */
+.signal-actions {
+    display: flex;
+    justify-content: center;
+    /* place à gauche */
+    align-items: center;
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.signal-actions select {
+    padding: 12px 18px;
+    min-width: 130px;
+    border: none;
+    border-radius: 14px;
+    background: #ffffff;
+    color: #222;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+    transition: all 0.3s ease;
+}
+
+.signal-actions select:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+}
+
+.signal-actions select:focus {
+    box-shadow: 0 0 0 3px rgba(25, 211, 74, 0.25);
+}
+
+.signal-actions option {
+    background: #fff;
+    color: #222;
 }

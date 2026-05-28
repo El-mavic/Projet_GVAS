@@ -15,6 +15,8 @@ $totalFemmes = $pdo->query("SELECT COUNT(*) FROM inscriptions WHERE sexe='Fémin
 $totalTemoignages = $pdo->query("SELECT COUNT(*) FROM temoignages WHERE deleted = 0")->fetchColumn();
 $stmt = $pdo->query("SELECT * FROM abonnements WHERE deleted = 0 ORDER BY date_abonnement DESC");
 $abonnements = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$stmt = $pdo->query("SELECT * FROM commentaires ORDER BY date_envoi DESC");
+$commentaires = $stmt->fetchAll();
 
 
 // Inscriptions par formation
@@ -107,7 +109,32 @@ $pagePlusVisitee = $stmt->fetch(PDO::FETCH_ASSOC);
                     Imprimer
                 </button>
                 <a href="logout.php" class="logout-btn">Déconnexion</a>
-            </div>
+
+
+                <button id="openSignal" class="logout-btn">Message</button>
+
+                <div id="signalPopup" class="signal-popup">
+                    <div class="signal-box">
+                        <form action="signalisation.php" method="POST">
+                            <textarea
+                                name="message"
+                                placeholder="Écrire votre message ici..."
+                                required>
+            </textarea>
+                            <div class="signal-actions">
+                                <select name="duree">
+                                    <option value="1">1 heure</option>
+                                    <option value="24">24 heures</option>
+                                    <option value="72">3 jours</option>
+                                    <option value="168">7 jours</option>
+                                </select>
+                                <button type="submit">Publier</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
         </header>
 
         <!-- Cartes statistiques -->
@@ -309,6 +336,33 @@ $pagePlusVisitee = $stmt->fetch(PDO::FETCH_ASSOC);
                 </tbody>
             </table>
         </section>
+        <section class="table-section">
+            <h2>Commentaires reçus</h2>
+
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Commentaire</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+
+                <?php foreach ($commentaires as $commentaire): ?>
+                    <tr>
+                        <td><?= $commentaire['id'] ?></td>
+                        <td><?= htmlspecialchars($commentaire['message']) ?></td>
+                        <td><?= $commentaire['date_envoi'] ?></td>
+                        <td>
+                            <a href="delete.php?id=<?= $commentaire['id'] ?>&type=commentaire"
+                                class="delete-btn"
+                                onclick="return confirm('Supprimer ce commentaire ?')">
+                                Delete
+                            </a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
+        </section>
         <script>
             const ctx = document.getElementById('myChart');
 
@@ -420,6 +474,22 @@ $pagePlusVisitee = $stmt->fetch(PDO::FETCH_ASSOC);
 
                 }
 
+            });
+        </script>
+
+        <script>
+            const popup = document.getElementById("signalPopup");
+            const box = document.querySelector(".signal-box");
+
+            document.getElementById("openSignal").addEventListener("click", () => {
+                popup.style.display = "flex";
+            });
+
+            /* Fermer en cliquant à l'extérieur */
+            popup.addEventListener("click", (e) => {
+                if (e.target === popup) {
+                    popup.style.display = "none";
+                }
             });
         </script>
 </body>
