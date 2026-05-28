@@ -84,46 +84,65 @@ if (!isset($_SESSION['visite_' . $page])) {
     <h2 class="section-title">Notre Équipe</h2>
     <div class="team-carousel">
       <div class="team-card card-1">
-        <img src="images/BG/17.JPG" alt="Vice Présidente">
+        <img src="images/admin/Sev.png" alt="Président">
+        <div class="team-content">
+          <h2><span>DISSIVOULOUD Sévérin</span></h2>
+          <h3>Président du GVAS</h3>
+        </div>
+      </div>
+
+      <div class="team-card card-2">
+        <img src="images/admin/tatiana.png" alt="Vice Présidente">
         <div class="team-content">
           <h2><span>DISSIVOULOUD Tatchiana</span></h2>
           <h3>Vice Présidente</h3>
         </div>
-
       </div>
-      <div class="team-card card-2">
-        <img src="images/admin/Mavic.jpg" alt="Informatique">
+
+      <div class="team-card card-3">
+        <img src="images/admin/El.png" alt="Informatique">
         <div class="team-content">
           <h2><span>Mr BAKALA El-Mavic De Marfred</span></h2>
           <h3>Responsable informatique et Technique</h3>
         </div>
       </div>
-      <div class="team-card card-3">
+
+      <div class="team-card card-4">
         <img src="images/admin/Israel.png" alt="Superviseur">
         <div class="team-content">
           <h2><span>Mr NZAOU MAFOUA Israel</span></h2>
           <h3>Responsable Marketing et commercial</h3>
         </div>
       </div>
-      <div class="team-card card-4">
+
+      <div class="team-card card-5">
         <img src="images/admin/Bénie.png" alt="Sécrétaire">
         <div class="team-content">
           <h2><span>Mme NGOUALA Bénie</span></h2>
           <h3>Secrétaire administrative & Coordinatrice pédagogique</h3>
         </div>
       </div>
-      <div class="team-card card-5">
-        <img src="images/BG/17.JPG" alt="Comptable">
+
+      <div class="team-card card-6">
+        <img src="images/admin/komp.png" alt="Comptable">
         <div class="team-content">
           <h2><span>Mme KOMPANI Suza</span></h2>
           <h3>Secrétaire caissière</h3>
         </div>
       </div>
-      <div class="team-card card-6">
+      
+      <div class="team-card card-7">
         <img src="images/BG/17.JPG" alt="communication">
         <div class="team-content">
           <h2><span>Mme Ruth</span></h2>
-          <h3>communication</h3>
+          <h3>Secrétaire chargée de communication</h3>
+        </div>
+      </div>
+      <div class="team-card card-8">
+        <img src="images/admin/christ.png" alt=anglais">
+        <div class="team-content">
+          <h2><span>Mr NGOUNDIABAHOU Christ</span></h2>
+          <h3>Responsable de la langue Anglaise</h3>
         </div>
       </div>
     </div>
