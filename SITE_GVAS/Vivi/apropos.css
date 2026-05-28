@@ -125,6 +125,8 @@ nav {
 
 /* Responsive du header, tablette1 */
 
+@media (max-width: 991px)
+
 @media (max-width: 820px){
   .liens {
     display: flex;
@@ -156,6 +158,46 @@ nav {
     font-size: 14px;
     padding: 8px 16px;
   }
+}
+
+/* Responsive sur gros téléphone */
+@media (max-width: 480px){
+  .burger {
+    display: flex;
+    background: rgba(31, 31, 62, 0.97);
+    z-index: 100;
+
+    /* border-radius: 10%; */
+  }
+  .burger span {
+    background-color: #b6b6b1;
+  }
+
+  .liens {
+    display: none;
+    position: absolute;
+    top: 70px;
+    border-radius: 10%;
+    /* max-block-size: 100%; */
+    right: 0;
+    background: rgba(31, 31, 62, 0.97);
+    flex-direction: column;
+    padding: 20px 24px;
+    gap: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* z-index: 80; */
+  }
+
+  .liens.open {
+    display: flex;
+  }
+  .liens.open li:hover{
+    cursor: pointer;
+    color: var(--jaune);
+  }
+
+.bouton {display: none;}
+
 }
 /* Responsive du header, mobile */
 @media (max-width: 414px){
@@ -390,7 +432,7 @@ nav {
   cursor: pointer;
   transition:
     background 0.3s,
-    stransform 0.2s;
+    transform 0.2s;
   text-decoration: none;
   position: relative;
   left: 0;
@@ -818,7 +860,7 @@ nav {
   overflow: hidden;
   border: 1px solid rgba(255,255,255,0.06);
   opacity: 0;
-  animation: fadeCard 36s infinite;
+  animation: fadeCard 42s infinite;
 }
 
 .team-card img {
@@ -828,10 +870,20 @@ nav {
   display: block;
 }
 
-.card-2 img{
+/* .card-1 img{ 
   object-fit: cover;
   object-position: top;
 }
+*/
+.card-1 {
+  object-fit: cover;
+  object-position: top;
+}
+.card-3 img{
+  object-fit: cover;
+  object-position: top;
+}
+
 
 .team-content {
   padding: 16px;
@@ -850,6 +902,10 @@ nav {
 .card-4 { animation-delay: 18s; }
 .card-5 { animation-delay: 24s; }
 .card-6 { animation-delay: 30s; }
+.card-7 { animation-delay: 36s; }
+.card-8 { animation-delay: 42s; }
+
+
 
 @keyframes fadeCard {
   0%, 100% { opacity: 0; z-index: 0; }
@@ -858,6 +914,7 @@ nav {
   14% { opacity: 1; z-index: 1; }
   
   16% { opacity: 0; z-index: 0; }
+  
 }
  /*  
 .card-3 img{
@@ -871,7 +928,7 @@ nav {
     width: 650px;
     height: 470px;
   }
-  .card-3 img{
+  .card-4 img{
     object-fit: cover;
     object-position: bottom;
   }
