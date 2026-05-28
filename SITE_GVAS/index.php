@@ -66,7 +66,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             <ul class="links">
                 <li><a href="Temoignage.php">Temoignage</a></li>
                 <li><a href="Formation.php">Formations</a></li>
-                <li><a href="Galerie.php">Gallérie</a></li>
+                <li><a href="Galerie.php">Galerie</a></li>
                 <li><a href="contacts.php">Contacts</a></li>
             </ul>
             <div class="buttons">
