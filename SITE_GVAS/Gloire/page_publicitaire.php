@@ -202,7 +202,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                 <div class="list_produits">
                     <div class="part">
                         <div class="div">
-                             <img src="Assets/Img/>
+                            <img src="Assets/Img/img pub/Articles informatiques/imprimanteG.avif" alt="imprimanteG">
                         </div>
                         <div class="dav">
                             <h1>DESCRIPTION</h1>
@@ -219,25 +219,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                     <div class="part">
                         <div class="div">
-                            <img src="Assets/Img/img pub/Articles informatiques/614rYXY6wAL._AC_.jpg" alt="">
-                        </div>
-
-                        <div class="dav">
-                            <h1>DESCRIPTION</h1>
-                            <h2>Ordinateur Bureautique</h2>
-                            <p>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                            </p>
-                                <h3>Prix unitaire : 1 500Frs </h3>
-                        </div>
-                    </div>
-
-                    <div class="part">
-                        <div class="div">
-                            <img src="Assets/Img/img pub/Articles informatiques/OIP (1).webp" alt="">
+                            <img src="Assets/Img/img pub/Articles informatiques/Agrafeuse.jpg" alt="Agrafeuse">
                         </div>
 
                         <div class="dav">
@@ -255,7 +237,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                     <div class="part">
                         <div class="div">
-                           <img src="Assets/Img/img pub/Articles informatiques/Agrafeuse portable zéro effort, pince agrafeuse, Noir.jpg" alt="">   
+                            <img src="Assets/Img/img pub/Articles informatiques/boitierD.jpg" alt="boitierD">
                         </div>
 
                         <div class="dav">
@@ -273,7 +255,25 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                     <div class="part">
                         <div class="div">
-                           <img src="Assets/Img/img pub/Articles informatiques/24236c876fc8c07c6e30deacba065166.jpg" alt="">
+                            <img src="Assets/Img/img pub/Articles informatiques/camera.jpg" alt="camera">
+                        </div>
+
+                        <div class="dav">
+                            <h1>DESCRIPTION</h1>
+                            <h2>Ordinateur Bureautique</h2>
+                            <p>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                            </p>
+                                <h3>Prix unitaire : 1 500Frs </h3>
+                        </div>
+                    </div>
+
+                    <div class="part">
+                        <div class="div">
+                            <img src="Assets/Img/img pub/Articles informatiques/casque.jpg" alt="casque">
                         </div>
 
                         <div class="dav">
@@ -292,8 +292,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                     
                     <div class="part">
                         <div class="div">
-                           <img src="Assets/Img/img pub/Articles informatiques/30x-zoom-5mp-ptz-camra-de-surveillance-wifi-extrieure-ctronics-camra-ip-1-2048x2048 (1).jpg"
-                            alt="">
+                            <img src="Assets/Img/img pub/Articles informatiques/chargeur.webp" alt="chargeur">
                         </div>
 
                         <div class="dav">
@@ -311,8 +310,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                     <div class="part">
                         <div class="div">
-                           <img src="Assets/Img/img pub/Articles informatiques/30x-zoom-5mp-ptz-camra-de-surveillance-wifi-extrieure-ctronics-camra-ip-1-2048x2048.jpg"
-                            alt="">
+                            <img src="Assets/Img/img pub/Articles informatiques/clé usb.webp" alt="usb">
                         </div>
 
                         <div class="dav">
@@ -331,7 +329,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                     <div class="part">
                         <div class="div">
-                            <img src="Assets/Img/img pub/Articles informatiques/48bf87a5288f4d1e28105fedca1cf4ea.jpg" alt="">
+                            <img src="Assets/Img/img pub/Articles informatiques/desktop.jpg" alt="desktop">
                         </div>
 
                         <div class="dav">
@@ -349,7 +347,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                     <div class="part">
                         <div class="div">
-                            <img src="Assets/Img/img pub/Articles informatiques/61Hj816MJHL._SL1200_.jpg" alt="">
+                            <img src="Assets/Img/img pub/Articles informatiques/encre.webp" alt="ancre">
                         </div>
 
                         <div class="dav">
@@ -367,7 +365,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                     <div class="part">
                         <div class="div">
-                            <img src="Assets/Img/img pub/Articles informatiques/7ef4402124e58d6aaa57a56a65734f0b.jpg" alt="">
+                            <img src="Assets/Img/img pub/Articles informatiques/enduleurs.webp" alt="enduleurs">
                         </div>
 
                         <div class="dav">
@@ -385,7 +383,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                     <div class="part">
                         <div class="div">
-                            <img src="Assets/Img/img pub/Articles informatiques/885cc0bda389a60dc37e3b9a6a62a024.jpg" alt="">
+                            <img src="Assets/Img/img pub/Articles informatiques/epson.jpg" alt="epson">
                         </div>
 
                         <div class="dav">
@@ -403,7 +401,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                     <div class="part">
                         <div class="div">
-                           <img src="Assets/Img/img pub/Articles informatiques/8e74957870f7946e4c3a7a6af91b1f76.jpg" alt="">
+                            <img src="Assets/Img/img pub/Articles informatiques/headphone.webp" alt="headphone">
                         </div>
 
                         <div class="dav">
@@ -421,8 +419,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                     <div class="part">
                         <div class="div">
-                           <img src="Assets/Img/img pub/Articles informatiques/Imprimante multifonction Epson EcoTank ET-2870 Wifi.jpg"
-                            alt="">
+                            <img src="Assets/Img/img pub/Articles informatiques/impression.webp" alt="impression">
                         </div>
 
                         <div class="dav">
@@ -436,7 +433,97 @@ if (!isset($_SESSION['visite_' . $page])) {
                             </p>
                                 <h3>Prix unitaire : 1 500Frs </h3>
                         </div>
-                    </div>                
+                    </div>   
+                    
+                    <div class="part">
+                        <div class="div">
+                            <img src="Assets/Img/img pub/Articles informatiques/laptop.jpg" alt="laptop">
+                        </div>
+
+                        <div class="dav">
+                            <h1>DESCRIPTION</h1>
+                            <h2>Ordinateur Bureautique</h2>
+                            <p>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                            </p>
+                                <h3>Prix unitaire : 1 500Frs </h3>
+                        </div>
+                    </div>  
+
+                    <div class="part">
+                        <div class="div">
+                            <img src="Assets/Img/img pub/Articles informatiques/Mchargeur.jpg" alt="Mchargeur">
+                        </div>
+
+                        <div class="dav">
+                            <h1>DESCRIPTION</h1>
+                            <h2>Ordinateur Bureautique</h2>
+                            <p>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                            </p>
+                                <h3>Prix unitaire : 1 500Frs </h3>
+                        </div>
+                    </div> 
+                    
+                    <div class="part">
+                        <div class="div">
+                            <img src="Assets/Img/img pub/Articles informatiques/OIP.jpg" alt="OIP">
+                        </div>
+
+                        <div class="dav">
+                            <h1>DESCRIPTION</h1>
+                            <h2>Ordinateur Bureautique</h2>
+                            <p>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                            </p>
+                                <h3>Prix unitaire : 1 500Frs </h3>
+                        </div>
+                    </div> 
+
+                    <div class="part">
+                        <div class="div">
+                            <img src="Assets/Img/img pub/Articles informatiques/sourisf.jpg" alt="sourisf">
+                        </div>
+
+                        <div class="dav">
+                            <h1>DESCRIPTION</h1>
+                            <h2>Ordinateur Bureautique</h2>
+                            <p>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                            </p>
+                                <h3>Prix unitaire : 1 500Frs </h3>
+                        </div>
+                    </div> 
+
+                    <div class="part">
+                        <div class="div">
+                            <img src="Assets/Img/img pub/Articles informatiques/tout-en-un.jpg" alt="tout-en-un">
+                        </div>
+
+                        <div class="dav">
+                            <h1>DESCRIPTION</h1>
+                            <h2>Ordinateur Bureautique</h2>
+                            <p>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                                loremjioji <br>
+                            </p>
+                                <h3>Prix unitaire : 1 500Frs </h3>
+                        </div>
+                    </div> 
                 </div>
             </div>
         `;

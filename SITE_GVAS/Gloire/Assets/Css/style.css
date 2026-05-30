@@ -1,9 +1,7 @@
-/* html {
-  scroll-behavior: smooth;
-} */
-
 body {
-background-image: linear-gradient(22.5deg, rgba(242, 242, 242, 0.03) 0%, rgba(242, 242, 242, 0.03) 16%,rgba(81, 81, 81, 0.03) 16%, rgba(81, 81, 81, 0.03) 26%,rgba(99, 99, 99, 0.03) 26%, rgba(99, 99, 99, 0.03) 73%,rgba(43, 43, 43, 0.03) 73%, rgba(43, 43, 43, 0.03) 84%,rgba(213, 213, 213, 0.03) 84%, rgba(213, 213, 213, 0.03) 85%,rgba(125, 125, 125, 0.03) 85%, rgba(125, 125, 125, 0.03) 100%),linear-gradient(22.5deg, rgba(25, 25, 25, 0.03) 0%, rgba(25, 25, 25, 0.03) 54%,rgba(144, 144, 144, 0.03) 54%, rgba(144, 144, 144, 0.03) 60%,rgba(204, 204, 204, 0.03) 60%, rgba(204, 204, 204, 0.03) 76%,rgba(37, 37, 37, 0.03) 76%, rgba(37, 37, 37, 0.03) 78%,rgba(115, 115, 115, 0.03) 78%, rgba(115, 115, 115, 0.03) 91%,rgba(63, 63, 63, 0.03) 91%, rgba(63, 63, 63, 0.03) 100%),linear-gradient(157.5deg, rgba(71, 71, 71, 0.03) 0%, rgba(71, 71, 71, 0.03) 6%,rgba(75, 75, 75, 0.03) 6%, rgba(75, 75, 75, 0.03) 15%,rgba(131, 131, 131, 0.03) 15%, rgba(131, 131, 131, 0.03) 18%,rgba(110, 110, 110, 0.03) 18%, rgba(110, 110, 110, 0.03) 37%,rgba(215, 215, 215, 0.03) 37%, rgba(215, 215, 215, 0.03) 62%,rgba(5, 5, 5, 0.03) 62%, rgba(5, 5, 5, 0.03) 100%),linear-gradient(90deg, #ffffff,#ffffff);}
+  background-image: linear-gradient(22.5deg, rgba(242, 242, 242, 0.03) 0%, rgba(242, 242, 242, 0.03) 16%, rgba(81, 81, 81, 0.03) 16%, rgba(81, 81, 81, 0.03) 26%, rgba(99, 99, 99, 0.03) 26%, rgba(99, 99, 99, 0.03) 73%, rgba(43, 43, 43, 0.03) 73%, rgba(43, 43, 43, 0.03) 84%, rgba(213, 213, 213, 0.03) 84%, rgba(213, 213, 213, 0.03) 85%, rgba(125, 125, 125, 0.03) 85%, rgba(125, 125, 125, 0.03) 100%), linear-gradient(22.5deg, rgba(25, 25, 25, 0.03) 0%, rgba(25, 25, 25, 0.03) 54%, rgba(144, 144, 144, 0.03) 54%, rgba(144, 144, 144, 0.03) 60%, rgba(204, 204, 204, 0.03) 60%, rgba(204, 204, 204, 0.03) 76%, rgba(37, 37, 37, 0.03) 76%, rgba(37, 37, 37, 0.03) 78%, rgba(115, 115, 115, 0.03) 78%, rgba(115, 115, 115, 0.03) 91%, rgba(63, 63, 63, 0.03) 91%, rgba(63, 63, 63, 0.03) 100%), linear-gradient(157.5deg, rgba(71, 71, 71, 0.03) 0%, rgba(71, 71, 71, 0.03) 6%, rgba(75, 75, 75, 0.03) 6%, rgba(75, 75, 75, 0.03) 15%, rgba(131, 131, 131, 0.03) 15%, rgba(131, 131, 131, 0.03) 18%, rgba(110, 110, 110, 0.03) 18%, rgba(110, 110, 110, 0.03) 37%, rgba(215, 215, 215, 0.03) 37%, rgba(215, 215, 215, 0.03) 62%, rgba(5, 5, 5, 0.03) 62%, rgba(5, 5, 5, 0.03) 100%), linear-gradient(90deg, #ffffff, #ffffff);
+}
+
 /* header */
 /*nav-bar*/
 .flouter {
@@ -311,7 +309,7 @@ button {
 /* ================= ABONNEMENT ================= */
 
 .subscribe-btn {
- background-image: linear-gradient(to right, rgb(124, 124, 124), rgb(235, 253, 134), rgb(255, 255, 58));
+  background-image: linear-gradient(to right, rgb(124, 124, 124), rgb(235, 253, 134), rgb(255, 255, 58));
   color: rgb(0, 0, 0);
 }
 
@@ -365,7 +363,7 @@ button {
 /* ================= PARTAGE ================= */
 
 .share-btn {
-  background-image: linear-gradient(to right, rgb(235, 253, 134),  rgb(255, 255, 58), rgb(124, 124, 124));
+  background-image: linear-gradient(to right, rgb(235, 253, 134), rgb(255, 255, 58), rgb(124, 124, 124));
   color: rgb(0, 0, 0);
 }
 
@@ -451,7 +449,7 @@ p {
   width: 100%;
   color: var(--couleur-titre2);
   background-position: center;
-  background-image: url("../Img/img_bg/programation.jpg");
+  background-image: url("../Gloire/Assets/Assets/Img/img pub/Articles informatiques/services.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 15px;
@@ -462,15 +460,50 @@ p {
 }
 
 .sous_section_service .haut2 {
-  background-image: url("../Img/img_bg/programation.jpg");
+  height: 75%;
+  width: 100%;
+  color: var(--couleur-titre2);
+  background-position: center;
+  background-image: url("../Gloire/Assets/Assets/Img/img pub/Articles informatiques/reparation.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .sous_section_service .haut3 {
-  background-image: url("../Img/img_bg/programation.jpg");
+  background-image: url("../Gloire/Assets/Assets/Img/img pub/Articles informatiques/Simression.jpg");
+  height: 75%;
+  width: 100%;
+  color: var(--couleur-titre2);
+  background-position: center;
+  background-image: url("../Gloire/Assets/Assets/Img/img pub/Articles informatiques/reparation.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .sous_section_service .haut5 {
-  background-image: url("../Img/img_bg/programation.jpg");
+  background-image: url("../Gloire/Assets/Assets/Img/img pub/Articles informatiques/services .jpg");
+  height: 75%;
+  width: 100%;
+  color: var(--couleur-titre2);
+  background-position: center;
+  background-image: url("../Gloire/Assets/Assets/Img/img pub/Articles informatiques/reparation.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .sous_section_service .haut6 {
@@ -581,7 +614,7 @@ h3 {
   margin-bottom: 50px;
 }
 
-  #container:hover {
+#container:hover {
   transition: 2s linear;
   padding: 10px;
   background: white;
@@ -806,14 +839,6 @@ h2 {
   align-items: center;
 }
 
-
-/*partenaires*/
-/* .section_carousel {
-  width: 100%;
-  height: 100%;
-  background-color: red;
-} */
-
 .section_carousel .carousel-item img {
   width: 100%;
   height: 100%;
@@ -824,7 +849,6 @@ h2 {
   justify-content: center;
   align-items: center;
   margin-top: 25px;
-  /* margin-bottom: 20px; */
 }
 
 .carouselExampleSlidesOnly2 div img {
@@ -852,7 +876,6 @@ h2 {
   justify-content: center;
   align-items: center;
   margin-top: 25px;
-  /* gap: 45px; */
 }
 
 .carouselExampleSlidesOnly2 #lien h1 {
