@@ -206,14 +206,12 @@ if (!isset($_SESSION['visite_' . $page])) {
                         </div>
                         <div class="dav">
                             <h1>DESCRIPTION</h1>
-                            <h2>Ordinateur Bureautique</h2>
-                            <p>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                            </p>
-                                <h3>Prix unitaire : 1 500Frs </h3>
+                            <h2>IMPRESSIONS BACHES</h2>
+                            <ul>
+                                <li>
+                                    prix : 2500frc (Noir et blanc)
+                                </li>   
+                            </ul>
                         </div>
                     </div>
 
@@ -224,14 +222,15 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                         <div class="dav">
                             <h1>DESCRIPTION</h1>
-                            <h2>Ordinateur Bureautique</h2>
-                            <p>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                            </p>
-                                <h3>Prix unitaire : 1 500Frs </h3>
+                            <h2>AGRAFEUSE</h2>
+                            <ul>
+                                <li>
+                                    prix : 2500frc (Noir et blanc)
+                                </li>  
+                                <li>
+                                    prix : 1500frc (Noir et blanc)
+                                </li>   
+                            </ul>
                         </div>
                     </div>
 
@@ -242,14 +241,18 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                         <div class="dav">
                             <h1>DESCRIPTION</h1>
-                            <h2>Ordinateur Bureautique</h2>
-                            <p>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                            </p>
-                                <h3>Prix unitaire : 1 500Frs </h3>
+                            <h2>BOITIERS DISQUE DURE</h2>
+                            <ul>
+                                <li>
+                                    1To
+                                </li>
+                                <li>
+                                    5OOMB
+                                </li>
+                                <li>
+                                    250MB ...
+                                </li>   
+                            </ul>
                         </div>
                     </div>
 
@@ -260,14 +263,12 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                         <div class="dav">
                             <h1>DESCRIPTION</h1>
-                            <h2>Ordinateur Bureautique</h2>
-                            <p>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                            </p>
-                                <h3>Prix unitaire : 1 500Frs </h3>
+                            <h2>CAMERA HOME</h2>
+                            <ul>
+                                <li>
+                                    Disponibles en stock
+                                </li>   
+                            </ul>
                         </div>
                     </div>
 
@@ -278,14 +279,12 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                         <div class="dav">
                             <h1>DESCRIPTION</h1>
-                            <h2>Ordinateur Bureautique</h2>
-                            <p>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                            </p>
-                                <h3>Prix unitaire : 1 500Frs </h3>
+                            <h2>CASQUE</h2>
+                            <ul>
+                                <li>
+                                    Disponibles en stock
+                                </li>   
+                            </ul>
                         </div>
                     </div>
 
@@ -297,14 +296,12 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                         <div class="dav">
                             <h1>DESCRIPTION</h1>
-                            <h2>Ordinateur Bureautique</h2>
-                            <p>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                            </p>
-                                <h3>Prix unitaire : 1 500Frs </h3>
+                            <h2>CHARGEUR A LAPTOP</h2>
+                            <ul>
+                                <li>
+                                    Disponibles en stock
+                                </li>   
+                            </ul>
                         </div>
                     </div>
 
@@ -315,14 +312,18 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                         <div class="dav">
                             <h1>DESCRIPTION</h1>
-                            <h2>Ordinateur Bureautique</h2>
-                            <p>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                            </p>
-                                <h3>Prix unitaire : 1 500Frs </h3>
+                            <h2>CLE USB</h2>
+                            <ul>
+                                <li>
+                                    1To
+                                </li>
+                                <li>
+                                    5OOMB
+                                </li>
+                                <li>
+                                    250MB ...
+                                </li>    
+                            </ul>
                         </div>
                         
                     </div>
@@ -334,14 +335,21 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                         <div class="dav">
                             <h1>DESCRIPTION</h1>
-                            <h2>Ordinateur Bureautique</h2>
-                            <p>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                            </p>
-                                <h3>Prix unitaire : 1 500Frs </h3>
+                            <h2>ORDINATEUR BUREAUTIQUE</h2>
+                            <ul>
+                                <li>
+                                    disponible en stock
+                                </li>
+                                <li>
+                                    1To
+                                </li>
+                                <li>
+                                    5OOMB
+                                </li>
+                                <li>
+                                    250MB ...
+                                </li>    
+                            </ul>
                         </div>
                     </div>
 
@@ -352,32 +360,12 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                         <div class="dav">
                             <h1>DESCRIPTION</h1>
-                            <h2>Ordinateur Bureautique</h2>
-                            <p>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                            </p>
-                                <h3>Prix unitaire : 1 500Frs </h3>
-                        </div>
-                    </div>
-
-                    <div class="part">
-                        <div class="div">
-                            <img src="Assets/Img/img pub/Articles informatiques/enduleurs.webp" alt="enduleurs">
-                        </div>
-
-                        <div class="dav">
-                            <h1>DESCRIPTION</h1>
-                            <h2>Ordinateur Bureautique</h2>
-                            <p>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                            </p>
-                                <h3>Prix unitaire : 1 500Frs </h3>
+                            <h2>ANCRE A IMPRIMANTE</h2>
+                            <ul>
+                                <li>
+                                    Disponible en stock
+                                </li>    
+                            </ul>
                         </div>
                     </div>
 
@@ -389,13 +377,11 @@ if (!isset($_SESSION['visite_' . $page])) {
                         <div class="dav">
                             <h1>DESCRIPTION</h1>
                             <h2>Ordinateur Bureautique</h2>
-                            <p>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                            </p>
-                                <h3>Prix unitaire : 1 500Frs </h3>
+                            <ul>
+                                <li>
+                                    Disponible en stock
+                                </li>    
+                            </ul>
                         </div>
                     </div>
 
@@ -406,34 +392,15 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                         <div class="dav">
                             <h1>DESCRIPTION</h1>
-                            <h2>Ordinateur Bureautique</h2>
-                            <p>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                            </p>
-                                <h3>Prix unitaire : 1 500Frs </h3>
+                            <h2>HEADPHONE</h2>
+                            <ul>
+                                <li>
+                                    Disponible en stock
+                                </li>    
+                            </ul>
                         </div>
                     </div>
-
-                    <div class="part">
-                        <div class="div">
-                            <img src="Assets/Img/img pub/Articles informatiques/impression.webp" alt="impression">
-                        </div>
-
-                        <div class="dav">
-                            <h1>DESCRIPTION</h1>
-                            <h2>Ordinateur Bureautique</h2>
-                            <p>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                            </p>
-                                <h3>Prix unitaire : 1 500Frs </h3>
-                        </div>
-                    </div>   
+ 
                     
                     <div class="part">
                         <div class="div">
@@ -442,14 +409,12 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                         <div class="dav">
                             <h1>DESCRIPTION</h1>
-                            <h2>Ordinateur Bureautique</h2>
-                            <p>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                            </p>
-                                <h3>Prix unitaire : 1 500Frs </h3>
+                            <h2>Ordinateur Portatif</h2>
+                            <ul>
+                                <li>
+                                    Disponible en stock
+                                </li>    
+                            </ul>
                         </div>
                     </div>  
 
@@ -460,32 +425,12 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                         <div class="dav">
                             <h1>DESCRIPTION</h1>
-                            <h2>Ordinateur Bureautique</h2>
-                            <p>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                            </p>
-                                <h3>Prix unitaire : 1 500Frs </h3>
-                        </div>
-                    </div> 
-                    
-                    <div class="part">
-                        <div class="div">
-                            <img src="Assets/Img/img pub/Articles informatiques/OIP.jpg" alt="OIP">
-                        </div>
-
-                        <div class="dav">
-                            <h1>DESCRIPTION</h1>
-                            <h2>Ordinateur Bureautique</h2>
-                            <p>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                            </p>
-                                <h3>Prix unitaire : 1 500Frs </h3>
+                            <h2>Chargeur Téléphone</h2>
+                            <ul>
+                                <li>
+                                    Disponible en stock
+                                </li>    
+                            </ul>
                         </div>
                     </div> 
 
@@ -496,14 +441,12 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                         <div class="dav">
                             <h1>DESCRIPTION</h1>
-                            <h2>Ordinateur Bureautique</h2>
-                            <p>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                            </p>
-                                <h3>Prix unitaire : 1 500Frs </h3>
+                            <h2> Souris Avec Fil</h2>
+                            <ul>
+                                <li>
+                                    Disponible en stock
+                                </li>    
+                            </ul>
                         </div>
                     </div> 
 
@@ -514,14 +457,12 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                         <div class="dav">
                             <h1>DESCRIPTION</h1>
-                            <h2>Ordinateur Bureautique</h2>
-                            <p>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                                loremjioji <br>
-                            </p>
-                                <h3>Prix unitaire : 1 500Frs </h3>
+                            <h2>Ordinateur tout-en-un</h2>
+                            <ul>
+                                <li>
+                                    Disponible en stock
+                                </li>    
+                            </ul>
                         </div>
                     </div> 
                 </div>
@@ -533,32 +474,103 @@ if (!isset($_SESSION['visite_' . $page])) {
                 <div class="sous_section_service">
                     <div class="principal">
                         <div class="haut haut1">
-                            <h1>INFORMATIQUE</h1>
-                            <p>
-                                Lorem, ipsum dolor sit amet consectetur
-                                adipisici
-                            </p>
+                            <img src="Assets/Img/img pub/Articles informatiques/services .jpg" alt="">
                         </div>
 
                         <div class="bas">
+                            <h1>SERVICE DE PLASSIFICATION</h1>
+                                <ul>
+                                    <li>
+                                        prix : 500frc (Format A4)
+                                    </li>
+                                    <li>
+                                        prix : 1000frc (Format A3)
+                                    </li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sous_section_service">
+                    <div class="principal">
+                        <div class="haut haut1">
+                            <img src="Assets/Img/img pub/Articles informatiques/Simression.jpg" alt="">
+                        </div>
+
+                        <div class="bas">
+                            <h1>SERVICE DE PHOTOCOPIE</h1>
+                            
+                                <ul>
+                                    <li>
+                                        prix : 25frc (Noir et blanc)
+                                    </li>
+                                    <li>
+                                        prix : 150frc (Couleur)
+                                    </li>
+                                    <li>
+                                        prix : 15frc (appartir de 15 copies)
+                                    </li>
+                                </ul>
                             
                         </div>
                     </div>
                 </div>
 
+                <div class="sous_section_service">
+                    <div class="principal">
+                        <div class="haut haut1">
+                            <img src="Assets/Img/img pub/Articles informatiques/imprimanteG.avif" alt="">
+                        </div>
+
+                        <div class="bas">
+                            <h1>SERVICE D'IMPRESSION BACHES</h1>
+
+                            <ul>
+                                <li>
+                                    prix : 2500frc (Noir et blanc)
+                                </li>   
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sous_section_service">
+                    <div class="principal">
+                        <div class="haut haut1">
+                            <img src="Assets/Img/img pub/Articles informatiques/WhatsApp Image 2026-05-30 at 1.07.22 PM.jpeg" alt="livre">
+                        </div>
+
+                        <div class="bas">
+                            <h1>SERVICE DE VENTE <br> ACCESOIR DE BUREAU</h1>
+                            <ul>
+                                <li>
+                                    Disponible en stock
+                                </li> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
                <div class="sous_section_service">
                     <div class="principal">
                         <div class="haut haut1">
-                            <h1>INFORMATIQUE</h1>
-                            <p>
-                                Lorem, ipsum dolor sit amet consectetur
-                                adipisici
-                            </p>
+                            <img src="Assets/Img/img pub/Articles informatiques/reparation.webp" alt="">
                         </div>
 
                         <div class="bas">
-                            <button onclick="ouvrir()">S'inscrire ! </button>
+                            <h1>SERVICE DE REPARATION</h1>
+                                
+                            <ul>
+                                <li>
+                                    Flash mobile 
+                                </li>   
+                                <li>
+                                    réparation hardware 
+                                </li> 
+                                <li>
+                                    réparation software
+                                </li> 
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -566,15 +578,19 @@ if (!isset($_SESSION['visite_' . $page])) {
                 <div class="sous_section_service">
                     <div class="principal">
                         <div class="haut haut1">
-                            <h1>INFORMATIQUE</h1>
-                            <p>
-                                Lorem, ipsum dolor sit amet consectetur
-                                adipisici
-                            </p>
+                            <img src="Assets/Img/img pub/Articles informatiques/saisie.jpg" alt="saisie">
                         </div>
 
                         <div class="bas">
-                            <button onclick="ouvrir()">S'inscrire ! </button>
+                            <h1>SERVICE BUREAUTIQUE</h1>
+                            <ul>
+                                <li>
+                                    Saisie (appartir de 500frc)
+                                </li>   
+                                <li>
+                                    Conception (appartir de 500frc)
+                                </li> 
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -582,15 +598,22 @@ if (!isset($_SESSION['visite_' . $page])) {
                 <div class="sous_section_service">
                     <div class="principal">
                         <div class="haut haut1">
-                            <h1>INFORMATIQUE</h1>
-                            <p>
-                                Lorem, ipsum dolor sit amet consectetur
-                                adipisici
-                            </p>
+                            <img src="Assets/Img/img pub/Articles informatiques/orientation.jpg" alt="orientation">
                         </div>
 
                         <div class="bas">
-                            <button onclick="ouvrir()">S'inscrire ! </button>
+                            <h1>SERVICE D'ORIENTATION</h1>
+                            <ul>
+                                <li>
+                                    Orientation quelconque
+                                </li>   
+                                <li>
+                                    Orientation proffesionnel
+                                </li> 
+                                <li>
+                                    Orientation particulière 
+                                </li> 
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -598,15 +621,22 @@ if (!isset($_SESSION['visite_' . $page])) {
                 <div class="sous_section_service">
                     <div class="principal">
                         <div class="haut haut1">
-                            <h1>INFORMATIQUE</h1>
-                            <p>
-                                Lorem, ipsum dolor sit amet consectetur
-                                adipisici
-                            </p>
+                            <img src="Assets/Img/img pub/Articles informatiques/livre.jpeg" alt="livre">
                         </div>
 
                         <div class="bas">
-                            <button onclick="ouvrir()">S'inscrire ! </button>
+                            <h1>SERVICE DE VENTE <br> L'ENFANT INTELLIGENT</h1>
+                            <ul>
+                                <li>
+                                     Histoire-Géographie
+                                </li>   
+                                <li>
+                                    Anglais
+                                </li> 
+                                <li>
+                                    Mathématiques ...
+                                </li> 
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -614,15 +644,16 @@ if (!isset($_SESSION['visite_' . $page])) {
                 <div class="sous_section_service">
                     <div class="principal">
                         <div class="haut haut1">
-                            <h1>INFORMATIQUE</h1>
-                            <p>
-                                Lorem, ipsum dolor sit amet consectetur
-                                adipisici
-                            </p>
+                            <img src="Assets/Img/img pub/Articles informatiques/MOMO.jpg" alt="momo">
                         </div>
 
                         <div class="bas">
-                            <button onclick="ouvrir()">S'inscrire ! </button>
+                            <h1>MTN MOBILE MONEY</h1>
+                            <ul>
+                                <li>
+                                    Dépot et Retrait inclus
+                                </li>   
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -630,47 +661,18 @@ if (!isset($_SESSION['visite_' . $page])) {
                 <div class="sous_section_service">
                     <div class="principal">
                         <div class="haut haut1">
-                            <h1>INFORMATIQUE</h1>
-                            <p>
-                                Lorem, ipsum dolor sit amet consectetur
-                                adipisici
-                            </p>
+                            <img src="Assets/Img/img pub/Articles informatiques/airtel mo.jpg" alt="airtel">
                         </div>
 
                         <div class="bas">
-                            <button onclick="ouvrir()">S'inscrire ! </button>
+                            <div class="bas">
+                            <h1>AITEL MOBILE MONEY</h1>
+                            <ul>
+                                <li>
+                                    Dépot et Retrait inclus
+                                </li>   
+                            </ul>
                         </div>
-                    </div>
-                </div>
-
-                <div class="sous_section_service">
-                    <div class="principal">
-                        <div class="haut haut1">
-                            <h1>INFORMATIQUE</h1>
-                            <p>
-                                Lorem, ipsum dolor sit amet consectetur
-                                adipisici
-                            </p>
-                        </div>
-
-                        <div class="bas">
-                            <button onclick="ouvrir()">S'inscrire ! </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="sous_section_service">
-                    <div class="principal">
-                        <div class="haut haut1">
-                            <h1>INFORMATIQUE</h1>
-                            <p>
-                                Lorem, ipsum dolor sit amet consectetur
-                                adipisici
-                            </p>
-                        </div>
-
-                        <div class="bas">
-                            <button onclick="ouvrir()">S'inscrire ! </button>
                         </div>
                     </div>
                 </div>
