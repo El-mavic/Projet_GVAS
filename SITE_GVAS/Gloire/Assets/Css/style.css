@@ -420,7 +420,6 @@ p {
   gap: 25px;
   padding: 15px;
   overflow-y: scroll;
-  /* width: 100%; */
 }
 
 .sous_section_service {
@@ -443,75 +442,29 @@ p {
   cursor: pointer;
 }
 
-.sous_section_service .haut,
-.haut1 {
-  height: 75%;
+.sous_section_service .haut {
+  height: 60%;
   width: 100%;
   color: var(--couleur-titre2);
-  background-position: center;
-  background-image: url("../Gloire/Assets/Assets/Img/img pub/Articles informatiques/services.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
   padding: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-.sous_section_service .haut2 {
-  height: 75%;
+.sous_section_service .bas {
+  height: auto;
   width: 100%;
-  color: var(--couleur-titre2);
-  background-position: center;
-  background-image: url("../Gloire/Assets/Assets/Img/img pub/Articles informatiques/reparation.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
   padding: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-.sous_section_service .haut3 {
-  background-image: url("../Gloire/Assets/Assets/Img/img pub/Articles informatiques/Simression.jpg");
-  height: 75%;
+.sous_section_service .bas ul {
+  height: auto;
+  text-align: left;
   width: 100%;
-  color: var(--couleur-titre2);
-  background-position: center;
-  background-image: url("../Gloire/Assets/Assets/Img/img pub/Articles informatiques/reparation.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-.sous_section_service .haut5 {
-  background-image: url("../Gloire/Assets/Assets/Img/img pub/Articles informatiques/services .jpg");
-  height: 75%;
+.haut1 img {
+  height: 100%;
   width: 100%;
-  color: var(--couleur-titre2);
-  background-position: center;
-  background-image: url("../Gloire/Assets/Assets/Img/img pub/Articles informatiques/reparation.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.sous_section_service .haut6 {
-  background-image: url("../Img/img_bg/programation.jpg");
-}
-
-.sous_section_service .haut7 {
-  background-image: url("../Img/img_bg/programation.jpg");
+  border-radius: 7px;
 }
 
 .parie_publicitaire {
@@ -564,6 +517,12 @@ p {
   border: 1px solid black;
   border-radius: 5px;
   padding: 15px;
+}
+
+.produits .list_produits .part .dav ul {
+  height: auto;
+  text-align: left;
+  width: 100%;
 }
 
 .produits .list_produits .part .div {
@@ -716,13 +675,10 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* width: 100%;
-  height: 100%; */
 }
 
 
 .Acceuil .cent p {
-  /* font-size: 20px; */
   text-align: center;
   width: 100%;
 }
