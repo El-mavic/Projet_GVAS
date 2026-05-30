@@ -67,6 +67,10 @@
     display: none;
   }
 
+  .partie_navbar nav .liNone {
+    display: flex;
+  }
+
   .aigle .flex {
     display: flex;
     flex-direction: column;
