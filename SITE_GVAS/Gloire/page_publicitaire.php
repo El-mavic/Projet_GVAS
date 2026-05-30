@@ -35,25 +35,25 @@ if (!isset($_SESSION['visite_' . $page])) {
                 <div class="Partie_logo">
                     <div id="sous_class_contact">
                         <div class="a">
-                            <a href="../index.php">
+                            <a class="b" class="card1" href="../index.php">
                                 <i class="fa-solid fa-house" style="color: rgb(0, 0, 0);"></i>
                             </a>
                         </div>
 
                         <div class="a">
-                            <a href="https://www.facebook.com/profile.php?id=61583138888176" target="_blank">
+                            <a class="b" class="card2" href="https://www.facebook.com/profile.php?id=61583138888176" target="_blank">
                                 <i class="fa-brands fa-square-facebook" style="color: rgb(0, 0, 0);"></i>
                             </a>
                         </div>
 
                         <div class="a">
-                            <a href="#">
+                            <a class="b" class="card3" href="#">
                                 <i class="fa-brands fa-youtube" style="color: rgb(0, 0, 0);"></i>
                             </a>
                         </div>
 
                         <div class="a">
-                            <a href="https://wa.me/242064201415" target="_blank">
+                            <a class="b" class="card4" href="https://wa.me/242064201415" target="_blank">
                                 <i class="fa-brands fa-whatsapp" style="color: rgb(0, 0, 0);"></i>
                             </a>
                         </div>
@@ -110,6 +110,7 @@ if (!isset($_SESSION['visite_' . $page])) {
         </section>
     </header>
 
+
     <main id="ancre">
         <section id="classeur">
             <div class="classe">
@@ -145,6 +146,8 @@ if (!isset($_SESSION['visite_' . $page])) {
                     </div>
                 </div>
         </section>
+
+        
 
         <div class="parie_publicitaire">
             <h1>DECOUVREZ NOS ARTICLES</h1>
@@ -199,7 +202,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                 <div class="list_produits">
                     <div class="part">
                         <div class="div">
-                             <img src="Assets/Img/img pub./Articles informatiques/19de124bdfd877c8cabdef3183f927e7.jpg" alt="">
+                             <img src="Assets/Img/>
                         </div>
                         <div class="dav">
                             <h1>DESCRIPTION</h1>
@@ -594,24 +597,28 @@ if (!isset($_SESSION['visite_' . $page])) {
         <div id="container">
             <!-- Partie gauche -->
             <div class="menu">
-
                 <h1>Onglets</h1>
+                <div id="display">
+                    <div class="flexar">
+                        <button onclick="changerContenu('Produits')">
+                            Produits
+                        </button>
 
-                <button onclick="changerContenu('Produits')">
-                    Produits
-                </button>
+                        <button onclick="changerContenu('Services')">
+                            Services
+                        </button>
+                    </div>
 
-                <button onclick="changerContenu('Services')">
-                    Services
-                </button>
-
-                <a href="../contacts.php">
-                    plus d'infos
-                </a>
-
-                <a href="../index.php">
-                    S'incrire
-                </a>
+                    <div class="flexy">
+                        <a href="../contacts.php">
+                            plus d'infos
+                        </a>
+                        
+                        <a href="../index.php">
+                            S'incrire
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <!-- Partie droite -->
@@ -644,7 +651,6 @@ if (!isset($_SESSION['visite_' . $page])) {
                             <div class="p_bas">
                                 <h1>Découvrez notre démo <br>
                                     concernant les avis de recrutement</h1>
-
                                 <p>
                                     Explorez notre interface de recrutement et découvrez ses fonctionnalités. <br>
                                     <i> Service disponible uniquement pendant certaines périodes. </i>
@@ -693,7 +699,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                         <a href="https://www.facebook.com/people/Association-des-Jeunes-Eveill%C3%A9s-du-Congo-AJEC/100064026428804/"
                             target="_blank" class="float">
                             <div id="mem">
-                                <img src="Assets/Img/Partenaires/AJEC.jpeg" alt="">
+                                <img src="Assets/Img/Partenaires/AJEC.jpeg" alt="AJEC">
                             </div>
                             <div class="memm">
                                 <h1>
@@ -704,7 +710,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                         <a href="https://www.facebook.com/vipconsultscongob/" target="_blank" class="float">
                             <div id="mem">
-                                <img src="Assets/Img/Partenaires/VIP.png" alt="">
+                                <img src="Assets/Img/Partenaires/VIP.png" alt="VIP">
                             </div>
                             <div class="memm">
                                 <h1>
@@ -715,7 +721,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                         <a href="https://www.airtel.cg/" target="_blank" class="float">
                             <div id="mem">
-                                <img src="Assets/Img/Partenaires/R.jpg" alt="">
+                                <img src="Assets/Img/Partenaires/R.jpg" alt="AIRTEL">
                             </div>
                             <div class="memm">
                                 <h1>
@@ -727,7 +733,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                         <a href="https://www.africabizinfo.com/fr-CG/private-school-la-maniguette" target="_blank"
                             class="float">
                             <div id="mem">
-                                <img src="Assets/Img/Partenaires/Ecole.png" alt="">
+                                <img src="Assets/Img/Partenaires/Ecole.png" alt="CSPM">
                             </div>
                             <div class="memm">
                                 <h1>
@@ -738,7 +744,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                         <div class="float">
                             <div id="mem">
-                                <img src="Assets/Img/Partenaires/cvmc.png" alt="">
+                                <img src="Assets/Img/Partenaires/cvmc.png" alt="CVMC">
                             </div>
                             <div class="memm">
                                 <h1>CVMC</h1>
@@ -782,40 +788,39 @@ if (!isset($_SESSION['visite_' . $page])) {
                 </iframe>
                 <a class="Hici" href="https://www.google.com/maps/place/4%C2%B049'21.0%22S+11%C2%B054'19.7%22E/@-4.8224385,11.9053312,121m/data=!3m1!1e3!4m4!3m3!8m2!3d-4.8225!4d11.9054722?hl=fr&entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank">
-                    <h1>
                         " Cliquez ici pour Agrandir la MAPS "
-                    </h1>
                 </a>
             </div>
 
             <div class="hide">
                 <h1>Suivez nous sur nos pages</h1>
             </div>
-            <div id="sous_class_contact">
-                <div class="a">
-                    <a href="../index.php">
-                        <i class="fa-solid fa-house" style="color: rgb(0, 0, 0);"></i>
-                    </a>
-                </div>
+           <div id="sous_class_contact">
+                        <div class="a">
+                            <a href="../index.php">
+                                <i class="fa-solid fa-house" style="color: rgb(0, 0, 0);"></i>
+                            </a>
+                        </div>
 
-                <div class="a">
-                    <a href="https://www.facebook.com/profile.php?id=61583138888176" target="_blank">
-                        <i class="fa-brands fa-square-facebook" style="color: rgb(0, 0, 0);"></i>
-                    </a>
-                </div>
+                        <div class="a">
+                            <a href="https://www.facebook.com/profile.php?id=61583138888176" target="_blank">
+                                <i class="fa-brands fa-square-facebook" style="color: rgb(0, 0, 0);"></i>
+                            </a>
+                        </div>
 
-                <div class="a">
-                    <a href="#">
-                        <i class="fa-brands fa-youtube" style="color: rgb(0, 0, 0);"></i>
-                    </a>
-                </div>
+                        <div class="a">
+                            <a href="#">
+                                <i class="fa-brands fa-youtube" style="color: rgb(0, 0, 0);"></i>
+                            </a>
+                        </div>
 
-                <div class="a">
-                    <a href="https://wa.me/242064201415" target="_blank">
-                        <i class="fa-brands fa-whatsapp" style="color: rgb(0, 0, 0);"></i>
-                    </a>
-                </div>
-            </div>
+                        <div class="a">
+                            <a href="https://wa.me/242064201415" target="_blank">
+                                <i class="fa-brands fa-whatsapp" style="color: rgb(0, 0, 0);"></i>
+                            </a>
+                        </div>
+                    </div>
+
         </div>
 
         </div>

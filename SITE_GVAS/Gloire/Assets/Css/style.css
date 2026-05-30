@@ -225,7 +225,7 @@ header {
   width: 100%;
   display: flex;
   justify-content: center;
-  animation: caro 120s linear infinite 5s;
+  animation: caro 240s linear infinite;
   border-bottom: 5px solid yellow;
 }
 
@@ -542,6 +542,10 @@ p {
   align-items: center;
 }
 
+.produits {
+  overflow-y: scroll;
+}
+
 .produits .dav h1 {
   font-size: 20px;
 }
@@ -568,25 +572,47 @@ h3 {
   margin: 45px 0 45px 0;
 }
 
-
 /* decouverte */
 #container {
   width: 100%;
-  height: 850px;
+  height: 900px;
   display: flex;
   align-items: center;
   margin-bottom: 50px;
 }
 
-.menu {
-  width: 20%;
-  height: 100%;
+  #container:hover {
+  transition: 2s linear;
+  padding: 10px;
+  background: white;
+
+  box-shadow:
+    0 5px 10px rgba(0, 0, 0, 0.1),
+    0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+#display {
   display: flex;
   flex-direction: column;
+  gap: 25px;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-  background-image: linear-gradient(to right, rgb(235, 253, 134), rgb(255, 255, 104));
+}
+
+.flexar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.flexy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .menu button {
@@ -624,22 +650,32 @@ h3 {
 }
 
 #contenu {
-  overflow-y: scroll;
   height: 100%;
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.Acceuil {
+.menu {
+  width: 20%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 30px;
+  background-image: linear-gradient(to right, rgb(238, 255, 0), rgb(235, 253, 134), rgb(255, 255, 104));
+}
+
+.Acceuil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   width: 40%;
+  background-color: #ffffff;
 }
 
 .Acceuil .cent {
@@ -647,15 +683,16 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  /* width: 100%;
+  height: 100%; */
 }
 
-/* 
+
 .Acceuil .cent p {
-  font-size: 20px;
+  /* font-size: 20px; */
   text-align: center;
   width: 100%;
-} */
+}
 
 .Acceuil .cent h1 {
   text-align: center;
@@ -758,6 +795,10 @@ h2 {
   border-bottom-right-radius: 35px;
 }
 
+.partie_recrutement {
+  margin-top: 10px;
+}
+
 .partie_recrutement .central {
   display: flex;
   flex-wrap: wrap;
@@ -782,7 +823,8 @@ h2 {
   height: auto;
   justify-content: center;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 25px;
+  /* margin-bottom: 20px; */
 }
 
 .carouselExampleSlidesOnly2 div img {
@@ -809,6 +851,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 25px;
   /* gap: 45px; */
 }
 
@@ -824,7 +867,7 @@ h2 {
 
 .carouselExampleSlidesOnly2 #lien .partenaires {
   display: flex;
-  gap: 75px;
+  gap: 80px;
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
