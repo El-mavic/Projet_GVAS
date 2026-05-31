@@ -708,3 +708,27 @@ table tr:hover {
     background: #fff;
     color: #222;
 }
+
+
+   /*animation apparition*/
+      @keyframes apparition {
+
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+      }
+
+      .gallery-header {
+        opacity: 0;
+
+        transform: translateY(100px);
+
+        animation: apparition 1s ease forwards;
+      }

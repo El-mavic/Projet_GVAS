@@ -24,7 +24,7 @@ if (!isset($_SESSION['visite_' . $page])) {
     <link rel="stylesheet" href="formation.css">
 </head>
 
-<body>
+<body class="anime">
 
 
     <header class="header" id="header">
