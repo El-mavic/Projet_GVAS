@@ -29,7 +29,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
 <body>
     <header>
-        <!-- **************header************** -->
+        <!-- *********header********** -->
         <section class="flouter">
             <div class="section_navbar">
                 <div class="Partie_logo">
