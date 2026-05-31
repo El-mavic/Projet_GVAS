@@ -25,7 +25,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <!-- gestion de la signalisation -->
 <?php
 require 'traitement.php';
-
 $signal = $pdo->query(
     "SELECT message FROM signalisation 
      WHERE actif = 1 

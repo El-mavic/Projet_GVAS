@@ -68,9 +68,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                 <textarea
                     name="message"
                     id="message"
-                    placeholder="Votre témoignage..."
-                    required>
-    </textarea>
+                    placeholder="Votre témoignage..." required></textarea>
 
                 <input class="change" type="text" name="nom" placeholder="Veuillez saisir votre nom" required>
                 <button type="submit">Envoyer</button>
