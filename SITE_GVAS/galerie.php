@@ -34,8 +34,7 @@ if (!isset($_SESSION['visite_' . $page])) {
   }
 
   body {
-
-    background-image: url(images/Images/gallerie.jpg);
+    background-image: radial-gradient(circle at center center, transparent 0%,rgb(33,33,33) 99%),repeating-linear-gradient(0deg, rgba(163, 163, 163,0.2) 0px, rgba(163, 163, 163,0.2) 1px,transparent 1px, transparent 6px),repeating-linear-gradient(90deg, rgba(163, 163, 163,0.2) 0px, rgba(163, 163, 163,0.2) 1px,transparent 1px, transparent 6px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33));
   }
 
   .gallery-section {

@@ -870,10 +870,11 @@ if (!isset($_SESSION['visite_' . $page])) {
 
             <div class="aigle">
                 <h1>Notre localisation</h1>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d527.374828563409!2d11.9053312!3d-4.8224385!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDknMjEuMCJTIDExwrA1NCcxOS43IkU!5e1!3m2!1sfr!2scg!4v1778953131197!5m2!1sfr!2scg"
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8438.064025443899!2d11.903930692365016!3d-4.817061689658946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a60af0b2c6b78c9%3A0xc598de43a114b8f5!2sGroupe%20Vision%20d&#39;Aigle%20Services!5e1!3m2!1sfr!2scg!4v1780253118635!5m2!1sfr!2scg"
                     width="100%" height="225" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
+
+
                 </iframe>
                 <a class="Hici" href="https://www.google.com/maps/place/4%C2%B049'21.0%22S+11%C2%B054'19.7%22E/@-4.8224385,11.9053312,121m/data=!3m1!1e3!4m4!3m3!8m2!3d-4.8225!4d11.9054722?hl=fr&entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank">
