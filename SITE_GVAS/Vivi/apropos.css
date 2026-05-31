@@ -12,7 +12,7 @@
   --blanc: #ffffff;
   --gris: #cccccc;
   --bleu: #0609aa;
-  --rouge: #ce1c28;
+  --rouge: #cec21c;
 
 }
 
@@ -1350,7 +1350,7 @@ nav {
    .chiffres-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    align-items: center;
+    justify-content: center;
     margin-top: 40px;
   }
 }

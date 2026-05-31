@@ -348,20 +348,6 @@
     height: 100%;
     width: auto;
   }
-
-  /* Animation burger */
-
-  .burger.active span:nth-child(1) {
-    transform: rotate(45deg) translateY(14px);
-  }
-
-  .burger.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .burger.active span:nth-child(3) {
-    transform: rotate(-45deg) translateY(-14px);
-  }
 }
 
 @media (max-width: 375px) {
