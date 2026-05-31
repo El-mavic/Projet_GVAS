@@ -211,7 +211,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             <div class="chiffres-label">Année de fondation</div>
           </div>
 
-          <a href="Galerie.php">
+          <a href="../galerie.php">
             <div class="chiffres-card">
               <span class="chiffres-number">+30</span>
               <div class="chiffres-label">étudiants formés</div>
@@ -219,7 +219,7 @@ if (!isset($_SESSION['visite_' . $page])) {
           </a>
 
 
-          <a href="../Formations.php">
+          <a href="../Formation.php">
             <div class="chiffres-card">
               <span class="chiffres-number">+6</span>
               <div class="chiffres-label">Domaines de formation</div>
@@ -330,9 +330,9 @@ if (!isset($_SESSION['visite_' . $page])) {
           <div class="footer-col">
             <h4>Formations</h4>
             <ul>
-              <li><a href="Formation.php">Nos programmes</a></li>
-              <li><a href="index.php">Inscription</a></li>
-              <li><a href="Gloire/page_publicitaire.php">En savoir plus sur nos services</a></li>
+              <li><a href="../Formation.php">Nos programmes</a></li>
+              <li><a href="../index.php">Inscription</a></li>
+              <li><a href="../Gloire/page_publicitaire.php">En savoir plus sur nos services</a></li>
             </ul>
           </div>
 
