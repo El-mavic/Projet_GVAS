@@ -177,7 +177,7 @@ if (isset($_POST['form_type']) && $_POST['form_type'] === 'inscriptions') {
     header("Location: Succes.php?message=abonnement_ok");
     exit();
 }
-/* =========================
+/* =======================
    FORMULAIRE COMMENTAIRE
 ========================= */ elseif (isset($_POST['form_type']) && $_POST['form_type'] === 'commentaire') {
 
@@ -207,8 +207,6 @@ if (isset($_POST['form_type']) && $_POST['form_type'] === 'inscriptions') {
     exit();
 }
 ?>
-
-
 <?php
 //Message de validation quand le formulaire d'inscription est envoyé avec succès ou si l'utilisateur existe déjà
 if (isset($_GET['message'])) {
