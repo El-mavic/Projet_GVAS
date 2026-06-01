@@ -3,9 +3,9 @@ session_start();
 require '../traitement.php';
 $page = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
 if (!isset($_SESSION['visite_' . $page])) {
-    $stmt = $pdo->prepare("INSERT INTO visites (page) VALUES (?)");
-    $stmt->execute([$page]);
-    $_SESSION['visite_' . $page] = true;
+  $stmt = $pdo->prepare("INSERT INTO visites (page) VALUES (?)");
+  $stmt->execute([$page]);
+  $_SESSION['visite_' . $page] = true;
 }
 ?>
 <!doctype html>
@@ -48,7 +48,7 @@ if (!isset($_SESSION['visite_' . $page])) {
     <ul class="liens" id="menu">
       <li><a href="../index.php">Accueil</a></li>
       <li><a href="../Formation.php">Formations</a></li>
-      <li><a href="../Galerie.php">Galerie</a></li>
+      <li><a href="../galerie.php">Galerie</a></li>
       <li><a href="../contacts.php">Contacts</a></li>
     </ul>
     <!-- <button class="bouton">Nous rejoindre</button> -->
@@ -138,7 +138,7 @@ if (!isset($_SESSION['visite_' . $page])) {
           <h3>Secrétaire caissière</h3>
         </div>
       </div>
-      
+
       <div class="team-card card-7">
         <img src="images/BG/17.JPG" alt="communication">
         <div class="team-content">
@@ -376,7 +376,6 @@ if (!isset($_SESSION['visite_' . $page])) {
             menu.classList.remove('open');
           });
         });
-
       </script>
       <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

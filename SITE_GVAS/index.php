@@ -83,17 +83,31 @@ if (!isset($_SESSION['visite_' . $page])) {
 </head>
 
 <body>
+    <div class="burger-menu ">
+        <ul class="links">
+            <li><a href="temoignage.php">Temoignage</a></li>
+            <li><a href="Formation.php">Formations</a></li>
+            <li><a href="Galerie.php">Gallérie</a></li>
+            <li><a href="contacts.php">Contacts</a></li>
+            <div class="divider"></div>
+            <div class="buttons-burger-menu">
+                <a class="action-button" href="Gloire/page_publicitaire.php">Pub</a>
+                <a class="action-button" href="vivi/apropos.php">A propos</a>
+            </div>
+        </ul>
+    </div>
 
     <header>
+
         <div class="navbar">
             <div class="logo">
                 <img class="gvas" src="images/Images/GVAS.png" alt="GVAS">
             </div>
 
             <ul class="links">
-                <li><a href="Temoignage.php">Temoignage</a></li>
+                <li><a href="temoignage.php">Temoignage</a></li>
                 <li><a href="Formation.php">Formations</a></li>
-                <li><a href="Galerie.php">Galerie</a></li>
+                <li><a href="galerie.php">Galerie</a></li>
                 <li><a href="contacts.php">Contacts</a></li>
             </ul>
             <div class="buttons">
@@ -104,19 +118,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
-        <div class="burger-menu ">
-            <ul class="links">
-                <li><a href="index.php">Accueil</a></li>
-                <li><a href="Formation.php">Formations</a></li>
-                <li><a href="Galerie.php">Gallérie</a></li>
-                <li><a href="contacts.php">Contacts</a></li>
-                <div class="divider"></div>
-                <div class="buttons-burger-menu">
-                    <a class="action-button" href="Gloire/page_publicitaire.php">Pub</a>
-                    <a class="action-button" href="vivi/apropos.php">A propos</a>
-                </div>
-            </ul>
-        </div>
+
     </header>
     <?php if ($signal): ?>
         <div class="signal-box">
