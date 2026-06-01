@@ -56,6 +56,19 @@ if (!isset($_SESSION['visite_' . $page])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="El_Mavic BAKALA">
+    <meta name="author" content="Célina LUEMBA">
+    <meta name="author" content="Gloire NGUIMBI">
+    <meta name="description"
+          content="De réfférence, GVAS est une structure 
+          professionnelle composée d’un personnel de qualité agréé 
+          par l’État. spécialisé dans la vente des produits et services, 
+          l'accompagnement professionnelle à travers des formations qualifiantes
+           et certifiantes mais aussi
+           dans un suivi quelconque en vue d’un domaine professionnel donné.">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="GVAS, EVGS, groupe vision d'aigle services, vision d'aigle, achat, formation, cours en ligne, produits, service">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
