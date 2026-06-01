@@ -1659,14 +1659,11 @@ nav ul li a:hover {
 }*/
 
 .signal-box {
-    color: white;
+     color: white;
     padding: 10px 15px;
     text-align: center;
     font-weight: 600;
     background-color: rgba(19, 22, 22, 0.61);
-    border-radius: 50px;
-    margin: 1px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 
     white-space: nowrap;
     overflow: hidden;
