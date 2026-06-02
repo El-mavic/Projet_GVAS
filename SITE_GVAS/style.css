@@ -52,8 +52,6 @@ header {
     position: absolute;
     left: 1%;
     margin-top: -3.2%;
-
-
 }
 
 .navbar .logo a {
@@ -122,13 +120,12 @@ header {
     border-radius: 10px;
     overflow: hidden;
     transition: height cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 1000;
-
 }
 
 .burger-menu.open {
     height: 310px;
 }
+
 
 .burger-menu li {
     padding: 0.5rem;
@@ -215,9 +212,6 @@ header {
     }
 }
 
-
-
-
 /*--------Responsive-------*/
 
 @media (max-width:990px) {
@@ -248,7 +242,6 @@ header {
         position: block;
         z-index: 9999;
     }
-
 }
 
 /*--- Logo + burger---*/
@@ -985,8 +978,7 @@ nav ul li a:hover {
 }
 
 #message::placeholder {
-    color: rgb(247, 242, 242);
-    font-style: italic;
+    color: rgb(245, 243, 243);
     font-size: 15px;
 }
 
@@ -994,10 +986,10 @@ nav ul li a:hover {
     width: 100%;
     height: 120px;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 20px;
     border: none;
     resize: none;
-    background-color: #1b1b1b;
+    background-color: #0f172a;
     color: rgb(248, 243, 243);
 }
 
@@ -1005,7 +997,7 @@ nav ul li a:hover {
     padding: 12px;
     border: none;
     border-radius: 10px;
-    background: linear-gradient(45deg, #45839b, #030303);
+    background: linear-gradient(45deg, #5b5d5e, #a2b310);
     color: #0a0202;
     width: 200px;
     cursor: pointer;
@@ -1023,19 +1015,19 @@ nav ul li a:hover {
     width: 80%;
     margin: 30px auto;
     border-collapse: collapse;
-    background: #5e5f5f;
+    background: white;
 }
 
 .temoignage th,
 .temoignage td {
     padding: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(14, 13, 13, 0.1);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 18px;
 }
 
 .temoignage th {
-    background: #0c0c0c;
+    background: #0f172a;
     color: white;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 18px;
@@ -1221,7 +1213,7 @@ nav ul li a:hover {
     border-radius: 12px;
     font-size: 16px;
     outline: none;
-    background: linear-gradient(#81817f65, #444343) padding-box,
+    background: linear-gradient(#0f172a, #f3f0f000) padding-box,
         linear-gradient(45deg, #0f0f0f, #636362) border-box;
     color: #faf7f7;
     transition: all 0.3s ease;
@@ -1230,13 +1222,13 @@ nav ul li a:hover {
 /* Focus (effet pro) */
 .change:focus {
     transform: scale(1.02);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.849);
 }
 
 /* Placeholder stylé */
 .change::placeholder {
     color: #f0eded;
-    font-style: italic;
+
     transition: 0.3s;
 }
 
@@ -1670,10 +1662,6 @@ nav ul li a:hover {
     text-align: center;
     font-weight: 600;
     background-color: rgba(19, 22, 22, 0.61);
-    border-radius: 50px;
-    margin: 1px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-
     white-space: nowrap;
     overflow: hidden;
     position: relative;
@@ -1749,4 +1737,32 @@ nav ul li a:hover {
         font-size: 12px;
         animation-duration: 7s;
     }
+}
+
+
+/* Animation d’apparition pour les éléments de la page d’accueil */
+
+@keyframes apparition {
+
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+header,
+.table,
+.texte,
+.btn-primary body {
+    opacity: 0;
+
+    transform: translateY(100px);
+
+    animation: apparition 1s ease forwards;
 }

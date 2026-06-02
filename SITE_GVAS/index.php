@@ -25,7 +25,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <!-- gestion de la signalisation -->
 <?php
 require 'traitement.php';
-
 $signal = $pdo->query(
     "SELECT message FROM signalisation 
      WHERE actif = 1 
@@ -57,6 +56,19 @@ if (!isset($_SESSION['visite_' . $page])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="El_Mavic BAKALA">
+    <meta name="author" content="Célina LUEMBA">
+    <meta name="author" content="Gloire NGUIMBI">
+    <meta name="description"
+          content="De réfférence, GVAS est une structure 
+          professionnelle composée d’un personnel de qualité agréé 
+          par l’État. spécialisé dans la vente des produits et services, 
+          l'accompagnement professionnelle à travers des formations qualifiantes
+           et certifiantes mais aussi
+           dans un suivi quelconque en vue d’un domaine professionnel donné.">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="GVAS, EVGS, groupe vision d'aigle services, vision d'aigle, achat, formation, cours en ligne, produits, service">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -71,17 +83,31 @@ if (!isset($_SESSION['visite_' . $page])) {
 </head>
 
 <body>
+    <div class="burger-menu ">
+        <ul class="links">
+            <li><a href="temoignage.php">Temoignage</a></li>
+            <li><a href="Formation.php">Formations</a></li>
+            <li><a href="Galerie.php">Gallérie</a></li>
+            <li><a href="contacts.php">Contacts</a></li>
+            <div class="divider"></div>
+            <div class="buttons-burger-menu">
+                <a class="action-button" href="Gloire/page_publicitaire.php">Pub</a>
+                <a class="action-button" href="vivi/apropos.php">A propos</a>
+            </div>
+        </ul>
+    </div>
 
     <header>
+
         <div class="navbar">
             <div class="logo">
                 <img class="gvas" src="images/Images/GVAS.png" alt="GVAS">
             </div>
 
             <ul class="links">
-                <li><a href="Temoignage.php">Temoignage</a></li>
+                <li><a href="temoignage.php">Temoignage</a></li>
                 <li><a href="Formation.php">Formations</a></li>
-                <li><a href="Galerie.php">Galerie</a></li>
+                <li><a href="galerie.php">Galerie</a></li>
                 <li><a href="contacts.php">Contacts</a></li>
             </ul>
             <div class="buttons">
@@ -92,19 +118,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
-        <div class="burger-menu ">
-            <ul class="links">
-                <li><a href="index.php">Accueil</a></li>
-                <li><a href="Formation.php">Formations</a></li>
-                <li><a href="Galerie.php">Gallérie</a></li>
-                <li><a href="contacts.php">Contacts</a></li>
-                <div class="divider"></div>
-                <div class="buttons-burger-menu">
-                    <a class="action-button" href="Gloire/page_publicitaire.php">Pub</a>
-                    <a class="action-button" href="vivi/apropos.php">A propos</a>
-                </div>
-            </ul>
-        </div>
+
     </header>
     <?php if ($signal): ?>
         <div class="signal-box">
@@ -239,9 +253,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
 
             <!-- RENDEZ-VOUS -->
-            <a href="https://www.google.com/maps/place/4%C2%B049'21.0%22S+11%C2%B054'19.7%22E/@-4.8224385,11.9053312,80m/
-            data=!3m1!1e3!4m4!3m3!8m2!3d-4.82249!4d11.9054683?hl=
-            fr&entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D" class="fab-item">
+            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8438.064025443899!2d11.903930692365016!3d-4.817061689658946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a60af0b2c6b78c9%3A0xc598de43a114b8f5!2sGroupe%20Vision%20d&#39;Aigle%20Services!5e1!3m2!1sfr!2scg!4v1780253118635!5m2!1sfr!2scg" class="fab-item">
                 <span class="fab-label">Notre localisation</span>
                 <div class="fab-btn">
                     <i class="fa-solid fa-location-dot"></i>

@@ -3,17 +3,30 @@ session_start();
 require '../traitement.php';
 $page = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
 if (!isset($_SESSION['visite_' . $page])) {
-    $stmt = $pdo->prepare("INSERT INTO visites (page) VALUES (?)");
-    $stmt->execute([$page]);
-    $_SESSION['visite_' . $page] = true;
+  $stmt = $pdo->prepare("INSERT INTO visites (page) VALUES (?)");
+  $stmt->execute([$page]);
+  $_SESSION['visite_' . $page] = true;
 }
 ?>
 <!doctype html>
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="De réfférence, GVAS est une structure 
+          professionnelle composée d’un personnel de qualité agréé 
+          par l’État. spécialisé dans la vente des produits et services, 
+          l'accompagnement professionnelle à travers des formations qualifiantes
+           et certifiantes mais aussi
+           dans un suivi quelconque en vue d’un domaine professionnel donné.">
+    <meta name="author" content="Mr El-mavic BAKALA">
+    <meta name="author" content="Miss Célina LUEMBA">
+    <meta name="author" content="Gln93/Mr Tokyo">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="GVAS, EVGS, groupe vision d'aigle services, vision d'aigle, achat, formation, cours en ligne, produits, service">
+
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Lora:ital@0;1&display=swap" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -35,7 +48,7 @@ if (!isset($_SESSION['visite_' . $page])) {
     <ul class="liens" id="menu">
       <li><a href="../index.php">Accueil</a></li>
       <li><a href="../Formation.php">Formations</a></li>
-      <li><a href="../Galerie.php">Galerie</a></li>
+      <li><a href="../galerie.php">Galerie</a></li>
       <li><a href="../contacts.php">Contacts</a></li>
     </ul>
     <!-- <button class="bouton">Nous rejoindre</button> -->
@@ -125,7 +138,7 @@ if (!isset($_SESSION['visite_' . $page])) {
           <h3>Secrétaire caissière</h3>
         </div>
       </div>
-      
+
       <div class="team-card card-7">
         <img src="images/BG/17.JPG" alt="communication">
         <div class="team-content">
@@ -363,7 +376,6 @@ if (!isset($_SESSION['visite_' . $page])) {
             menu.classList.remove('open');
           });
         });
-
       </script>
       <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
