@@ -408,3 +408,27 @@ a {
 a:hover {
     color: #fff200;
 }
+
+/*animation apparition*/
+@keyframes apparition {
+
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+header,
+.anime {
+    opacity: 0;
+
+    transform: translateY(100px);
+
+    animation: apparition 1s ease forwards;
+}

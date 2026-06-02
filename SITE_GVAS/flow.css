@@ -494,6 +494,56 @@ body {
     }
 }
 
+/*-- La suite des exponsive--*/
+@media (max-width: 576px) {
+    .logo {
+        width: 3rem;
+    }
+
+    .logo-text {
+        font-size: 1.8rem;
+    }
+
+    .texte {
+        position: relative;
+        margin-top: 10px;
+    }
+
+}
+
+/*  Pour le header de la page contact*****************************************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation */
+#nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+#nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    background: #323333;
+    font-family: cambria, cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#nav ul li a:hover {
+    background: yellow;
+    color: black;
+}
+
 @media (max-width: 480px) {
     .header {
         height: 70px;
@@ -638,63 +688,7 @@ body {
         font-size: 16px;
         border-radius: 25px;
     }
-}
 
-
-/*-- La suite des exponsive--*/
-@media (max-width: 576px) {
-    .logo {
-        width: 3rem;
-    }
-
-    .logo-text {
-        font-size: 1.8rem;
-    }
-
-    .texte {
-        position: relative;
-        margin-top: 10px;
-    }
-
-}
-
-
-/*  Pour le header de la page contact*****************************************************/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Navigation */
-#nav ul {
-    display: flex;
-    gap: 15px;
-    list-style: none;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: center;
-}
-
-#nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    padding: 10px 18px;
-    border-radius: 8px;
-    transition: 0.3s ease;
-    background: #323333;
-    font-family: cambria, cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-#nav ul li a:hover {
-    background: yellow;
-    color: black;
-}
-
-
-/* Responsive pour le header ****************************************************/
-@media (max-width: 768px) {
     .gallery-header h2 {
         font-size: 24px;
     }
@@ -718,39 +712,25 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+/*animation apparition*/
+@keyframes apparition {
 
-    .gallery-header h2 {
-        font-size: 24px;
+    from {
+        opacity: 0;
+        transform: translateY(50px);
     }
 
-    #nav ul {
-        display: grid;
-        grid-template-columns: repeat(3, auto);
-        justify-content: center;
-        row-gap: 30px;
-        column-gap: 15px;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 
-    .gallery-header {
-        text-align: center;
-    }
-
-    #nav {
-        width: 100%;
-        margin-top: 20px;
-    }
 }
 
-/*Les responsive par dimension********************************************************/
+.section {
+    opacity: 0;
 
-@media (max-width: 1366px) {}
+    transform: translateY(100px);
 
-@media (max-width: 820px) {}
-
-@media (max-width: 768px) {}
-
-@media (max-width: 414px) {}
-
-/*Apple iPhone XS*/
-@media (max-width: 375px) {}
+    animation: apparition 1s ease forwards;
+}

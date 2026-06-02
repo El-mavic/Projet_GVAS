@@ -26,6 +26,18 @@ if (!isset($_SESSION['visite_' . $page])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="De réfférence, GVAS est une structure 
+          professionnelle composée d’un personnel de qualité agréé 
+          par l’État. spécialisé dans la vente des produits et services, 
+          l'accompagnement professionnelle à travers des formations qualifiantes
+           et certifiantes mais aussi
+           dans un suivi quelconque en vue d’un domaine professionnel donné.">
+    <meta name="author" content="Mr El-mavic BAKALA">
+    <meta name="author" content="Miss Célina LUEMBA">
+    <meta name="author" content="Gln93/Mr Tokyo">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="GVAS, EVGS, groupe vision d'aigle services, vision d'aigle, achat, formation, cours en ligne, produits, service">
     <title>Temoignage</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -68,9 +80,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                 <textarea
                     name="message"
                     id="message"
-                    placeholder="Votre témoignage..."
-                    required>
-    </textarea>
+                    placeholder="Votre témoignage..." required></textarea>
 
                 <input class="change" type="text" name="nom" placeholder="Veuillez saisir votre nom" required>
                 <button type="submit">Envoyer</button>

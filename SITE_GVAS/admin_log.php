@@ -2,7 +2,7 @@
 session_start();
 $error = "";
 $admin_email = "admin@gvas.com";
-$admin_password = "123456"; // change ça plus tard
+$admin_password = "123456"; // je dois changer ça plus tard
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
