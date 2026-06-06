@@ -30,7 +30,7 @@ if (!isset($_SESSION['visite_' . $page])) {
     <meta name="author" content="Gln93/Mr Tokyo">
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="GVAS, EVGS, groupe vision d'aigle services, vision d'aigle, achat, formation, cours en ligne, produits, service">
-</head>
+
 
     <link rel="stylesheet" href="Assets/Css/style.css">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -43,85 +43,9 @@ if (!isset($_SESSION['visite_' . $page])) {
 
 <body>
     <header>
-        <!-- *********header********** -->
-        <section class="flouter">
-            <div class="section_navbar">
-                <div class="Partie_logo">
-                    <div id="sous_class_contact">
-                        <div class="a">
-                            <a class="b" class="card1" href="../index.php">
-                                <i class="fa-solid fa-house" style="color: rgb(0, 0, 0);"></i>
-                            </a>
-                        </div>
+        <!-- *********header_ICI********** -->
 
-                        <div class="a">
-                            <a class="b" class="card2" href="https://www.facebook.com/profile.php?id=61583138888176" target="_blank">
-                                <i class="fa-brands fa-square-facebook" style="color: rgb(0, 0, 0);"></i>
-                            </a>
-                        </div>
 
-                        <div class="a">
-                            <a class="b" class="card3" href="#">
-                                <i class="fa-brands fa-youtube" style="color: rgb(0, 0, 0);"></i>
-                            </a>
-                        </div>
-
-                        <div class="a">
-                            <a class="b" class="card4" href="https://wa.me/242064201415" target="_blank">
-                                <i class="fa-brands fa-whatsapp" style="color: rgb(0, 0, 0);"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="sous_class_logo">
-                        <!-- <img src="Assets/Img/icon_logo/logo-GVAS.png" alt="logo-GVAS"> -->
-                        <h1>GROUPE VISION D'AIGLE SERVICES</h1>
-                    </div>
-
-                    <div class="contacter">
-                        <a href="../Formation.php">Formations</a>
-                    </div>
-
-                    <div class="burger" id="burger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-
-                <div class="partie_navbar">
-                    <div>
-                        <nav id="menu">
-                            <ul>
-                                <li><a href="../index.php">Acceuil</a></li>
-                                <li><a href="../Vivi/apropos.php">A-propos</a></li>
-                                <li><a href="../contacts.php">Contacts</a></li>
-                                <li><a href="../galerie.php">Galerie</a></li>
-                                <li class="liNone" ><a href="../Formation.php">Formations</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!--******ruban déroulant********-->
-        <section class="section_pub">
-            <div class="ad-banner">
-                <div class="ad-track">
-                    <!-- Contenu répété pour effet infini -->
-                    <div class="baba1" class="ad-item">#Service de Livraison</div>
-                    <div class="baba2" class="ad-item">#Paiement sécurisé</div>
-
-                    <!-- DUPLICATION (important pour boucle fluide) -->
-                    <div class="baba3" class="ad-item">#Formation professionnels</div>
-                    <div class="baba4" class="ad-item">#Promo vacances</div>
-                    <div class="baba5" class="ad-item">#Service d'orientation inclu</div>
-                    <div class="baba6" class="ad-item">#Vente d'articles</div>
-                </div>
-            </div>
-        </section>
     </header>
 
 
@@ -167,6 +91,24 @@ if (!isset($_SESSION['visite_' . $page])) {
             <h1>DECOUVREZ NOS ARTICLES</h1>
         </div>
         <!-- Fenêtre -->
+         
+        <!--******ruban déroulant********-->
+        <section class="section_pub">
+            <div class="ad-banner">
+                <div class="ad-track">
+                    <!-- Contenu répété pour effet infini -->
+                    <div class="baba1" class="ad-item">#Service de Livraison</div>
+                    <div class="baba2" class="ad-item">#Paiement sécurisé</div>
+
+                    <!-- DUPLICATION (important pour boucle fluide) -->
+                    <div class="baba3" class="ad-item">#Formation professionnels</div>
+                    <div class="baba4" class="ad-item">#Promo vacances</div>
+                    <div class="baba5" class="ad-item">#Service d'orientation inclu</div>
+                    <div class="baba6" class="ad-item">#Vente d'articles</div>
+                </div>
+            </div>
+        </section>
+
         <div id="fenetre" class="modal">
             <div class="contenu">
                 <span class="fermer" onclick="fermer()">&times;</span>
@@ -858,11 +800,15 @@ if (!isset($_SESSION['visite_' . $page])) {
             </div>
         </section>
 
-        <a href="#ancre" id="foot">
-            <h1>
-                RETOUR AU SOMMET
-            </h1>
-        </a>
+        <div id="foot">
+            <a href="#ancre">
+                <h1>
+                    RETOUR AU SOMMET
+                </h1>
+
+                <img src="Assets/img/icon_logo/image.jpg" alt="lien_retours">
+            </a>
+        </div>
     </main>
 
     <!-- footer -->
@@ -884,12 +830,11 @@ if (!isset($_SESSION['visite_' . $page])) {
 
             <div class="aigle">
                 <h1>Notre localisation</h1>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8438.064025443899!2d11.903930692365016!3d-4.817061689658946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a60af0b2c6b78c9%3A0xc598de43a114b8f5!2sGroupe%20Vision%20d&#39;Aigle%20Services!5e1!3m2!1sfr!2scg!4v1780253118635!5m2!1sfr!2scg"
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4218.998780710211!2d11.90546!3d-4.822414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDknMjAuNyJTIDExwrA1NCcxOS43IkU!5e1!3m2!1sfr!2scg!4v1780334157442!5m2!1sfr!2scg" 
                     width="100%" height="225" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
-
-
                 </iframe>
+
                 <a class="Hici" href="https://www.google.com/maps/place/4%C2%B049'21.0%22S+11%C2%B054'19.7%22E/@-4.8224385,11.9053312,121m/data=!3m1!1e3!4m4!3m3!8m2!3d-4.8225!4d11.9054722?hl=fr&entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank">
                         " Cliquez ici pour Agrandir la MAPS "
@@ -962,7 +907,8 @@ if (!isset($_SESSION['visite_' . $page])) {
                     <li>(+242) 06 416 36 21</li>
                 </Ul>
             </div>
-
+            
+        <div class="form">       
             <form action="../Traitement.php" method="POST">
                 <input type="hidden" name="form_type" value="commentaire">
                 <label for="envoie">
@@ -975,6 +921,33 @@ if (!isset($_SESSION['visite_' . $page])) {
                     <input class="tom" type="submit" value="soumettre !"></input>
                 </div>
             </form>
+
+            <div id="sous_class_contact">
+                    <div class="a">
+                        <a class="b" class="card1" href="../index.php">
+                            <i class="fa-solid fa-house" style="color: rgb(0, 0, 0);"></i>
+                        </a>
+                    </div>
+
+                    <div class="a">
+                        <a class="b" class="card2" href="https://www.facebook.com/profile.php?id=61583138888176" target="_blank">
+                            <i class="fa-brands fa-square-facebook" style="color: rgb(0, 0, 0);"></i>
+                        </a>
+                    </div>
+
+                    <div class="a">
+                        <a class="b" class="card3" href="#">
+                            <i class="fa-brands fa-youtube" style="color: rgb(0, 0, 0);"></i>
+                        </a>
+                    </div>
+
+                    <div class="a">
+                        <a class="b" class="card4" href="https://wa.me/242064201415" target="_blank">
+                            <i class="fa-brands fa-whatsapp" style="color: rgb(0, 0, 0);"></i>
+                        </a>
+                    </div>
+                </div>
+        </div>
         </div>
 
         <div class="bas">
@@ -983,8 +956,6 @@ if (!isset($_SESSION['visite_' . $page])) {
             </h1>
         </div>
     </footer>
-
-    <script src="Assets/js/index.js"></script>
 </body>
 
 </html>
