@@ -31,17 +31,6 @@ if (!isset($_SESSION['visite_' . $page])) {
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="GVAS, EVGS, groupe vision d'aigle services, vision d'aigle, achat, formation, cours en ligne, produits, service">
 
-<<<<<<< HEAD
-<link rel="stylesheet" href="Assets/Css/style.css">
-<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="icon" href="Assets/Img/icon_logo/logo-GVAS.png">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="Assets/Css/stilisation.css">
-<title>Page Publicitaire</title>
-=======
     <script defer src="Assets/js/index.js"></script>
     <link rel="stylesheet" href="Assets/Css/style.css">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -50,7 +39,6 @@ if (!isset($_SESSION['visite_' . $page])) {
     <link rel="icon" href="Assets/Img/icon_logo/logo-GVAS.png">
     <link rel="stylesheet" href="Assets/Css/stilisation.css">
     <title>Page Publicitaire</title>
->>>>>>> 97740a4a0cb3a75c367bc2217f79f9d58010aea2
 </head>
 
 <body>
@@ -110,8 +98,9 @@ if (!isset($_SESSION['visite_' . $page])) {
         .gvas {
             width: 6.5%;
             position: absolute;
-            left: 1%;
+            left: -80px;
             margin-top: -3.2%;
+
         }
 
         .navbar .logo a {
@@ -253,7 +242,6 @@ if (!isset($_SESSION['visite_' . $page])) {
 
 
 
-
         /*--------Responsive-------*/
 
         @media (max-width:990px) {
@@ -288,8 +276,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
         /*--- Logo + burger---*/
 
-        @media (max-width:500px) {
-
+        @media (max-width: 500px) {
             .gvas {
                 width: 5rem;
                 margin-top: -40px;
@@ -308,14 +295,11 @@ if (!isset($_SESSION['visite_' . $page])) {
         }
 
         @media (max-width:990px) {
-
             .texte {
                 font-size: 2rem;
             }
 
         }
-
-
 
 
 
@@ -335,6 +319,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             .links {
                 position: relative;
                 left: 50px;
+                bottom: -10%
             }
 
             .btn-primary {
@@ -352,35 +337,34 @@ if (!isset($_SESSION['visite_' . $page])) {
     <!-- *********header********** -->
     <div class=" burger-menu ">
         <ul class=" links">
-            <li><a href="index.php">Accueil</a></li>
-            <li><a href="temoignage.php">Temoignage</a></li>
-            <li><a href="Galerie.php">Gallérie</a></li>
-            <li><a href="contacts.php">Contacts</a></li>
+            <li><a href="../index.php">Accueil</a></li>
+            <li><a href="../Formation.php">Formation</a></li>
+            <li><a href="../Galerie.php">Galerie</a></li>
+            <li><a href="../contacts.php">Contacts</a></li>
             <div class="divider"></div>
             <div class="buttons-burger-menu">
-                <a class="action-button" href="Gloire/page_publicitaire.php">Pub</a>
-                <a class="action-button" href="vivi/apropos.php">A propos</a>
+                <a class="action-button" href="../temoignage.php">Temoignage</a>
+                <a class="action-button" href="../vivi/apropos.php">A propos</a>
             </div>
         </ul>
     </div>
     <header>
-<<<<<<< HEAD
 
         <div class="navbar">
             <div class="logo">
-                <img class="gvas" src="Assets/Img/icon_logo/logo-GVAS.png" alt="GVAS">
+                <img class="gvas" src="../images/Images/GVAS.png" alt="GVAS">
 
             </div>
 
             <ul class="links">
                 <li><a href="index.php">Accueil</a></li>
-                <li><a href="temoignage.php">Temoignage</a></li>
+                <li><a href="Formation.php">Formation</a></li>
                 <li><a href="galerie.php">Galerie</a></li>
                 <li><a href="contacts.php">Contacts</a></li>
             </ul>
             <div class="buttons">
-                <a class="action-button pro " href="Gloire/page_publicitaire.php">Pub</a>
-                <a class="action-button" href="vivi/apropos.php">A propos</a>
+                <a class="action-button pro " href="temoignage.php">Temoignage</a>
+                <a class="action-button" href="../vivi/apropos.php">A propos</a>
             </div>
             <div class="burger-menu-button">
                 <i class="fa-solid fa-bars"></i>
@@ -410,11 +394,9 @@ if (!isset($_SESSION['visite_' . $page])) {
             </div>
         </div>
     </section>
-=======
-        <!-- *********header_ICI********** -->
+    <!-- *********header_ICI********** -->
 
 
->>>>>>> 97740a4a0cb3a75c367bc2217f79f9d58010aea2
     </header>
 
 
@@ -470,7 +452,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             <h1>DECOUVREZ NOS ARTICLES</h1>
         </div>
         <!-- Fenêtre -->
-         
+
         <!--******ruban déroulant********-->
         <section class="section_pub">
             <div class="ad-banner">
@@ -1261,7 +1243,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
             <div class="aigle">
                 <h1>Notre localisation</h1>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4218.998780710211!2d11.90546!3d-4.822414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDknMjAuNyJTIDExwrA1NCcxOS43IkU!5e1!3m2!1sfr!2scg!4v1780334157442!5m2!1sfr!2scg" 
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4218.998780710211!2d11.90546!3d-4.822414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDknMjAuNyJTIDExwrA1NCcxOS43IkU!5e1!3m2!1sfr!2scg!4v1780334157442!5m2!1sfr!2scg"
                     width="100%" height="225" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
@@ -1338,22 +1320,22 @@ if (!isset($_SESSION['visite_' . $page])) {
                     <li>(+242) 06 416 36 21</li>
                 </Ul>
             </div>
-            
-        <div class="form">       
-            <form action="../Traitement.php" method="POST">
-                <input type="hidden" name="form_type" value="commentaire">
-                <label for="envoie">
-                    <h1 class="hid">
-                        Envoyez votre commentaire
-                    </h1>
-                </label>
-                <div>
-                    <input class="tim" placeholder="Votre commentaire ici" type="text" name="envoie" id="envoie" required>
-                    <input class="tom" type="submit" value="soumettre !"></input>
-                </div>
-            </form>
 
-            <div id="sous_class_contact">
+            <div class="form">
+                <form action="../Traitement.php" method="POST">
+                    <input type="hidden" name="form_type" value="commentaire">
+                    <label for="envoie">
+                        <h1 class="hid">
+                            Envoyez votre commentaire
+                        </h1>
+                    </label>
+                    <div>
+                        <input class="tim" placeholder="Votre commentaire ici" type="text" name="envoie" id="envoie" required>
+                        <input class="tom" type="submit" value="soumettre !"></input>
+                    </div>
+                </form>
+
+                <div id="sous_class_contact">
                     <div class="a">
                         <a class="b" class="card1" href="../index.php">
                             <i class="fa-solid fa-house" style="color: rgb(0, 0, 0);"></i>
@@ -1378,7 +1360,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                         </a>
                     </div>
                 </div>
-        </div>
+            </div>
         </div>
 
         <div class="bas">
@@ -1387,10 +1369,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             </h1>
         </div>
     </footer>
-<<<<<<< HEAD
 
-    <script src="Assets/js/index.js"></script>
-    
     <!--burgerMenuButton -->
     <script>
         const burgerMenuButton = document.querySelector('.burger-menu-button');
@@ -1426,8 +1405,6 @@ if (!isset($_SESSION['visite_' . $page])) {
         });
     </script>
 
-=======
->>>>>>> 97740a4a0cb3a75c367bc2217f79f9d58010aea2
 </body>
 
 </html>
