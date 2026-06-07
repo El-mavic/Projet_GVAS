@@ -77,7 +77,6 @@ if (!isset($_SESSION['visite_' . $page])) {
       </div>
     </div>
   </header>
-  <div class="bande">
     <p class="texte">Groupe Vision d'Aigle Services </p>
 
   </div>

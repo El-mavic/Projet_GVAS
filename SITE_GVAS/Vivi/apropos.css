@@ -464,20 +464,8 @@ nav {
 }
 
   */
- .bande {
-    background: linear-gradient(90deg, #7c7f80, #fffb0096);
-    font-family: Dutch801 XBd BT;
-}
- .text{
-    font-size: 3em;
-    font-weight: bold;
-    /* align-items: center; */
-    text-align: center;
-    justify-content: center;
-    /* background: linear-gradient(90deg, #7c7f80, #fffb0096); */
-    /* font-family: Dutch801 XBd BT; */
-
-}
+ 
+ 
   body {
     background-image: none;
     background-color: grey;

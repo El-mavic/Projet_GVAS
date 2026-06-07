@@ -37,19 +37,21 @@ if (!isset($_SESSION['visite_' . $page])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" href="Assets/Img/icon_logo/logo-GVAS.png">
+    <link rel="icon" href="../style.css">
     <link rel="stylesheet" href="Assets/Css/stilisation.css">
     <title>Page Publicitaire</title>
 </head>
 
 <body>
+    <!-- CSS du header -->
     <style>
         body {
             height: 100vh;
             background-color: rgba(124, 123, 123, 0.671);
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
-            padding-top: 80px;
+            /* background-repeat: no-repeat; */
+            /* padding-top: 80px; */
 
         }
 
@@ -72,17 +74,17 @@ if (!isset($_SESSION['visite_' . $page])) {
 
 
         header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
+            position: relative;
+            /* top: 0; */
+            /* left: 0; */
+            /* width: 100%; */
             padding: 0 8em;
             background-color: rgba(19, 22, 22, 0.61);
             border-bottom-left-radius: 50px;
             border-top-left-radius: 50px;
             border-bottom-right-radius: 50px;
             border-top-right-radius: 50px;
-            z-index: 1000;
+            /* z-index: 1000; */
         }
 
         .navbar {
@@ -159,7 +161,7 @@ if (!isset($_SESSION['visite_' . $page])) {
         }
 
         .action-button:hover {
-            color: rgb(94, 94, 95);
+            color: blue;
             border: 1px solid #fff200;
         }
 
@@ -319,7 +321,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             .links {
                 position: relative;
                 left: 50px;
-                bottom: -10%
+                bottom: -20%
             }
 
             .btn-primary {
@@ -333,7 +335,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                 margin-right: 1px;
             }
         }
-    </style>
+    </style> */
     <!-- *********header********** -->
     <div class=" burger-menu ">
         <ul class=" links">
