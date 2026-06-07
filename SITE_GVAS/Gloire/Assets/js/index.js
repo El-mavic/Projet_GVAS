@@ -1,4 +1,6 @@
-// blocs
+
+       
+    // blocs
 
 function ouvrir() {
   document.getElementById("fenetre").style.display = "block";
@@ -83,4 +85,6 @@ burger.addEventListener("click", () => {
   burger.classList.toggle("active");
 
 });
-
+       
+       
+       

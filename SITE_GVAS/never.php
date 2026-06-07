@@ -42,22 +42,23 @@ if($recupere === $user){
 
 }*/
 
-function multiplication()
-{
-    while (true) {
-        $moi = trim(readline('Voulez-vous jouer à se jeux oui ou non : '));
-        if ($moi === 'oui') {
-            $user = trim(readline('tu veux la table de multiplication de combien?  : '));
-            for ($i = 0; $i <= 12; $i++) {
-                $affiche .= ($user . "x" . $i . "=" . $user * $i . "\n");
-            }
-            echo $affiche;
-        } elseif ($user === 'non') {
-            return false;
-        } else
-            echo "soit c'est oui ou non" . "\n";
-    }
-}
+// function multiplication()
+// {
+    // while (true) {
+        // $moi = trim(readline('Voulez-vous jouer à se jeux oui ou non : '));
+        // if ($moi === 'oui') {
+            // $user = trim(readline('tu veux la table de multiplication de combien?  : '));
+            // for ($i = 0; $i <= 12; $i++) {
+                // $affiche .= ($user . "x" . $i . "=" . $user * $i . "\n");
+            // }
+            // echo $affiche;
+        // } elseif ($user === 'non') {
+            // return false;
+        // } else
+            // echo "soit c'est oui ou non" . "\n";
+    // }
+// }
 
-$resultat = multiplication();
-var_dump($resultat);
+// $resultat = multiplication();
+// var_dump($resultat);
+// 
