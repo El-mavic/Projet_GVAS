@@ -132,12 +132,13 @@ if (!isset($_SESSION['visite_' . $page])) {
 
     <!-- FOOTER -->
 
-    <!-- La partie footer -->
+    <!--  La partie footer  -->
+
     <footer>
         <div class="footer_part1">
             <div class="aigle ">
                 <div class="flex">
-                    <img src="images/Images/GVAS.png" alt="icon_logo">
+                    <img src="Assets/Img/icon_logo/logo-GVAS.png" alt="icon_logo">
                     <h1>Groupe vision d'Aigle Services</h1>
                 </div>
                 <p id="justP">
@@ -158,7 +159,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                 <a class="Hici" href="https://www.google.com/maps/place/4%C2%B049'21.0%22S+11%C2%B054'19.7%22E/@-4.8224385,11.9053312,121m/data=!3m1!1e3!4m4!3m3!8m2!3d-4.8225!4d11.9054722?hl=fr&entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank">
-                    "Cliquez ici pour Agrandir la MAPS"
+                    " Cliquez ici pour Agrandir la MAPS "
                 </a>
             </div>
 
@@ -202,7 +203,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                     <li><a href="../index.php">Acceuil</a></li>
                     <li><a href="../formation.php">Formations</a></li>
                     <li><a href="../vivi/apropos.php">A_Propos</a></li>
-                    <li><a href="..//Gloire/page_publicitaire.php">Page Publicitaire</a></li>
+                    <li><a href="page_publicitaire.php">Page Publicitaire</a></li>
                     <li><a href="../galerie.php">Galerie</a></li>
                     <li><a href="../contacts.php">Contacts</a></li>
                     <li><a href="../temoignage.php">Témoignage</a></li>
@@ -277,7 +278,6 @@ if (!isset($_SESSION['visite_' . $page])) {
             </h1>
         </div>
     </footer>
-
 
 
     <!--burgerMenuButton-->
