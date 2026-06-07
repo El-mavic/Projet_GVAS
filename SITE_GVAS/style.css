@@ -14,7 +14,7 @@ body {
     background-image: url(images/Images/Two.jpg);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+
 }
 
 li {
@@ -195,6 +195,10 @@ header {
 
 }
 
+.Table {
+    margin-left: 90px;
+}
+
 .table1 {
     width: 13rem;
     height: 13rem;
@@ -236,8 +240,70 @@ header {
     }
 }
 
-/*--------Responsive-------*/
+/*----------------------------- 1366px Responsive Pour la page de d'acceuil-----------------------------------------------------*/
 
+
+@media (max-width: 1366px) {
+    .Table {
+        margin-left: 20px;
+    }
+
+    .table {
+        margin-top: 30px;
+    }
+
+    .buttons {
+        position: relative;
+        left: 90px;
+    }
+
+    .links {
+        position: relative;
+        left: 50px;
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: flex-start;
+<<<<<<< HEAD
+        margin-left: 46%;
+        margin-top: 60px;
+    }
+}
+
+
+
+@media (min-width: 1366px) {
+    .Table {
+        margin-left: 10%;
+    }
+
+    .table {
+        margin-top: 30px;
+    }
+
+    .buttons {
+        position: relative;
+        left: 90px;
+    }
+
+    .links {
+        position: relative;
+        left: 50px;
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 46%;
+=======
+        margin-left: 570px;
+>>>>>>> 5304fb124764cc5eaede2d30970b7d2ac8f87cb8
+        margin-top: 60px;
+    }
+}
+
+/*------------------------------------------- 990px Responsive----------------------------------------*/
 @media (max-width:990px) {
     header {
         background: none;
@@ -258,38 +324,7 @@ header {
         display: block;
 
     }
-}
 
-@media (max-width:576px) {
-
-    .burger-menu {
-        position: block;
-        z-index: 9999;
-    }
-}
-
-/*--- Logo + burger---*/
-
-@media (max-width:500px) {
-
-    .gvas {
-        width: 5rem;
-        margin-top: -40px;
-    }
-
-    .burger-menu-button {
-
-        position: relative;
-        left: 5rem;
-    }
-
-    header {
-        display: block;
-    }
-
-}
-
-@media (max-width:990px) {
     .table1 {
         width: 8rem;
         height: 8rem;
@@ -308,7 +343,187 @@ header {
         font-size: 2rem;
     }
 
+
 }
+
+/*------------------------------------------- 820px Responsive----------------------------------------*/
+@media (max-width: 820px) {
+
+    .burger-menu-button {
+        background: black;
+        margin-right: 1px;
+        z-index: 9999;
+    }
+
+    .Table {
+        margin-left: -20px;
+        margin-top: -40px;
+    }
+
+    .table {
+        margin-top: 30px;
+        margin-left: 100px;
+    }
+
+    .table1 {
+        width: 180px;
+        height: 180px;
+    }
+
+    .table2 {
+        width: 180px;
+        height: 180px;
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 320px;
+        margin-top: 10px;
+
+    }
+
+    .texte {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+
+
+}
+
+/*------------------------------------------- 768px Responsive----------------------------------------*/
+@media (max-width: 768px) {
+    .table {
+        margin-top: 30px;
+        margin-left: 100px;
+    }
+
+    .Table {
+        margin-left: -80px;
+    }
+
+    .table1 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .table2 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .btn-primary {
+        margin-left: -40px;
+    }
+
+
+
+    .burger-menu-button {
+        background: black;
+        margin-right: 1px;
+        z-index: 9999;
+    }
+}
+
+/*------------------------------------------- 500px Responsive----------------------------------------*/
+@media (max-width:500px) {
+
+    .gvas {
+        width: 5rem;
+        margin-top: -40px;
+    }
+
+    .burger-menu-button {
+
+        position: relative;
+        left: 5rem;
+        z-index: 9999;
+    }
+
+    header {
+        display: block;
+    }
+
+}
+
+/*------------------------------------------- burger----------------------------------------*/
+@media (max-width:576px) {
+
+    .burger-menu {
+        position: block;
+        z-index: 9999;
+    }
+}
+
+/*------------------------------------------- 414 Responsive----------------------------------------*/
+@media (max-width: 414px) {
+    .Table {
+        margin-left: -19px;
+        margin-top: -90px;
+    }
+
+    .table {
+        margin-top: 40px;
+        margin-left: 130px;
+    }
+
+    .table1 {
+        width: 150px;
+        height: 150px;
+        left: 2px;
+    }
+
+    .table2 {
+        width: 150px;
+        height: 150px;
+        right: 30px;
+        margin-top: -180px;
+    }
+
+    .modal-content {
+        width: 320px;
+    }
+
+    .options {
+        left: 80px;
+        width: 200px;
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 120px;
+        margin-top: 10spx;
+
+    }
+}
+
+/*------------------------------------------- 375px Responsive----------------------------------------*/
+@media (max-width: 375px) {
+    .Table {
+        margin-left: -5px;
+        margin-top: -90px;
+    }
+
+    .table {
+        margin-top: 40px;
+        margin-left: 115px;
+    }
+
+    .table1 {
+        width: 130px;
+        height: 130px;
+        left: 2px;
+    }
+
+    .table2 {
+        width: 130px;
+        height: 130px;
+        right: 30px;
+    }
+}
+
 
 
 /* --- arrière-plan sombre derrière la fenêtre --- */
@@ -329,7 +544,7 @@ header {
 
 /* Bouton principal */
 .btn-primary {
-    margin-left: -3%;
+    margin-left: 9px;
     padding: 10px 22px;
     background: #fff200;
     color: black;
@@ -454,12 +669,129 @@ header {
     background: #005fcc;
 }
 
+/*******************************************Pour la fenetre d'inscription***********************************************/
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
 
-#btnInscription {
-    margin-top: 80px;
-    position: absolute;
-    left: 45%;
+@media (max-width: 768px) {
+
+    .modal-content {
+        width: 92%;
+        max-width: 400px;
+        padding: 15px;
+        border-radius: 15px;
+
+        /* Empêche le formulaire de dépasser l'écran */
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .modal-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        font-size: 13px;
+    }
+
+    .form-group input {
+        padding: 9px;
+        font-size: 14px;
+    }
+
+    .radio-group {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-top: 8px;
+    }
+
+    .radio-group label {
+        font-size: 14px;
+    }
+
+    .options {
+        max-height: 180px;
+        overflow-y: auto;
+    }
+
+    .options li {
+        padding: 8px 5px;
+        font-size: 14px;
+    }
+
+    .dropdown-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .btn-submit {
+        margin-top: 20px;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .close {
+        font-size: 24px;
+        top: 8px;
+        right: 10px;
+    }
 }
+
+/* Très petits téléphones */
+@media (max-width: 414px) {
+
+    .modal-content {
+        width: 88%;
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+    .modal-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .form-group .input-box {
+        margin-bottom: 10px;
+    }
+
+    .form-group label {
+        font-size: 12px;
+    }
+
+    .form-group input {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .radio-group {
+        gap: 10px;
+    }
+
+    .radio-group label {
+        font-size: 13px;
+    }
+
+    .dropdown-btn {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .options li {
+        padding: 6px;
+        font-size: 13px;
+    }
+
+    .btn-submit {
+        margin-top: 15px;
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
 
 
 /*----------choix de la formation*/
@@ -474,8 +806,6 @@ header {
     font-family: sans-serif;
 }
 
-
-
 .dropdown-btn {
     padding: 10px;
     border: 1px solid #cccccc;
@@ -484,16 +814,12 @@ header {
     cursor: pointer;
 }
 
-
-
 .options {
     position: absolute;
     top: 0;
     left: 28%;
     margin-top: -60px;
-    /* 👉 colle à droite du bouton */
     margin-left: 10px;
-    /* petit espace */
     list-style: none;
     background: rgb(192, 191, 188);
     width: 250px;
@@ -504,7 +830,6 @@ header {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-
 .options input[type="checkbox"] {
     width: 16px;
     height: 16px;
@@ -514,14 +839,12 @@ header {
 .options label {
     cursor: pointer;
     flex: 1;
-    /* prend toute la ligne */
 }
 
 .Erreur {
     color: red;
     font-size: 12px;
 }
-
 
 /*La couleur des input*/
 
@@ -557,131 +880,6 @@ input:focus {
 
 .radio-group {
     margin-bottom: 10px;
-}
-
-
-
-/*pour la première page*/
-
-@media (max-width: 1366px) {
-    .table {
-        margin-top: 30px;
-    }
-
-    .buttons {
-        position: relative;
-        left: 90px;
-    }
-
-    .links {
-        position: relative;
-        left: 50px;
-    }
-
-    .btn-primary {
-        margin-left: 1px;
-    }
-}
-
-@media (max-width: 820px) {
-    .table {
-        margin-top: 30px;
-        margin-left: 100px;
-    }
-
-    .table1 {
-        width: 150px;
-        height: 150px;
-    }
-
-    .table2 {
-        width: 150px;
-        height: 150px;
-    }
-
-    .btn-primary {
-        margin-left: -40px;
-    }
-
-    .burger-menu-button {
-        background: black;
-        margin-right: 1px;
-    }
-}
-
-@media (max-width: 768px) {
-    .table {
-        margin-top: 30px;
-        margin-left: 100px;
-    }
-
-
-    .table1 {
-        width: 150px;
-        height: 150px;
-    }
-
-    .table2 {
-        width: 150px;
-        height: 150px;
-    }
-
-    .btn-primary {
-        margin-left: -40px;
-    }
-
-    .burger-menu-button {
-        background: black;
-        margin-right: 1px;
-    }
-}
-
-@media (max-width: 414px) {
-    .table {
-        margin-top: 40px;
-        margin-left: 130px;
-    }
-
-    .table1 {
-        width: 150px;
-        height: 150px;
-        left: 2px;
-    }
-
-    .table2 {
-        width: 150px;
-        height: 150px;
-        right: 30px;
-    }
-
-    .modal-content {
-        width: 320px;
-    }
-
-    .options {
-        left: 80px;
-        width: 200px;
-    }
-}
-
-/*Apple iPhone XS*/
-@media (max-width: 375px) {
-    .table {
-        margin-top: 40px;
-        margin-left: 115px;
-    }
-
-    .table1 {
-        width: 130px;
-        height: 130px;
-        left: 2px;
-    }
-
-    .table2 {
-        width: 130px;
-        height: 130px;
-        right: 30px;
-    }
 }
 
 
@@ -974,9 +1172,7 @@ input:focus {
 
 
 
-/* =========================
-   RESPONSIVE 1366px
-========================= */
+/* ========================= RESPONSIVE Page temoignage 1366px ========================= */
 @media (max-width: 1366px) {
 
     .temoignage table {
@@ -984,9 +1180,7 @@ input:focus {
     }
 }
 
-/* =========================
-   RESPONSIVE 820px
-========================= */
+/* ========================= RESPONSIVE 820px ========================= */
 @media (max-width: 820px) {
 
     .temoignage h2 {
@@ -1014,9 +1208,7 @@ input:focus {
 
 }
 
-/* =========================
-   RESPONSIVE 768px
-========================= */
+/* ========================= RESPONSIVE 768px ========================= */
 @media (max-width: 768px) {
 
     .temoignage {
@@ -1428,7 +1620,7 @@ footer a {
     }
 }
 
-/* Responsive tablette pour le bando d'information*/
+/* Responsive tablette pour le bando d'information message de signalisation **************************************/
 @media screen and (max-width: 768px) {
     .signal-box {
         padding: 12px 18px;
@@ -1443,7 +1635,7 @@ footer a {
     }
 }
 
-/* Responsive mobile */
+/**************************************************Responsive mobile ***********************************************/
 @media screen and (max-width: 480px) {
     .signal-box {
         padding: 10px 14px;
@@ -1466,31 +1658,40 @@ footer a {
 }
 
 
+/* ===========================   SIDEBARS BASE ========================== */
 
-
-
-
-
-
-
-
-
-/* ===========================
-   SIDEBAR PROFESSIONNELLE
-=========================== */
-
-.sidebar-left {
+.sidebar-left,
+.sidebar1 {
     position: fixed;
     top: 110px;
-    left: 15px;
     width: 270px;
+    margin-top: 40px;
+}
+
+/* ===========================   SIDEBAR GAUCHE=========================== */
+.sidebar-left {
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-left:hover {
+    border-color: #ffd700;
+    box-shadow:
+        0 0 10px #5a5a57,
+        0 0 20px #ffd700,
+        0 0 30px #0a0a0a,
+        0 0 40px #575756;
+}
+
+.sidebar-left {
+    left: 15px;
     background: rgba(0, 0, 0, 0.55);
     backdrop-filter: blur(12px);
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-    z-index: 1000;
-    margin-top: 30px;
+    border-bottom: 2px solid #fff200;
 }
 
 .sidebar-title {
@@ -1533,85 +1734,177 @@ footer a {
     text-align: center;
 }
 
-/* Décalage du contenu principal */
+/* =========================== SIDEBAR DROITE =========================== */
 
-
-/* ===========================
-   TABLETTE
-=========================== */
-
-@media (max-width: 990px) {
-
-    .sidebar-left {
-        width: 220px;
-        top: 90px;
-    }
-
+.sidebar1 {
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 
 }
 
-/* ===========================
-   MOBILE
-=========================== */
+.sidebar1 {
 
-@media (max-width: 768px) {
-    @media (max-width: 768px) {
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
 
-        .sidebar-left {
-            position: relative;
-            width: 220px;
-            margin: 10px auto;
-            padding: 12px;
-        }
+.sidebar1:hover {
+    border-color: #ffd700;
+    box-shadow:
+        0 0 10px #5a5a57,
+        0 0 20px #ffd700,
+        0 0 30px #0a0a0a,
+        0 0 40px #575756;
+}
 
-        .sidebar-title {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-        }
+/* CARTES */
+.card1 {
+    background: rgba(20, 20, 20, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 18px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+    border-bottom: 3px solid #fff200;
+}
 
-        .sidebar-left a {
-            font-size: 0.9rem;
-            padding: 8px;
-        }
+.card1:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
 
-        .sidebar-left li {
-            margin-bottom: 5px;
-        }
+.card1 h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #ffd900;
+    border-bottom: 2px solid #fff200;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.card1 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card1 ul li {
+    font-size: 14px;
+    padding: 6px 0;
+    color: #eaeaea;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card1.contact p {
+    font-size: 14px;
+    margin: 6px 0;
+    color: #ddd;
+}
+
+/* =========================== TABLETTE 1024px =========================== */
+
+@media (max-width: 1024px) {
+
+    .sidebar-left,
+    .sidebar1 {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: 90%;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar-left ul {
+        width: 100%;
+    }
+
+    .card1 {
+        width: 100%;
+        max-width: 500px;
     }
 }
 
-@media (max-width: 500px) {
+/* =========================== =========================responsive 820px ================================ */
+@media (max-width: 820px) {
 
     .sidebar-left {
-        width: 180px;
-        padding: 10px;
-    }
-
-    .sidebar-title {
-        font-size: 1rem;
+        width: 64%;
+        margin: 10px auto;
     }
 
     .sidebar-left a {
-        font-size: 0.8rem;
-        padding: 6px;
-        gap: 6px;
+        font-size: 1.2rem;
+        padding: 8px;
     }
 
-    .sidebar-left i {
-        width: 15px;
+    .sidebar-left li {
+        margin-bottom: 8px;
+    }
+
+    .card1 {
+        width: 100%;
+    }
+
+    .card1 ul li {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+
+    .card1.contact p {
+        font-size: 1.2rem;
+    }
+
+    .sidebar1:hover {
+        transform: none;
+        background: inherit;
+        box-shadow: none;
+
+    }
+
+}
+
+/* ====================================================================Responsive 600px =========================== */
+
+@media (max-width: 600px) {
+
+    .sidebar-left,
+    .sidebar1 {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    .sidebar-title {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .sidebar-left a {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .sidebar-left li {
+        margin-bottom: 5px;
+    }
+
+    .card1 {
+        width: 100%;
     }
 }
 
-/* Très petits écrans */
-@media screen and (max-width: 320px) {
-    .signal-box p {
-        font-size: 12px;
-        animation-duration: 7s;
-    }
-}
 
-
-/* Animation d’apparition pour les éléments de la page d’accueil */
+/********************************Animation d’apparition pour les éléments de la page d’accueil ********************************/
 
 @keyframes apparition {
 
@@ -1627,12 +1920,15 @@ footer a {
 
 }
 
+
 header,
 .table,
 .texte,
 .btn-primary,
 .anime,
-.body {
+.body,
+.sidebar-left,
+.sidebar1 {
     opacity: 0;
 
     transform: translateY(100px);
