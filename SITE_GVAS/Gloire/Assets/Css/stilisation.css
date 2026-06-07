@@ -67,6 +67,13 @@
     display: none;
   }
 
+  .defilements h1 {
+    font-size: 45px;
+  }
+  .defilements h2 {
+    font-size: 25px;
+  }
+
   .partie_navbar nav .liNone {
     display: flex;
   }
@@ -281,6 +288,14 @@
   #contenu {
     height: 50%;
     width: 100%;
+  }
+
+  .defilements h1 {
+    font-size: 30px;
+  }
+
+   .defilements h2 {
+    font-size: 15px;
   }
 
   .menu {
@@ -524,7 +539,7 @@
   }
 
   20% {
-    color: #dbda4d;
+    color: #7da7bb;
   }
 
   30% {
@@ -536,7 +551,7 @@
   }
 
   50% {
-    color: #dbda4d;
+    color: #7da7bb;
   }
 
   60% {
@@ -548,7 +563,7 @@
   }
 
   80% {
-    color: #dbda4d;
+    color: #7da7bb;
   }
 
   90% {
