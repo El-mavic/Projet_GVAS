@@ -267,7 +267,7 @@ header {
         display: flex;
         justify-content: flex-start;
 
-        margin-left: 46%;
+        margin-left: 42%;
         margin-top: 60px;
     }
 }
@@ -296,7 +296,7 @@ header {
     .btn-container {
         display: flex;
         justify-content: flex-start;
-        margin-left: 46%;
+        margin-left: 42%;
         margin-top: 60px;
     }
 }
@@ -350,26 +350,27 @@ header {
     /* .burger-menu {
         z-index: 99999;
     }  */
-      
+
     .btn-container {
-          display: flex;
+        display: flex;
         justify-content: flex-start;
         margin-left: 320px;
         margin-top: 10px;
-}
+    }
 
 }
 
 @media (min-width: 1180px) {
     .burger-menu {
         z-index: 99999;
-    } 
+    }
 }
+
 /*------------------------------------------- 820px Responsive----------------------------------------*/
 @media (max-width: 1180px) {
     .burger-menu {
         z-index: 99999;
-    } 
+    }
 
     .burger-menu-button {
         background: black;
