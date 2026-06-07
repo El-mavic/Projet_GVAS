@@ -191,6 +191,8 @@ header {
     text-align: center;
     background: linear-gradient(90deg, #7c7f80, #fffb0096);
     font-family: Dutch801 XBd BT;
+    width: 100%;
+    height: auto;
 
 }
 
@@ -264,7 +266,7 @@ header {
     .btn-container {
         display: flex;
         justify-content: flex-start;
-<<<<<<< HEAD
+
         margin-left: 46%;
         margin-top: 60px;
     }
@@ -295,9 +297,6 @@ header {
         display: flex;
         justify-content: flex-start;
         margin-left: 46%;
-=======
-        margin-left: 570px;
->>>>>>> 5304fb124764cc5eaede2d30970b7d2ac8f87cb8
         margin-top: 60px;
     }
 }
