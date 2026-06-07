@@ -60,7 +60,7 @@ if (!isset($_SESSION['visite_' . $page])) {
     <meta name="author" content="Célina LUEMBA">
     <meta name="author" content="Gloire NGUIMBI">
     <meta name="description"
-          content="De réfférence, GVAS est une structure 
+        content="De réfférence, GVAS est une structure 
           professionnelle composée d’un personnel de qualité agréé 
           par l’État. spécialisé dans la vente des produits et services, 
           l'accompagnement professionnelle à travers des formations qualifiantes
@@ -102,7 +102,9 @@ if (!isset($_SESSION['visite_' . $page])) {
         <div class="navbar">
             <div class="logo">
                 <img class="gvas" src="images/Images/GVAS.png" alt="GVAS">
+
             </div>
+
 
             <ul class="links">
                 <li><a href="temoignage.php">Temoignage</a></li>
@@ -125,12 +127,6 @@ if (!isset($_SESSION['visite_' . $page])) {
             <p><?= htmlspecialchars($signal['message']) ?></p>
         </div>
     <?php endif; ?>
-    <!--La première page qui survole--
-    <div id="welcome-screen">
-        <img class="welcome-image" src="images/Images/GVAS.png" alt="Bienvenue">
-        <h1>Bienvenue au Groupe Vision d'Aigle Services</h1>
-        <p> Qui ne se forme pas se déforme. </p>
-    </div>-->
 
     <!--Image + Animation-->
     <p class="texte">Bienvenue au Groupe Vision d'Aigle Services </p>
@@ -140,9 +136,22 @@ if (!isset($_SESSION['visite_' . $page])) {
     </div>
 
     <!--Boutton d'inscription-->
+
     <button id="btnInscription" class="btn-primary">
         Inscription
     </button>
+    <div class="sidebar-left">
+        <div class="sidebar-title">GVAS</div>
+
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-users"></i> Qui sommes-nous ?</a></li>
+            <li><a href="#"><i class="fa-solid fa-graduation-cap"></i> Nos domaines de formation</a></li>
+            <li><a href="#"><i class="fa-solid fa-star"></i> Pourquoi choisir GVAS ?</a></li>
+            <li><a href="#"><i class="fa-solid fa-handshake"></i> Nos partenaires</a></li>
+            <li><a href="#modal"><i class="fa-solid fa-file-signature"></i> Inscription en ligne</a></li>
+            <li><a href="#"><i class="fa-solid fa-phone"></i> Contact rapide</a></li>
+        </ul>
+    </div>
     <div id="modal" class="modal">
         <div class="modal-content animate">
             <span id="closeBtn" class="close">&times;</span>
@@ -253,7 +262,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
 
             <!-- RENDEZ-VOUS -->
-            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8438.064025443899!2d11.903930692365016!3d-4.817061689658946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a60af0b2c6b78c9%3A0xc598de43a114b8f5!2sGroupe%20Vision%20d&#39;Aigle%20Services!5e1!3m2!1sfr!2scg!4v1780253118635!5m2!1sfr!2scg" class="fab-item">
+            <a href="https://maps.app.goo.gl/EYGq6tn7z9LnTNgJ6" target="_blank">
                 <span class="fab-label">Notre localisation</span>
                 <div class="fab-btn">
                     <i class="fa-solid fa-location-dot"></i>
@@ -279,18 +288,6 @@ if (!isset($_SESSION['visite_' . $page])) {
         </div>
     </div>
     <div class="contentes"></div>
-
-    <!--Pour la petite fenetre quant le formulaire est envoyer
-    <script>
-        fetch("Traitement.php", {
-                method: "POST",
-                body: new FormData(document.querySelector("form"))
-            })
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("message").innerHTML = data;
-            });
-    </script>-->
 
     <!Pour le chatbot>
         <script>
