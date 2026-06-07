@@ -1227,6 +1227,7 @@ input:focus {
     }
 }
 
+<<<<<<< HEAD
 footer {
     background-image:
         radial-gradient(circle at 99% 33%,
@@ -1580,6 +1581,19 @@ footer a {
     }
 
 }
+=======
+
+/* FOOTER CSS */
+
+
+
+
+
+
+
+
+
+>>>>>>> bee3e9a5b60f32eb4ac1feee0717b63a7ace475d
 
 .signal-box {
     color: white;
