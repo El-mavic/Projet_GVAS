@@ -125,6 +125,8 @@ if (!isset($_SESSION['visite_' . $page])) {
             <p>Formation utile pour lancer son projet.</p>
         </div>
     </section>
+
+    
     <script>
         let lastScroll = 0;
         const header = document.getElementById("header");

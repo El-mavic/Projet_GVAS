@@ -874,9 +874,9 @@ if (!isset($_SESSION['visite_' . $page])) {
                     <h1>Groupe vision d'Aigle Services</h1>
                 </div>
                 <p id="justP" >
-                    De réfférence, GVAS est une structure professionnelle composée d’un personnel de qualité agréé
+                    De référence, GVAS est une structure professionnelle composée d’un personnel de qualité agréé
                     par
-                    l’État. spécialisé dans la vente des produits et services, l'accompagnement professionnelle à
+                    l’État. spécialisé dans la vente des produits et services, l'accompagnement professionnel à
                     travers des formations qualifiantes et certifiantes mais aussi dans un suivi quelconque en vue
                     d’un domaine professionnel donné.
                 </p>
