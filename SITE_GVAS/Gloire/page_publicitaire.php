@@ -39,303 +39,12 @@ if (!isset($_SESSION['visite_' . $page])) {
     <link rel="icon" href="Assets/Img/icon_logo/logo-GVAS.png">
     <link rel="icon" href="../style.css">
     <link rel="stylesheet" href="Assets/Css/stilisation.css">
+
+    <link rel="stylesheet" href="../style.css">
     <title>Page Publicitaire</title>
 </head>
 
 <body>
-    <!-- CSS du header -->
-    <style>
-        body {
-            height: 100vh;
-            background-color: rgba(124, 123, 123, 0.671);
-            background-size: cover;
-            background-position: center;
-            /* background-repeat: no-repeat; */
-            /* padding-top: 80px; */
-
-        }
-
-        /* Header */
-
-        li {
-            list-style: none;
-        }
-
-        a {
-            text-decoration: none;
-            color: white;
-            font-size: 1.5em;
-        }
-
-        a:hover {
-            color: #fff200;
-        }
-
-
-
-        header {
-            position: relative;
-            /* top: 0; */
-            /* left: 0; */
-            /* width: 100%; */
-            padding: 0 8em;
-            background-color: rgba(19, 22, 22, 0.61);
-            border-bottom-left-radius: 50px;
-            border-top-left-radius: 50px;
-            border-bottom-right-radius: 50px;
-            border-top-right-radius: 50px;
-            /* z-index: 1000; */
-        }
-
-        .navbar {
-            width: 100%;
-            max-width: 1200px;
-            height: 80px;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .gvas {
-            width: 6.5%;
-            position: absolute;
-            left: -80px;
-            margin-top: -3.2%;
-
-        }
-
-        .navbar .logo a {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .navbar .links {
-            display: flex;
-            gap: 5rem;
-
-        }
-
-        .navbar .links a {
-            position: relative;
-        }
-
-        .navbar .links a::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -5px;
-            width: 0;
-            height: 3px;
-            background-color: #fff200;
-            transition: width 0.3s ease;
-        }
-
-        .navbar .links a:hover::after {
-            width: 100%;
-        }
-
-        .navbar .burger-menu-button {
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            display: none;
-        }
-
-        .buttons {
-            display: flex;
-            gap: 10px;
-        }
-
-        .action-button {
-            background-color: #fff200;
-            color: black;
-            border: 1px solid #fff200;
-            padding: 0.5rem 1.2rem;
-            outline: none;
-            border-radius: 5px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            cursor: pointer;
-
-        }
-
-        .action-button:hover {
-            color: blue;
-            border: 1px solid #fff200;
-        }
-
-        .pro {
-            background-color: transparent;
-            color: white;
-            border: 1px solid #fff200;
-        }
-
-        .pro:hover {
-            background-color: #fff200;
-            color: rgba(34, 7, 97, 0.726);
-        }
-
-        /*-----Burger menu----*/
-        .burger-menu {
-            display: none;
-            height: 0;
-            position: absolute;
-            right: 2rem;
-            top: 60px;
-            width: 200px;
-            background: rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(15px);
-            border-radius: 10px;
-            overflow: hidden;
-            transition: height cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-        }
-
-        .burger-menu.open {
-            height: 250px;
-        }
-
-
-
-        .burger-menu li {
-            padding: 0.19rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-left: -100px;
-        }
-
-        .divider {
-            height: 1px;
-            background: #fff;
-            width: 80%;
-            margin-left: -30px;
-            margin-bottom: 1rem;
-        }
-
-
-
-        .burger-menu .action-button {
-            width: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .buttons-burger-menu {
-            display: flex;
-            flex-direction: column;
-            margin-left: -5px;
-            gap: 10px;
-        }
-
-        /*------Suite----*/
-
-        .texte {
-            font-size: 3em;
-            font-weight: bold;
-            align-items: center;
-            text-align: center;
-            background: linear-gradient(90deg, #7c7f80, #fffb0096);
-            font-family: Dutch801 XBd BT;
-
-        }
-
-
-
-        /*--------Responsive-------*/
-
-        @media (max-width:990px) {
-            header {
-                background: none;
-            }
-
-            .navbar .links,
-            .navbar .action-button {
-                display: none;
-
-            }
-
-            .navbar .burger-menu-button {
-                display: block;
-
-            }
-
-            .burger-menu {
-                display: block;
-
-            }
-        }
-
-        @media (max-width:576px) {
-
-            .burger-menu {
-                position: block;
-                z-index: 9999;
-            }
-        }
-
-        /*--- Logo + burger---*/
-
-        @media (max-width: 500px) {
-            .gvas {
-                width: 5rem;
-                margin-top: -40px;
-            }
-
-            .burger-menu-button {
-
-                position: relative;
-                left: 5rem;
-            }
-
-            header {
-                display: block;
-            }
-
-        }
-
-        @media (max-width:990px) {
-            .texte {
-                font-size: 2rem;
-            }
-
-        }
-
-
-
-
-        /*pour la première page*/
-
-        @media (max-width: 1366px) {
-            .table {
-                margin-top: 30px;
-            }
-
-            .buttons {
-                position: relative;
-                left: 90px;
-            }
-
-            .links {
-                position: relative;
-                left: 50px;
-                bottom: -20%
-            }
-
-            .btn-primary {
-                margin-left: 1px;
-            }
-        }
-
-        @media (max-width: 820px) {
-
-            .burger-menu-button {
-                margin-right: 1px;
-            }
-        }
-    </style> */
     <!-- *********header********** -->
     <div class=" burger-menu ">
         <ul class=" links">
@@ -372,35 +81,9 @@ if (!isset($_SESSION['visite_' . $page])) {
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
-
-    </header>
-    <!-- <p class="texte">Groupe Vision d'Aigle Services </p> -->
-
-
-
-
-
-    <!--******ruban déroulant********-->
-    <section class="section_pub">
-        <div class="ad-banner">
-            <div class="ad-track">
-                <!-- Contenu répété pour effet infini -->
-                <div class="baba1" class="ad-item">#Service de Livraison</div>
-                <div class="baba2" class="ad-item">#Paiement sécurisé</div>
-
-                <!-- DUPLICATION (important pour boucle fluide) -->
-                <div class="baba3" class="ad-item">#Formation professionnels</div>
-                <div class="baba4" class="ad-item">#Promo vacances</div>
-                <div class="baba5" class="ad-item">#Service d'orientation inclu</div>
-                <div class="baba6" class="ad-item">#Vente d'articles</div>
-            </div>
-        </div>
-    </section>
-    <!-- *********header_ICI********** -->
-
-
     </header>
 
+    <p class="texte">Groupe Vision d'Aigle Services </p>
 
     <main id="ancre">
         <section id="classeur">
@@ -414,7 +97,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                             <span>page</span>
                             <span>publicitaire</span>
                         </h1>
-                        <h2>Retrouvrez <a href="galeria.php">ici</a> nos actualités sous forme d'informations</h2>
+                        <h2>Retrouvrez ici nos actualités sous forme d'informations</h2>
                     </div>
                 </div>
 
@@ -889,7 +572,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                                 </li>
                                 
                                 <li>
-                                    Votre tranche d'êge et autre ...
+                                    Votre tranche d'êge et autre
                                 </li>
                             </ul>
                         </div>
@@ -959,7 +642,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                                 </li>
                                 
                                 <li>
-                                    Votre tranche d'êge et autre ...
+                                    Votre tranche d'êge et autre
                                 </li>
                             </ul>
                         </div>
@@ -1315,12 +998,12 @@ if (!isset($_SESSION['visite_' . $page])) {
 
             <div class="pat">
                 <h1>Nos Contacts</h1>
-                <Ul>
+                <ul>
                     <li>info@gvas.fr</li>
                     <li>(+242) 05 344 40 20</li>
                     <li>(+242) 06 420 14 15</li>
                     <li>(+242) 06 416 36 21</li>
-                </Ul>
+                </ul>
             </div>
 
             <div class="form">

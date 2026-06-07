@@ -44,7 +44,18 @@
      border-bottom-right-radius: 50px;
      border-top-right-radius: 50px;
      z-index: 1000;
- }
+
+    display: flex;
+    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.navbar {
+    justify-content: space-between;
+    width: auto;
+}
 
  .navbar {
      width: 100%;
