@@ -344,6 +344,22 @@ header {
 
 }
 
+/* @media (min-width: 1280px)  */
+
+@media (max-width: 1000px) {
+    /* .burger-menu {
+        z-index: 99999;
+    }  */
+      
+    .btn-container {
+          display: flex;
+        justify-content: flex-start;
+        margin-left: 320px;
+        margin-top: 10px;
+}
+
+}
+
 @media (min-width: 1180px) {
     .burger-menu {
         z-index: 99999;
