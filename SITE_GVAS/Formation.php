@@ -20,7 +20,7 @@ if (!isset($_SESSION['visite_' . $page])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-          content="De réfférence, GVAS est une structure 
+        content="De réfférence, GVAS est une structure 
           professionnelle composée d’un personnel de qualité agréé 
           par l’État. spécialisé dans la vente des produits et services, 
           l'accompagnement professionnelle à travers des formations qualifiantes
@@ -33,28 +33,52 @@ if (!isset($_SESSION['visite_' . $page])) {
     <meta name="keywords" content="GVAS, EVGS, groupe vision d'aigle services, vision d'aigle, achat, formation, cours en ligne, produits, service">
     <link rel="icon" href="images/Images/GVAS.png">
     <title>Groupe Vision d'Aigle Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="formation.css">
 </head>
 
 <body class="anime">
+    <div class=" burger-menu ">
+        <ul class=" links">
+            <li><a href="index.php">Accueil</a></li>
+            <li><a href="temoignage.php">Temoignage</a></li>
+            <li><a href="Galerie.php">Gallérie</a></li>
+            <li><a href="contacts.php">Contacts</a></li>
+            <div class="divider"></div>
+            <div class="buttons-burger-menu">
+                <a class="action-button" href="Gloire/page_publicitaire.php">Pub</a>
+                <a class="action-button" href="vivi/apropos.php">A propos</a>
+            </div>
+        </ul>
+    </div>
+    <header>
 
-
-    <header class="header" id="header">
-        <a href="index.php" class="logo-container">
+        <div class="navbar">
             <div class="logo">
                 <img class="gvas" src="images/Images/GVAS.png" alt="GVAS">
+
             </div>
-            <div class="logo-text">roupe Vision d'Aigle Services</div>
-        </a>
 
-        <div class="buttons">
-            <a class="action-button1" href="Gloire/page_publicitaire.php">En savoir plus</a>
-            <a class="action-button pro" href="index.php">Inscription</a>
+            <ul class="links">
+                <li><a href="index.php">Accueil</a></li>
+                <li><a href="temoignage.php">Temoignage</a></li>
+                <li><a href="galerie.php">Galerie</a></li>
+                <li><a href="contacts.php">Contacts</a></li>
+            </ul>
+            <div class="buttons">
+                <a class="action-button pro " href="Gloire/page_publicitaire.php">Pub</a>
+                <a class="action-button" href="vivi/apropos.php">A propos</a>
+            </div>
+            <div class="burger-menu-button">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
-
     </header>
+    <p class="texte">Groupe Vision d'Aigle Services </p>
 
-    <!-- SECTION -->
+
 
     <!-- GRID DES FORMATIONS -->
     <section class="formations">
@@ -144,7 +168,40 @@ if (!isset($_SESSION['visite_' . $page])) {
             lastScroll = currentScroll;
         });
     </script>
+    <!--burgerMenuButton-->
+    <script>
+        const burgerMenuButton = document.querySelector('.burger-menu-button');
+        const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i');
+        const burgerMenu = document.querySelector('.burger-menu');
 
+        burgerMenuButton.onclick = function(e) {
+            e.stopPropagation();
+
+            burgerMenu.classList.toggle('open');
+
+            const isOpen = burgerMenu.classList.contains('open');
+
+            burgerMenuButtonIcon.classList = isOpen ?
+                'fa-solid fa-xmark' :
+                'fa-solid fa-bars';
+        };
+
+        /* fermer si on clique à côté */
+        document.addEventListener('click', function(e) {
+            if (
+                !burgerMenu.contains(e.target) &&
+                !burgerMenuButton.contains(e.target)
+            ) {
+                burgerMenu.classList.remove('open');
+                burgerMenuButtonIcon.classList = 'fa-solid fa-bars';
+            }
+        });
+
+        /* empêcher fermeture si clic dans le menu */
+        burgerMenu.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    </script>
 </body>
 
 </html>

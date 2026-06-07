@@ -39,7 +39,7 @@ shareBtn.addEventListener("click", async () => {
   /* Animation */
 
   //   shareBtn.style.transform = "scale(1.15)";
-  shareBtn.style.boxShadow = "0 0 20px #00ff99";
+  // shareBtn.style.boxShadow = "0 0 20px #00ff99";
 
   setTimeout(() => {
     // shareBtn.style.transform = "scale(1)";
@@ -72,15 +72,15 @@ shareBtn.addEventListener("click", async () => {
 // });
 
 // menuBurger
-let burger = document.getElementById("burger");
+// let burger = document.getElementById("burger");
 
-let menu = document.getElementById("menu");
+// let menu = document.getElementById("menu");
 
-burger.addEventListener("click", () => {
+// burger.addEventListener("click", () => {
 
-  menu.classList.toggle("active");
+//   menu.classList.toggle("active");
 
-  burger.classList.toggle("active");
+//   burger.classList.toggle("active");
 
-});
+// });
 

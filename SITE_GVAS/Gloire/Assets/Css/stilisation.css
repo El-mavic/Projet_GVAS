@@ -67,6 +67,13 @@
     display: none;
   }
 
+  .defilements h1 {
+    font-size: 45px;
+  }
+  .defilements h2 {
+    font-size: 25px;
+  }
+
   .partie_navbar nav .liNone {
     display: flex;
   }
@@ -281,6 +288,14 @@
   #contenu {
     height: 50%;
     width: 100%;
+  }
+
+  .defilements h1 {
+    font-size: 30px;
+  }
+
+   .defilements h2 {
+    font-size: 15px;
   }
 
   .menu {
