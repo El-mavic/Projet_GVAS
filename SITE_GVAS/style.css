@@ -264,7 +264,7 @@ header {
     .btn-container {
         display: flex;
         justify-content: flex-start;
-<<<<<<< HEAD
+
         margin-left: 46%;
         margin-top: 60px;
     }
@@ -295,9 +295,6 @@ header {
         display: flex;
         justify-content: flex-start;
         margin-left: 46%;
-=======
-        margin-left: 570px;
->>>>>>> 5304fb124764cc5eaede2d30970b7d2ac8f87cb8
         margin-top: 60px;
     }
 }
