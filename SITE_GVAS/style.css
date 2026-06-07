@@ -264,7 +264,36 @@ header {
     .btn-container {
         display: flex;
         justify-content: flex-start;
-        margin-left: 670px;
+        margin-left: 46%;
+        margin-top: 60px;
+    }
+}
+
+
+
+@media (min-width: 1366px) {
+    .Table {
+        margin-left: 10%;
+    }
+
+    .table {
+        margin-top: 30px;
+    }
+
+    .buttons {
+        position: relative;
+        left: 90px;
+    }
+
+    .links {
+        position: relative;
+        left: 50px;
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 46%;
         margin-top: 60px;
     }
 }
