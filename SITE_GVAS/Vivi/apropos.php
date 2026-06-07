@@ -38,6 +38,8 @@ if (!isset($_SESSION['visite_' . $page])) {
 </head>
 
 <body>
+
+<!--  
   <nav>
     <div class="logo"><span>G.V.A.S</span></div>
     <button class="burger" id="burger">
@@ -51,10 +53,13 @@ if (!isset($_SESSION['visite_' . $page])) {
       <li><a href="../galerie.php">Galerie</a></li>
       <li><a href="../contacts.php">Contacts</a></li>
     </ul>
+
+    -->
     <!-- <button class="bouton">Nous rejoindre</button> -->
+    <!--
     <a href="../Gloire/page_publicitaire.php" class="bouton">En savoir plus</a>
   </nav>
-
+    -->
   <!-- SECTION HERROO -->
 
   <section class="hero">
@@ -230,8 +235,6 @@ if (!isset($_SESSION['visite_' . $page])) {
               <div class="chiffres-label">étudiants formés</div>
             </div>
           </a>
-
-
           <a href="../Formation.php">
             <div class="chiffres-card">
               <span class="chiffres-number">+6</span>
@@ -291,16 +294,19 @@ if (!isset($_SESSION['visite_' . $page])) {
 
 
       <!-- THE FOOTER -->
+
+      <!-- 
       <footer class="footer">
         <div class="footer-container">
-
+       -->
           <!--  Logo + texte + réseaux -->
-
+          <!--  
           <div class="footer-description">
             <img src="images/Images/GVAS.png" alt="Logo GVAS">
             <p class="footer-text">
               Le Groupe Vision d'Aigle Services accompagne les talents vers un avenir meilleur.
             </p>
+            -->
             <!--<div class="footer-social">
             <div class="social-btn">
               <div class="social-item">
@@ -309,6 +315,8 @@ if (!isset($_SESSION['visite_' . $page])) {
               </div>
             </div>
           </div>-->
+          
+          <!--  
             <div class="footer-social">
               <a class="fb" href="https://www.facebook.com/profile.php?id=61583138888176" target="_blank">
                 <ion-icon name="logo-facebook"></ion-icon>
@@ -316,11 +324,14 @@ if (!isset($_SESSION['visite_' . $page])) {
               <a class="fb" href="https://youtube.com/dcodeyt" target="_blank">
                 <ion-icon name="logo-youtube"></ion-icon>
               </a>
+
+          -->
               <!--  
               <a class="fb" href="https://instagram.com/dcodeyt" target="_blank">
                 <ion-icon name="logo-instagram"></ion-icon>
               </a>
               -->
+            <!--
               <a class="fb" href="https://whatsapp.com/dcodeyt" target="_blank">
                 <ion-icon name="logo-whatsapp"></ion-icon>
               </a>
@@ -360,7 +371,154 @@ if (!isset($_SESSION['visite_' . $page])) {
           <p>© 2026 — <span>G.V.A.S</span> — Tous droits réservés à l'auteur.</p>
         </div>
       </footer>
+      -->
 
+
+      <!-- La partie footer -->
+      <footer>
+        <div class="footer_part1">
+            <div class="aigle ">
+                <div class="flex">
+                    <img src="images/Images/GVAS.png" alt="icon_logo">
+                    <h1>Groupe vision d'Aigle Services</h1>
+                </div>
+                <p id="justP" >
+                    De réfférence, GVAS est une structure professionnelle composée d’un personnel de qualité agréé
+                    par
+                    l’État. spécialisé dans la vente des produits et services, l'accompagnement professionnelle à
+                    travers des formations qualifiantes et certifiantes mais aussi dans un suivi quelconque en vue
+                    d’un domaine professionnel donné.
+                </p>
+            </div>
+
+            <div class="aigle">
+                <h1>Notre localisation</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4218.998780710211!2d11.90546!3d-4.822414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDknMjAuNyJTIDExwrA1NCcxOS43IkU!5e1!3m2!1sfr!2scg!4v1780334157442!5m2!1sfr!2scg" 
+                    width="100%" height="225" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+                <a class="Hici" href="https://www.google.com/maps/place/4%C2%B049'21.0%22S+11%C2%B054'19.7%22E/@-4.8224385,11.9053312,121m/data=!3m1!1e3!4m4!3m3!8m2!3d-4.8225!4d11.9054722?hl=fr&entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank">
+                        "Cliquez ici pour Agrandir la MAPS"
+                </a>
+            </div>
+
+            <div class="hide">
+                <h1>Suivez nous sur nos pages</h1>
+            </div>
+           <div id="sous_class_contact">
+                        <div class="a">
+                            <a href="../index.php">
+                                <i class="fa-solid fa-house" style="color: rgb(0, 0, 0);"></i>
+                            </a>
+                        </div>
+
+                        <div class="a">
+                            <a href="https://www.facebook.com/profile.php?id=61583138888176" target="_blank">
+                                <i class="fa-brands fa-square-facebook" style="color: rgb(0, 0, 0);"></i>
+                            </a>
+                        </div>
+
+                        <div class="a">
+                            <a href="#">
+                                <i class="fa-brands fa-youtube" style="color: rgb(0, 0, 0);"></i>
+                            </a>
+                        </div>
+
+                        <div class="a">
+                            <a href="https://wa.me/242064201415" target="_blank">
+                                <i class="fa-brands fa-whatsapp" style="color: rgb(0, 0, 0);"></i>
+                            </a>
+                        </div>
+                    </div>
+
+        </div>
+
+        </div>
+
+        <div class="footer_part2">
+            <div class="pat">
+                <h1>Nos pages</h1>
+                <ul>
+                    <li><a href="../index.php">Acceuil</a></li>
+                    <li><a href="../formation.php">Formations</a></li>
+                    <li><a href="../vivi/apropos.php">A_Propos</a></li>
+                    <li><a href="..//Gloire/page_publicitaire.php">Page Publicitaire</a></li>
+                    <li><a href="../galerie.php">Galerie</a></li>
+                    <li><a href="../contacts.php">Contacts</a></li>
+                    <li><a href="../temoignage.php">Témoignage</a></li>
+                </ul>
+            </div>
+
+            <div class="pat">
+                <h1>Nos Services</h1>
+                <ul>
+                    <li><a href="../formation.php">Langues</a></li>
+                    <li><a href="../formation.php">Informatique</a></li>
+                    <li><a href="../formation.php">Pôle Commercial</a></li>
+                </ul>
+            </div>
+
+
+            <div class="pat">
+                <h1>Nos Contacts</h1>
+                <Ul>
+                    <li>info@gvas.fr</li>
+                    <li>(+242) 05 344 40 20</li>
+                    <li>(+242) 06 420 14 15</li>
+                    <li>(+242) 06 416 36 21</li>
+                </Ul>
+            </div>
+            
+        <div class="form">       
+            <form action="../Traitement.php" method="POST">
+                <input type="hidden" name="form_type" value="commentaire">
+                <label for="envoie">
+                    <h1 class="hid">
+                        Envoyez votre commentaire
+                    </h1>
+                </label>
+                <div>
+                    <input class="tim" placeholder="Votre commentaire ici" type="text" name="envoie" id="envoie" required>
+                    <input class="tom" type="submit" value="soumettre !"></input>
+                </div>
+            </form>
+
+            <div id="sous_class_contact">
+                    <div class="a">
+                        <a class="b" class="card1" href="../index.php">
+                            <i class="fa-solid fa-house" style="color: rgb(0, 0, 0);"></i>
+                        </a>
+                    </div>
+
+                    <div class="a">
+                        <a class="b" class="card2" href="https://www.facebook.com/profile.php?id=61583138888176" target="_blank">
+                            <i class="fa-brands fa-square-facebook" style="color: rgb(0, 0, 0);"></i>
+                        </a>
+                    </div>
+
+                    <div class="a">
+                        <a class="b" class="card3" href="#">
+                            <i class="fa-brands fa-youtube" style="color: rgb(0, 0, 0);"></i>
+                        </a>
+                    </div>
+
+                    <div class="a">
+                        <a class="b" class="card4" href="https://wa.me/242064201415" target="_blank">
+                            <i class="fa-brands fa-whatsapp" style="color: rgb(0, 0, 0);"></i>
+                        </a>
+                    </div>
+                </div>
+        </div>
+        </div>
+
+        <div class="bas">
+            <h1>
+                #celui qui ne se forme pas, se déforme !
+            </h1>
+        </div>
+      </footer>
       <script>
         const burger = document.getElementById('burger');
         const menu = document.getElementById('menu');
