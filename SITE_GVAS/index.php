@@ -83,6 +83,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 </head>
 
 <body>
+    <!--------------------------------------------------------Header---------------------------------------------------------------->
     <div class="burger-menu ">
         <ul class="links">
             <li><a href="temoignage.php">Temoignage</a></li>
@@ -102,7 +103,6 @@ if (!isset($_SESSION['visite_' . $page])) {
         <div class="navbar">
             <div class="logo">
                 <img class="gvas" src="images/Images/GVAS.png" alt="GVAS">
-
             </div>
 
 
@@ -122,36 +122,69 @@ if (!isset($_SESSION['visite_' . $page])) {
         </div>
 
     </header>
+    <!--------------------------------------Message de GVAS BIENVENUE---------------------------------------------------------------->
+
+    <p class="texte">Bienvenue au Groupe Vision d'Aigle Services </p>
+
+    <!-------------------------------------------Message de signalisation---------------------------------------------------------------->
     <?php if ($signal): ?>
         <div class="signal-box">
             <p><?= htmlspecialchars($signal['message']) ?></p>
         </div>
     <?php endif; ?>
 
-    <!--Image + Animation-->
-    <p class="texte">Bienvenue au Groupe Vision d'Aigle Services </p>
-    <div class="table">
-        <img class="table1" src="images/BG/Rond.JPG" alt="table">
-        <img class="table2" src="images/BG/12.JPG" alt="table">
+
+
+    <section class="Table">
+        <div class="table">
+            <img class="table1" src="images/BG/Rond.JPG" alt="table">
+            <img class="table2" src="images/BG/12.JPG" alt="table">
+        </div>
+    </section>
+
+    <!-------------------------------------------Boutton d'inscription---------------------------------------------------------->
+    <div class="btn-container">
+        <button id="btnInscription" class="btn-primary">
+            Inscription
+        </button>
     </div>
 
-    <!--Boutton d'inscription-->
 
-    <button id="btnInscription" class="btn-primary">
-        Inscription
-    </button>
+    <!--------------------------------------------------------sidebar-left nav à gauche----------------------------------------------->
     <div class="sidebar-left">
         <div class="sidebar-title">GVAS</div>
-
         <ul>
             <li><a href="#"><i class="fa-solid fa-users"></i> Qui sommes-nous ?</a></li>
             <li><a href="#"><i class="fa-solid fa-graduation-cap"></i> Nos domaines de formation</a></li>
             <li><a href="#"><i class="fa-solid fa-star"></i> Pourquoi choisir GVAS ?</a></li>
             <li><a href="#"><i class="fa-solid fa-handshake"></i> Nos partenaires</a></li>
-            <li><a href="#modal"><i class="fa-solid fa-file-signature"></i> Inscription en ligne</a></li>
+            <!-- <li><a href="#modal"><i class="fa-solid fa-file-signature"></i> Inscription en ligne</a></li> -->
             <li><a href="#"><i class="fa-solid fa-phone"></i> Contact rapide</a></li>
         </ul>
     </div>
+
+
+    <!-- -----------------------------------Sidebar droite nav à droite ---------------------------------------------------------- -->
+    <aside class="sidebar1">
+        <div class="card1">
+            <h3>Centre de services</h3>
+            <ul>
+                <li>✓ Photocopie</li>
+                <li>✓ Impression A4 / A3</li>
+                <li>✓ Numérisation de documents</li>
+                <li>✓ Cartes de mariage</li>
+                <li>✓ Mise en page</li>
+            </ul>
+        </div>
+        <div class="card1 contact">
+            <h3>Contact/Secretaire</h3>
+            <p><i class="fa-solid fa-phone"></i> : +242 06 420 14 15</p>
+            <p><i class="fa-solid fa-envelope"></i> : elmavicd@gmail.com</p>
+        </div>
+    </aside>
+
+    <!-- -----------------------------------La fenêtre de l'inscription ---------------------------------------------------------- -->
+
     <div id="modal" class="modal">
         <div class="modal-content animate">
             <span id="closeBtn" class="close">&times;</span>
@@ -199,20 +232,16 @@ if (!isset($_SESSION['visite_' . $page])) {
                         <label>Téléphone</label>
                         <input type="tel" name="telephone" placeholder="Entrez votre numero" value="<?= $_POST['telephone'] ?? '' ?>" required>
                         <span class="Erreur"><?= $errors['telephone'] ?? "" ?></span>
-
                     </div>
                     <div class="input-box">
                         <label>Quartier</label>
                         <input type="text" name="quartier" placeholder="Votre quartier" value="<?= $_POST['quartier'] ?? '' ?>" required>
                         <span class="Erreur"><?= $errors['quartier'] ?? "" ?></span>
                     </div>
-
                     <div class="dropdown-container">
-
                         <div id="dropdownBtn" class="dropdown-btn">
                             Sélectionnez des matières
                         </div>
-
                         <ul id="optionsList" class="options">
                             <li>
                                 <input type="checkbox" value="Informatique" id="inf" name="formation[]">
@@ -246,20 +275,19 @@ if (!isset($_SESSION['visite_' . $page])) {
                         <button type="submit" class="btn-submit">Envoyer</button>
                     </div>
                 </div>
-
             </form>
         </div>
     </div>
 
+
+    <!-- -----------------------------------Le bouton flottant du chat ---------------------------------------------------------- -->
     <div class="fab-container">
         <!-- Bouton principal -->
         <div class="fab-main" onclick="toggleFab()">
             <i class="fa-solid fa-comments"></i>
         </div>
-
         <!-- Actions -->
         <div class="fab-actions">
-
 
             <!-- RENDEZ-VOUS -->
             <a href="https://maps.app.goo.gl/EYGq6tn7z9LnTNgJ6" target="_blank">
@@ -284,10 +312,13 @@ if (!isset($_SESSION['visite_' . $page])) {
                     <i class="fa-solid fa-envelope"></i>
                 </div>
             </a>
-
         </div>
     </div>
     <div class="contentes"></div>
+
+    <!-- -----------------------------------End ---------------------------------------------------------- -->
+
+
 
     <!Pour le chatbot>
         <script>
@@ -346,7 +377,8 @@ if (!isset($_SESSION['visite_' . $page])) {
         <!--Script pour la fenêtre d'inscription-->
         <script>
             // ouvrir
-            document.getElementById("btnInscription").onclick = function() {
+            document.getElementById("btnInscription").onclick = function(e) {
+                e.preventDefault(); // IMPORTANT pour le <a href="#">
                 document.getElementById("modal").style.display = "flex";
             }
 
@@ -361,6 +393,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                     document.getElementById("modal").style.display = "none";
                 }
             }
+        </script>
         </script>
 
         <!--Pour la selection des matières-->
