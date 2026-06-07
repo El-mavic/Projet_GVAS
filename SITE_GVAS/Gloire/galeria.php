@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'Traitement.php';
+require '../traitement.php';
 
 $page = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
 
@@ -17,24 +17,21 @@ if (!isset($_SESSION['visite_' . $page])) {
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="De réfférence, GVAS est une structure 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="De réfférence, GVAS est une structure 
           professionnelle composée d’un personnel de qualité agréé 
           par l’État. spécialisé dans la vente des produits et services, 
           l'accompagnement professionnelle à travers des formations qualifiantes
            et certifiantes mais aussi
            dans un suivi quelconque en vue d’un domaine professionnel donné.">
-  <meta name="author" content="Mr El-mavic BAKALA">
-  <meta name="author" content="Miss Célina LUEMBA">
-  <meta name="author" content="Gln93/Mr Tokyo">
-  <meta name="robots" content="index, follow">
-  <meta name="keywords" content="GVAS, EVGS, groupe vision d'aigle services, vision d'aigle, achat, formation, cours en ligne, produits, service">
+    <meta name="author" content="Mr El-mavic BAKALA">
+    <meta name="author" content="Miss Célina LUEMBA">
+    <meta name="author" content="Gln93/Mr Tokyo">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="GVAS, EVGS, groupe vision d'aigle services, vision d'aigle, achat, formation, cours en ligne, produits, service">
   <link rel="icon" href="images/Images/GVAS.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Galerie - GVAS</title>
 </head>
 
@@ -53,7 +50,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
     body {
 
-      background-color: gray;
+      background-image: url(images/Images/gallerie.jpg);
     }
 
     .gallery-section {
@@ -401,343 +398,151 @@ if (!isset($_SESSION['visite_' . $page])) {
 
     }
   </style>
+
   <style>
+    /* Reset */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: cambria, cochin, georgia, times, 'times new roman', serif;
     }
 
-    body {
-      height: 100vh;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+
+    /* Section */
+    .gallery-section {
+      width: 100%;
+      min-height: 100vh;
+      padding: 15px 8%;
+      background: linear-gradient(135deg, #6d6b6b, #eef3f8);
     }
 
-    li {
+    /* Header */
+    .gallery-header {
+      background: linear-gradient(135deg, #31313185, #eef3f8, #45454686);
+      padding: 25px 35px;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      margin-bottom: 40px;
+    }
+
+    /* Title */
+    .gallery-header h2 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 10px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    }
+
+    /* Navigation */
+    #nav ul {
+      display: flex;
+      gap: 15px;
       list-style: none;
-    }
-
-    a {
-      text-decoration: none;
-      color: white;
-      font-size: 1.5em;
-    }
-
-    a:hover {
-      color: #fff200;
-    }
-
-    header {
-      position: relative;
-      padding: 0 8em;
-      background-color: rgba(19, 22, 22, 0.61);
-      border-bottom-left-radius: 50px;
-      border-top-left-radius: 50px;
-      border-bottom-right-radius: 50px;
-      border-top-right-radius: 50px;
-    }
-
-    .navbar {
-      width: 100%;
-      max-width: 1200px;
-      height: 80px;
-      margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .gvas {
-      width: 6.5%;
-      position: absolute;
-      left: 1%;
-      margin-top: -3.2%;
-    }
-
-    .navbar .logo a {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    .navbar .links {
-      display: flex;
-      gap: 5rem;
-
-    }
-
-    .navbar .links a {
-      position: relative;
-    }
-
-    .navbar .links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -5px;
-      width: 0;
-      height: 3px;
-      background-color: #fff200;
-      transition: width 0.3s ease;
-    }
-
-    .navbar .links a:hover::after {
-      width: 100%;
-    }
-
-    .navbar .burger-menu-button {
-      color: white;
-      font-size: 1.5rem;
-      cursor: pointer;
-      display: none;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 10px;
-    }
-
-    .action-button {
-      background-color: #fff200;
-      color: black;
-      border: 1px solid #fff200;
-      padding: 0.5rem 1.2rem;
-      outline: none;
-      border-radius: 5px;
-      font-size: 0.9rem;
-      font-weight: bold;
-      cursor: pointer;
-
-    }
-
-    .action-button:hover {
-      color: rgb(94, 94, 95);
-      border: 1px solid #fff200;
-    }
-
-    .pro {
-      background-color: transparent;
-      color: white;
-      border: 1px solid #fff200;
-    }
-
-    .pro:hover {
-      background-color: #fff200;
-      color: rgba(34, 7, 97, 0.726);
-    }
-
-    /*-----Burger menu----*/
-    .burger-menu {
-      display: none;
-      height: 0;
-      position: absolute;
-      right: 2rem;
-      top: 60px;
-      width: 200px;
-      background: rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(15px);
-      border-radius: 10px;
-      overflow: hidden;
-      transition: height cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-    }
-
-    .burger-menu.open {
-      height: 250px;
-    }
-
-
-
-    .burger-menu li {
-      padding: 0.19rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-left: -100px;
-    }
-
-    .divider {
-      height: 1px;
-      background: #fff;
-      width: 80%;
-      margin-left: -30px;
-      margin-bottom: 1rem;
-    }
-
-
-
-    .burger-menu .action-button {
-      width: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .buttons-burger-menu {
-      display: flex;
-      flex-direction: column;
-      margin-left: -5px;
-      gap: 10px;
-    }
-
-    /*------Suite----*/
-
-    .texte {
-      font-size: 3em;
-      font-weight: bold;
-      align-items: center;
+      flex-wrap: wrap;
       text-align: center;
-      background: linear-gradient(90deg, #7c7f80, #fffb0096);
-      font-family: Dutch801 XBd BT;
-
+      justify-content: center;
     }
 
-    /*--------Responsive-------*/
-
-    @media (max-width:990px) {
-      header {
-        background: none;
-      }
-
-      .navbar .links,
-      .navbar .action-button {
-        display: none;
-
-      }
-
-      .navbar .burger-menu-button {
-        display: block;
-
-      }
-
-      .burger-menu {
-        display: block;
-
-      }
+    #nav ul li a {
+      text-decoration: none;
+      color: #334155;
+      font-weight: 500;
+      padding: 10px 18px;
+      border-radius: 8px;
+      transition: 0.3s ease;
+      background: #f2f3f3;
     }
 
-    @media (max-width:576px) {
-
-      .burger-menu {
-        position: block;
-        z-index: 9999;
-      }
+    #nav ul li a:hover {
+      background: yellow;
+      color: black;
     }
 
-    /*--- Logo + burger---*/
-
-    @media (max-width:500px) {
-
-      .gvas {
-        width: 5rem;
-        margin-top: -40px;
-      }
-
-      .burger-menu-button {
-
-        position: relative;
-        left: 5rem;
-      }
-
-      header {
-        display: block;
-      }
-
+    /* Description */
+    .gallery-section p {
+      margin-top: 20px;
+      font-size: 20px;
+      color: black;
+      text-align: center;
+      font-weight: 500;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
     }
 
-    @media (max-width:990px) {
+    /* Responsive */
+    @media (max-width: 768px) {
+      .gallery-header h2 {
+        font-size: 24px;
+      }
 
-      .texte {
-        font-size: 2rem;
+      #nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-content: center;
+        row-gap: 30px;
+        column-gap: 15px;
+      }
+
+      .gallery-header {
+        text-align: center;
+      }
+
+      #nav {
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      #nav li {
+        display: inline-block;
       }
 
     }
 
-    /*pour la première page*/
-
-    @media (max-width: 1366px) {
-      .table {
-        margin-top: 30px;
-      }
-
-      .buttons {
-        position: relative;
-        left: 90px;
-      }
-
-      .links {
-        position: relative;
-        left: 50px;
-      }
-
-      .btn-primary {
-        margin-left: 1px;
-      }
-    }
-
-    @media (max-width: 820px) {
-
-      .burger-menu-button {
-        margin-right: 1px;
-      }
+    main {
+      display:flex ;
+      justify-content: center;
+      align-items: center; 
     }
   </style>
 
-  <div class=" burger-menu ">
-    <ul class=" links">
-      <li><a href="index.php">Accueil</a></li>
-      <li><a href="temoignage.php">Temoignage</a></li>
-      <li><a href="Formation.php">Formations</a></li>
-      <li><a href="contacts.php">Contacts</a></li>
-      <div class="divider"></div>
-      <div class="buttons-burger-menu">
-        <a class="action-button" href="Gloire/page_publicitaire.php">Pub</a>
-        <a class="action-button" href="vivi/apropos.php">A propos</a>
-      </div>
-    </ul>
-  </div>
   <header>
-
-    <div class="navbar">
-      <div class="logo">
-        <img class="gvas" src="images/Images/GVAS.png" alt="GVAS">
-
-      </div>
-
-      <ul class="links">
-        <li><a href="index.php">Accueil</a></li>
-        <li><a href="temoignage.php">Temoignage</a></li>
-        <li><a href="Formation.php">Formations</a></li>
-        <li><a href="contacts.php">Contacts</a></li>
-      </ul>
-      <div class="buttons">
-        <a class="action-button pro " href="Gloire/page_publicitaire.php">Pub</a>
-        <a class="action-button" href="vivi/apropos.php">A propos</a>
-      </div>
-      <div class="burger-menu-button">
-        <i class="fa-solid fa-bars"></i>
-      </div>
+      <section class="gallery-section">
+    <div class="gallery-header">
+      <h2>GROUPE VISION D'AIGLE SERVICES</h2>
+      <nav id="nav">
+        <ul>
+          <li><a href="index.php">Accueil</a></li>
+          <li><a href="Formation.php">Formations</a></li>
+          <li><a href="contacts.php">Contact</a></li>
+          <li><a href="Vivi/apropos.php">À propos</a></li>
+        </ul>
+      </nav>
+      <p>Vivre une galerie speciale pour nos activités</p>
     </div>
+
+    </div>
+
+    <div class="gallery-grid" id="gallery"></div>
+  </section>
   </header>
-  <p class="texte">Groupe Vision d'Aigle Services </p>
 
-  <div class="gallery-grid" id="gallery"></div>
-
-  <div class="lightbox-backdrop" id="lightbox">
+  <main>
+    <section class="lightbox-backdrop" id="lightbox">
+      <h1>Nos images</h1>
     <button class="lb-close" id="lb-close">
       <svg viewBox="0 0 24 24">
         <line x1="18" y1="6" x2="6" y2="18" />
         <line x1="6" y1="6" x2="18" y2="18" />
       </svg>
     </button>
+
     <div class="lightbox-inner">
       <button class="lb-nav" id="lb-prev">
         <svg viewBox="0 0 24 24">
           <polyline points="15 18 9 12 15 6" />
         </svg>
       </button>
+
       <div class="lightbox-card">
         <img id="lb-img" src="" alt="">
         <div class="lightbox-info">
@@ -748,14 +553,21 @@ if (!isset($_SESSION['visite_' . $page])) {
           <div class="lightbox-counter" id="lb-counter"></div>
         </div>
       </div>
+
       <button class="lb-nav" id="lb-next">
         <svg viewBox="0 0 24 24">
           <polyline points="9 18 15 12 9 6" />
         </svg>
       </button>
     </div>
+    
     <div class="lb-strip" id="lb-strip"></div>
-  </div>
+  </section>
+
+  <section>
+        <h1>Nos vidéos</h1>
+  </section>
+  </main>
 
   <script>
     const photos = [];
@@ -800,7 +612,8 @@ if (!isset($_SESSION['visite_' . $page])) {
     function buildGallery(filter) {
       grid.innerHTML = '';
 
-      visiblePhotos = filter === 'all' ? [...photos] :
+      visiblePhotos = filter === 'all' ?
+        [...photos] :
         photos.filter(p => p.tag === filter);
 
       visiblePhotos.forEach((p, i) => {
@@ -948,44 +761,6 @@ if (!isset($_SESSION['visite_' . $page])) {
     buildGallery('all');
   </script>
 
-
-
-
-
-  <!--burgerMenuButton-->
-  <script>
-    const burgerMenuButton = document.querySelector('.burger-menu-button');
-    const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i');
-    const burgerMenu = document.querySelector('.burger-menu');
-
-    burgerMenuButton.onclick = function(e) {
-      e.stopPropagation();
-
-      burgerMenu.classList.toggle('open');
-
-      const isOpen = burgerMenu.classList.contains('open');
-
-      burgerMenuButtonIcon.classList = isOpen ?
-        'fa-solid fa-xmark' :
-        'fa-solid fa-bars';
-    };
-
-    /* fermer si on clique à côté */
-    document.addEventListener('click', function(e) {
-      if (
-        !burgerMenu.contains(e.target) &&
-        !burgerMenuButton.contains(e.target)
-      ) {
-        burgerMenu.classList.remove('open');
-        burgerMenuButtonIcon.classList = 'fa-solid fa-bars';
-      }
-    });
-
-    /* empêcher fermeture si clic dans le menu */
-    burgerMenu.addEventListener('click', function(e) {
-      e.stopPropagation();
-    });
-  </script>
 </body>
 
 </html>

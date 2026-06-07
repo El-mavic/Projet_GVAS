@@ -31,12 +31,12 @@ if (!isset($_SESSION['visite_' . $page])) {
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="GVAS, EVGS, groupe vision d'aigle services, vision d'aigle, achat, formation, cours en ligne, produits, service">
 
-
+    <script defer src="Assets/js/index.js"></script>
     <link rel="stylesheet" href="Assets/Css/style.css">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" href="Assets/Img/icon_logo/logo-GVAS.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="Assets/Img/icon_logo/logo-GVAS.png">
     <link rel="stylesheet" href="Assets/Css/stilisation.css">
     <title>Page Publicitaire</title>
 </head>
@@ -53,6 +53,16 @@ if (!isset($_SESSION['visite_' . $page])) {
         <section id="classeur">
             <div class="classe">
                 <div class="defilements">
+                    <div>
+                        <h1 class="wave">
+                            <span>Bienvenu</span>
+                            <span>sur</span>
+                            <span>notre</span>
+                            <span>page</span>
+                            <span>publicitaire</span>
+                        </h1>
+                        <h2>Retrouvrez <a href="galeria.php">ici</a> nos actualités sous forme d'informations</h2>
+                    </div>
                 </div>
 
                 <div class="rondeurs">
@@ -507,6 +517,32 @@ if (!isset($_SESSION['visite_' . $page])) {
                     </div>
                 </div>
 
+                <div class="sous_section_service">
+                    <div class="principal">
+                        <div class="haut haut1">
+                            <img src="Assets/Img/img pub/Articles informatiques/cours en presentiel.jpg" alt="livre">
+                        </div>
+
+                        <div class="bas">
+                            <h1>COURS EN PRESENTIEL </h1>
+                            <h1>On s'adapte sur</h1>
+                            <ul>
+                                <li>
+                                    Votre emplois du temps
+                                </li> 
+
+                                <li>
+                                    La formation demandée
+                                </li>
+                                
+                                <li>
+                                    Votre tranche d'êge et autre ...
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
                <div class="sous_section_service">
                     <div class="principal">
                         <div class="haut haut1">
@@ -546,6 +582,32 @@ if (!isset($_SESSION['visite_' . $page])) {
                                 <li>
                                     Conception (appartir de 500frc)
                                 </li> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="sous_section_service">
+                    <div class="principal">
+                        <div class="haut haut1">
+                            <img src="Assets/Img/img pub/Articles informatiques/online course.jpg" alt="saisie">
+                        </div>
+
+                        <div class="bas">
+                            <h1>COURS EN LIGNE</h1>
+                            <h1>On s'adapte sur</h1>
+                            <ul>
+                                <li>
+                                    Votre emplois du temps
+                                </li> 
+
+                                <li>
+                                    La formation demandée
+                                </li>
+                                
+                                <li>
+                                    Votre tranche d'êge et autre ...
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -679,11 +741,11 @@ if (!isset($_SESSION['visite_' . $page])) {
         </div>
 
         <section>
-            <div class="parie_publicitaire">
+            <div class="jaune">
                 <h1>NOS ANNONCES </h1>
             </div>
 
-            <div class="partie_recrutement">
+            <div class="bg partie_recrutement">
                 <div class="central">
                     <div class="redirections">
                         <div class="bg">
