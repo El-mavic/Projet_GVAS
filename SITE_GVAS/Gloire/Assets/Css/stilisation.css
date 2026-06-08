@@ -614,3 +614,15 @@ header,
 
   animation: apparition 1s ease forwards;
 }
+
+@keyframes animation-1780876943740 {
+  from { transform: translatex( 0px); }
+   30% { transform: translatex(-50px); }
+   60% { transform: translatex( 0px); }
+   80% { transform: translatex( 50px); }
+   100% { transform: translatex( 0px); }
+}
+
+.animated-element {
+  animation: animation-1780876943740 5s ease-in infinite;
+}
