@@ -14,31 +14,6 @@
   --bleu: linear-gradient(135deg, #a89a22, #c8af1e);
   --rouge: rgb(250, 250, 148);
   --dégradé: linear-gradient(135deg, #1f2037, #141542, #06062e);
-
-  --color-background1: #dbda4d;
-  --color-background2: #ffff01;
-  --color-background3: #e0e0e0;
-  --color-background4: #000000;
-
-  /*couleur secondaire*/
-  --color-secondaire1: #fff23d;
-
-  /*couleur titre*/
-  --couleur-titre1: #ffee00;
-  --couleur-titre2: #ffffff;
-  --couleur-titre3: #000000;
-
-  /*couleur sous-titre*/
-
-  /*couleur Bouton*/
-  --bouton-border1: #ffb700;
-  --bouton-border2: #ffffff;
-  --bouton-border3: #000000;
-
-  /*couleur lien*/
-  --couleur-lien1: #000000;
-  --couleur-lien2: #ffffffff;
-  --couleur-lien3: #ffb501;
 }
 
 body {
@@ -509,7 +484,7 @@ nav {
 }
 .h-frame {
   position: absolute;
-  top: 12%;
+  top: 8%;
   left: 5%;
   right: 5%;
   bottom: 8%;
@@ -559,7 +534,7 @@ nav {
   width: 42%;
   animation: slideUp 1s ease 0.4s forwards;
   opacity: 0;
-  margin-bottom: 16px;
+  margin-bottom: 80px;
 }
 
 @keyframes slideUp {
@@ -574,7 +549,7 @@ nav {
   }
 }
 .h-content h1 {
-  font-size: 3em;
+  font-size: 2.7em;
   font-weight: 600;
   line-height: 1.05;
   margin-bottom: 150px;
@@ -585,7 +560,7 @@ nav {
   font-size: 3rem;
   position: relative;
   top: -100px;
-  background-color: var(--rouge);
+  background-color: #c8af1e;
 }
 
 .h-content p {
@@ -595,7 +570,10 @@ nav {
   /* margin-bottom: 58px; */
   font-style: italic;
   position: relative;
+  /* letter-spacing: 1px; */
   top: -60px;
+  left: 20%;
+  text-align: left;
 }
 .h-content a {
   background: none;
@@ -618,7 +596,7 @@ nav {
 
 .h-content a {
   display: inline-block;
-  margin-top: 30px;
+  margin-top: -50px;
 }
 
 .h-content a:hover {
@@ -1208,9 +1186,13 @@ nav {
   text-align: center;
 }
 
+.team-content h2 {
+  font-size: 2rem;
+}
+
 .team-content h3 {
   font-size: 1.3rem;
-  color: white;
+  color: rgb(250, 250, 148);
   font-weight: 700;
 }
 
@@ -1437,6 +1419,7 @@ nav {
 .chiffres-inner {
   max-width: 1200px;
   margin: 0 auto;
+  margin-bottom: 85px;
 }
 
 .chiffres-grid {
