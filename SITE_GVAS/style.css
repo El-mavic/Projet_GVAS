@@ -9,7 +9,7 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
+.index {
     height: 100vh;
     background-image: url(images/Images/Two.jpg);
     background-size: cover;

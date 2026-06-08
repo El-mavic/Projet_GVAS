@@ -37,6 +37,7 @@ if (!isset($_SESSION['visite_' . $page])) {
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="formation.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="anime">
@@ -150,7 +151,7 @@ if (!isset($_SESSION['visite_' . $page])) {
         </div>
     </section>
 
-    
+
     <script>
         let lastScroll = 0;
         const header = document.getElementById("header");

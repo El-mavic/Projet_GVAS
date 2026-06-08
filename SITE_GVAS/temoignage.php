@@ -45,11 +45,11 @@ if (!isset($_SESSION['visite_' . $page])) {
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Gloire/Assets/Css/style.css">
-    <!-- <link rel="icon" href="images/Images/GVAS.png"> -->
+
 </head>
 
 <body class="body">
-    <!-- ICI POUR LE HEADER -->
+
     <div class=" burger-menu ">
         <ul class=" links">
             <li><a href="index.php">Accueil</a></li>
@@ -83,7 +83,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             </div>
             <div class="burger-menu-button">
                 <i class="fa-solid fa-bars"></i>
-            </div>
+            </div>w
         </div>
     </header>
     <p class="texte">Groupe Vision d'Aigle Services </p>
