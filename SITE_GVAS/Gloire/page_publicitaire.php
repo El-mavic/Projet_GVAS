@@ -50,7 +50,7 @@ if (!isset($_SESSION['visite_' . $page])) {
         <ul class=" links">
             <li><a href="../index.php">Accueil</a></li>
             <li><a href="../Formation.php">Formation</a></li>
-            <li><a href="../Galerie.php">Galerie</a></li>
+            <li><a href="../galerie.php">Galerie</a></li>
             <li><a href="../contacts.php">Contacts</a></li>
             <div class="divider"></div>
             <div class="buttons-burger-menu">
@@ -68,10 +68,10 @@ if (!isset($_SESSION['visite_' . $page])) {
             </div>
 
             <ul class="links">
-                <li><a href="index.php">Accueil</a></li>
-                <li><a href="Formation.php">Formation</a></li>
-                <li><a href="galerie.php">Galerie</a></li>
-                <li><a href="contacts.php">Contacts</a></li>
+                <li><a href="../index.php">Accueil</a></li>
+                <li><a href="../Formation.php">Formation</a></li>
+                <li><a href="../galerie.php">Galerie</a></li>
+                <li><a href="../contacts.php">Contacts</a></li>
             </ul>
             <div class="buttons">
                 <a class="action-button pro " href="temoignage.php">Temoignage</a>
@@ -767,9 +767,9 @@ if (!isset($_SESSION['visite_' . $page])) {
             <!-- Partie droite -->
             <div class="contenu" id="contenu">
                 <div class="Acceuil">
-                    <div class="cent">
+                    <div class="cent animated-element">
                         <img src="Assets/Img/icon_logo/logo-GVAS.png" alt="logo-GVAS">
-                        <h1>GROUPE VISION D'AIGLE SERVICES</h1>
+                        <h1 >GROUPE VISION D'AIGLE SERVICES</h1>
                         <P>Spécialiser dans la vente des produits et services</P>
                     </div>
                 </div>
@@ -832,7 +832,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             </div>
         </section>
 
-        <section>
+        <section id="Lien">
             <div class="carouselExampleSlidesOnly2">
                 <div class="parie_publicitaire">
                     <h1>NOS PARTENAIRES</h1>
