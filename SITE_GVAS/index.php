@@ -155,11 +155,10 @@ if (!isset($_SESSION['visite_' . $page])) {
         <div class="sidebar-title">GVAS</div>
         <ul>
             <li><a href="#"><i class="fa-solid fa-users"></i> Qui sommes-nous ?</a></li>
-            <li><a href="#"><i class="fa-solid fa-graduation-cap"></i> Nos domaines de formation</a></li>
+            <li><a href="../Formation.php"><i class="fa-solid fa-graduation-cap"></i> Nos domaines de formation</a></li>
             <li><a href="#"><i class="fa-solid fa-star"></i> Pourquoi choisir GVAS ?</a></li>
-            <li><a href="#"><i class="fa-solid fa-handshake"></i> Nos partenaires</a></li>
-            <!-- <li><a href="#modal"><i class="fa-solid fa-file-signature"></i> Inscription en ligne</a></li> -->
-            <li><a href="#"><i class="fa-solid fa-phone"></i> Contact rapide</a></li>
+            <li><a href="../Gloire/page_publicitaire.php#Lien"><i class="fa-solid fa-handshake"></i> Nos partenaires</a></li>
+            <li><a href="../contacts.php"><i class="fa-solid fa-phone"></i> Contact rapide</a></li>
         </ul>
     </div>
 
