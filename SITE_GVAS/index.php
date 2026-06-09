@@ -138,8 +138,8 @@ if (!isset($_SESSION['visite_' . $page])) {
 
     <section class="Table">
         <div class="table">
-            <img class="table1" src="images/BG/Rond.JPG" alt="table">
-            <img class="table2" src="images/BG/12.JPG" alt="table">
+            <img class="table1" src="images/Formation/Rond.JPG" alt="Monsieur">
+            <img class="table2" src="images/Formation/12.JPG" alt="Image">
         </div>
     </section>
 
@@ -157,7 +157,7 @@ if (!isset($_SESSION['visite_' . $page])) {
         <ul>
             <li><a href="#"><i class="fa-solid fa-users"></i> Qui sommes-nous ?</a></li>
             <li><a href="../Formation.php"><i class="fa-solid fa-graduation-cap"></i> Nos domaines de formation</a></li>
-            <li><a href="#"><i class="fa-solid fa-star"></i> Pourquoi choisir GVAS ?</a></li>
+            <li><a href="../notre_image.php"><i class="fa-solid fa-star"></i> Pourquoi choisir GVAS ?</a></li>
             <li><a href="../Gloire/page_publicitaire.php#Lien"><i class="fa-solid fa-handshake"></i> Nos partenaires</a></li>
             <li><a href="../contacts.php"><i class="fa-solid fa-phone"></i> Contact rapide</a></li>
         </ul>
