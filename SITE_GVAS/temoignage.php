@@ -83,7 +83,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             </div>
             <div class="burger-menu-button">
                 <i class="fa-solid fa-bars"></i>
-            </div>w
+            </div>
         </div>
     </header>
     <p class="texte">Groupe Vision d'Aigle Services </p>
