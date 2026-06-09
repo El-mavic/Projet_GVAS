@@ -48,6 +48,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
     $_SESSION['visite_' . $page] = true;
 }
+
 ?>
 
 <!DOCTYPE html>

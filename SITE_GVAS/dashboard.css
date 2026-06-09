@@ -710,25 +710,64 @@ table tr:hover {
 }
 
 
-   /*animation apparition*/
-      @keyframes apparition {
+/*animation apparition*/
+@keyframes apparition {
 
-        from {
-          opacity: 0;
-          transform: translateY(50px);
-        }
-
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-
-      }
-
-      .gallery-header {
+    from {
         opacity: 0;
+        transform: translateY(50px);
+    }
 
-        transform: translateY(100px);
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
-        animation: apparition 1s ease forwards;
-      }
+}
+
+.gallery-header {
+    opacity: 0;
+
+    transform: translateY(100px);
+
+    animation: apparition 1s ease forwards;
+}
+
+
+
+
+
+/***************************************************************Pour l'ajout des image fenêtre flotant***************/
+
+
+
+/* FOND SOMBRE */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* BOÎTE CENTRALE */
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    max-width: 90%;
+    position: relative;
+}
+
+/* BOUTON FERMER */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+}

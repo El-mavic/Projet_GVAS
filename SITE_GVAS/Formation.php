@@ -171,6 +171,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             lastScroll = currentScroll;
         });
     </script>
+    
     <!--burgerMenuButton-->
     <script>
         const burgerMenuButton = document.querySelector('.burger-menu-button');
