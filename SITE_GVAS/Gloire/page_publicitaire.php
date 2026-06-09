@@ -46,7 +46,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
 <body>
     <!-- *********header********** -->
-    <div class=" burger-menu ">
+    <div class=" burger-menu " >
         <ul class=" links">
             <li><a href="../index.php">Accueil</a></li>
             <li><a href="../Formation.php">Formation</a></li>
@@ -59,7 +59,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             </div>
         </ul>
     </div>
-    <header>
+    <header id="ancre">
 
         <div class="navbar">
             <div class="logo">
@@ -85,7 +85,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
     <p class="texte">Groupe Vision d'Aigle Services </p>
 
-    <main id="ancre">
+    <main>
         <section id="classeur">
             <div class="classe">
                 <div class="defilements">
