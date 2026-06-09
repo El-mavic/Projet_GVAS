@@ -76,11 +76,11 @@ $medias = $req->fetchAll();
         <?php if ($media['type_media'] == 'image'): ?>
 
           <img src="<?= $media['chemin'] ?>"
-            onclick="openViewer('<?= $media['chemin'] ?>')">
+            onclick="openViewer(this)">
 
         <?php else: ?>
 
-          <video onclick="openViewer('<?= $media['chemin'] ?>', true)">
+          <video onclick="openViewer(this)">
             <source src="<?= $media['chemin'] ?>">
           </video>
 
@@ -89,6 +89,8 @@ $medias = $req->fetchAll();
       </div>
 
     <?php endforeach; ?>
+
+  </div>
 
   </div>
 
@@ -229,54 +231,44 @@ $medias = $req->fetchAll();
     let images = [];
     let currentIndex = 0;
 
-    // OPEN LIGHTBOX
-    function openViewer(src) {
+    // OPEN
+    function openViewer(el) {
 
       images = Array.from(document.querySelectorAll('.gallery-item img, .gallery-item video'));
 
-      currentIndex = images.findIndex(el => {
-        return el.getAttribute('data-src') === src || el.src === src;
-      });
+      currentIndex = images.indexOf(el);
 
-      if (currentIndex === -1) currentIndex = 0;
-
-      showImage();
+      showItem();
 
       document.getElementById("viewer").style.display = "flex";
     }
 
-    // SHOW IMAGE / VIDEO
-    function showImage() {
+    // SHOW
+    function showItem() {
 
       const el = images[currentIndex];
 
-      const src = el.getAttribute('data-src') || el.src;
+      const src = el.getAttribute("src");
 
       if (el.tagName === "IMG") {
         document.getElementById("viewerContent").innerHTML =
-          `<img src="${src}" style="max-width:95%; max-height:95vh;">`;
+          `<img src="${src}">`;
       } else {
         document.getElementById("viewerContent").innerHTML =
-          `<video controls autoplay style="max-width:95%; max-height:95vh;">
-                <source src="${src}">
-             </video>`;
+          `<video controls autoplay><source src="${src}"></video>`;
       }
     }
 
     // NEXT
     function next() {
-      if (!images.length) return;
-
       currentIndex = (currentIndex + 1) % images.length;
-      showImage();
+      showItem();
     }
 
     // PREV
     function prev() {
-      if (!images.length) return;
-
       currentIndex = (currentIndex - 1 + images.length) % images.length;
-      showImage();
+      showItem();
     }
 
     // CLOSE
@@ -284,15 +276,6 @@ $medias = $req->fetchAll();
       document.getElementById("viewer").style.display = "none";
       document.getElementById("viewerContent").innerHTML = "";
     }
-
-    // KEYBOARD
-    document.addEventListener("keydown", (e) => {
-      if (document.getElementById("viewer").style.display !== "flex") return;
-
-      if (e.key === "Escape") closeViewer();
-      if (e.key === "ArrowRight") next();
-      if (e.key === "ArrowLeft") prev();
-    });
   </script>
 </body>
 
