@@ -1093,7 +1093,7 @@ input:focus {
     padding: 12px;
     border: none;
     border-radius: 10px;
-    background: linear-gradient(45deg, #5b5d5e, #a2b310);
+    background: linear-gradient(45deg, #5b5d5e, yellow);
     color: #0a0202;
     width: 200px;
     cursor: pointer;
@@ -1103,7 +1103,7 @@ input:focus {
 }
 
 .temoignage button:hover {
-    background: linear-gradient(45deg, #9ad80a, #e9e9ec);
+    background: linear-gradient(45deg, yellow, #e9e9ec);
     transform: scale(1.0);
 }
 
