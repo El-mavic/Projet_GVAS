@@ -1,5 +1,4 @@
 main {
-  /* background-color: rgba(84, 77, 112, 0.5); */
   background-image: repeating-linear-gradient(140deg, hsla(295,0%,82%,0.5) 0px,transparent 2px,hsla(295,0%,82%,0.5) 7px,transparent 9px,hsla(295,0%,82%,0.5) 14px),repeating-linear-gradient(38deg, hsla(295,0%,82%,0.5) 0px,transparent 2px,hsla(295,0%,82%,0.5) 7px,transparent 9px,hsla(295,0%,82%,0.5) 14px),repeating-linear-gradient(0deg, hsla(295,0%,82%,0.5) 0px, hsla(295,0%,82%,0.5) 0px,transparent 0px, transparent 1px,hsla(295,0%,82%,0.5) 1px, hsla(295,0%,82%,0.5) 4px,transparent 4px, transparent 5px,hsla(295,0%,82%,0.5) 5px, hsla(295,0%,82%,0.5) 8px),repeating-linear-gradient(90deg, hsla(295,0%,82%,0.5) 0px, hsla(295,0%,82%,0.5) 0px,transparent 0px, transparent 1px,hsla(295,0%,82%,0.5) 1px, hsla(295,0%,82%,0.5) 4px,transparent 4px, transparent 5px,hsla(295,0%,82%,0.5) 5px, hsla(295,0%,82%,0.5) 8px),linear-gradient(90deg, rgb(58,58,58,0.5),rgb(58,58,58,0.5));
 }
 
@@ -18,11 +17,11 @@ a {
   height: 45px;
   width: 45px;
   background-color: rgb(175, 173, 173);
-  transition: 0.4s ease;
 }
 
 #sous_class_contact div:hover {
   background-color: white;
+  border-radius: 50%;
 
   transform: scale(1.1);
   box-shadow:
@@ -518,10 +517,10 @@ h3 {
   display: flex;
   align-items: center;
   margin-bottom: 50px;
+  transition: 0.75s linear;
 }
 
 #container:hover {
-  transition: 2s linear;
   padding: 10px;
   background: white;
 
@@ -676,6 +675,10 @@ h2 {
 
 .redirections .p_bas h2 {
   font-size: 15px;
+}
+
+.redirections .p_bas h2 a {
+  color: yellow;
 }
 
 .redirections .p_bas p {

@@ -1657,7 +1657,7 @@ nav {
 
 @media (max-width: 1366px) {
   .partenaires-section {
-    padding: 60px 0;
+    /* padding: 60px 0; */
   }
 
   .partenaires-section .section-title,
@@ -1675,12 +1675,3 @@ nav {
   }
 
 }
-
-/* La partie footer*/
-
-.pat h1,
-.hid,
-.bas h1{
-  color: rgb(250, 250, 148);
-}
-
