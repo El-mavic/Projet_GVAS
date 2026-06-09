@@ -361,6 +361,11 @@ p {
   overflow-y: scroll;
 }
 
+.section_service .sous_section_service .principal .bas li {
+  color: black;
+  list-style-type: disc;
+}
+
 .section_service h1{
   color: black;
 }
@@ -465,9 +470,17 @@ p {
 
 .produits .list_produits .part .dav ul {
   height: auto;
+  color: black;
   text-align: left;
   width: 100%;
 }
+
+.produits .list_produits .part .dav li {
+  color: black;
+  list-style-type: circle;
+}
+
+
 
 .produits .list_produits .part .div {
   height: 50%;
@@ -1048,4 +1061,10 @@ footer a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.g {
+    width: 9%;
+    position: absolute;
+    margin-top: -4.4%;
 }

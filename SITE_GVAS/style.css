@@ -43,6 +43,7 @@ header {
     justify-content: flex-start;
     justify-content: center;
     align-items: center;
+    height: 13vh;
 }
 
 .btn-container {
