@@ -68,10 +68,10 @@ if (!isset($_SESSION['visite_' . $page])) {
             </div>
 
             <ul class="links">
-                <li><a href="index.php">Accueil</a></li>
-                <li><a href="Formation.php">Formations</a></li>
-                <li><a href="galerie.php">Galerie</a></li>
-                <li><a href="contacts.php">Contacts</a></li>
+                <li><a href="../index.php">Accueil</a></li>
+                <li><a href="../Formation.php">Formations</a></li>
+                <li><a href="../galerie.php">Galerie</a></li>
+                <li><a href="../contacts.php">Contacts</a></li>
             </ul>
             <div class="buttons">
                 <a class="action-button pro " href="Gloire/page_publicitaire.php">Pub</a>
