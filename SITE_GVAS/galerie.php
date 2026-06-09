@@ -11,28 +11,28 @@ $medias = $req->fetchAll();
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="De réfférence, GVAS est une structure 
-          professionnelle composée d’un personnel de qualité agréé 
-          par l’État. spécialisé dans la vente des produits et services, 
-          l'accompagnement professionnelle à travers des formations qualifiantes
-           et certifiantes mais aussi
-           dans un suivi quelconque en vue d’un domaine professionnel donné.">
+
+  <meta name="description" content="De réfférence, GVAS est une structure professionnelle...">
   <meta name="author" content="Mr El-mavic BAKALA">
   <meta name="author" content="Miss Célina LUEMBA">
   <meta name="author" content="Gln93/Mr Tokyo">
+
   <meta name="robots" content="index, follow">
-  <meta name="keywords" content="GVAS, EVGS, groupe vision d'aigle services, vision d'aigle, achat, formation, cours en ligne, produits, service">
+  <meta name="keywords" content="GVAS, EVGS, groupe vision d'aigle services">
+
   <link rel="icon" href="images/Images/GVAS.png">
   <title>Groupe Vision d'Aigle Services</title>
   <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-  <div class=" burger-menu ">
-    <ul class=" links">
+
+  <!--------------------------------------------------------Header---------------------------------------------------------------->
+  <div class="burger-menu ">
+    <ul class="links">
       <li><a href="index.php">Accueil</a></li>
-      <li><a href="temoignage.php">Temoignage</a></li>
+      <li><a href="Formation.php">Formations</a></li>
       <li><a href="Galerie.php">Galerie</a></li>
       <li><a href="contacts.php">Contacts</a></li>
       <div class="divider"></div>
@@ -42,17 +42,18 @@ $medias = $req->fetchAll();
       </div>
     </ul>
   </div>
+
   <header>
 
     <div class="navbar">
       <div class="logo">
         <img class="gvas" src="images/Images/GVAS.png" alt="GVAS">
-
       </div>
 
+
       <ul class="links">
-        <li><a href="index.php">Accueil</a></li>
         <li><a href="temoignage.php">Temoignage</a></li>
+        <li><a href="Formation.php">Formations</a></li>
         <li><a href="galerie.php">Galerie</a></li>
         <li><a href="contacts.php">Contacts</a></li>
       </ul>
@@ -64,33 +65,42 @@ $medias = $req->fetchAll();
         <i class="fa-solid fa-bars"></i>
       </div>
     </div>
-  </header>
-  <p class="texte">Groupe Vision d'Aigle Services </p>
 
+  </header>
+  <!--------------------------------------Message de GVAS BIENVENUE---------------------------------------------------------------->
+
+  <p class="texte">Bienvenue au Groupe Vision d'Aigle Services </p>
+  <!-- GALERIE -->
   <div class="gallery-grid">
 
     <?php foreach ($medias as $media): ?>
 
       <div class="gallery-item">
 
-        <?php if ($media['type_media'] == 'image'): ?>
+        <div class="media-wrapper">
 
-          <img src="<?= $media['chemin'] ?>"
-            onclick="openViewer(this)">
+          <?php if ($media['type_media'] == 'image'): ?>
 
-        <?php else: ?>
+            <img src="<?= $media['chemin'] ?>" onclick="openViewer(this)">
 
-          <video onclick="openViewer(this)">
-            <source src="<?= $media['chemin'] ?>">
-          </video>
+          <?php else: ?>
 
-        <?php endif; ?>
+            <video onclick="openViewer(this)">
+              <source src="<?= $media['chemin'] ?>">
+            </video>
+
+          <?php endif; ?>
+
+          <!-- TEXTE AU SURVOL -->
+          <div class="overlay">
+            <?= $media['titre'] ?? "GVAS" ?>
+          </div>
+
+        </div>
 
       </div>
 
     <?php endforeach; ?>
-
-  </div>
 
   </div>
 
@@ -99,14 +109,14 @@ $medias = $req->fetchAll();
     <span id="close" onclick="closeViewer()">✕</span>
 
     <button class="nav left" onclick="prev()">❮</button>
-
     <div id="viewerContent"></div>
-
     <button class="nav right" onclick="next()">❯</button>
   </div>
-
-  <script src="assets/js/galerie.js"></script>
   <style>
+    /* =========================
+       GALERIE
+    ========================= */
+
     .gallery-grid {
       columns: 6;
       column-gap: 20px;
@@ -116,8 +126,15 @@ $medias = $req->fetchAll();
     .gallery-item {
       break-inside: avoid;
       margin-bottom: 20px;
-      overflow: hidden;
       border-radius: 15px;
+      overflow: hidden;
+    }
+
+    /* wrapper */
+    .media-wrapper {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
     }
 
     .gallery-item img,
@@ -135,9 +152,31 @@ $medias = $req->fetchAll();
       box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
     }
 
+    /* OVERLAY TEXTE */
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      text-align: center;
+
+      padding: 10px;
+      font-size: 14px;
+
+      opacity: 0;
+      transition: 0.3s ease;
+    }
+
+    .media-wrapper:hover .overlay {
+      opacity: 1;
+    }
+
     /* =========================
-   LIGHTBOX MODERNE
-========================= */
+       LIGHTBOX
+    ========================= */
 
     #viewer {
       display: none;
@@ -148,10 +187,6 @@ $medias = $req->fetchAll();
       justify-content: center;
       align-items: center;
       backdrop-filter: blur(10px);
-    }
-
-    #viewer.show {
-      display: flex;
     }
 
     #viewerContent {
@@ -169,7 +204,6 @@ $medias = $req->fetchAll();
       object-fit: contain;
       border-radius: 12px;
       animation: zoomIn 0.2s ease;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
     }
 
     @keyframes zoomIn {
@@ -184,24 +218,17 @@ $medias = $req->fetchAll();
       }
     }
 
-    /* NAV */
     .nav {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: 55px;
-      height: 55px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       border: none;
-      font-size: 28px;
+      font-size: 18px;
       cursor: pointer;
-      background: rgba(255, 255, 255, 0.9);
-      transition: 0.2s;
-    }
-
-    .nav:hover {
-      transform: translateY(-50%) scale(1.1);
-      background: #fff;
+      background: rgb(111, 112, 110);
     }
 
     .left {
@@ -212,71 +239,53 @@ $medias = $req->fetchAll();
       right: 20px;
     }
 
-    /* CLOSE */
     #close {
       position: absolute;
       top: 20px;
       right: 25px;
-      font-size: 35px;
+      font-size: 20px;
       color: white;
       cursor: pointer;
     }
   </style>
-
-
-
-
-
   <script>
     let images = [];
     let currentIndex = 0;
 
-    // OPEN
     function openViewer(el) {
-
       images = Array.from(document.querySelectorAll('.gallery-item img, .gallery-item video'));
-
       currentIndex = images.indexOf(el);
-
       showItem();
-
       document.getElementById("viewer").style.display = "flex";
     }
 
-    // SHOW
     function showItem() {
-
       const el = images[currentIndex];
-
-      const src = el.getAttribute("src");
+      const src = el.querySelector ? el.querySelector("source")?.src || el.src : el.src;
 
       if (el.tagName === "IMG") {
-        document.getElementById("viewerContent").innerHTML =
-          `<img src="${src}">`;
+        document.getElementById("viewerContent").innerHTML = `<img src="${src}">`;
       } else {
-        document.getElementById("viewerContent").innerHTML =
-          `<video controls autoplay><source src="${src}"></video>`;
+        document.getElementById("viewerContent").innerHTML = `<video controls autoplay><source src="${src}"></video>`;
       }
     }
 
-    // NEXT
     function next() {
       currentIndex = (currentIndex + 1) % images.length;
       showItem();
     }
 
-    // PREV
     function prev() {
       currentIndex = (currentIndex - 1 + images.length) % images.length;
       showItem();
     }
 
-    // CLOSE
     function closeViewer() {
       document.getElementById("viewer").style.display = "none";
       document.getElementById("viewerContent").innerHTML = "";
     }
   </script>
+
 </body>
 
 </html>
