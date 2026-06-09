@@ -112,6 +112,7 @@ $pagePlusVisitee = $stmt->fetch(PDO::FETCH_ASSOC);
 
 
                 <button id="openSignal" class="logout-btn">Message</button>
+                <button id="openModal" class="logout-btn">Ajouter</button>
 
                 <div id="signalPopup" class="signal-popup">
                     <div class="signal-box">
@@ -136,7 +137,36 @@ $pagePlusVisitee = $stmt->fetch(PDO::FETCH_ASSOC);
                 </div>
 
         </header>
+        <div id="modal" class="modal">
 
+            <div class="modal-content">
+
+                <span id="closeModal" class="close">&times;</span>
+
+                <h2>Ajouter des médias</h2>
+
+                <form action="traitement.php"
+                    method="POST"
+                    enctype="multipart/form-data">
+
+                    <input type="hidden"
+                        name="form_type"
+                        value="galerie">
+
+                    <input type="file"
+                        name="media[]"
+                        multiple
+                        accept="image/*,video/*">
+
+                    <button type="submit">
+                        Publier
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
         <!-- Cartes statistiques -->
         <section class="cards">
             <div class="card">
@@ -492,6 +522,39 @@ $pagePlusVisitee = $stmt->fetch(PDO::FETCH_ASSOC);
                 }
             });
         </script>
+
+
+        <script>
+            const modal = document.getElementById("modal");
+            const openBtn = document.getElementById("openModal");
+            const closeBtn = document.getElementById("closeModal");
+
+            // Ouvrir
+            openBtn.onclick = function() {
+                modal.style.display = "flex";
+            };
+
+            // Fermer (X)
+            closeBtn.onclick = function() {
+                modal.style.display = "none";
+            };
+
+            // Fermer si clic dehors
+            window.onclick = function(e) {
+                if (e.target == modal) {
+                    modal.style.display = "none";
+                }
+            };
+        </script>
+
+
+
+
+
+
+
+
+
 </body>
 
 </html>

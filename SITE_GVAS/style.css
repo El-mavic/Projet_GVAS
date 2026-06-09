@@ -34,7 +34,7 @@ a:hover {
 header {
     position: relative;
     padding: 0 8em;
-    background-color: rgba(19, 22, 22, 0.61);
+    background-color: #262828;
     border-bottom-left-radius: 50px;
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;

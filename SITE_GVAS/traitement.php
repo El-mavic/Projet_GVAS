@@ -206,15 +206,61 @@ if (isset($_POST['form_type']) && $_POST['form_type'] === 'inscriptions') {
     header("Location: Succes.php?message=commentaire_ok");
     exit();
 }
-?>
-<?php
-//Message de validation quand le formulaire d'inscription est envoyé avec succès ou si l'utilisateur existe déjà
-if (isset($_GET['message'])) {
-    if ($_GET['message'] == 'ok') {
-        echo "<p style='color:green;'>Message envoyé avec succès</p>";
-    } elseif ($_GET['message'] == 'existe') {
-        echo "<p style='color:red;'>Cet utilisateur est déjà inscrit</p>";
-    }
-}
-?>
+/* =========================
+   FORMULAIRE GALERIE
+========================= */ elseif (
+    isset($_POST['form_type']) &&
+    $_POST['form_type'] === 'galerie'
+) {
 
+    $images = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'avif'];
+    $videos = ['mp4', 'avi', 'mov', 'webm', 'mkv'];
+
+    foreach ($_FILES['media']['tmp_name'] as $key => $tmp) {
+
+        if ($_FILES['media']['error'][$key] !== 0) {
+            continue;
+        }
+
+        $originalName = $_FILES['media']['name'][$key];
+        $extension = strtolower(pathinfo($originalName, PATHINFO_EXTENSION));
+
+        if (in_array($extension, $images)) {
+            $folder = "uploads/images/";
+            $type = "image";
+        } elseif (in_array($extension, $videos)) {
+            $folder = "uploads/videos/";
+            $type = "video";
+        } else {
+            continue;
+        }
+
+        if (!is_dir($folder)) {
+            mkdir($folder, 0777, true);
+        }
+
+        $newName = uniqid() . "_" . time() . "." . $extension;
+        $path = $folder . $newName;
+
+        // 🔥 DEBUG IMPORTANT
+        if (!move_uploaded_file($tmp, $path)) {
+            echo "ERREUR MOVE UPLOAD<br>";
+            echo $tmp;
+            exit;
+        }
+
+        $stmt = $pdo->prepare("
+            INSERT INTO galerie (nom_fichier, chemin, type_media)
+            VALUES (?, ?, ?)
+        ");
+
+        $stmt->execute([
+            $newName,
+            $path,
+            $type
+        ]);
+    }
+
+    header("Location: dashboard.php?message=galerie_ok");
+    exit();
+}
