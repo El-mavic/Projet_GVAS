@@ -374,7 +374,7 @@ p {
   transition: 0.4s ease;
 
   box-shadow:
-    0 5px 10px rgba(0, 0, 0, 0.1),
+    0 5px 10px rgba(252, 139, 139, 0.1),
     0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
@@ -799,11 +799,6 @@ h2 {
   text-align: center;
   color: black;
 }
-
-/* .carouselExampleSlidesOnly2 .h1 h1 {
-  font-size: 30px;
-  color: rgb(250, 250, 148);
-} */
 
 .carouselExampleSlidesOnly2 #lien .partenaires {
   display: flex;

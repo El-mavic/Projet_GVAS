@@ -1164,9 +1164,30 @@ input:focus {
 }
 
 /* FOOTER DE LA PAGE TEMOIGNAGE */
+.jaune {
+    background-image: linear-gradient(to right,
+      rgb(235, 253, 134),
+      rgb(255, 255, 104));
+    padding: 7px;
+    width: 100%;
+}
 
+.jaune h1 {
+  color: black;
+}
 
+.parie_publicitaire h1 {
+  color: black;
+}
 
+footer p,
+a, li {
+    color: white;
+}
+
+.aigle a {
+    color: white;
+}
 
 
 /* ========================= RESPONSIVE Page temoignage 1366px ========================= */

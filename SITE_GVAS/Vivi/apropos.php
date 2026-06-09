@@ -60,7 +60,7 @@ if (!isset($_SESSION['visite_' . $page])) {
       </div>
     </ul>
   </div>
-  <header>
+  <header id="ancre">
     
     <div class="navbar">
       <div class="logo">
@@ -404,6 +404,15 @@ if (!isset($_SESSION['visite_' . $page])) {
     </div>
   </div>
 
+  <div id="foot">
+            <a href="#ancre">
+                <h1>
+                    RETOUR AU SOMMET
+                </h1>
+
+                <img src="../Gloire/Assets/img/icon_logo/image.jpg" alt="lien_retours">
+            </a>
+    </div>
 
     <!-- La partie footer -->
     <footer>
