@@ -622,7 +622,3 @@ header,
    80% { transform: translatex( 50px); }
    100% { transform: translatex( 0px); }
 }
-
-.animated-element {
-  animation: animation-1780876943740 5s ease-in infinite;
-}

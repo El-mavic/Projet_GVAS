@@ -44,7 +44,7 @@ if (!isset($_SESSION['visite_' . $page])) {
     <title>Page Publicitaire</title>
 </head>
 
-<body>
+<body id="tache">
     <!-- *********header********** -->
     <div class=" burger-menu " >
         <ul class=" links">
@@ -68,14 +68,14 @@ if (!isset($_SESSION['visite_' . $page])) {
             </div>
 
             <ul class="links">
-                <li><a href="index.php">Accueil</a></li>
-                <li><a href="Formation.php">Formations</a></li>
-                <li><a href="galerie.php">Galerie</a></li>
-                <li><a href="contacts.php">Contacts</a></li>
+                <li><a href="../index.php">Accueil</a></li>
+                <li><a href="../Formation.php">Formations</a></li>
+                <li><a href="../galerie.php">Galerie</a></li>
+                <li><a href="../contacts.php">Contacts</a></li>
             </ul>
             <div class="buttons">
-                <a class="action-button pro " href="Gloire/page_publicitaire.php">Pub</a>
-                <a class="action-button" href="vivi/apropos.php">A propos</a>
+                <a class="action-button pro " href="../temoignage.php">Temoignage</a>
+                <a class="action-button" href="../vivi/apropos.php">A propos</a>
             </div>
             <div class="burger-menu-button">
                 <i class="fa-solid fa-bars"></i>
@@ -767,7 +767,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             <!-- Partie droite -->
             <div class="contenu" id="contenu">
                 <div class="Acceuil">
-                    <div class="cent animated-element">
+                    <div class="cent">
                         <img src="Assets/Img/icon_logo/logo-GVAS.png" alt="logo-GVAS">
                         <h1 >GROUPE VISION D'AIGLE SERVICES</h1>
                         <P>Spécialiser dans la vente des produits et services</P>
