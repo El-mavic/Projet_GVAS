@@ -4,14 +4,29 @@ require 'traitement.php';
 $req = $pdo->query("SELECT * FROM galerie ORDER BY id DESC");
 $medias = $req->fetchAll();
 ?>
+<?php
+session_start();
+require 'traitement.php';
 
+$page = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
+
+if (!isset($_SESSION['visite_' . $page])) {
+
+  $stmt = $pdo->prepare("INSERT INTO visites (page) VALUES (?)");
+  $stmt->execute([$page]);
+
+  $_SESSION['visite_' . $page] = true;
+}
+?>
 <!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <meta name="description" content="De réfférence, GVAS est une structure professionnelle...">
   <meta name="author" content="Mr El-mavic BAKALA">
   <meta name="author" content="Miss Célina LUEMBA">
@@ -32,8 +47,8 @@ $medias = $req->fetchAll();
   <div class="burger-menu ">
     <ul class="links">
       <li><a href="index.php">Accueil</a></li>
+      <li><a href="temoignage.php">Temoignage</a></li>
       <li><a href="Formation.php">Formations</a></li>
-      <li><a href="Galerie.php">Galerie</a></li>
       <li><a href="contacts.php">Contacts</a></li>
       <div class="divider"></div>
       <div class="buttons-burger-menu">
@@ -52,9 +67,9 @@ $medias = $req->fetchAll();
 
 
       <ul class="links">
+        <li><a href="index.php">Accueil</a></li>
         <li><a href="temoignage.php">Temoignage</a></li>
         <li><a href="Formation.php">Formations</a></li>
-        <li><a href="galerie.php">Galerie</a></li>
         <li><a href="contacts.php">Contacts</a></li>
       </ul>
       <div class="buttons">
@@ -116,6 +131,9 @@ $medias = $req->fetchAll();
     /* =========================
        GALERIE
     ========================= */
+    body {
+      background-color: rgb(68, 69, 70);
+    }
 
     .gallery-grid {
       columns: 6;
@@ -286,6 +304,40 @@ $medias = $req->fetchAll();
     }
   </script>
 
+  <!--burgerMenuButton-->
+  <script>
+    const burgerMenuButton = document.querySelector('.burger-menu-button');
+    const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i');
+    const burgerMenu = document.querySelector('.burger-menu');
+
+    burgerMenuButton.onclick = function(e) {
+      e.stopPropagation();
+
+      burgerMenu.classList.toggle('open');
+
+      const isOpen = burgerMenu.classList.contains('open');
+
+      burgerMenuButtonIcon.classList = isOpen ?
+        'fa-solid fa-xmark' :
+        'fa-solid fa-bars';
+    };
+
+    /* fermer si on clique à côté */
+    document.addEventListener('click', function(e) {
+      if (
+        !burgerMenu.contains(e.target) &&
+        !burgerMenuButton.contains(e.target)
+      ) {
+        burgerMenu.classList.remove('open');
+        burgerMenuButtonIcon.classList = 'fa-solid fa-bars';
+      }
+    });
+
+    /* empêcher fermeture si clic dans le menu */
+    burgerMenu.addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+  </script>
 </body>
 
 </html>
