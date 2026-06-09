@@ -45,6 +45,8 @@ if (!isset($_SESSION['visite_' . $page])) {
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Gloire/Assets/Css/style.css">
+    <link rel="stylesheet" href="../Gloire/Assets/Css/stilisation.css">
+
     <!-- <link rel="icon" href="images/Images/GVAS.png"> -->
 </head>
 

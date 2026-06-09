@@ -36,6 +36,9 @@ if (!isset($_SESSION['visite_' . $page])) {
   <link rel="stylesheet" href="apropos.css">
   <link rel="icon" href="../images/Images/GVAS.png">
   <link rel="stylesheet" href="../Gloire/Assets/Css/style.css">
+  <link rel="stylesheet" href="../Gloire/Assets/Css/stilisation.css">
+
+
 
 
   <title>à propos</title>
@@ -51,7 +54,7 @@ if (!isset($_SESSION['visite_' . $page])) {
       <li><a href="../contacts.php">Contacts</a></li>
       <div class="divider"></div>
       <div class="buttons-burger-menu">
-        <a class="action-button" href="page_publicitaire.php">Pub</a>
+        <a class="action-button" href="../Gloire/page_publicitaire.php">Pub</a>
         <a class="action-button" href="../temoignage.php">Temoignage</a>
       </div>
     </ul>
@@ -71,7 +74,7 @@ if (!isset($_SESSION['visite_' . $page])) {
         <li><a href="../contacts.php">Contacts</a></li>
       </ul>
       <div class="buttons">
-        <a class="action-button pro " href="Gloire/page_publicitaire.php">Pub</a>
+        <a class="action-button pro " href="../Gloire/page_publicitaire.php">Pub</a>
         <a class="action-button" href="../temoignage.php">Témoignages</a>
       </div>
       <div class="burger-menu-button">
@@ -107,7 +110,7 @@ if (!isset($_SESSION['visite_' . $page])) {
   </section>
 
   <div class="content">
-    <a href="#team" class="active">Notre Equipe</a>
+    <a href="#team">Notre Equipe</a>
     <!-- <a href='#manifestre" class="active" -->
     <a href="#histoire">Notre histoire</a>
     <a href="#chiffres">Chiffres clés</a>
@@ -116,7 +119,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
   <!-- partie des photos des subordonnés -->
 
-  <div id="team" class="team-section">
+  <section id="team" class="team-section">
     <h2 class="section-title">Notre Équipe</h2>
     <div class="team-carousel">
       <div class="team-card card-1">
@@ -182,11 +185,11 @@ if (!isset($_SESSION['visite_' . $page])) {
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- Histoire de GVAS -->
 
-  <div id="histoire" class="histoire-section">
+  <section id="histoire" class="histoire-section">
     <div class="histoire-inner">
       <h2 class="section-title">Notre histoire</h2>
       <div class="timeline">
@@ -238,99 +241,100 @@ if (!isset($_SESSION['visite_' . $page])) {
           </div>
         </div>
       </div>
-    </div>
+  </section>
 
-    <!-- Les chiffres clés de GVAS -->
+  <!-- Les chiffres clés de GVAS -->
 
-    <div id="chiffres" class="chiffres-section">
-      <div class="chiffres-inner">
-        <h2 class="section-title">Chiffres clés</h2>
+  <section id="chiffres" class="chiffres-section">
+    <div class="chiffres-inner">
+      <h2 class="section-title">Chiffres clés</h2>
 
-        <div class="chiffres-grid">
+      <div class="chiffres-grid">
+        <div class="chiffres-card">
+          <span class="chiffres-number">2022</span>
+          <div class="chiffres-label">Année de fondation</div>
+        </div>
+
+        <a href="../galerie.php">
           <div class="chiffres-card">
-            <span class="chiffres-number">2022</span>
-            <div class="chiffres-label">Année de fondation</div>
+            <span class="chiffres-number">+30</span>
+            <div class="chiffres-label">étudiants formés</div>
           </div>
-
-          <a href="../galerie.php">
-            <div class="chiffres-card">
-              <span class="chiffres-number">+30</span>
-              <div class="chiffres-label">étudiants formés</div>
-            </div>
-          </a>
-          <a href="../Formation.php">
-            <div class="chiffres-card">
-              <span class="chiffres-number">+6</span>
-              <div class="chiffres-label">Domaines de formation</div>
-            </div>
-          </a>
-        </div>
+        </a>
+        <a href="../Formation.php">
+          <div class="chiffres-card">
+            <span class="chiffres-number">+6</span>
+            <div class="chiffres-label">Domaines de formation</div>
+          </div>
+        </a>
       </div>
     </div>
+  </section>
 
-    <!-- Les partenaires de GVAS -->
+  <!-- Les partenaires de GVAS -->
 
-    <div id="partenaires" class="partenaires-section">
-      <h2 class="section-title">Nos partenaires</h2>
-      <p class="partenaires-subtitle">Ils nous font confiance</p>
+  <section id="partenaires" class="partenaires-section">
+    <h2 class="section-title">Nos partenaires</h2>
+    <p class="partenaires-subtitle">Ils nous font confiance</p>
 
-      <div class="carousel-wrapper">
-        <div class="carousel-track">
+    <div class="carousel-wrapper">
+      <div class="carousel-track">
 
-          <a href="https://www.airtel.cg/" target="_blank" class="ajac">
-            <div class="carousel-item">
-              <img src="images/Partenaires/R.jpg" alt="logo airtel">
-              <span>Airtel</span>
-            </div>
-          </a>
+        <a href="https://www.airtel.cg/" target="_blank" class="ajac">
+          <div class="carousel-item">
+            <img src="images/Partenaires/R.jpg" alt="logo airtel">
+            <span>Airtel</span>
+          </div>
+        </a>
 
-          <a class="ajac">
-            <div class="carousel-item">
-              <img src="images/Partenaires/AJEC.jpeg" alt="logo AJEC">
-              <span>AJEC</span>
-            </div>
-          </a>
+        <a class="ajac">
+          <div class="carousel-item">
+            <img src="images/Partenaires/AJEC.jpeg" alt="logo AJEC">
+            <span>AJEC</span>
+          </div>
+        </a>
 
-          <a class="ajac">
-            <div class="carousel-item">
-              <img src="images/Partenaires/cvmc.png" alt="logo CVMC">
-              <span>CVMC</span>
-            </div>
-          </a>
+        <a class="ajac">
+          <div class="carousel-item">
+            <img src="images/Partenaires/cvmc.png" alt="logo CVMC">
+            <span>CVMC</span>
+          </div>
+        </a>
 
-          <a href="https://www.facebook.com/vipconsultscongob/" target="_blank" class="ajac">
-            <div class="carousel-item">
-              <img src="images/Partenaires/VIP.png" alt="logo VIP">
-              <span>VIP-Consult</span>
-            </div>
-          </a>
+        <a href="https://www.facebook.com/vipconsultscongob/" target="_blank" class="ajac">
+          <div class="carousel-item">
+            <img src="images/Partenaires/VIP.png" alt="logo VIP">
+            <span>VIP-Consult</span>
+          </div>
+        </a>
 
 
-          <a href="https://www.africabizinfo.com/fr-CG/private-school-la-maniguette" target="_blank" class="ajac">
-            <div class="carousel-item">
-              <img src="images/Partenaires/Ecole.png" alt="logo école">
-              <span>La maniguette</span>
-            </div>
-          </a>
-        </div>
+        <a href="https://www.africabizinfo.com/fr-CG/private-school-la-maniguette" target="_blank" class="ajac">
+          <div class="carousel-item">
+            <img src="images/Partenaires/Ecole.png" alt="logo école">
+            <span>La maniguette</span>
+          </div>
+        </a>
       </div>
+    </div>
+  </section>
 
 
-      <!-- THE FOOTER -->
+  <!-- THE FOOTER -->
 
-      <!-- 
+  <!-- 
       <footer class="footer">
         <div class="footer-container">
        -->
-      <!--  Logo + texte + réseaux -->
-      <!--  
+  <!--  Logo + texte + réseaux -->
+  <!--  
           <div class="footer-description">
             <img src="images/Images/GVAS.png" alt="Logo GVAS">
             <p class="footer-text">
               Le Groupe Vision d'Aigle Services accompagne les talents vers un avenir meilleur.
             </p>
             -->
-      <!--<div class="footer-social">
+  <!--<div class="footer-social">
             <div class="social-btn">
               <div class="social-item">
                 <i class="fa-brands fa-facebook"></i>
@@ -339,7 +343,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             </div>
           </div>-->
 
-      <!--  
+  <!--  
             <div class="footer-social">
               <a class="fb" href="https://www.facebook.com/profile.php?id=61583138888176" target="_blank">
                 <ion-icon name="logo-facebook"></ion-icon>
@@ -349,12 +353,12 @@ if (!isset($_SESSION['visite_' . $page])) {
               </a>
 
           -->
-      <!--  
+  <!--  
               <a class="fb" href="https://instagram.com/dcodeyt" target="_blank">
                 <ion-icon name="logo-instagram"></ion-icon>
               </a>
               -->
-      <!--
+  <!--
               <a class="fb" href="https://whatsapp.com/dcodeyt" target="_blank">
                 <ion-icon name="logo-whatsapp"></ion-icon>
               </a>
@@ -397,66 +401,66 @@ if (!isset($_SESSION['visite_' . $page])) {
       -->
 
 
-      <!-- La partie footer -->
-      <footer>
-        <div class="footer_part1">
-          <div class="aigle ">
-            <div class="flex">
-              <img src="../Gloire/Assets/Img/icon_logo/logo-GVAS.png" alt="icon_logo">
-              <h1>Groupe vision d'Aigle Services</h1>
-            </div>
-            <p id="justP">
-              De référence, GVAS est une structure professionnelle composée d’un personnel de qualité agréé
-              par
-              l’État. spécialisé dans la vente des produits et services, l'accompagnement professionnel à
-              travers des formations qualifiantes et certifiantes mais aussi dans un suivi quelconque en vue
-              d’un domaine professionnel donné.
-            </p>
-          </div>
-
-          <div class="aigle">
-            <h1>Notre localisation</h1>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4218.998780710211!2d11.90546!3d-4.822414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDknMjAuNyJTIDExwrA1NCcxOS43IkU!5e1!3m2!1sfr!2scg!4v1780334157442!5m2!1sfr!2scg"
-              width="100%" height="225" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-
-            <a class="Hici" href="https://www.google.com/maps/place/4%C2%B049'21.0%22S+11%C2%B054'19.7%22E/@-4.8224385,11.9053312,121m/data=!3m1!1e3!4m4!3m3!8m2!3d-4.8225!4d11.9054722?hl=fr&entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
-              target="_blank">
-              " Cliquez ici pour Agrandir la MAPS "
-            </a>
-          </div>
-
-          <div class="hide">
-            <h1>Suivez nous sur nos pages</h1>
-          </div>
-          <div id="sous_class_contact">
-            <div class="a">
-              <a href="../index.php">
-                <i class="fa-solid fa-house" style="color: rgb(0, 0, 0);"></i>
-              </a>
-            </div>
-
-            <div class="a">
-              <a href="https://www.facebook.com/profile.php?id=61583138888176" target="_blank">
-                <i class="fa-brands fa-square-facebook" style="color: rgb(0, 0, 0);"></i>
-              </a>
-            </div>
-
-            <div class="a">
-              <a href="#">
-                <i class="fa-brands fa-youtube" style="color: rgb(0, 0, 0);"></i>
-              </a>
-            </div>
-
-            <div class="a">
-              <a href="https://wa.me/242064201415" target="_blank">
-                <i class="fa-brands fa-whatsapp" style="color: rgb(0, 0, 0);"></i>
-              </a>
-            </div>
-          </div>
-
+  <!-- La partie footer -->
+  <footer>
+    <div class="footer_part1">
+      <div class="aigle ">
+        <div class="flex">
+          <img src="../Gloire/Assets/Img/icon_logo/logo-GVAS.png" alt="icon_logo">
+          <h1>Groupe vision d'Aigle Services</h1>
         </div>
+        <p id="justP">
+          De référence, GVAS est une structure professionnelle composée d’un personnel de qualité agréé
+          par
+          l’État. spécialisé dans la vente des produits et services, l'accompagnement professionnel à
+          travers des formations qualifiantes et certifiantes mais aussi dans un suivi quelconque en vue
+          d’un domaine professionnel donné.
+        </p>
+      </div>
+
+      <div class="aigle">
+        <h1>Notre localisation</h1>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4218.998780710211!2d11.90546!3d-4.822414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNMKwNDknMjAuNyJTIDExwrA1NCcxOS43IkU!5e1!3m2!1sfr!2scg!4v1780334157442!5m2!1sfr!2scg"
+          width="100%" height="225" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+        <a class="Hici" href="https://www.google.com/maps/place/4%C2%B049'21.0%22S+11%C2%B054'19.7%22E/@-4.8224385,11.9053312,121m/data=!3m1!1e3!4m4!3m3!8m2!3d-4.8225!4d11.9054722?hl=fr&entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank">
+          " Cliquez ici pour Agrandir la MAPS "
+        </a>
+      </div>
+
+      <div class="hide">
+        <h1>Suivez nous sur nos pages</h1>
+      </div>
+      <div id="sous_class_contact">
+        <div class="a">
+          <a href="../index.php">
+            <i class="fa-solid fa-house" style="color: rgb(0, 0, 0);"></i>
+          </a>
+        </div>
+
+        <div class="a">
+          <a href="https://www.facebook.com/profile.php?id=61583138888176" target="_blank">
+            <i class="fa-brands fa-square-facebook" style="color: rgb(0, 0, 0);"></i>
+          </a>
+        </div>
+
+        <div class="a">
+          <a href="#">
+            <i class="fa-brands fa-youtube" style="color: rgb(0, 0, 0);"></i>
+          </a>
+        </div>
+
+        <div class="a">
+          <a href="https://wa.me/242064201415" target="_blank">
+            <i class="fa-brands fa-whatsapp" style="color: rgb(0, 0, 0);"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
 
     </div>
 
@@ -541,43 +545,67 @@ if (!isset($_SESSION['visite_' . $page])) {
         #celui qui ne se forme pas, se déforme !
       </h1>
     </div>
-    </footer>
+  </footer>
 
-    <script>
-      const burgerMenuButton = document.querySelector('.burger-menu-button');
-      const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i');
-      const burgerMenu = document.querySelector('.burger-menu');
+  <script>
+    const burgerMenuButton = document.querySelector('.burger-menu-button');
+    const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i');
+    const burgerMenu = document.querySelector('.burger-menu');
 
-      burgerMenuButton.onclick = function(e) {
-        e.stopPropagation();
+    burgerMenuButton.onclick = function(e) {
+      e.stopPropagation();
 
-        burgerMenu.classList.toggle('open');
+      burgerMenu.classList.toggle('open');
 
-        const isOpen = burgerMenu.classList.contains('open');
+      const isOpen = burgerMenu.classList.contains('open');
 
-        burgerMenuButtonIcon.classList = isOpen ?
-          'fa-solid fa-xmark' :
-          'fa-solid fa-bars';
-      };
+      burgerMenuButtonIcon.classList = isOpen ?
+        'fa-solid fa-xmark' :
+        'fa-solid fa-bars';
+    };
 
-      /* fermer si on clique à côté */
-      document.addEventListener('click', function(e) {
-        if (
-          !burgerMenu.contains(e.target) &&
-          !burgerMenuButton.contains(e.target)
-        ) {
-          burgerMenu.classList.remove('open');
-          burgerMenuButtonIcon.classList = 'fa-solid fa-bars';
+    /* fermer si on clique à côté */
+    document.addEventListener('click', function(e) {
+      if (
+        !burgerMenu.contains(e.target) &&
+        !burgerMenuButton.contains(e.target)
+      ) {
+        burgerMenu.classList.remove('open');
+        burgerMenuButtonIcon.classList = 'fa-solid fa-bars';
+      }
+    });
+
+    /* empêcher fermeture si clic dans le menu */
+    burgerMenu.addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script>
+    const navLinks = document.querySelectorAll(".content a")
+
+    function setActiveLink() {
+      let currentSelector = "";
+      document.querySelectorAll("section").forEach((section) => {
+        const sectionTop = section.offsetTop - 50;
+        const sectionBottom = sectionTop +
+          section.offsetHeight;
+        if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+          currentSection = section.getAttribute("id");
         }
       });
 
-      /* empêcher fermeture si clic dans le menu */
-      burgerMenu.addEventListener('click', function(e) {
-        e.stopPropagation();
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").substring(1) === currentSection) {
+          link.classList.add("active");
+        }
       });
-    </script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    }
+    window.addEventListener("scroll", setActiveLink);
+  </script>
 </body>
 
 </html>
