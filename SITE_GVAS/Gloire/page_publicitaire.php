@@ -46,7 +46,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
 <body>
     <!-- *********header********** -->
-    <div class=" burger-menu ">
+    <div class=" burger-menu " >
         <ul class=" links">
             <li><a href="../index.php">Accueil</a></li>
             <li><a href="../Formation.php">Formation</a></li>
@@ -59,23 +59,23 @@ if (!isset($_SESSION['visite_' . $page])) {
             </div>
         </ul>
     </div>
-    <header>
+    <header id="ancre">
 
         <div class="navbar">
             <div class="logo">
-                <img class="gvas" src="../images/Images/GVAS.png" alt="GVAS">
+                <img class="g" src="Assets/img/icon_logo/logo-GVAS.png">
 
             </div>
 
             <ul class="links">
-                <li><a href="../index.php">Accueil</a></li>
-                <li><a href="../Formation.php">Formation</a></li>
-                <li><a href="../galerie.php">Galerie</a></li>
-                <li><a href="../contacts.php">Contacts</a></li>
+                <li><a href="index.php">Accueil</a></li>
+                <li><a href="Formation.php">Formations</a></li>
+                <li><a href="galerie.php">Galerie</a></li>
+                <li><a href="contacts.php">Contacts</a></li>
             </ul>
             <div class="buttons">
-                <a class="action-button pro " href="temoignage.php">Temoignage</a>
-                <a class="action-button" href="../vivi/apropos.php">A propos</a>
+                <a class="action-button pro " href="Gloire/page_publicitaire.php">Pub</a>
+                <a class="action-button" href="vivi/apropos.php">A propos</a>
             </div>
             <div class="burger-menu-button">
                 <i class="fa-solid fa-bars"></i>
@@ -85,7 +85,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
     <p class="texte">Groupe Vision d'Aigle Services </p>
 
-    <main id="ancre">
+    <main>
         <section id="classeur">
             <div class="classe">
                 <div class="defilements">
