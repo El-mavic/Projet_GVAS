@@ -110,7 +110,7 @@ a {
   width: 100%;
   display: flex;
   justify-content: center;
-  animation: caro 240s linear infinite;
+  animation: caro 30s infinite;
   border-bottom: 5px solid yellow;
 
   display: flex;
@@ -878,7 +878,6 @@ h2 {
       rgb(255, 255, 104));
   padding: 7px;
   width: 100%;
-  /* height: 100%; */
 }
 
 #foot h1 {
