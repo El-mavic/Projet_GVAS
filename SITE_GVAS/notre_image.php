@@ -36,6 +36,7 @@
 <body>
     <div class=" burger-menu ">
         <ul class=" links">
+            <li><a href="index.php">Accueil</a></li>
             <li><a href="temoignage.php">Temoignage</a></li>
             <li><a href="Formation.php">Formations</a></li>
             <li><a href="Galerie.php">Gallérie</a></li>
@@ -56,6 +57,7 @@
             </div>
 
             <ul class="links">
+                <li><a href="index.php">Accueil</a></li>
                 <li><a href="temoignage.php">Temoignage</a></li>
                 <li><a href="Formation.php">Formations</a></li>
                 <li><a href="galerie.php">Galerie</a></li>
@@ -73,22 +75,44 @@
     <p class="texte">Groupe Vision d'Aigle Services </p>
 
     <div class="container">
-        <h1>Tout savoir sur <span>GVAS</span> Avec les détails nécessaires</h1>
+        <h3 classe="titre">Tout savoir sur <span>GVAS</span> Avec les détails nécessaires</h3>
 
 
         <div class="accordion-item">
             <button class="accordion-header">
-                Qui sommes nous exatement
+                Nous connaitre un peu plus...
                 <span class="icon">+</span>
             </button>
 
             <div class="accordion-content">
                 <div class="content-inner">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque vero quia id blanditiis molestiae at,
-                        sunt tempore possimus rerum cum maxime nobis vitae quidem, recusandae maiores deleniti assumenda ipsa voluptatum.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, neque eos? Pariatur possimus maiores a?
-                        Esse, hic vel. Consequuntur nobis ipsam architecto nemo perspiciatis quam esse nulla aspernatur! Itaque, sint.
+                        <mark>Groupe Vision d’Aigle Services</mark> est une entreprise spécialisée dans la formation professionnelle
+                        et les services de secrétariat de qualité. Nous accompagnons les particuliers, les étudiants, les professionnels
+                        et les entreprises dans le développement de leurs compétences et la réalisation de leurs projets administratifs.
+                        <br><br>
+                        Grâce à une équipe compétente et expérimentée, nous proposons des formations adaptées aux exigences du marché du travail,
+                        permettant à nos apprenants d’acquérir des compétences pratiques et immédiatement exploitables. Notre objectif est de contribuer
+                        à l’insertion professionnelle et à l’amélioration des performances de nos clients.
+                    </p>
+
+                    <img src="images/Formation/2.jpg" alt="Réservation">
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-header">
+                Comment nous gérons nos élèves?
+                <span class="icon">+</span>
+            </button>
+
+            <div class="accordion-content">
+                <div class="content-inner">
+                    <p>
+                        Nous assurons un accompagnement personnalisé de chaque apprenant, depuis son inscription jusqu'à son insertion
+                        professionnelle. Nos étudiants bénéficient d'un suivi pédagogique régulier, d'évaluations continues,
+                        d'exercices pratiques, d'un stage et d'un encadrement assuré par des formateurs qualifiés.
                     </p>
 
                     <img src="images/Formation/2.jpg" alt="Réservation">
@@ -97,56 +121,44 @@
         </div>
         <div class="accordion-item">
             <button class="accordion-header">
-                Qui sommes nous exatement
+                Quelle est notre vision/Mission?
                 <span class="icon">+</span>
             </button>
 
             <div class="accordion-content">
                 <div class="content-inner">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque vero quia id blanditiis molestiae at,
-                        sunt tempore possimus rerum cum maxime nobis vitae quidem, recusandae maiores deleniti assumenda ipsa voluptatum.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, neque eos? Pariatur possimus maiores a?
-                        Esse, hic vel. Consequuntur nobis ipsam architecto nemo perspiciatis quam esse nulla aspernatur! Itaque, sint.
-                    </p>
+                        Notre vision est de devenir une référence dans la formation professionnelle et les services numériques
+                        en offrant des compétences adaptées aux besoins du marché de l'emploi et aux évolutions technologiques.
+                    </p> <br>
+                    <p> Notre mission est de former des professionnels compétents, autonomes et immédiatement opérationnels tout
+                        en proposant des solutions et services de qualité à nos clients.</p>
 
                     <img src="images/Formation/2.jpg" alt="Réservation">
                 </div>
             </div>
         </div>
+
         <div class="accordion-item">
-            <button class="accordion-header">
-                Qui sommes nous exatement
+            <button class="accordion-header" id="choix">
+                Pourquoi nous choisir?
                 <span class="icon">+</span>
             </button>
 
             <div class="accordion-content">
                 <div class="content-inner">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque vero quia id blanditiis molestiae at,
-                        sunt tempore possimus rerum cum maxime nobis vitae quidem, recusandae maiores deleniti assumenda ipsa voluptatum.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, neque eos? Pariatur possimus maiores a?
-                        Esse, hic vel. Consequuntur nobis ipsam architecto nemo perspiciatis quam esse nulla aspernatur! Itaque, sint.
-                    </p>
-
-                    <img src="images/Formation/2.jpg" alt="Réservation">
-                </div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <button class="accordion-header">
-                Qui sommes nous exatement
-                <span class="icon">+</span>
-            </button>
-
-            <div class="accordion-content">
-                <div class="content-inner">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque vero quia id blanditiis molestiae at,
-                        sunt tempore possimus rerum cum maxime nobis vitae quidem, recusandae maiores deleniti assumenda ipsa voluptatum.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, neque eos? Pariatur possimus maiores a?
-                        Esse, hic vel. Consequuntur nobis ipsam architecto nemo perspiciatis quam esse nulla aspernatur! Itaque, sint.
-                    </p>
+                    <p style="margin-top: 5%; font-size: 20px; white-space:nowrap">
+                        Pour bénéficier :
+                    </p><br>
+                    <ul style="white-space: nowrap;">
+                        <li>D'une formation de qualité</li>
+                        <li> D'un accompagnement personnalisé</li>
+                        <li>De programmes orientés vers la pratique</li>
+                        <li> De formateurs expérimentés</li>
+                        <li>D'un suivi après la formation</li>
+                        <li> De certifications reconnues</li>
+                        <li> D'opportunités de stages et d'insertion professionnelle</li>
+                    </ul>
 
                     <img src="images/Formation/2.jpg" alt="Réservation">
                 </div>
@@ -164,6 +176,7 @@
         .content-inner p {
             flex: 1;
             margin: 0;
+            font-size: 15px;
         }
 
         .content-inner img {
@@ -184,6 +197,7 @@
             margin-left: 15px;
         }
 
+
         * {
             margin: 0;
             padding: 0;
@@ -201,14 +215,14 @@
             margin: auto;
         }
 
-        h1 {
+        h3 {
             text-align: center;
             font-size: 42px;
             margin-bottom: 40px;
             margin-top: 9%;
         }
 
-        h1 span {
+        h3 span {
             color: yellow;
         }
 
