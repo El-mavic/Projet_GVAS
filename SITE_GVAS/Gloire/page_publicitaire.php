@@ -91,13 +91,13 @@ if (!isset($_SESSION['visite_' . $page])) {
                 <div class="defilements">
                     <div>
                         <h1 class="wave">
-                            <span>Bienvenu</span>
+                            <span>Bienvenue</span>
                             <span>sur</span>
                             <span>notre</span>
                             <span>page</span>
                             <span>publicitaire</span>
                         </h1>
-                        <h2>Retrouvrez ici nos actualités sous forme d'informations</h2>
+                        <h2>Retrouvez ici nos actualités sous forme d'informations</h2>
                     </div>
                 </div>
 
