@@ -1,6 +1,12 @@
 <?php
+require 'traitement.php';
+
+$req = $pdo->query("SELECT * FROM galerie ORDER BY id DESC");
+$medias = $req->fetchAll();
+?>
+<?php
 session_start();
-require 'Traitement.php';
+require 'traitement.php';
 
 $page = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
 
@@ -12,681 +18,34 @@ if (!isset($_SESSION['visite_' . $page])) {
   $_SESSION['visite_' . $page] = true;
 }
 ?>
-
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="De réfférence, GVAS est une structure 
-          professionnelle composée d’un personnel de qualité agréé 
-          par l’État. spécialisé dans la vente des produits et services, 
-          l'accompagnement professionnelle à travers des formations qualifiantes
-           et certifiantes mais aussi
-           dans un suivi quelconque en vue d’un domaine professionnel donné.">
-  <meta name="author" content="Mr El-mavic BAKALA">
-  <meta name="author" content="Miss Célina LUEMBA">
-  <meta name="author" content="Gln93/Mr Tokyo">
-  <meta name="robots" content="index, follow">
-  <meta name="keywords" content="GVAS, EVGS, groupe vision d'aigle services, vision d'aigle, achat, formation, cours en ligne, produits, service">
-  <link rel="icon" href="images/Images/GVAS.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>Galerie - GVAS</title>
+  <meta name="description" content="De réfférence, GVAS est une structure professionnelle...">
+  <meta name="author" content="Mr El-mavic BAKALA">
+  <meta name="author" content="Miss Célina LUEMBA">
+  <meta name="author" content="Gln93/Mr Tokyo">
+
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="GVAS, EVGS, groupe vision d'aigle services">
+
+  <link rel="icon" href="images/Images/GVAS.png">
+  <title>Groupe Vision d'Aigle Services</title>
+  <link rel="stylesheet" href="style.css">
+
 </head>
 
-<body class="anime">
-
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
-
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-
-      background-color: gray;
-    }
-
-    .gallery-section {
-      font-family: 'DM Sans', sans-serif;
-      padding: 3rem 2rem;
-      background: var(--color-background-tertiary);
-      min-height: 100vh;
-    }
-
-    .gallery-header {
-      text-align: center;
-      margin-bottom: 2.5rem;
-    }
-
-    .gallery-header h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 4.2rem;
-      font-weight: 400;
-      color: #f1d124;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-    }
-
-    .gallery-header h2 em {
-      font-style: italic;
-      color: #B4B2A9;
-    }
-
-    .gallery-header p {
-      margin-top: 0.6rem;
-      font-size: 0.9rem;
-      font-weight: 300;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--color-text-secondary);
-    }
-
-    .gallery-filters {
-      display: flex;
-      justify-content: center;
-      gap: 0.5rem;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .filter-btn {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.45rem 1.1rem;
-      border: 0.5px solid var(--color-border-secondary);
-      border-radius: 999px;
-      background: transparent;
-      color: var(--color-text-secondary);
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-
-    .filter-btn:hover {
-      background: var(--color-background-secondary);
-      color: var(--color-text-primary);
-    }
-
-    .filter-btn.active {
-      background: var(--color-text-primary);
-      color: var(--color-background-primary);
-      border-color: var(--color-text-primary);
-    }
-
-    .gallery-grid {
-      columns: 3;
-      column-gap: 1rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    @media (max-width: 720px) {
-      .gallery-grid {
-        columns: 2;
-      }
-    }
-
-    @media (max-width: 440px) {
-      .gallery-grid {
-        columns: 1;
-      }
-    }
-
-    .gallery-item {
-      break-inside: avoid;
-      margin-bottom: 1rem;
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-      cursor: pointer;
-      background: var(--color-background-secondary);
-    }
-
-    .gallery-item img {
-      width: 100%;
-      display: block;
-      transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      will-change: transform;
-    }
-
-    .gallery-item-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.72) 0%, transparent 55%);
-      opacity: 0;
-      transition: opacity 0.35s ease;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 1.2rem;
-    }
-
-    .gallery-item:hover .gallery-item-overlay {
-      opacity: 1;
-    }
-
-    .gallery-item:hover img {
-      transform: scale(1.05);
-    }
-
-    .overlay-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      font-weight: 600;
-      color: #fff;
-      margin-bottom: 0.2rem;
-      transform: translateY(6px);
-      transition: transform 0.35s ease;
-    }
-
-    .overlay-tag {
-      font-size: 0.7rem;
-      font-weight: 400;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.65);
-      transform: translateY(6px);
-      transition: transform 0.35s ease 0.04s;
-    }
-
-    .gallery-item:hover .overlay-title,
-    .gallery-item:hover .overlay-tag {
-      transform: translateY(0);
-    }
-
-    .zoom-icon {
-      position: absolute;
-      top: 0.8rem;
-      right: 0.8rem;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(6px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .gallery-item:hover .zoom-icon {
-      opacity: 1;
-    }
-
-    .zoom-icon svg {
-      width: 14px;
-      height: 14px;
-      stroke: #fff;
-      fill: none;
-    }
-
-    /* ── Lightbox ── */
-    .lightbox-backdrop {
-      position: fixed;
-      inset: 0;
-      background: rgba(10, 10, 10, 0.96);
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-    }
-
-    .lightbox-backdrop.open {
-      opacity: 1;
-      pointer-events: all;
-    }
-
-    .lightbox-inner {
-      position: relative;
-      max-width: 90vw;
-      max-height: 90vh;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .lightbox-card {
-      background: #111;
-      border-radius: 16px;
-      overflow: hidden;
-      max-width: 82vw;
-      max-height: 88vh;
-      display: flex;
-      flex-direction: column;
-      transform: scale(0.92);
-      transition: transform 0.35s cubic-bezier(0.34, 1.26, 0.64, 1);
-      box-shadow: 0 32px 80px rgba(0, 0, 0, 0.7);
-    }
-
-    .lightbox-backdrop.open .lightbox-card {
-      transform: scale(1);
-    }
-
-    .lightbox-card img {
-      max-width: 100%;
-      max-height: 70vh;
-      object-fit: contain;
-      display: block;
-    }
-
-    .lightbox-info {
-      padding: 1rem 1.4rem 1.2rem;
-      border-top: 0.5px solid rgba(255, 255, 255, 0.08);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .lightbox-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.05rem;
-      color: #f0ece4;
-      font-weight: 400;
-    }
-
-    .lightbox-meta {
-      font-size: 0.72rem;
-      color: rgba(255, 255, 255, 0.35);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-top: 0.2rem;
-    }
-
-    .lightbox-counter {
-      font-size: 0.75rem;
-      color: rgba(255, 255, 255, 0.3);
-      letter-spacing: 0.06em;
-    }
-
-    .lb-nav {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      border: 0.5px solid rgba(255, 255, 255, 0.15);
-      background: rgba(255, 255, 255, 0.06);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: background 0.2s ease, transform 0.15s ease;
-      flex-shrink: 0;
-      backdrop-filter: blur(8px);
-    }
-
-    .lb-nav:hover {
-      background: rgba(255, 255, 255, 0.14);
-      transform: scale(1.08);
-    }
-
-    .lb-nav svg {
-      width: 18px;
-      height: 18px;
-      stroke: #fff;
-      fill: none;
-      stroke-width: 2;
-    }
-
-    .lb-close {
-      position: fixed;
-      top: 1.2rem;
-      right: 1.2rem;
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.08);
-      border: 0.5px solid rgba(255, 255, 255, 0.12);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background 0.2s ease;
-      z-index: 10000;
-    }
-
-    .lb-close:hover {
-      background: rgba(255, 255, 255, 0.18);
-    }
-
-    .lb-close svg {
-      width: 16px;
-      height: 16px;
-      stroke: #fff;
-      fill: none;
-      stroke-width: 2;
-    }
-
-    .lb-strip {
-      position: fixed;
-      bottom: 1.2rem;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 6px;
-      z-index: 10000;
-    }
-
-    .lb-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.25);
-      cursor: pointer;
-      transition: background 0.2s, transform 0.2s;
-    }
-
-    .lb-dot.active {
-      background: #fff;
-      transform: scale(1.4);
-    }
-
-    .gallery-item.hidden {
-      display: none;
-
-    }
-  </style>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: cambria, cochin, georgia, times, 'times new roman', serif;
-    }
-
-    body {
-      height: 100vh;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    li {
-      list-style: none;
-    }
-
-    a {
-      text-decoration: none;
-      color: white;
-      font-size: 1.5em;
-    }
-
-    a:hover {
-      color: #fff200;
-    }
-
-    header {
-      position: relative;
-      padding: 0 8em;
-      background-color: rgba(19, 22, 22, 0.61);
-      border-bottom-left-radius: 50px;
-      border-top-left-radius: 50px;
-      border-bottom-right-radius: 50px;
-      border-top-right-radius: 50px;
-    }
-
-    .navbar {
-      width: 100%;
-      max-width: 1200px;
-      height: 80px;
-      margin: 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .gvas {
-      width: 6.5%;
-      position: absolute;
-      left: 1%;
-      margin-top: -3.2%;
-    }
-
-    .navbar .logo a {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    .navbar .links {
-      display: flex;
-      gap: 5rem;
-
-    }
-
-    .navbar .links a {
-      position: relative;
-    }
-
-    .navbar .links a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -5px;
-      width: 0;
-      height: 3px;
-      background-color: #fff200;
-      transition: width 0.3s ease;
-    }
-
-    .navbar .links a:hover::after {
-      width: 100%;
-    }
-
-    .navbar .burger-menu-button {
-      color: white;
-      font-size: 1.5rem;
-      cursor: pointer;
-      display: none;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 10px;
-    }
-
-    .action-button {
-      background-color: #fff200;
-      color: black;
-      border: 1px solid #fff200;
-      padding: 0.5rem 1.2rem;
-      outline: none;
-      border-radius: 5px;
-      font-size: 0.9rem;
-      font-weight: bold;
-      cursor: pointer;
-
-    }
-
-    .action-button:hover {
-      color: rgb(94, 94, 95);
-      border: 1px solid #fff200;
-    }
-
-    .pro {
-      background-color: transparent;
-      color: white;
-      border: 1px solid #fff200;
-    }
-
-    .pro:hover {
-      background-color: #fff200;
-      color: rgba(34, 7, 97, 0.726);
-    }
-
-    /*-----Burger menu----*/
-    .burger-menu {
-      display: none;
-      height: 0;
-      position: absolute;
-      right: 2rem;
-      top: 60px;
-      width: 200px;
-      background: rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(15px);
-      border-radius: 10px;
-      overflow: hidden;
-      transition: height cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-    }
-
-    .burger-menu.open {
-      height: 250px;
-    }
-
-
-
-    .burger-menu li {
-      padding: 0.19rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-left: -100px;
-    }
-
-    .divider {
-      height: 1px;
-      background: #fff;
-      width: 80%;
-      margin-left: -30px;
-      margin-bottom: 1rem;
-    }
-
-
-
-    .burger-menu .action-button {
-      width: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .buttons-burger-menu {
-      display: flex;
-      flex-direction: column;
-      margin-left: -5px;
-      gap: 10px;
-    }
-
-    /*------Suite----*/
-
-    .texte {
-      font-size: 3em;
-      font-weight: bold;
-      align-items: center;
-      text-align: center;
-      background: linear-gradient(90deg, #7c7f80, #fffb0096);
-      font-family: Dutch801 XBd BT;
-
-    }
-
-    /*--------Responsive-------*/
-
-    @media (max-width:990px) {
-      header {
-        background: none;
-      }
-
-      .navbar .links,
-      .navbar .action-button {
-        display: none;
-
-      }
-
-      .navbar .burger-menu-button {
-        display: block;
-
-      }
-
-      .burger-menu {
-        display: block;
-
-      }
-    }
-
-    @media (max-width:576px) {
-
-      .burger-menu {
-        position: block;
-        z-index: 9999;
-      }
-    }
-
-    /*--- Logo + burger---*/
-
-    @media (max-width:500px) {
-
-      .gvas {
-        width: 5rem;
-        margin-top: -40px;
-      }
-
-      .burger-menu-button {
-
-        position: relative;
-        left: 5rem;
-      }
-
-      header {
-        display: block;
-      }
-
-    }
-
-    @media (max-width:990px) {
-
-      .texte {
-        font-size: 2rem;
-      }
-
-    }
-
-    /*pour la première page*/
-
-    @media (max-width: 1366px) {
-      .table {
-        margin-top: 30px;
-      }
-
-      .buttons {
-        position: relative;
-        left: 90px;
-      }
-
-      .links {
-        position: relative;
-        left: 50px;
-      }
-
-      .btn-primary {
-        margin-left: 1px;
-      }
-    }
-
-    @media (max-width: 820px) {
-
-      .burger-menu-button {
-        margin-right: 1px;
-      }
-    }
-  </style>
-
-  <div class=" burger-menu ">
-    <ul class=" links">
+<body>
+
+  <!--------------------------------------------------------Header---------------------------------------------------------------->
+  <div class="burger-menu ">
+    <ul class="links">
       <li><a href="index.php">Accueil</a></li>
       <li><a href="temoignage.php">Temoignage</a></li>
       <li><a href="Formation.php">Formations</a></li>
@@ -698,13 +57,14 @@ if (!isset($_SESSION['visite_' . $page])) {
       </div>
     </ul>
   </div>
+
   <header>
 
     <div class="navbar">
       <div class="logo">
         <img class="gvas" src="images/Images/GVAS.png" alt="GVAS">
-
       </div>
+
 
       <ul class="links">
         <li><a href="index.php">Accueil</a></li>
@@ -720,237 +80,229 @@ if (!isset($_SESSION['visite_' . $page])) {
         <i class="fa-solid fa-bars"></i>
       </div>
     </div>
+
   </header>
-  <p class="texte">Groupe Vision d'Aigle Services </p>
+  <!--------------------------------------Message de GVAS BIENVENUE---------------------------------------------------------------->
 
-  <div class="gallery-grid" id="gallery"></div>
+  <p class="texte">Bienvenue au Groupe Vision d'Aigle Services </p>
+  <!-- GALERIE -->
+  <div class="gallery-grid">
 
-  <div class="lightbox-backdrop" id="lightbox">
-    <button class="lb-close" id="lb-close">
-      <svg viewBox="0 0 24 24">
-        <line x1="18" y1="6" x2="6" y2="18" />
-        <line x1="6" y1="6" x2="18" y2="18" />
-      </svg>
-    </button>
-    <div class="lightbox-inner">
-      <button class="lb-nav" id="lb-prev">
-        <svg viewBox="0 0 24 24">
-          <polyline points="15 18 9 12 15 6" />
-        </svg>
-      </button>
-      <div class="lightbox-card">
-        <img id="lb-img" src="" alt="">
-        <div class="lightbox-info">
-          <div>
-            <div class="lightbox-title" id="lb-title"></div>
-            <div class="lightbox-meta" id="lb-tag"></div>
+    <?php foreach ($medias as $media): ?>
+
+      <div class="gallery-item">
+
+        <div class="media-wrapper">
+
+          <?php if ($media['type_media'] == 'image'): ?>
+
+            <img src="<?= $media['chemin'] ?>" onclick="openViewer(this)">
+
+          <?php else: ?>
+
+            <video onclick="openViewer(this)">
+              <source src="<?= $media['chemin'] ?>">
+            </video>
+
+          <?php endif; ?>
+
+          <!-- TEXTE AU SURVOL -->
+          <div class="overlay">
+            <?= $media['titre'] ?? "GVAS" ?>
           </div>
-          <div class="lightbox-counter" id="lb-counter"></div>
+
         </div>
+
       </div>
-      <button class="lb-nav" id="lb-next">
-        <svg viewBox="0 0 24 24">
-          <polyline points="9 18 15 12 9 6" />
-        </svg>
-      </button>
-    </div>
-    <div class="lb-strip" id="lb-strip"></div>
+
+    <?php endforeach; ?>
+
   </div>
 
+  <!-- LIGHTBOX -->
+  <div id="viewer">
+    <span id="close" onclick="closeViewer()">✕</span>
+
+    <button class="nav left" onclick="prev()">❮</button>
+    <div id="viewerContent"></div>
+    <button class="nav right" onclick="next()">❯</button>
+  </div>
+  <style>
+    /* =========================
+       GALERIE
+    ========================= */
+    body {
+      background-color: rgb(68, 69, 70);
+    }
+
+    .gallery-grid {
+      columns: 6;
+      column-gap: 20px;
+      padding: 20px;
+    }
+
+    .gallery-item {
+      break-inside: avoid;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    /* wrapper */
+    .media-wrapper {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .gallery-item img,
+    .gallery-item video {
+      width: 100%;
+      display: block;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .gallery-item img:hover,
+    .gallery-item video:hover {
+      transform: scale(1.04);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    /* OVERLAY TEXTE */
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      text-align: center;
+
+      padding: 10px;
+      font-size: 14px;
+
+      opacity: 0;
+      transition: 0.3s ease;
+    }
+
+    .media-wrapper:hover .overlay {
+      opacity: 1;
+    }
+
+    /* =========================
+       LIGHTBOX
+    ========================= */
+
+    #viewer {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(10px);
+    }
+
+    #viewerContent {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #viewerContent img,
+    #viewerContent video {
+      max-width: 95%;
+      max-height: 95vh;
+      object-fit: contain;
+      border-radius: 12px;
+      animation: zoomIn 0.2s ease;
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.85);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      background: rgb(111, 112, 110);
+    }
+
+    .left {
+      left: 20px;
+    }
+
+    .right {
+      right: 20px;
+    }
+
+    #close {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 20px;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
   <script>
-    const photos = [];
-    const extensions = ['jpg', 'JPG', 'png', 'PNG'];
-
-    for (let i = 1; i <= 27; i++) {
-      photos.push({
-        srcs: extensions.map(ext => `images/BG/${i}.${ext}`),
-        title: "GVAS",
-        tag: "formation"
-      });
-    }
-
-    function loadImage(imgElement, sources) {
-      let index = 0;
-
-      function tryNext() {
-        if (index >= sources.length) {
-          console.warn("Image introuvable :", sources);
-          return;
-        }
-
-        imgElement.src = sources[index];
-        index++;
-      }
-
-      imgElement.onerror = tryNext;
-      tryNext();
-    }
-
-    const grid = document.getElementById('gallery');
-    const lb = document.getElementById('lightbox');
-    const lbImg = document.getElementById('lb-img');
-    const lbTitle = document.getElementById('lb-title');
-    const lbTag = document.getElementById('lb-tag');
-    const lbCounter = document.getElementById('lb-counter');
-    const lbStrip = document.getElementById('lb-strip');
-
+    let images = [];
     let currentIndex = 0;
-    let visiblePhotos = [...photos];
 
-    function buildGallery(filter) {
-      grid.innerHTML = '';
-
-      visiblePhotos = filter === 'all' ? [...photos] :
-        photos.filter(p => p.tag === filter);
-
-      visiblePhotos.forEach((p, i) => {
-        const item = document.createElement('div');
-        item.className = 'gallery-item';
-
-        item.innerHTML = `
-        <img alt="${p.title}" loading="lazy">
-        <div class="gallery-item-overlay">
-          <div class="overlay-title">${p.title}</div>
-          <div class="overlay-tag">${p.tag}</div>
-        </div>
-        <div class="zoom-icon">
-          <svg viewBox="0 0 24 24" stroke-width="2">
-            <circle cx="11" cy="11" r="7"/>
-            <line x1="16.5" y1="16.5" x2="22" y2="22"/>
-            <line x1="11" y1="8" x2="11" y2="14"/>
-            <line x1="8" y1="11" x2="14" y2="11"/>
-          </svg>
-        </div>`;
-
-        const img = item.querySelector('img');
-        loadImage(img, p.srcs);
-
-        item.addEventListener('click', () => openLightbox(i));
-
-        grid.appendChild(item);
-      });
-
-      lbStrip.innerHTML = '';
-
-      visiblePhotos.forEach((_, i) => {
-        const dot = document.createElement('div');
-        dot.className = 'lb-dot' + (i === currentIndex ? ' active' : '');
-
-        dot.addEventListener('click', () => {
-          currentIndex = i;
-          updateLightbox();
-        });
-
-        lbStrip.appendChild(dot);
-      });
+    function openViewer(el) {
+      images = Array.from(document.querySelectorAll('.gallery-item img, .gallery-item video'));
+      currentIndex = images.indexOf(el);
+      showItem();
+      document.getElementById("viewer").style.display = "flex";
     }
 
-    function updateLightbox() {
-      const p = visiblePhotos[currentIndex];
+    function showItem() {
+      const el = images[currentIndex];
+      const src = el.querySelector ? el.querySelector("source")?.src || el.src : el.src;
 
-      lbImg.style.opacity = 0;
-      lbImg.style.transform = 'scale(0.96)';
-
-      setTimeout(() => {
-        loadImage(lbImg, p.srcs);
-
-        lbImg.alt = p.title;
-        lbTitle.textContent = p.title;
-        lbTag.textContent = p.tag.toUpperCase();
-        lbCounter.textContent =
-          (currentIndex + 1) + ' / ' + visiblePhotos.length;
-
-        lbImg.style.transition =
-          'opacity 0.3s ease, transform 0.3s ease';
-
-        lbImg.style.opacity = 1;
-        lbImg.style.transform = 'scale(1)';
-
-        document
-          .querySelectorAll('.lb-dot')
-          .forEach((d, i) =>
-            d.classList.toggle('active', i === currentIndex)
-          );
-      }, 120);
-    }
-
-    function openLightbox(i) {
-      currentIndex = i;
-      lb.classList.add('open');
-      document.body.style.overflow = 'hidden';
-      updateLightbox();
-    }
-
-    function closeLightbox() {
-      lb.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-
-    document.getElementById('lb-close')
-      .addEventListener('click', closeLightbox);
-
-    lb.addEventListener('click', e => {
-      if (e.target === lb) closeLightbox();
-    });
-
-    document.getElementById('lb-prev')
-      .addEventListener('click', e => {
-        e.stopPropagation();
-        currentIndex =
-          (currentIndex - 1 + visiblePhotos.length) %
-          visiblePhotos.length;
-        updateLightbox();
-      });
-
-    document.getElementById('lb-next')
-      .addEventListener('click', e => {
-        e.stopPropagation();
-        currentIndex =
-          (currentIndex + 1) %
-          visiblePhotos.length;
-        updateLightbox();
-      });
-
-    document.addEventListener('keydown', e => {
-      if (!lb.classList.contains('open')) return;
-
-      if (e.key === 'ArrowLeft') {
-        currentIndex =
-          (currentIndex - 1 + visiblePhotos.length) %
-          visiblePhotos.length;
-        updateLightbox();
+      if (el.tagName === "IMG") {
+        document.getElementById("viewerContent").innerHTML = `<img src="${src}">`;
+      } else {
+        document.getElementById("viewerContent").innerHTML = `<video controls autoplay><source src="${src}"></video>`;
       }
+    }
 
-      if (e.key === 'ArrowRight') {
-        currentIndex =
-          (currentIndex + 1) %
-          visiblePhotos.length;
-        updateLightbox();
-      }
+    function next() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showItem();
+    }
 
-      if (e.key === 'Escape') {
-        closeLightbox();
-      }
-    });
+    function prev() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showItem();
+    }
 
-    document.querySelectorAll('.filter-btn')
-      .forEach(btn => {
-        btn.addEventListener('click', () => {
-          document
-            .querySelectorAll('.filter-btn')
-            .forEach(b => b.classList.remove('active'));
-
-          btn.classList.add('active');
-          buildGallery(btn.dataset.filter);
-        });
-      });
-
-    buildGallery('all');
+    function closeViewer() {
+      document.getElementById("viewer").style.display = "none";
+      document.getElementById("viewerContent").innerHTML = "";
+    }
   </script>
-
-
-
-
 
   <!--burgerMenuButton-->
   <script>
