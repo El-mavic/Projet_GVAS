@@ -306,50 +306,6 @@ header {
 
 }
 
-/*------------------------------------------- 990px Responsive----------------------------------------*/
-@media (max-width:990px) {
-    header {
-        background: none;
-    }
-
-    .navbar .links,
-    .navbar .action-button {
-        display: none;
-
-    }
-
-    .navbar .burger-menu-button {
-        display: block;
-
-    }
-
-    .burger-menu {
-        display: block;
-
-    }
-
-    .table1 {
-        width: 8rem;
-        height: 8rem;
-        position: relative;
-        right: 5rem;
-    }
-
-    .table2 {
-        width: 8rem;
-        height: 8rem;
-        position: relative;
-        left: -5rem;
-    }
-
-    .texte {
-        font-size: 2rem;
-    }
-
-}
-
-
-
 /*------------------------------------------- 1180px Responsive----------------------------------------*/
 @media (max-width: 1180px) {
     .burger-menu {
@@ -393,6 +349,48 @@ header {
     .texte {
         word-wrap: break-word;
         overflow-wrap: break-word;
+    }
+
+}
+
+/*------------------------------------------- 990px Responsive----------------------------------------*/
+@media (max-width:990px) {
+    header {
+        background: none;
+    }
+
+    .navbar .links,
+    .navbar .action-button {
+        display: none;
+
+    }
+
+    .navbar .burger-menu-button {
+        display: block;
+
+    }
+
+    .burger-menu {
+        display: block;
+
+    }
+
+    .table1 {
+        width: 8rem;
+        height: 8rem;
+        position: relative;
+        right: 5rem;
+    }
+
+    .table2 {
+        width: 8rem;
+        height: 8rem;
+        position: relative;
+        left: -5rem;
+    }
+
+    .texte {
+        font-size: 2rem;
     }
 
 }
@@ -1175,22 +1173,23 @@ input:focus {
 /* FOOTER DE LA PAGE TEMOIGNAGE */
 .jaune {
     background-image: linear-gradient(to right,
-      rgb(235, 253, 134),
-      rgb(255, 255, 104));
+            rgb(235, 253, 134),
+            rgb(255, 255, 104));
     padding: 7px;
     width: 100%;
 }
 
 .jaune h1 {
-  color: black;
+    color: black;
 }
 
 .parie_publicitaire h1 {
-  color: black;
+    color: black;
 }
 
 footer p,
-a, li {
+a,
+li {
     color: white;
 }
 
