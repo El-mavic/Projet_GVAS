@@ -25,6 +25,8 @@ let valider = document.getElementById("valider");
 
 subscribeBtn.addEventListener("click", () => {
   popup.style.display = "flex";
+  // subscribeBtn.style.transform = "scale(1.1)";
+
 });
 
 /* Fermer en cliquant à côté */
@@ -40,7 +42,7 @@ let shareBtn = document.getElementById("shareBtn");
 shareBtn.addEventListener("click", async () => {
   /* Animation */
 
-  //   shareBtn.style.transform = "scale(1.15)";
+    shareBtn.style.transform = "scale(1.0)";
   // shareBtn.style.boxShadow = "0 0 20px #00ff99";
 
   setTimeout(() => {

@@ -492,6 +492,8 @@ if (!isset($_SESSION['visite_' . $page])) {
         <li><a href="../galerie.php">Galerie</a></li>
         <li><a href="../contacts.php">Contacts</a></li>
         <li><a href="../temoignage.php">Témoignage</a></li>
+        <li><a href="../notre_image.php">Pourquoi GVAS ?</a></li>
+
       </ul>
     </div>
 
