@@ -45,10 +45,13 @@ if (!isset($_SESSION['visite_' . $page])) {
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Gloire/Assets/Css/style.css">
+<<<<<<< HEAD
 
     <link rel="stylesheet" href="../Gloire/Assets/Css/stilisation.css">
 
     <!-- <link rel="icon" href="images/Images/GVAS.png"> -->
+=======
+>>>>>>> 12a2770d2b6a1a70cf7184fc7699827f6869ebe1
 </head>
 
 <body class="body">
@@ -169,7 +172,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
 
-                <a class="Hici" href="https://www.google.com/maps/place/4%C2%B049'21.0%22S+11%C2%B054'19.7%22E/@-4.8224385,11.9053312,121m/data=!3m1!1e3!4m4!3m3!8m2!3d-4.8225!4d11.9054722?hl=fr&entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
+                <a id="H" href="https://www.google.com/maps/place/4%C2%B049'21.0%22S+11%C2%B054'19.7%22E/@-4.8224385,11.9053312,121m/data=!3m1!1e3!4m4!3m3!8m2!3d-4.8225!4d11.9054722?hl=fr&entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
                     target="_blank">
                     " Cliquez ici pour Agrandir la MAPS "
                 </a>
@@ -219,6 +222,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                     <li><a href="../galerie.php">Galerie</a></li>
                     <li><a href="../contacts.php">Contacts</a></li>
                     <li><a href="../temoignage.php">Témoignage</a></li>
+                    <li><a href="../notre_image.php">Pourquoi GVAS ?</a></li>
                 </ul>
             </div>
 
