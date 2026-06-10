@@ -34,7 +34,7 @@ a:hover {
 header {
     position: relative;
     padding: 0 8em;
-    background-color: rgba(19, 22, 22, 0.61);
+    background-color: #262828;
     border-bottom-left-radius: 50px;
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
@@ -43,6 +43,7 @@ header {
     justify-content: flex-start;
     justify-content: center;
     align-items: center;
+    height: 13vh;
 }
 
 .btn-container {
@@ -1336,7 +1337,7 @@ a, li {
     position: fixed;
     top: 110px;
     width: 270px;
-    margin-top: 40px;
+    margin-top: 90px;
 }
 
 /* ===========================   SIDEBAR GAUCHE=========================== */
