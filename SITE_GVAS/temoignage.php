@@ -45,7 +45,13 @@ if (!isset($_SESSION['visite_' . $page])) {
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Gloire/Assets/Css/style.css">
+<<<<<<< HEAD
+    <link rel="stylesheet" href="../Gloire/Assets/Css/stilisation.css">
 
+    <!-- <link rel="icon" href="images/Images/GVAS.png"> -->
+=======
+
+>>>>>>> 695290809c036db9cb8990bb8f36d8511959fe66
 </head>
 
 <body class="body">
@@ -151,9 +157,9 @@ if (!isset($_SESSION['visite_' . $page])) {
                     <h1>Groupe vision d'Aigle Services</h1>
                 </div>
                 <p id="justP">
-                    De réfférence, GVAS est une structure professionnelle composée d’un personnel de qualité agréé
+                    De référence, GVAS est une structure professionnelle composée d’un personnel de qualité agréé
                     par
-                    l’État. spécialisé dans la vente des produits et services, l'accompagnement professionnelle à
+                    l’État. spécialisé dans la vente des produits et services, l'accompagnement professionnel à
                     travers des formations qualifiantes et certifiantes mais aussi dans un suivi quelconque en vue
                     d’un domaine professionnel donné.
                 </p>
@@ -209,10 +215,10 @@ if (!isset($_SESSION['visite_' . $page])) {
             <div class="pat">
                 <h1>Nos pages</h1>
                 <ul>
-                    <li><a href="../index.php">Acceuil</a></li>
+                    <li><a href="../index.php">Accueil</a></li>
                     <li><a href="../formation.php">Formations</a></li>
-                    <li><a href="../vivi/apropos.php">A_Propos</a></li>
-                    <li><a href="page_publicitaire.php">Page Publicitaire</a></li>
+                    <li><a href="../vivi/apropos.php">A Propos</a></li>
+                    <li><a href="../Gloire/page_publicitaire.php">Page Publicitaire</a></li>
                     <li><a href="../galerie.php">Galerie</a></li>
                     <li><a href="../contacts.php">Contacts</a></li>
                     <li><a href="../temoignage.php">Témoignage</a></li>
