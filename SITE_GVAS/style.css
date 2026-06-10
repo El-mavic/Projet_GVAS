@@ -9,7 +9,7 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
+.index {
     height: 100vh;
     background-image: url(images/Images/Two.jpg);
     background-size: cover;
@@ -1093,7 +1093,7 @@ input:focus {
     padding: 12px;
     border: none;
     border-radius: 10px;
-    background: linear-gradient(45deg, #5b5d5e, #a2b310);
+    background: linear-gradient(45deg, #5b5d5e, yellow);
     color: #0a0202;
     width: 200px;
     cursor: pointer;
@@ -1103,7 +1103,7 @@ input:focus {
 }
 
 .temoignage button:hover {
-    background: linear-gradient(45deg, #9ad80a, #e9e9ec);
+    background: linear-gradient(45deg, yellow, #e9e9ec);
     transform: scale(1.0);
 }
 
@@ -1164,9 +1164,30 @@ input:focus {
 }
 
 /* FOOTER DE LA PAGE TEMOIGNAGE */
+.jaune {
+    background-image: linear-gradient(to right,
+      rgb(235, 253, 134),
+      rgb(255, 255, 104));
+    padding: 7px;
+    width: 100%;
+}
 
+.jaune h1 {
+  color: black;
+}
 
+.parie_publicitaire h1 {
+  color: black;
+}
 
+footer p,
+a, li {
+    color: white;
+}
+
+.aigle a {
+    color: white;
+}
 
 
 /* ========================= RESPONSIVE Page temoignage 1366px ========================= */

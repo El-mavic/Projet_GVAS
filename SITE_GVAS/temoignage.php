@@ -45,13 +45,17 @@ if (!isset($_SESSION['visite_' . $page])) {
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Gloire/Assets/Css/style.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="../Gloire/Assets/Css/stilisation.css">
 
     <!-- <link rel="icon" href="images/Images/GVAS.png"> -->
+=======
+
+>>>>>>> 695290809c036db9cb8990bb8f36d8511959fe66
 </head>
 
 <body class="body">
-    <!-- ICI POUR LE HEADER -->
+
     <div class=" burger-menu ">
         <ul class=" links">
             <li><a href="index.php">Accueil</a></li>
@@ -65,7 +69,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             </div>
         </ul>
     </div>
-    <header>
+    <header id="ancre">
 
         <div class="navbar">
             <div class="logo">
@@ -133,15 +137,23 @@ if (!isset($_SESSION['visite_' . $page])) {
     </table>
 
 
+    <!-- btn-retour -->
+    <div id="foot">
+        <a href="#ancre">
+            <h1>
+                RETOUR AU SOMMET
+            </h1>
+
+            <img src="Gloire/Assets/img/icon_logo/image.jpg" alt="lien_retours">
+        </a>
+    </div>
+
     <!-- FOOTER -->
-
-    <!--  La partie footer  -->
-
     <footer>
         <div class="footer_part1">
             <div class="aigle ">
                 <div class="flex">
-                    <img src="Assets/Img/icon_logo/logo-GVAS.png" alt="icon_logo">
+                    <img src="images/images/GVAS.png" alt="icon_logo">
                     <h1>Groupe vision d'Aigle Services</h1>
                 </div>
                 <p id="justP">
@@ -206,7 +218,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                     <li><a href="../index.php">Accueil</a></li>
                     <li><a href="../formation.php">Formations</a></li>
                     <li><a href="../vivi/apropos.php">A Propos</a></li>
-                    <li><a href="page_publicitaire.php">Page Publicitaire</a></li>
+                    <li><a href="../Gloire/page_publicitaire.php">Page Publicitaire</a></li>
                     <li><a href="../galerie.php">Galerie</a></li>
                     <li><a href="../contacts.php">Contacts</a></li>
                     <li><a href="../temoignage.php">Témoignage</a></li>
@@ -225,12 +237,12 @@ if (!isset($_SESSION['visite_' . $page])) {
 
             <div class="pat">
                 <h1>Nos Contacts</h1>
-                <Ul>
+                <ul>
                     <li>info@gvas.fr</li>
                     <li>(+242) 05 344 40 20</li>
                     <li>(+242) 06 420 14 15</li>
                     <li>(+242) 06 416 36 21</li>
-                </Ul>
+                </ul>
             </div>
 
             <div class="form">
@@ -281,6 +293,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             </h1>
         </div>
     </footer>
+
 
 
     <!--burgerMenuButton-->

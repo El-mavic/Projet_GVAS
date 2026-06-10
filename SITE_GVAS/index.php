@@ -82,7 +82,7 @@ if (!isset($_SESSION['visite_' . $page])) {
     <title>Groupe Vision d'Aigle Services</title>
 </head>
 
-<body>
+<body class="index">
     <!--------------------------------------------------------Header---------------------------------------------------------------->
     <div class="burger-menu ">
         <ul class="links">
