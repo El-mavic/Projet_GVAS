@@ -409,9 +409,9 @@ if (!isset($_SESSION['visite_' . $page])) {
   </div>
 
   <div id="foot">
-            <a href="#ancre">
+            <a href="../notre_image.php">
                 <h1>
-                    RETOUR AU SOMMET
+                   Afin de nous connaître un peu plus, cliquez ici =====>
                 </h1>
 
                 <img src="../Gloire/Assets/img/icon_logo/image.jpg" alt="lien_retours">
