@@ -4,7 +4,6 @@ $host = "localhost";
 $dbname = "inscription_db";
 $username = "root";
 $password = "";
-
 try {
     $pdo = new PDO(
         "mysql:host=$host;dbname=$dbname;charset=utf8",
