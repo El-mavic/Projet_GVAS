@@ -61,12 +61,6 @@
     padding: 0;
   }
 
-  .baba1,
-  .baba2,
-  .baba3 {
-    display: none;
-  }
-
   .defilements h1 {
     font-size: 45px;
   }
@@ -284,6 +278,17 @@
 }
 
 @media (max-width: 414px) {
+  #foot h1 {
+    font-size: 15px;
+  }
+
+  .foo h2 {
+    font-size: 15px;
+  }
+
+  .footer_part2 .pat {
+    display: none;
+  }
 
   #contenu {
     height: 50%;
