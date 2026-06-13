@@ -171,13 +171,13 @@
 
     <!-- retour en haut -->
     <div class="foo">
-            <a href="#ancre">
-                <h2>
-                    RETOUR AU SOMMET
-                </h2>
+        <a href="#ancre">
+            <h2>
+                RETOUR AU SOMMET
+            </h2>
 
-                <img src="Gloire/Assets/img/icon_logo/image.jpg" alt="lien_retours">
-            </a>
+            <img src="Gloire/Assets/img/icon_logo/image.jpg" alt="lien_retours">
+        </a>
     </div>
 
     <!-- FOOTER -->
@@ -185,7 +185,7 @@
         <div class="footer_part1">
             <div class="aigle ">
                 <div class="flex">
-                    <img src="images/images/GVAS.png" alt="icon_logo">
+                    <img src="images/Images/GVAS.png alt=" icon_logo">
                     <h1>Groupe vision d'Aigle Services</h1>
                 </div>
                 <p id="justP">
@@ -383,6 +383,7 @@
             font-size: 42px;
             margin-bottom: 40px;
             margin-top: 9%;
+            color: white;
         }
 
         h3 span {
@@ -456,14 +457,14 @@
             width: 100%;
             height: auto;
             background-image: linear-gradient(to right,
-                rgb(235, 253, 134),
-                rgb(255, 255, 104));
-                width: 100%;
-                height: auto;
-                padding: 15px;
+                    rgb(235, 253, 134),
+                    rgb(255, 255, 104));
+            width: 100%;
+            height: auto;
+            padding: 15px;
 
             align-items: center;
-            
+
         }
 
         .foo h2 {
