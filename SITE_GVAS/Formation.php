@@ -70,7 +70,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             </ul>
             <div class="buttons">
                 <a class="action-button pro " href="Gloire/page_publicitaire.php">Pub</a>
-                <a class="action-button" href="vivi/apropos.php">A propos</a>
+               <a class="action-button" style="  white-space: nowrap;" href="vivi/apropos.php">A propos</a>
             </div>
             <div class="burger-menu-button">
                 <i class="fa-solid fa-bars"></i>

@@ -61,7 +61,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             <div class="divider"></div>
             <div class="buttons-burger-menu">
                 <a class="action-button" href="Gloire/page_publicitaire.php">Pub</a>
-                <a class="action-button" href="vivi/apropos.php">A propos</a>
+                <a class="action-button" style="  white-space: nowrap;" href="vivi/apropos.php">A propos</a>
             </div>
         </ul>
     </div>
