@@ -265,6 +265,41 @@ if (!isset($_SESSION['visite_' . $page])) {
       color: white;
       cursor: pointer;
     }
+
+    /* =========================
+   RESPONSIVE GALERIE
+========================= */
+
+    /* Tablette */
+    @media (max-width: 1024px) {
+      .gallery-grid {
+        columns: 4;
+      }
+    }
+
+    /* Petit tablette */
+    @media (max-width: 768px) {
+      .gallery-grid {
+        columns: 3;
+      }
+    }
+
+    /* Téléphone large */
+    @media (max-width: 600px) {
+      .gallery-grid {
+        columns: 2;
+        padding: 10px;
+        column-gap: 12px;
+      }
+    }
+
+    /* Téléphone petit écran */
+    @media (max-width: 400px) {
+      .gallery-grid {
+        columns: 2;
+        padding: 10px;
+      }
+    }
   </style>
   <script>
     let images = [];
