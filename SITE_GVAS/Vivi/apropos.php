@@ -8,10 +8,6 @@ if (!isset($_SESSION['visite_' . $page])) {
   $_SESSION['visite_' . $page] = true;
 }
 ?>
-
-
-
-
 <!doctype html>
 <html lang="fr">
 
@@ -31,20 +27,15 @@ if (!isset($_SESSION['visite_' . $page])) {
   <meta name="keywords"
     content="GVAS, EVGS, groupe vision d'aigle services, vision d'aigle, achat, formation, cours en ligne, produits, service">
 
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Lora:ital@0;1&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Lora:ital@0;1&display=swap" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../stilisation.css">
+  <!-- <link rel="stylesheet" href="../style.css"> -->
   <link rel="stylesheet" href="apropos.css">
   <link rel="icon" href="../images/Images/GVAS.png">
   <link rel="stylesheet" href="../Gloire/Assets/Css/style.css">
   <link rel="stylesheet" href="../Gloire/Assets/Css/stilisation.css">
-
-
-
 
   <title>à propos</title>
 </head>
@@ -121,7 +112,7 @@ if (!isset($_SESSION['visite_' . $page])) {
     <a href="#chiffres">Chiffres clés</a>
     <a href="#partenaires">Nos partenaires</a>
   </div>
-
+  
   <!-- partie des photos des subordonnés -->
 
   <section id="team" class="team-section">
@@ -274,8 +265,489 @@ if (!isset($_SESSION['visite_' . $page])) {
         </a>
       </div>
     </div>
+    <style>
+        
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+}
+
+a:hover {
+    color: #fff200;
+}
+
+header {
+    position: relative;
+    padding: 0 8em;
+    background-color: #262828;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    display: flex;
+    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    height: 13vh;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+
+}
+
+.navbar {
+    justify-content: space-between;
+    width: auto;
+}
+
+.navbar .links a {
+    position: relative;
+}
+
+.navbar .links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: #fff200;
+    transition: width 0.3s ease;
+}
+
+.navbar .links a:hover::after {
+    width: 100%;
+}
+
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+    height: 80px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gvas {
+    width: 6.5%;
+    position: absolute;
+    left: 1%;
+    margin-top: -3.2%;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 5rem;
+
+}
+
+
+.navbar .burger-menu-button {
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.action-button {
+    background-color: #fff200;
+    color: black;
+    border: 1px solid #fff200;
+    padding: 0.5rem 1.2rem;
+    outline: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.action-button:hover {
+    color: blue;
+    border: 1px solid #fff200;
+}
+
+.pro {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #fff200;
+}
+
+.pro:hover {
+    background-color: #fff200;
+    color: rgba(34, 7, 97, 0.726);
+}
+
+/*-----Burger menu----*/
+.burger-menu {
+    display: none;
+    height: 0;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 200px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.burger-menu.open {
+    height: 250px;
+}
+
+
+.burger-menu li {
+    padding: 0.19rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -100px;
+}
+
+.divider {
+    height: 1px;
+    background: #fff;
+    width: 80%;
+    margin-left: -30px;
+    margin-bottom: 1rem;
+}
+
+
+
+.burger-menu .action-button {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons-burger-menu {
+    display: flex;
+    flex-direction: column;
+    margin-left: -5px;
+    gap: 10px;
+}
+
+/*------Suite----*/
+
+
+.texte {
+    font-size: 3em;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(90deg, #7c7f80, #fffb0096);
+    font-family: Dutch801 XBd BT;
+    width: 100%;
+    height: auto;
+
+}
+
+.Table {
+    margin-left: 90px;
+}
+
+.table1 {
+    width: 13rem;
+    height: 13rem;
+    margin-left: 30%;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 90px;
+    animation: zoom 2s infinite alternate-reverse;
+
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
+
+.table2 {
+    width: 13rem;
+    height: 13rem;
+    margin-left: 2%;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: -400px;
+    animation: zoom 2s infinite alternate-reverse;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
+
+/*----------------------------- 1366px Responsive Pour la page de d'acceuil-----------------------------------------------------*/
+
+
+@media (max-width: 1366px) {
+    .Table {
+        margin-left: 80px;
+    }
+
+    .table {
+        margin-top: 30px;
+    }
+
+    .buttons {
+        position: relative;
+        left: 90px;
+    }
+
+    .links {
+        position: relative;
+        left: 50px;
+    }
+
+}
+
+@media (min-width: 1366px) {
+    .Table {
+        margin-left: 10%;
+    }
+
+    .table {
+        margin-top: 30px;
+    }
+
+    .buttons {
+        position: relative;
+        left: 90px;
+    }
+
+    .links {
+        position: relative;
+        left: 50px;
+    }
+
+}
+
+/*------------------------------------------- 1180px Responsive----------------------------------------*/
+@media (max-width: 1180px) {
+    .burger-menu {
+        z-index: 99999;
+    }
+
+    @media (min-width: 1180px) {
+        .burger-menu {
+            z-index: 99999;
+        }
+    }
+
+    .burger-menu-button {
+        background: black;
+        margin-right: 1px;
+        z-index: 9999;
+    }
+
+    .Table {
+        margin-left: -20px;
+        margin-top: -40px;
+    }
+
+    .table {
+        margin-top: 30px;
+        margin-left: 100px;
+    }
+
+    .table1 {
+        width: 180px;
+        height: 180px;
+    }
+
+    .table2 {
+        width: 180px;
+        height: 180px;
+    }
+
+
+
+    .texte {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+}
+
+/*------------------------------------------- 990px Responsive----------------------------------------*/
+@media (max-width:990px) {
+    header {
+        background: none;
+    }
+
+    .navbar .links,
+    .navbar .action-button {
+        display: none;
+
+    }
+
+    .navbar .burger-menu-button {
+        display: block;
+
+    }
+
+    .burger-menu {
+        display: block;
+
+    }
+
+    .table1 {
+        width: 8rem;
+        height: 8rem;
+        position: relative;
+        right: 5rem;
+    }
+
+    .table2 {
+        width: 8rem;
+        height: 8rem;
+        position: relative;
+        left: -5rem;
+    }
+
+    .texte {
+        font-size: 2rem;
+    }
+
+}
+
+/*------------------------------------------- 768px Responsive----------------------------------------*/
+@media (max-width: 768px) {
+    .table {
+        margin-top: 30px;
+        margin-left: 100px;
+    }
+
+    .Table {
+        margin-left: -80px;
+    }
+
+    .table1 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .table2 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .btn-primary {
+        margin-left: -40px;
+    }
+
+
+
+    .burger-menu-button {
+        background: black;
+        margin-right: 1px;
+        z-index: 9999;
+    }
+}
+
+/*------------------------------------------- 500px Responsive----------------------------------------*/
+@media (max-width:500px) {
+
+    .gvas {
+        width: 5rem;
+        margin-top: -40px;
+    }
+
+    .burger-menu-button {
+
+        position: relative;
+        left: 5rem;
+        z-index: 9999;
+    }
+
+    header {
+        display: block;
+    }
+
+}
+
+/*------------------------------------------- burger----------------------------------------*/
+@media (max-width:576px) {
+
+    .burger-menu {
+        position: block;
+        z-index: 9999;
+    }
+}
+
+/*------------------------------------------- 414 Responsive----------------------------------------*/
+@media (max-width: 414px) {
+    .Table {
+        margin-left: -19px;
+        margin-top: -90px;
+    }
+
+    .table {
+        margin-top: 40px;
+        margin-left: 130px;
+    }
+
+    .table1 {
+        width: 150px;
+        height: 150px;
+        left: 2px;
+    }
+
+    .table2 {
+        width: 150px;
+        height: 150px;
+        right: 30px;
+        margin-top: -180px;
+    }
+
+    .modal-content {
+        width: 320px;
+    }
+
+    .options {
+        left: 80px;
+        width: 200px;
+    }
+
+}
+    </style>
   </section>
 
+  
   <!-- Les partenaires de GVAS -->
 
   <section id="partenaires" class="partenaires-section">
@@ -325,88 +797,6 @@ if (!isset($_SESSION['visite_' . $page])) {
   </section>
 
 
-  <!-- THE FOOTER -->
-
-  <!-- 
-      <footer class="footer">
-        <div class="footer-container">
-       -->
-  <!--  Logo + texte + réseaux -->
-  <!--  
-          <div class="footer-description">
-            <img src="images/Images/GVAS.png" alt="Logo GVAS">
-            <p class="footer-text">
-              Le Groupe Vision d'Aigle Services accompagne les talents vers un avenir meilleur.
-            </p>
-            -->
-  <!--<div class="footer-social">
-            <div class="social-btn">
-              <div class="social-item">
-                <i class="fa-brands fa-facebook"></i>
-                <span>Facebook</span>
-              </div>
-            </div>
-          </div>-->
-
-  <!--  
-            <div class="footer-social">
-              <a class="fb" href="https://www.facebook.com/profile.php?id=61583138888176" target="_blank">
-                <ion-icon name="logo-facebook"></ion-icon>
-              </a>
-              <a class="fb" href="https://youtube.com/dcodeyt" target="_blank">
-                <ion-icon name="logo-youtube"></ion-icon>
-              </a>
-
-          -->
-  <!--  
-              <a class="fb" href="https://instagram.com/dcodeyt" target="_blank">
-                <ion-icon name="logo-instagram"></ion-icon>
-              </a>
-              -->
-  <!--
-              <a class="fb" href="https://whatsapp.com/dcodeyt" target="_blank">
-                <ion-icon name="logo-whatsapp"></ion-icon>
-              </a>
-              <a class="fb" href="https://tiktok.com/dcodeyt" target="_blank">
-                <ion-icon name="logo-tiktok"></ion-icon>
-              </a>
-            </div>
-          </div>
-
-          <div class="footer-col">
-            <h4>À propos</h4>
-            <ul>
-              <li><a href="apropos.php#histoire">Notre histoire</a></li>
-              <li><a href="apropos.php#team">Notre équipe</a></li>
-              <li><a href="apropos.php#chiffres">Chiffres clés</a></li>
-              <li><a href="apropos.php#partenaires">Nos partenaires</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h4>Formations</h4>
-            <ul>
-              <li><a href="../Formation.php">Nos programmes</a></li>
-              <li><a href="../index.php">Inscription</a></li>
-              <li><a href="../Gloire/page_publicitaire.php">En savoir plus sur nos services</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-encadre">
-            <h4>Une question ?</h4>
-            <p>Notre équipe est disponible pour répondre à toutes vos questions</p>
-            <a href="../contacts.php" class="footer-encadre-btn">Contactez-nous</a>
-            <a href="../temoignage.php" class="buton">Nos témoignages</a>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>© 2026 — <span>G.V.A.S</span> — Tous droits réservés à l'auteur.</p>
-        </div>
-      </footer>
-      -->
-
-    </div>
-  </div>
 
   <div id="foot">
             <a href="../notre_image.php">
@@ -417,7 +807,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                 <img src="../Gloire/Assets/img/icon_logo/image.jpg" alt="lien_retours">
             </a>
     </div>
-
+    
     <!-- La partie footer -->
     <footer>
       <div class="footer_part1">
