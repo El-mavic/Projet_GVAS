@@ -53,7 +53,7 @@ if (!isset($_SESSION['visite_' . $page])) {
       <div class="divider"></div>
       <div class="buttons-burger-menu">
         <a class="action-button" href="Gloire/page_publicitaire.php">Pub</a>
-        <a class="action-button" href="vivi/apropos.php">A propos</a>
+       <a class="action-button" style="  white-space: nowrap;" href="vivi/apropos.php">A propos</a>
       </div>
     </ul>
   </div>
@@ -264,6 +264,41 @@ if (!isset($_SESSION['visite_' . $page])) {
       font-size: 20px;
       color: white;
       cursor: pointer;
+    }
+
+    /* =========================
+   RESPONSIVE GALERIE
+========================= */
+
+    /* Tablette */
+    @media (max-width: 1024px) {
+      .gallery-grid {
+        columns: 4;
+      }
+    }
+
+    /* Petit tablette */
+    @media (max-width: 768px) {
+      .gallery-grid {
+        columns: 3;
+      }
+    }
+
+    /* Téléphone large */
+    @media (max-width: 600px) {
+      .gallery-grid {
+        columns: 2;
+        padding: 10px;
+        column-gap: 12px;
+      }
+    }
+
+    /* Téléphone petit écran */
+    @media (max-width: 400px) {
+      .gallery-grid {
+        columns: 2;
+        padding: 10px;
+      }
     }
   </style>
   <script>

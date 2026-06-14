@@ -89,12 +89,12 @@ if (!isset($_SESSION['visite_' . $page])) {
         <ul class="links">
             <li><a href="index.php">Accueil</a></li>
             <li><a href="Formation.php">Formations</a></li>
-            <li><a href="Galerie.php">Galerie</a></li>
+            <li><a href="galerie.php">Galerie</a></li>
             <li><a href="contacts.php">Contacts</a></li>
             <div class="divider"></div>
             <div class="buttons-burger-menu">
                 <a class="action-button" href="Gloire/page_publicitaire.php">Pub</a>
-                <a class="action-button" href="vivi/apropos.php">A propos</a>
+                <a class="action-button" style="white-space: nowrap;" href="vivi/apropos.php">A propos</a>
             </div>
         </ul>
     </div>
@@ -191,7 +191,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
             <h2 class="modal-title">Page d'inscription</h2>
 
-            <form class="form-group" action="Traitement.php" method="POST">
+            <form class="form-group" action="traitement.php" method="POST">
                 <input type="hidden" name="form_type" value="inscriptions" placeholder="Entrez votre nom">
                 <input type="hidden" name="type" value="inscription">
                 <div class="input-box">
