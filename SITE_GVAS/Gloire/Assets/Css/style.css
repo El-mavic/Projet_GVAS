@@ -4,7 +4,6 @@ main,
 }
 
 /* header */
-}
 
 .navbar .links a {
     position: relative;
@@ -96,9 +95,9 @@ main,
 }
 
 /*-----Burger menu----*/
-.burger-menu {
+body .burger-menu {
     display: none;
-    height: 0;
+    height: 300px;
     position: absolute;
     right: 2rem;
     top: 60px;
@@ -968,7 +967,7 @@ h2 {
 
 .carouselExampleSlidesOnly2 #lien .partenaires {
   display: flex;
-  gap: 80px;
+  gap: 70px;
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
