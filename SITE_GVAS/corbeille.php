@@ -331,6 +331,7 @@ $commentaires = $pdo->query(
 
         .logo h2 {
             font-size: 24px;
+
         }
 
         /* NAVBAR */
@@ -373,6 +374,7 @@ $commentaires = $pdo->query(
         h1 {
             margin-bottom: 20px;
             color: #0f172a;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
 
         .table-section {
@@ -386,6 +388,7 @@ $commentaires = $pdo->query(
         .table-section h2 {
             margin-bottom: 20px;
             color: #1e293b;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
 
         /* TABLE */
