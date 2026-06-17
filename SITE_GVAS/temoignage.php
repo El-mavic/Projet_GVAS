@@ -129,6 +129,10 @@ if (!isset($_SESSION['visite_' . $page])) {
 
     </table>
 
+    <!-- footer -->
+    <?php include 'footer.php'; ?>
+    
+
     <!--burgerMenuButton-->
     <script>
         const burgerMenuButton = document.querySelector('.burger-menu-button');
