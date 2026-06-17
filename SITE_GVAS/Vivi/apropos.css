@@ -182,14 +182,14 @@ body {
 .h-content a {
   display: inline-block;
   margin-top: -50px;
-
+  color: white;
+  
 }
 
 .h-content a:hover {
   background: var(--bleu);
   transform: scale(1.04);
   border-color: var(--rouge);
-  color: white;
 }
 
 /* Responsive sur le hero, desktop */
@@ -536,7 +536,7 @@ body {
   }
 
   .h-manager {
-    flex: 0 0 260px;
+    flex: 0 0 200px;
     width: 85%;
     margin: 10px auto 0 auto;
   }
@@ -551,7 +551,6 @@ body {
   .h-content h1 {
     font-size: 1.5rem;
     margin-bottom: 15px;
-    /* margin-top: 10px; */
   }
 
   .h-content span {
@@ -561,26 +560,15 @@ body {
 
   .h-content p {
     font-size: 1.2rem;
-    /* top: -5px; */
     line-height: 1.5;
     margin-top: 15px;
   }
 
   .h-content a {
     font-size: 0.95rem;
-    /* top: 0; */
-    margin-bottom: 10px;
+    margin-top: 7px;
   }
 }
-
-/*  
-  .content a {
-    font-size: 0.8rem;
-    padding: 8px 6px;
-  }
-}
-*/
-/*  430px  */
 
 
 @media (max-width: 430px) {
@@ -652,10 +640,11 @@ body {
   }
 
   .h-content p {
-    font-size: 17px;
+    font-size: 18px;
     line-height: 1.5;
-    top: -4px;
-    margin-top: 8px;
+    width: 100%;
+    left: 2%;
+    margin-top: 20px;
   }
 
   .h-content a {
@@ -674,8 +663,17 @@ body {
   }
 
   .h-manager {
-    flex: 0 0 240px;
+    flex: 0 0 200px;
     width: 300px;
+  }
+  
+  .h-content p {
+    font-size: 17px;
+    text-align: center;
+    left: 2%;
+    width: 100%;
+    margin-top: 20px;
+    
   }
 }
 
@@ -719,6 +717,89 @@ body {
     margin-top: 30px;
   }
 }
+
+@media (max-width: 360px) {
+  .h-line {
+    flex-direction: column;
+    gap: 0.1rem;
+    padding: 1rem;
+  }
+
+  .h-manager {
+    flex: 0 0 200px;
+    width: 270px;
+  }
+
+  .h-content h1 {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .h-content span {
+    font-size: 20px;
+    top: -8px;
+    /* margin-top: 10px; */
+  }
+
+  .h-content p {
+    font-size: 15px;
+    text-align: center;
+    left: 2%;
+    width: 100%;
+    margin-top: 10px;
+    
+  }
+
+  .h-content a {
+    font-size: 18px;
+    padding: 6px 12px;
+    margin-top: -20px;
+  }
+}
+
+
+@media (max-width: 320px) {
+  .h-line {
+    flex-direction: column;
+    gap: 0.1rem;
+    padding: 1rem;
+  }
+
+  .h-manager {
+    flex: 0 0 150px;
+    width: 250px;
+  }
+
+  .h-content h1 {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .h-content span {
+    font-size: 20px;
+    top: -8px;
+    /* margin-top: 10px; */
+  }
+
+  .h-content p {
+    font-size: 13px;
+    text-align: center;
+    left: 2%;
+    width: 100%;
+    margin-top: 10px;
+    
+  }
+
+  .h-content a {
+    font-size: 16px;
+    padding: 6px 12px;
+    margin-top: -10px;
+  }
+}
+
+
+
+
 
 /* Partie barre */
 

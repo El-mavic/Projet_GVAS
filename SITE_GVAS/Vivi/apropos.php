@@ -40,8 +40,9 @@ if (!isset($_SESSION['visite_' . $page])) {
   <title>à propos</title>
 </head>
 
+<body>
 
-<div class=" burger-menu ">
+  <div class=" burger-menu ">
     <ul class=" links">
       <li><a href="../index.php">Accueil</a></li>
       <li><a href="../Formation.php">Formations</a></li>
@@ -55,13 +56,13 @@ if (!isset($_SESSION['visite_' . $page])) {
     </ul>
   </div>
   <header id="ancre">
-    
+
     <div class="navbar">
       <div class="logo">
         <img class="gvas" src="images/Images/GVAS.png" alt="GVAS">
-        
+
       </div>
-      
+
       <ul class="links">
         <li><a href="../index.php">Accueil</a></li>
         <li><a href="../Formation.php">Formations</a></li>
@@ -79,8 +80,8 @@ if (!isset($_SESSION['visite_' . $page])) {
   </header>
   <p class="texte">Groupe Vision d'Aigle Services </p>
 
-</div>
-<body>
+  </div>
+
 
   <!-- SECTION HERROO -->
 
@@ -112,7 +113,7 @@ if (!isset($_SESSION['visite_' . $page])) {
     <a href="#chiffres">Chiffres clés</a>
     <a href="#partenaires">Nos partenaires</a>
   </div>
-  
+
   <!-- partie des photos des subordonnés -->
 
   <section id="team" class="team-section">
@@ -266,488 +267,488 @@ if (!isset($_SESSION['visite_' . $page])) {
       </div>
     </div>
     <style>
-        
-li {
-    list-style: none;
-}
+      li {
+        list-style: none;
+      }
 
-a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.5em;
-}
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.5em;
+      }
 
-a:hover {
-    color: #fff200;
-}
+      a:hover {
+        color: #fff200;
+      }
 
-header {
-    position: relative;
-    padding: 0 8em;
-    background-color: #262828;
-    border-bottom-left-radius: 50px;
-    border-top-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    border-top-right-radius: 50px;
-    display: flex;
-    justify-content: flex-start;
-    justify-content: center;
-    align-items: center;
-    height: 13vh;
-}
-
-.btn-container {
-    display: flex;
-    justify-content: flex-start;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-
-}
-
-.navbar {
-    justify-content: space-between;
-    width: auto;
-}
-
-.navbar .links a {
-    position: relative;
-}
-
-.navbar .links a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 3px;
-    background-color: #fff200;
-    transition: width 0.3s ease;
-}
-
-.navbar .links a:hover::after {
-    width: 100%;
-}
-
-.navbar {
-    width: 100%;
-    max-width: 1200px;
-    height: 80px;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.gvas {
-    width: 6.5%;
-    position: absolute;
-    left: 1%;
-    margin-top: -3.2%;
-}
-
-.navbar .logo a {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.navbar .links {
-    display: flex;
-    gap: 5rem;
-
-}
-
-
-.navbar .burger-menu-button {
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
-}
-
-.buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.action-button {
-    background-color: #fff200;
-    color: black;
-    border: 1px solid #fff200;
-    padding: 0.5rem 1.2rem;
-    outline: none;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    cursor: pointer;
-
-}
-
-.action-button:hover {
-    color: blue;
-    border: 1px solid #fff200;
-}
-
-.pro {
-    background-color: transparent;
-    color: white;
-    border: 1px solid #fff200;
-}
-
-.pro:hover {
-    background-color: #fff200;
-    color: rgba(34, 7, 97, 0.726);
-}
-
-/*-----Burger menu----*/
-.burger-menu {
-    display: none;
-    height: 0;
-    position: absolute;
-    right: 2rem;
-    top: 60px;
-    width: 200px;
-    background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(15px);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: height cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.burger-menu.open {
-    height: 250px;
-}
-
-
-.burger-menu li {
-    padding: 0.19rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: -100px;
-}
-
-.divider {
-    height: 1px;
-    background: #fff;
-    width: 80%;
-    margin-left: -30px;
-    margin-bottom: 1rem;
-}
-
-
-
-.burger-menu .action-button {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.buttons-burger-menu {
-    display: flex;
-    flex-direction: column;
-    margin-left: -5px;
-    gap: 10px;
-}
-
-/*------Suite----*/
-
-
-.texte {
-    font-size: 3em;
-    font-weight: bold;
-    align-items: center;
-    text-align: center;
-    background: linear-gradient(90deg, #7c7f80, #fffb0096);
-    font-family: Dutch801 XBd BT;
-    width: 100%;
-    height: auto;
-
-}
-
-.Table {
-    margin-left: 90px;
-}
-
-.table1 {
-    width: 13rem;
-    height: 13rem;
-    margin-left: 30%;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-top: 90px;
-    animation: zoom 2s infinite alternate-reverse;
-
-}
-
-@keyframes zoom {
-    from {
-        transform: scale(1);
-    }
-
-    to {
-        transform: scale(1.2);
-    }
-}
-
-.table2 {
-    width: 13rem;
-    height: 13rem;
-    margin-left: 2%;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-top: -400px;
-    animation: zoom 2s infinite alternate-reverse;
-}
-
-@keyframes zoom {
-    from {
-        transform: scale(1);
-    }
-
-    to {
-        transform: scale(1.2);
-    }
-}
-
-/*----------------------------- 1366px Responsive Pour la page de d'acceuil-----------------------------------------------------*/
-
-
-@media (max-width: 1366px) {
-    .Table {
-        margin-left: 80px;
-    }
-
-    .table {
-        margin-top: 30px;
-    }
-
-    .buttons {
+      header {
         position: relative;
-        left: 90px;
-    }
+        padding: 0 8em;
+        background-color: #262828;
+        border-bottom-left-radius: 50px;
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        border-top-right-radius: 50px;
+        display: flex;
+        justify-content: flex-start;
+        justify-content: center;
+        align-items: center;
+        height: 13vh;
+      }
 
-    .links {
-        position: relative;
-        left: 50px;
-    }
-
-}
-
-@media (min-width: 1366px) {
-    .Table {
-        margin-left: 10%;
-    }
-
-    .table {
-        margin-top: 30px;
-    }
-
-    .buttons {
-        position: relative;
-        left: 90px;
-    }
-
-    .links {
-        position: relative;
-        left: 50px;
-    }
-
-}
-
-/*------------------------------------------- 1180px Responsive----------------------------------------*/
-@media (max-width: 1180px) {
-    .burger-menu {
-        z-index: 99999;
-    }
-
-    @media (min-width: 1180px) {
-        .burger-menu {
-            z-index: 99999;
-        }
-    }
-
-    .burger-menu-button {
-        background: black;
-        margin-right: 1px;
-        z-index: 9999;
-    }
-
-    .Table {
-        margin-left: -20px;
-        margin-top: -40px;
-    }
-
-    .table {
-        margin-top: 30px;
-        margin-left: 100px;
-    }
-
-    .table1 {
-        width: 180px;
-        height: 180px;
-    }
-
-    .table2 {
-        width: 180px;
-        height: 180px;
-    }
-
-
-
-    .texte {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-
-}
-
-/*------------------------------------------- 990px Responsive----------------------------------------*/
-@media (max-width:990px) {
-    header {
-        background: none;
-    }
-
-    .navbar .links,
-    .navbar .action-button {
-        display: none;
-
-    }
-
-    .navbar .burger-menu-button {
-        display: block;
-
-    }
-
-    .burger-menu {
-        display: block;
-
-    }
-
-    .table1 {
-        width: 8rem;
-        height: 8rem;
-        position: relative;
-        right: 5rem;
-    }
-
-    .table2 {
-        width: 8rem;
-        height: 8rem;
-        position: relative;
-        left: -5rem;
-    }
-
-    .texte {
-        font-size: 2rem;
-    }
-
-}
-
-/*------------------------------------------- 768px Responsive----------------------------------------*/
-@media (max-width: 768px) {
-    .table {
-        margin-top: 30px;
-        margin-left: 100px;
-    }
-
-    .Table {
-        margin-left: -80px;
-    }
-
-    .table1 {
-        width: 150px;
-        height: 150px;
-    }
-
-    .table2 {
-        width: 150px;
-        height: 150px;
-    }
-
-    .btn-primary {
-        margin-left: -40px;
-    }
-
-
-
-    .burger-menu-button {
-        background: black;
-        margin-right: 1px;
-        z-index: 9999;
-    }
-}
-
-/*------------------------------------------- 500px Responsive----------------------------------------*/
-@media (max-width:500px) {
-
-    .gvas {
-        width: 5rem;
-        margin-top: -40px;
-    }
-
-    .burger-menu-button {
-
-        position: relative;
-        left: 5rem;
-        z-index: 9999;
-    }
-
-    header {
-        display: block;
-    }
-
-}
-
-/*------------------------------------------- burger----------------------------------------*/
-@media (max-width:576px) {
-
-    .burger-menu {
-        position: block;
-        z-index: 9999;
-    }
-}
-
-/*------------------------------------------- 414 Responsive----------------------------------------*/
-@media (max-width: 414px) {
-    .Table {
-        margin-left: -19px;
-        margin-top: -90px;
-    }
-
-    .table {
+      .btn-container {
+        display: flex;
+        justify-content: flex-start;
+        justify-content: center;
+        align-items: center;
         margin-top: 40px;
-        margin-left: 130px;
-    }
 
-    .table1 {
-        width: 150px;
-        height: 150px;
-        left: 2px;
-    }
+      }
 
-    .table2 {
-        width: 150px;
-        height: 150px;
-        right: 30px;
-        margin-top: -180px;
-    }
+      .navbar {
+        justify-content: space-between;
+        width: auto;
+      }
 
-    .modal-content {
-        width: 320px;
-    }
+      .navbar .links a {
+        position: relative;
+      }
 
-    .options {
-        left: 80px;
+      .navbar .links a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0;
+        height: 3px;
+        background-color: #fff200;
+        transition: width 0.3s ease;
+      }
+
+      .navbar .links a:hover::after {
+        width: 100%;
+      }
+
+      .navbar {
+        width: 100%;
+        max-width: 1200px;
+        height: 80px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .gvas {
+        width: 6.5%;
+        position: absolute;
+        left: 1%;
+        margin-top: -3.2%;
+      }
+
+      .navbar .logo a {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .navbar .links {
+        display: flex;
+        gap: 5rem;
+
+      }
+
+
+      .navbar .burger-menu-button {
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: none;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 10px;
+      }
+
+      .action-button {
+        background-color: #fff200;
+        color: black;
+        border: 1px solid #fff200;
+        padding: 0.5rem 1.2rem;
+        outline: none;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        cursor: pointer;
+
+      }
+
+      .action-button:hover {
+        color: blue;
+        border: 1px solid #fff200;
+      }
+
+      .pro {
+        background-color: transparent;
+        color: white;
+        border: 1px solid #fff200;
+      }
+
+      .pro:hover {
+        background-color: #fff200;
+        color: rgba(34, 7, 97, 0.726);
+      }
+
+      /*-----Burger menu----*/
+      .burger-menu {
+        display: none;
+        height: 0;
+        position: absolute;
+        right: 2rem;
+        top: 60px;
         width: 200px;
-    }
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(15px);
+        border-radius: 10px;
+        overflow: hidden;
+        transition: height cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
 
-}
+      .burger-menu.open {
+        height: 250px;
+        display: block;
+      }
+
+
+      .burger-menu li {
+        padding: 0.19rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100px;
+      }
+
+      .divider {
+        height: 1px;
+        background: #fff;
+        width: 80%;
+        margin-left: -30px;
+        margin-bottom: 1rem;
+      }
+
+
+
+      .burger-menu .action-button {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .buttons-burger-menu {
+        display: flex;
+        flex-direction: column;
+        margin-left: -5px;
+        gap: 10px;
+      }
+
+      /*------Suite----*/
+
+
+      .texte {
+        font-size: 3em;
+        font-weight: bold;
+        align-items: center;
+        text-align: center;
+        background: linear-gradient(90deg, #7c7f80, #fffb0096);
+        font-family: Dutch801 XBd BT;
+        width: 100%;
+        height: auto;
+
+      }
+
+      .Table {
+        margin-left: 90px;
+      }
+
+      .table1 {
+        width: 13rem;
+        height: 13rem;
+        margin-left: 30%;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-top: 90px;
+        animation: zoom 2s infinite alternate-reverse;
+
+      }
+
+      @keyframes zoom {
+        from {
+          transform: scale(1);
+        }
+
+        to {
+          transform: scale(1.2);
+        }
+      }
+
+      .table2 {
+        width: 13rem;
+        height: 13rem;
+        margin-left: 2%;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-top: -400px;
+        animation: zoom 2s infinite alternate-reverse;
+      }
+
+      @keyframes zoom {
+        from {
+          transform: scale(1);
+        }
+
+        to {
+          transform: scale(1.2);
+        }
+      }
+
+      /*----------------------------- 1366px Responsive Pour la page de d'acceuil-----------------------------------------------------*/
+
+
+      @media (max-width: 1366px) {
+        .Table {
+          margin-left: 80px;
+        }
+
+        .table {
+          margin-top: 30px;
+        }
+
+        .buttons {
+          position: relative;
+          left: 90px;
+        }
+
+        .links {
+          position: relative;
+          left: 50px;
+        }
+
+      }
+
+      @media (min-width: 1366px) {
+        .Table {
+          margin-left: 10%;
+        }
+
+        .table {
+          margin-top: 30px;
+        }
+
+        .buttons {
+          position: relative;
+          left: 90px;
+        }
+
+        .links {
+          position: relative;
+          left: 50px;
+        }
+
+      }
+
+      /*------------------------------------------- 1180px Responsive----------------------------------------*/
+      @media (max-width: 1180px) {
+        .burger-menu {
+          z-index: 99999;
+        }
+
+        @media (min-width: 1180px) {
+          .burger-menu {
+            z-index: 99999;
+          }
+        }
+
+        .burger-menu-button {
+          background: black;
+          margin-right: 1px;
+          z-index: 9999;
+        }
+
+        .Table {
+          margin-left: -20px;
+          margin-top: -40px;
+        }
+
+        .table {
+          margin-top: 30px;
+          margin-left: 100px;
+        }
+
+        .table1 {
+          width: 180px;
+          height: 180px;
+        }
+
+        .table2 {
+          width: 180px;
+          height: 180px;
+        }
+
+
+
+        .texte {
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+        }
+
+      }
+
+      /*------------------------------------------- 990px Responsive----------------------------------------*/
+      @media (max-width:990px) {
+        header {
+          background: none;
+        }
+
+        .navbar .links,
+        .navbar .action-button {
+          display: none;
+
+        }
+
+        .navbar .burger-menu-button {
+          display: block;
+
+        }
+
+        .burger-menu {
+          display: block;
+
+        }
+
+        .table1 {
+          width: 8rem;
+          height: 8rem;
+          position: relative;
+          right: 5rem;
+        }
+
+        .table2 {
+          width: 8rem;
+          height: 8rem;
+          position: relative;
+          left: -5rem;
+        }
+
+        .texte {
+          font-size: 2rem;
+        }
+
+      }
+
+      /*------------------------------------------- 768px Responsive----------------------------------------*/
+      @media (max-width: 768px) {
+        .table {
+          margin-top: 30px;
+          margin-left: 100px;
+        }
+
+        .Table {
+          margin-left: -80px;
+        }
+
+        .table1 {
+          width: 150px;
+          height: 150px;
+        }
+
+        .table2 {
+          width: 150px;
+          height: 150px;
+        }
+
+        .btn-primary {
+          margin-left: -40px;
+        }
+
+
+
+        .burger-menu-button {
+          background: black;
+          margin-right: 1px;
+          z-index: 9999;
+        }
+      }
+
+      /*------------------------------------------- 500px Responsive----------------------------------------*/
+      @media (max-width:500px) {
+
+        .gvas {
+          width: 5rem;
+          margin-top: -40px;
+        }
+
+        .burger-menu-button {
+
+          position: relative;
+          left: 5rem;
+          z-index: 9999;
+        }
+
+        header {
+          display: block;
+        }
+
+      }
+
+      /*------------------------------------------- burger----------------------------------------*/
+      @media (max-width:576px) {
+
+        .burger-menu {
+          position: block;
+          z-index: 9999;
+        }
+      }
+
+      /*------------------------------------------- 414 Responsive----------------------------------------*/
+      @media (max-width: 414px) {
+        .Table {
+          margin-left: -19px;
+          margin-top: -90px;
+        }
+
+        .table {
+          margin-top: 40px;
+          margin-left: 130px;
+        }
+
+        .table1 {
+          width: 150px;
+          height: 150px;
+          left: 2px;
+        }
+
+        .table2 {
+          width: 150px;
+          height: 150px;
+          right: 30px;
+          margin-top: -180px;
+        }
+
+        .modal-content {
+          width: 320px;
+        }
+
+        .options {
+          left: 80px;
+          width: 200px;
+        }
+
+      }
     </style>
   </section>
 
-  
+
   <!-- Les partenaires de GVAS -->
 
   <section id="partenaires" class="partenaires-section">
@@ -799,156 +800,156 @@ header {
 
 
   <div id="foot">
-            <a href="../notre_image.php">
-                <h1>
-                   Afin de nous connaître un peu plus, cliquez ici =====>
-                </h1>
+    <a href="../notre_image.php">
+      <h1>
+        Afin de nous connaître un peu plus, cliquez ici =====>
+      </h1>
 
-                <img src="../Gloire/Assets/img/icon_logo/image.jpg" alt="lien_retours">
-            </a>
-    </div>
-    
-    <!-- La partie footer -->
-    <footer>
-      <div class="footer_part1">
-        <div class="aigle ">
-          <div class="flex">
-            <img src="images/images/GVAS.png" alt="icon_logo">
-            <h1>Groupe vision d'Aigle Services</h1>
-          </div>
-          <p id="justP">
-            De référence, GVAS est une structure professionnelle composée d’un personnel de qualité agréé
-            par
-            l’État. spécialisé dans la vente des produits et services, l'accompagnement professionnel à
-            travers des formations qualifiantes et certifiantes mais aussi dans un suivi quelconque en vue
-            d’un domaine professionnel donné.
-          </p>
+      <img src="../Gloire/Assets/img/icon_logo/image.jpg" alt="lien_retours">
+    </a>
+  </div>
+
+  <!-- La partie footer -->
+  <footer>
+    <div class="footer_part1">
+      <div class="aigle ">
+        <div class="flex">
+          <img src="images/images/GVAS.png" alt="icon_logo">
+          <h1>Groupe vision d'Aigle Services</h1>
         </div>
-
-        <div class="aigle">
-          <h1>Notre localisation</h1>
-
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d416.72322374458474!2d11.9054355!3d-4.822363!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a60af0b2c6b78c9%3A0xc598de43a114b8f5!2sGroupe%20Vision%20D&#39;aigle%20Services!5e1!3m2!1sen!2scg!4v1781644406727!5m2!1sen!2scg"
-                     width="100%" height="225" allowfullscreen="" loading="lazy"
-                     referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-
-          <a class="Hici"
-            href="https://www.google.com/maps/place/4%C2%B049'21.0%22S+11%C2%B054'19.7%22E/@-4.8224385,11.9053312,121m/data=!3m1!1e3!4m4!3m3!8m2!3d-4.8225!4d11.9054722?hl=fr&entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
-            target="_blank">
-            " Cliquez ici pour Agrandir la MAPS "
-          </a>
-        </div>
-
-        <div class="hide">
-          <h1>Suivez nous sur nos pages</h1>
-        </div>
-        <div id="sous_class_contact">
-          <div class="a">
-            <a href="../index.php">
-              <i class="fa-solid fa-house" style="color: rgb(0, 0, 0);"></i>
-            </a>
-          </div>
-
-          <div class="a">
-            <a href="https://www.facebook.com/profile.php?id=61583138888176" target="_blank">
-              <i class="fa-brands fa-square-facebook" style="color: rgb(0, 0, 0);"></i>
-            </a>
-          </div>
-
-          <div class="a">
-            <a href="#">
-              <i class="fa-brands fa-youtube" style="color: rgb(0, 0, 0);"></i>
-            </a>
-          </div>
-
-          <div class="a">
-            <a href="https://wa.me/242064201415" target="_blank">
-              <i class="fa-brands fa-whatsapp" style="color: rgb(0, 0, 0);"></i>
-            </a>
-          </div>
-        </div>
-
+        <p id="justP">
+          De référence, GVAS est une structure professionnelle composée d’un personnel de qualité agréé
+          par
+          l’État. spécialisé dans la vente des produits et services, l'accompagnement professionnel à
+          travers des formations qualifiantes et certifiantes mais aussi dans un suivi quelconque en vue
+          d’un domaine professionnel donné.
+        </p>
       </div>
 
+      <div class="aigle">
+        <h1>Notre localisation</h1>
 
-  <div class="footer_part2">
-    <div class="pat">
-      <h1>Nos pages</h1>
-      <ul>
-        <li><a href="../index.php">Accueil</a></li>
-        <li><a href="../formation.php">Formations</a></li>
-        <li><a href="apropos.php">A Propos</a></li>
-        <li><a href="../Gloire/page_publicitaire.php">Page Publicitaire</a></li>
-        <li><a href="../galerie.php">Galerie</a></li>
-        <li><a href="../contacts.php">Contacts</a></li>
-        <li><a href="../temoignage.php">Témoignage</a></li>
-        <li><a href="../notre_image.php">Pourquoi GVAS ?</a></li>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d416.72322374458474!2d11.9054355!3d-4.822363!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a60af0b2c6b78c9%3A0xc598de43a114b8f5!2sGroupe%20Vision%20D&#39;aigle%20Services!5e1!3m2!1sen!2scg!4v1781644406727!5m2!1sen!2scg"
+          width="100%" height="225" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
 
-      </ul>
-    </div>
+        <a class="Hici"
+          href="https://www.google.com/maps/place/4%C2%B049'21.0%22S+11%C2%B054'19.7%22E/@-4.8224385,11.9053312,121m/data=!3m1!1e3!4m4!3m3!8m2!3d-4.8225!4d11.9054722?hl=fr&entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank">
+          " Cliquez ici pour Agrandir la MAPS "
+        </a>
+      </div>
 
-    <div class="pat">
-      <h1>Nos Services</h1>
-      <ul>
-        <li><a href="../formation.php">Langues</a></li>
-        <li><a href="../formation.php">Informatique</a></li>
-        <li><a href="../formation.php">Pôle Commercial</a></li>
-      </ul>
-    </div>
-
-
-    <div class="pat">
-      <h1>Nos Contacts</h1>
-      <ul>
-        <li>info@gvas.fr</li>
-        <li>(+242) 05 344 40 20</li>
-        <li>(+242) 06 420 14 15</li>
-        <li>(+242) 06 416 36 21</li>
-      </ul>
-    </div>
-
-    <div class="form">
-      <form action="../Traitement.php" method="POST">
-        <input type="hidden" name="form_type" value="commentaire">
-        <label for="envoie">
-          <h1 class="hid">
-            Envoyez votre commentaire
-          </h1>
-        </label>
-        <div>
-          <input class="tim" placeholder="Votre commentaire ici" type="text" name="envoie" id="envoie" required>
-          <input class="tom" type="submit" value="soumettre !"></input>
-        </div>
-      </form>
-
+      <div class="hide">
+        <h1>Suivez nous sur nos pages</h1>
+      </div>
       <div id="sous_class_contact">
         <div class="a">
-          <a class="b" class="card1" href="../index.php">
+          <a href="../index.php">
             <i class="fa-solid fa-house" style="color: rgb(0, 0, 0);"></i>
           </a>
         </div>
 
         <div class="a">
-          <a class="b" class="card2" href="https://www.facebook.com/profile.php?id=61583138888176" target="_blank">
+          <a href="https://www.facebook.com/profile.php?id=61583138888176" target="_blank">
             <i class="fa-brands fa-square-facebook" style="color: rgb(0, 0, 0);"></i>
           </a>
         </div>
 
         <div class="a">
-          <a class="b" class="card3" href="#">
+          <a href="#">
             <i class="fa-brands fa-youtube" style="color: rgb(0, 0, 0);"></i>
           </a>
         </div>
 
         <div class="a">
-          <a class="b" class="card4" href="https://wa.me/242064201415" target="_blank">
+          <a href="https://wa.me/242064201415" target="_blank">
             <i class="fa-brands fa-whatsapp" style="color: rgb(0, 0, 0);"></i>
           </a>
         </div>
       </div>
+
     </div>
-  </div>
+
+
+    <div class="footer_part2">
+      <div class="pat">
+        <h1>Nos pages</h1>
+        <ul>
+          <li><a href="../index.php">Accueil</a></li>
+          <li><a href="../formation.php">Formations</a></li>
+          <li><a href="apropos.php">A Propos</a></li>
+          <li><a href="../Gloire/page_publicitaire.php">Page Publicitaire</a></li>
+          <li><a href="../galerie.php">Galerie</a></li>
+          <li><a href="../contacts.php">Contacts</a></li>
+          <li><a href="../temoignage.php">Témoignage</a></li>
+          <li><a href="../notre_image.php">Pourquoi GVAS ?</a></li>
+
+        </ul>
+      </div>
+
+      <div class="pat">
+        <h1>Nos Services</h1>
+        <ul>
+          <li><a href="../formation.php">Langues</a></li>
+          <li><a href="../formation.php">Informatique</a></li>
+          <li><a href="../formation.php">Pôle Commercial</a></li>
+        </ul>
+      </div>
+
+
+      <div class="pat">
+        <h1>Nos Contacts</h1>
+        <ul>
+          <li>info@gvas.fr</li>
+          <li>(+242) 05 344 40 20</li>
+          <li>(+242) 06 420 14 15</li>
+          <li>(+242) 06 416 36 21</li>
+        </ul>
+      </div>
+
+      <div class="form">
+        <form action="../Traitement.php" method="POST">
+          <input type="hidden" name="form_type" value="commentaire">
+          <label for="envoie">
+            <h1 class="hid">
+              Envoyez votre commentaire
+            </h1>
+          </label>
+          <div>
+            <input class="tim" placeholder="Votre commentaire ici" type="text" name="envoie" id="envoie" required>
+            <input class="tom" type="submit" value="soumettre !"></input>
+          </div>
+        </form>
+
+        <div id="sous_class_contact">
+          <div class="a">
+            <a class="b" class="card1" href="../index.php">
+              <i class="fa-solid fa-house" style="color: rgb(0, 0, 0);"></i>
+            </a>
+          </div>
+
+          <div class="a">
+            <a class="b" class="card2" href="https://www.facebook.com/profile.php?id=61583138888176" target="_blank">
+              <i class="fa-brands fa-square-facebook" style="color: rgb(0, 0, 0);"></i>
+            </a>
+          </div>
+
+          <div class="a">
+            <a class="b" class="card3" href="#">
+              <i class="fa-brands fa-youtube" style="color: rgb(0, 0, 0);"></i>
+            </a>
+          </div>
+
+          <div class="a">
+            <a class="b" class="card4" href="https://wa.me/242064201415" target="_blank">
+              <i class="fa-brands fa-whatsapp" style="color: rgb(0, 0, 0);"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="bas">
       <h1>
@@ -989,8 +990,6 @@ header {
     burgerMenu.addEventListener('click', function(e) {
       e.stopPropagation();
     });
-
-    
   </script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
