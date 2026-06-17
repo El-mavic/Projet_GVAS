@@ -351,6 +351,10 @@ header {
         overflow-wrap: break-word;
     }
 
+    .gvas {
+        width: 10%;
+    }
+
 }
 
 /*------------------------------------------- 990px Responsive----------------------------------------*/
@@ -372,6 +376,8 @@ header {
 
     .burger-menu {
         display: block;
+        margin-top: 5%;
+
 
     }
 
@@ -392,6 +398,7 @@ header {
     .texte {
         font-size: 2rem;
     }
+
 
 }
 
@@ -518,7 +525,13 @@ header {
         height: 130px;
         right: 30px;
     }
+
+
 }
+
+
+
+
 
 
 
@@ -549,7 +562,7 @@ header {
     cursor: pointer;
     font-size: 16px;
     transition: 0.3s ease;
-    font-family: Roboto Condensed, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 20px;
     font-weight: bold;
 }
@@ -887,6 +900,7 @@ input:focus {
     flex-direction: column-reverse;
     align-items: center;
     z-index: 999;
+
 }
 
 /* Bouton principal */
@@ -901,6 +915,7 @@ input:focus {
     align-items: center;
     cursor: pointer;
     font-size: 24px;
+
 }
 
 /* Actions */
@@ -1622,4 +1637,45 @@ header,
     transform: translateY(100px);
 
     animation: apparition 1s ease forwards;
+}
+
+
+.sidebar-left,
+.sidebar1 {
+    opacity: 0;
+    transform-style: preserve-3d;
+}
+
+/* Sidebar gauche */
+.sidebar-left {
+    animation: cubeLeft 3s ease forwards;
+}
+
+/* Sidebar droite */
+.sidebar1 {
+    animation: cubeRight 3s ease forwards;
+}
+
+@keyframes cubeLeft {
+    from {
+        opacity: 0;
+        transform: perspective(1000px) rotateY(90deg) translateX(-150px);
+    }
+
+    to {
+        opacity: 1;
+        transform: perspective(1000px) rotateY(0deg) translateX(0);
+    }
+}
+
+@keyframes cubeRight {
+    from {
+        opacity: 0;
+        transform: perspective(1000px) rotateY(-90deg) translateX(150px);
+    }
+
+    to {
+        opacity: 1;
+        transform: perspective(1000px) rotateY(0deg) translateX(0);
+    }
 }
