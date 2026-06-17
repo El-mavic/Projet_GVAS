@@ -36,13 +36,13 @@
 
 
             <ul class="links">
-                <li><a href="temoignage.php">Temoignage</a></li>
+                <li><a href="temoignage.php">Acceuil</a></li>
                 <li><a href="Formation.php">Formations</a></li>
                 <li><a href="galerie.php">Galerie</a></li>
                 <li><a href="contacts.php">Contacts</a></li>
             </ul>
             <div class="buttons">
-                <a class="action-button pro " href="Gloire/page_publicitaire.php">Pub</a>
+                <a class="action-button pro " href="Gloire/page_publicitaire.php">Temoignage</a>
                 <a class="action-button" href="vivi/apropos.php">A propos</a>
             </div>
             <div class="burger-menu-button">
