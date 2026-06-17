@@ -30,8 +30,9 @@ if (isset($_GET['id']) && isset($_GET['type'])) {
 
             header("Location: corbeille.php?delete=success&t=" . time());
         } else {
-            $sql = "UPDATE $table 
-        SET deleted = 1
+            $sql = "UPDATE $table
+        SET deleted = 1,
+            deleted_at = NOW()
         WHERE id = ?";
 
             $stmt = $pdo->prepare($sql);
