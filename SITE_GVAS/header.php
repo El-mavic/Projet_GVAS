@@ -28,6 +28,20 @@
     <header>
 
         <div class="navbar">
+<<<<<<< HEAD
+=======
+            <div class="logo">
+<<<<<<< HEAD
+                <img class="img" src="/Gloire/Assets/img/icon_logo/logo-GVAS.png"alt="icon_logo">
+                <img src="/Gloire/Assets/img/icon_logo/logo-GVAS.png"alt="icon_logo">
+=======
+                <img class="gvas" src="/images/Images/GVAS.png" alt="GVAS">
+>>>>>>> 4d16e9dd476d60759b732f01964cc9a4c1abe021
+            </div>
+            <!-- /*onerror="this.style.display='none';"*/ -->
+
+
+>>>>>>> e479de0873c52b1387a29a49c34a8bc736cadd3f
             <ul class="links">
                 <li><a href="/index.php">Accueil</a></li>
                 <li><a href="/Formation.php">Formations</a></li>
@@ -46,7 +60,11 @@
     </header>
     <!--------------------------------------Message de GVAS BIENVENUE---------------------------------------------------------------->
 
+<<<<<<< HEAD
+    <p class="texte">Groupe Vision d'Aigle Services </p>
+=======
     <p class="texte"> Groupe Vision d'Aigle Services </p>
+>>>>>>> 4d16e9dd476d60759b732f01964cc9a4c1abe021
 
 
     <style>
@@ -81,7 +99,7 @@
 
         header {
             position: relative;
-            padding: 0 8em;
+            /* padding: 0 8em; */
             background-color: rgba(19, 22, 22, 0.61);
             border-bottom-left-radius: 50px;
             border-top-left-radius: 50px;
@@ -89,92 +107,23 @@
             border-top-right-radius: 50px;
         }
 
-        .navbar {
-            width: 100%;
-            max-width: 1200px;
-            height: 80px;
-            margin: 0;
+        header .navbar .logo img {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .gvas {
-            width: 6.5%;
-            position: absolute;
-            left: 1%;
-            margin-top: -3.2%;
-        }
-
-        .navbar .logo a {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .navbar .links {
-            display: flex;
-            gap: 5rem;
-
-        }
-
-        .navbar .links a {
+            width: 100px;
             position: relative;
+            left: -156px;
+            top: -18px;
         }
 
-        .navbar .links a::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -5px;
-            width: 0;
-            height: 3px;
-            background-color: #fff200;
-            transition: width 0.3s ease;
-        }
-
-        .navbar .links a:hover::after {
-            width: 100%;
-        }
-
-        .navbar .burger-menu-button {
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
+        header .navbar .logo .img {
             display: none;
         }
 
         .buttons {
             display: flex;
             gap: 10px;
-        }
-
-        .action-button {
-            background-color: #fff200;
-            color: black;
-            border: 1px solid #fff200;
-            padding: 0.5rem 1.2rem;
-            outline: none;
-            border-radius: 5px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            cursor: pointer;
-
-        }
-
-        .action-button:hover {
-            color: rgb(94, 94, 95);
-            border: 1px solid #fff200;
-        }
-
-        .pro {
-            background-color: transparent;
-            color: white;
-            border: 1px solid #fff200;
-        }
-
-        .pro:hover {
-            background-color: #fff200;
-            color: rgba(34, 7, 97, 0.726);
+            position: relative;
+            top: -18px;
         }
 
         /*-----Burger menu----*/
@@ -224,13 +173,6 @@
             align-items: center;
         }
 
-        .buttons-burger-menu {
-            display: flex;
-            flex-direction: column;
-            margin-left: -5px;
-            gap: 10px;
-        }
-
         /*------Suite----*/
 
         .texte {
@@ -243,15 +185,44 @@
 
         }
 
-
-
-
         /*--------Responsive-------*/
+        @media (max-width: 414px) 
+        {
+            header .burger-menu-button {
+                position: relative;
+                left: 189%;
+                top: -605%;
+            }
+        }
+    
+        @media (max-width:990px)
+         {
+            .texte {
+                font-size: 2rem;
+            }
 
-        @media (max-width:990px) {
+            header .burger-menu-button  {
+                display: block;
+                position: relative;
+                left: 0px;
+                top: -18px;
+            }
+
             header {
                 background: none;
             }
+
+            header .navbar .logo img {
+                display: none;
+        } 
+
+            header .navbar .logo .img {
+            display: block;
+            width: 100px;
+            position: relative;
+            left: -80%;
+            top: 0px;
+        }
 
             .navbar .links,
             .navbar .action-button {
@@ -287,30 +258,12 @@
                 margin-top: -40px;
             }
 
-            .burger-menu-button {
-
-                position: relative;
-                left: 5rem;
-            }
 
             header {
                 display: block;
             }
 
         }
-
-        @media (max-width:990px) {
-
-            .texte {
-                font-size: 2rem;
-            }
-
-        }
-
-
-
-
-
 
         /*pour la première page*/
 
@@ -332,14 +285,17 @@
             .btn-primary {
                 margin-left: 1px;
             }
+
+            header .navbar .logo .img {
+            display: block;
+            width: 100px;
+            position: relative;
+            left: -80%;
+            top: -13px;
         }
 
-        @media (max-width: 820px) {
-
-            .burger-menu-button {
-                margin-right: 1px;
-            }
         }
+
     </style>
 
 
