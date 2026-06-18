@@ -53,7 +53,7 @@ if (!isset($_SESSION['visite_' . $page])) {
       <div class="divider"></div>
       <div class="buttons-burger-menu">
         <a class="action-button" href="Gloire/page_publicitaire.php">Pub</a>
-       <a class="action-button" style="  white-space: nowrap;" href="vivi/apropos.php">A propos</a>
+        <a class="action-button" style="  white-space: nowrap;" href="vivi/apropos.php">A propos</a>
       </div>
     </ul>
   </div>
@@ -84,7 +84,7 @@ if (!isset($_SESSION['visite_' . $page])) {
   </header>
   <!--------------------------------------Message de GVAS BIENVENUE---------------------------------------------------------------->
 
-  <p class="texte">Bienvenue au Groupe Vision d'Aigle Services </p>
+  <p class="texte"> Groupe Vision d'Aigle Services </p>
   <!-- GALERIE -->
   <div class="gallery-grid">
 
