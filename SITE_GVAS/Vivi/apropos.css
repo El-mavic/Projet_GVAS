@@ -767,33 +767,30 @@ body {
 
   .h-manager {
     flex: 0 0 150px;
-    width: 250px;
+    width: 200px;
   }
 
   .h-content h1 {
-    font-size: 22px;
-    margin-bottom: 30px;
+    font-size: 17px;
+    margin-bottom: px;
   }
 
   .h-content span {
-    font-size: 20px;
-    top: -8px;
-    /* margin-top: 10px; */
+    font-size: 17px;
   }
 
   .h-content p {
-    font-size: 13px;
+    font-size: 11px;
     text-align: center;
     left: 2%;
     width: 100%;
-    margin-top: 10px;
     
   }
 
   .h-content a {
     font-size: 16px;
-    padding: 6px 12px;
-    margin-top: -10px;
+    padding: 6px;
+    margin-bottom: 10px;
   }
 }
 
@@ -819,11 +816,9 @@ body {
   color: var(--gris);
   text-decoration: none;
   font-size: 1.2rem;
-  /* font-weight: 600; */
   padding: 18px 20px;
   border-bottom: 3px solid transparent;
   transition: color 0.3 ease;
-  /* margin-top: 25px; */
 }
 
 .content a.active {
@@ -909,6 +904,23 @@ body {
 
   }
 }
+
+
+@media (max-width: 320px) {
+  .content a {
+    font-size: 0.7rem;
+    padding: 4px 3px;
+    white-space: nowrap;
+  }
+
+  .content {
+    padding: 0 0;
+    gap: 0;
+    top: 0;
+  }
+
+}
+
 
 .section-title {
   display: flex;
@@ -1516,21 +1528,32 @@ body {
   }
 }
 
+/* Partie séparant lee footer des partenaires */
+
+  #foot h1 {
+    font-size: 30px;
+
+}
 @media (max-width: 414px){
   
 .partenaires-subtitle{
     font-size: 1.4rem;
 
   }
-}
-
 
 #foot h1 {
-  font-size: 30px;
+  font-size: 20px;
+}
 }
 
-@media(max-width: 414px) {
+@media(max-width: 375px) {
   #foot h1 {
     font-size: 20px;
+  }
+}
+
+@media(max-width: 320px){
+  #foot {
+    font-size: 8px;
   }
 }

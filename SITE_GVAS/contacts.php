@@ -16,11 +16,11 @@
     <!DOCTYPE html>
     <html lang="fr">
 
-    <head>     
+    <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description"
-          content="De réfférence, GVAS est une structure 
+            content="De réfférence, GVAS est une structure 
           professionnelle composée d’un personnel de qualité agréé 
           par l’État. spécialisé dans la vente des produits et services, 
           l'accompagnement professionnelle à travers des formations qualifiantes
@@ -95,7 +95,7 @@
                                 </div>
                                 <div class="contact-text">
                                     <h4>Adresse</h4>
-                                    <p>Mpaka x-or en diagonale de l'école Privée Ivan Mamingui</p>
+                                    <p>Mpaka x-or en diagonale de l'école Privée <br>Ivan Mamingui (Pointe-Noire) </p>
                                 </div>
                             </div>
 
