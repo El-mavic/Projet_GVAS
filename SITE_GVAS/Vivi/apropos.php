@@ -168,7 +168,7 @@ if (!isset($_SESSION['visite_' . $page])) {
       </div>
 
       <div class="team-card card-7">
-        <img src="images/BG/17.JPG" alt="communication">
+        <img src="images/admin/ruth.png" alt="communication">
         <div class="team-content">
           <h2><span>Mme Ruth</span></h2>
           <h3>Secrétaire chargée de communication</h3>
