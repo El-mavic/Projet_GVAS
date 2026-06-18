@@ -44,11 +44,7 @@ if (!isset($_SESSION['visite_' . $page])) {
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="Gloire/Assets/Css/style.css">
-    <link rel="stylesheet" href="../Gloire/Assets/Css/stilisation.css">
-    <link rel="icon" href="Assets/Img/icon_logo/logo-GVAS.png">
-
-    <!-- <link rel="icon" href="images/Images/GVAS.png"> -->
+    <link rel="icon" href="images/Images/GVAS.png">
 </head>
 
 <body class="body">
@@ -62,7 +58,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             <div class="divider"></div>
             <div class="buttons-burger-menu">
                 <a class="action-button" href="Gloire/page_publicitaire.php">Pub</a>
-                <a class="action-button" style="  white-space: nowrap;" href="vivi/apropos.php">A propos</a>
+                <a class="action-button" href="vivi/apropos.php">A propos</a>
             </div>
         </ul>
     </div>
@@ -133,168 +129,9 @@ if (!isset($_SESSION['visite_' . $page])) {
 
     </table>
 
-
-    <!-- btn-retour -->
-    <div id="foot">
-        <a href="#ancre">
-            <h1>
-                RETOUR AU SOMMET
-            </h1>
-
-            <img src="Gloire/Assets/img/icon_logo/image.jpg" alt="lien_retours">
-        </a>
-    </div>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer_part1">
-            <div class="aigle ">
-                <div class="flex">
-                    <img src="images/images/GVAS.png" alt="icon_logo">
-                    <h1>Groupe vision d'Aigle Services</h1>
-                </div>
-                <p id="justP">
-                    De référence, GVAS est une structure professionnelle composée d’un personnel de qualité agréé
-                    par
-                    l’État. spécialisé dans la vente des produits et services, l'accompagnement professionnel à
-                    travers des formations qualifiantes et certifiantes mais aussi dans un suivi quelconque en vue
-                    d’un domaine professionnel donné.
-                </p>
-            </div>
-
-            <div class="aigle">
-                <h1>Notre localisation</h1>
-
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d416.72322374458474!2d11.9054355!3d-4.822363!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a60af0b2c6b78c9%3A0xc598de43a114b8f5!2sGroupe%20Vision%20D&#39;aigle%20Services!5e1!3m2!1sen!2scg!4v1781644406727!5m2!1sen!2scg"
-                     width="100%" height="225" allowfullscreen="" loading="lazy"
-                     referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-
-
-                <a id="H" href="https://www.google.com/maps/place/4%C2%B049'21.0%22S+11%C2%B054'19.7%22E/@-4.8224385,11.9053312,121m/data=!3m1!1e3!4m4!3m3!8m2!3d-4.8225!4d11.9054722?hl=fr&entry=ttu&g_ep=EgoyMDI2MDUxMy4wIKXMDSoASAFQAw%3D%3D"
-                    target="_blank">
-                    " Cliquez ici pour Agrandir la MAPS "
-                </a>
-            </div>
-
-            <div class="hide">
-                <h1>Suivez nous sur nos pages</h1>
-            </div>
-            <div id="sous_class_contact">
-                <div class="a">
-                    <a href="../index.php">
-                        <i class="fa-solid fa-house" style="color: rgb(0, 0, 0);"></i>
-                    </a>
-                </div>
-
-                <div class="a">
-                    <a href="https://www.facebook.com/profile.php?id=61583138888176" target="_blank">
-                        <i class="fa-brands fa-square-facebook" style="color: rgb(0, 0, 0);"></i>
-                    </a>
-                </div>
-
-                <div class="a">
-                    <a href="#">
-                        <i class="fa-brands fa-youtube" style="color: rgb(0, 0, 0);"></i>
-                    </a>
-                </div>
-
-                <div class="a">
-                    <a href="https://wa.me/242064201415" target="_blank">
-                        <i class="fa-brands fa-whatsapp" style="color: rgb(0, 0, 0);"></i>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-
-        </div>
-
-        <div class="footer_part2">
-            <div class="pat">
-                <h1>Nos pages</h1>
-                <ul>
-                    <li><a href="../index.php">Accueil</a></li>
-                    <li><a href="../formation.php">Formations</a></li>
-                    <li><a href="../vivi/apropos.php">A Propos</a></li>
-                    <li><a href="../Gloire/page_publicitaire.php">Page Publicitaire</a></li>
-                    <li><a href="../galerie.php">Galerie</a></li>
-                    <li><a href="../contacts.php">Contacts</a></li>
-                    <li><a href="../temoignage.php">Témoignage</a></li>
-                    <li><a href="../notre_image.php">Pourquoi GVAS ?</a></li>
-                </ul>
-            </div>
-
-            <div class="pat">
-                <h1>Nos Services</h1>
-                <ul>
-                    <li><a href="../formation.php">Langues</a></li>
-                    <li><a href="../formation.php">Informatique</a></li>
-                    <li><a href="../formation.php">Pôle Commercial</a></li>
-                </ul>
-            </div>
-
-
-            <div class="pat">
-                <h1>Nos Contacts</h1>
-                <ul>
-                    <li>info@gvas.fr</li>
-                    <li>(+242) 05 344 40 20</li>
-                    <li>(+242) 06 420 14 15</li>
-                    <li>(+242) 06 416 36 21</li>
-                </ul>
-            </div>
-
-            <div class="form">
-                <form action="../Traitement.php" method="POST">
-                    <input type="hidden" name="form_type" value="commentaire">
-                    <label for="envoie">
-                        <h1 class="hid">
-                            Envoyez votre commentaire
-                        </h1>
-                    </label>
-                    <div>
-                        <input class="tim" placeholder="Votre commentaire ici" type="text" name="envoie" id="envoie" required>
-                        <input class="tom" type="submit" value="soumettre !"></input>
-                    </div>
-                </form>
-
-                <div id="sous_class_contact">
-                    <div class="a">
-                        <a class="b" class="card1" href="../index.php">
-                            <i class="fa-solid fa-house" style="color: rgb(0, 0, 0);"></i>
-                        </a>
-                    </div>
-
-                    <div class="a">
-                        <a class="b" class="card2" href="https://www.facebook.com/profile.php?id=61583138888176" target="_blank">
-                            <i class="fa-brands fa-square-facebook" style="color: rgb(0, 0, 0);"></i>
-                        </a>
-                    </div>
-
-                    <div class="a">
-                        <a class="b" class="card3" href="#">
-                            <i class="fa-brands fa-youtube" style="color: rgb(0, 0, 0);"></i>
-                        </a>
-                    </div>
-
-                    <div class="a">
-                        <a class="b" class="card4" href="https://wa.me/242064201415" target="_blank">
-                            <i class="fa-brands fa-whatsapp" style="color: rgb(0, 0, 0);"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="bas">
-            <h1>
-                #celui qui ne se forme pas, se déforme !
-            </h1>
-        </div>
-    </footer>
-
-
+    <!-- footer -->
+    <?php include 'footer.php'; ?>
+    
 
     <!--burgerMenuButton-->
     <script>
