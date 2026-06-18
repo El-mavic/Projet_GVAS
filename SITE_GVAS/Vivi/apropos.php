@@ -39,7 +39,6 @@ if (!isset($_SESSION['visite_' . $page])) {
 
   <title>à propos</title>
 </head>
-
 <body>
 
   <div class=" burger-menu ">
