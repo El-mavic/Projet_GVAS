@@ -168,7 +168,7 @@ if (!isset($_SESSION['visite_' . $page])) {
       </div>
 
       <div class="team-card card-7">
-        <img src="images/BG/17.JPG" alt="communication">
+        <img src="images/admin/ruth.png" alt="communication">
         <div class="team-content">
           <h2><span>Mme Ruth</span></h2>
           <h3>Secrétaire chargée de communication</h3>
@@ -802,7 +802,7 @@ if (!isset($_SESSION['visite_' . $page])) {
   <div id="foot">
     <a href="../notre_image.php">
       <h1>
-        Afin de nous connaître un peu plus, cliquez ici =====>
+        Afin de nous connaître un peu plus, cliquez ici <i class="fa-solid fa-arrow-right"></i>
       </h1>
 
       <img src="../Gloire/Assets/img/icon_logo/image.jpg" alt="lien_retours">
