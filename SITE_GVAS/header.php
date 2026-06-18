@@ -28,11 +28,6 @@
     <header>
 
         <div class="navbar">
-            <div class="logo">
-                <img class="gvas" src="/images/Images/GVAS.png" alt="GVAS">
-            </div>
-
-
             <ul class="links">
                 <li><a href="/index.php">Accueil</a></li>
                 <li><a href="/Formation.php">Formations</a></li>
@@ -52,6 +47,7 @@
     <!--------------------------------------Message de GVAS BIENVENUE---------------------------------------------------------------->
 
     <p class="texte"> Groupe Vision d'Aigle Services </p>
+
 
     <style>
         * {
