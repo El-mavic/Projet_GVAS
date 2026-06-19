@@ -27,7 +27,8 @@
             </div>
         </ul>
     </div>
-    <header>
+    
+    <header id="ancre">
         
         <div class="navbar">
 
