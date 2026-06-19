@@ -984,7 +984,6 @@ body {
   display: flex;
   justify-content: center;
   font-size: 2.3em;
-
   margin-bottom: 60px;
   letter-spacing: -1px;
   color: white;
@@ -1141,12 +1140,8 @@ body {
     z-index: 0;
   }
 }
-/*  
-.card-3 img{
-    object-fit: cover;
-    object-position: center;
-  }
- */
+
+
 /* Responsives sur l'equipe */
 @media (max-width: 1366px) {
   .team-carousel {
@@ -1184,21 +1179,9 @@ body {
     padding: 60px 24px;
   }
 }
-/*  
-@media (max-width:375px){
-  .team-content{
-   padding: 3px;
-  text-align: center;
-}
 
-.team-content h2 {
-  font-size: 10px;
-}
-.team-content h3 {
-  font-size: 0.8rem;  
 
-}
-}
+
 /* Section hidtooire de gvas */
 
 .histoire-section {
