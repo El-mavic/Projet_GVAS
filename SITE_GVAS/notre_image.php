@@ -78,7 +78,7 @@
     <p class="texte">Groupe Vision d'Aigle Services </p>
 
     <div class="container">
-        <h3 classe="titre">Tout savoir sur <span>GVAS</span> Avec les détails nécessaires</h3>
+        <h3 class="titre">Tout savoir sur <span>GVAS</span> Avec les détails nécessaires</h3>
 
 
         <div class="accordion-item">
@@ -149,11 +149,11 @@
             </button>
 
             <div class="accordion-content">
-                <div class="content-inner">
-                    <p style="margin-top: 5%; font-size: 20px; white-space:nowrap">
+                <div class="content-inner us">
+                    <p>
                         Pour bénéficier :
-                    </p><br>
-                    <ul style="white-space: nowrap;">
+                    </p>
+                    <ul class="nous">
                         <li>D'une formation de qualité</li>
                         <li> D'un accompagnement personnalisé</li>
                         <li>De programmes orientés vers la pratique</li>
@@ -176,19 +176,18 @@
                 RETOUR AU SOMMET
             </h2>
 
-            <img src="Gloire/Assets/img/icon_logo/image.jpg" alt="lien_retours">
+            <img src="images/Images/image.jpg" alt="lien_retours">
         </a>
     </div>
 
     <!-- FOOTER -->
     <?php include 'footer.php'; ?>
-    
+
 
     <style>
         .content-inner {
             display: flex;
             align-items: flex-start;
-            /* image collée en haut */
             gap: 20px;
         }
 
@@ -196,6 +195,10 @@
             flex: 1;
             margin: 0;
             font-size: 15px;
+        }
+
+        .us p {
+            font-size: 20px;
         }
 
         .content-inner img {
@@ -214,6 +217,59 @@
             object-fit: cover;
             float: right;
             margin-left: 15px;
+        }
+
+
+
+        @media(max-width: 414px) {
+            .us {
+                flex-direction: column;
+                width: 100%
+            }
+
+            .nous {
+                white-space: normal;
+            }
+
+            .nous li {
+                white-space: nowrap;
+                align-self: center;
+                font-size: 14px;
+            }
+
+            .content-inner p {
+                text-align: justify;
+            }
+
+            .us p {
+                white-space: normal;
+                font-size: 18px;
+            }
+
+            .us img {
+                align-self: center;
+            }
+
+            .container h3 {
+                font-size: 30px;
+            }
+        }
+
+        @media(max-width: 375px) {
+            .us p {
+                white-space: normal;
+                font-size: 16px;
+            }
+
+            .container h3 {
+                font-size: 24px;
+            }
+
+            .nous li {
+                white-space: nowrap;
+                align-self: center;
+                font-size: 13px;
+            }
         }
 
 
@@ -326,6 +382,20 @@
         .foo h2 {
             color: black;
             font-size: 30px;
+        }
+
+        @media(max-width: 414px) {
+            .foo h2 {
+                font-size: 25px
+            }
+        }
+
+
+
+        @media(max-width: 375px) {
+            .foo h2 {
+                font-size: 20px
+            }
         }
 
         .foo a {
