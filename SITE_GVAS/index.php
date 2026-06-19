@@ -87,9 +87,10 @@ if (!isset($_SESSION['visite_' . $page])) {
     <!--------------------------------------------------------Header---------------------------------------------------------------->
     <div class="burger-menu ">
         <ul class="links">
-            <li><a href="index.php">Accueil</a></li>
+
             <li><a href="Formation.php">Formations</a></li>
             <li><a href="galerie.php">Galerie</a></li>
+            <li><a href="temoignage.php">Temoignage</a></li>
             <li><a href="contacts.php">Contacts</a></li>
             <div class="divider"></div>
             <div class="buttons-burger-menu">

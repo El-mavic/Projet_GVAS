@@ -432,7 +432,8 @@ if (!isset($_SESSION['visite_' . $page])) {
                 </div>
             </div>
         `;
-                } else if (section === "Services") {
+                } else //if (section === "Services")
+                 {
                     contenu.innerHTML = `
             <div class="section_service">
                 <div class="sous_section_service">
@@ -728,13 +729,265 @@ if (!isset($_SESSION['visite_' . $page])) {
 
             <!-- Partie droite -->
             <div class="contenu" id="contenu">
-                <div class="Acceuil">
-                    <div class="cent">
-                        <img src="Assets/Img/icon_logo/logo-GVAS.png" alt="logo-GVAS">
-                        <h1 >GROUPE VISION D'AIGLE SERVICES</h1>
-                        <P>Spécialiser dans la vente des produits et services</P>
+                <div class="section_service">
+                <div class="sous_section_service">
+                    <div class="principal">
+                        <div class="haut haut1">
+                            <img src="Assets/Img/img pub/Articles informatiques/services .jpg" alt="">
+                        </div>
+
+                        <div class="bas">
+                            <h1>SERVICE DE PLASSIFICATION</h1>
+                                <ul>
+                                    <li>
+                                        prix : 500frc (Format A4)
+                                    </li>
+                                    <li>
+                                        prix : 1000frc (Format A3)
+                                    </li>
+                                </ul>
+                        </div>
                     </div>
                 </div>
+
+                <div class="sous_section_service">
+                    <div class="principal">
+                        <div class="haut haut1">
+                            <img src="Assets/Img/img pub/Articles informatiques/Simression.jpg" alt="">
+                        </div>
+
+                        <div class="bas">
+                            <h1>SERVICE DE PHOTOCOPIE</h1>
+                            
+                                <ul>
+                                    <li>
+                                        prix : 25frc (Noir et blanc)
+                                    </li>
+                                    <li>
+                                        prix : 150frc (Couleur)
+                                    </li>
+                                    <li>
+                                        prix : 15frc (appartir de 15 copies)
+                                    </li>
+                                </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sous_section_service">
+                    <div class="principal">
+                        <div class="haut haut1">
+                            <img src="Assets/Img/img pub/Articles informatiques/imprimanteG.avif" alt="">
+                        </div>
+
+                        <div class="bas">
+                            <h1>SERVICE D'IMPRESSION BACHES</h1>
+
+                            <ul>
+                                <li>
+                                    prix : 2500frc (Noir et blanc)
+                                </li>   
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sous_section_service">
+                    <div class="principal">
+                        <div class="haut haut1">
+                            <img src="Assets/Img/img pub/Articles informatiques/WhatsApp Image 2026-05-30 at 1.07.22 PM.jpeg" alt="livre">
+                        </div>
+
+                        <div class="bas">
+                            <h1>SERVICE DE VENTE <br> ACCESOIR DE BUREAU</h1>
+                            <ul>
+                                <li>
+                                    Disponible en stock
+                                </li> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sous_section_service">
+                    <div class="principal">
+                        <div class="haut haut1">
+                            <img src="Assets/Img/img pub/Articles informatiques/cours en presentiel.jpg" alt="livre">
+                        </div>
+
+                        <div class="bas">
+                            <h1>COURS EN PRESENTIEL </h1>
+                            <h1>On s'adapte sur</h1>
+                            <ul>
+                                <li>
+                                    Votre emplois du temps
+                                </li> 
+
+                                <li>
+                                    La formation demandée
+                                </li>
+                                
+                                <li>
+                                    Votre tranche d'êge et autre
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+               <div class="sous_section_service">
+                    <div class="principal">
+                        <div class="haut haut1">
+                            <img src="Assets/Img/img pub/Articles informatiques/reparation.webp" alt="">
+                        </div>
+
+                        <div class="bas">
+                            <h1>SERVICE DE REPARATION</h1>
+                                
+                            <ul>
+                                <li>
+                                    Flash mobile 
+                                </li>   
+                                <li>
+                                    réparation hardware 
+                                </li> 
+                                <li>
+                                    réparation software
+                                </li> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sous_section_service">
+                    <div class="principal">
+                        <div class="haut haut1">
+                            <img src="Assets/Img/img pub/Articles informatiques/saisie.jpg" alt="saisie">
+                        </div>
+
+                        <div class="bas">
+                            <h1>SERVICE BUREAUTIQUE</h1>
+                            <ul>
+                                <li>
+                                    Saisie (appartir de 500frc)
+                                </li>   
+                                <li>
+                                    Conception (appartir de 500frc)
+                                </li> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="sous_section_service">
+                    <div class="principal">
+                        <div class="haut haut1">
+                            <img src="Assets/Img/img pub/Articles informatiques/online course.jpg" alt="saisie">
+                        </div>
+
+                        <div class="bas">
+                            <h1>COURS EN LIGNE</h1>
+                            <h1>On s'adapte sur</h1>
+                            <ul>
+                                <li>
+                                    Votre emplois du temps
+                                </li> 
+
+                                <li>
+                                    La formation demandée
+                                </li>
+                                
+                                <li>
+                                    Votre tranche d'êge et autre
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sous_section_service">
+                    <div class="principal">
+                        <div class="haut haut1">
+                            <img src="Assets/Img/img pub/Articles informatiques/orientation.jpg" alt="orientation">
+                        </div>
+
+                        <div class="bas">
+                            <h1>SERVICE D'ORIENTATION</h1>
+                            <ul>
+                                <li>
+                                    Orientation quelconque
+                                </li>   
+                                <li>
+                                    Orientation proffesionnel
+                                </li> 
+                                <li>
+                                    Orientation particulière 
+                                </li> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sous_section_service">
+                    <div class="principal">
+                        <div class="haut haut1">
+                            <img src="Assets/Img/img pub/Articles informatiques/livre.jpeg" alt="livre">
+                        </div>
+
+                        <div class="bas">
+                            <h1>SERVICE DE VENTE <br> L'ENFANT INTELLIGENT</h1>
+                            <ul>
+                                <li>
+                                     Histoire-Géographie
+                                </li>   
+                                <li>
+                                    Anglais
+                                </li> 
+                                <li>
+                                    Mathématiques ...
+                                </li> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sous_section_service">
+                    <div class="principal">
+                        <div class="haut haut1">
+                            <img src="Assets/Img/img pub/Articles informatiques/MOMO.jpg" alt="momo">
+                        </div>
+
+                        <div class="bas">
+                            <h1>MTN MOBILE MONEY</h1>
+                            <ul>
+                                <li>
+                                    Dépot et Retrait inclus
+                                </li>   
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sous_section_service">
+                    <div class="principal">
+                        <div class="haut haut1">
+                            <img src="Assets/Img/img pub/Articles informatiques/airtel mo.jpg" alt="airtel">
+                        </div>
+
+                        <div class="bas">
+                            <div class="bas">
+                            <h1>AITEL MOBILE MONEY</h1>
+                            <ul>
+                                <li>
+                                    Dépot et Retrait inclus
+                                </li>   
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
 
@@ -750,7 +1003,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                             <div class="hauteur">
                                 <video autoplay controls muted>
                                     <source
-                                        src="Assets/video/Marshmello & Bastille - Happier - Traduction Française & Paroles.mp4">
+                                        src="Assets/video/Marshmello.mp4">
                                 </video>
                             </div>
                             <div class="p_bas">
@@ -771,7 +1024,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                             <div class="hauteur">
                                 <video autoplay controls muted>
                                     <source
-                                        src="Assets/video/Marshmello & Bastille - Happier - Traduction Française & Paroles.mp4">
+                                        src="Assets/video/Marshmello &.mp4">
                                 </video>
                             </div>
                             <div class="p_bas">
