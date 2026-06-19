@@ -130,6 +130,15 @@ if (!isset($_SESSION['visite_' . $page])) {
     </table>
 
     <!-- footer -->
+     <div id="foot">
+            <a href="#ancre">
+                <h1>
+                    RETOUR AU SOMMET
+                </h1>
+
+                <img src="Gloire/Assets/img/icon_logo/image.jpg" alt="lien_retours">
+            </a>
+        </div>
     <?php include 'footer.php'; ?>
     
 

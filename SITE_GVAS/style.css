@@ -135,7 +135,7 @@ header {
 }
 
 .action-button:hover {
-    color: blue;
+    color: rgb(101, 101, 104);
     border: 1px solid #fff200;
 }
 
@@ -158,7 +158,7 @@ header {
     right: 2rem;
     top: 60px;
     width: 200px;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(61, 61, 61, 0.884);
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
@@ -505,7 +505,7 @@ header {
 /*------------------------------------------- 375px Responsive----------------------------------------*/
 @media (max-width: 375px) {
     .Table {
-        margin-left: -5px;
+        margin-right: -2px;
         margin-top: -90px;
     }
 
@@ -529,12 +529,6 @@ header {
 
 }
 
-
-
-
-
-
-
 /* --- arrière-plan sombre derrière la fenêtre --- */
 .modal {
     display: none;
@@ -553,7 +547,7 @@ header {
 
 /* Bouton principal */
 .btn-primary {
-    margin-left: 9px;
+    margin-left: 60px;
     padding: 10px 22px;
     background: #fff200;
     color: black;
@@ -565,6 +559,7 @@ header {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 20px;
     font-weight: bold;
+
 }
 
 .btn-primary:hover {
@@ -1492,7 +1487,7 @@ li {
 }
 
 .card1 ul li {
-    font-size: 14px;
+    font-size: 1rem;
     padding: 6px 0;
     color: #eaeaea;
     display: flex;
@@ -1501,7 +1496,7 @@ li {
 }
 
 .card1.contact p {
-    font-size: 14px;
+    font-size: 1rem;
     margin: 6px 0;
     color: #ddd;
 }
@@ -1603,7 +1598,7 @@ li {
 
 @media screen and (max-width: 375px) {
     .card1.contact p {
-        font-size: 14px;
+        font-size: 1rem;
     }
 }
 

@@ -8,65 +8,64 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Gloire/Assets/Css/style.css">
+    <link rel="stylesheet" href="../Gloire/Assets/Css/stilisation.css">
+    <link rel="icon" href="Assets/Img/icon_logo/logo-GVAS.png">
 </head>
 
 <body>
-    <div class="burger-menu ">
-        <ul class="links">
-            <li><a href="/index.php">Accueil</a></li>
+    <div class=" burger-menu ">
+        <ul class=" links">
+            <li><a href="/index.php">Acceuil</a></li>
             <li><a href="/Formation.php">Formations</a></li>
-            <li><a href="/galerie.php">Galerie</a></li>
+            <li><a href="/galerie.php">Gallérie</a></li>
             <li><a href="/contacts.php">Contacts</a></li>
             <div class="divider"></div>
             <div class="buttons-burger-menu">
-                <a class="action-button" href="/Gloire/page_publicitaire.php">Pub</a>
-                <a class="action-button" style="white-space: nowrap;" href="/Vivi/apropos.php">A propos</a>
+                <a class="action-button" href="/temoignage.php">Temoignage</a>
+                <a class="action-button" href="../Vivi/apropos.php">A propos</a>
             </div>
         </ul>
     </div>
-
     <header>
 
         <div class="navbar">
+
             <div class="logo">
-                <img class="gvas" src="/images/Images/GVAS.png" alt="GVAS">
+                <img class="gvas" src="../images/Images/GVAS.png" alt="GVAS">
+
             </div>
-
-
             <ul class="links">
-                <li><a href="/index.php">Accueil</a></li>
+                <li><a href="/index.php">Acceuil</a></li>
                 <li><a href="/Formation.php">Formations</a></li>
                 <li><a href="/galerie.php">Galerie</a></li>
                 <li><a href="/contacts.php">Contacts</a></li>
             </ul>
             <div class="buttons">
                 <a class="action-button pro " href="/temoignage.php">Temoignage</a>
-                <a class="action-button" href="/Vivi/apropos.php">A propos</a>
+                <a class="action-button" href="../Vivi/apropos.php">A propos</a>
             </div>
             <div class="burger-menu-button">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
-
     </header>
-    <!--------------------------------------Message de GVAS BIENVENUE---------------------------------------------------------------->
+    <p class="texte">Groupe Vision d'Aigle Services </p>
 
-    <p class="texte"> Groupe Vision d'Aigle Services </p>
+
+
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Roboto Condensed", sans-serif;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
         }
 
         body {
-            height: 100vh;
-            background-image: url(images/Images/Two.jpg);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background-color: #262828;
         }
 
         li {
@@ -86,7 +85,7 @@
         header {
             position: relative;
             padding: 0 8em;
-            background-color: rgba(19, 22, 22, 0.61);
+            background-color: #262828;
             border-bottom-left-radius: 50px;
             border-top-left-radius: 50px;
             border-bottom-right-radius: 50px;
@@ -104,10 +103,10 @@
         }
 
         .gvas {
-            width: 6.5%;
+            width: 7rem;
             position: absolute;
-            left: 1%;
-            margin-top: -3.2%;
+            left: -18%;
+            margin-top: -4.4%;
         }
 
         .navbar .logo a {
@@ -208,14 +207,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-left: -100px;
+            margin-left: -130px;
         }
 
         .divider {
             height: 1px;
             background: #fff;
             width: 80%;
-            margin-left: -30px;
+            margin-left: -50px;
             margin-bottom: 1rem;
         }
 
@@ -226,6 +225,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            white-space: nowrap;
+            margin-left: -20px;
+
         }
 
         .buttons-burger-menu {
@@ -311,11 +313,6 @@
 
         }
 
-
-
-
-
-
         /*pour la première page*/
 
         @media (max-width: 1366px) {
@@ -338,13 +335,54 @@
             }
         }
 
+        @media (max-width: 768px) {
+
+            .gvas {
+                width: 6rem;
+                position: absolute;
+                left: -10%;
+                margin-top: -10%;
+            }
+        }
+
         @media (max-width: 820px) {
 
             .burger-menu-button {
                 margin-right: 1px;
             }
+
+            .gvas {
+                width: 6rem;
+                position: absolute;
+                left: -10%;
+                margin-top: -10%;
+            }
+        }
+
+
+        /*------------------------------------------- 414 Responsive----------------------------------------*/
+        @media (max-width: 414px) {
+
+            .gvas {
+                width: 6rem;
+                position: absolute;
+                left: -90%;
+                margin-top: -30%;
+            }
+        }
+
+        /*------------------------------------------- 375px Responsive----------------------------------------*/
+        @media (max-width: 375px) {
+
+            .gvas {
+                width: 5rem;
+                position: absolute;
+                left: -110%;
+                margin-top: -35%;
+            }
         }
     </style>
+
 
 
 
