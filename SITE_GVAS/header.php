@@ -27,20 +27,16 @@
             </div>
         </ul>
     </div>
-<<<<<<< HEAD
-    
+    <!-- ici---------------------------------------------------------- -->
     <header id="ancre">
         
-=======
-    <header>
-
->>>>>>> 1bc3e2065cf926f2313c6a830156a19af07e1336
         <div class="navbar">
 
             <div class="logo">
                 <img class="gvas" src="../images/Images/GVAS.png" alt="GVAS">
-
             </div>
+    <!-- ici---------------------------------------------------------- -->
+
             <ul class="links">
                 <li><a href="/index.php">Acceuil</a></li>
                 <li><a href="/Formation.php">Formations</a></li>

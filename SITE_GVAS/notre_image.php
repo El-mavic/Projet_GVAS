@@ -170,15 +170,27 @@
     </div>
 
     <!-- retour en haut -->
-    <div class="foo">
-        <a href="#ancre">
-            <h2>
-                RETOUR AU SOMMET
-            </h2>
+      <!-- ici--------------- -->
+        <style>
+            @media (max-width: 820px)
+            {
+                #foot h1 {
+                    font-size: 15px;
+                }
+            }
+        </style>
 
-            <img src="Gloire/Assets/img/icon_logo/image.jpg" alt="lien_retours">
-        </a>
-    </div>
+<div id="foot">
+            <a href="#ancre">
+                <h1>
+                    RETOUR AU SOMMET
+                </h1>
+                
+                <img src="Gloire/Assets/img/icon_logo/image.jpg" alt="lien_retours">
+            </a>
+        </div>
+        
+        <!-- ici--------------- -->
 
     <!-- FOOTER -->
     <?php include 'footer.php'; ?>

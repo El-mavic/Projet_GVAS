@@ -797,12 +797,22 @@ if (!isset($_SESSION['visite_' . $page])) {
     </div>
   </section>
 
+ <!-- ici--------------- -->
+ <style>
+   @media (max-width: 820px)
+   {
+     #foot h1 {
+       font-size: 15px;
+      }
+    }
+    </style>
+    <!-- ici--------------- -->
 
 
   <div id="foot">
     <a href="../notre_image.php">
       <h1>
-        Afin de nous connaître un peu plus, cliquez ici <i class="fa-solid fa-arrow-right"></i>
+        Afin de nous connaître un peu plus <i class="fa-solid fa-arrow-right"></i>
       </h1>
 
       <img src="../Gloire/Assets/img/icon_logo/image.jpg" alt="lien_retours">

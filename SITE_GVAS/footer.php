@@ -7,7 +7,7 @@
                     alt="icon_logo"
                     onerror="this.style.display='none';">
 
-                    <h1>Groupe vision d'Aigle Services</h1>
+                    <h1>Groupe vision <br>d'Aigle Services</h1>
                 </div>
                 <p id="justP">
                     De réfférence, GVAS est une structure professionnelle composée d’un personnel de qualité agréé
