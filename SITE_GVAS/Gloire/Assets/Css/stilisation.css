@@ -34,9 +34,9 @@
 }
 
 @media(max-width: 818px) {
-  /* body {
+  body {
     overflow-x: hidden;
-  } */
+  }
 
   #sous_class_contact {
     display: none;
@@ -175,12 +175,7 @@
     flex-direction: column;
   }
 
-  /* #container .contenu {
-    height: auto;
-    margin-bottom: auto;
-  } */
-
-
+ 
 }
 
 @media (max-width: 1366px) {
@@ -430,8 +425,6 @@
   #foot h1 {
     font-size: 15px;
   }
-
-  
 
   .foo h2 {
     font-size: 15px;

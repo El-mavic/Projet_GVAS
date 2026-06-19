@@ -129,6 +129,15 @@ if (!isset($_SESSION['visite_' . $page])) {
 
     </table>
 
+    <style>
+    @media (max-width: 820px)
+    {
+        #foot h1 {
+            font-size: 15px;
+        }
+    }
+    </style>
+
     <!-- footer -->
      <div id="foot">
             <a href="#ancre">
@@ -138,7 +147,8 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                 <img src="Gloire/Assets/img/icon_logo/image.jpg" alt="lien_retours">
             </a>
-        </div>
+    </div>
+
     <?php include 'footer.php'; ?>
     
 
