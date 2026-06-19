@@ -30,20 +30,11 @@
     <header>
         
         <div class="navbar">
-<<<<<<< HEAD
-=======
+
             <div class="logo">
                 <img class="gvas" src="../images/Images/GVAS.png" alt="GVAS">
                 
             </div>
-<<<<<<< HEAD
-            
-=======
-            <!-- /*onerror="this.style.display='none';"*/ -->
-
-
->>>>>>> e479de0873c52b1387a29a49c34a8bc736cadd3f
->>>>>>> 43382925a5862b9b39ae2517ddfaba02f06cc68a
             <ul class="links">
                 <li><a href="../index.php">Acceuil</a></li>
                 <li><a href="../Formation.php">Formations</a></li>
