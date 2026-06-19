@@ -8,75 +8,63 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Gloire/Assets/Css/style.css">
+    <link rel="stylesheet" href="../Gloire/Assets/Css/stilisation.css">
+    <link rel="icon" href="Assets/Img/icon_logo/logo-GVAS.png">
 </head>
 
 <body>
-    <div class="burger-menu ">
-        <ul class="links">
-            <li><a href="/index.php">Accueil</a></li>
-            <li><a href="/Formation.php">Formations</a></li>
-            <li><a href="/galerie.php">Galerie</a></li>
-            <li><a href="/contacts.php">Contacts</a></li>
+    <div class=" burger-menu ">
+        <ul class=" links">
+            <li><a href="../index.php">Acceuil</a></li>
+            <li><a href="../Formation.php">Formations</a></li>
+            <li><a href="../galerie.php">Gallérie</a></li>
+            <li><a href="../contacts.php">Contacts</a></li>
             <div class="divider"></div>
             <div class="buttons-burger-menu">
-                <a class="action-button" href="/Gloire/page_publicitaire.php">Pub</a>
-                <a class="action-button" style="white-space: nowrap;" href="/Vivi/apropos.php">A propos</a>
+                <a class="action-button" href="../temoignage.php">Temoignage</a>
+                <a class="action-button" href="vivi/apropos.php">A propos</a>
             </div>
         </ul>
     </div>
-
     <header>
-
+        
         <div class="navbar">
             <div class="logo">
-<<<<<<< HEAD
-                <img class="img" src="/Gloire/Assets/img/icon_logo/logo-GVAS.png"alt="icon_logo">
-                <img src="/Gloire/Assets/img/icon_logo/logo-GVAS.png"alt="icon_logo">
-=======
-                <img class="gvas" src="/images/Images/GVAS.png" alt="GVAS">
->>>>>>> 4d16e9dd476d60759b732f01964cc9a4c1abe021
+                <img class="gvas" src="../images/Images/GVAS.png" alt="GVAS">
+                
             </div>
-            <!-- /*onerror="this.style.display='none';"*/ -->
-
-
+            
             <ul class="links">
-                <li><a href="/index.php">Accueil</a></li>
-                <li><a href="/Formation.php">Formations</a></li>
-                <li><a href="/galerie.php">Galerie</a></li>
-                <li><a href="/contacts.php">Contacts</a></li>
+                <li><a href="../index.php">Acceuil</a></li>
+                <li><a href="../Formation.php">Formations</a></li>
+                <li><a href="../galerie.php">Galerie</a></li>
+                <li><a href="../contacts.php">Contacts</a></li>
             </ul>
             <div class="buttons">
-                <a class="action-button pro " href="/temoignage.php">Temoignage</a>
-                <a class="action-button" href="/Vivi/apropos.php">A propos</a>
+                <a class="action-button pro " href="../Gloire/temoignage.php">Temoignage</a>
+                <a class="action-button" href="../Vivi/apropos.php">A propos</a>
             </div>
             <div class="burger-menu-button">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
-
     </header>
-    <!--------------------------------------Message de GVAS BIENVENUE---------------------------------------------------------------->
-
-<<<<<<< HEAD
     <p class="texte">Groupe Vision d'Aigle Services </p>
-=======
-    <p class="texte"> Groupe Vision d'Aigle Services </p>
->>>>>>> 4d16e9dd476d60759b732f01964cc9a4c1abe021
+
+
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Roboto Condensed", sans-serif;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
         }
 
         body {
-            height: 100vh;
-            background-image: url(images/Images/Two.jpg);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background-color: #262828;
         }
 
         li {
@@ -95,31 +83,100 @@
 
         header {
             position: relative;
-            /* padding: 0 8em; */
-            background-color: rgba(19, 22, 22, 0.61);
+            padding: 0 8em;
+            background-color: #262828;
             border-bottom-left-radius: 50px;
             border-top-left-radius: 50px;
             border-bottom-right-radius: 50px;
             border-top-right-radius: 50px;
         }
 
-        header .navbar .logo img {
+        .navbar {
+            width: 100%;
+            max-width: 1200px;
+            height: 80px;
+            margin: 0;
             display: flex;
-            width: 100px;
-            position: relative;
-            left: -156px;
-            top: -18px;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        header .navbar .logo .img {
+        .gvas {
+            width: 7rem;
+            position: absolute;
+            left: -18%;
+            margin-top: -4.4%;
+        }
+
+        .navbar .logo a {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar .links {
+            display: flex;
+            gap: 5rem;
+
+        }
+
+        .navbar .links a {
+            position: relative;
+        }
+
+        .navbar .links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 3px;
+            background-color: #fff200;
+            transition: width 0.3s ease;
+        }
+
+        .navbar .links a:hover::after {
+            width: 100%;
+        }
+
+        .navbar .burger-menu-button {
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
             display: none;
         }
 
         .buttons {
             display: flex;
             gap: 10px;
-            position: relative;
-            top: -18px;
+        }
+
+        .action-button {
+            background-color: #fff200;
+            color: black;
+            border: 1px solid #fff200;
+            padding: 0.5rem 1.2rem;
+            outline: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            cursor: pointer;
+
+        }
+
+        .action-button:hover {
+            color: rgb(94, 94, 95);
+            border: 1px solid #fff200;
+        }
+
+        .pro {
+            background-color: transparent;
+            color: white;
+            border: 1px solid #fff200;
+        }
+
+        .pro:hover {
+            background-color: #fff200;
+            color: rgba(34, 7, 97, 0.726);
         }
 
         /*-----Burger menu----*/
@@ -149,14 +206,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-left: -100px;
+            margin-left: -130px;
         }
 
         .divider {
             height: 1px;
             background: #fff;
             width: 80%;
-            margin-left: -30px;
+            margin-left: -50px;
             margin-bottom: 1rem;
         }
 
@@ -167,6 +224,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            white-space: nowrap;
+            margin-left: -20px;
+
+        }
+
+        .buttons-burger-menu {
+            display: flex;
+            flex-direction: column;
+            margin-left: -5px;
+            gap: 10px;
         }
 
         /*------Suite----*/
@@ -181,44 +248,15 @@
 
         }
 
+
+
+
         /*--------Responsive-------*/
-        @media (max-width: 414px) 
-        {
-            header .burger-menu-button {
-                position: relative;
-                left: 189%;
-                top: -605%;
-            }
-        }
-    
-        @media (max-width:990px)
-         {
-            .texte {
-                font-size: 2rem;
-            }
 
-            header .burger-menu-button  {
-                display: block;
-                position: relative;
-                left: 0px;
-                top: -18px;
-            }
-
+        @media (max-width:990px) {
             header {
                 background: none;
             }
-
-            header .navbar .logo img {
-                display: none;
-        } 
-
-            header .navbar .logo .img {
-            display: block;
-            width: 100px;
-            position: relative;
-            left: -80%;
-            top: 0px;
-        }
 
             .navbar .links,
             .navbar .action-button {
@@ -254,9 +292,22 @@
                 margin-top: -40px;
             }
 
+            .burger-menu-button {
+
+                position: relative;
+                left: 5rem;
+            }
 
             header {
                 display: block;
+            }
+
+        }
+
+        @media (max-width:990px) {
+
+            .texte {
+                font-size: 2rem;
             }
 
         }
@@ -281,18 +332,55 @@
             .btn-primary {
                 margin-left: 1px;
             }
-
-            header .navbar .logo .img {
-            display: block;
-            width: 100px;
-            position: relative;
-            left: -80%;
-            top: -13px;
+        }
+        @media (max-width: 768px) {
+                
+.gvas {
+            width: 6rem;
+            position: absolute;
+            left: -10%;
+            margin-top: -10%;
+        }
         }
 
+        @media (max-width: 820px) {
+
+            .burger-menu-button {
+                margin-right: 1px;
+            }
+
+            .gvas {
+            width: 6rem;
+            position: absolute;
+            left: -10%;
+            margin-top: -10%;
+        }
         }
 
+
+/*------------------------------------------- 414 Responsive----------------------------------------*/
+@media (max-width: 414px) {
+    
+.gvas {
+            width: 6rem;
+            position: absolute;
+            left: -90%;
+            margin-top: -30%;
+        }
+}
+
+/*------------------------------------------- 375px Responsive----------------------------------------*/
+@media (max-width: 375px) {
+   
+.gvas {
+            width: 5rem;
+            position: absolute;
+            left: -110%;
+            margin-top: -35%;
+        }
+}
     </style>
+
 
 
 
@@ -303,7 +391,7 @@
         const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i');
         const burgerMenu = document.querySelector('.burger-menu');
 
-        burgerMenuButton.onclick = function(e) {
+        burgerMenuButton.onclick = function (e) {
             e.stopPropagation();
 
             burgerMenu.classList.toggle('open');
@@ -316,7 +404,7 @@
         };
 
         /* fermer si on clique à côté */
-        document.addEventListener('click', function(e) {
+        document.addEventListener('click', function (e) {
             if (
                 !burgerMenu.contains(e.target) &&
                 !burgerMenuButton.contains(e.target)
@@ -327,7 +415,7 @@
         });
 
         /* empêcher fermeture si clic dans le menu */
-        burgerMenu.addEventListener('click', function(e) {
+        burgerMenu.addEventListener('click', function (e) {
             e.stopPropagation();
         });
     </script>
