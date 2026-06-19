@@ -16,34 +16,39 @@
 <body>
     <div class=" burger-menu ">
         <ul class=" links">
-            <li><a href="../index.php">Acceuil</a></li>
-            <li><a href="../Formation.php">Formations</a></li>
-            <li><a href="../galerie.php">Gallérie</a></li>
-            <li><a href="../contacts.php">Contacts</a></li>
+            <li><a href="/index.php">Acceuil</a></li>
+            <li><a href="/Formation.php">Formations</a></li>
+            <li><a href="/galerie.php">Gallérie</a></li>
+            <li><a href="/contacts.php">Contacts</a></li>
             <div class="divider"></div>
             <div class="buttons-burger-menu">
-                <a class="action-button" href="../temoignage.php">Temoignage</a>
-                <a class="action-button" href="vivi/apropos.php">A propos</a>
+                <a class="action-button" href="/temoignage.php">Temoignage</a>
+                <a class="action-button" href="../Vivi/apropos.php">A propos</a>
             </div>
         </ul>
     </div>
+<<<<<<< HEAD
     
     <header id="ancre">
         
+=======
+    <header>
+
+>>>>>>> 1bc3e2065cf926f2313c6a830156a19af07e1336
         <div class="navbar">
 
             <div class="logo">
                 <img class="gvas" src="../images/Images/GVAS.png" alt="GVAS">
-                
+
             </div>
             <ul class="links">
-                <li><a href="../index.php">Acceuil</a></li>
-                <li><a href="../Formation.php">Formations</a></li>
-                <li><a href="../galerie.php">Galerie</a></li>
-                <li><a href="../contacts.php">Contacts</a></li>
+                <li><a href="/index.php">Acceuil</a></li>
+                <li><a href="/Formation.php">Formations</a></li>
+                <li><a href="/galerie.php">Galerie</a></li>
+                <li><a href="/contacts.php">Contacts</a></li>
             </ul>
             <div class="buttons">
-                <a class="action-button pro " href="../Gloire/temoignage.php">Temoignage</a>
+                <a class="action-button pro " href="/temoignage.php">Temoignage</a>
                 <a class="action-button" href="../Vivi/apropos.php">A propos</a>
             </div>
             <div class="burger-menu-button">
@@ -335,14 +340,15 @@
                 margin-left: 1px;
             }
         }
+
         @media (max-width: 768px) {
-                
-.gvas {
-            width: 6rem;
-            position: absolute;
-            left: -10%;
-            margin-top: -10%;
-        }
+
+            .gvas {
+                width: 6rem;
+                position: absolute;
+                left: -10%;
+                margin-top: -10%;
+            }
         }
 
         @media (max-width: 820px) {
@@ -352,35 +358,35 @@
             }
 
             .gvas {
-            width: 6rem;
-            position: absolute;
-            left: -10%;
-            margin-top: -10%;
-        }
+                width: 6rem;
+                position: absolute;
+                left: -10%;
+                margin-top: -10%;
+            }
         }
 
 
-/*------------------------------------------- 414 Responsive----------------------------------------*/
-@media (max-width: 414px) {
-    
-.gvas {
-            width: 6rem;
-            position: absolute;
-            left: -90%;
-            margin-top: -30%;
-        }
-}
+        /*------------------------------------------- 414 Responsive----------------------------------------*/
+        @media (max-width: 414px) {
 
-/*------------------------------------------- 375px Responsive----------------------------------------*/
-@media (max-width: 375px) {
-   
-.gvas {
-            width: 5rem;
-            position: absolute;
-            left: -110%;
-            margin-top: -35%;
+            .gvas {
+                width: 6rem;
+                position: absolute;
+                left: -90%;
+                margin-top: -30%;
+            }
         }
-}
+
+        /*------------------------------------------- 375px Responsive----------------------------------------*/
+        @media (max-width: 375px) {
+
+            .gvas {
+                width: 5rem;
+                position: absolute;
+                left: -110%;
+                margin-top: -35%;
+            }
+        }
     </style>
 
 
@@ -393,7 +399,7 @@
         const burgerMenuButtonIcon = document.querySelector('.burger-menu-button i');
         const burgerMenu = document.querySelector('.burger-menu');
 
-        burgerMenuButton.onclick = function (e) {
+        burgerMenuButton.onclick = function(e) {
             e.stopPropagation();
 
             burgerMenu.classList.toggle('open');
@@ -406,7 +412,7 @@
         };
 
         /* fermer si on clique à côté */
-        document.addEventListener('click', function (e) {
+        document.addEventListener('click', function(e) {
             if (
                 !burgerMenu.contains(e.target) &&
                 !burgerMenuButton.contains(e.target)
@@ -417,7 +423,7 @@
         });
 
         /* empêcher fermeture si clic dans le menu */
-        burgerMenu.addEventListener('click', function (e) {
+        burgerMenu.addEventListener('click', function(e) {
             e.stopPropagation();
         });
     </script>
