@@ -59,7 +59,9 @@ if (!isset($_SESSION['visite_' . $page])) {
                             <span>page</span>
                             <span>publicitaire</span>
                         </h1>
-                        <h2>Retrouvez ici nos actualités sous forme d'informations</h2>
+                        <!-- ici ------------------------------------>
+                        <h2 style="text-align: center">Retrouvez ici nos actualités sous forme d'informations</h2>
+                        <!-- ici ------------------------------------>
                     </div>
                 </div>
 
@@ -1112,6 +1114,17 @@ if (!isset($_SESSION['visite_' . $page])) {
                 </div>
             </div>
         </section>
+
+        <!-- ici--------------- -->
+        <style>
+            @media (max-width: 820px)
+            {
+                #foot h1 {
+                    font-size: 15px;
+                }
+            }
+        </style>
+        <!-- ici--------------- -->
 
         <div id="foot">
             <a href="#ancre">
