@@ -306,21 +306,21 @@ body {
 
   .h-content span {
     font-size: 2rem;
+    left: 20%;
   }
 
   .h-content p {
-    font-size: 20px;
+    font-size: 25px;
     width: 90%;
-    left: 2%;
+    left: 17%;
   }
 
   .h-content a {
     top: 50px;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+    left: 25%;
   }
 }
-
-
 
 @media(max-width: 912px) {
   .h-frame {
@@ -1169,16 +1169,7 @@ body {
   }
 }
 
-<<<<<<< HEAD
 
-=======
-/*  
-.card-3 img{
-    object-fit: cover;
-    object-position: center;
-  }
- */
->>>>>>> cce514346dd8f07a48c2908bd48f4986d2a539d2
 /* Responsives sur l'equipe */
 @media (max-width: 1366px) {
   .team-carousel {
@@ -1220,16 +1211,6 @@ body {
     padding: 60px 24px;
   }
 }
-<<<<<<< HEAD
-=======
-
-/*  
-@media (max-width:375px){
-  .team-content{
-   padding: 3px;
-  text-align: center;
-}
->>>>>>> cce514346dd8f07a48c2908bd48f4986d2a539d2
 
 
 
