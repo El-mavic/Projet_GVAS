@@ -61,9 +61,11 @@ body {
     overflow: hidden;
     border-radius: 12px;
 }
+
 .card {
     white-space: nowrap;
 }
+
 /* image */
 .card img {
     width: 100%;
