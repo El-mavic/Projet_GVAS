@@ -1009,8 +1009,10 @@ if (!isset($_SESSION['visite_' . $page])) {
                                 </video>
                             </div>
                             <div class="p_bas">
-                                <h1>Découvrez notre démo <br>
-                                    concernant les avis de recrutement</h1>
+                                <h1 style="color: black;">
+                                    Découvrez notre démo <br>
+                                    concernant les avis de recrutement
+                                </h1>
                                 <p>
                                     Explorez notre interface de recrutement et découvrez ses fonctionnalités. <br>
                                     <i> Service disponible uniquement pendant certaines périodes. </i>
@@ -1030,7 +1032,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                                 </video>
                             </div>
                             <div class="p_bas">
-                                <h1>Découvrez notre démo <br> concernant la disponsation des cours en ligne</h1>
+                                <h1 style="color: black;">Découvrez notre démo <br> concernant la disponsation des cours en ligne</h1>
 
                                 <p>
                                     Accéder à nôtre salle de classe depuis chez vous !! <br>
@@ -1132,7 +1134,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                     RETOUR AU SOMMET
                 </h1>
 
-                <img src="Assets/img/icon_logo/image.jpg" alt="lien_retours">
+                <img src="../images/Images/image.jpg" alt="lien_retours">
             </a>
         </div>
     </main>

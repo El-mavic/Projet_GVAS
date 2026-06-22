@@ -61,7 +61,9 @@ body {
     overflow: hidden;
     border-radius: 12px;
 }
-
+.card {
+    white-space: nowrap;
+}
 /* image */
 .card img {
     width: 100%;
@@ -78,7 +80,6 @@ body {
     /* centré sur l'image (ajuste si besoin) */
     left: 50%;
     transform: translateX(-50%);
-
     color: white;
     font-size: 15px;
     font-weight: bold;

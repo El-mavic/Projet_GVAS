@@ -121,6 +121,10 @@ body {
   animation: slideUp 1s ease 0.4s forwards;
   opacity: 0;
   margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 
 }
 
@@ -1624,21 +1628,16 @@ body {
   }
 }
 
-#foot h1 {
-  font-size: 30px;
+
+@media(max-width: 412px){
+    #foot h1 {
+        font-size: 20px;
+    }
 }
-
-
-@media(max-width: 412px) {
-  #foot h1 {
-    font-size: 20px;
-  }
-}
-
 
 @media(max-width: 375px) {
   #foot h1 {
-    font-size: 17px;
+    font-size: 20px;
   }
 }
 
