@@ -162,8 +162,6 @@
                         <li> De certifications reconnues</li>
                         <li> D'opportunités de stages et d'insertion professionnelle</li>
                     </ul>
-
-                    <img src="images/Formation/2.jpg" alt="Réservation">
                 </div>
             </div>
         </div>
@@ -246,10 +244,11 @@
                 font-size: 18px;
             }
 
+            /*  
             .us img {
                 align-self: center;
             }
-
+           */
             .container h3 {
                 font-size: 30px;
             }
