@@ -53,12 +53,12 @@ if (!isset($_SESSION['visite_' . $page])) {
         <ul class=" links">
             <li><a href="index.php">Accueil</a></li>
             <li><a href="Formation.php">Formations</a></li>
-            <li><a href="Galerie.php">Gallérie</a></li>
+            <li><a href="galerie.php">Gallérie</a></li>
             <li><a href="contacts.php">Contacts</a></li>
             <div class="divider"></div>
             <div class="buttons-burger-menu">
                 <a class="action-button" href="Gloire/page_publicitaire.php">Pub</a>
-                <a class="action-button" href="vivi/apropos.php">A propos</a>
+                <a class="action-button" style="white-space:nowrap;" href="Vivi/apropos.php">A propos</a>
             </div>
         </ul>
     </div>
@@ -78,7 +78,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             </ul>
             <div class="buttons">
                 <a class="action-button pro " href="Gloire/page_publicitaire.php">Pub</a>
-                <a class="action-button" href="vivi/apropos.php">A propos</a>
+                <a class="action-button" href="Vivi/apropos.php">A propos</a>
             </div>
             <div class="burger-menu-button">
                 <i class="fa-solid fa-bars"></i>
@@ -128,16 +128,13 @@ if (!isset($_SESSION['visite_' . $page])) {
     </section>
 
     </table>
-
-    <style>
-    @media (max-width: 820px)
-    {
-        #foot h1 {
-            font-size: 15px;
+ <style>
+        @media (max-width: 820px) {
+            #foot h1 {
+                font-size: 15px;
+            }
         }
-    }
     </style>
-
     <!-- footer -->
      <div id="foot">
             <a href="#ancre">
@@ -145,10 +142,9 @@ if (!isset($_SESSION['visite_' . $page])) {
                     RETOUR AU SOMMET
                 </h1>
 
-                <img src="Gloire/Assets/img/icon_logo/image.jpg" alt="lien_retours">
+                <img src="images/Images/image.jpg" alt="lien_retours">
             </a>
-    </div>
-
+        </div>
     <?php include 'footer.php'; ?>
     
 

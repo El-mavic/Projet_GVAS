@@ -42,12 +42,11 @@
             <li><a href="index.php">Accueil</a></li>
             <li><a href="temoignage.php">Temoignage</a></li>
             <li><a href="Formation.php">Formations</a></li>
-            <li><a href="Galerie.php">Gallérie</a></li>
             <li><a href="contacts.php">Contacts</a></li>
             <div class="divider"></div>
             <div class="buttons-burger-menu">
                 <a class="action-button" href="Gloire/page_publicitaire.php">Pub</a>
-                <a class="action-button" href="vivi/apropos.php">A propos</a>
+                <a class="action-button" style="white-space:nowrap;" href="Vivi/apropos.php">A propos</a>
             </div>
         </ul>
     </div>
@@ -162,41 +161,21 @@
                         <li> De certifications reconnues</li>
                         <li> D'opportunités de stages et d'insertion professionnelle</li>
                     </ul>
-
-                    <img src="images/Formation/2.jpg" alt="Réservation">
                 </div>
             </div>
         </div>
     </div>
 
     <!-- retour en haut -->
-      <!-- ici--------------- -->
-        <style>
-            @media (max-width: 820px)
-            {
-                #foot h1 {
-                    font-size: 15px;
-                }
-            }
-        </style>
+    <div class="foo">
+        <a href="#ancre">
+            <h2>
+                RETOUR AU SOMMET
+            </h2>
 
-<<<<<<< HEAD
-<div id="foot">
-            <a href="#ancre">
-                <h1>
-                    RETOUR AU SOMMET
-                </h1>
-                
-                <img src="Gloire/Assets/img/icon_logo/image.jpg" alt="lien_retours">
-            </a>
-        </div>
-        
-        <!-- ici--------------- -->
-=======
             <img src="images/Images/image.jpg" alt="lien_retours">
         </a>
     </div>
->>>>>>> f994125d0d6656c6197216e5d439e43eee94e1e2
 
     <!-- FOOTER -->
     <?php include 'footer.php'; ?>

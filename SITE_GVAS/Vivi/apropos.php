@@ -815,7 +815,7 @@ if (!isset($_SESSION['visite_' . $page])) {
         Afin de nous connaître un peu plus <i class="fa-solid fa-arrow-right"></i>
       </h1>
 
-      <img src="../Gloire/Assets/img/icon_logo/image.jpg" alt="lien_retours">
+      <img src="../images/Images/image.jpg" alt="lien_retours">
     </a>
   </div>
 

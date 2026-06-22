@@ -27,16 +27,14 @@
             </div>
         </ul>
     </div>
-    <!-- ici---------------------------------------------------------- -->
     <header id="ancre">
-        
+
         <div class="navbar">
 
             <div class="logo">
                 <img class="gvas" src="../images/Images/GVAS.png" alt="GVAS">
-            </div>
-    <!-- ici---------------------------------------------------------- -->
 
+            </div>
             <ul class="links">
                 <li><a href="/index.php">Acceuil</a></li>
                 <li><a href="/Formation.php">Formations</a></li>
@@ -105,9 +103,9 @@
         }
 
         .gvas {
-            width: 7rem;
+            width: 6rem;
             position: absolute;
-            left: -18%;
+            left: -10%;
             margin-top: -4.4%;
         }
 

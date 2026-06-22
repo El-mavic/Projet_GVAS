@@ -7,7 +7,7 @@
                     alt="icon_logo"
                     onerror="this.style.display='none';">
 
-                    <h1>Groupe vision <br>d'Aigle Services</h1>
+                    <h1 style="font-size: 20px;">Groupe vision d'Aigle Services</h1>
                 </div>
                 <p id="justP">
                     De réfférence, GVAS est une structure professionnelle composée d’un personnel de qualité agréé
@@ -69,8 +69,8 @@
                 <h1>Nos pages</h1>
                 <ul>
                     <li><a href="../index.php">Acceuil</a></li>
-                    <li><a href="../formation.php">Formations</a></li>
-                    <li><a href="../vivi/apropos.php">A_Propos</a></li>
+                    <li><a href="../Formation.php">Formations</a></li>
+                    <li><a href="../Vivi/apropos.php">A_Propos</a></li>
                     <li><a href="../Gloire/page_publicitaire.php">Page Publicitaire</a></li>
                     <li><a href="../galerie.php">Galerie</a></li>
                     <li><a href="../contacts.php">Contacts</a></li>
@@ -82,9 +82,9 @@
             <div class="pat">
                 <h1>Nos Services</h1>
                 <ul>
-                    <li><a href="../formation.php">Langues</a></li>
-                    <li><a href="../formation.php">Informatique</a></li>
-                    <li><a href="../formation.php">Pôle Commercial</a></li>
+                    <li><a href="../Formation.php">Langues</a></li>
+                    <li><a href="../Formation.php">Informatique</a></li>
+                    <li><a href="../Formation.php">Pôle Commercial</a></li>
                 </ul>
             </div>
 
@@ -156,6 +156,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+footer {
+    overflow-x: hidden;
 }
 
 
@@ -474,6 +478,10 @@ footer a {
     justify-content: center;
     align-items: center;
     width: 35% !important;
+  }
+  
+    .aigle .flex h1 {
+        white-space: wrap;
   }
 
   .footer_part1 {
@@ -874,7 +882,8 @@ footer a {
   .redirections .bg {
     width: 350px;
   }
-
+  
+  
   .sous_class_contact2 {
     display: block;
     visibility: visible;
