@@ -1,9 +1,9 @@
 <?php
 // Connexion à la base de données
 $host = "localhost";
-$dbname = "u165457761_inscription";
-$username = "u165457761_root";
-$password = "Messiebelvie22";
+$dbname = "inscription_db";
+$username = "root";
+$password = "";
 try {
     $pdo = new PDO(
         "mysql:host=$host;dbname=$dbname;charset=utf8",
