@@ -213,7 +213,7 @@ header {
     background: linear-gradient(90deg, #7c7f80, #fffb0096);
     width: 100%;
     height: auto;
-    
+
 
 }
 
@@ -1487,8 +1487,27 @@ li {
     margin: 0;
 }
 
-.card1 ul li {
+
+.sidebar1 ul li a {
+    display: block;
+    width: 100%;
+    padding: 1px 20px;
+    text-decoration: none;
+    color: #fff;
     font-size: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.sidebar1 a:hover {
+    background: #fff200;
+    color: black;
+    transform: translateX(5px);
+}
+
+.card1 ul li {
+    font-size: 0.7rem;
     padding: 6px 0;
     color: #eaeaea;
     display: flex;
@@ -1551,7 +1570,7 @@ li {
     }
 
     .card1 ul li {
-        font-size: 1.2rem;
+        font-size: 0.7rem;
         padding: 8px;
     }
 
