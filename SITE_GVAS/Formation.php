@@ -50,7 +50,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             <div class="divider"></div>
             <div class="buttons-burger-menu">
                 <a class="action-button" href="Gloire/page_publicitaire.php">Pub</a>
-               <a class="action-button" style="white-space: nowrap;" href="/Vivi/apropos.php">A propos</a>
+                <a class="action-button" style="white-space: nowrap;" href="/Vivi/apropos.php">A propos</a>
             </div>
         </ul>
     </div>
@@ -70,7 +70,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             </ul>
             <div class="buttons">
                 <a class="action-button pro " href="Gloire/page_publicitaire.php">Pub</a>
-               <a class="action-button" style="  white-space: nowrap;" href="vivi/apropos.php">A propos</a>
+                <a class="action-button" style="  white-space: nowrap;" href="vivi/apropos.php">A propos</a>
             </div>
             <div class="burger-menu-button">
                 <i class="fa-solid fa-bars"></i>
@@ -81,18 +81,17 @@ if (!isset($_SESSION['visite_' . $page])) {
 
 
 
-<style>
-    .text-hover{
-        white-space: nowrap;
-    }
-</style>
+    <style>
+        .text-hover {
+            white-space: nowrap;
+        }
+    </style>
     <!-- GRID DES FORMATIONS -->
     <section class="formations">
-
         <div class="card">
             <img src="images/Formation/2.jpg" alt="Informatique Bureautique">
             <div class="text-hover">Inscription: 5000 FCA<br>Frais Mensuels: 10000 FCA<br>Durée: 6 mois</div>
-            <h3>INFORMATIQUE</h3>
+            <h3>INFORMATIQUE BUREAUTIQUE</h3>
             <p>Initiation à l'informatique<br>Word, Excel, PowerPoint...</p>
         </div>
 
@@ -112,8 +111,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
     </section>
     <section class="formations">
-
-        <div class="card">
+        <div class="card" onclick="ouvrirFormation('reseau')">
             <img src="images/Formation/5.jpg" alt="Reseau informatique">
             <div class="text-hover">Inscription: 5000 FCA<br>Frais Mensuels: 10000 FCA<br>Durée: 6 mois</div>
             <h3>RESEAU INFORMATIQUE</h3>
@@ -156,7 +154,6 @@ if (!isset($_SESSION['visite_' . $page])) {
         </div>
     </section>
 
-
     <script>
         let lastScroll = 0;
         const header = document.getElementById("header");
@@ -165,7 +162,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             let currentScroll = window.pageYOffset;
 
             if (currentScroll > lastScroll) {
-                // scroll vers le bas → cacher
+                // scroll vers le bas → cache
                 header.classList.add("hide");
             } else {
                 // scroll vers le haut → afficher
@@ -176,7 +173,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             lastScroll = currentScroll;
         });
     </script>
-    
+
     <!--burgerMenuButton-->
     <script>
         const burgerMenuButton = document.querySelector('.burger-menu-button');
@@ -211,6 +208,11 @@ if (!isset($_SESSION['visite_' . $page])) {
             e.stopPropagation();
         });
     </script>
+
+
+    <!--Pour la fenetre qui survole les formation pour plus d'infos sur la formation*/-->
+
+
 </body>
 
 </html>
