@@ -24,6 +24,6 @@ if (isset($_POST['message'])) {
     }
 }
 
-header("Location: dashboard.php");
+header("Location: Admin.php");
 exit();
 ?>
