@@ -170,17 +170,17 @@ if (!isset($_SESSION['visite_' . $page])) {
         <div class="card1">
             <h3>Centre de services</h3>
             <ul>
-                <li>✓ Photocopie</li>
-                <li>✓ Impression A4 / A3</li>
-                <li>✓ Numérisation de documents</li>
-                <li>✓ Cartes de mariage</li>
-                <li>✓ Mise en page</li>
+                <li><a href="nos_services.php">✓ Nos Services </a></li>
+                <!-- <li><a href="impression.php">✓ Impression A4 / A3</a></li>
+                <li><a href="numerisation.php">✓ Numérisation de documents</a></li>
+                <li><a href="cartes-mariage.php">✓ Cartes de mariage</a></li>
+                <li><a href="mise-en-page.php">✓ Mise en page</a></li> -->
             </ul>
         </div>
         <div class="card1 contact">
             <h3>Contact/Secretaire</h3>
-            <p><i class="fa-solid fa-phone"></i> : +242 06 420 14 15</p>
-            <p><i class="fa-solid fa-envelope"></i> : elmavicd@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i> :+242 06 939 7629</p>
+            <p><i class="fa-solid fa-envelope"></i> : info@gvas.fr</p>
         </div>
     </aside>
 
@@ -306,7 +306,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             </a>
 
             <!-- WHATSAPP -->
-            <a href="https://wa.me/242064201415" target="_blank" class="fab-item">
+            <a href="https://wa.me/+242069397629" target="_blank" class="fab-item">
                 <span class="fab-label">Contactez via WhatsApp</span>
                 <div class="fab-btn">
                     <i class="fa-brands fa-whatsapp"></i>
@@ -314,7 +314,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             </a>
 
             <!-- E-MAIL -->
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@gvas.fr" target="_blank" class="fab-item">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Info@gvas.fr" target="_blank" class="fab-item">
                 <span class="fab-label">Contactez via E-mail</span>
                 <div class="fab-btn">
                     <i class="fa-solid fa-envelope"></i>

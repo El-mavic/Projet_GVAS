@@ -69,7 +69,7 @@
                                 </div>
                                 <div class="contact-text">
                                     <h4>Email</h4>
-                                    <p>gvas0101@mail.com</p>
+                                    <p>Info@gvas.com</p>
                                 </div>
                             </div>
 
