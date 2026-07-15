@@ -27,14 +27,8 @@
             </div>
         </ul>
     </div>
-<<<<<<< HEAD
-    
     <header id="ancre">
-        
-=======
-    <header>
 
->>>>>>> 1bc3e2065cf926f2313c6a830156a19af07e1336
         <div class="navbar">
 
             <div class="logo">
@@ -109,9 +103,9 @@
         }
 
         .gvas {
-            width: 7rem;
+            width: 6rem;
             position: absolute;
-            left: -18%;
+            left: -10%;
             margin-top: -4.4%;
         }
 

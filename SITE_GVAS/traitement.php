@@ -260,6 +260,6 @@ if (isset($_POST['form_type']) && $_POST['form_type'] === 'inscriptions') {
         ]);
     }
 
-    header("Location: dashboard.php?message=galerie_ok");
+    header("Location: Admin.php?message=galerie_ok");
     exit();
 }

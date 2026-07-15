@@ -42,12 +42,11 @@
             <li><a href="index.php">Accueil</a></li>
             <li><a href="temoignage.php">Temoignage</a></li>
             <li><a href="Formation.php">Formations</a></li>
-            <li><a href="Galerie.php">Gallérie</a></li>
             <li><a href="contacts.php">Contacts</a></li>
             <div class="divider"></div>
             <div class="buttons-burger-menu">
                 <a class="action-button" href="Gloire/page_publicitaire.php">Pub</a>
-                <a class="action-button" href="vivi/apropos.php">A propos</a>
+                <a class="action-button" style="white-space:nowrap;" href="Vivi/apropos.php">A propos</a>
             </div>
         </ul>
     </div>
