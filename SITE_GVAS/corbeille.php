@@ -65,7 +65,7 @@ $commentaires = $pdo->query(
         </div>
 
         <nav class="navbar">
-            <a href="dashboard.php" class="logou">Tableau de bord</a>
+            <a href="Admin.php" class="logou">Tableau de bord</a>
             <a href="logout.php" class="logout">Déconnexion</a>
         </nav>
 

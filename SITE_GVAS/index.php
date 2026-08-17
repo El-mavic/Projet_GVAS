@@ -94,8 +94,10 @@ if (!isset($_SESSION['visite_' . $page])) {
             <li><a href="contacts.php">Contacts</a></li>
             <div class="divider"></div>
             <div class="buttons-burger-menu">
+
                 <a class="action-button" href="Gloire/page_publicitaire.php">Pub</a>
                 <a class="action-button" style="white-space: nowrap;" href="Vivi/apropos.php">A propos</a>
+                <a href="admin.php" class="action-button pro"><i class="fas fa-user-shield"></i> Admin</a>
             </div>
         </ul>
     </div>
@@ -106,15 +108,18 @@ if (!isset($_SESSION['visite_' . $page])) {
             <div class="logo">
                 <img class="gvas" src="images/Images/GVAS.png" alt="GVAS">
             </div>
-
-
             <ul class="links">
+                <li><a href="ONG/ong.php">Fondation</a></li>
                 <li><a href="temoignage.php">Temoignage</a></li>
                 <li><a href="Formation.php">Formations</a></li>
                 <li><a href="galerie.php">Galerie</a></li>
                 <li><a href="contacts.php">Contacts</a></li>
             </ul>
             <div class="buttons">
+                <a href="admin.php" class="action-button pro">
+                    <i class="fas fa-user-shield"></i>
+
+                </a>
                 <a class="action-button pro " href="Gloire/page_publicitaire.php">Pub</a>
                 <a class="action-button" href="Vivi/apropos.php">A propos</a>
             </div>
@@ -291,17 +296,17 @@ if (!isset($_SESSION['visite_' . $page])) {
         <div class="fab-actions">
 
             <!-- RENDEZ-VOUS -->
+
+            <a href="test/index.php" target="_blank" class="fab-item">
+                <span class="fab-label">Administrateur</span>
+                <div class="fab-btn">
+                    <i class="fa-solid fa-user-tie"></i>
+                </div>
+            </a>
             <a href="https://www.google.com/maps/place/Groupe+Vision+D'aigle+Services/@-4.822363,11.9054355,68m/data=!3m1!1e3!4m6!3m5!1s0x1a60af0b2c6b78c9:0xc598de43a114b8f5!8m2!3d-4.8224261!4d11.9054924!16s%2Fg%2F11npdsmz7k?entry=ttu&g_ep=EgoyMDI2MDYxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="fab-item">
                 <span class="fab-label">Notre localisation</span>
                 <div class="fab-btn">
                     <i class="fa-solid fa-location-dot"></i>
-                </div>
-            </a>
-            <!-- Lien meet -->
-            <a href="https://meet.google.com/brs-jxtk-fwr" target="_blank" class="fab-item">
-                <span class="fab-label">Suivre un cours en ligne</span>
-                <div class="fab-btn">
-                    <i class="fa-solid fa-book"></i>
                 </div>
             </a>
 
