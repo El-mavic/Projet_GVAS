@@ -243,10 +243,11 @@
                 font-size: 18px;
             }
 
+            /*  
             .us img {
                 align-self: center;
             }
-
+           */
             .container h3 {
                 font-size: 30px;
             }

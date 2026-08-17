@@ -444,9 +444,6 @@ body {
   }
 }
 
-
-
-
 /* Toujour tablette */
 
 @media (max-width: 768px) {
@@ -1617,14 +1614,11 @@ body {
 
 #foot h1 {
   font-size: 30px;
-
 }
 
 @media (max-width: 414px) {
-
   .partenaires-subtitle {
     font-size: 1.4rem;
-
   }
 }
 
