@@ -1,0 +1,1163 @@
+/* =========================================================
+   1. RÉINITIALISATION GÉNÉRALE
+   ========================================================= */
+
+/* Applique ces règles à tous les éléments HTML */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: cambria, "times new roman", times, serif;
+}
+
+
+/* =========================================================
+   2. VARIABLES CSS
+   ========================================================= */
+
+/*
+   Les variables permettent de centraliser les couleurs.
+   Exemple :
+   var(--primary) = #123d68
+*/
+
+:root {
+    --primary: #123d68;
+    /* Bleu principal */
+    --primary2: #39393a;
+    /* Bleu foncé */
+    --accent: #d7a62b;
+    /* Couleur dorée */
+    --bg: #f3f6fa;
+    /* Arrière-plan */
+    --text: #172231;
+    /* Couleur principale du texte */
+    --muted: #687586;
+    /* Texte secondaire */
+    --border: #dfe5ec;
+    /* Couleur des bordures */
+    --white: #fff;
+    /* Blanc */
+
+    --success: #147a4b;
+    /* Vert - message de succès */
+    --danger: #b42318;
+    /* Rouge - message d'erreur */
+}
+
+
+/* =========================================================
+   3. STYLE GÉNÉRAL DE LA PAGE
+   ========================================================= */
+
+body {
+    /* Ordre des polices utilisées */
+    font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+
+    /* Arrière-plan avec un dégradé */
+    background: linear-gradient(135deg,
+            #f5f0f0,
+            #a0a1a1);
+
+    /* Couleur générale du texte */
+    color: var(--text);
+
+    /* Hauteur des lignes */
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   4. BARRE SUPÉRIEURE / HEADER
+   ========================================================= */
+
+.topbar {
+    /* Couleur de fond */
+    background: var(--primary2);
+
+    /* Texte blanc */
+    color: white;
+
+    /* Espacement intérieur */
+    padding: 16px clamp(2px, 5vw, 70px);
+
+    /* Active Flexbox */
+    display: flex;
+
+    /* Un élément à gauche, l'autre à droite */
+    justify-content: space-between;
+
+    /* Centre verticalement les éléments */
+    align-items: center;
+
+    /* Espace entre les éléments */
+    gap: 20px;
+    border-radius: 18px 18px 18px 18px;
+}
+
+.groupe {
+    font-size: 18px;
+}
+
+/* =========================================================
+   5. LOGO ET NOM DE L'ENTREPRISE
+   ========================================================= */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon {
+    color: yellow;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+.icon:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+/* Cercle contenant le logo ou les initiales */
+.brand-logo {
+    width: 48px;
+    height: 48px;
+
+    /* Centre le contenu */
+    display: grid;
+    place-items: center;
+
+    /* Style du texte */
+    font-weight: 800;
+    color: yellow;
+    font-size: 25px;
+}
+
+
+/* Nom principal de l'entreprise */
+.brand strong {
+    display: block;
+    font-size: 18px;
+
+    /* Espace entre les lettres */
+    letter-spacing: .08em;
+}
+
+
+/* Petit texte sous le nom */
+.brand span {
+    display: block;
+    color: #c9d5e2;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   6. INFORMATIONS DE CONTACT
+   ========================================================= */
+
+.contact {
+    display: flex;
+
+    /* Espace entre les informations */
+    gap: 18px;
+
+    color: #dce6ef;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   7. CONTENEUR PRINCIPAL
+   ========================================================= */
+
+.page {
+    /*
+       La largeur maximale est de 1050px.
+       Sur les petits écrans, elle prend 92% de la largeur.
+    */
+    width: min(1050px, 92%);
+
+    /*
+       32px en haut
+       auto à gauche et à droite
+       50px en bas
+    */
+    margin: 32px auto 50px;
+}
+
+
+/* =========================================================
+   8. GRANDE BANNIÈRE / HERO
+   ========================================================= */
+
+.hero {
+    /* Dégradé bleu */
+    background: linear-gradient(120deg,
+            var(--primary2),
+            #363636);
+
+    /* Texte blanc */
+    color: white;
+
+    /* Coins arrondis */
+    border-radius: 22px;
+
+    /* Espacement intérieur */
+    padding: 30px 34px;
+
+    /* Active Flexbox */
+    display: flex;
+
+    /* Éléments aux extrémités */
+    justify-content: space-between;
+
+    /* Centrage vertical */
+    align-items: center;
+
+    /* Ombre */
+    box-shadow: 0 18px 40px #0b2b4a20;
+
+    /* Espace sous la bannière */
+    margin-bottom: 22px;
+}
+
+
+/* Petit texte au-dessus du titre */
+.eyebrow {
+    font-size: 12px;
+
+    /* Espace entre les lettres */
+    letter-spacing: .18em;
+
+    /* Doré */
+    color: #f2c75b;
+
+    /* Texte très gras */
+    font-weight: 800;
+}
+
+
+/* Grand titre de la bannière */
+.hero h1 {
+    /*
+       Le titre s'adapte à la taille de l'écran.
+       Minimum : 28px
+       Préférence : 5vw
+       Maximum : 42px
+    */
+    font-size: clamp(28px, 5vw, 42px);
+
+    /* Marge verticale */
+    margin: 4px 0;
+}
+
+
+/* Dernier paragraphe de la bannière */
+.hero p:last-child {
+    color: #d9e6f2;
+}
+
+
+/* Badge situé généralement à droite du Hero */
+.hero-badge {
+    /* Bordure blanche légèrement transparente */
+    border: 1px solid #ffffff55;
+
+    /* Fond blanc très transparent */
+    background: #ffffff12;
+
+    /* Espacement intérieur */
+    padding: 16px 20px;
+
+    /* Coins arrondis */
+    border-radius: 16px;
+
+    /* Texte */
+    font-weight: 800;
+    font-size: 24px;
+}
+
+
+/* =========================================================
+   9. CARTES DU FORMULAIRE
+   ========================================================= */
+
+.card {
+    /* Fond blanc */
+    background: white;
+
+    /* Bordure */
+    border: 1px solid var(--border);
+
+    /* Coins arrondis */
+    border-radius: 18px;
+
+    /* Espacement intérieur */
+    padding: 28px;
+
+    /* Espace entre les cartes */
+    margin-bottom: 18px;
+
+    /* Ombre légère */
+    box-shadow: 0 8px 25px #183b5c0b;
+}
+
+
+/* =========================================================
+   10. TITRE DES SECTIONS
+   ========================================================= */
+
+.section-title {
+    /* Active Flexbox */
+    display: flex;
+
+    /* Espace entre le numéro et le titre */
+    gap: 14px;
+
+    /* Centre verticalement */
+    align-items: center;
+
+    /* Espace sous le titre */
+    margin-bottom: 24px;
+}
+
+
+/* Petit carré contenant le numéro de la section */
+.number {
+    width: 42px;
+    height: 42px;
+
+    /* Coins arrondis */
+    border-radius: 12px;
+
+    /* Fond */
+    background: #eaf1f8;
+
+    /* Couleur du numéro */
+    color: var(--primary);
+
+    /* Centre le numéro */
+    display: grid;
+    place-items: center;
+
+    font-weight: 800;
+    font-size: 13px;
+}
+
+
+/* Titre de la section */
+.section-title h2 {
+    font-size: 20px;
+    color: var(--primary2);
+}
+
+
+/* Description sous le titre */
+.section-title p {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+
+/* =========================================================
+   11. SYSTÈME DE GRILLE
+   ========================================================= */
+
+.grid {
+    /* Active CSS Grid */
+    display: grid;
+
+    /* Espace entre les champs */
+    gap: 18px;
+
+    /* Espace en dessous */
+    margin-bottom: 18px;
+}
+
+
+/* Grille de deux colonnes */
+
+.grid.two {
+    /*
+       Crée deux colonnes de même largeur
+    */
+    grid-template-columns: repeat(2,
+            minmax(0, 1fr));
+}
+
+
+/* Grille de trois colonnes */
+
+.grid.three {
+    /*
+       Crée trois colonnes de même largeur
+    */
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+/* =========================================================
+   12. CHAMPS DU FORMULAIRE
+   ========================================================= */
+
+.field {
+    /* Organisation verticale */
+    display: flex;
+
+    flex-direction: column;
+
+    /* Espace entre le label et le champ */
+    gap: 7px;
+}
+
+
+/* Texte du label */
+
+.field>span {
+    font-size: 13px;
+    font-weight: 700;
+    color: #334155;
+}
+
+
+/* Étoile indiquant un champ obligatoire */
+
+.field b {
+    color: #c0392b;
+}
+
+
+/* =========================================================
+   13. INPUT ET SELECT
+   ========================================================= */
+
+.field input,
+.field select {
+    /* Prend toute la largeur disponible */
+    width: 100%;
+
+    /* Hauteur */
+    height: 46px;
+
+    /* Bordure */
+    border: 1px solid #d5dde6;
+
+    /* Coins arrondis */
+    border-radius: 10px;
+
+    /* Espacement intérieur gauche/droite */
+    padding: 0 13px;
+
+    /* Fond blanc */
+    background: #fff;
+
+    /* Couleur du texte */
+    color: #172231;
+
+    /* Taille du texte */
+    font-size: 14px;
+
+    /* Supprime la bordure par défaut */
+    outline: none;
+
+    /* Animation */
+    transition: .2s;
+}
+
+
+/* =========================================================
+   14. EFFET LORSQU'ON CLIQUE DANS UN CHAMP
+   ========================================================= */
+
+.field input:focus,
+.field select:focus {
+    /* Change la couleur de la bordure */
+    border-color: #3978a9;
+
+    /* Ajoute un halo autour du champ */
+    box-shadow: 0 0 0 4px #3978a918;
+}
+
+
+/* Petit texte d'aide */
+
+.field small {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   15. BOUTONS RADIO
+   ========================================================= */
+
+.radio-group {
+    height: 46px;
+
+    /* Active Flexbox */
+    display: flex;
+
+    /* Centre verticalement */
+    align-items: center;
+
+    /* Espace entre les choix */
+    gap: 20px;
+}
+
+
+/* Texte des choix */
+
+.radio-group label {
+    font-size: 14px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+/* Couleur des boutons radio */
+
+.radio-group input {
+    accent-color: var(--primary);
+}
+
+
+/* =========================================================
+   16. MESSAGES D'ALERTE
+   ========================================================= */
+
+/* Style général des alertes */
+
+.alert {
+    padding: 14px 16px;
+
+    border-radius: 12px;
+
+    margin-bottom: 18px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* Message de succès */
+
+.alert.success {
+    background: #eaf8f1;
+    color: var(--success);
+    border: 1px solid #bfe7d0;
+}
+
+
+/* Message d'erreur */
+
+.alert.error {
+    background: #fff0ee;
+    color: var(--danger);
+    border: 1px solid #f2c4be;
+}
+
+
+/* =========================================================
+   17. TÉLÉCHARGEMENT DE PHOTO
+   ========================================================= */
+
+.photo-upload {
+    /* Active Flexbox */
+    display: flex;
+
+    /* Centre verticalement */
+    align-items: center;
+
+    /* Espace entre la photo et le bouton */
+    gap: 18px;
+
+    margin-bottom: 24px;
+}
+
+
+/* Cadre de prévisualisation de la photo */
+
+.photo-preview {
+    width: 120px;
+    height: 140px;
+
+    /* Bordure en pointillés */
+    border: 2px dashed #cbd5e1;
+
+    /* Coins arrondis */
+    border-radius: 12px;
+
+    /* Centre le contenu */
+    display: grid;
+    place-items: center;
+
+    /* Fond */
+    background: #f8fafc;
+
+    /* Couleur du texte */
+    color: #8491a0;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    /* Cache ce qui dépasse */
+    overflow: hidden;
+}
+
+
+/* Image affichée dans le cadre */
+
+.photo-preview img {
+    width: 100%;
+    height: 100%;
+
+    /*
+       L'image remplit tout le cadre
+       sans être déformée.
+    */
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   18. BOUTON DE TÉLÉCHARGEMENT DE PHOTO
+   ========================================================= */
+
+.upload-button {
+    /* Permet de donner l'apparence d'un bouton */
+    display: inline-block;
+
+    background: #edf3f8;
+
+    color: var(--primary);
+
+    border: 1px solid #cbd9e5;
+
+    border-radius: 10px;
+
+    padding: 11px 15px;
+
+    font-weight: 700;
+
+    font-size: 13px;
+
+    /* Transforme le curseur en main */
+    cursor: pointer;
+}
+
+
+/*
+   Cache le véritable input type="file".
+   On utilise généralement un label stylisé
+   à la place.
+*/
+
+.upload-button input {
+    display: none;
+}
+
+
+/* Texte d'aide */
+
+.hint {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 7px;
+}
+
+
+/* =========================================================
+   19. CASE D'ACCEPTATION / ACCORD
+   ========================================================= */
+
+.agreement {
+    /* Active Flexbox */
+    display: flex;
+
+    /* Espace entre la case et le texte */
+    gap: 10px;
+
+    /* Aligne en haut */
+    align-items: flex-start;
+
+    /* Fond */
+    background: #f7f9fb;
+
+    /* Bordure */
+    border: 1px solid var(--border);
+
+    /* Espacement intérieur */
+    padding: 15px;
+
+    /* Coins arrondis */
+    border-radius: 11px;
+
+    /* Taille du texte */
+    font-size: 13px;
+
+    color: #43505e;
+}
+
+
+/* Case à cocher */
+
+.agreement input {
+    /* Petit espace en haut */
+    margin-top: 4px;
+
+    /* Couleur */
+    accent-color: var(--primary);
+
+    /* Dimensions */
+    width: 16px;
+    height: 16px;
+}
+
+
+/* =========================================================
+   20. SIGNATURE ET DATE
+   ========================================================= */
+
+.signature-date {
+    /* Aligne le texte à droite */
+    text-align: right;
+
+    color: #596777;
+
+    font-size: 13px;
+
+    margin: 20px 0;
+}
+
+
+/* =========================================================
+   21. ZONE DES BOUTONS
+   ========================================================= */
+
+.actions {
+    /* Active Flexbox */
+    display: flex;
+
+    /* Place les boutons à droite */
+    justify-content: flex-end;
+
+    /* Espace entre les boutons */
+    gap: 12px;
+
+    /* Ligne supérieure */
+    border-top: 1px solid var(--border);
+
+    /* Espace au-dessus des boutons */
+    padding-top: 20px;
+}
+
+
+/* Style général des boutons */
+
+.btn {
+    /* Supprime la bordure par défaut */
+    border: 0;
+
+    /* Coins arrondis */
+    border-radius: 10px;
+
+    /* Espacement intérieur */
+    padding: 13px 20px;
+
+    /* Texte */
+    font-weight: 800;
+    font-size: 14px;
+
+    /* Curseur */
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   22. BOUTON PRINCIPAL
+   ========================================================= */
+
+.btn.primary {
+    background: var(--primary);
+    color: #fff;
+}
+
+
+/* Couleur du bouton au survol */
+
+.btn.primary:hover {
+    background: #0d3153;
+}
+
+
+/* =========================================================
+   23. BOUTON SECONDAIRE
+   ========================================================= */
+
+.btn.secondary {
+    background: #eef2f6;
+    color: #425466;
+}
+
+
+/* =========================================================
+   24. EFFET LORSQU'ON CLIQUE SUR UN BOUTON
+   ========================================================= */
+
+.btn:active {
+    /*
+       Le bouton descend légèrement
+       lorsqu'on clique dessus.
+    */
+    transform: translateY(1px);
+}
+
+
+/* =========================================================
+   25. FOOTER
+   ========================================================= */
+
+footer {
+    /* Organisation verticale */
+    display: flex;
+    flex-direction: column;
+
+    /* Centre horizontalement */
+    align-items: center;
+
+    /* Texte centré */
+    text-align: center;
+
+    /* Espace entre les éléments */
+    gap: 5px;
+
+    /* Couleur */
+    color: #171a1d;
+
+    /* Petite taille */
+    font-size: 18px;
+
+    /* Espacement intérieur */
+    padding: 15px;
+}
+
+
+/* =========================================================
+   26. RESPONSIVE : TABLETTES ET TÉLÉPHONES
+   ========================================================= */
+
+/*
+   Ces règles sont appliquées lorsque
+   la largeur de l'écran est inférieure
+   ou égale à 760px.
+*/
+
+@media (max-width: 760px) {
+
+    /* -----------------------------
+       BARRE SUPÉRIEURE
+       ----------------------------- */
+
+    .topbar {
+        /* Aligne les éléments à gauche */
+        align-items: flex-start;
+
+        /* Les éléments passent en colonne */
+        flex-direction: column;
+    }
+
+
+    /* Contact en colonne */
+
+    .contact {
+        flex-direction: column;
+        gap: 2px;
+    }
+
+
+    /* -----------------------------
+       CONTENEUR PRINCIPAL
+       ----------------------------- */
+
+    .page {
+        /* Prend 94% de la largeur */
+        width: 94%;
+
+        /* Réduit la marge supérieure */
+        margin-top: 18px;
+    }
+
+
+    /* -----------------------------
+       HERO
+       ----------------------------- */
+
+    .hero {
+        padding: 24px;
+
+        /* Coins moins arrondis */
+        border-radius: 16px;
+    }
+
+
+    /* Badge plus petit */
+
+    .hero-badge {
+        font-size: 18px;
+        padding: 11px;
+    }
+
+
+    /* -----------------------------
+       GRILLES
+       ----------------------------- */
+
+    /*
+       Les 2 ou 3 colonnes deviennent
+       une seule colonne.
+    */
+
+    .grid.two,
+    .grid.three {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* -----------------------------
+       CARTES
+       ----------------------------- */
+
+    .card {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+
+    /* -----------------------------
+       TITRES
+       ----------------------------- */
+
+    .section-title {
+        margin-bottom: 20px;
+    }
+
+
+    .section-title h2 {
+        font-size: 17px;
+    }
+
+
+    /* -----------------------------
+       PHOTO
+       ----------------------------- */
+
+    .photo-upload {
+        align-items: flex-start;
+    }
+
+
+    /* -----------------------------
+       BOUTONS
+       ----------------------------- */
+
+    .actions {
+        /*
+           Les boutons passent en colonne.
+        */
+        flex-direction: column-reverse;
+    }
+
+
+    .btn {
+        /* Chaque bouton prend toute la largeur */
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   27. RESPONSIVE : PETITS TÉLÉPHONES
+   ========================================================= */
+
+/*
+   Ces règles sont appliquées aux écrans
+   de 430px ou moins.
+*/
+
+@media (max-width: 430px) {
+
+    /* Texte secondaire du logo plus petit */
+
+    .brand span {
+        font-size: 10px;
+    }
+
+
+    /* Titre du Hero plus petit */
+
+    .hero h1 {
+        font-size: 25px;
+    }
+
+
+    /*
+       Cache le badge sur les très petits écrans
+       pour gagner de la place.
+    */
+
+    .hero-badge {
+        display: none;
+    }
+
+
+    /* Cadre photo plus petit */
+
+    .photo-preview {
+        width: 95px;
+        height: 115px;
+    }
+}
+
+
+/* =========================================================
+   FIN DU FICHIER CSS
+   ========================================================= */
+
+
+
+/* =========================================================
+   LISTE DES FORMATIONS
+   ========================================================= */
+
+.formation-list {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   UNE FORMATION
+   ========================================================= */
+
+.formation-option {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 16px;
+
+    border: 1px solid #d7e0e8;
+
+    border-radius: 10px;
+
+    background: #fff;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+
+/* Case à cocher */
+
+.formation-option input {
+
+    width: 18px;
+
+    height: 18px;
+
+    cursor: pointer;
+
+    accent-color: #123d68;
+}
+
+
+/* Texte de la formation */
+
+.formation-option span {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #30485c;
+}
+
+
+/* Effet lorsque la souris passe dessus */
+
+.formation-option:hover {
+
+    border-color: #3978a9;
+
+    background: #f5f9fc;
+
+}
+
+
+/* =========================================================
+   FORMATION SÉLECTIONNÉE
+   ========================================================= */
+
+.formation-option:has(input:checked) {
+
+    border-color: #123d68;
+
+    background: #eef5fa;
+}
+
+
+.formation-option:has(input:checked) span {
+
+    color: #123d68;
+
+}
+
+
+/* =========================================================
+   MESSAGE D'ERREUR
+   ========================================================= */
+
+.formation-error {
+
+    display: none;
+
+    margin-top: 8px;
+
+    color: #b42318;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .formation-list {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
