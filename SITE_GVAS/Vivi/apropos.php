@@ -140,7 +140,6 @@
           <h3>Responsable Marketing et commercial</h3>
         </div>
       </div>
-
       <div class="team-card card-5">
         <img src="images/admin/Bénie.png" alt="Sécrétaire">
         <div class="team-content">
