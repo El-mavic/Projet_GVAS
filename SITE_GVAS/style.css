@@ -103,7 +103,7 @@ header {
 
 .navbar .links {
     display: flex;
-    gap: 5rem;
+    gap: 2rem;
 
 }
 
@@ -166,7 +166,7 @@ header {
 }
 
 .burger-menu.open {
-    height: 250px;
+    height: 280px;
 }
 
 
