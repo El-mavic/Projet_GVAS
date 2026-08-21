@@ -1,0 +1,1380 @@
+/* =========================================================
+   RÉINITIALISATION GÉNÉRALE
+   ========================================================= */
+
+/*
+ * box-sizing: border-box permet d'inclure le padding
+ * et la bordure dans la largeur/hauteur des éléments.
+ */
+* {
+    box-sizing: border-box;
+    font-family: cambria, "Segoe UI", Arial, sans-serif;
+}
+
+
+/* =========================================================
+   STYLE GÉNÉRAL DE LA PAGE
+   ========================================================= */
+
+body {
+    margin: 0;
+
+    /* Police principale du site */
+    font-family: Inter, Segoe UI, Arial, sans-serif;
+
+    /* Couleur de fond générale */
+    background: #d8d6d6;
+
+    /* Couleur générale du texte */
+    color: #182635;
+}
+
+
+/* =========================================================
+   BARRE SUPÉRIEURE ADMINISTRATION
+   ========================================================= */
+
+/*
+ * .admin-top représente la barre supérieure
+ * du tableau de bord administrateur.
+ */
+.admin-top {
+    height: 70px;
+
+    /* Couleur de fond bleu foncé */
+    background: #454646;
+
+    /* Texte en blanc */
+    color: #020202;
+
+    /* Organisation horizontale */
+    display: flex;
+
+    /* Écarte le logo et les actions */
+    justify-content: space-between;
+
+    /* Centre verticalement les éléments */
+    align-items: center;
+
+    /* Espacement horizontal */
+    padding: 0 5%;
+
+    /* Petite ombre sous la barre */
+    box-shadow: 0 3px 15px #001d3315;
+    border-radius: 18px 18px 18px 18px;
+}
+
+
+/* =========================================================
+   LOGO / MARQUE
+   ========================================================= */
+
+.brand {
+    /* Place le logo et le texte côte à côte */
+    display: flex;
+
+    /* Centre verticalement */
+    align-items: center;
+
+    /* Espace entre le logo et le texte */
+    gap: 10px;
+}
+
+
+/*
+ * Le nom principal de la marque.
+ */
+.brand strong {
+    display: block;
+}
+
+
+/*
+ * Petit texte situé sous le nom.
+ */
+.brand small {
+    display: block;
+
+    color: #282829;
+
+    font-size: 20px;
+}
+
+
+/*
+ * Petit logo circulaire.
+ */
+
+.mini-logo {
+
+    /* Centre le contenu */
+    display: grid;
+    place-items: center;
+
+    /* Couleur du texte */
+    color: yellow;
+
+    /* Texte en gras */
+    font-weight: 800;
+    font-size: 30px;
+}
+
+
+/* =========================================================
+   ACTIONS DE LA BARRE SUPÉRIEURE
+   ========================================================= */
+
+.top-actions {
+    display: flex;
+
+    /* Centre les éléments */
+    align-items: center;
+
+    /* Espacement entre les boutons */
+    gap: 18px;
+
+    font-size: 13px;
+}
+
+
+/*
+ * Liens présents dans la partie droite
+ * de la barre supérieure.
+ */
+/* =========================================================
+   BOUTON DÉCONNEXION
+   ========================================================= */
+
+.top-actions a {
+    color: #fff;
+
+    /* Supprime le soulignement */
+    text-decoration: none;
+
+    /* Fond blanc légèrement transparent */
+    background: #f3f1f181;
+
+    padding: 9px 12px;
+
+    /* Coins arrondis */
+    border-radius: 8px;
+
+    /* Animation douce */
+    transition: all 0.3s ease;
+}
+
+
+/* =========================================================
+   EFFET HOVER
+   ========================================================= */
+
+.top-actions a:hover {
+
+    /* Fond doré au survol */
+    background: yellow;
+
+    /* Texte bleu foncé */
+    color: #092943;
+
+    /* Légèrement plus grand */
+    transform: translateY(-2px);
+
+    /* Petite ombre */
+    box-shadow: 0 4px 10px #00000025;
+}
+
+
+/* =========================================================
+   CONTENEUR PRINCIPAL DE L'ADMINISTRATION
+   ========================================================= */
+
+.admin-wrap {
+    /*
+     * Largeur maximale de 1200px.
+     * Sur les petits écrans, la largeur est de 92%.
+     */
+    width: min(1200px, 92%);
+
+    /* Centre le contenu */
+    margin: 30px auto 50px;
+}
+
+
+/* =========================================================
+   EN-TÊTE DE PAGE
+   ========================================================= */
+
+.page-heading {
+    display: flex;
+
+    /* Écarte le titre et les boutons */
+    justify-content: space-between;
+
+    /* Aligne les éléments vers le bas */
+    align-items: end;
+
+    gap: 20px;
+
+    /* Espace sous l'en-tête */
+    margin-bottom: 22px;
+}
+
+
+/*
+ * Petit texte au-dessus du titre.
+ */
+.kicker {
+    font-size: 20px;
+
+    /* Espacement entre les lettres */
+    letter-spacing: .16em;
+
+    color: #32648e;
+
+    font-weight: 800;
+
+    margin: 0 0 4px;
+}
+
+
+/*
+ * Titres principaux.
+ */
+.page-heading h1,
+.panel h1 {
+    margin: 0;
+
+    color: #092943;
+
+    font-size: 30px;
+}
+
+
+/*
+ * Texte secondaire / descriptif.
+ */
+.muted {
+    color: rgb(59, 59, 59);
+    font-size: 18px;
+    margin: 0;
+}
+
+
+/* =========================================================
+   BOUTONS
+   ========================================================= */
+
+.btn {
+    display: inline-block;
+
+    /* Supprime la bordure par défaut */
+    border: 0;
+
+    /* Coins arrondis */
+    border-radius: 9px;
+
+    padding: 11px 15px;
+
+    /* Supprime le soulignement des liens */
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    /* Curseur en forme de main */
+    cursor: pointer;
+}
+
+
+/*
+ * Bouton principal bleu.
+ */
+.btn.primary {
+    background: #123d68;
+    color: #fff;
+}
+
+
+/*
+ * Bouton secondaire clair.
+ */
+.btn.light {
+    background: #e9eef3;
+    color: #30485c;
+}
+
+
+/*
+ * Bouton d'exportation.
+ */
+.btn.export {
+    background: #eaf7f0;
+    color: #166b43;
+}
+
+
+/*
+ * Bouton prenant toute la largeur disponible.
+ */
+.btn.full {
+    width: 100%;
+
+    margin-top: 8px;
+}
+
+
+/* =========================================================
+   CARTES STATISTIQUES
+   ========================================================= */
+
+.stats {
+    /*
+     * Création d'une grille de 3 colonnes.
+     */
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    /* Espacement entre les cartes */
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+
+/*
+ * Une carte statistique.
+ */
+.stat {
+    background: #fff;
+
+    /* Bordure légère */
+    border: 1px solid #e0e7ee;
+
+    /* Coins arrondis */
+    border-radius: 14px;
+
+    padding: 20px;
+
+    /* Ombre légère */
+    box-shadow: 0 6px 18px #163b5c09;
+}
+
+
+/*
+ * Texte descriptif de la statistique.
+ */
+.stat span {
+    font-size: 12px;
+
+    color: #738091;
+}
+
+
+/*
+ * Valeur numérique de la statistique.
+ */
+.stat strong {
+    display: block;
+
+    font-size: 28px;
+
+    color: #123d68;
+
+    margin-top: 4px;
+}
+
+
+/* =========================================================
+   PANNEAUX PRINCIPAUX
+   ========================================================= */
+
+.panel,
+.print-sheet {
+    background: #fff;
+
+    border: 1px solid #e0e7ee;
+
+    border-radius: 16px;
+
+    box-shadow: 0 8px 25px #163b5c0a;
+
+    padding: 22px;
+}
+
+
+/* =========================================================
+   FILTRES
+   ========================================================= */
+
+.filters {
+    /*
+     * Organisation des champs de recherche.
+     *
+     * 1fr = prend l'espace disponible
+     * 230px = largeur fixe du deuxième élément
+     * auto = largeur automatique des boutons
+     */
+    display: grid;
+
+    grid-template-columns: 1fr 230px auto auto auto;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+}
+
+
+/*
+ * Champs de recherche et listes déroulantes.
+ */
+.filters input,
+.filters select,
+.edit-grid input,
+.edit-grid select,
+.login-card input {
+    height: 44px;
+
+    border: 1px solid #d7e0e8;
+
+    border-radius: 9px;
+
+    padding: 0 12px;
+
+    /* Supprime le contour par défaut */
+    outline: none;
+
+    background: #fff;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   EFFET FOCUS DES CHAMPS
+   ========================================================= */
+
+.filters input:focus,
+.filters select:focus,
+.edit-grid input:focus,
+.login-card input:focus {
+
+    /* Change la couleur de la bordure */
+    border-color: #3978a9;
+
+    /*
+     * Ajoute un léger halo autour du champ.
+     */
+    box-shadow: 0 0 0 3px #3978a912;
+}
+
+
+/* =========================================================
+   TABLEAUX
+   ========================================================= */
+
+/*
+ * Permet au tableau de devenir défilable horizontalement
+ * sur les petits écrans.
+ */
+.table-scroll {
+    overflow-x: auto;
+}
+
+
+/*
+ * Tableau principal.
+ */
+table {
+    width: 100%;
+
+    /* Supprime les espaces entre les cellules */
+    border-collapse: collapse;
+
+    font-size: 12px;
+}
+
+
+/*
+ * En-têtes du tableau.
+ */
+th {
+    text-align: left;
+
+    background: #f5f8fb;
+
+    color: #617083;
+
+    padding: 12px 10px;
+
+    /*
+     * Empêche le texte de passer sur plusieurs lignes.
+     */
+    white-space: nowrap;
+}
+
+
+/*
+ * Cellules du tableau.
+ */
+td {
+    padding: 12px 10px;
+
+    /* Ligne séparatrice */
+    border-top: 1px solid #edf1f4;
+
+    /* Aligne le contenu en haut */
+    vertical-align: middle;
+}
+
+
+/* =========================================================
+   AVATARS / IMAGES
+   ========================================================= */
+
+.avatar {
+    width: 38px;
+    height: 38px;
+
+    /* Coins arrondis */
+    border-radius: 9px;
+
+    /*
+     * L'image remplit correctement la zone
+     * sans être déformée.
+     */
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/*
+ * Avatar affiché lorsqu'il n'y a pas d'image.
+ */
+.avatar.placeholder {
+    background: #eaf1f7;
+
+    color: #24577f;
+
+    display: grid;
+
+    place-items: center;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   ACTIONS DU TABLEAU
+   ========================================================= */
+
+.actions {
+    /*
+     * Empêche les boutons d'action
+     * de passer automatiquement à la ligne.
+     */
+    white-space: nowrap;
+}
+
+
+/*
+ * Liens d'action normaux.
+ */
+.actions a {
+    margin-right: 8px;
+
+    color: #1b5d8b;
+
+    text-decoration: none;
+
+    font-weight: 700;
+}
+
+
+/*
+ * Lien d'action dangereux :
+ * supprimer, désactiver, etc.
+ */
+.actions .danger-link {
+    color: #b42318;
+}
+
+
+/* =========================================================
+   MESSAGE LORSQU'IL N'Y A AUCUNE DONNÉE
+   ========================================================= */
+
+.empty {
+    text-align: center;
+
+    padding: 40px;
+
+    color: #7a8795;
+}
+
+
+/* =========================================================
+   MESSAGES D'ALERTE
+   ========================================================= */
+
+.alert {
+    padding: 12px;
+
+    border-radius: 9px;
+
+    margin: 15px 0;
+
+    font-size: 13px;
+}
+
+
+/*
+ * Alerte d'erreur.
+ */
+.alert.error {
+    background: #fff0ee;
+
+    color: #a32118;
+
+    border: 1px solid #f0c3bd;
+}
+
+
+/* =========================================================
+   PAGE DE CONNEXION
+   ========================================================= */
+
+.login-page {
+    /*
+     * Prend au minimum toute la hauteur
+     * de l'écran.
+     */
+    min-height: 100vh;
+
+    /*
+     * Centre la carte de connexion
+     * horizontalement et verticalement.
+     */
+    display: grid;
+
+    place-items: center;
+
+    /*
+     * Dégradé bleu de l'arrière-plan.
+     */
+    background: linear-gradient(135deg,
+            #092943,
+            #1e5a87);
+}
+
+
+/*
+ * Carte de connexion.
+ */
+.login-card {
+    width: min(430px, 92%);
+
+    background: #fff;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    /*
+     * Grande ombre pour donner un effet
+     * de carte flottante.
+     */
+    box-shadow: 0 25px 70px #00182c55;
+}
+
+
+/* =========================================================
+   LOGO DE LA PAGE DE CONNEXION
+   ========================================================= */
+
+.login-logo {
+    width: 58px;
+    height: 58px;
+
+    border: 3px solid #d7a62b;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    color: #123d68;
+
+    font-weight: 900;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   TITRE DE CONNEXION
+   ========================================================= */
+
+.login-card h1 {
+    color: #092943;
+
+    margin: 5px 0 8px;
+}
+
+
+/* =========================================================
+   LABELS DU FORMULAIRE DE CONNEXION
+   ========================================================= */
+
+.login-card label {
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    color: #455667;
+
+    margin-top: 18px;
+}
+
+
+/*
+ * Champs de connexion.
+ */
+.login-card input {
+    margin-top: 7px;
+}
+
+
+/*
+ * Lien de retour.
+ */
+.back {
+    display: block;
+
+    text-align: center;
+
+    margin-top: 18px;
+
+    color: #52708b;
+
+    text-decoration: none;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   ACTIONS DE LA PAGE DE DÉTAIL
+   ========================================================= */
+
+.detail-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-bottom: 16px;
+}
+
+
+/* =========================================================
+   EN-TÊTE DE LA FICHE / DOCUMENT
+   ========================================================= */
+
+.sheet-head {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    /*
+     * Ligne sous l'en-tête.
+     */
+    border-bottom: 1px solid #e5eaf0;
+
+    padding-bottom: 16px;
+}
+
+
+/* =========================================================
+   PHOTO DU PROFIL
+   ========================================================= */
+
+.profile-photo {
+    width: 105px;
+    height: 125px;
+
+    /*
+     * L'image garde ses proportions.
+     */
+    object-fit: cover;
+
+    border: 1px solid #ccd7e1;
+
+    border-radius: 8px;
+}
+
+
+/* =========================================================
+   TITRE DE LA FICHE
+   ========================================================= */
+
+.sheet-title {
+    text-align: center;
+
+    padding: 22px;
+}
+
+
+/*
+ * Petit texte au-dessus du titre.
+ */
+.sheet-title p {
+    font-size: 11px;
+
+    letter-spacing: .15em;
+
+    color: #6c7a89;
+
+    margin: 0;
+}
+
+
+/*
+ * Titre principal de la fiche.
+ */
+.sheet-title h1 {
+    font-size: 25px;
+
+    color: #123d68;
+
+    margin: 5px;
+}
+
+
+/*
+ * Texte secondaire sous le titre.
+ */
+.sheet-title span {
+    font-size: 12px;
+
+    color: #667587;
+}
+
+
+/* =========================================================
+   SECTIONS DE DÉTAILS
+   ========================================================= */
+
+.detail-section {
+    /*
+     * Ligne au-dessus de chaque section.
+     */
+    border-top: 1px solid #e3e8ee;
+
+    padding: 18px 0;
+}
+
+
+/*
+ * Titres des sections.
+ */
+.detail-section h2,
+.engagement h2 {
+    font-size: 15px;
+
+    color: #123d68;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   GRILLE DES INFORMATIONS
+   ========================================================= */
+
+.detail-grid {
+    /*
+     * Deux colonnes sur ordinateur.
+     */
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+
+/*
+ * Chaque information est présentée
+ * dans une petite carte grise.
+ */
+.detail-grid div {
+    background: #fbf9f7;
+
+    padding: 10px;
+
+    border-radius: 8px;
+}
+
+
+/*
+ * Petit titre de l'information.
+ */
+.detail-grid small {
+    display: block;
+
+    color: #758292;
+
+    font-size: 16px;
+}
+
+
+/*
+ * Valeur de l'information.
+ */
+.detail-grid strong {
+    display: block;
+    font-size: 13px;
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   SECTION ENGAGEMENT
+   ========================================================= */
+
+.engagement {
+    border-top: 1px solid #e3e8ee;
+
+    padding-top: 18px;
+}
+
+
+/*
+ * Texte de la section engagement.
+ */
+.engagement p {
+    font-size: 12px;
+
+    color: #536170;
+}
+
+
+/* =========================================================
+   SIGNATURES
+   ========================================================= */
+
+.signatures {
+    display: flex;
+
+    justify-content: space-between;
+
+    /*
+     * Grand espace au-dessus des signatures.
+     */
+    margin-top: 20px;
+
+    font-size: 11px;
+
+    color: #687687;
+}
+
+
+/* =========================================================
+   FORMULAIRE DE MODIFICATION
+   ========================================================= */
+
+.edit-grid {
+    /*
+     * Deux colonnes pour les champs.
+     */
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+
+    margin-top: 20px;
+}
+
+
+/*
+ * Labels du formulaire de modification.
+ */
+.edit-grid label {
+    font-size: 12px;
+
+    font-weight: 800;
+
+    color: #455667;
+}
+
+
+/*
+ * Champs du formulaire.
+ */
+.edit-grid input,
+.edit-grid select {
+    display: block;
+
+    margin-top: 7px;
+}
+
+
+/*
+ * Zone contenant le bouton de validation.
+ */
+.edit-submit {
+    /*
+     * Le bouton occupe les deux colonnes.
+     */
+    grid-column: 1 / -1;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLETTES
+   ========================================================= */
+
+/*
+ * Ces règles sont appliquées lorsque
+ * l'écran fait 850px ou moins.
+ */
+@media (max-width: 850px) {
+
+    /*
+     * Les filtres passent sur deux colonnes.
+     */
+    .filters {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    /*
+     * Les statistiques passent sur une seule colonne.
+     */
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+
+    /*
+     * Le titre et les boutons sont empilés.
+     */
+    .page-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    /*
+     * Sur petit écran, on cache le texte
+     * des actions de la barre supérieure.
+     */
+    .top-actions span {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - SMARTPHONES
+   ========================================================= */
+
+/*
+ * Ces règles sont appliquées lorsque
+ * l'écran fait 600px ou moins.
+ */
+@media (max-width: 600px) {
+
+    /*
+     * Le conteneur prend presque toute
+     * la largeur de l'écran.
+     */
+    .admin-wrap {
+        width: 94%;
+
+        margin-top: 20px;
+    }
+
+
+    /*
+     * Réduction des marges de la barre supérieure.
+     */
+    .admin-top {
+        padding: 0 3%;
+    }
+
+
+    /*
+     * Tous ces éléments passent sur une seule colonne.
+     */
+    .filters,
+    .edit-grid,
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /*
+     * Les boutons des filtres prennent
+     * toute la largeur.
+     */
+    .filters .btn {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    /*
+     * Les boutons d'action de la fiche
+     * occupent équitablement l'espace.
+     */
+    .detail-actions {
+        justify-content: stretch;
+    }
+
+
+    /*
+     * Chaque bouton prend la même largeur.
+     */
+    .detail-actions .btn {
+        flex: 1;
+
+        text-align: center;
+    }
+
+
+    /*
+     * Réduction du padding des panneaux
+     * pour gagner de la place.
+     */
+    .panel,
+    .print-sheet {
+        padding: 16px;
+    }
+
+
+    /*
+     * Réduction de l'espace avant les signatures.
+     */
+    .signatures {
+        margin-top: 45px;
+
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================================
+   MODE IMPRESSION
+   ========================================================= */
+
+/*
+ * Ces règles sont utilisées uniquement
+ * lorsque l'utilisateur imprime la page.
+ */
+@media print {
+
+    /*
+     * Le fond devient blanc pour l'impression.
+     */
+    body {
+        background: #fff;
+    }
+
+
+    /*
+     * Les éléments portant la classe .no-print
+     * ainsi que la barre admin ne sont pas imprimés.
+     */
+    .no-print,
+    .admin-top {
+        display: none !important;
+    }
+
+
+    /*
+     * La fiche utilise toute la largeur
+     * de la feuille.
+     */
+    .admin-wrap {
+        width: 100%;
+
+        margin: 0;
+    }
+
+
+    /*
+     * Suppression de la bordure et de l'ombre
+     * lors de l'impression.
+     */
+    .print-sheet {
+        border: 0;
+
+        box-shadow: none;
+
+        padding: 0;
+    }
+
+
+    /*
+     * Les boutons d'action ne sont pas imprimés.
+     */
+    .detail-actions {
+        display: none;
+    }
+
+
+    /*
+     * Évite autant que possible de couper
+     * une section entre deux pages.
+     */
+    .detail-section {
+        break-inside: avoid;
+    }
+}
+
+
+
+
+
+/* =========================================================
+   FILIGRANE
+   ========================================================= */
+
+/* Caché normalement sur l'écran */
+.watermark {
+    display: none;
+}
+
+/* =========================================================
+   FILIGRANE À L'IMPRESSION
+   ========================================================= */
+
+@media print {
+
+    /*
+     * La fiche devient le repère du filigrane.
+     */
+    .print-sheet {
+        position: relative;
+    }
+
+
+    /*
+     * Affichage du filigrane.
+     */
+    .watermark {
+        display: block;
+
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        pointer-events: none;
+
+        z-index: 0;
+    }
+
+
+    /*
+     * Apparence du logo.
+     */
+    .watermark img {
+        width: 380px;
+
+        height: auto;
+
+        /*
+         * Plus la valeur est faible,
+         * plus le logo est transparent.
+         */
+        opacity: 0.08;
+    }
+
+
+    /*
+     * Tout le contenu de la fiche
+     * reste au-dessus du filigrane.
+     */
+    .print-sheet>*:not(.watermark) {
+        position: relative;
+
+        z-index: 1;
+    }
+
+}
+
+
+
+
+/* =========================================================
+   IMPRESSION : RENDRE LES CASES TRANSPARENTES
+   POUR LAISSER APPARAÎTRE LE FILIGRANE
+   ========================================================= */
+
+@media print {
+
+    /* Les cases d'informations deviennent transparentes */
+    .detail-grid div {
+        background: transparent !important;
+    }
+
+    /* Les différentes sections deviennent également transparentes */
+    .detail-section {
+        background: transparent !important;
+    }
+
+    /* La zone d'engagement reste transparente */
+    .engagement {
+        background: transparent !important;
+    }
+
+    /* Le conteneur principal de la fiche */
+    .print-sheet {
+        background: transparent !important;
+    }
+}
+
+
+
+/* =========================================================
+   AFFICHAGE DES FORMATIONS DANS LA FICHE
+   ========================================================= */
+
+.formation-values {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.formation-item {
+    display: block;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* Petit symbole devant chaque formation */
+
+.formation-item::before {
+    content: "✓ ";
+    font-weight: 800;
+}
