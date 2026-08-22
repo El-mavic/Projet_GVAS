@@ -90,21 +90,21 @@ if (!isset($_SESSION['visite_' . $page])) {
     <section class="formations">
         <div class="card">
             <img src="images/Formation/2.jpg" alt="Informatique Bureautique">
-            <div class="text-hover">Inscription: 5000 FCA<br>Frais Mensuels: 10000 FCA<br>Durée: 6 mois</div>
+            <!-- <div class="text-hover">Inscription: 5000 FCA<br>Frais Mensuels: 10000 FCA<br>Durée: 6 mois</div> -->
             <h3>INFORMATIQUE BUREAUTIQUE</h3>
             <p>Initiation à l'informatique<br>Word, Excel, PowerPoint...</p>
         </div>
 
         <div class="card">
             <img src="images/Formation/3.jpg" alt="La langue Anglaise">
-            <div class="text-hover">Inscription: 5000 FCA<br>Frais Mensuels: 10000 FCA<br>Durée: 6 mois</div>
+            <!-- <div class="text-hover">Inscription: 5000 FCA<br>Frais Mensuels: 10000 FCA<br>Durée: 6 mois</div> -->
             <h3>ANGLAIS</h3>
             <p>Général, Professionnel<br>Traduction, interprétariat</p>
         </div>
 
         <div class="card">
             <img src="images/Formation/4.jpg" alt="Logistique">
-            <div class="text-hover">Inscription: 5000 FCA<br>Frais Mensuels: 10000 FCA<br>Durée: 6 mois</div>
+            <!-- <div class="text-hover">Inscription: 5000 FCA<br>Frais Mensuels: 10000 FCA<br>Durée: 6 mois</div> -->
             <h3>LOGISTIQUE</h3>
             <p>Gestion de stock<br>Magasinage</p>
         </div>
@@ -113,42 +113,42 @@ if (!isset($_SESSION['visite_' . $page])) {
     <section class="formations">
         <div class="card" onclick="ouvrirFormation('reseau')">
             <img src="images/Formation/5.jpg" alt="Reseau informatique">
-            <div class="text-hover">Inscription: 5000 FCA<br>Frais Mensuels: 10000 FCA<br>Durée: 6 mois</div>
+            <!-- <div class="text-hover">Inscription: 5000 FCA<br>Frais Mensuels: 10000 FCA<br>Durée: 6 mois</div> -->
             <h3>RESEAU INFORMATIQUE</h3>
             <p>Installation, maintenance, sécurité</p>
         </div>
 
         <div class="card">
             <img src="images/Formation/6.jpg" alt="La maintenance des ordinateurs">
-            <div class="text-hover">Inscription: 5000 FCA<br>Frais Mensuels: 10000 FCA<br>Durée: 6 mois</div>
+            <!-- <div class="text-hover">Inscription: 5000 FCA<br>Frais Mensuels: 10000 FCA<br>Durée: 6 mois</div> -->
             <h3>LA MAINTENANCE DES ORDINATEURS</h3>
             <p>Assurez le bon fonctionnement et la longévité<br> de vos ordinateurs</p>
         </div>
 
         <div class="card">
             <img src="images/Formation/7.jpg" alt="La Comptabilité">
-            <div class="text-hover">Inscription: 5000 FCA<br>Frais Mensuels: 10000 FCA<br>Durée: 6 mois</div>
+            <!-- <div class="text-hover">Inscription: 5000 FCA<br>Frais Mensuels: 10000 FCA<br>Durée: 6 mois</div> -->
             <h3>COMPTABILITE</h3>
             <p>Maîtrisez la gestion comptable et <br>le suivi financier de votre entreprise</p>
         </div>
 
         <div class="card">
             <img src="images/Formation/8.jpg" alt="QHSE">
-            <div class="text-hover">Inscription: 5000 FCA<br>Frais Mensuels: 10000 FCA<br>Durée: 6 mois</div>
+            <!-- <div class="text-hover">Inscription: 5000 FCA<br>Frais Mensuels: 10000 FCA<br>Durée: 6 mois</div> -->
             <h3>QHSE</h3>
             <p>Formation QHSE très enrichissante, je recommande.</p>
         </div>
 
         <div class="card">
             <img src="images/Formation/9.jpg" alt="Assistanat">
-            <div class="text-hover">Inscription: 5000 FCA<br>Frais Mensuels: 10000 FCA<br>Durée: 6 mois</div>
+            <!-- <div class="text-hover">Inscription: 5000 FCA<br>Frais Mensuels: 10000 FCA<br>Durée: 6 mois</div> -->
             <h3>ASSISTANAT BUREAUTIQUE</h3>
             <p>Formation très utile et pratique.</p>
         </div>
 
         <div class="card">
             <img src="images/Formation/10.jpg" alt="Entreprenariat">
-            <div class="text-hover">Inscription: 5000 FCA<br>Frais Mensuels: 10000 FCA<br>Durée: 6 mois</div>
+            <!-- <div class="text-hover">Inscription: 5000 FCA<br>Frais Mensuels: 10000 FCA<br>Durée: 6 mois</div> -->
             <h3>ENTREPRENARIAT</h3>
             <p>Formation utile pour lancer son projet.</p>
         </div>
