@@ -7,9 +7,7 @@
   <meta name="description"
     content="GVAS - Groupement des Volontaires pour l'Action Sociale. Éduquer, former, accompagner et protéger pour un avenir durable.">
   <title>GVAS — Groupement des Volontaires pour l'Action Sociale</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
@@ -79,7 +77,7 @@
         </p>
 
         <div class="hero-actions">
-          <a href="#mission" class="btn btn-primary">Découvrir notre mission <span>→</span></a>
+          <a href="#mission" class="btn btn-primary">Découvrir notre mission <span><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
           <a href="#actions" class="btn btn-light">Voir nos actions</a>
         </div>
 
@@ -116,7 +114,7 @@
             locaux pour apporter des réponses concrètes aux défis sociaux,
             éducatifs et environnementaux.
           </p>
-          <a href="#valeurs" class="text-link">En savoir plus sur GVAS <span>↗</span></a>
+          <a href="#valeurs" class="text-link">En savoir plus sur GVAS <span><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
         </div>
 
         <div class="mission-card reveal">
@@ -143,7 +141,7 @@
           <h3>Éduquer</h3>
           <p>Favoriser l'accès au savoir, à l'information et à l'éducation pour renforcer l'autonomie des communautés.
           </p>
-          <a href="#contact">Découvrir <span>→</span></a>
+          <a href="#contact">Découvrir <span><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
         </article>
 
         <article class="action-card featured reveal">
@@ -152,7 +150,7 @@
           <h3>Former</h3>
           <p>Développer les compétences et créer des opportunités grâce à la formation et au renforcement des capacités.
           </p>
-          <a href="#contact">Découvrir <span>→</span></a>
+          <a href="#contact">Découvrir <span><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
         </article>
 
         <article class="action-card reveal">
@@ -160,15 +158,15 @@
           <div class="action-icon">✧</div>
           <h3>Accompagner</h3>
           <p>Être aux côtés des personnes et des groupes vulnérables avec des actions adaptées à leurs besoins.</p>
-          <a href="#contact">Découvrir <span>→</span></a>
+          <a href="#contact">Découvrir <span><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
         </article>
 
-        <article class="action-card reveal">
+        <article class="action-card featured reveal">
           <div class="action-number">04</div>
           <div class="action-icon">♡</div>
           <h3>Protéger</h3>
           <p>Promouvoir la dignité, les droits, la sécurité et la protection des personnes au sein des communautés.</p>
-          <a href="#contact">Découvrir <span>→</span></a>
+          <a href="#contact">Découvrir <span><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
         </article>
       </div>
     </section>
@@ -288,10 +286,9 @@
         <nav class="footer-nav">
           <a href="#accueil">Accueil</a>
           <a href="#mission">Mission</a>
-          <a href="#actions">Actions</a>
           <a href="#valeurs">Valeurs</a>
           <a href="#actualites">Actualités</a>
-          <a href="#contact">Contact</a>
+
         </nav>
 
         <!-- Réseaux -->
@@ -318,12 +315,11 @@
           target="_blank" class="fab-item">
           <span class="footer-contact-item">
             <span class="contact-icon"> <i class="fa-solid fa-location-dot"></i></span>
-            <span> Mpaka x-or en diagonale de l'école privée Ivan Mamingui (Pointe-Noire, Congo)</span>
+            <span> Mpaka x-or Pointe-Noire, Congo </span>
           </span>
         </a>
       </div>
       <div class="footer-divider"></div>
-
       <div class="footer-bottom">
 
         <span class="footer-slogan">

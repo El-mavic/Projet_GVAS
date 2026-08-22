@@ -29,6 +29,7 @@ unset($_SESSION['success'], $_SESSION['error']);
             <span> <i class="fa-solid fa-phone"> </i> 06 620 89 94 / 05 344 40 20</span>
             <span> <i class="fa-solid fa-map-marker-alt"> </i> Pointe-Noire, Congo</span>
             <a href="login.php" class="icon"> <i class="fas fa-user-shield"></i></a>
+            <a href="../index.php" class="icon"> <i class="fas fa-home"></i></a>
 
         </div>
     </header>
