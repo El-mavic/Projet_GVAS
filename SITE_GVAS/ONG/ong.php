@@ -49,7 +49,6 @@
       <span></span>
     </button>
   </header>
-
   <main>
     <!-- HERO VIDEO -->
     <section class="hero" id="accueil">
@@ -58,7 +57,6 @@
         <source src="assets/Mavic.mp4" type="video/mp4">
         Votre navigateur ne prend pas en charge la vidéo.
       </video>
-
       <div class="hero-overlay"></div>
 
       <div class="hero-content">
@@ -73,7 +71,6 @@
           œuvre pour éduquer, former, accompagner et protéger les communautés
           afin de construire une société plus solidaire et plus inclusive.
         </p>
-
         <div class="hero-actions">
           <a href="#mission" class="btn btn-primary">Découvrir notre mission <span><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
           <a href="#actions" class="btn btn-light">Voir nos actions</a>
