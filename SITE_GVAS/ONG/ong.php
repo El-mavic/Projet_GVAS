@@ -55,9 +55,7 @@
     <section class="hero" id="accueil">
 
       <video class="hero-video" autoplay muted loop playsinline poster="assets/logo.png">
-
-        <source src="assets/logo.mp4" type="video/mp4">
-
+        <source src="assets/Mavic.mp4" type="video/mp4">
         Votre navigateur ne prend pas en charge la vidéo.
       </video>
 
