@@ -37,7 +37,7 @@
 
     <nav class="nav-3d" id="mainNav">
       <a href="../index.php">GVAS</a>
-      <a href="Vika/mission.html">Notre mission</a>
+      <a href="#mission">Notre mission</a>
       <a href="#valeurs">Nos valeurs</a>
       <a href="#actualites">Actualités</a>
 
@@ -113,7 +113,7 @@
             locaux pour apporter des réponses concrètes aux défis sociaux,
             éducatifs et environnementaux.
           </p>
-          <a href="#valeurs" class="text-link">En savoir plus sur GVAS <span><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
+          <a href="Vika/index.html" class="text-link">En savoir plus sur GVAS <span><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
         </div>
 
         <div class="mission-card reveal">
