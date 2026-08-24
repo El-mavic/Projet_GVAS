@@ -37,7 +37,7 @@
 
     <nav class="nav-3d" id="mainNav">
       <a href="../index.php">GVAS</a>
-      <a href="#mission">Notre mission</a>
+      <a href="Vika/mission.html">Notre mission</a>
       <a href="#valeurs">Nos valeurs</a>
       <a href="#actualites">Actualités</a>
 
