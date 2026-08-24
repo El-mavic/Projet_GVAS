@@ -7,6 +7,9 @@
   <meta name="description"
     content="GVAS - Groupement des Volontaires pour l'Action Sociale. Éduquer, former, accompagner et protéger pour un avenir durable.">
   <title>GVAS — Groupement des Volontaires pour l'Action Sociale</title>
+  <meta name="author" content="El_Mavic BAKALA">
+    <meta name="author" content="Célina LUEMBA">
+    <meta name="author" content="Gloire NGUIMBI">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -14,6 +17,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/logo.png" type="image/png">
 </head>
 
 <body>
@@ -232,27 +236,27 @@
           <div class="news-image one">
             <img src="assets/image1.jpeg" alt="Actualité">
           </div>
-          <div class="news-body"><small>ACTIVITÉ • 2026</small>
+          <div class="news-body"><small>ACTIVITÉ </small>
             <h3>Nos actions au cœur des communautés</h3>
-            <p>Ajoutez ici vos dernières nouvelles, campagnes ou activités.</p><a href="#">Lire la suite →</a>
+            <p>Ajoutez ici vos dernières nouvelles, campagnes ou activités.</p><a href="#">Lire la suite <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
           </div>
         </article>
         <article class="news-card reveal">
           <div class="news-image two">
             <img src="assets/image.jpeg" alt="Actualité">
           </div>
-          <div class="news-body"><small>PROJET • 2026</small>
+          <div class="news-body"><small>PROJET </small>
             <h3>Construire ensemble des solutions durables</h3>
-            <p>Présentez ici vos projets, résultats et témoignages.</p><a href="#">Lire la suite →</a>
+            <p>Présentez ici vos projets, résultats et témoignages.</p><a href="#">Lire la suite <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
           </div>
         </article>
         <article class="news-card reveal">
           <div class="news-image three">
             <img src="assets/image2.jpeg" alt="Actualité">
           </div>
-          <div class="news-body"><small>ENGAGEMENT • 2026</small>
+          <div class="news-body"><small>ENGAGEMENT</small>
             <h3>Rejoindre une dynamique solidaire</h3>
-            <p>Partagez ici les opportunités de bénévolat et de partenariat.</p><a href="#">Lire la suite →</a>
+            <p>Partagez ici les opportunités de bénévolat et de partenariat.</p><a href="#">Lire la suite <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
           </div>
         </article>
       </div>

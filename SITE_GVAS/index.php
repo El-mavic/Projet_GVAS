@@ -175,9 +175,10 @@ if (!isset($_SESSION['visite_' . $page])) {
         <div class="card1">
             <h3>Centre de services</h3>
             <ul>
-                <li><a href="nos_services.php">✓ Nos Services </a></li>
-                <!-- <li><a href="impression.php">✓ Impression A4 / A3</a></li>
-                <li><a href="numerisation.php">✓ Numérisation de documents</a></li>
+                <li><a href="nos_services.php">✓ Secretariat </a></li>
+                <li><a href="services.php">✓ Autres services</a></li>
+
+                <!--  <li><a href="numerisation.php">✓ Numérisation de documents</a></li>
                 <li><a href="cartes-mariage.php">✓ Cartes de mariage</a></li>
                 <li><a href="mise-en-page.php">✓ Mise en page</a></li> -->
             </ul>
