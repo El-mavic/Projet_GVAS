@@ -584,7 +584,7 @@ button {
 
 .eyebrow,
 .section-tag {
-  font-size: 11px;
+  font-size: 18px;
   font-weight: 800;
   letter-spacing: 2.5px;
 
@@ -1015,8 +1015,7 @@ button {
 
 .actions-section {
   max-width: none;
-
-  background: var(--soft);
+  background: rgba(179, 178, 178, 0.5);
 }
 
 .actions-grid {
@@ -1183,27 +1182,20 @@ button {
 
 .value {
   display: grid;
-
   grid-template-columns: 55px 1fr;
-
   gap: 18px;
-
   padding: 25px 0;
-
   border-bottom: 1px solid rgba(255, 255, 255, .18);
 }
 
 .value>span {
-  font-size: 11px;
-
+  font-size: 18px;
   color: #6bc33f;
-
   font-weight: 800;
 }
 
 .value h3 {
   font-family: "Montserrat", sans-serif;
-
   font-size: 18px;
 }
 
@@ -1449,7 +1441,7 @@ button {
 }
 
 .news-body small {
-  font-size: 9px;
+  font-size: 15px;
 
   letter-spacing: 1.8px;
 
