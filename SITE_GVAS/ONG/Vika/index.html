@@ -1,225 +1,274 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Qui sommes-nous-GVAS Action Sociale</title>
 <link rel="stylesheet" href="../Vika/style.css">
-
-<!-- <link rel="stylesheet" href="ONG/style.css"> -->
+<link rel="stylesheet" href="../style.css">
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="second">
-
-<!-- Waiting for the hheader -->
-  <!-- HEADER 3D -->
-  <header class="header-3d" id="siteHeader">
-    <div class="header-glow"></div>
-
-    <a href="#accueil" class="brand-3d" aria-label="GVAS - Accueil">
-      <div class="logo-3d">
-        <img src="../assets/logo.png" alt="Logo GVAS">
-      </div>
-      <div class="brand-text">
-        <strong>GVAS</strong>
-        <span>Action Sociale</span>
-      </div>
-    </a>
-
-    <nav class="nav-3d" id="mainNav">
-      <a href="../index.php">GVAS</a>
-      <a href="#mission">Notre mission</a>
-      <a href="#valeurs">Nos valeurs</a>
-      <a href="#actualites">Actualités</a>
-
-      <a href="mailto:actionsocialegvas@gmail.com" class="join-3d">
-        <span>Nous rejoindre</span>
-        <b>↗</b>
-      </a>
-    </nav>
-
-    <button class="menu-3d" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-  </header>
 
 
-<!-- Background image with a blur.... -->
-<section class="text-white h-[500px] bg-cover bg-center bg-no-repeat overflow-hidden" style="background-image: url('../Vika/images/im1.jpg');">
-  <div class="hero-overlay h-[500px]">
-    <div class="max-w-6xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 center-left"><div>
-    <!-- <p class="uppercase tracking-widest text-[#f39c3c] font-bold text-2xl mb-4"></p> -->
-    <h1 class="text-5xl text-[#62b936] md:text-10xl font-bold leading-tight mb-6 mt-12 font-[Montserrat] text-[clamp(42px,6vw,82px)] leading-[1.03] tracking-[-3px] max-w-[850px]">A propos</h1>
-    <p class="text-white font-bold text-xl max-w-md">Lorem Ipsum is simple dummy text of the printing and 
-        typesetting industry. Lorem Ipsum has been the industry's
-    </div>
-  </div>
-</section>
+<body class="second overflow-x-hidden">
 
-<!-- le contenu de qui sommes-nous et la vidéo  -->
-<section class=" max-w-6xl mx-auto px-6 py-16 md:py-24 bg-cover w-full">
-  <div class="grid md:grid-cols-2 gap-20 my-3 gap-12 flex flex-col md:flex-row items-center">
-    <div>
-      <h2 class="text-4xl md:text-6xl font-bold  text-[#62b936] mb-6">Qui nous sommes</h2>
-      <p class="text-gray-700 mb-4 text-2xl"><strong>GVAS-Groupe Vision d'Aigle Services Action Sociale</strong> .</p>
-      <p class="text-gray-700 text-lg md:text-2xl">orem Ipsum is simple dummy text of the printing and 
-        typesetting industry. Lorem Ipsum has been the industry's
-      orem Ipsum is simple dummy text of the printing and 
-        typesetting industry. Lorem Ipsum has been the industry's
-      orem Ipsum is simple dummy text of the printing and 
-        typesetting industry. Lorem Ipsum has been the industry's
-      </p>
-    </div>
+    <!-- Waiting for the hheader -->
+    <!-- HEADER 3D -->
+    <header class="header-3d" id="siteHeader">
+        <div class="header-glow"></div>
 
-    <div class="mt-12">
-      <video controls width="4000" height="2500">
-        <source src="images/video.mp4">
-      </video>
-    </div>
-  </div>
-</section>
+        <a href="#accueil" class="brand-3d" aria-label="GVAS - Accueil">
+            <div class="logo-3d">
+            <img src="../assets/logo.png" alt="Logo GVAS">
+            </div>
+            <div class="brand-text">
+            <strong>GVAS</strong>
+            <span>Action Sociale</span>
+            </div>
+        </a>
 
-<!-- Foire aux questions... -->
-<section class="max-w-6xl mx-auto px-6 py-16 md:py-24">
-  <p class="text-4xl md:text-6xl font-bold  text-[#62b936] mb-6 mb-3">Foire aux questions</p>
-  <h2 class="text-3xl md:text-4xl font-bold mb-10">Vous vous posez des questions ?</h2>
+        <nav class="nav-3d" id="mainNav">
+            <a href="../ong.php">Accueil</a>
+            <a href="../Vika/mission.html">Notre mission</a>
+            <a href="../ong.php#valeurs">Nos valeurs</a>
+            <a href="../ong.php#actualites">Actualités</a>
 
-  <div class="divide-y divide-gray-200 border-t border-b border-gray-200">
+            <a href="mailto:actionsocialegvas@gmail.com" class="join-3d">
+            <span>Nous rejoindre</span>
+            <b>↗</b>
+            </a>
+        </nav>
 
-    <div>
-      <input type="checkbox" class="peer hidden">
-      <label class="flex items-center justify-between gap-4 py-5 cursor-pointer">
-        <span class="text-gray-700 text-lg md:text-2xl">Quelles est votre secteur d'activité</span>
-        <span class="text-xl text-[#2f8f4e]">+</span>
-      </label>
-      <div class="grid grid-rows-[0fr] peer-checked:grid-rows-[1fr]">
-        <div class="overflow-hidden">
-          <p class="text-gray-700 text-lg md:text-2xl">Nous travaillons pour l'assainissement...</p>
+        <button class="menu-3d" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Background image with a blur.... -->
+    <section class="relative background text-white min-h-[420px] md:min-h-[520px] bg-cover bg-center bg-no-repeat overflow-hidden" style="background-image: url('../Vika/images/im1.jpg');">
+        <div class="hero-overlay absolute inset-0 bg-black/40"></div>
+
+        <div class="relative max-w-6xl mx-auto px-6 py-24 md:py-36 flex items-center min-h-[420px] md:min-h-[520px]">
+            <div class="max-w-[700px]">
+            <h1 class="font-heading text-[clamp(28px,5vw,60px)] text-[#62b936] font-bold leading-[1.05] tracking-[-2px] mb-6">
+                Une organisation engagée
+                <br>au service de l'humain
+            </h1>
+            <p class="text-white font-semibold text-base sm:text-lg md:text-xl max-w-md mb-8">
+                Depuis notre création, nous accompagnons les communautés à travers l'éducation, l'action sociale et le développement durable.
+            </p>
+            <a href="#mission" class="inline-block bg-[#62b936] text-white font-bold px-6 py-3 rounded-full transition-all duration-300 hover:bg-[#2f8f4e] hover:scale-105 hover:shadow-lg">
+                Découvrir qui nous sommes
+            </a>
+            </div>
         </div>
-      </div>
-    </div>
-    <div>
-      <input type="checkbox" class="peer hidden">
-      <label class="flex items-center justify-between gap-4 py-5 cursor-pointer">
-        <span class="text-gray-700 text-lg md:text-2xl">Quelles est votre secteur d'activité</span>
-        <span class="text-xl text-[#2f8f4e]">+</span>
-      </label>
-      <div class="grid grid-rows-[0fr] peer-checked:grid-rows-[1fr] transition-all duration-300 overflow-hidden">
-        <div class="overflow-hidden">
-          <p class="text-gray-700 text-lg md:text-2xl">Nous travaillons pour l'assainissement...</p>
+    </section>
+
+    <!-- le contenu de qui sommes-nous et la vidéo  -->
+
+    <section class="max-w-6xl mx-auto px-6 py-16 md:py-24">
+        <div class="grid md:grid-cols-2 gap-12 items-center scroll-mt-40" id="mission">
+            <div>
+            <h2 class="font-heading text-3xl md:text-5xl font-bold text-[#62b936] mb-6">Qui nous sommes</h2>
+            <p class="text-gray-700 mb-4 text-base md:text-xl leading-relaxed">
+                <strong>ONG GVAS-Action Sociale</strong> est une organisation engagée dans l'amélioration durable des conditions de vie des populations. Elle intervient notamment dans les domaines de l'éducation, de la formation professionnelle, de l'accompagnement des jeunes, de l'action sociale, de la protection de l'environnement et du développement communautaire.
+            </p>
+            <p class="text-gray-700 mb-4 text-base md:text-xl leading-relaxed">
+                Notre organisation place la personne et les communautés au cœur de son action. Nous œuvrons à renforcer les compétences, favoriser l'inclusion sociale et soutenir les initiatives qui contribuent à l'autonomisation des populations.
+            </p>
+            <p class="text-gray-700 text-base md:text-xl leading-relaxed">
+                À travers ses différents programmes et en collaboration avec les institutions publiques, les organisations nationales et internationales, le secteur privé et les partenaires techniques et financiers, l'ONG GVAS-Action Sociale développe des réponses adaptées aux enjeux sociaux, éducatifs et environnementaux.
+            </p>
+            </div>
+
+            <div class="w-full rounded-xl overflow-hidden shadow-lg">
+            <video controls class="w-full h-auto rounded-xl">
+                <source src="images/video.mp4" type="video/mp4">
+            </video>
+            </div>
         </div>
-      </div>
-    </div>
-    <div>
-      <input type="checkbox" class="peer hidden">
-      <label class="flex items-center justify-between gap-4 py-5 cursor-pointer">
-        <span class="text-gray-700 text-lg md:text-2xl">Quelles est votre secteur d'activité</span>
-        <span class="text-xl text-[#2f8f4e]">+</span>
-      </label>
-      <div class="grid grid-rows-[0fr] peer-checked:grid-rows-[1fr] ">
-        <div class="overflow-hidden">
-          <p class="text-gray-700 text-lg md:text-2xl">Nous travaillons pour l'assainissement...</p>
+    </section>
+
+    <!-- FAQ which means "Foire Aux Questions" -->
+    <section class="max-w-6xl mx-auto px-6 py-16 md:py-24">
+        <p class="font-heading text-3xl md:text-5xl font-bold text-[#62b936] mb-3">Foire aux questions</p>
+        <h2 class="text-2xl md:text-4xl font-bold mb-10">Vous vous posez des questions ?</h2>
+        <div class="flex flex-col gap-4">
+            <div class="faq-item rounded-xl border border-gray-200 bg-[#62b936]/5 transition-colors duration-300 hover:border-[#62b936]/50">
+                <input type="checkbox" id="faq-1" class="peer hidden">
+                <label for="faq-1" class="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer">
+                    <span class="text-gray-800 text-base md:text-xl font-medium">Quel est votre secteur d'activité ?</span>
+                    <span class="faq-icon text-2xl text-[#2f8f4e] leading-none">+</span>
+                </label>
+                <div class="faq-answer">
+                    <div class="px-5 pb-4">
+                        <p class="text-gray-700 text-sm md:text-lg mt-4">Nous travaillons pour l'assainissement...heyyvj,fjj cnjk jpout comprenfrtr rcactement où ous en somems aavec djIt is believed that they scrambled parts of Cicero’s De Finibus Bonorum et Malorum in the 1960s for use in their Body Type (basically body paragraph placeholder) sheets. It usually begins with:</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item rounded-xl border border-gray-200 bg-[#62b936]/5 transition-colors duration-300 hover:border-[#62b936]/50">
+                <input type="checkbox" id="faq-2" class="peer hidden">
+                <label for="faq-2" class="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer">
+                    <span class="text-gray-800 text-base md:text-xl font-medium">Quel est votre secteur d'activité ?</span>
+                    <span class="faq-icon text-2xl text-[#2f8f4e] leading-none">+</span>
+                </label>
+                <div class="faq-answer">
+                    <div class="px-5 pb-4">
+                        <p class="text-gray-700 text-sm md:text-lg mt-4">Nous travaillons pour l'assainissement...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item rounded-xl border border-gray-200 bg-[#62b936]/5 transition-colors duration-300 hover:border-[#62b936]/50">
+                <input type="checkbox" id="faq-3" class="peer hidden">
+                <label for="faq-3" class="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer">
+                    <span class="text-gray-800 text-base md:text-xl font-medium">Quel est votre secteur d'activité ?</span>
+                    <span class="faq-icon text-2xl text-[#2f8f4e] leading-none">+</span>
+                </label>
+                <div class="faq-answer">
+                    <div class="px-5 pb-4">
+                        <p class="text-gray-700 text-sm md:text-lg mt-4">Nous travaillons pour l'assainissement...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item rounded-xl border border-gray-200 bg-[#62b936]/5 transition-colors duration-300 hover:border-[#62b936]/50">
+                <input type="checkbox" id="faq-4" class="peer hidden">
+                <label for="faq-4" class="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer">
+                    <span class="text-gray-800 text-base md:text-xl font-medium">Quel est votre secteur d'activité ?</span>
+                    <span class="faq-icon text-2xl text-[#2f8f4e] leading-none">+</span>
+                </label>
+                <div class="faq-answer">
+                    <div class="px-5 pb-4">
+                        <p class="text-gray-700 text-sm md:text-lg mt-4">Nous travaillons pour l'assainissement...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item rounded-xl border border-gray-200 bg-[#62b936]/5 transition-colors duration-300 hover:border-[#62b936]/50">
+                <input type="checkbox" id="faq-5" class="peer hidden">
+                <label for="faq-5" class="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer">
+                    <span class="text-gray-800 text-base md:text-xl font-medium">Quel est votre secteur d'activité ?</span>
+                    <span class="faq-icon text-2xl text-[#2f8f4e] leading-none">+</span>
+                </label>
+                <div class="faq-answer">
+                    <div class="px-5 pb-4">
+                        <p class="text-gray-700 text-sm md:text-lg mt-4">Nous travaillons pour l'assainissement...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item rounded-xl border border-gray-200 bg-[#62b936]/5 transition-colors duration-300 hover:border-[#62b936]/50">
+                <input type="checkbox" id="faq-6" class="peer hidden">
+                <label for="faq-6" class="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer">
+                    <span class="text-gray-800 text-base md:text-xl font-medium">Quel est votre secteur d'activité ?</span>
+                    <span class="faq-icon text-2xl text-[#2f8f4e] leading-none">+</span>
+                </label>
+                <div class="faq-answer">
+                    <div class="px-5 pb-4">
+                        <p class="text-gray-700 text-sm md:text-lg mt-4">Nous travaillons pour l'assainissement...</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
-      </div>
-    </div>
-    <div>
-      <input type="checkbox" class="peer hidden">
-      <label class="flex items-center justify-between gap-4 py-5 cursor-pointer">
-        <span class="text-gray-700 text-lg md:text-2xl">Quelles est votre secteur d'activité</span>
-        <span class="text-xl text-[#2f8f4e]">+</span>
-      </label>
-      <div class="grid grid-rows-[0fr] peer-checked:grid-rows-[1fr] transition-all duration-300 overflow-hidden">
-        <div class="overflow-hidden">
-          <p class="text-gray-700 text-lg md:text-2xl">Nous travaillons pour l'assainissement...</p>
+    </section>
+
+
+    <!-- Partie de notre Mission -->
+    <section class="bg-white border-y border-gray-200">
+    <div class="max-w-6xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center"><div>
+        <p class="font-heading text-3xl md:text-5xl font-bold text-[#62b936] mb-3">Notre mission</p>
+        <h2 class="text-2xl md:text-4xl font-bold mb-5">Agir pour un développement durable et solidaire</h2>
+        <p class="text-gray-700 text-base md:text-xl leading-relaxed">
+            Notre mission est de concevoir et de mettre en œuvre des programmes qui répondent aux besoins des communautés et contribuent à l'amélioration durable de leurs conditions de vie.
+        </p>
+        <a href="mission.html" class="inline-block bg-[#152a54] text-white font-bold px-6 py-3 rounded-full text-center mt-6 transition-all duration-300 hover:bg-[#2f8f4e] hover:scale-105 hover:shadow-lg w-2xl">
+            Découvrir
+        </a>
         </div>
-      </div>
-    </div>
-    <div>
-      <input type="checkbox" class="peer hidden">
-      <label class="flex items-center justify-between gap-4 py-5 cursor-pointer">
-        <span class="text-gray-700 text-lg md:text-2xl">Quelles est votre secteur d'activit tié</span>
-        <span class="text-xl text-[#2f8f4e]">+</span>
-      </label>
-      <div class="grid grid-rows-[0fr] peer-checked:grid-rows-[1fr] ">
-        <div class="overflow-hidden">
-          <p class="text-gray-700 text-lg md:text-2xl">Nous travaillons pour l'assainissement...</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-[#f7f7f2] rounded-xl p-6 border border-gray-200 transition-all duration-300 hover:border-[#62b936] hover:-translate-y-1 hover:shadow-md">
+            <p class="text-lg md:text-2xl font-bold text-[#62b936] mb-1">ÉDUCATION & FORMATION</p>
+            <p class="text-sm text-gray-500">Permettre aux jeunes et aux membres des communautés d'acquérir des connaissances et des compétences favorisant leur autonomie et leur insertion professionnelle.</p>
         </div>
-    <div>
-      <input type="checkbox" class="peer hidden">
-      <label class="flex items-center justify-between gap-4 py-5 cursor-pointer">
-        <span class="text-gray-700 text-lg md:text-2xl">Quelles est votre secteur d'activité</span>
-        <span class="text-xl text-[#2f8f4e]">+</span>
-      </label>
-      <div class="grid grid-rows-[0fr] peer-checked:grid-rows-[1fr] ">
-        <div class="overflow-hidden">
-          <p class="text-gray-700 text-lg md:text-2xl">Nous travaillons pour l'assainissement...</p>
+
+        <div class="bg-[#f7f7f2] rounded-xl p-6 border border-gray-200 transition-all duration-300 hover:border-[#62b936] hover:-translate-y-1 hover:shadow-md">
+            <p class="text-lg md:text-2xl font-bold text-[#62b936] mb-1">JEUNESSE & AUTONOMISATION</p>
+            <p class="text-sm text-gray-500">Accompagner les jeunes dans leur développement, leurs initiatives et leurs projets afin de favoriser leur autonomie et leur participation à la vie de la communauté.</p>
         </div>
-      </div>
+
+        <div class="bg-[#f7f7f2] rounded-xl p-6 border border-gray-200 transition-all duration-300 hover:border-[#62b936] hover:-translate-y-1 hover:shadow-md">
+            <p class="text-lg md:text-2xl font-bold text-[#62b936] mb-1">ENVIRONNEMENT & DÉVELOPPEMENT</p>
+            <p class="text-sm text-gray-500">Mettre en œuvre des actions solidaires répondant aux besoins des populations et contribuant à l'amélioration de leurs conditions de vie.</p>
+        </div>
+
+        <div class="bg-[#f7f7f2] rounded-xl p-6 border border-gray-200 transition-all duration-300 hover:border-[#62b936] hover:-translate-y-1 hover:shadow-md">
+            <p class="text-lg md:text-2xl font-bold text-[#62b936] mb-1">ACTION SOCIALE</p>
+            <p class="text-sm text-gray-500">Sensibiliser à la protection de l'environnement et soutenir des initiatives favorisant un développement durable des communautés.</p>
+        </div>
+        </div>
     </div>
+    </section>
 
-  </div>
-</section>
-
-
-<!-- Partie de notre Mission -->
-<section class="bg-white border-y border-gray-200">
-  <div class="max-w-6xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
-    <div>
-      <p class="text-4xl md:text-6xl font-bold  text-[#62b936] mb-6mb-3" >Notre mission</p>
-      <h2 class="text-3xl md:text-4xl font-bold mb-5">Agir pour un développement durable et solidaire</h2>
-      <p class="text-gray-700 text-lg md:text-2xl">Notre mission est de concevoir et de mettre en œuvre des programmes qui répondent aux besoins des communautés et contribuent à l'amélioration durable de leurs conditions de vie</p>
-      <a href="mission.html" class="inline-block bg-[#152a54] hover:bg-[#2c5fa8] text-2xl text-white font-bold px-6 py-3 rounded-full w-2/3 text-center mt-6">decouvrir</a>
+    <!-- Notre gouvernance -->
+    <section class="max-w-6xl mx-auto px-6 py-16 md:py-24">
+    <p class="font-heading text-3xl md:text-5xl font-bold text-[#62b936] mb-3">Notre Gouvernance</p>
+    <h2 class="text-2xl md:text-4xl font-bold mb-10 max-w-2xl">Une organisation fondée sur la responsabilité et la collaboration</h2>
+    <div class="flex justify-center text-center">
+        <p class="text-gray-700 text-base md:text-xl leading-relaxed max-w-4xl">
+        La gouvernance de notre organisation repose sur une vision commune et sur la volonté de mettre les compétences de chacun au service de l'intérêt collectif. Elle s'appuie sur une organisation structurée permettant d'assurer la coordination, le suivi et la mise en œuvre de nos différentes activités.
+        <br><br>
+        Notre fonctionnement privilégie la collaboration entre les responsables, les équipes opérationnelles, les bénévoles et les différents acteurs qui contribuent à nos actions. Cette approche nous permet de mieux identifier les besoins des communautés, de définir des priorités adaptées et de mettre en place des initiatives répondant aux réalités du terrain.
+        </p>
     </div>
-    <div class="grid grid-cols-2 gap-4">
-      <div class="bg-[#f7f7f2] rounded-xl p-6 border border-gray-200">
-        <p class="text-2xl font-bold text-[#62b936] mb-1">ÉDUCATION & FORMATION</p> 
-        <p class="text-sm text-gray-500">Permettre aux jeunes et aux membres des communautés d'acquérir des connaissances et des compétences favorisant leur autonomie et leur insertion professionnelle</p>
-      </div>
+    </section>
 
-     
-      <div class="bg-[#f7f7f2] rounded-xl p-6 border border-gray-200">
-        <p class="text-2xl font-bold text-[#62b936] mb-1">JEUNESSE & AUTONOMISATION</p> 
-        <p class="text-sm text-gray-500">Accompagner les jeunes dans leur développement, leurs initiatives et leurs projets afin de favoriser leur autonomie et leur participation à la vie de la communauté.</p>
-      </div>
 
-      <div class="bg-[#f7f7f2] rounded-xl p-6 border border-gray-200">
-        <p class="text-2xl font-bold text-[#62b936] mb-1">ENVIRONNEMENT & DÉVELOPPEMENT</p> 
-        <p class="text-sm text-gray-500">Mettre en œuvre des actions solidaires répondant au besoins des polulations et contribuant à l'amélioration de leurs conditions de vie</p>
-      </div>
+    <!-- si possible we can put partenanire -->
+    <section class="bg-[#152a54] text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 20% 20%, #62b936 0%, transparent 40%), radial-gradient(circle at 80% 80%, #f39c3c 0%, transparent 40%);"></div>
 
-      <div class="bg-[#f7f7f2] rounded-xl p-6 border border-gray-200">
-        <p class="text-2xl font-bold text-[#62b936] mb-1">ACTION SOCIALE</p> 
-        <p class="text-sm text-gray-500">Sensibiliser à la protection de l'environnement et soutenir des initiatives favorisant un développement durable des communautés</p>
-      </div>
-      
+    <div class="relative max-w-6xl mx-auto px-6 py-16 md:py-24">
+        <p class="font-heading text-2xl md:text-4xl font-bold text-[#62b936] mb-3 text-center md:text-left">Nos partenaires</p>
+        <h2 class="text-xl md:text-3xl font-bold mb-10 text-center md:text-left max-w-2xl">
+        Ensemble, allons plus loin pour les communautés
+        </h2>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-14">
+        <div class="bg-white/5 border border-white/10 rounded-xl h-20 flex items-center justify-center transition-all duration-300 hover:bg-white/10 hover:border-[#62b936]/60 hover:-translate-y-1">
+            <img src="../Vivi/images/Partenaires/VIP.png">
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl h-20 flex items-center justify-center transition-all duration-300 hover:bg-white/10 hover:border-[#62b936]/60 hover:-translate-y-1">
+            <img src="../Vivi/images/Partenaires/cvmc.png" alt="logo">
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl h-20 flex items-center justify-center transition-all duration-300 hover:bg-white/10 hover:border-[#62b936]/60 hover:-translate-y-1">
+            <img src="../Vivi/images/Partenaires/cvmc.png" alt="logo">
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-xl h-20 flex items-center justify-center transition-all duration-300 hover:bg-white/10 hover:border-[#62b936]/60 hover:-translate-y-1">
+            <img src="../Vivi/images/Partenaires/cvmc.png" alt="logo">
+        </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8 bg-white/5 border border-white/10 rounded-2xl p-8 md:p-10">
+        <div class="text-center md:text-left">
+            <h3 class="text-xl md:text-2xl font-bold mb-2">Vous êtes une organisation et vous voulez vous joindre à nous ?</h3>
+            <p class="text-white/70">Contactez-nous pour construire ensemble des actions durables au service des communautés.</p>
+        </div>
+        <a href="mailto:actionsocialegvas@gmail.com" class="bg-[#f39c3c] text-white font-bold px-7 py-3 rounded-full whitespace-nowrap transition-all duration-300 hover:bg-[#e08b2c] hover:scale-105 hover:shadow-lg">
+            Contactez-nous
+        </a>
+        </div>
     </div>
-      
-  </div>
-</section>
+    </section>
 
-<section class="max-w-6xl mx-auto px-6 py-16 md:py-24">
-  <p class="text-4xl md:text-6xl font-bold  text-[#62b936] mb-6 mb-3">Notre Gouvernance</p>
-  <h2 class="text-3xl md:text-4xl font-bold mb-10 max-w-2xl">Une organisation fondée sur la responsabilité et la collaboration</h2>
-  <div class="flex justify-center text-center max-w-6xl">
-    <p class="text-gray-700 text-lg md:text-2xl">La gouvernance de notre organisation repose sur une vision commune et sur la volonté de mettre les compétences de chacun au service de l'intérêt collectif. Elle s'appuie sur une organisation structurée permettant d'assurer la coordination, le suivi et la mise en œuvre de nos différentes activités.
-
-Notre fonctionnement privilégie la collaboration entre les responsables, les équipes opérationnelles, les bénévoles et les différents acteurs qui contribuent à nos actions. Cette approche nous permet de mieux identifier les besoins des communautés, de définir des priorités adaptées et de mettre en place des initiatives répondant aux réalités du terrain</p>
-    
-</section>
-
-<!-- si possible we can put partenanire -->
-<section class="bg-[#152a54] text-white">
-  <div class="max-w-6xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center justify-between gap-8">
-    <div>
-      <h2 class="text-2xl md:text-3xl font-bold mb-2">Vous êtes une organisation et vous voulez vous joindre à nous? contactez-nous</h2>
-      <p class="text-white/70">hiiytokyo hb,;kjhgfezasc</p>
-    </div>
-    <a href="" class="bg-[#f39c3c] hover:bg-[#e08b2c] text-white font-bold px-7 py-3 rounded-full whitespace-nowrap">contactez-nous</a>
-  </div>
-</section>
-<footer></footer>
-<script src="../script.js"></script>
+    <footer>
+        
+    </footer>
+    <script src="../script.js"></script>
 </body>
 </html>
