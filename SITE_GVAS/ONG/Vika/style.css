@@ -53,3 +53,9 @@
   .faq-answer > div {
     overflow: hidden;
   }
+
+  /* Dans ton fichier CSS (pas en classe Tailwind) */
+.modale:target {
+  opacity: 1;
+  pointer-events: auto;
+}

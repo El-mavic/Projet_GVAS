@@ -163,13 +163,6 @@
           <h3>Secrétaire chargée de communication</h3>
         </div>
       </div>
-      <div class="team-card card-8">
-        <img src="images/admin/christ.png" alt="anglais">
-        <div class="team-content">
-          <h2><span>Mr NGOUNDIABAHOU Christ</span></h2>
-          <h3>Responsable de la langue Anglaise</h3>
-        </div>
-      </div>
     </div>
   </section>
 
