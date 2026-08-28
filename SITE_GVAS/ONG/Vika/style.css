@@ -270,6 +270,7 @@
     opacity: 1;
     transform: scale(1);
   }
+<<<<<<< HEAD
 
 }
 
@@ -301,4 +302,14 @@
     font-size: 20px;
   }
 
+=======
+  .faq-answer > div {
+    overflow: hidden;
+  }
+
+  /* Dans ton fichier CSS (pas en classe Tailwind) */
+.modale:target {
+  opacity: 1;
+  pointer-events: auto;
+>>>>>>> 319aa87b1a2a095bae17a9d8fa7c6b813f2dc50b
 }

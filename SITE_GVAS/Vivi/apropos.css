@@ -160,14 +160,12 @@ body {
   font-size: 2rem;
   line-height: 1.7;
   color: rgb(255, 248, 248);
-  /* margin-bottom: 58px; */
   font-style: italic;
   position: relative;
-  /* letter-spacing: 1px; */
   top: -60px;
   left: 20%;
   text-align: center;
-  /* text-align: left; */
+  
 }
 
 .h-content a {
@@ -177,7 +175,6 @@ body {
   border-style: solid;
   border-radius: 30px;
   font-size: 1.5em;
-  /* font-weight: 700; */
   cursor: pointer;
   transition:
     background 0.3s,
@@ -185,20 +182,18 @@ body {
   text-decoration: none;
   position: relative;
   left: 0;
-  top: -20px;
-  /* border-bottom: 1px solid rgba(255, 255, 255, 0.4); */
+  top: 5px;
 }
 
 .h-content a {
   display: inline-block;
-  margin-top: -50px;
   color: white !important;
 
 }
 
 .h-content a:hover {
   background: var(--bleu);
-  transform: scale(1.04);
+  transform: scale(0.94);
   border-color: var(--rouge);
 }
 
