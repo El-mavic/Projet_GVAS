@@ -1797,11 +1797,12 @@ section {
     align-items: center;
 }
 
+
 .intro-text .tag {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #876a00;
+    color: yellow;
     font-size: 13px;
     font-weight: 700;
     margin-bottom: 13px;
@@ -1838,7 +1839,7 @@ section {
     height: 280px;
     border-radius: 18px;
     background: linear-gradient(135deg,
-            #f4c400,
+            yellow,
             #ffe68a);
     display: flex;
     align-items: center;
@@ -1901,7 +1902,7 @@ section {
     height: 38px;
     border-radius: 10px;
     background: var(--yellow-light);
-    color: #8b6b00;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1930,7 +1931,7 @@ section {
 
 .domain-card li::before {
     content: "✓";
-    color: #a27e00;
+    color: yellow;
     font-weight: 800;
 }
 
@@ -1975,7 +1976,7 @@ section {
     background: white;
     padding: 9px 15px;
     border-radius: 8px;
-    color: #806400;
+    color: yellow;
     font-size: 11px;
     font-weight: 700;
 }
