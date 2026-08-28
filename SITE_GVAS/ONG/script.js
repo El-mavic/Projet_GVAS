@@ -83,3 +83,47 @@ const video = document.querySelector(".hero-video");
 video?.addEventListener("error", () => {
   video.style.display = "none";
 });
+
+
+
+
+        // Récupération des éléments
+
+        const boutonOuvrir = document.getElementById("ouvrir-partenaires");
+
+        const popup = document.getElementById("popup-partenaires");
+
+        const boutonFermer = document.getElementById("fermer-partenaires");
+
+
+        // OUVRIR LA FENÊTRE
+
+        boutonOuvrir.addEventListener("click", function (event) {
+
+            event.preventDefault();
+
+            popup.classList.add("active");
+
+        });
+
+
+        // FERMER AVEC LE X
+
+        boutonFermer.addEventListener("click", function () {
+
+            popup.classList.remove("active");
+
+        });
+
+
+        // FERMER EN CLIQUANT SUR LE FOND SOMBRE
+
+        popup.addEventListener("click", function (event) {
+
+            if (event.target === popup) {
+
+                popup.classList.remove("active");
+
+            }
+
+        });

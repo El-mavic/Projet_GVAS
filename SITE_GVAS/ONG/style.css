@@ -2328,3 +2328,306 @@ button {
     font-size: 7px;
   }
 }
+
+
+
+
+
+
+.btn-partenaires {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #010c1b;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-partenaires:hover {
+  transform: scale(1.05);
+}
+
+.partenaire img {
+  width: 150px;
+  height: 150px;
+  border-radius: 150%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ========================================
+           FOND SOMBRE DE LA FENÊTRE
+        ========================================= */
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  /* Cachée au départ */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+/* Classe ajoutée par JavaScript */
+.popup-overlay.active {
+  display: flex;
+}
+
+/* ========================================
+           FENÊTRE DES PARTENAIRES
+        ========================================= */
+
+.popup-content {
+  position: relative;
+  width: 400px;
+  height: 420px;
+  max-width: 50%;
+  background: rgba(73, 73, 73, 0.822);
+  padding: 25px 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+  animation: apparition 0.4s ease;
+}
+
+
+
+/* ========================================
+           TITRE
+        ========================================= */
+
+.popup-content h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 24px;
+  color: #222;
+}
+
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background: transparent;
+  font-size: 32px;
+  cursor: pointer;
+  color: #333;
+}
+
+
+.close-popup:hover {
+  color: red;
+}
+
+
+.partenaires {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.partenaire {
+  text-align: center;
+}
+
+
+.partenaire img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: contain;
+  transition: 0.3s;
+  position: relative;
+  left: 35px;
+}
+
+.partenaire img:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* NOM DU PARTENAIRE ******************************** La suite ***************************/
+
+.partenaire p {
+  margin-top: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ebe7e7;
+}
+
+@keyframes apparition {
+
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+.footer-slogan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.btn-partenaires {
+  display: inline-block;
+  text-align: center;
+  max-width: 100%;
+}
+
+/* ================================
+   TABLETTE
+================================ */
+
+@media screen and (max-width: 768px) {
+
+  .popup-content {
+    width: 80%;
+    height: auto;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 25px 20px;
+    box-sizing: border-box;
+  }
+
+  .partenaires {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 15px;
+  }
+
+  .partenaire img {
+    width: 90px;
+    height: 90px;
+    left: auto;
+    margin: 0 auto;
+  }
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media screen and (max-width: 576px) {
+
+  .popup-overlay {
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .popup-content {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    max-height: 85vh;
+    padding: 25px 15px;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+
+  .popup-content h2 {
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+
+  .partenaires {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 10px;
+  }
+
+  .partenaire {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .partenaire img {
+    width: 75px;
+    height: 75px;
+    left: auto;
+    margin: 0 auto;
+  }
+
+  .partenaire p {
+    font-size: 13px;
+    text-align: center;
+  }
+
+}
+
+
+/* ================================
+   PETIT MOBILE
+================================ */
+
+@media screen and (max-width: 400px) {
+
+  .popup-overlay {
+    padding: 10px;
+  }
+
+  .popup-content {
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  .partenaires {
+    gap: 15px 5px;
+  }
+
+  .partenaire img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .partenaire p {
+    font-size: 12px;
+  }
+
+}
+
+
+/* ================================
+   TRÈS PETIT MOBILE
+================================ */
+
+@media screen and (max-width: 320px) {
+
+  .popup-content {
+    padding: 20px 8px;
+  }
+
+  .partenaire img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .partenaire p {
+    font-size: 11px;
+  }
+
+}

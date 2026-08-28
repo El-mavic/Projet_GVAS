@@ -8,8 +8,8 @@
     content="GVAS - Groupement des Volontaires pour l'Action Sociale. Éduquer, former, accompagner et protéger pour un avenir durable.">
   <title>GVAS — Groupement des Volontaires pour l'Action Sociale</title>
   <meta name="author" content="El_Mavic BAKALA">
-    <meta name="author" content="Célina LUEMBA">
-    <meta name="author" content="Gloire NGUIMBI">
+  <meta name="author" content="Célina LUEMBA">
+  <meta name="author" content="Gloire NGUIMBI">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -306,7 +306,7 @@
           <span>+242 05 755 44 00</span>
         </a>
 
-        <a href="mailto:contact@gvas.cg" class="footer-contact-item">
+        <a href="mailto:actionsocialegvas@gmail.com" class="footer-contact-item">
           <span class="contact-icon"> <i class="fa-solid fa-envelope"></i></span>
           <span>actionsocialegvas@gmail.com</span>
         </a>
@@ -322,10 +322,66 @@
       <div class="footer-bottom">
 
         <span class="footer-slogan">
-          Ensemble pour un avenir durable
+          <a href="#" class="btn-partenaires" id="ouvrir-partenaires">
+            Cliquez pour découvrir nos partenaires
+          </a>
         </span>
       </div>
+    </div>
 
+    <div id="popup-partenaires" class="popup-overlay">
+
+      <div class="popup-content">
+
+
+        <!-- BOUTON FERMER -->
+        <button class="close-popup" id="fermer-partenaires">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- TITRE -->
+
+        <h2>Nos partenaires</h2>
+        <div class="partenaires">
+          <!-- PARTENAIRE 1 -->
+          <div class="partenaire">
+            <img src="../images/Partenaires/AJEC.png" alt="Partenaire 1">
+            <p>AJEC</p>
+          </div>
+
+
+
+          <!-- PARTENAIRE 2 -->
+          <div class="partenaire">
+            <img src="../images/Partenaires/VIP.png" alt="Partenaire 5">
+
+            <p>VIP consulting</p>
+          </div>
+
+
+
+          <!-- PARTENAIRE 3 -->
+          <div class="partenaire">
+            <img src="../images/Partenaires/Ecole.png" alt="Partenaire 3">
+            <p>La Maninguette</p>
+          </div>
+
+
+
+          <!-- PARTENAIRE 4 -->
+          <div class="partenaire">
+            <img src="../images/Partenaires/R.jpg" alt="Partenaire 4">
+            <p>Airtel Congo</p>
+          </div>
+
+          <!-- PARTENAIRE 5 -->
+          <!-- <div class="partenaire">
+           <img src="../images/Partenaires/cvmc.png" alt="Partenaire 2">
+            <p>Nom du partenaire 5</p>
+          </div> -->
+
+        </div>
+      </div>
     </div>
   </footer>
   <script src="script.js"></script>
