@@ -1,0 +1,75 @@
+main {
+    background-image: repeating-linear-gradient(135deg, rgba(240, 240, 240,0.02) 0px, rgba(240, 240, 240,0.02) 21px,rgba(224, 224, 224,0.02) 21px, rgba(224, 224, 224,0.02) 42px,rgba(208, 208, 208,0.02) 42px, rgba(208, 208, 208,0.02) 63px,rgba(192, 192, 192,0.02) 63px, rgba(192, 192, 192,0.02) 84px,rgba(175, 175, 175,0.02) 84px, rgba(175, 175, 175,0.02) 105px,rgba(159, 159, 159,0.02) 105px, rgba(159, 159, 159,0.02) 126px,rgba(143, 143, 143,0.02) 126px, rgba(143, 143, 143,0.02) 147px,rgba(127, 127, 127,0.02) 147px, rgba(127, 127, 127,0.02) 168px),repeating-linear-gradient(45deg, rgba(232, 232, 232,0.02) 0px, rgba(232, 232, 232,0.02) 21px,rgba(209, 209, 209,0.02) 21px, rgba(209, 209, 209,0.02) 42px,rgba(185, 185, 185,0.02) 42px, rgba(185, 185, 185,0.02) 63px,rgba(162, 162, 162,0.02) 63px, rgba(162, 162, 162,0.02) 84px,rgba(138, 138, 138,0.02) 84px, rgba(138, 138, 138,0.02) 105px,rgba(115, 115, 115,0.02) 105px, rgba(115, 115, 115,0.02) 126px,rgba(91, 91, 91,0.02) 126px, rgba(91, 91, 91,0.02) 147px,rgba(68, 68, 68,0.02) 147px, rgba(68, 68, 68,0.02) 168px),linear-gradient(90deg, #ffffff,#ffffff);
+}
+
+.sct_bar {
+    background-color: rgba(191, 192, 194, 0.5);
+}
+
+.sct1 {
+    background-image: url(../Assets/IMG_6238.jpg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    border-radius: 60px;
+}
+
+.sct1 div {
+    background-color: rgba(8, 8, 8, 0.10);
+}
+
+.box:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.sct2 .sct2_touche3:hover {
+    background-color:  #003fa3;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
+
+.sct2 .sct2_touche3:hover svg {
+    color: white;
+}
+
+.sct2 .sct2_touche3:hover span {
+    color: #ffffff;
+}
+/* 
+MAIN {
+    COLOR: rgb(7, 33, 119)
+} */
+
+
+.sct2 .sct2_touche2:hover {
+    background-color:  rgb(247, 162, 4);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
+
+.sct2 .sct2_touche2:hover svg {
+    color: white;
+}
+
+.sct2 .sct2_touche2:hover span {
+    color: #ffffff;
+}
+
+.sct2 .sct2_touche1:hover {
+    background-color:  #008531;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
+
+.sct2 .sct2_touche1:hover svg {
+    color: white;
+}
+
+.sct2 .sct2_touche1:hover span {
+    color: #ffffff;
+}
