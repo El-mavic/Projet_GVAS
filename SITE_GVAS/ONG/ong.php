@@ -25,9 +25,9 @@
   <header class="header-3d" id="siteHeader">
     <div class="header-glow"></div>
 
-    <a href="#accueil" class="brand-3d" aria-label="GVAS - Accueil">
+    <a href="../index.php" class="brand-3d" aria-label="GVAS - Accueil">
       <div class="logo-3d">
-        <img src="assets/logo.png" alt="Logo GVAS">
+        <img src="Tkyo/src/Assets/logo.png" alt="Logo GVAS">
       </div>
       <div class="brand-text">
         <strong>GVAS</strong>
@@ -39,10 +39,10 @@
       <a href="../index.php">GVAS</a>
       <a href="#mission">Notre mission</a>
       <a href="#valeurs">Nos valeurs</a>
-      <a href="#actualites">Actualités</a>
+      <a href="#actions">Notre Impact</a>
 
-      <a href="mailto:actionsocialegvas@gmail.com" class="join-3d">
-        <span>Nous rejoindre</span>
+      <a href="#footer" class="join-3d">
+        <span>Contatez-nous</span>
         <b>↗</b>
       </a>
     </nav>
@@ -219,7 +219,7 @@
         <h2>Ensemble, faisons<br><em>grandir l'espoir.</em></h2>
         <p>Vous souhaitez soutenir nos actions, devenir volontaire ou collaborer avec GVAS ? Parlons-nous.</p>
         <div class="hero-actions">
-          <a href="" class="btn btn-primary">Nous contacter <span>→</span></a>
+
           <a href="mailto:actionsocialegvas@gmail.com" class="btn btn-outline">Devenir volontaire</a>
         </div>
       </div>
@@ -238,7 +238,7 @@
           </div>
           <div class="news-body"><small>ACTIVITÉ </small>
             <h3>Nos actions au cœur des communautés</h3>
-            <p>Ajoutez ici vos dernières nouvelles, campagnes ou activités.</p><a href="#">Lire la suite <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <p>Ajoutez ici vos dernières nouvelles, campagnes ou activités.</p>
           </div>
         </article>
         <article class="news-card reveal">
@@ -247,7 +247,7 @@
           </div>
           <div class="news-body"><small>PROJET </small>
             <h3>Construire ensemble des solutions durables</h3>
-            <p>Présentez ici vos projets, résultats et témoignages.</p><a href="#">Lire la suite <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <p>Présentez ici vos projets, résultats et témoignages.</p>
           </div>
         </article>
         <article class="news-card reveal">
@@ -256,7 +256,7 @@
           </div>
           <div class="news-body"><small>ENGAGEMENT</small>
             <h3>Rejoindre une dynamique solidaire</h3>
-            <p>Partagez ici les opportunités de bénévolat et de partenariat.</p><a href="#">Lire la suite <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <p>Partagez ici les opportunités de bénévolat et de partenariat.</p>
           </div>
         </article>
       </div>
@@ -264,7 +264,8 @@
   </main>
 
   <!-- FOOTER MODERNE -->
-  <footer class="footer-modern">
+  <footer class="footer-modern" id="footer"><!--J'ai ajouter Id-->
+    
     <div class="footer-modern-inner">
 
       <div class="footer-main">
@@ -301,9 +302,14 @@
       <!-- INFORMATIONS DE CONTACT -->
       <div class="footer-contact">
 
-        <a href="tel:+242XXXXXXXXX" class="footer-contact-item">
+        <a href="tel:+242057554400" class="footer-contact-item">
           <span class="contact-icon"> <i class="fa-solid fa-phone"></i></span>
           <span>+242 05 755 44 00</span>
+        </a>
+
+        <a href="https://wa.me/242057554400" target="_blank" class="footer-contact-item">
+          <span class="contact-icon"> <i class="fa-brands fa-whatsapp"></i></span>
+          <span>WhatsApp</span>
         </a>
 
         <a href="mailto:actionsocialegvas@gmail.com" class="footer-contact-item">
