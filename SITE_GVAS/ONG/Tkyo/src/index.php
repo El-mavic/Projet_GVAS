@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/output.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../style.css">
+    <script defer src="../../script.js"></script>
     <title>Impacts</title>
 </head>
 
@@ -16,9 +18,9 @@
             <header class="header-3d" id="siteHeader">
                 <div class="header-glow"></div>
 
-                <a href="#accueil" class="brand-3d" aria-label="GVAS - Accueil">
+                <a href="../index.php" class="brand-3d" aria-label="GVAS - Accueil">
                     <div class="logo-3d">
-                        <img src="../src" alt="Logo GVAS">
+                        <img src="Tkyo/src/Assets/logo.png" alt="Logo GVAS">
                     </div>
                     <div class="brand-text">
                         <strong>GVAS</strong>
@@ -27,10 +29,10 @@
                 </a>
 
                 <nav class="nav-3d" id="mainNav">
-                    <a href="../index.php">GVAS</a>
-                    <a href="#mission">Notre mission</a>
-                    <a href="#valeurs">Nos valeurs</a>
-                    <a href="#actualites">Actualités</a>
+                    <a href="../../ong.php">Accueil</a>
+                    <a href="../../Vika/mission.html#mission">Notre mission</a>
+                    <a href="../../Vika/valeurs.html#valeurs">Nos valeurs</a>
+                    <a href="../../Vika/actualites.html#actualites">Actualités</a>
 
                     <a href="mailto:actionsocialegvas@gmail.com" class="join-3d">
                         <span>Nous rejoindre</span>
@@ -118,6 +120,27 @@
                     <span class="font-bold text-blue-500 text-2xl">4</span>
                     <p class="font-bold">Régions couvertes par <br> nos actions sociales</p>
                 </div>
+            </div>
+        </section>
+
+
+        <section class="flex justify-center p-8 h-64 items-center my-8 bg-linear-to-t  from-white to-blue-500">
+            <div class="text-center flex flex-col justify-center items-center gap-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-8">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                </svg>
+
+                <h1 class="text-2xl font-bold">Rejoignez-Nous pour construire un avenir durable</h1>
+                <p class="text-center w-2xl text-lg">
+                    votre soutient qu'il soit financier ou pas, le bénévolat, permet à GVAS <br>
+                    Action-Sociale de continuer à transformer des vies sur le terrain
+                </p>
+
+                <a href="#"
+                    class="text-lg hover:bg-[rgb(0,55,255)] bg-blue-300 hover:text-white transition-colors font-bold w-60 h-2xl text-center rounded-2xl p-2">Nous
+                    soutenir</a>
             </div>
         </section>
 
@@ -1411,26 +1434,6 @@
                         </p>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="flex justify-center p-8 h-64 items-center my-8 bg-linear-to-t  from-white to-blue-500">
-            <div class="text-center flex flex-col justify-center items-center gap-4">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-8">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                </svg>
-
-                <h1 class="text-2xl font-bold">Rejoignez-Nous pour construire un avenir durable</h1>
-                <p class="text-center w-2xl text-lg">
-                    votre soutient qu'il soit financier ou pas, le bénévolat, permet à GVAS <br>
-                    Action-Sociale de continuer à transformer des vies sur le terrain
-                </p>
-
-                <a href="#"
-                    class="text-lg hover:bg-[rgb(0,55,255)] bg-blue-300 hover:text-white transition-colors font-bold w-60 h-2xl text-center rounded-2xl p-2">Nous
-                    soutenir</a>
             </div>
         </section>
     </main>
