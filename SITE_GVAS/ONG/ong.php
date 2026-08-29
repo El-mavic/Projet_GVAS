@@ -140,7 +140,7 @@
           <h3>Éduquer</h3>
           <p>Favoriser l'accès au savoir, à l'information et à l'éducation pour renforcer l'autonomie des communautés.
           </p>
-          <a href="#contact">Découvrir <span><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
+          <a href="Tkyo/src/index.php#Découvrir">Découvrir <span><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
         </article>
 
         <article class="action-card featured reveal">
@@ -149,7 +149,7 @@
           <h3>Former</h3>
           <p>Développer les compétences et créer des opportunités grâce à la formation et au renforcement des capacités.
           </p>
-          <a href="#contact">Découvrir <span><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
+          <a href="Tkyo/src/index.php#Former">Découvrir <span><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
         </article>
 
         <article class="action-card reveal">
@@ -157,7 +157,7 @@
           <div class="action-icon">✧</div>
           <h3>Accompagner</h3>
           <p>Être aux côtés des personnes et des groupes vulnérables avec des actions adaptées à leurs besoins.</p>
-          <a href="#contact">Découvrir <span><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
+          <a href="Tkyo/src/index.php#Accompagner">Découvrir <span><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
         </article>
 
         <article class="action-card featured reveal">
@@ -165,7 +165,7 @@
           <div class="action-icon">♡</div>
           <h3>Protéger</h3>
           <p>Promouvoir la dignité, les droits, la sécurité et la protection des personnes au sein des communautés.</p>
-          <a href="#contact">Découvrir <span><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
+          <a href="Tkyo/src/index.php#Protéger">Découvrir <span><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
         </article>
       </div>
     </section>
