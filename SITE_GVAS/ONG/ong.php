@@ -65,7 +65,7 @@
 
       <div class="hero-content">
         <div class="eyebrow">
-          <span></span> ONG • ENGAGEMENT • SOLIDARITÉ
+          <span></span> ONG•ENGAGEMENT•SOLIDARITÉ
         </div>
 
         <h1>Agir aujourd'hui<br><em>pour un avenir durable.</em></h1>
@@ -265,7 +265,7 @@
 
   <!-- FOOTER MODERNE -->
   <footer class="footer-modern" id="footer"><!--J'ai ajouter Id-->
-    
+
     <div class="footer-modern-inner">
 
       <div class="footer-main">
