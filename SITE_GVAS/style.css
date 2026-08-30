@@ -1646,7 +1646,9 @@ header,
 .anime,
 .body,
 .sidebar-left,
-.sidebar1 {
+.sidebar1,
+.intro,
+.domains {
     opacity: 0;
 
     transform: translateY(100px);
@@ -1751,11 +1753,11 @@ section {
 
 .section-heading .small-title {
     display: inline-block;
-    background: var(--yellow-light);
-    color: #866900;
+    background: rgb(80, 78, 78);
+    color: black;
     padding: 5px 13px;
     border-radius: 30px;
-    font-size: 12px;
+    font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .7px;
@@ -1775,7 +1777,7 @@ section {
 
 .section-heading p {
     color: black;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 /* =========================================
@@ -1803,7 +1805,7 @@ section {
     align-items: center;
     gap: 8px;
     color: yellow;
-    font-size: 13px;
+    font-size: 18px;
     font-weight: 700;
     margin-bottom: 13px;
 }
@@ -1830,7 +1832,8 @@ section {
 .intro-text p {
     max-width: 620px;
     color: black;
-    font-size: 15px;
+    font-size: 18px;
+    text-align: center;
 }
 
 /* IMAGE */
@@ -1875,11 +1878,31 @@ section {
 .domain-card {
     position: relative;
     padding: 23px;
-    border: 1px solid var(--border);
+
     border-radius: 14px;
     background: var(--white);
     transition: .25s ease;
 }
+
+.domain-card:hover {
+    transform: translateY(-7px);
+    background: var(--blue);
+    border-color: var(--blue);
+    box-shadow: 0 15px 35px rgba(13, 91, 181, 0.25);
+    cursor: pointer;
+}
+
+
+.domain-card {
+    position: relative;
+    padding: 23px;
+    border-radius: 14px;
+    background: var(--white);
+    transition: all 0.35s ease;
+}
+
+
+
 
 .domain-card::before {
     content: "";
@@ -1892,21 +1915,41 @@ section {
     border-radius: 0 0 10px 10px;
 }
 
-.domain-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow);
+
+.domain-card {
+    position: relative;
+    overflow: hidden;
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        background-color 0.4s ease,
+        color 0.4s ease;
 }
+
+.domain-card:hover {
+    transform: translateY(-8px);
+    background-color: var(--blue);
+    color: var(--white);
+    box-shadow: 0 18px 40px rgba(10, 10, 10, 0.904);
+}
+
+
+
+
+
+
+
 
 .domain-number {
     width: 38px;
     height: 38px;
     border-radius: 10px;
-    background: var(--yellow-light);
+    background: yellow;
     color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
+    font-size: 18px;
     font-weight: 800;
     margin-bottom: 13px;
 }
@@ -1924,14 +1967,14 @@ section {
 .domain-card li {
     display: flex;
     gap: 8px;
-    color: var(--muted);
-    font-size: 13px;
+    color: rgb(63, 62, 62);
+    font-size: 15px;
     margin-bottom: 7px;
 }
 
 .domain-card li::before {
     content: "✓";
-    color: yellow;
+    color: rgb(10, 10, 10);
     font-weight: 800;
 }
 
@@ -1994,8 +2037,9 @@ section {
 
 .values-content>p {
     color: black;
-    font-size: 14px;
+    font-size: 18px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .values-list {
@@ -2021,7 +2065,7 @@ section {
     width: 28px;
     height: 28px;
     border-radius: 7px;
-    background: var(--yellow);
+    background: yellow;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2056,19 +2100,19 @@ section {
 
 .achievement-card:hover {
     box-shadow: var(--shadow);
-    border-color: #eed878;
+    border-color: #77692c;
 }
 
 .achievement-icon {
     width: 43px;
     height: 43px;
-    background: var(--yellow);
+    background: yellow;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #604d00;
-    font-size: 11px;
+    color: black;
+    font-size: 15px;
     font-weight: 800;
     flex-shrink: 0;
 }
@@ -2095,8 +2139,9 @@ section {
 .impact-content .number {
     font-size: clamp(48px, 7vw, 72px);
     line-height: 1;
-    font-weight: 800;
+    font-weight: 8px;
     color: var(--black);
+
 }
 
 .impact-content h2 {
@@ -2109,7 +2154,7 @@ section {
     max-width: 600px;
     margin: auto;
     color: #5b4900;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 
@@ -2150,7 +2195,7 @@ section {
     color: #c6c6c6;
     max-width: 650px;
     margin: auto;
-    font-size: 13px;
+    font-size: 18px;
 }
 
 /* =========================================
