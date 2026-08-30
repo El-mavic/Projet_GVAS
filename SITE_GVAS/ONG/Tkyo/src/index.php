@@ -4,58 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <meta name="author" content="El_Mavic BAKALA">
+    <meta name="author" content="Célina LUEMBA">
+    <meta name="author" content="Gloire NGUIMBI">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
     <link rel="stylesheet" href="css/output.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="../../style.css">
-    <script defer src="../../script.js"></script>
+    <link rel="icon" href="assets/logo1.png" type="image/png">
     <title>Impacts</title>
 </head>
 
 <body>
     <main>
         <section class="h-screen flex justify-center items-center sct1">
-
-            <header class="header-3d" id="siteHeader">
-                <div class="header-glow"></div>
-
-                <a href="../index.php" class="brand-3d" aria-label="GVAS - Accueil">
-                    <div class="logo-3d">
-                        <img src="Tkyo/src/Assets/logo.png" alt="Logo GVAS">
-                    </div>
-                    <div class="brand-text">
-                        <strong>GVAS</strong>
-                        <span>Action Sociale</span>
-                    </div>
-                </a>
-
-                <nav class="nav-3d" id="mainNav">
-                    <a href="../../ong.php">Accueil</a>
-                    <a href="../../Vika/mission.html#mission">Notre mission</a>
-                    <a href="../../Vika/valeurs.html#valeurs">Nos valeurs</a>
-                    <a href="../../Vika/actualites.html#actualites">Actualités</a>
-
-                    <a href="mailto:actionsocialegvas@gmail.com" class="join-3d">
-                        <span>Nous rejoindre</span>
-                        <b>↗</b>
-                    </a>
-                </nav>
-
-                <button class="menu-3d" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </header>
-
-
+            <?php include 'css/header.php'; ?>
             <div
-                class="h-screen backdrop-blur-md w-screen flex flex-col justify-center items-center gap-4 p-8 border-none rounded-[60px]">
-                <div class="triangle flex flex-col justify-center items-center gap-4 text-white border-4 rounded-2xl p-8
+                class="h-screen backdrop-blur-md w-screen flex flex-col justify-center items-center gap-4 border-none rounded-[60px]">
+                <div class="triangle flex flex-col justify-center items-center gap-4 text-white border-4 rounded-2xl p-16
                     bg-[radial-gradient(circle_at_top_left,#22c55e,#6d4a00,#2563eb)]">
-                    <span class="text-green-500 text-lg font-bold">Nôtre mission</span>
+                    <span class="text-green-500 text-5xl font-bold">Nôtre impact</span>
 
-                    <h1 class="text-5xl font-bold text-left">
-                        Notre impact : Protéger <br>
+                    <h1 class="text-3xl font-bold text-center">
+                        Protéger <br>
                         et transformer des <a href="Formations.html">vies</a>
                     </h1>
 
@@ -65,26 +44,42 @@
                         des opportunités durables pour les communautés vulnérables.
                     </p>
 
-                    <div class="flex gap-3">
+                    <div class="flex gap-3 mt-8">
                         <a href="#"
-                            class="hover:bg-blue-500 transition-colors w-60 h-2xl text-lg text-center border-2 border-white rounded-2xl p-2">soutenir
+                            class="hover:bg-green-700 transition-colors w-60 h-2xl text-lg text-center border-2 border-green-700 rounded-2xl p-2">soutenir
                             nos
                             actions</a>
                         <a href="#"
-                            class="hover:bg-blue-500 transition-colors w-60 h-2xl text-lg text-center border-2 border-white rounded-2xl p-2">Découvrir
+                            class="hover:bg-green-700 transition-colors w-60 h-2xl text-lg text-center border-2 border-green-700 rounded-2xl p-2">Découvrir
                             nos
                             programmes</a>
                     </div>
                 </div>
-            </div>
+<!-- 
+<div class="rounded-full size-32 flex flex-col justify-center items-center gap-4 text-center">
+    <img src="assets/logo1.png" rounded-full dorber alt="Logo GVAS" class="w-full h-auto">
+</div>  -->
+          </div>
         </section>
 
-        <section class="sct_bar flex flex-col justify-center items-center w-full gap-4 my-8 p-4">
+        <!-- <section class="sct_bar flex flex-col justify-center items-center w-full gap-4 my-8 p-4">
             <h1 class="text-5xl font-bold text-white">Nos Statistiques</h1>
         </section>
 
-        <section class="my-8 sct2">
+        <section class="my-8 sct2 bon">
             <div class="flex justify-evenly items-center gap-4">
+                <div
+                    class="sct2_touche3 shadow-[2px_2px_10px_green] bg-white border-2 hover:border-white border-blue-500 rounded-2xl size-64 p-1 flex flex-col justify-center items-center gap-4 text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-16 text-blue-500">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0 1 18 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3 1.5 1.5 3-3.75" />
+                    </svg>
+
+                    <span class="font-bold text-blue-500 text-2xl">+ 1200</span>
+                    <p class="font-bold">Fammilles accompagnées <br> vers l'autonomie</p>
+                </div>
+
                 <div
                     class="sct2_touche1 shadow-[2px_2px_10px_green] bg-white hover:border-white border-2 border-green-500 rounded-2xl size-64 p-1 flex flex-col justify-center items-center gap-4 text-center">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -95,18 +90,6 @@
 
                     <span class="font-bold text-green-500 text-2xl">500+</span>
                     <p class="font-bold">Jeunes formés aux <br> de demain</p>
-                </div>
-
-                <div
-                    class="sct2_touche2 shadow-[2px_2px_10px_orange] bg-white hover:border-white border-2 border-orange-500 rounded-2xl size-64 p-1 flex flex-col justify-center items-center gap-4 text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="size-16 text-orange-500">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0 1 18 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3 1.5 1.5 3-3.75" />
-                    </svg>
-
-                    <span class="font-bold text-2xl text-orange-500">+ 1200</span>
-                    <p class="font-bold">Fammilles accompagnées <br> vers l'autonomie</p>
                 </div>
 
                 <div
@@ -122,9 +105,9 @@
                 </div>
             </div>
         </section>
+ -->
 
-
-        <section class="flex justify-center p-8 h-64 items-center my-8 bg-linear-to-t  from-white to-blue-500">
+        <section class="flex justify-center p-8 h-64 items-center mt-4 mb-8 bg-linear-to-l  from-white to-blue-900">
             <div class="text-center flex flex-col justify-center items-center gap-4">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="size-8">
@@ -139,13 +122,16 @@
                 </p>
 
                 <a href="#"
-                    class="text-lg hover:bg-[rgb(0,55,255)] bg-blue-300 hover:text-white transition-colors font-bold w-60 h-2xl text-center rounded-2xl p-2">Nous
+                    class="text-lg hover:bg-[rgb(0,55,255)] bg-green-700 text-white transition-colors font-bold w-60 h-2xl text-center rounded-2xl p-2">Nous
                     soutenir</a>
             </div>
         </section>
 
-        <section class="sct_bar flex flex-col justify-center items-center w-full gap-4 my-8 p-4">
-            <h1 class="text-5xl font-bold text-white">Nos Piliers d'Action</h1>
+        <section class="sct_bar flex flex-col justify-center items-center w-full gap-4 mt-16 p-4">
+            <h1 class="text-5xl font-bold">Nos Piliers d'Action</h1> 
+            <p class="text-lg text-center">
+                Découvrez les piliers sur lesquels s'appuie notre action sociale pour créer un impact durable dans les communautés.
+            </p>
         </section>
 
         <!-- ========================================================= -->
@@ -748,60 +734,64 @@
 
         <section class="mb-8" id="Accompagner">
             <div>
-                <div class="rounded-3xl bg-white shadow-2xl">
-                    <div class="grid grid-cols-1 gap-8 p-6 md:grid-cols-2 md:p-10">
+                <div class="grid grid-cols-1 gap-8 p-6 md:grid-cols-2 md:p-10">
                         <div class="flex flex-col justify-center">
                             <div class="flex items-center gap-5">
 
-                                <div class="flex h-25 w-25 items-center justify-center
-                                    rounded-full bg-orange-600
-                                    shadow-lg shadow-orange-600/30">
+                                <div class="flex h-20 w-20 items-center justify-center
+                               rounded-full bg-blue-600
+                               shadow-lg shadow-blue-600/30">
                                     <!-- Icône livre -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-white" fill="none"
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none"
                                         viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832
-                                        5.477 9.246 5 7.5 5S4.168
-                                        5.477 3 6.253v13C4.168
-                                        18.477 5.754 18 7.5
-                                        18s3.332.477 4.5 1.253m0-13
-                                        C13.168 5.477 14.754 5
-                                        16.5 5S19.832 5.477 21
-                                        6.253v13C19.832 18.477
-                                        18.246 18 16.5 18s-3.332
-                                        .477-4.5 1.253" />
+                                5.477 9.246 5 7.5 5S4.168
+                                5.477 3 6.253v13C4.168
+                                18.477 5.754 18 7.5
+                                18s3.332.477 4.5 1.253m0-13
+                                C13.168 5.477 14.754 5
+                                16.5 5S19.832 5.477 21
+                                6.253v13C19.832 18.477
+                                18.246 18 16.5 18s-3.332
+                                .477-4.5 1.253" />
                                     </svg>
                                 </div>
 
                                 <div>
                                     <h1 class="text-4xl font-bold tracking-tight
-                                   text-orange-700">
-                                        ACCOMPAGNER
+                                   text-blue-700">
+                                        FORMER
                                     </h1>
 
                                     <p class="mt-1 text-lg font-medium text-gray-700">
-                                        Nous accompagnons les jeunes et les adultes
-                                        dans leur parcours éducatif et professionnel,
-                                        en leur offrant des conseils, du mentorat
-                                        et un soutien personnalisé.
+                                        Renforcer les compétence des jeunes et des adultes pour un avenir prometteur.
                                     </p>
                                 </div>
                             </div>
-                            <div class="my-6 h-1 w-14 rounded-full bg-orange-600"></div>
+                            <div class="my-6 h-1 w-14 rounded-full bg-blue-600"></div>
 
                             <p class="text-base leading-7 text-gray-600">
-                                Nous croyons que l'éducation est le fondement
-                                d'une société éclairée et autonome. C'est pourquoi
-                                nous œuvrons pour rendre l'éducation accessible
-                                à tous, sans distinction.
+                                Nous croyons que la formation est un levier essentiel
+                                pour l'autonomisation et l'insertion professionnelle.
+                                C'est pourquoi nous proposons des programmes de formation
+                                adaptés aux besoins du marché du travail et aux aspirations
+                                des individus.
                             </p>
                         </div>
 
+
+
                         <div class="relative overflow-hidden rounded-2xl">
-                            <img src="Assets/accompagner.jpg" alt="Éducation"
+
+                            <img src="Assets/former.jpg" alt="Formation"
                                 class="h-full min-h-[250px] w-full object-cover">
+
+
                             <div class="absolute inset-0 bg-gradient-to-t
-                           from-orange-950/50 to-transparent"></div>
+                           from-blue-950/50 to-transparent"></div>
+
                         </div>
+
                     </div>
 
                     <!-- ========================= -->
@@ -1040,60 +1030,64 @@
 
         <section class="mb-8" id="Protéger">
             <div>
-                <div class="rounded-3xl bg-white shadow-2xl">
-                    <div class="grid grid-cols-1 gap-8 p-6 md:grid-cols-2 md:p-10">
+                <div class="grid grid-cols-1 gap-8 p-6 md:grid-cols-2 md:p-10">
                         <div class="flex flex-col justify-center">
                             <div class="flex items-center gap-5">
 
                                 <div class="flex h-20 w-20 items-center justify-center
-                                    rounded-full bg-blue-600
-                                    shadow-lg shadow-blue-600/30">
+                               rounded-full bg-blue-600
+                               shadow-lg shadow-blue-600/30">
                                     <!-- Icône livre -->
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none"
                                         viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832
-                                        5.477 9.246 5 7.5 5S4.168
-                                        5.477 3 6.253v13C4.168
-                                        18.477 5.754 18 7.5
-                                        18s3.332.477 4.5 1.253m0-13
-                                        C13.168 5.477 14.754 5
-                                        16.5 5S19.832 5.477 21
-                                        6.253v13C19.832 18.477
-                                        18.246 18 16.5 18s-3.332
-                                        .477-4.5 1.253" />
+                                5.477 9.246 5 7.5 5S4.168
+                                5.477 3 6.253v13C4.168
+                                18.477 5.754 18 7.5
+                                18s3.332.477 4.5 1.253m0-13
+                                C13.168 5.477 14.754 5
+                                16.5 5S19.832 5.477 21
+                                6.253v13C19.832 18.477
+                                18.246 18 16.5 18s-3.332
+                                .477-4.5 1.253" />
                                     </svg>
                                 </div>
 
                                 <div>
                                     <h1 class="text-4xl font-bold tracking-tight
-                                      text-blue-700">
-                                        PROTEGER
+                                   text-blue-700">
+                                        FORMER
                                     </h1>
 
                                     <p class="mt-1 text-lg font-medium text-gray-700">
-                                        Nous nous engageons à protéger les droits et le bien-être
-                                        des jeunes et des adultes, en veillant à ce qu'ils puissent
-                                        apprendre et se développer dans un environnement sûr
-                                        et respectueux.
+                                        Renforcer les compétence des jeunes et des adultes pour un avenir prometteur.
                                     </p>
                                 </div>
                             </div>
                             <div class="my-6 h-1 w-14 rounded-full bg-blue-600"></div>
 
                             <p class="text-base leading-7 text-gray-600">
-                                Nous croyons que l'éducation est le fondement
-                                d'une société éclairée et autonome. C'est pourquoi
-                                nous œuvrons pour rendre l'éducation accessible
-                                à tous, sans distinction.
+                                Nous croyons que la formation est un levier essentiel
+                                pour l'autonomisation et l'insertion professionnelle.
+                                C'est pourquoi nous proposons des programmes de formation
+                                adaptés aux besoins du marché du travail et aux aspirations
+                                des individus.
                             </p>
                         </div>
 
+
+
                         <div class="relative overflow-hidden rounded-2xl">
-                            <img src="Assets/protection.jpg" alt="Éducation"
+
+                            <img src="Assets/former.jpg" alt="Formation"
                                 class="h-full min-h-[250px] w-full object-cover">
+
+
                             <div class="absolute inset-0 bg-gradient-to-t
                            from-blue-950/50 to-transparent"></div>
+
                         </div>
+
                     </div>
 
                     <!-- ========================= -->
@@ -1370,7 +1364,7 @@
             <h1 class="text-5xl font-bold text-white">Notre Public Cible & Impact</h1>
         </section>
 
-        <section class="my-8 flex flex-col justify-center items-center">
+        <section class="sct_formation my-8 flex flex-col justify-center items-center">
             <div class="text-center flex flex-col gap-4 mb-2xl">
                 <h1 class="text-5xl font-bold">Les piliers du programme</h1>
                 <p class="text-wrap text-lg text-center">
@@ -1379,131 +1373,90 @@
                 </p>
             </div>
 
-            <div class="flex flex-col justify-evenly items-center gap-16 my-4 p-8">
-                <div class="flex justify-between items-center gap-16 p-8 border-b-4 rounded-4xl border-orange-500">
-                    <div class="bg-orange-500 size-16 rounded-full flex justify-center items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-6 text-white">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
-                        </svg>
+            <div class="une_formation flex flex-col justify-evenly items-center gap-16 my-4 p-8">
+                <div class="la_formation flex items-center shadow-[2px_2px_10px_blue] rounded-2xl p-8">
+                    <div class="flex justify-between items-center gap-16 p-8 border-b-4 rounded-4xl border-blue-800">
+                        <div class="bg-blue-800 size-16 rounded-full flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6 text-white">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="text-2xl font-bold">Renforcement des compétences</span>
+                            <p class="text-lg">
+                                Acquisition et consolidation des savoirs de base <br>
+                                essentiels à la vie quotidienne et citoyenne.
+                            </p>
+                        </div>
                     </div>
-                    <div>
-                        <span class="text-2xl font-bold">Renforcement des compétences</span>
-                        <p class="text-lg">
-                            Acquisition et consolidation des savoirs de base <br>
-                            essentiels à la vie quotidienne et citoyenne.
-                        </p>
+
+                    <div class="border-2 border-bleu-700 w-[120px]"></div>
+
+
+                    <div class="border border-blue-700 rounded-2xl size-64">
+                        <img src="" size-64 alt="">
                     </div>
                 </div>
 
-                <div class="flex justify-between items-center gap-16 p-8 border-b-4 rounded-4xl border-blue-500">
-                    <div>
-                        <span class="text-2xl font-bold">Alphabetisation et Préparation</span>
-                        <p class="text-lg">
-                            Parcours d'alphabétisation structuré servant <br>
-                            de tranplin vesr les apprentissages <br> techniques et professionnels.
-                        </p>
+                <div class="la_formation shadow-[2px_2px_10px_blue] flex items-center p-8 rounded-2xl">
+                    <div class="border border-blue-500 rounded-2xl size-64">
+                        <img src="" size-64 alt="">
                     </div>
-                    <div class="bg-blue-500 size-16 rounded-full flex justify-center items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-6 text-white">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
-                        </svg>
+
+                    <div class="border-2 border-blue-500 w-[120px]"></div>
+
+                    <div class="flex justify-between items-center gap-16 p-8 border-b-4 rounded-4xl border-blue-500">
+                        <div>
+                            <span class="text-2xl font-bold">Alphabetisation et Préparation</span>
+                            <p class="text-lg">
+                                Parcours d'alphabétisation structuré servant <br>
+                                de tranplin vesr les apprentissages <br> techniques et professionnels.
+                            </p>
+                        </div>
+                        <div class="bg-blue-500 size-16 rounded-full flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6 text-white">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
 
-                <div class="flex justify-between items-center gap-16 p-8 border-b-4 rounded-4xl border-green-500">
-                    <div class="bg-green-500 size-16 rounded-full flex justify-center items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-6 text-white">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
-                        </svg>
-
+                <div class="la_formation shadow-[2px_2px_10px_green] flex items-center p-10 rounded-2xl">
+                    <div class="flex justify-between items-center gap-16 p-8 border-b-4 rounded-4xl border-green-500">
+                        <div class="bg-green-500 size-16 rounded-full flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6 text-white">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="text-2xl font-bold">Dévéloppement Professionnel</span>
+                            <p class="text-lg">
+                                Formation pratique et théorique pour <br>
+                                préparer les individus à des carrières <br>
+                                épanouissantes et durables.
+                            </p>
+                        </div>
                     </div>
-                    <div>
-                        <span class="text-2xl font-bold">Dévéloppement Professionnel</span>
-                        <p class="text-lg">
-                            Formation pratique et théorique pour <br>
-                            préparer les individus à des carrières <br>
-                            épanouissantes et durables.
-                        </p>
+
+                    <div class="border-2 border-green-500 w-[120px] h-[1px]"></div>
+
+                    <div class="border border-green-500 rounded-2xl size-64 kola">
+                        <img src="" size-64 alt="">
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-
-    <!-- FOOTER MODERNE -->
-    <footer class="footer-modern">
-        <div class="footer-modern-inner">
-
-            <div class="footer-main">
-
-                <!-- Logo + identité -->
-                <div class="footer-identity">
-                    <a href="#accueil" class="footer-logo">
-                        <img src="assets/logo.png" alt="Logo GVAS">
-                    </a>
-
-                    <div class="Footerlogo">
-                        <strong>GVAS</strong>
-                        <span>Action Sociale</span>
-                    </div>
-                </div>
-
-                <!-- Navigation -->
-                <nav class="footer-nav">
-                    <a href="#accueil">Accueil</a>
-                    <a href="#mission">Mission</a>
-                    <a href="#valeurs">Valeurs</a>
-                    <a href="#actualites">Actualités</a>
-
-                </nav>
-
-                <!-- Réseaux -->
-                <div class="footer-social">
-                    <a href="#" aria-label="Facebook"> <i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="YouTube"> <i class="fab fa-youtube"></i></a>
-                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                </div>
-
-            </div>
-            <!-- INFORMATIONS DE CONTACT -->
-            <div class="footer-contact">
-
-                <a href="tel:+242XXXXXXXXX" class="footer-contact-item">
-                    <span class="contact-icon"> <i class="fa-solid fa-phone"></i></span>
-                    <span>+242 05 755 44 00</span>
-                </a>
-
-                <a href="mailto:contact@gvas.cg" class="footer-contact-item">
-                    <span class="contact-icon"> <i class="fa-solid fa-envelope"></i></span>
-                    <span>actionsocialegvas@gmail.com</span>
-                </a>
-                <a href="https://www.google.com/maps/place/Groupe+Vision+D'aigle+Services/@-4.822363,11.9054355,68m/data=!3m1!1e3!4m6!3m5!1s0x1a60af0b2c6b78c9:0xc598de43a114b8f5!8m2!3d-4.8224261!4d11.9054924!16s%2Fg%2F11npdsmz7k?entry=ttu&g_ep=EgoyMDI2MDYxMy4wIKXMDSoASAFQAw%3D%3D"
-                    target="_blank" class="fab-item">
-                    <span class="footer-contact-item">
-                        <span class="contact-icon"> <i class="fa-solid fa-location-dot"></i></span>
-                        <span> Mpaka x-or Pointe-Noire, Congo </span>
-                    </span>
-                </a>
-            </div>
-            <div class="footer-divider"></div>
-            <div class="footer-bottom">
-
-                <span class="footer-slogan">
-                    Ensemble pour un avenir durable
-                </span>
-            </div>
-
-        </div>
-    </footer>
+    <?php include 'css/footer.php'; ?>
 </body>
 
 </html>
