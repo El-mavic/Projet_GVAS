@@ -65,7 +65,7 @@
 
       <div class="hero-content">
         <div class="eyebrow">
-          <span></span> ONG•ENGAGEMENT•SOLIDARITÉ
+          <span></span> ONG • ENGAGEMENT • SOLIDARITÉ
         </div>
 
         <h1>Agir aujourd'hui<br><em>pour un avenir durable.</em></h1>
@@ -324,72 +324,104 @@
           </span>
         </a>
       </div>
+
       <div class="footer-divider"></div>
       <div class="footer-bottom">
 
-        <span class="footer-slogan">
-          <a href="#" class="btn-partenaires" id="ouvrir-partenaires">
-            Cliquez pour découvrir nos partenaires
-          </a>
-        </span>
-      </div>
-    </div>
-
-    <div id="popup-partenaires" class="popup-overlay">
-
-      <div class="popup-content">
 
 
-        <!-- BOUTON FERMER -->
-        <button class="close-popup" id="fermer-partenaires">
-          <i class="fa-solid fa-xmark"></i>
+        <!--Tu recupères le html ici -->
+        <button class="btn-partenaires" id="ouvrirPartenaires">
+          Voir nos partenaires
         </button>
 
-        <!-- TITRE -->
+        <div class="partners-overlay" id="partnersOverlay">
 
-        <h2>Nos partenaires</h2>
-        <div class="partenaires">
-          <!-- PARTENAIRE 1 -->
-          <div class="partenaire">
-            <img src="../images/Partenaires/AJEC.png" alt="Partenaire 1">
-            <p>AJEC</p>
+          <div class="partners-circle">
+
+            <!-- Bouton fermer -->
+            <button class="partners-close" id="fermerPartenaires">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h2>Nos partenaires</h2>
+
+            <div class="partners-carousel">
+
+              <div class="partner-track">
+
+                <!-- Partenaire 1 -->
+                <div class="partner-item">
+                  <div class="partner-logo">
+                    <a href="">
+                      <img src="../images/Partenaires/AJEC.png"
+                        alt="AJEC"></a>
+                  </div>
+                  <span>AJEC</span>
+                </div>
+
+                <!-- Partenaire 2 -->
+                <div class="partner-item">
+                  <div class="partner-logo">
+                    <a href="">
+                      <img src="../images/Partenaires/MZ.png"
+                        alt="MZ Services"></a>
+                  </div>
+                  <span>MZ Services</span>
+                </div>
+
+                <!-- Partenaire 3 -->
+                <div class="partner-item">
+                  <div class="partner-logo">
+                    <a href="">
+                      <img src="../images/Partenaires/cvmc.png"
+                        alt="CVMC"></a>
+                  </div>
+                  <span>cvmc</span>
+                </div>
+
+                <!-- Partenaire 4 -->
+
+                <div class="partner-item">
+                  <div class="partner-logo">
+                    <a href="">
+                      <img src="../images/Partenaires/VIP.png"
+                        alt="VIP"></a>
+                  </div>
+                  <span>VIP</span>
+                </div>
+
+                <!-- Partenaire 5 -->
+                <div class="partner-item">
+                  <div class="partner-logo">
+                    <a href="">
+                      <img src="../images/Partenaires/Ecole.png"
+                        alt="École"></a>
+                  </div>
+                  <span>École</span>
+                </div>
+
+                <!-- Partenaire 6 -->
+                <div class="partner-item">
+                  <div class="partner-logo">
+                    <a href="">
+                      <img src="../images/Partenaires/FEELEC.png"
+                        alt="FEELEC"></a>
+                  </div>
+                  <span>FEELEC</span>
+                </div>
+
+
+              </div>
+
+            </div>
+
           </div>
-
-
-
-          <!-- PARTENAIRE 2 -->
-          <div class="partenaire">
-            <img src="../images/Partenaires/VIP.png" alt="Partenaire 5">
-
-            <p>VIP consulting</p>
-          </div>
-
-
-
-          <!-- PARTENAIRE 3 -->
-          <div class="partenaire">
-            <img src="../images/Partenaires/Ecole.png" alt="Partenaire 3">
-            <p>La Maninguette</p>
-          </div>
-
-
-
-          <!-- PARTENAIRE 4 -->
-          <div class="partenaire">
-            <img src="../images/Partenaires/R.jpg" alt="Partenaire 4">
-            <p>Airtel Congo</p>
-          </div>
-
-          <!-- PARTENAIRE 5 -->
-          <!-- <div class="partenaire">
-           <img src="../images/Partenaires/cvmc.png" alt="Partenaire 2">
-            <p>Nom du partenaire 5</p>
-          </div> -->
 
         </div>
       </div>
-    </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 

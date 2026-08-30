@@ -2334,300 +2334,633 @@ button {
 
 
 
+/* =========================================================
+   BOUTON VOIR NOS PARTENAIRES
+========================================================= */
 .btn-partenaires {
-  display: inline-block;
-  padding: 10px 15px;
-  background: #010c1b;
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 6px 18px;
+  border: none;
+  border-radius: 30px;
+  background: #0c4c9180;
   color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-family: Arial, sans-serif;
-  font-weight: bold;
+  font-size: 15px;
+  font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
+  transition: .3s ease;
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, .20);
 }
+
+
 
 .btn-partenaires:hover {
-  transform: scale(1.05);
+  transform: translateY(-3px);
+  background: #1d8f47;
+  box-shadow:
+    0 12px 25px rgba(0, 0, 0, .25);
 }
 
-.partenaire img {
-  width: 150px;
-  height: 150px;
-  border-radius: 150%;
-  object-fit: cover;
+
+/* =========================================================
+   ARRIÈRE-PLAN DE LA FENÊTRE
+========================================================= */
+
+.partners-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, .65);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity .4s ease,
+    visibility .4s ease;
+}
+
+
+/* =========================================================
+   FENÊTRE OUVERTE
+========================================================= */
+.partners-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* =========================================================
+   FENÊTRE PARTENAIRES
+   RECTANGLE ARRONDI / GLASSMORPHISM
+========================================================= */
+
+.partners-circle {
+  position: relative;
+
+  width: 700px;
+  max-width: 90%;
+
+  height: 250px;
+
+  border-radius: 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  /*
+       On garde hidden ici afin que les logos
+       restent à l'intérieur du rectangle.
+    */
+  overflow: hidden;
+
+  background:
+    linear-gradient(135deg,
+      rgba(255, 255, 255, 0.16),
+      rgba(255, 255, 255, 0.06));
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.45),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25);
+
+  transform:
+    scale(.75) translateY(30px);
+
+  transition:
+    transform .6s cubic-bezier(.17, .67, .35, 1.25);
+}
+
+
+/* =========================================================
+   ANIMATION D'APPARITION
+========================================================= */
+
+.partners-overlay.active .partners-circle {
+  transform:
+    scale(1) translateY(0);
+}
+
+
+/* =========================================================
+   LUMIÈRE DÉCORATIVE
+========================================================= */
+
+.partners-circle::before {
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  top: -120px;
+  left: 10%;
+
+  background: #1d8f47;
+
+  filter: blur(100px);
+
+  opacity: .25;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   DEUXIÈME LUMIÈRE
+========================================================= */
+
+.partners-circle::after {
+  content: "";
+
+  position: absolute;
+
+  width: 200px;
+  height: 200px;
+
+  right: -100px;
+  bottom: -100px;
+
+  background: #0c4c91;
+
+  filter: blur(90px);
+
+  opacity: .25;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   TITRE
+========================================================= */
+
+.partners-circle h2 {
+  position: relative;
+
+  z-index: 5;
+
+  margin: 0 0 20px;
+
+  color: white;
+
+  font-size: 26px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-align: center;
+
+  text-shadow:
+    0 3px 10px rgba(0, 0, 0, .3);
+}
+
+
+/* =========================================================
+   BOUTON FERMER
+========================================================= */
+
+.partners-close {
+  position: absolute;
+
+  top: 18px;
+  right: 20px;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid rgba(255, 255, 255, .2);
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, .12);
+
+  color: white;
+
+  font-size: 28px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  z-index: 10;
+
+  transition: .3s ease;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.partners-close:hover {
+  background: #e63946;
+
+  transform:
+    rotate(90deg) scale(1.1);
+}
+
+
+/* =========================================================
+   ZONE DU CARROUSEL
+========================================================= */
+
+.partners-carousel {
+  width: 100%;
+
+  position: relative;
+
+  z-index: 2;
+
+  /*
+       IMPORTANT :
+       On ne met plus overflow:hidden ici.
+       Cela empêchait le logo de monter lorsqu'on
+       le survolait.
+    */
+  overflow: visible;
+
+  padding-top: 12px;
+  padding-bottom: 8px;
+
+  /*
+       Fondu uniquement visuel sur les côtés
+    */
+  mask-image:
+    linear-gradient(to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent);
+
+  -webkit-mask-image:
+    linear-gradient(to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent);
+}
+
+
+/* =========================================================
+   CONTENEUR DES PARTENAIRES
+========================================================= */
+
+.partner-track {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  width: max-content;
+  animation:
+    partnersMove 12s linear infinite;
+
+  /*
+       Permet au logo de dépasser légèrement
+       pendant son hover.
+    */
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+}
+
+
+/* =========================================================
+   PARTENAIRE
+========================================================= */
+
+.partner-item {
+  min-width: 130px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  color: white;
+
+  text-align: center;
+
+  position: relative;
+
+  z-index: 3;
+}
+
+
+/* =========================================================
+   LOGO CIRCULAIRE
+========================================================= */
+
+.partner-logo {
+  width: 105px;
+  height: 105px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  padding: 8px;
+
+  background: rgba(255, 255, 255, .95);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border: 3px solid rgba(255, 255, 255, .4);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, .25),
+
+    inset 0 1px 2px rgba(255, 255, 255, .8);
+
+  transition:
+    transform .3s ease,
+    border-color .3s ease,
+    box-shadow .3s ease;
+
+  position: relative;
+
+  z-index: 5;
+}
+
+
+/* =========================================================
+   EFFET SUR LE LOGO
+========================================================= */
+
+.partner-logo:hover {
+  /*
+       Réduit légèrement le déplacement vers le haut
+       pour éviter la coupure.
+    */
+  transform:
+    scale(1.08) translateY(-3px);
+
+  border-color: #69c83e;
+
+  box-shadow:
+    0 15px 30px rgba(0, 0, 0, .35);
+}
+
+
+/* =========================================================
+   IMAGE DU LOGO
+========================================================= */
+
+.partner-logo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  border-radius: 50%;
+
   display: block;
 }
 
-/* ========================================
-           FOND SOMBRE DE LA FENÊTRE
-        ========================================= */
 
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.65);
-  /* Cachée au départ */
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 99999;
-}
+/* =========================================================
+   NOM DU PARTENAIRE
+========================================================= */
 
-/* Classe ajoutée par JavaScript */
-.popup-overlay.active {
-  display: flex;
-}
+.partner-item span {
+  font-size: 14px;
 
-/* ========================================
-           FENÊTRE DES PARTENAIRES
-        ========================================= */
+  font-weight: 600;
 
-.popup-content {
+  color: rgba(255, 255, 255, .95);
+
+  white-space: nowrap;
+
+  text-shadow:
+    0 2px 5px rgba(0, 0, 0, .4);
+
   position: relative;
-  width: 400px;
-  height: 420px;
-  max-width: 50%;
-  background: rgba(73, 73, 73, 0.822);
-  padding: 25px 25px;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
-  animation: apparition 0.4s ease;
+
+  z-index: 5;
 }
 
 
+/* =========================================================
+   ANIMATION GAUCHE → DROITE
+========================================================= */
 
-/* ========================================
-           TITRE
-        ========================================= */
+@keyframes partnersMove {
 
-.popup-content h2 {
-  margin-top: 0;
-  margin-bottom: 30px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 24px;
-  color: #222;
-}
-
-
-.close-popup {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  border: none;
-  background: transparent;
-  font-size: 32px;
-  cursor: pointer;
-  color: #333;
-}
-
-
-.close-popup:hover {
-  color: red;
-}
-
-
-.partenaires {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-}
-
-.partenaire {
-  text-align: center;
-}
-
-
-.partenaire img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: contain;
-  transition: 0.3s;
-  position: relative;
-  left: 35px;
-}
-
-.partenaire img:hover {
-  transform: scale(1.1);
-}
-
-
-
-/* NOM DU PARTENAIRE ******************************** La suite ***************************/
-
-.partenaire p {
-  margin-top: 10px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 15px;
-  font-weight: bold;
-  color: #ebe7e7;
-}
-
-@keyframes apparition {
-
-  from {
-    opacity: 0;
-    transform: scale(0.8);
+  0% {
+    transform: translateX(-50%);
   }
 
-  to {
-    opacity: 1;
-    transform: scale(1);
+  100% {
+    transform: translateX(20%);
   }
-
 }
 
-.footer-slogan {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 10px 15px;
-  box-sizing: border-box;
-  text-align: center;
+
+/* =========================================================
+   PAUSE AU SURVOL
+========================================================= */
+
+.partners-carousel:hover .partner-track {
+  animation-play-state: paused;
 }
 
-.btn-partenaires {
-  display: inline-block;
-  text-align: center;
-  max-width: 100%;
-}
 
-/* ================================
+/* =========================================================
    TABLETTE
-================================ */
+========================================================= */
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
 
-  .popup-content {
-    width: 80%;
-    height: auto;
-    max-height: 85vh;
-    overflow-y: auto;
-    padding: 25px 20px;
-    box-sizing: border-box;
+  .partners-circle {
+    width: 90%;
+
+    height: 350px;
+
+    border-radius: 25px;
   }
 
-  .partenaires {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px 15px;
-  }
 
-  .partenaire img {
-    width: 90px;
-    height: 90px;
-    left: auto;
-    margin: 0 auto;
-  }
+  .partners-circle h2 {
+    font-size: 22px;
 
-}
-
-
-/* ================================
-   MOBILE
-================================ */
-
-@media screen and (max-width: 576px) {
-
-  .popup-overlay {
-    padding: 15px;
-    box-sizing: border-box;
-  }
-
-  .popup-content {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    max-height: 85vh;
-    padding: 25px 15px;
-    overflow-y: auto;
-    box-sizing: border-box;
-  }
-
-  .popup-content h2 {
-    font-size: 20px;
     margin-bottom: 25px;
   }
 
-  .partenaires {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px 10px;
+
+  .partners-carousel {
+    padding-top: 15px;
+    padding-bottom: 10px;
   }
 
-  .partenaire {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+  .partner-logo {
+    width: 90px;
+    height: 90px;
   }
 
-  .partenaire img {
-    width: 75px;
-    height: 75px;
-    left: auto;
-    margin: 0 auto;
+
+  .partner-item {
+    min-width: 115px;
   }
 
-  .partenaire p {
-    font-size: 13px;
-    text-align: center;
-  }
 
+  .partner-track {
+    gap: 30px;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
 }
 
 
-/* ================================
-   PETIT MOBILE
-================================ */
+/* =========================================================
+   MOBILE
+========================================================= */
 
-@media screen and (max-width: 400px) {
+@media (max-width: 600px) {
 
-  .popup-overlay {
-    padding: 10px;
+  .partners-circle {
+    width: 90%;
+
+    height: 330px;
+
+    border-radius: 24px;
   }
 
-  .popup-content {
-    width: 100%;
-    padding: 20px 10px;
+
+  .partners-circle h2 {
+    font-size: 20px;
+
+    margin-bottom: 20px;
   }
 
-  .partenaires {
-    gap: 15px 5px;
+
+  .partners-carousel {
+    padding-top: 15px;
+    padding-bottom: 10px;
   }
 
-  .partenaire img {
+
+  .partner-logo {
+    width: 75px;
+    height: 75px;
+
+    padding: 6px;
+
+    border-width: 2px;
+  }
+
+
+  .partner-item {
+    min-width: 95px;
+
+    gap: 8px;
+  }
+
+
+  .partner-item span {
+    font-size: 11px;
+  }
+
+
+  .partner-track {
+    gap: 25px;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+
+  .partners-close {
+    width: 35px;
+    height: 35px;
+
+    top: 15px;
+    right: 15px;
+
+    font-size: 23px;
+  }
+}
+
+
+/* =========================================================
+   TRÈS PETIT MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .partners-circle {
+    width: 94%;
+
+    height: 300px;
+  }
+
+
+  .partners-circle h2 {
+    font-size: 18px;
+  }
+
+
+  .partners-carousel {
+    padding-top: 12px;
+  }
+
+
+  .partner-logo {
     width: 65px;
     height: 65px;
   }
 
-  .partenaire p {
-    font-size: 12px;
+
+  .partner-item {
+    min-width: 85px;
   }
 
+
+  .partner-item span {
+    font-size: 10px;
+  }
 }
 
 
-/* ================================
-   TRÈS PETIT MOBILE
-================================ */
 
-@media screen and (max-width: 320px) {
-
-  .popup-content {
-    padding: 20px 8px;
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(50px);
   }
 
-  .partenaire img {
-    width: 55px;
-    height: 55px;
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
   }
+}
 
-  .partenaire p {
-    font-size: 11px;
-  }
-
+.header-3d {
+  opacity: 0;
+  animation: apparition 1s ease-out forwards;
 }

@@ -50,7 +50,7 @@
 
     <header>
 
-        <div class="navbar">
+        <div class="navbar" id="ancre">
             <div class="logo">
                 <img class="gvas" src="images/Images/GVAS.png" alt="GVAS">
             </div>
@@ -86,7 +86,7 @@
                     </div>
                     <h1>
                         Construire des compétences,
-                        <span>créer des opportunités.</span>
+                        <span style="color: yellow;">créer des opportunités.</span>
                     </h1>
                     <p>
                         GVAS œuvre dans l'éducation, la formation,
@@ -123,7 +123,7 @@
                 </span>
 
                 <h2>
-                    Éducation & <span>Formation</span>
+                    Éducation & <span style="color: yellow;">Formation</span>
                 </h2>
 
                 <p>
@@ -219,7 +219,7 @@
                     </span>
 
                     <h2>
-                        Nos <span>Valeurs</span>
+                        Nos <span style="color: yellow;">Valeurs</span>
                     </h2>
 
                     <p>
@@ -297,7 +297,7 @@
                 </span>
 
                 <h2>
-                    Nos <span>Réalisations</span>
+                    Nos <span style="color: yellow;">Réalisations</span>
                 </h2>
 
                 <p>
@@ -442,6 +442,24 @@
         </div>
 
     </section>
+    <style>
+        @media (max-width: 820px) {
+            #foot h1 {
+                font-size: 15px;
+            }
+        }
+    </style>
+    <!-- footer -->
+    <div id="foot">
+        <a href="#ancre">
+            <h1>
+                RETOUR AU SOMMET
+            </h1>
+
+            <img src="images/Images/image.jpg" alt="lien_retours">
+        </a>
+    </div>
+    <?php include 'footer.php'; ?>
 
     <!--burgerMenuButton-->
     <script>
