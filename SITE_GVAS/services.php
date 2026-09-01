@@ -99,7 +99,7 @@
 
                 <!-- ESPACE IMAGE -->
                 <div class="image-placeholder">
-                    <img src="images/Images/Two.jpg" alt="GVAS">
+                    <img src="images/Images/Two1.png" alt="GVAS">
                 </div>
 
             </div>
@@ -209,7 +209,7 @@
 
                 <!-- ESPACE IMAGE -->
                 <div class="values-image">
-                    <img src="images/Images/Three.jpg" alt="GVAS">
+                    <img src="images/Images/Valeur.png" alt="GVAS">
                 </div>
 
 
@@ -217,10 +217,6 @@
 
                     <span class="section-heading .small-title">
                     </span>
-
-                    <h2>
-                        Nos <span style="color: yellow;">Valeurs</span>
-                    </h2>
 
                     <p>
                         Chez GVAS, nous croyons que le développement
@@ -493,6 +489,116 @@
         /* empêcher fermeture si clic dans le menu */
         burgerMenu.addEventListener('click', function(e) {
             e.stopPropagation();
+        });
+    </script>
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            const valuesSection = document.querySelector(".values");
+
+            if (!valuesSection) return;
+
+            const observer = new IntersectionObserver((entries) => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        // Active l'animation
+                        valuesSection.classList.add("show-values");
+
+                    } else {
+
+                        // Retire la classe quand la section sort de l'écran
+                        valuesSection.classList.remove("show-values");
+
+                    }
+
+                });
+
+            }, {
+                threshold: 0.25
+            });
+
+            observer.observe(valuesSection);
+
+        });
+    </script>
+
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            const achievementsSection = document.querySelector(".achievements");
+
+            if (!achievementsSection) return;
+
+            const observer = new IntersectionObserver((entries) => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        // Lance l'animation
+                        achievementsSection.classList.add("show-achievements");
+
+                    } else {
+
+                        // Permet de rejouer l'animation
+                        achievementsSection.classList.remove("show-achievements");
+
+                    }
+
+                });
+
+            }, {
+                threshold: 0.25
+            });
+
+            observer.observe(achievementsSection);
+
+        });
+    </script>
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            const domainsSection = document.querySelector(".domains");
+
+            if (!domainsSection) return;
+
+            const observer = new IntersectionObserver((entries) => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        domainsSection.classList.add("show-domains");
+
+                    } else {
+
+                        domainsSection.classList.remove("show-domains");
+
+                    }
+
+                });
+
+            }, {
+                threshold: 0.20
+            });
+
+            observer.observe(domainsSection);
+
         });
     </script>
 </body>
