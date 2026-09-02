@@ -2,9 +2,136 @@ main {
     background-image: repeating-linear-gradient(135deg, rgba(240, 240, 240,0.02) 0px, rgba(240, 240, 240,0.02) 21px,rgba(224, 224, 224,0.02) 21px, rgba(224, 224, 224,0.02) 42px,rgba(208, 208, 208,0.02) 42px, rgba(208, 208, 208,0.02) 63px,rgba(192, 192, 192,0.02) 63px, rgba(192, 192, 192,0.02) 84px,rgba(175, 175, 175,0.02) 84px, rgba(175, 175, 175,0.02) 105px,rgba(159, 159, 159,0.02) 105px, rgba(159, 159, 159,0.02) 126px,rgba(143, 143, 143,0.02) 126px, rgba(143, 143, 143,0.02) 147px,rgba(127, 127, 127,0.02) 147px, rgba(127, 127, 127,0.02) 168px),repeating-linear-gradient(45deg, rgba(232, 232, 232,0.02) 0px, rgba(232, 232, 232,0.02) 21px,rgba(209, 209, 209,0.02) 21px, rgba(209, 209, 209,0.02) 42px,rgba(185, 185, 185,0.02) 42px, rgba(185, 185, 185,0.02) 63px,rgba(162, 162, 162,0.02) 63px, rgba(162, 162, 162,0.02) 84px,rgba(138, 138, 138,0.02) 84px, rgba(138, 138, 138,0.02) 105px,rgba(115, 115, 115,0.02) 105px, rgba(115, 115, 115,0.02) 126px,rgba(91, 91, 91,0.02) 126px, rgba(91, 91, 91,0.02) 147px,rgba(68, 68, 68,0.02) 147px, rgba(68, 68, 68,0.02) 168px),linear-gradient(90deg, #ffffff,#ffffff);
 }
 
-.sct_bar {
-    background-color: rgba(191, 192, 194, 0.5);
+* {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif
 }
+
+
+/* =========================================================
+   TABLETTE
+========================================================= */
+
+@media (max-width: 828px) {
+     .sct1 .p_sct1 {
+        width:auto;
+  }
+  
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+    .sct1 .span_sct1 {
+        font-size: 20px;
+    }
+ 
+}
+
+
+/* =========================================================
+   TRÈS PETIT MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+  /* Grand mobile */
+   .sct1 .link {
+    display:flex;
+    flex-direction: column; 
+  }
+
+  .sct_caro .sct_caro1 {
+    display:flex;
+    flex-direction: column; 
+  }
+
+  .stc_caro .stc_caro_text {
+    width: auto;
+  } 
+
+  .sct_formation h1 {
+    font-size: 20px;
+  }
+
+   .sct_formation .une_formation .la_formation {
+    display:flex;
+    flex-direction:column;
+  }
+
+     .sct_formation .une_formation .la_formation .bo {
+    height: 70px;
+    width: 1px;
+  }
+  
+  /*
+  .span_sct1 { 
+    font-size: 20px;
+  }
+
+  .h_Sct1 {
+    font-size: 15px;
+  } */
+
+  .sct1 .p_sct1 {
+    font-size: 15px;
+    width:auto;
+  }
+
+  .sct1 .image {
+    display: none;
+  }
+
+  /* Sct_bar */
+  .sct_bar h1 {
+    font-size: 20px
+  }
+
+}
+
+/* barrage */
+
+@media (min-width: 1024px) {
+  /* Desktop */
+}
+
+@media (min-width: 1280px) {
+  /* Grand desktop */
+}
+
+@media (min-width: 1440px) {
+  /* Très grand desktop */
+}
+
+
+
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+header {
+  opacity: 0;
+  animation: apparition 1s ease-out forwards;
+}
+
+/* µµµµµµµ */
+
+
+.sct_formation .une_formation .la_formation:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+/* s */
 
 .sct1 {
     background-image: url(../Assets/IMG_6238.jpg.jpeg);
@@ -38,14 +165,13 @@ main {
 .sct2 .sct2_touche3:hover span {
     color: #ffffff;
 }
-/* 
-MAIN {
+
+/* MAIN {
     COLOR: rgb(7, 33, 119)
 } */
 
-
 .sct2 .sct2_touche2:hover {
-    background-color:  rgb(247, 162, 4);
+    background-color:  #072177;
     transform: scale(1.05);
     transition: all 0.3s ease-in-out;
     color: white;
