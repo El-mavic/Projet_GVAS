@@ -694,8 +694,7 @@
                                 </span>
 
                                 <p class="text-sm leading-6 text-gray-600">
-                                    Promouvoir l'esprit critique, la créativité
-                                    et l'ouverture d'esprit.
+                                    Développer les compétences professionnelles, techniques et numériques des bénéficiaires.
                                 </p>
                             </div>
 
@@ -711,8 +710,7 @@
                                 </span>
 
                                 <p class="text-sm leading-6 text-gray-600">
-                                    Lutter contre l'abandon scolaire
-                                    et l'analphabétisme.
+                                    Faciliter l'accès à une formation adaptée aux besoins et aux projets de chacun.
                                 </p>
 
                             </div>
@@ -756,17 +754,18 @@
                                 <div class="flex h-11 w-11 shrink-0 items-center
                                justify-center rounded-lg bg-blue-100
                                text-blue-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Pro v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc.--><path d="M480 576L192 576C139 576 96 533 96 480L96 160C96 107 139 64 192 64L496 64C522.5 64 544 85.5 544 112L544 400C544 420.9 530.6 438.7 512 445.3L512 512C529.7 512 544 526.3 544 544C544 561.7 529.7 576 512 576L480 576zM192 448C174.3 448 160 462.3 160 480C160 497.7 174.3 512 192 512L448 512L448 448L192 448zM224 216C224 229.3 234.7 240 248 240L424 240C437.3 240 448 229.3 448 216C448 202.7 437.3 192 424 192L248 192C234.7 192 224 202.7 224 216zM248 288C234.7 288 224 298.7 224 312C224 325.3 234.7 336 248 336L424 336C437.3 336 448 325.3 448 312C448 298.7 437.3 288 424 288L248 288z"/></svg>
+
                                     <!-- bon -->
                                 </div>
 
                                 <div>
                                     <h3 class="font-semibold text-blue-800">
-                                        Soutien scolaire et fournitures
+                                        Formations professionnelles 
                                     </h3>
 
                                     <p class="mt-1 text-sm leading-5 text-gray-600">
-                                        Nous apportons un soutien matériel et
-                                        pédagogique aux élèves en difficulté.
+                                       Proposer des formations adaptées aux besoins du marché et aux projets des bénéficiaires.
                                     </p>
                                 </div>
 
@@ -782,17 +781,17 @@
                                 <div class="flex h-11 w-11 shrink-0 items-center
                                justify-center rounded-lg bg-blue-100
                                text-blue-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M128 128C128 92.7 156.7 64 192 64L341.5 64C358.5 64 374.8 70.7 386.8 82.7L493.3 189.3C505.3 201.3 512 217.6 512 234.6L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 128zM336 122.5L336 216C336 229.3 346.7 240 360 240L453.5 240L336 122.5zM216 128C202.7 128 192 138.7 192 152C192 165.3 202.7 176 216 176L264 176C277.3 176 288 165.3 288 152C288 138.7 277.3 128 264 128L216 128zM216 224C202.7 224 192 234.7 192 248C192 261.3 202.7 272 216 272L264 272C277.3 272 288 261.3 288 248C288 234.7 277.3 224 264 224L216 224zM286.3 384C275 384 264.4 389.1 257.4 397.9L197.3 473C189 483.3 190.7 498.5 201 506.7C211.3 514.9 226.5 513.3 234.7 502.9L281.8 444.1L297 494.8C300 505 309.4 511.9 320 511.9L424 511.9C437.3 511.9 448 501.2 448 487.9C448 474.6 437.3 463.9 424 463.9L337.9 463.9L321.8 410.3C317.1 394.6 302.7 383.9 286.3 383.9z"/></svg>
                                     <!-- bon -->
                                 </div>
 
                                 <div>
                                     <h3 class="font-semibold text-blue-800">
-                                        Ateliers et formations éducatives
+                                        Formations numériques et techniques
                                     </h3>
 
                                     <p class="mt-1 text-sm leading-5 text-gray-600">
-                                        Nous organisons des ateliers pour renforcer
-                                        les compétences des jeunes et des enseignants.
+                                        Développer les compétences informatiques, numériques et techniques.
                                     </p>
                                 </div>
 
@@ -808,17 +807,17 @@
                                 <div class="flex h-11 w-11 shrink-0 items-center
                                justify-center rounded-lg bg-blue-100
                                text-blue-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M256 144C256 117.5 277.5 96 304 96L336 96C362.5 96 384 117.5 384 144L384 496C384 522.5 362.5 544 336 544L304 544C277.5 544 256 522.5 256 496L256 144zM64 336C64 309.5 85.5 288 112 288L144 288C170.5 288 192 309.5 192 336L192 496C192 522.5 170.5 544 144 544L112 544C85.5 544 64 522.5 64 496L64 336zM496 160L528 160C554.5 160 576 181.5 576 208L576 496C576 522.5 554.5 544 528 544L496 544C469.5 544 448 522.5 448 496L448 208C448 181.5 469.5 160 496 160z"/></svg>
                                     <!-- bon -->
                                 </div>
 
                                 <div>
                                     <h3 class="font-semibold text-blue-800">
-                                        Bibliothèques et espaces d'apprentissage
+                                        Mise en relation 
                                     </h3>
 
                                     <p class="mt-1 text-sm leading-5 text-gray-600">
-                                        Nous créons des espaces sûrs et inspirants
-                                        pour apprendre et se développer.
+                                        créer des passerelles avec les entreprises, institutions, centres de formation et partenaires.
                                     </p>
                                 </div>
 
@@ -834,17 +833,17 @@
                                 <div class="flex h-11 w-11 shrink-0 items-center
                                justify-center rounded-lg bg-blue-100
                                text-blue-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green-500" viewBox="0 0 640 640" ><!--!Font Awesome Pro v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc.--><path d="M295.4 37L310.2 73.8L347 88.6C350 89.8 352 92.8 352 96C352 99.2 350 102.2 347 103.4L310.2 118.2L295.4 155C294.2 158 291.2 160 288 160C284.8 160 281.8 158 280.6 155L265.8 118.2L229 103.4C226 102.2 224 99.2 224 96C224 92.8 226 89.8 229 88.6L265.8 73.8L280.6 37C281.8 34 284.8 32 288 32C291.2 32 294.2 34 295.4 37zM142.7 105.7L164.2 155.8L214.3 177.3C220.2 179.8 224 185.6 224 192C224 198.4 220.2 204.2 214.3 206.7L164.2 228.2L142.7 278.3C140.2 284.2 134.4 288 128 288C121.6 288 115.8 284.2 113.3 278.3L91.8 228.2L41.7 206.7C35.8 204.2 32 198.4 32 192C32 185.6 35.8 179.8 41.7 177.3L91.8 155.8L113.3 105.7C115.8 99.8 121.6 96 128 96C134.4 96 140.2 99.8 142.7 105.7zM496 368C502.4 368 508.2 371.8 510.7 377.7L532.2 427.8L582.3 449.3C588.2 451.8 592 457.6 592 464C592 470.4 588.2 476.2 582.3 478.7L532.2 500.2L510.7 550.3C508.2 556.2 502.4 560 496 560C489.6 560 483.8 556.2 481.3 550.3L459.8 500.2L409.7 478.7C403.8 476.2 400 470.4 400 464C400 457.6 403.8 451.8 409.7 449.3L459.8 427.8L481.3 377.7C483.8 371.8 489.6 368 496 368zM492 64C503 64 513.6 68.4 521.5 76.2L563.8 118.5C571.6 126.4 576 137 576 148C576 159 571.6 169.6 563.8 177.5L475.6 265.7L374.3 164.4L462.5 76.2C470.4 68.4 481 64 492 64zM76.2 462.5L340.4 198.3L441.7 299.6L177.5 563.8C169.6 571.6 159 576 148 576C137 576 126.4 571.6 118.5 563.8L76.2 521.5C68.4 513.6 64 503 64 492C64 481 68.4 470.4 76.2 462.5z"/></svg>
                                     <!-- bon -->
                                 </div>
 
                                 <div>
                                     <h3 class="font-semibold text-blue-800">
-                                        Bourses et parrainages
+                                        Ateliers pratiques
                                     </h3>
 
                                     <p class="mt-1 text-sm leading-5 text-gray-600">
-                                        Nous accompagnons les élèves méritants
-                                        pour leur permettre de poursuivre leurs études.
+                                       Favoriser l'apprentissage par la pratique, les exercices, les projets et les mises en situation.
                                     </p>
                                 </div>
 
@@ -960,8 +959,7 @@
                             </span>
 
                             <p class="text-sm leading-6 text-gray-600">
-                                Rendre l'éducation de qualité accessible
-                                aux enfants et aux jeunes.
+                                Encourager l'entrepreneuriat, l'innovation et l'autonomisation économique des populations
                             </p>
                         </div>
 
@@ -977,8 +975,7 @@
                             </span>
 
                             <p class="text-sm leading-6 text-gray-600">
-                                Favoriser le développement de compétences
-                                utiles pour la vie et l'emploi.
+                                Favoriser les échanges d'expériences, la coopération régionale et internationale ainsi que la mobilité des jeunes et des professionnels.
                             </p>
                         </div>
 
@@ -994,8 +991,7 @@
                             </span>
 
                             <p class="text-sm leading-6 text-gray-600">
-                                Promouvoir l'esprit critique, la créativité
-                                et l'ouverture d'esprit.
+                                Renforcer l'autonomie et la confiance en soi des bénéficiaires à travers un accompagnement personnalisé
                             </p>
                         </div>
 
@@ -1011,8 +1007,7 @@
                             </span>
 
                             <p class="text-sm leading-6 text-gray-600">
-                                Lutter contre l'abandon scolaire
-                                et l'analphabétisme.
+                                Soutenir les personnes vulnérables et les communautés défavorisées.
                             </p>
 
                         </div>
@@ -1056,17 +1051,18 @@
                             <div class="flex h-11 w-11 shrink-0 items-center
                                justify-center rounded-lg bg-green-100
                                text-green-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Pro v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc.--><path d="M480 576L192 576C139 576 96 533 96 480L96 160C96 107 139 64 192 64L496 64C522.5 64 544 85.5 544 112L544 400C544 420.9 530.6 438.7 512 445.3L512 512C529.7 512 544 526.3 544 544C544 561.7 529.7 576 512 576L480 576zM192 448C174.3 448 160 462.3 160 480C160 497.7 174.3 512 192 512L448 512L448 448L192 448zM224 216C224 229.3 234.7 240 248 240L424 240C437.3 240 448 229.3 448 216C448 202.7 437.3 192 424 192L248 192C234.7 192 224 202.7 224 216zM248 288C234.7 288 224 298.7 224 312C224 325.3 234.7 336 248 336L424 336C437.3 336 448 325.3 448 312C448 298.7 437.3 288 424 288L248 288z"/></svg>
+
                                 <!-- bon -->
                             </div>
 
                             <div>
                                 <h3 class="font-semibold text-green-800">
-                                    Soutien scolaire et fournitures
+                                Orientation et Conseil
                                 </h3>
 
                                 <p class="mt-1 text-sm leading-5 text-gray-600">
-                                    Nous apportons un soutien matériel et
-                                    pédagogique aux élèves en difficulté.
+                                    Accompagner les jeunes et les adultes dans leurs choix scolaires, professionnels et personnels.
                                 </p>
                             </div>
 
@@ -1082,17 +1078,17 @@
                             <div class="flex h-11 w-11 shrink-0 items-center
                                justify-center rounded-lg bg-green-100
                                text-green-600">
+                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M128 128C128 92.7 156.7 64 192 64L341.5 64C358.5 64 374.8 70.7 386.8 82.7L493.3 189.3C505.3 201.3 512 217.6 512 234.6L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 128zM336 122.5L336 216C336 229.3 346.7 240 360 240L453.5 240L336 122.5zM216 128C202.7 128 192 138.7 192 152C192 165.3 202.7 176 216 176L264 176C277.3 176 288 165.3 288 152C288 138.7 277.3 128 264 128L216 128zM216 224C202.7 224 192 234.7 192 248C192 261.3 202.7 272 216 272L264 272C277.3 272 288 261.3 288 248C288 234.7 277.3 224 264 224L216 224zM286.3 384C275 384 264.4 389.1 257.4 397.9L197.3 473C189 483.3 190.7 498.5 201 506.7C211.3 514.9 226.5 513.3 234.7 502.9L281.8 444.1L297 494.8C300 505 309.4 511.9 320 511.9L424 511.9C437.3 511.9 448 501.2 448 487.9C448 474.6 437.3 463.9 424 463.9L337.9 463.9L321.8 410.3C317.1 394.6 302.7 383.9 286.3 383.9z"/></svg>
                                 <!-- bon -->
                             </div>
 
                             <div>
                                 <h3 class="font-semibold text-green-800">
-                                    Ateliers et formations éducatives
+                                    Accompagnement entrepreneurial
                                 </h3>
 
                                 <p class="mt-1 text-sm leading-5 text-gray-600">
-                                    Nous organisons des ateliers pour renforcer
-                                    les compétences des jeunes et des enseignants.
+                                   Soutenir les porteurs de projets dans la conception, la structuration et le développement de leurs initiatives.
                                 </p>
                             </div>
 
@@ -1108,17 +1104,17 @@
                             <div class="flex h-11 w-11 shrink-0 items-center
                                justify-center rounded-lg bg-green-100
                                text-green-600">
+                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M256 144C256 117.5 277.5 96 304 96L336 96C362.5 96 384 117.5 384 144L384 496C384 522.5 362.5 544 336 544L304 544C277.5 544 256 522.5 256 496L256 144zM64 336C64 309.5 85.5 288 112 288L144 288C170.5 288 192 309.5 192 336L192 496C192 522.5 170.5 544 144 544L112 544C85.5 544 64 522.5 64 496L64 336zM496 160L528 160C554.5 160 576 181.5 576 208L576 496C576 522.5 554.5 544 528 544L496 544C469.5 544 448 522.5 448 496L448 208C448 181.5 469.5 160 496 160z"/></svg>
                                 <!-- bon -->
                             </div>
 
                             <div>
                                 <h3 class="font-semibold text-green-800">
-                                    Bibliothèques et espaces d'apprentissage
+                                    Accompagnement vers l'emploi
                                 </h3>
 
                                 <p class="mt-1 text-sm leading-5 text-gray-600">
-                                    Nous créons des espaces sûrs et inspirants
-                                    pour apprendre et se développer.
+                                    Aider les demandeurs d'emploi à développer leurs compétences, préparer leur insertion professionnelle et identifier les opportunités
                                 </p>
                             </div>
 
@@ -1134,17 +1130,17 @@
                             <div class="flex h-11 w-11 shrink-0 items-center
                                justify-center rounded-lg bg-green-100
                                text-green-600">
+                               <svg xmlns="http://www.w3.org/2000/svg" class="text-green-500" viewBox="0 0 640 640" ><!--!Font Awesome Pro v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc.--><path d="M295.4 37L310.2 73.8L347 88.6C350 89.8 352 92.8 352 96C352 99.2 350 102.2 347 103.4L310.2 118.2L295.4 155C294.2 158 291.2 160 288 160C284.8 160 281.8 158 280.6 155L265.8 118.2L229 103.4C226 102.2 224 99.2 224 96C224 92.8 226 89.8 229 88.6L265.8 73.8L280.6 37C281.8 34 284.8 32 288 32C291.2 32 294.2 34 295.4 37zM142.7 105.7L164.2 155.8L214.3 177.3C220.2 179.8 224 185.6 224 192C224 198.4 220.2 204.2 214.3 206.7L164.2 228.2L142.7 278.3C140.2 284.2 134.4 288 128 288C121.6 288 115.8 284.2 113.3 278.3L91.8 228.2L41.7 206.7C35.8 204.2 32 198.4 32 192C32 185.6 35.8 179.8 41.7 177.3L91.8 155.8L113.3 105.7C115.8 99.8 121.6 96 128 96C134.4 96 140.2 99.8 142.7 105.7zM496 368C502.4 368 508.2 371.8 510.7 377.7L532.2 427.8L582.3 449.3C588.2 451.8 592 457.6 592 464C592 470.4 588.2 476.2 582.3 478.7L532.2 500.2L510.7 550.3C508.2 556.2 502.4 560 496 560C489.6 560 483.8 556.2 481.3 550.3L459.8 500.2L409.7 478.7C403.8 476.2 400 470.4 400 464C400 457.6 403.8 451.8 409.7 449.3L459.8 427.8L481.3 377.7C483.8 371.8 489.6 368 496 368zM492 64C503 64 513.6 68.4 521.5 76.2L563.8 118.5C571.6 126.4 576 137 576 148C576 159 571.6 169.6 563.8 177.5L475.6 265.7L374.3 164.4L462.5 76.2C470.4 68.4 481 64 492 64zM76.2 462.5L340.4 198.3L441.7 299.6L177.5 563.8C169.6 571.6 159 576 148 576C137 576 126.4 571.6 118.5 563.8L76.2 521.5C68.4 513.6 64 503 64 492C64 481 68.4 470.4 76.2 462.5z"/></svg>
                                 <!-- bon -->
                             </div>
 
                             <div>
                                 <h3 class="font-semibold text-green-800">
-                                    Bourses et parrainages
+                                    Suivi personnalisé
                                 </h3>
 
                                 <p class="mt-1 text-sm leading-5 text-gray-600">
-                                    Nous accompagnons les élèves méritants
-                                    pour leur permettre de poursuivre leurs études.
+                                    Assurer un accompagnement individualisé afin d'identifier les besoins, mesurer les progrès et adapter les actions proposées.
                                 </p>
                             </div>
                         </div>
@@ -1259,8 +1255,7 @@
                             </span>
 
                             <p class="text-sm leading-6 text-gray-600">
-                                Rendre l'éducation de qualité accessible
-                                aux enfants et aux jeunes.
+                               Protéger les personnes vulnérables et les communautés défavorisées.
                             </p>
                         </div>
 
@@ -1276,8 +1271,7 @@
                             </span>
 
                             <p class="text-sm leading-6 text-gray-600">
-                                Favoriser le développement de compétences
-                                utiles pour la vie et l'emploi.
+                               Promouvoir la dignité, les droits et l'égalité des chances pour tous.
                             </p>
                         </div>
 
@@ -1293,8 +1287,7 @@
                             </span>
 
                             <p class="text-sm leading-6 text-gray-600">
-                                Promouvoir l'esprit critique, la créativité
-                                et l'ouverture d'esprit.
+                                Sensibiliser les populations aux enjeux liés à la protection de l'environnement.
                             </p>
                         </div>
 
@@ -1310,8 +1303,7 @@
                             </span>
 
                             <p class="text-sm leading-6 text-gray-600">
-                                Lutter contre l'abandon scolaire
-                                et l'analphabétisme.
+                                Favoriser un environnement sûr, sain et respectueux pour les communautés
                             </p>
 
                         </div>
@@ -1355,17 +1347,18 @@
                             <div class="flex h-11 w-11 shrink-0 items-center
                                justify-center rounded-lg bg-blue-100
                                text-blue-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Pro v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc.--><path d="M480 576L192 576C139 576 96 533 96 480L96 160C96 107 139 64 192 64L496 64C522.5 64 544 85.5 544 112L544 400C544 420.9 530.6 438.7 512 445.3L512 512C529.7 512 544 526.3 544 544C544 561.7 529.7 576 512 576L480 576zM192 448C174.3 448 160 462.3 160 480C160 497.7 174.3 512 192 512L448 512L448 448L192 448zM224 216C224 229.3 234.7 240 248 240L424 240C437.3 240 448 229.3 448 216C448 202.7 437.3 192 424 192L248 192C234.7 192 224 202.7 224 216zM248 288C234.7 288 224 298.7 224 312C224 325.3 234.7 336 248 336L424 336C437.3 336 448 325.3 448 312C448 298.7 437.3 288 424 288L248 288z"/></svg>
+
                                 <!-- bon -->
                             </div>
 
                             <div>
                                 <h3 class="font-semibold text-blue-800">
-                                    Soutien scolaire et fournitures
+                                    Protection des personnes vulnérables
                                 </h3>
 
                                 <p class="mt-1 text-sm leading-5 text-gray-600">
-                                    Nous apportons un soutien matériel et
-                                    pédagogique aux élèves en difficulté.
+                                    Identifier les besoins et apporter un soutien adapté aux personnes et familles en situation de vulnérabilité
                                 </p>
                             </div>
 
@@ -1381,17 +1374,17 @@
                             <div class="flex h-11 w-11 shrink-0 items-center
                                justify-center rounded-lg bg-blue-100
                                text-blue-600">
+                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M128 128C128 92.7 156.7 64 192 64L341.5 64C358.5 64 374.8 70.7 386.8 82.7L493.3 189.3C505.3 201.3 512 217.6 512 234.6L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 128zM336 122.5L336 216C336 229.3 346.7 240 360 240L453.5 240L336 122.5zM216 128C202.7 128 192 138.7 192 152C192 165.3 202.7 176 216 176L264 176C277.3 176 288 165.3 288 152C288 138.7 277.3 128 264 128L216 128zM216 224C202.7 224 192 234.7 192 248C192 261.3 202.7 272 216 272L264 272C277.3 272 288 261.3 288 248C288 234.7 277.3 224 264 224L216 224zM286.3 384C275 384 264.4 389.1 257.4 397.9L197.3 473C189 483.3 190.7 498.5 201 506.7C211.3 514.9 226.5 513.3 234.7 502.9L281.8 444.1L297 494.8C300 505 309.4 511.9 320 511.9L424 511.9C437.3 511.9 448 501.2 448 487.9C448 474.6 437.3 463.9 424 463.9L337.9 463.9L321.8 410.3C317.1 394.6 302.7 383.9 286.3 383.9z"/></svg>
                                 <!-- bon -->
                             </div>
 
                             <div>
                                 <h3 class="font-semibold text-blue-800">
-                                    Ateliers et formations éducatives
+                                    Sensibilisation et prévention
                                 </h3>
 
                                 <p class="mt-1 text-sm leading-5 text-gray-600">
-                                    Nous organisons des ateliers pour renforcer
-                                    les compétences des jeunes et des enseignants.
+                                    Informer les communautés sur les violences, discriminations, risques sociaux et comportements à risque.
                                 </p>
                             </div>
 
@@ -1407,17 +1400,17 @@
                             <div class="flex h-11 w-11 shrink-0 items-center
                                justify-center rounded-lg bg-blue-100
                                text-blue-600">
+                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M256 144C256 117.5 277.5 96 304 96L336 96C362.5 96 384 117.5 384 144L384 496C384 522.5 362.5 544 336 544L304 544C277.5 544 256 522.5 256 496L256 144zM64 336C64 309.5 85.5 288 112 288L144 288C170.5 288 192 309.5 192 336L192 496C192 522.5 170.5 544 144 544L112 544C85.5 544 64 522.5 64 496L64 336zM496 160L528 160C554.5 160 576 181.5 576 208L576 496C576 522.5 554.5 544 528 544L496 544C469.5 544 448 522.5 448 496L448 208C448 181.5 469.5 160 496 160z"/></svg>
                                 <!-- bon -->
                             </div>
 
                             <div>
                                 <h3 class="font-semibold text-blue-800">
-                                    Bibliothèques et espaces d'apprentissage
+                                    Éducation à la citoyenneté
                                 </h3>
 
                                 <p class="mt-1 text-sm leading-5 text-gray-600">
-                                    Nous créons des espaces sûrs et inspirants
-                                    pour apprendre et se développer.
+                                   Encourager la responsabilité, la solidarité et la participation des citoyens au développement de leur communauté.
                                 </p>
                             </div>
 
@@ -1433,17 +1426,17 @@
                             <div class="flex h-11 w-11 shrink-0 items-center
                                justify-center rounded-lg bg-blue-100
                                text-blue-600">
+                               <svg xmlns="http://www.w3.org/2000/svg" class="text-green-500" viewBox="0 0 640 640" ><!--!Font Awesome Pro v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc.--><path d="M295.4 37L310.2 73.8L347 88.6C350 89.8 352 92.8 352 96C352 99.2 350 102.2 347 103.4L310.2 118.2L295.4 155C294.2 158 291.2 160 288 160C284.8 160 281.8 158 280.6 155L265.8 118.2L229 103.4C226 102.2 224 99.2 224 96C224 92.8 226 89.8 229 88.6L265.8 73.8L280.6 37C281.8 34 284.8 32 288 32C291.2 32 294.2 34 295.4 37zM142.7 105.7L164.2 155.8L214.3 177.3C220.2 179.8 224 185.6 224 192C224 198.4 220.2 204.2 214.3 206.7L164.2 228.2L142.7 278.3C140.2 284.2 134.4 288 128 288C121.6 288 115.8 284.2 113.3 278.3L91.8 228.2L41.7 206.7C35.8 204.2 32 198.4 32 192C32 185.6 35.8 179.8 41.7 177.3L91.8 155.8L113.3 105.7C115.8 99.8 121.6 96 128 96C134.4 96 140.2 99.8 142.7 105.7zM496 368C502.4 368 508.2 371.8 510.7 377.7L532.2 427.8L582.3 449.3C588.2 451.8 592 457.6 592 464C592 470.4 588.2 476.2 582.3 478.7L532.2 500.2L510.7 550.3C508.2 556.2 502.4 560 496 560C489.6 560 483.8 556.2 481.3 550.3L459.8 500.2L409.7 478.7C403.8 476.2 400 470.4 400 464C400 457.6 403.8 451.8 409.7 449.3L459.8 427.8L481.3 377.7C483.8 371.8 489.6 368 496 368zM492 64C503 64 513.6 68.4 521.5 76.2L563.8 118.5C571.6 126.4 576 137 576 148C576 159 571.6 169.6 563.8 177.5L475.6 265.7L374.3 164.4L462.5 76.2C470.4 68.4 481 64 492 64zM76.2 462.5L340.4 198.3L441.7 299.6L177.5 563.8C169.6 571.6 159 576 148 576C137 576 126.4 571.6 118.5 563.8L76.2 521.5C68.4 513.6 64 503 64 492C64 481 68.4 470.4 76.2 462.5z"/></svg>
                                 <!-- bon -->
                             </div>
 
                             <div>
                                 <h3 class="font-semibold text-blue-800">
-                                    Bourses et parrainages
+                                    Partenariats de protection
                                 </h3>
 
                                 <p class="mt-1 text-sm leading-5 text-gray-600">
-                                    Nous accompagnons les élèves méritants
-                                    pour leur permettre de poursuivre leurs études.
+                                   collaborer avec les acteurs publics, privés et associatifs pour renforcer l'impact des actions de protection sociale et environnementale.
                                 </p>
                             </div>
 
