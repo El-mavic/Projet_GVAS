@@ -20,7 +20,7 @@
 
     <link rel="stylesheet" href="css/output.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="assets/logo1.png" type="image/png">
+    <link rel="icon" href="assets/logo.png" type="image/png">
     <title>Impacts</title>
 </head>
 
