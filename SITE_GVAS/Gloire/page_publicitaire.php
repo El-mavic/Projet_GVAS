@@ -168,21 +168,6 @@ if (!isset($_SESSION['visite_' . $page])) {
                 <div class="list_produits">
                     <div class="part">
                         <div class="div">
-                            <img src="Assets/Img/img pub/Articles informatiques/imprimanteG.avif" alt="imprimanteG">
-                        </div>
-                        <div class="dav">
-                            <h1>DESCRIPTION</h1>
-                            <h2>IMPRESSIONS BACHES</h2>
-                            <ul>
-                                <li>
-                                    prix : 2500frc (Noir et blanc)
-                                </li>   
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="part">
-                        <div class="div">
                             <img src="Assets/Img/img pub/Articles informatiques/Agrafeuse.jpg" alt="Agrafeuse">
                         </div>
 
@@ -191,11 +176,8 @@ if (!isset($_SESSION['visite_' . $page])) {
                             <h2>AGRAFEUSE</h2>
                             <ul>
                                 <li>
-                                    prix : 2500frc (Noir et blanc)
-                                </li>  
-                                <li>
-                                    prix : 1500frc (Noir et blanc)
-                                </li>   
+                                    Disponibles en stock
+                                </li>     
                             </ul>
                         </div>
                     </div>
@@ -209,6 +191,9 @@ if (!isset($_SESSION['visite_' . $page])) {
                             <h1>DESCRIPTION</h1>
                             <h2>BOITIERS DISQUE DURE</h2>
                             <ul>
+                                <li>
+                                    Disponibles en stock
+                                </li>   
                                 <li>
                                     1To
                                 </li>
@@ -281,6 +266,9 @@ if (!isset($_SESSION['visite_' . $page])) {
                             <h2>CLE USB</h2>
                             <ul>
                                 <li>
+                                    Disponibles en stock
+                                </li>   
+                                <li>
                                     1To
                                 </li>
                                 <li>
@@ -342,7 +330,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                         <div class="dav">
                             <h1>DESCRIPTION</h1>
-                            <h2>Ordinateur Bureautique</h2>
+                            <h2>INPRIMANTE</h2>
                             <ul>
                                 <li>
                                     Disponible en stock
@@ -448,11 +436,8 @@ if (!isset($_SESSION['visite_' . $page])) {
                             <h1>SERVICE DE PLASSIFICATION</h1>
                                 <ul>
                                     <li>
-                                        prix : 500frc (Format A4)
-                                    </li>
-                                    <li>
-                                        prix : 1000frc (Format A3)
-                                    </li>
+                                        Disponibles en stock
+                                    </li>   
                                 </ul>
                         </div>
                     </div>
@@ -469,16 +454,9 @@ if (!isset($_SESSION['visite_' . $page])) {
                             
                                 <ul>
                                     <li>
-                                        prix : 25frc (Noir et blanc)
-                                    </li>
-                                    <li>
-                                        prix : 150frc (Couleur)
-                                    </li>
-                                    <li>
-                                        prix : 15frc (appartir de 15 copies)
-                                    </li>
+                                        Disponibles en stock
+                                    </li>   
                                 </ul>
-                            
                         </div>
                     </div>
                 </div>
@@ -494,8 +472,8 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                             <ul>
                                 <li>
-                                    prix : 2500frc (Noir et blanc)
-                                </li>   
+                                    Disponibles en stock
+                                </li>    
                             </ul>
                         </div>
                     </div>
@@ -739,14 +717,11 @@ if (!isset($_SESSION['visite_' . $page])) {
                         </div>
 
                         <div class="bas">
-                            <h1>SERVICE DE PLASSIFICATION</h1>
+                            <h1>SERVICE DE PLASTIFICATION</h1>
                                 <ul>
                                     <li>
-                                        prix : 500frc (Format A4)
-                                    </li>
-                                    <li>
-                                        prix : 1000frc (Format A3)
-                                    </li>
+                                        Disponibles en stock
+                                    </li>   
                                 </ul>
                         </div>
                     </div>
@@ -763,14 +738,8 @@ if (!isset($_SESSION['visite_' . $page])) {
                             
                                 <ul>
                                     <li>
-                                        prix : 25frc (Noir et blanc)
-                                    </li>
-                                    <li>
-                                        prix : 150frc (Couleur)
-                                    </li>
-                                    <li>
-                                        prix : 15frc (appartir de 15 copies)
-                                    </li>
+                                        Disponibles en stock
+                                    </li>   
                                 </ul>
                             
                         </div>
@@ -788,8 +757,8 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                             <ul>
                                 <li>
-                                    prix : 2500frc (Noir et blanc)
-                                </li>   
+                                    Disponibles en stock
+                                </li>     
                             </ul>
                         </div>
                     </div>
@@ -802,7 +771,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                         </div>
 
                         <div class="bas">
-                            <h1>SERVICE DE VENTE <br> ACCESOIR DE BUREAU</h1>
+                            <h1>SERVICE DE VENTE <br> ACCESSOIRES DE BUREAU</h1>
                             <ul>
                                 <li>
                                     Disponible en stock
@@ -823,7 +792,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                             <h1>On s'adapte sur</h1>
                             <ul>
                                 <li>
-                                    Votre emplois du temps
+                                    Votre emploi du temps
                                 </li> 
 
                                 <li>
@@ -831,7 +800,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                                 </li>
                                 
                                 <li>
-                                    Votre tranche d'êge et autre
+                                    Votre tranche d'âge et autre
                                 </li>
                             </ul>
                         </div>
@@ -872,11 +841,8 @@ if (!isset($_SESSION['visite_' . $page])) {
                             <h1>SERVICE BUREAUTIQUE</h1>
                             <ul>
                                 <li>
-                                    Saisie (appartir de 500frc)
+                                    Disponibles en stock
                                 </li>   
-                                <li>
-                                    Conception (appartir de 500frc)
-                                </li> 
                             </ul>
                         </div>
                     </div>
@@ -893,7 +859,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                             <h1>On s'adapte sur</h1>
                             <ul>
                                 <li>
-                                    Votre emplois du temps
+                                    Votre emploi du temps
                                 </li> 
 
                                 <li>
@@ -901,7 +867,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                                 </li>
                                 
                                 <li>
-                                    Votre tranche d'êge et autre
+                                    Votre tranche d'âge et autre
                                 </li>
                             </ul>
                         </div>
@@ -921,7 +887,7 @@ if (!isset($_SESSION['visite_' . $page])) {
                                     Orientation quelconque
                                 </li>   
                                 <li>
-                                    Orientation proffesionnel
+                                    Orientation professionnelle
                                 </li> 
                                 <li>
                                     Orientation particulière 
@@ -979,7 +945,7 @@ if (!isset($_SESSION['visite_' . $page])) {
 
                         <div class="bas">
                             <div class="bas">
-                            <h1>AITEL MOBILE MONEY</h1>
+                            <h1>AIRTEL MOBILE MONEY</h1>
                             <ul>
                                 <li>
                                     Dépot et Retrait inclus
@@ -1032,11 +998,11 @@ if (!isset($_SESSION['visite_' . $page])) {
                                 </video>
                             </div>
                             <div class="p_bas">
-                                <h1 style="color: black;">Découvrez notre démo <br> concernant la disponsation des cours en ligne</h1>
+                                <h1 style="color: black;">Découvrez notre démo <br> concernant la dispensation des cours en ligne</h1>
 
                                 <p>
-                                    Accéder à nôtre salle de classe depuis chez vous !! <br>
-                                    <i> Service disponible uniquement aux élèves inscrit en fonction des emplois du
+                                    Accéder à notre salle de classe depuis chez vous !! <br>
+                                    <i> Service disponible uniquement aux élèves inscrits en fonction des emplois du
                                         temps des cours. </i>
                                 </p>
 

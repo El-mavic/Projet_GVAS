@@ -184,7 +184,7 @@ if (!isset($_SESSION['visite_' . $page])) {
             </ul>
         </div>
         <div class="card1 contact">
-            <h3>Contact/Secretaire</h3>
+            <h3>Contact/Secrétaire</h3>
             <p><i class="fa-solid fa-phone"></i> :+242 06 939 7629</p>
             <p><i class="fa-solid fa-envelope"></i> : info@gvas.fr</p>
         </div>

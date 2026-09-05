@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
+
     <meta name="author" content="El_Mavic BAKALA">
     <meta name="author" content="Célina LUEMBA">
     <meta name="author" content="Gloire NGUIMBI">
@@ -24,14 +24,14 @@
 </head>
 
 <body>
-    <main>
+    <main class="overflow-hidden">
         <section class="h-screen flex justify-center items-center sct1">
             <?php include 'css/header.php'; ?>
             <div
-                class="h-screen backdrop-blur-md w-screen flex flex-col justify-center items-center gap-4 border-none rounded-[60px]">
+                class="h-screen backdrop-blur-md w-screen flex flex-col justify-center items-center gap-8 border-none rounded-[60px]">
                 <div class="triangle flex flex-col justify-center items-center gap-4 text-white border-4 rounded-2xl p-16
                     bg-[radial-gradient(circle_at_top_left,#22c55e,#6d4a00,#2563eb)]">
-                    <span class="text-green-500 text-5xl font-bold">Nôtre impact</span>
+                    <span class="text-green-500 text-5xl font-bold">Notre impact</span>
 
                     <h1 class="text-3xl font-bold text-center">
                         Protéger <br>
@@ -39,28 +39,32 @@
                     </h1>
 
                     <p class="text-center w-4xl text-lg">
-                        Ensemble nous batissaons un avenir durable. Découvrez comment
-                        nos actions concretes sur le terrain redonne espoire et crént
+                        Ensemble nous bâtissons un avenir durable. Découvrez comment
+                        nos actions concrètes sur le terrain redonnent espoir et créent
                         des opportunités durables pour les communautés vulnérables.
                     </p>
 
                     <div class="flex gap-3 mt-8">
-                        <a href="#"
+                        <a href="#soutiens"
                             class="hover:bg-green-700 transition-colors w-60 h-2xl text-lg text-center border-2 border-green-700 rounded-2xl p-2">soutenir
                             nos
                             actions</a>
-                        <a href="#"
+                        <a href="#programme"
                             class="hover:bg-green-700 transition-colors w-60 h-2xl text-lg text-center border-2 border-green-700 rounded-2xl p-2">Découvrir
                             nos
                             programmes</a>
                     </div>
                 </div>
-<!-- 
-<div class="rounded-full size-32 flex flex-col justify-center items-center gap-4 text-center">
-    <img src="assets/logo1.png" rounded-full dorber alt="Logo GVAS" class="w-full h-auto">
-</div>  -->
-          </div>
+
+                <div class="rounded-full size-32 flex flex-col justify-center items-center gap-4 text-center">
+                    <img src="assets/logo1.png" rounded-full dorber alt="Logo GVAS" class="w-full h-auto">
+                </div>
+            </div>
         </section>
+
+        <!-- ========================================================= -->
+        <!-- MODAL : STATISTIQUE A SUIVRE -->
+        <!-- ========================================================= -->
 
         <!-- <section class="sct_bar flex flex-col justify-center items-center w-full gap-4 my-8 p-4">
             <h1 class="text-5xl font-bold text-white">Nos Statistiques</h1>
@@ -107,7 +111,127 @@
         </section>
  -->
 
-        <section class="flex justify-center p-8 h-64 items-center mt-4 mb-8 bg-linear-to-l  from-white to-blue-900">
+        <!-- ========================================================= -->
+        <!-- MODAL : PUBLIQUE CIBLE -->
+        <!-- ========================================================= -->
+
+        <section class="sct_bar flex flex-col justify-center items-center w-full gap-4 my-8 p-4">
+            <h1 class="text-5xl font-bold text-black">Notre Public Cible</h1>
+            <p>
+                Nous nous engageons à toucher un large éventail de bénéficiaires, en mettant l'accent sur les jeunes,
+                les adultes et les communautés locales. <br>
+                Notre impact se mesure à travers l'autonomisation des individus, la préparation aux métiers techniques
+                et la réintégration sociale réussie.
+            </p>
+        </section>
+
+        <section class="flex justify-center items-center mT-8 mb-16">
+            <div class="flex flex-wrap text-wrap justify-center items-center gap-6 max-w-6xl w-full">
+                <!-- CAROUSEL -->
+                <div class="relative w-full max-w-xl h-[400px] overflow-hidden rounded-2xl shadow-lg">
+                    <!-- Images -->
+                    <div id="carousel" class="flex h-full transition-transform duration-700 ease-in-out">
+                        <img src="Assets/image6.jpg" alt="Formation GVAS"
+                            class="w-full h-full object-cover flex-shrink-0">
+
+                        <img src="Assets/image2.jpg" alt="Activité GVAS"
+                            class="w-full h-full object-cover flex-shrink-0">
+
+                        <img src="Assets/image4.jpg" alt="Action sociale GVAS"
+                            class="w-full h-full object-cover flex-shrink-0">
+
+                        <img src="Assets/image5.jpg" alt="Activité GVAS"
+                            class="w-full h-full object-cover flex-shrink-0">
+
+                        <img src="Assets/image7.jpg" alt="Activité GVAS"
+                            class="w-full h-full object-cover flex-shrink-0">
+
+                        <img src="Assets/image3.jpg" alt="Accompagnement GVAS"
+                            class="w-full h-full object-cover flex-shrink-0">
+
+                        <img src="Assets/image4.jpg" alt="Action sociale GVAS"
+                            class="w-full h-full object-cover flex-shrink-0">
+                    </div>
+
+                    <!-- Bouton précédent -->
+                    <button onclick="previousSlide()"
+                        class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full w-10 h-10 flex items-center justify-center">
+                        ❮
+                    </button>
+
+                    <!-- Bouton suivant -->
+                    <button onclick="nextSlide()"
+                        class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full w-10 h-10 flex items-center justify-center">
+                        ❯
+                    </button>
+
+                    <!-- Indicateurs -->
+                    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+
+                        <button onclick="goToSlide(0)" class="indicator w-3 h-3 rounded-full bg-white">
+                        </button>
+
+                        <button onclick="goToSlide(1)" class="indicator w-3 h-3 rounded-full bg-white/50">
+                        </button>
+
+                        <button onclick="goToSlide(2)" class="indicator w-3 h-3 rounded-full bg-white/50">
+                        </button>
+
+                        <button onclick="goToSlide(3)" class="indicator w-3 h-3 rounded-full bg-white/50">
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- TEXTE -->
+                <div class="flex-1">
+
+                    <h2 class="text-2xl font-bold text-green-700 mt-4">
+                        Pour qui ?
+                    </h2>
+
+                    <p class="text-justify text-lg font-bold">
+                        Nos programmes de formation sont conçus pour répondre
+                        aux besoins d'une variété de publics, notamment :
+                    <ul class="list-disc ml-6">
+                        <li>
+                            Les jeunes en quête d'opportunités éducatives et professionnelles.
+                        </li>
+                        <li>
+                            Les adultes souhaitant améliorer leurs compétences et leur employabilité.
+                        </li>
+                        <li>
+                            Les communautés locales cherchant à renforcer leur capital humain.
+                        </li>
+                    </ul>
+                    </p>
+
+                    <h3 class="text-2xl font-bold text-blue-700 mt-8">
+                        Notre Impact
+                    </h3>
+
+                    <p class="text-justify text-lg font-bold">
+                        Grâce à nos initiatives, nous avons pu créer des opportunités
+                        durables pour les communautés vulnérables.
+                    </p>
+
+                    <ul class="list-disc ml-6">
+                        <li>Autonomie au quotidien</li>
+                        <li>Préparation aux métiers techniques</li>
+                        <li>Réintégration sociale réussie</li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================================= -->
+        <!-- MODAL : BAR SOUTIENS -->
+        <!-- ========================================================= -->
+
+        <section id="soutiens"
+            class="flex justify-center p-8 h-64 items-center mt-4 mb-16 bg-linear-to-l  from-white to-blue-900">
             <div class="text-center flex flex-col justify-center items-center gap-4">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="size-8">
@@ -115,22 +239,27 @@
                         d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                 </svg>
 
-                <h1 class="text-2xl font-bold">Rejoignez-Nous pour construire un avenir durable</h1>
+                <h1 class="text-2xl font-bold">Rejoignez-nous pour construire un avenir durable</h1>
                 <p class="text-center w-2xl text-lg">
                     votre soutient qu'il soit financier ou pas, le bénévolat, permet à GVAS <br>
                     Action-Sociale de continuer à transformer des vies sur le terrain
                 </p>
 
-                <a href="#"
+                <a href="#footer"
                     class="text-lg hover:bg-[rgb(0,55,255)] bg-green-700 text-white transition-colors font-bold w-60 h-2xl text-center rounded-2xl p-2">Nous
                     soutenir</a>
             </div>
         </section>
 
+        <!-- ========================================================= -->
+        <!-- MODAL : AVANT PROPOS -->
+        <!-- ========================================================= -->
+
         <section class="sct_bar flex flex-col justify-center items-center w-full gap-4 mt-16 p-4">
-            <h1 class="text-5xl font-bold">Nos Piliers d'Action</h1> 
+            <h1 class="text-5xl font-bold">Nos Piliers d'Action</h1>
             <p class="text-lg text-center">
-                Découvrez les piliers sur lesquels s'appuie notre action sociale pour créer un impact durable dans les communautés.
+                Découvrez les piliers sur lesquels s'appuie notre action sociale pour créer un impact durable dans les
+                communautés.
             </p>
         </section>
 
@@ -427,7 +556,7 @@
         </section>
 
         <!-- ========================================================= -->
-        <!-- MODAL : PROTÉGER -->
+        <!-- MODAL : FORMER -->
         <!-- ========================================================= -->
 
         <section class="mb-8" id="Former">
@@ -463,7 +592,7 @@
                                     </h1>
 
                                     <p class="mt-1 text-lg font-medium text-gray-700">
-                                        Renforcer les compétence des jeunes et des adultes pour un avenir prometteur.
+                                        Renforcer les compétences des jeunes et des adultes pour un avenir prometteur.
                                     </p>
                                 </div>
                             </div>
@@ -729,22 +858,22 @@
         </section>
 
         <!-- ========================================================= -->
-        <!-- MODAL : PROTÉGER -->
+        <!-- MODAL : ACCOMPAGNER -->
         <!-- ========================================================= -->
 
         <section class="mb-8" id="Accompagner">
-            <div>
+            <div class="rounded-3xl bg-white shadow-2xl">
                 <div class="grid grid-cols-1 gap-8 p-6 md:grid-cols-2 md:p-10">
-                        <div class="flex flex-col justify-center">
-                            <div class="flex items-center gap-5">
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-center gap-5">
 
-                                <div class="flex h-20 w-20 items-center justify-center
-                               rounded-full bg-blue-600
-                               shadow-lg shadow-blue-600/30">
-                                    <!-- Icône livre -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832
+                            <div class="flex h-20 w-20 items-center justify-center
+                               rounded-full bg-green-600
+                               shadow-lg shadow-green-600/30">
+                                <!-- Icône livre -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832
                                 5.477 9.246 5 7.5 5S4.168
                                 5.477 3 6.253v13C4.168
                                 18.477 5.754 18 7.5
@@ -754,293 +883,296 @@
                                 6.253v13C19.832 18.477
                                 18.246 18 16.5 18s-3.332
                                 .477-4.5 1.253" />
-                                    </svg>
-                                </div>
-
-                                <div>
-                                    <h1 class="text-4xl font-bold tracking-tight
-                                   text-blue-700">
-                                        FORMER
-                                    </h1>
-
-                                    <p class="mt-1 text-lg font-medium text-gray-700">
-                                        Renforcer les compétence des jeunes et des adultes pour un avenir prometteur.
-                                    </p>
-                                </div>
+                                </svg>
                             </div>
-                            <div class="my-6 h-1 w-14 rounded-full bg-blue-600"></div>
 
-                            <p class="text-base leading-7 text-gray-600">
-                                Nous croyons que la formation est un levier essentiel
-                                pour l'autonomisation et l'insertion professionnelle.
-                                C'est pourquoi nous proposons des programmes de formation
-                                adaptés aux besoins du marché du travail et aux aspirations
-                                des individus.
+                            <div>
+                                <h1 class="text-4xl font-bold tracking-tight
+                                   text-green-700">
+                                    Accompagner
+                                </h1>
+
+                                <p class="mt-1 text-lg font-medium text-gray-700">
+                                    Nous accompagnons les jeunes et les adultes dans leur parcours éducatif <br>
+                                    et professionnel, en leur offrant des conseils, du mentorat et un soutien
+                                    personnalisé.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="my-6 h-1 w-14 rounded-full bg-green-600"></div>
+
+                        <p class="text-base leading-7 text-gray-600">
+                            Nous croyons que l'éducation est le fondement d'une société éclairée et autonome. C'est
+                            pourquoi nous œuvrons pour rendre l'éducation accessible à tous, sans distinction.
+                        </p>
+                    </div>
+
+
+
+                    <div class="relative overflow-hidden rounded-2xl">
+
+                        <img src="Assets/accompagner.jpg" alt="Formation"
+                            class="h-full min-h-[250px] w-full object-cover">
+
+
+                        <div class="absolute inset-0 bg-gradient-to-t
+                           from-blue-950/50 to-transparent"></div>
+
+                    </div>
+
+                </div>
+
+                <!-- ========================= -->
+                <!-- CONTENU -->
+                <!-- ========================= -->
+
+                <div class="grid grid-cols-1 gap-10 px-6 pb-8 md:grid-cols-2 md:px-10">
+                    <section class="mb-8">
+                        <div class="mb-5 flex items-center gap-3">
+
+                            <div class="flex h-10 w-10 items-center justify-center
+                               rounded-full bg-green-100">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2" />
+                                    <circle cx="12" cy="12" r="9" />
+                                </svg>
+                            </div>
+
+                            <div>
+                                <h2 class="text-xl font-bold text-green-800">
+                                    Nos objectifs
+                                </h2>
+
+                                <div class="mt-1 h-1 w-8 rounded bg-green-500"></div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Objectif 1 -->
+                        <div class="flex gap-4 border-b border-green-100
+                           py-4">
+                            <span class="flex h-6 w-6 shrink-0 items-center
+                               justify-center rounded-full
+                               border-2 border-green-500
+                               text-green-500">
+                                ✓
+                            </span>
+
+                            <p class="text-sm leading-6 text-gray-600">
+                                Rendre l'éducation de qualité accessible
+                                aux enfants et aux jeunes.
                             </p>
                         </div>
 
 
+                        <!-- Objectif 2 -->
+                        <div class="flex gap-4 border-b border-gray-100
+                           py-4">
+                            <span class="flex h-6 w-6 shrink-0 items-center
+                               justify-center rounded-full
+                               border-2 border-green-500
+                               text-green-500">
+                                ✓
+                            </span>
 
-                        <div class="relative overflow-hidden rounded-2xl">
+                            <p class="text-sm leading-6 text-gray-600">
+                                Favoriser le développement de compétences
+                                utiles pour la vie et l'emploi.
+                            </p>
+                        </div>
 
-                            <img src="Assets/former.jpg" alt="Formation"
-                                class="h-full min-h-[250px] w-full object-cover">
+
+                        <!-- Objectif 3 -->
+                        <div class="flex gap-4 border-b border-gray-100
+                           py-4">
+                            <span class="flex h-6 w-6 shrink-0 items-center
+                               justify-center rounded-full
+                               border-2 border-green-500
+                               text-green-500">
+                                ✓
+                            </span>
+
+                            <p class="text-sm leading-6 text-gray-600">
+                                Promouvoir l'esprit critique, la créativité
+                                et l'ouverture d'esprit.
+                            </p>
+                        </div>
 
 
-                            <div class="absolute inset-0 bg-gradient-to-t
-                           from-blue-950/50 to-transparent"></div>
+                        <!-- Objectif 4 -->
+                        <div class="flex gap-4 py-4">
+
+                            <span class="flex h-6 w-6 shrink-0 items-center
+                               justify-center rounded-full
+                               border-2 border-green-500
+                               text-green-500">
+                                ✓
+                            </span>
+
+                            <p class="text-sm leading-6 text-gray-600">
+                                Lutter contre l'abandon scolaire
+                                et l'analphabétisme.
+                            </p>
 
                         </div>
 
-                    </div>
+                    </section>
+
 
                     <!-- ========================= -->
-                    <!-- CONTENU -->
+                    <!-- ACTIONS -->
                     <!-- ========================= -->
 
-                    <div class="grid grid-cols-1 gap-10 px-6 pb-8 md:grid-cols-2 md:px-10">
-                        <section class="mb-8">
-                            <div class="mb-5 flex items-center gap-3">
+                    <section>
 
-                                <div class="flex h-10 w-10 items-center justify-center
-                               rounded-full bg-orange-100">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-600" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2" />
-                                        <circle cx="12" cy="12" r="9" />
-                                    </svg>
-                                </div>
+                        <div class="mb-5 flex items-center gap-3">
 
-                                <div>
-                                    <h2 class="text-xl font-bold text-orange-800">
-                                        Nos objectifs
-                                    </h2>
-
-                                    <div class="mt-1 h-1 w-8 rounded bg-orange-500"></div>
-                                </div>
-
+                            <div class="flex h-10 w-10 items-center justify-center
+                               rounded-full bg-green-100">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m9-9H3" />
+                                </svg>
                             </div>
 
+                            <div>
+                                <h2 class="text-xl font-bold text-green-800">
+                                    Nos actions clés
+                                </h2>
 
-                            <!-- Objectif 1 -->
-                            <div class="flex gap-4 border-b border-gray-100
-                           py-4">
-                                <span class="flex h-6 w-6 shrink-0 items-center
-                               justify-center rounded-full
-                               border-2 border-orange-500
-                               text-orange-500">
-                                    ✓
-                                </span>
+                                <div class="mt-1 h-1 w-8 rounded bg-green-500"></div>
+                            </div>
 
-                                <p class="text-sm leading-6 text-gray-600">
-                                    Rendre l'éducation de qualité accessible
-                                    aux enfants et aux jeunes.
+                        </div>
+
+
+                        <!-- Action 1 -->
+                        <div class="mb-3 flex gap-4 rounded-xl border
+                           border-gray-100 bg-gray-50 p-4
+                           transition hover:border-green-200
+                           hover:bg-green-50">
+
+                            <div class="flex h-11 w-11 shrink-0 items-center
+                               justify-center rounded-lg bg-green-100
+                               text-green-600">
+                                <!-- bon -->
+                            </div>
+
+                            <div>
+                                <h3 class="font-semibold text-green-800">
+                                    Soutien scolaire et fournitures
+                                </h3>
+
+                                <p class="mt-1 text-sm leading-5 text-gray-600">
+                                    Nous apportons un soutien matériel et
+                                    pédagogique aux élèves en difficulté.
                                 </p>
                             </div>
 
+                        </div>
 
-                            <!-- Objectif 2 -->
-                            <div class="flex gap-4 border-b border-gray-100
-                           py-4">
-                                <span class="flex h-6 w-6 shrink-0 items-center
-                               justify-center rounded-full
-                               border-2 border-orange-500
-                               text-orange-500">
-                                    ✓
-                                </span>
 
-                                <p class="text-sm leading-6 text-gray-600">
-                                    Favoriser le développement de compétences
-                                    utiles pour la vie et l'emploi.
+                        <!-- Action 2 -->
+                        <div class="mb-3 flex gap-4 rounded-xl border
+                           border-gray-100 bg-gray-50 p-4
+                           transition hover:border-green-200
+                           hover:bg-green-50">
+
+                            <div class="flex h-11 w-11 shrink-0 items-center
+                               justify-center rounded-lg bg-green-100
+                               text-green-600">
+                                <!-- bon -->
+                            </div>
+
+                            <div>
+                                <h3 class="font-semibold text-green-800">
+                                    Ateliers et formations éducatives
+                                </h3>
+
+                                <p class="mt-1 text-sm leading-5 text-gray-600">
+                                    Nous organisons des ateliers pour renforcer
+                                    les compétences des jeunes et des enseignants.
                                 </p>
                             </div>
 
+                        </div>
 
-                            <!-- Objectif 3 -->
-                            <div class="flex gap-4 border-b border-gray-100
-                           py-4">
-                                <span class="flex h-6 w-6 shrink-0 items-center
-                               justify-center rounded-full
-                               border-2 border-orange-500
-                               text-orange-500">
-                                    ✓
-                                </span>
 
-                                <p class="text-sm leading-6 text-gray-600">
-                                    Promouvoir l'esprit critique, la créativité
-                                    et l'ouverture d'esprit.
+                        <!-- Action 3 -->
+                        <div class="mb-3 flex gap-4 rounded-xl border
+                           border-gray-100 bg-gray-50 p-4
+                           transition hover:border-green-200
+                           hover:bg-green-50">
+
+                            <div class="flex h-11 w-11 shrink-0 items-center
+                               justify-center rounded-lg bg-green-100
+                               text-green-600">
+                                <!-- bon -->
+                            </div>
+
+                            <div>
+                                <h3 class="font-semibold text-green-800">
+                                    Bibliothèques et espaces d'apprentissage
+                                </h3>
+
+                                <p class="mt-1 text-sm leading-5 text-gray-600">
+                                    Nous créons des espaces sûrs et inspirants
+                                    pour apprendre et se développer.
                                 </p>
                             </div>
 
+                        </div>
 
-                            <!-- Objectif 4 -->
-                            <div class="flex gap-4 py-4">
 
-                                <span class="flex h-6 w-6 shrink-0 items-center
-                               justify-center rounded-full
-                               border-2 border-orange-500
-                               text-orange-500">
-                                    ✓
-                                </span>
+                        <!-- Action 4 -->
+                        <div class="flex gap-4 rounded-xl border
+                           border-gray-100 bg-gray-50 p-4
+                           transition hover:border-green-200
+                           hover:bg-green-50">
 
-                                <p class="text-sm leading-6 text-gray-600">
-                                    Lutter contre l'abandon scolaire
-                                    et l'analphabétisme.
+                            <div class="flex h-11 w-11 shrink-0 items-center
+                               justify-center rounded-lg bg-green-100
+                               text-green-600">
+                                <!-- bon -->
+                            </div>
+
+                            <div>
+                                <h3 class="font-semibold text-green-800">
+                                    Bourses et parrainages
+                                </h3>
+
+                                <p class="mt-1 text-sm leading-5 text-gray-600">
+                                    Nous accompagnons les élèves méritants
+                                    pour leur permettre de poursuivre leurs études.
                                 </p>
-
                             </div>
-
-                        </section>
-
-
-                        <!-- ========================= -->
-                        <!-- ACTIONS -->
-                        <!-- ========================= -->
-
-                        <section>
-
-                            <div class="mb-5 flex items-center gap-3">
-
-                                <div class="flex h-10 w-10 items-center justify-center
-                               rounded-full bg-orange-100">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-orange-600" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m9-9H3" />
-                                    </svg>
-                                </div>
-
-                                <div>
-                                    <h2 class="text-xl font-bold text-orange-800">
-                                        Nos actions clés
-                                    </h2>
-
-                                    <div class="mt-1 h-1 w-8 rounded bg-orange-500"></div>
-                                </div>
-
-                            </div>
-
-
-                            <!-- Action 1 -->
-                            <div class="mb-3 flex gap-4 rounded-xl border
-                           border-gray-100 bg-gray-50 p-4
-                           transition hover:border-orange-200
-                           hover:bg-orange-50">
-
-                                <div class="flex h-11 w-11 shrink-0 items-center
-                               justify-center rounded-lg bg-orange-100
-                               text-orange-600">
-                                    <!-- bon -->
-                                </div>
-
-                                <div>
-                                    <h3 class="font-semibold text-orange-800">
-                                        Soutien scolaire et fournitures
-                                    </h3>
-
-                                    <p class="mt-1 text-sm leading-5 text-gray-600">
-                                        Nous apportons un soutien matériel et
-                                        pédagogique aux élèves en difficulté.
-                                    </p>
-                                </div>
-
-                            </div>
-
-
-                            <!-- Action 2 -->
-                            <div class="mb-3 flex gap-4 rounded-xl border
-                           border-gray-100 bg-gray-50 p-4
-                           transition hover:border-orange-200
-                           hover:bg-orange-50">
-
-                                <div class="flex h-11 w-11 shrink-0 items-center
-                               justify-center rounded-lg bg-orange-100
-                               text-orange-600">
-                                    <!-- bon -->
-                                </div>
-
-                                <div>
-                                    <h3 class="font-semibold text-orange-800">
-                                        Ateliers et formations éducatives
-                                    </h3>
-
-                                    <p class="mt-1 text-sm leading-5 text-gray-600">
-                                        Nous organisons des ateliers pour renforcer
-                                        les compétences des jeunes et des enseignants.
-                                    </p>
-                                </div>
-
-                            </div>
-
-
-                            <!-- Action 3 -->
-                            <div class="mb-3 flex gap-4 rounded-xl border
-                           border-gray-100 bg-gray-50 p-4
-                           transition hover:border-orange-200
-                           hover:bg-orange-50">
-
-                                <div class="flex h-11 w-11 shrink-0 items-center
-                               justify-center rounded-lg bg-orange-100
-                               text-orange-600">
-                                    <!-- bon -->
-                                </div>
-
-                                <div>
-                                    <h3 class="font-semibold text-orange-800">
-                                        Bibliothèques et espaces d'apprentissage
-                                    </h3>
-
-                                    <p class="mt-1 text-sm leading-5 text-gray-600">
-                                        Nous créons des espaces sûrs et inspirants
-                                        pour apprendre et se développer.
-                                    </p>
-                                </div>
-
-                            </div>
-
-
-                            <!-- Action 4 -->
-                            <div class="flex gap-4 rounded-xl border
-                           border-gray-100 bg-gray-50 p-4
-                           transition hover:border-orange-200
-                           hover:bg-orange-50">
-
-                                <div class="flex h-11 w-11 shrink-0 items-center
-                               justify-center rounded-lg bg-orange-100
-                               text-orange-600">
-                                    <!-- bon -->
-                                </div>
-
-                                <div>
-                                    <h3 class="font-semibold text-orange-800">
-                                        Bourses et parrainages
-                                    </h3>
-
-                                    <p class="mt-1 text-sm leading-5 text-gray-600">
-                                        Nous accompagnons les élèves méritants
-                                        pour leur permettre de poursuivre leurs études.
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
+                        </div>
+                    </section>
                 </div>
+            </div>
             </div>
             </div>
         </section>
 
-        <section class="mb-8" id="Protéger">
-            <div>
-                <div class="grid grid-cols-1 gap-8 p-6 md:grid-cols-2 md:p-10">
-                        <div class="flex flex-col justify-center">
-                            <div class="flex items-center gap-5">
+        <!-- ========================================================= -->
+        <!-- MODAL : PROTÉGER -->
+        <!-- ========================================================= -->
 
-                                <div class="flex h-20 w-20 items-center justify-center
+        <section class="mb-16" id="Protéger">
+            <div class="rounded-3xl bg-white shadow-2xl">
+                <div class="grid grid-cols-1 gap-8 p-6 md:grid-cols-2 md:p-10">
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-center gap-5">
+
+                            <div class="flex h-20 w-20 items-center justify-center
                                rounded-full bg-blue-600
                                shadow-lg shadow-blue-600/30">
-                                    <!-- Icône livre -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832
+                                <!-- Icône livre -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832
                                 5.477 9.246 5 7.5 5S4.168
                                 5.477 3 6.253v13C4.168
                                 18.477 5.754 18 7.5
@@ -1050,321 +1182,288 @@
                                 6.253v13C19.832 18.477
                                 18.246 18 16.5 18s-3.332
                                 .477-4.5 1.253" />
-                                    </svg>
-                                </div>
-
-                                <div>
-                                    <h1 class="text-4xl font-bold tracking-tight
-                                   text-blue-700">
-                                        FORMER
-                                    </h1>
-
-                                    <p class="mt-1 text-lg font-medium text-gray-700">
-                                        Renforcer les compétence des jeunes et des adultes pour un avenir prometteur.
-                                    </p>
-                                </div>
+                                </svg>
                             </div>
-                            <div class="my-6 h-1 w-14 rounded-full bg-blue-600"></div>
 
-                            <p class="text-base leading-7 text-gray-600">
-                                Nous croyons que la formation est un levier essentiel
-                                pour l'autonomisation et l'insertion professionnelle.
-                                C'est pourquoi nous proposons des programmes de formation
-                                adaptés aux besoins du marché du travail et aux aspirations
-                                des individus.
+                            <div>
+                                <h1 class="text-4xl font-bold tracking-tight
+                                   text-blue-700">
+                                    PROTEGER
+                                </h1>
+
+                                <p class="mt-1 text-lg font-medium text-gray-700">
+                                    Nous nous engageons à protéger les droits et le bien-être <br>
+                                    des jeunes et des adultes, en veillant à ce qu'ils puissent <br>
+                                    apprendre et se développer dans un environnement sûr et respectueux.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="my-6 h-1 w-14 rounded-full bg-blue-600"></div>
+
+                        <p class="text-base leading-7 text-gray-600">
+                            Nous croyons que l'éducation est le fondement d'une société éclairée et autonome. C'est
+                            pourquoi nous œuvrons pour rendre l'éducation accessible à tous, sans distinction.
+                        </p>
+                    </div>
+
+
+
+                    <div class="relative overflow-hidden rounded-2xl">
+
+                        <img src="Assets/protection.jpg" alt="Formation"
+                            class="h-full min-h-[250px] w-full object-cover">
+
+
+                        <div class="absolute inset-0 bg-gradient-to-t
+                           from-blue-950/50 to-transparent"></div>
+
+                    </div>
+
+                </div>
+
+                <!-- ========================= -->
+                <!-- CONTENU -->
+                <!-- ========================= -->
+
+                <div class="grid grid-cols-1 gap-10 px-6 pb-8 md:grid-cols-2 md:px-10">
+                    <section>
+                        <div class="mb-5 flex items-center gap-3">
+
+                            <div class="flex h-10 w-10 items-center justify-center
+                               rounded-full bg-blue-100">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2" />
+                                    <circle cx="12" cy="12" r="9" />
+                                </svg>
+                            </div>
+
+                            <div>
+                                <h2 class="text-xl font-bold text-blue-800">
+                                    Nos objectifs
+                                </h2>
+
+                                <div class="mt-1 h-1 w-8 rounded bg-blue-500"></div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Objectif 1 -->
+                        <div class="flex gap-4 border-b border-gray-100
+                           py-4">
+                            <span class="flex h-6 w-6 shrink-0 items-center
+                               justify-center rounded-full
+                               border-2 border-blue-500
+                               text-blue-500">
+                                ✓
+                            </span>
+
+                            <p class="text-sm leading-6 text-gray-600">
+                                Rendre l'éducation de qualité accessible
+                                aux enfants et aux jeunes.
                             </p>
                         </div>
 
 
+                        <!-- Objectif 2 -->
+                        <div class="flex gap-4 border-b border-gray-100
+                           py-4">
+                            <span class="flex h-6 w-6 shrink-0 items-center
+                               justify-center rounded-full
+                               border-2 border-blue-500
+                               text-blue-500">
+                                ✓
+                            </span>
 
-                        <div class="relative overflow-hidden rounded-2xl">
+                            <p class="text-sm leading-6 text-gray-600">
+                                Favoriser le développement de compétences
+                                utiles pour la vie et l'emploi.
+                            </p>
+                        </div>
 
-                            <img src="Assets/former.jpg" alt="Formation"
-                                class="h-full min-h-[250px] w-full object-cover">
+
+                        <!-- Objectif 3 -->
+                        <div class="flex gap-4 border-b border-gray-100
+                           py-4">
+                            <span class="flex h-6 w-6 shrink-0 items-center
+                               justify-center rounded-full
+                               border-2 border-blue-500
+                               text-blue-500">
+                                ✓
+                            </span>
+
+                            <p class="text-sm leading-6 text-gray-600">
+                                Promouvoir l'esprit critique, la créativité
+                                et l'ouverture d'esprit.
+                            </p>
+                        </div>
 
 
-                            <div class="absolute inset-0 bg-gradient-to-t
-                           from-blue-950/50 to-transparent"></div>
+                        <!-- Objectif 4 -->
+                        <div class="flex gap-4 py-4">
+
+                            <span class="flex h-6 w-6 shrink-0 items-center
+                               justify-center rounded-full
+                               border-2 border-blue-500
+                               text-blue-500">
+                                ✓
+                            </span>
+
+                            <p class="text-sm leading-6 text-gray-600">
+                                Lutter contre l'abandon scolaire
+                                et l'analphabétisme.
+                            </p>
 
                         </div>
 
-                    </div>
+                    </section>
+
 
                     <!-- ========================= -->
-                    <!-- CONTENU -->
+                    <!-- ACTIONS -->
                     <!-- ========================= -->
 
-                    <div class="grid grid-cols-1 gap-10 px-6 pb-8 md:grid-cols-2 md:px-10">
-                        <section>
-                            <div class="mb-5 flex items-center gap-3">
+                    <section>
 
-                                <div class="flex h-10 w-10 items-center justify-center
+                        <div class="mb-5 flex items-center gap-3">
+
+                            <div class="flex h-10 w-10 items-center justify-center
                                rounded-full bg-blue-100">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2" />
-                                        <circle cx="12" cy="12" r="9" />
-                                    </svg>
-                                </div>
-
-                                <div>
-                                    <h2 class="text-xl font-bold text-blue-800">
-                                        Nos objectifs
-                                    </h2>
-
-                                    <div class="mt-1 h-1 w-8 rounded bg-blue-500"></div>
-                                </div>
-
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m9-9H3" />
+                                </svg>
                             </div>
 
+                            <div>
+                                <h2 class="text-xl font-bold text-blue-800">
+                                    Nos actions clés
+                                </h2>
 
-                            <!-- Objectif 1 -->
-                            <div class="flex gap-4 border-b border-gray-100
-                           py-4">
-                                <span class="flex h-6 w-6 shrink-0 items-center
-                               justify-center rounded-full
-                               border-2 border-blue-500
-                               text-blue-500">
-                                    ✓
-                                </span>
-
-                                <p class="text-sm leading-6 text-gray-600">
-                                    Rendre l'éducation de qualité accessible
-                                    aux enfants et aux jeunes.
-                                </p>
+                                <div class="mt-1 h-1 w-8 rounded bg-blue-500"></div>
                             </div>
 
-
-                            <!-- Objectif 2 -->
-                            <div class="flex gap-4 border-b border-gray-100
-                           py-4">
-                                <span class="flex h-6 w-6 shrink-0 items-center
-                               justify-center rounded-full
-                               border-2 border-blue-500
-                               text-blue-500">
-                                    ✓
-                                </span>
-
-                                <p class="text-sm leading-6 text-gray-600">
-                                    Favoriser le développement de compétences
-                                    utiles pour la vie et l'emploi.
-                                </p>
-                            </div>
+                        </div>
 
 
-                            <!-- Objectif 3 -->
-                            <div class="flex gap-4 border-b border-gray-100
-                           py-4">
-                                <span class="flex h-6 w-6 shrink-0 items-center
-                               justify-center rounded-full
-                               border-2 border-blue-500
-                               text-blue-500">
-                                    ✓
-                                </span>
-
-                                <p class="text-sm leading-6 text-gray-600">
-                                    Promouvoir l'esprit critique, la créativité
-                                    et l'ouverture d'esprit.
-                                </p>
-                            </div>
-
-
-                            <!-- Objectif 4 -->
-                            <div class="flex gap-4 py-4">
-
-                                <span class="flex h-6 w-6 shrink-0 items-center
-                               justify-center rounded-full
-                               border-2 border-blue-500
-                               text-blue-500">
-                                    ✓
-                                </span>
-
-                                <p class="text-sm leading-6 text-gray-600">
-                                    Lutter contre l'abandon scolaire
-                                    et l'analphabétisme.
-                                </p>
-
-                            </div>
-
-                        </section>
-
-
-                        <!-- ========================= -->
-                        <!-- ACTIONS -->
-                        <!-- ========================= -->
-
-                        <section>
-
-                            <div class="mb-5 flex items-center gap-3">
-
-                                <div class="flex h-10 w-10 items-center justify-center
-                               rounded-full bg-blue-100">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m9-9H3" />
-                                    </svg>
-                                </div>
-
-                                <div>
-                                    <h2 class="text-xl font-bold text-blue-800">
-                                        Nos actions clés
-                                    </h2>
-
-                                    <div class="mt-1 h-1 w-8 rounded bg-blue-500"></div>
-                                </div>
-
-                            </div>
-
-
-                            <!-- Action 1 -->
-                            <div class="mb-3 flex gap-4 rounded-xl border
+                        <!-- Action 1 -->
+                        <div class="mb-3 flex gap-4 rounded-xl border
                            border-gray-100 bg-gray-50 p-4
                            transition hover:border-blue-200
                            hover:bg-blue-50">
 
-                                <div class="flex h-11 w-11 shrink-0 items-center
+                            <div class="flex h-11 w-11 shrink-0 items-center
                                justify-center rounded-lg bg-blue-100
                                text-blue-600">
-                                    <!-- bon -->
-                                </div>
-
-                                <div>
-                                    <h3 class="font-semibold text-blue-800">
-                                        Soutien scolaire et fournitures
-                                    </h3>
-
-                                    <p class="mt-1 text-sm leading-5 text-gray-600">
-                                        Nous apportons un soutien matériel et
-                                        pédagogique aux élèves en difficulté.
-                                    </p>
-                                </div>
-
+                                <!-- bon -->
                             </div>
 
+                            <div>
+                                <h3 class="font-semibold text-blue-800">
+                                    Soutien scolaire et fournitures
+                                </h3>
 
-                            <!-- Action 2 -->
-                            <div class="mb-3 flex gap-4 rounded-xl border
+                                <p class="mt-1 text-sm leading-5 text-gray-600">
+                                    Nous apportons un soutien matériel et
+                                    pédagogique aux élèves en difficulté.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Action 2 -->
+                        <div class="mb-3 flex gap-4 rounded-xl border
                            border-gray-100 bg-gray-50 p-4
                            transition hover:border-blue-200
                            hover:bg-blue-50">
 
-                                <div class="flex h-11 w-11 shrink-0 items-center
+                            <div class="flex h-11 w-11 shrink-0 items-center
                                justify-center rounded-lg bg-blue-100
                                text-blue-600">
-                                    <!-- bon -->
-                                </div>
-
-                                <div>
-                                    <h3 class="font-semibold text-blue-800">
-                                        Ateliers et formations éducatives
-                                    </h3>
-
-                                    <p class="mt-1 text-sm leading-5 text-gray-600">
-                                        Nous organisons des ateliers pour renforcer
-                                        les compétences des jeunes et des enseignants.
-                                    </p>
-                                </div>
-
+                                <!-- bon -->
                             </div>
 
+                            <div>
+                                <h3 class="font-semibold text-blue-800">
+                                    Ateliers et formations éducatives
+                                </h3>
 
-                            <!-- Action 3 -->
-                            <div class="mb-3 flex gap-4 rounded-xl border
+                                <p class="mt-1 text-sm leading-5 text-gray-600">
+                                    Nous organisons des ateliers pour renforcer
+                                    les compétences des jeunes et des enseignants.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Action 3 -->
+                        <div class="mb-3 flex gap-4 rounded-xl border
                            border-gray-100 bg-gray-50 p-4
                            transition hover:border-blue-200
                            hover:bg-blue-50">
 
-                                <div class="flex h-11 w-11 shrink-0 items-center
+                            <div class="flex h-11 w-11 shrink-0 items-center
                                justify-center rounded-lg bg-blue-100
                                text-blue-600">
-                                    <!-- bon -->
-                                </div>
-
-                                <div>
-                                    <h3 class="font-semibold text-blue-800">
-                                        Bibliothèques et espaces d'apprentissage
-                                    </h3>
-
-                                    <p class="mt-1 text-sm leading-5 text-gray-600">
-                                        Nous créons des espaces sûrs et inspirants
-                                        pour apprendre et se développer.
-                                    </p>
-                                </div>
-
+                                <!-- bon -->
                             </div>
 
+                            <div>
+                                <h3 class="font-semibold text-blue-800">
+                                    Bibliothèques et espaces d'apprentissage
+                                </h3>
 
-                            <!-- Action 4 -->
-                            <div class="flex gap-4 rounded-xl border
+                                <p class="mt-1 text-sm leading-5 text-gray-600">
+                                    Nous créons des espaces sûrs et inspirants
+                                    pour apprendre et se développer.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Action 4 -->
+                        <div class="flex gap-4 rounded-xl border
                            border-gray-100 bg-gray-50 p-4
                            transition hover:border-blue-200
                            hover:bg-blue-50">
 
-                                <div class="flex h-11 w-11 shrink-0 items-center
+                            <div class="flex h-11 w-11 shrink-0 items-center
                                justify-center rounded-lg bg-blue-100
                                text-blue-600">
-                                    <!-- bon -->
-                                </div>
-
-                                <div>
-                                    <h3 class="font-semibold text-blue-800">
-                                        Bourses et parrainages
-                                    </h3>
-
-                                    <p class="mt-1 text-sm leading-5 text-gray-600">
-                                        Nous accompagnons les élèves méritants
-                                        pour leur permettre de poursuivre leurs études.
-                                    </p>
-                                </div>
-
+                                <!-- bon -->
                             </div>
 
-                        </section>
+                            <div>
+                                <h3 class="font-semibold text-blue-800">
+                                    Bourses et parrainages
+                                </h3>
 
-                    </div>
+                                <p class="mt-1 text-sm leading-5 text-gray-600">
+                                    Nous accompagnons les élèves méritants
+                                    pour leur permettre de poursuivre leurs études.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </section>
 
                 </div>
+
             </div>
             </div>
-        </section>
-
-        <section class="sct_bar flex flex-col justify-center items-center w-full gap-4 my-8 p-4">
-            <h1 class="text-5xl font-bold text-white">Notre Public Cible & Impact</h1>
-        </section>
-
-        <section class="flex justify-center items-center my-8">
-            <div class="flex justify-center gap-6">
-                <img src="Assets/IMG_6238.jpg.jpeg" alt="#" class="size-100 rounded-2xl">
-                <div>
-                    <h1 class="text-5xl font-bold text-black">Publique cible & impact</h1>
-                    <h2 class="text-2xl font-bold text-black mt-4">Pour qui ?</h2>
-                    <p class="text-justify text-lg">
-                        Nos programmes de formation sont conçus pour répondre aux besoins d'une variété de publics,
-                        notamment : <br>
-                        - Les jeunes en quête d'opportunités éducatives et professionnelles. <br>
-                        - Les adultes souhaitant améliorer leurs compétences et leur employabilité. <br>
-                        - Les communautés locales cherchant à renforcer leur capital humain.
-                    </p>
-
-                    <h3 class="text-2xl font-bold text-black mt-8">Notre Impact</h3>
-                    <p class="text-justify text-lg">
-                        Grâce à nos initiatives, nous avons pu créer des opportunités durables pour les communautés
-                        vulnérables.
-                    </p>
-                    <ul>
-                        <li>Autonomie au quotidien</li>
-                        <li>Préparation aux métiers de Techniques</li>
-                        <li>Réintégration sociale réussi</li>
-                    </ul>
-                </div>
             </div>
         </section>
 
-        <section class="sct_bar flex flex-col justify-center items-center w-full gap-4 my-8 p-4">
-            <h1 class="text-5xl font-bold text-white">Notre Public Cible & Impact</h1>
-        </section>
+        <!-- ========================================================= -->
+        <!-- MODAL : PROGRAMME -->
+        <!-- ========================================================= -->
 
-        <section class="sct_formation my-8 flex flex-col justify-center items-center">
+        <section id="programme" class="sct_formation mb-8 flex flex-col justify-center items-center mb-16">
             <div class="text-center flex flex-col gap-4 mb-2xl">
                 <h1 class="text-5xl font-bold">Les piliers du programme</h1>
                 <p class="text-wrap text-lg text-center">
@@ -1392,17 +1491,19 @@
                         </div>
                     </div>
 
-                    <div class="border-2 border-bleu-700 w-[120px]"></div>
+                    <div class="border-2 border-blue-700 border-bleu-700 w-[120px]"></div>
 
 
                     <div class="border border-blue-700 rounded-2xl size-64">
-                        <img src="" size-64 alt="">
+                        <img src="Assets/comp.png" alt="Formation GVAS"
+                            class="w-full h-full object-cover flex-shrink-0 rounded-2xl">
                     </div>
                 </div>
 
                 <div class="la_formation shadow-[2px_2px_10px_blue] flex items-center p-8 rounded-2xl">
                     <div class="border border-blue-500 rounded-2xl size-64">
-                        <img src="" size-64 alt="">
+                        <img src="Assets/alpha.jpeg" alt="Formation GVAS"
+                            class="w-full h-full object-cover flex-shrink-0 rounded-2xl">
                     </div>
 
                     <div class="border-2 border-blue-500 w-[120px]"></div>
@@ -1449,7 +1550,8 @@
                     <div class="border-2 border-green-500 w-[120px] h-[1px]"></div>
 
                     <div class="border border-green-500 rounded-2xl size-64 kola">
-                        <img src="" size-64 alt="">
+                        <img src="Assets/dev.jpg" alt="Formation GVAS"
+                            class="w-full h-full object-cover flex-shrink-0 rounded-2xl">
                     </div>
                 </div>
             </div>
@@ -1457,6 +1559,62 @@
     </main>
 
     <?php include 'css/footer.php'; ?>
+
+    <script>
+        let currentSlide = 0;
+        const carousel = document.getElementById("carousel");
+        const slides = carousel.children;
+        const indicators = document.querySelectorAll(".indicator");
+        function updateCarousel() {
+            carousel.style.transform =
+                `translateX(-${currentSlide * 100}%)`;
+
+            indicators.forEach((indicator, index) => {
+
+                if (index === currentSlide) {
+                    indicator.classList.remove("bg-white/50");
+                    indicator.classList.add("bg-white");
+                } else {
+                    indicator.classList.remove("bg-white");
+                    indicator.classList.add("bg-white/50");
+                }
+
+            });
+        }
+
+        function nextSlide() {
+
+            currentSlide++;
+
+            if (currentSlide >= slides.length) {
+                currentSlide = 0;
+            }
+
+            updateCarousel();
+        }
+
+        function previousSlide() {
+
+            currentSlide--;
+
+            if (currentSlide < 0) {
+                currentSlide = slides.length - 1;
+            }
+
+            updateCarousel();
+        }
+
+        function goToSlide(index) {
+
+            currentSlide = index;
+
+            updateCarousel();
+        }
+
+        // Défilement automatique toutes les 4 secondes
+        setInterval(nextSlide, 4000);
+
+    </script>
 </body>
 
 </html>
