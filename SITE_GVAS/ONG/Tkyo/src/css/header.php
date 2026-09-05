@@ -13,12 +13,21 @@
         </a>
 
         <nav class="nav-3d" id="mainNav">
+<<<<<<< HEAD
             <a href="../../ong.php">Accueil</a>
             <a href="../../Vika/index.html">Qui sommes-nous ?</a>
             <a href="../../vika/mission.html">Notre Mission</a>
 
             <a href="#footer" class="join-3d">
                 <span>Contactez-nous</span>
+=======
+            <a href="../../ong.php">Acceuil</a>
+            <a href="../../Vika/index.html">Qui sommes nous ?</a>
+            <a href="../../vika/mission.html">Notre Mission</a>
+
+            <a href="#footer" class="join-3d">
+                <span>Contatez-nous</span>
+>>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
                 <b>↗</b>
             </a>
         </nav>
