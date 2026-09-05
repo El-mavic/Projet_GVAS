@@ -15,7 +15,8 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+  <meta name="description"
+    content="GVAS - Groupement des Volontaires pour l'Action Sociale. Éduquer, former, accompagner et protéger pour un avenir durable.">
 
     <link rel="stylesheet" href="css/output.css">
     <link rel="stylesheet" href="css/style.css">
@@ -28,24 +29,16 @@
         <section class="h-screen flex justify-center items-center sct1">
             <?php include 'css/header.php'; ?>
             <div
-<<<<<<< HEAD
                 class="h-screen backdrop-blur-md w-screen flex flex-col justify-center items-center gap-8 border-none rounded-[60px]">
                 <div class="triangle flex flex-col justify-center items-center gap-4 text-white border-4 rounded-2xl p-16
                     bg-[radial-gradient(circle_at_top_left,#22c55e,#6d4a00,#2563eb)]">
                     <span class="text-green-500 text-5xl font-bold">Notre impact</span>
-=======
-                class="h-screen backdrop-blur-md w-screen flex flex-col justify-center items-center gap-4 border-none rounded-[60px]">
-                <div class="triangle flex flex-col justify-center items-center gap-4 text-white border-4 rounded-2xl p-16
-                    bg-[radial-gradient(circle_at_top_left,#22c55e,#6d4a00,#2563eb)]">
-                    <span class="text-green-500 text-5xl font-bold span_sct1">Nôtre impact</span>
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
 
                     <h1 class="text-3xl font-bold text-center">
                         Protéger <br>
                         et transformer des <a href="Formations.html">vies</a>
                     </h1>
 
-<<<<<<< HEAD
                     <p class="text-center w-4xl text-lg">
                         Ensemble nous bâtissons un avenir durable. Découvrez comment
                         nos actions concrètes sur le terrain redonnent espoir et créent
@@ -53,15 +46,6 @@
                     </p>
 
                     <div class="flex gap-3 mt-8">
-=======
-                    <p class="text-center w-4xl text-lg p_sct1">
-                        Ensemble nous batissaons un avenir durable. Découvrez comment
-                        nos actions concretes sur le terrain redonne espoire et crént
-                        des opportunités durables pour les communautés vulnérables.
-                    </p>
-
-                    <div class="link flex gap-3 mt-8">
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
                         <a href="#soutiens"
                             class="hover:bg-green-700 transition-colors w-60 h-2xl text-lg text-center border-2 border-green-700 rounded-2xl p-2">soutenir
                             nos
@@ -73,11 +57,7 @@
                     </div>
                 </div>
 
-<<<<<<< HEAD
                 <div class="rounded-full size-32 flex flex-col justify-center items-center gap-4 text-center">
-=======
-                <div class="rounded-full size-32 flex flex-col justify-center items-center gap-4 text-center image">
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
                     <img src="assets/logo1.png" rounded-full dorber alt="Logo GVAS" class="w-full h-auto">
                 </div>
             </div>
@@ -137,13 +117,8 @@
         <!-- ========================================================= -->
 
         <section class="sct_bar flex flex-col justify-center items-center w-full gap-4 my-8 p-4">
-<<<<<<< HEAD
-            <h1 class="text-5xl font-bold text-black">Notre Public Cible</h1>
-            <p>
-=======
             <h1 class="text-5xl font-bold text-black text-center">Notre Public Cible</h1>
             <p class="text-center">
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
                 Nous nous engageons à toucher un large éventail de bénéficiaires, en mettant l'accent sur les jeunes,
                 les adultes et les communautés locales. <br>
                 Notre impact se mesure à travers l'autonomisation des individus, la préparation aux métiers techniques
@@ -151,21 +126,12 @@
             </p>
         </section>
 
-<<<<<<< HEAD
         <section class="flex justify-center items-center mT-8 mb-16">
             <div class="flex flex-wrap text-wrap justify-center items-center gap-6 max-w-6xl w-full">
                 <!-- CAROUSEL -->
                 <div class="relative w-full max-w-xl h-[400px] overflow-hidden rounded-2xl shadow-lg">
                     <!-- Images -->
                     <div id="carousel" class="flex h-full transition-transform duration-700 ease-in-out">
-=======
-        <section class="sct_caro flex justify-center items-center mT-8 mb-16">
-            <div class="sct_caro_in flex flex-wrap text-wrap justify-center items-center gap-6 max-w-6xl w-full">
-                <!-- CAROUSEL -->
-                <div class="relative w-full max-w-xl h-[400px] overflow-hidden rounded-2xl shadow-lg">
-                    <!-- Images -->
-                    <div id="carousel" class="flex h-full transition-transform duration-700 ease-in-out w-full">
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
                         <img src="Assets/image6.jpg" alt="Formation GVAS"
                             class="w-full h-full object-cover flex-shrink-0">
 
@@ -219,27 +185,14 @@
 
 
                 <!-- TEXTE -->
-<<<<<<< HEAD
                 <div class="flex-1">
-=======
-                <div class="sct_caro_text flex-1 w-full">
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
 
                     <h2 class="text-2xl font-bold text-green-700 mt-4">
                         Pour qui ?
                     </h2>
 
-<<<<<<< HEAD
                     <p class="text-justify text-lg font-bold">
                         Nos programmes de formation sont conçus pour répondre
-=======
-                    <p class="text-justify text-lg font-bold text-wrap">
-                        Nos programmes de formation sont conçus pour répondre <br>
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
-                        aux besoins d'une variété de publics, notamment :
-                    <ul class="list-disc ml-6">
-                        <li>
-                            Les jeunes en quête d'opportunités éducatives et professionnelles.
                         </li>
                         <li>
                             Les adultes souhaitant améliorer leurs compétences et leur employabilité.
@@ -255,21 +208,13 @@
                     </h3>
 
                     <p class="text-justify text-lg font-bold">
-<<<<<<< HEAD
                         Grâce à nos initiatives, nous avons pu créer des opportunités
-=======
-                        Grâce à nos initiatives, nous avons pu créer des <br> opportunités
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
                         durables pour les communautés vulnérables.
                     </p>
 
                     <ul class="list-disc ml-6">
                         <li>Autonomie au quotidien</li>
-<<<<<<< HEAD
                         <li>Préparation aux métiers techniques</li>
-=======
-                        <li>Préparation aux métiers de Techniques</li>
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
                         <li>Réintégration sociale réussie</li>
                     </ul>
 
@@ -283,26 +228,16 @@
         <!-- ========================================================= -->
 
         <section id="soutiens"
-<<<<<<< HEAD
             class="flex justify-center p-8 h-64 items-center mt-4 mb-16 bg-linear-to-l  from-white to-blue-900">
             <div class="text-center flex flex-col justify-center items-center gap-4">
-=======
-            class="flex justify-center p-8 h-64 items-center mt-4 mb-16 bg-linear-to-l  from-white to-blue-900 w-full h-full">
-            <div class="text-center flex flex-col justify-center items-center gap-4 w-full h-full">
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="size-8">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                 </svg>
 
-<<<<<<< HEAD
                 <h1 class="text-2xl font-bold">Rejoignez-nous pour construire un avenir durable</h1>
                 <p class="text-center w-2xl text-lg">
-=======
-                <h1 class="text-2xl font-bold">Rejoignez-Nous pour construire un avenir durable</h1>
-                <p class="text-center w-2xl text-lg text-wrap w-full">
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
                     votre soutient qu'il soit financier ou pas, le bénévolat, permet à GVAS <br>
                     Action-Sociale de continuer à transformer des vies sur le terrain
                 </p>
@@ -919,11 +854,6 @@
 
         <!-- ========================================================= -->
         <!-- MODAL : ACCOMPAGNER -->
-<<<<<<< HEAD
-        <!-- ========================================================= -->
-
-        <section class="mb-8" id="Accompagner">
-=======
         <!-- ========================================================= -->
 
         <section class="mb-8" id="Accompagner">
@@ -1026,359 +956,8 @@
                             </span>
 
                             <p class="text-sm leading-6 text-gray-600">
-                                Encourager l'entrepreneuriat, l'innovation et l'autonomisation économique des populations
-                            </p>
-                        </div>
-
-
-                        <!-- Objectif 2 -->
-                        <div class="flex gap-4 border-b border-gray-100
-                           py-4">
-                            <span class="flex h-6 w-6 shrink-0 items-center
-                               justify-center rounded-full
-                               border-2 border-green-500
-                               text-green-500">
-                                ✓
-                            </span>
-
-                            <p class="text-sm leading-6 text-gray-600">
-                                Favoriser les échanges d'expériences, la coopération régionale et internationale ainsi que la mobilité des jeunes et des professionnels.
-                            </p>
-                        </div>
-
-
-                        <!-- Objectif 3 -->
-                        <div class="flex gap-4 border-b border-gray-100
-                           py-4">
-                            <span class="flex h-6 w-6 shrink-0 items-center
-                               justify-center rounded-full
-                               border-2 border-green-500
-                               text-green-500">
-                                ✓
-                            </span>
-
-                            <p class="text-sm leading-6 text-gray-600">
-                                Renforcer l'autonomie et la confiance en soi des bénéficiaires à travers un accompagnement personnalisé
-                            </p>
-                        </div>
-
-
-                        <!-- Objectif 4 -->
-                        <div class="flex gap-4 py-4">
-
-                            <span class="flex h-6 w-6 shrink-0 items-center
-                               justify-center rounded-full
-                               border-2 border-green-500
-                               text-green-500">
-                                ✓
-                            </span>
-
-                            <p class="text-sm leading-6 text-gray-600">
-                                Soutenir les personnes vulnérables et les communautés défavorisées.
-                            </p>
-
-                        </div>
-
-                    </section>
-
-
-                    <!-- ========================= -->
-                    <!-- ACTIONS -->
-                    <!-- ========================= -->
-
-                    <section>
-
-                        <div class="mb-5 flex items-center gap-3">
-
-                            <div class="flex h-10 w-10 items-center justify-center
-                               rounded-full bg-green-100">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m9-9H3" />
-                                </svg>
-                            </div>
-
-                            <div>
-                                <h2 class="text-xl font-bold text-green-800">
-                                    Nos actions clés
-                                </h2>
-
-                                <div class="mt-1 h-1 w-8 rounded bg-green-500"></div>
-                            </div>
-
-                        </div>
-
-
-                        <!-- Action 1 -->
-                        <div class="mb-3 flex gap-4 rounded-xl border
-                           border-gray-100 bg-gray-50 p-4
-                           transition hover:border-green-200
-                           hover:bg-green-50">
-
-                            <div class="flex h-11 w-11 shrink-0 items-center
-                               justify-center rounded-lg bg-green-100
-                               text-green-600">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Pro v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc.--><path d="M480 576L192 576C139 576 96 533 96 480L96 160C96 107 139 64 192 64L496 64C522.5 64 544 85.5 544 112L544 400C544 420.9 530.6 438.7 512 445.3L512 512C529.7 512 544 526.3 544 544C544 561.7 529.7 576 512 576L480 576zM192 448C174.3 448 160 462.3 160 480C160 497.7 174.3 512 192 512L448 512L448 448L192 448zM224 216C224 229.3 234.7 240 248 240L424 240C437.3 240 448 229.3 448 216C448 202.7 437.3 192 424 192L248 192C234.7 192 224 202.7 224 216zM248 288C234.7 288 224 298.7 224 312C224 325.3 234.7 336 248 336L424 336C437.3 336 448 325.3 448 312C448 298.7 437.3 288 424 288L248 288z"/></svg>
-
-                                <!-- bon -->
-                            </div>
-
-                            <div>
-                                <h3 class="font-semibold text-green-800">
-                                Orientation et Conseil
-                                </h3>
-
-                                <p class="mt-1 text-sm leading-5 text-gray-600">
-                                    Accompagner les jeunes et les adultes dans leurs choix scolaires, professionnels et personnels.
-                                </p>
-                            </div>
-
-                        </div>
-
-
-                        <!-- Action 2 -->
-                        <div class="mb-3 flex gap-4 rounded-xl border
-                           border-gray-100 bg-gray-50 p-4
-                           transition hover:border-green-200
-                           hover:bg-green-50">
-
-                            <div class="flex h-11 w-11 shrink-0 items-center
-                               justify-center rounded-lg bg-green-100
-                               text-green-600">
-                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M128 128C128 92.7 156.7 64 192 64L341.5 64C358.5 64 374.8 70.7 386.8 82.7L493.3 189.3C505.3 201.3 512 217.6 512 234.6L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 128zM336 122.5L336 216C336 229.3 346.7 240 360 240L453.5 240L336 122.5zM216 128C202.7 128 192 138.7 192 152C192 165.3 202.7 176 216 176L264 176C277.3 176 288 165.3 288 152C288 138.7 277.3 128 264 128L216 128zM216 224C202.7 224 192 234.7 192 248C192 261.3 202.7 272 216 272L264 272C277.3 272 288 261.3 288 248C288 234.7 277.3 224 264 224L216 224zM286.3 384C275 384 264.4 389.1 257.4 397.9L197.3 473C189 483.3 190.7 498.5 201 506.7C211.3 514.9 226.5 513.3 234.7 502.9L281.8 444.1L297 494.8C300 505 309.4 511.9 320 511.9L424 511.9C437.3 511.9 448 501.2 448 487.9C448 474.6 437.3 463.9 424 463.9L337.9 463.9L321.8 410.3C317.1 394.6 302.7 383.9 286.3 383.9z"/></svg>
-                                <!-- bon -->
-                            </div>
-
-                            <div>
-                                <h3 class="font-semibold text-green-800">
-                                    Accompagnement entrepreneurial
-                                </h3>
-
-                                <p class="mt-1 text-sm leading-5 text-gray-600">
-                                   Soutenir les porteurs de projets dans la conception, la structuration et le développement de leurs initiatives.
-                                </p>
-                            </div>
-
-                        </div>
-
-
-                        <!-- Action 3 -->
-                        <div class="mb-3 flex gap-4 rounded-xl border
-                           border-gray-100 bg-gray-50 p-4
-                           transition hover:border-green-200
-                           hover:bg-green-50">
-
-                            <div class="flex h-11 w-11 shrink-0 items-center
-                               justify-center rounded-lg bg-green-100
-                               text-green-600">
-                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M256 144C256 117.5 277.5 96 304 96L336 96C362.5 96 384 117.5 384 144L384 496C384 522.5 362.5 544 336 544L304 544C277.5 544 256 522.5 256 496L256 144zM64 336C64 309.5 85.5 288 112 288L144 288C170.5 288 192 309.5 192 336L192 496C192 522.5 170.5 544 144 544L112 544C85.5 544 64 522.5 64 496L64 336zM496 160L528 160C554.5 160 576 181.5 576 208L576 496C576 522.5 554.5 544 528 544L496 544C469.5 544 448 522.5 448 496L448 208C448 181.5 469.5 160 496 160z"/></svg>
-                                <!-- bon -->
-                            </div>
-
-                            <div>
-                                <h3 class="font-semibold text-green-800">
-                                    Accompagnement vers l'emploi
-                                </h3>
-
-                                <p class="mt-1 text-sm leading-5 text-gray-600">
-                                    Aider les demandeurs d'emploi à développer leurs compétences, préparer leur insertion professionnelle et identifier les opportunités
-                                </p>
-                            </div>
-
-                        </div>
-
-
-                        <!-- Action 4 -->
-                        <div class="flex gap-4 rounded-xl border
-                           border-gray-100 bg-gray-50 p-4
-                           transition hover:border-green-200
-                           hover:bg-green-50">
-
-                            <div class="flex h-11 w-11 shrink-0 items-center
-                               justify-center rounded-lg bg-green-100
-                               text-green-600">
-                               <svg xmlns="http://www.w3.org/2000/svg" class="text-green-500" viewBox="0 0 640 640" ><!--!Font Awesome Pro v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc.--><path d="M295.4 37L310.2 73.8L347 88.6C350 89.8 352 92.8 352 96C352 99.2 350 102.2 347 103.4L310.2 118.2L295.4 155C294.2 158 291.2 160 288 160C284.8 160 281.8 158 280.6 155L265.8 118.2L229 103.4C226 102.2 224 99.2 224 96C224 92.8 226 89.8 229 88.6L265.8 73.8L280.6 37C281.8 34 284.8 32 288 32C291.2 32 294.2 34 295.4 37zM142.7 105.7L164.2 155.8L214.3 177.3C220.2 179.8 224 185.6 224 192C224 198.4 220.2 204.2 214.3 206.7L164.2 228.2L142.7 278.3C140.2 284.2 134.4 288 128 288C121.6 288 115.8 284.2 113.3 278.3L91.8 228.2L41.7 206.7C35.8 204.2 32 198.4 32 192C32 185.6 35.8 179.8 41.7 177.3L91.8 155.8L113.3 105.7C115.8 99.8 121.6 96 128 96C134.4 96 140.2 99.8 142.7 105.7zM496 368C502.4 368 508.2 371.8 510.7 377.7L532.2 427.8L582.3 449.3C588.2 451.8 592 457.6 592 464C592 470.4 588.2 476.2 582.3 478.7L532.2 500.2L510.7 550.3C508.2 556.2 502.4 560 496 560C489.6 560 483.8 556.2 481.3 550.3L459.8 500.2L409.7 478.7C403.8 476.2 400 470.4 400 464C400 457.6 403.8 451.8 409.7 449.3L459.8 427.8L481.3 377.7C483.8 371.8 489.6 368 496 368zM492 64C503 64 513.6 68.4 521.5 76.2L563.8 118.5C571.6 126.4 576 137 576 148C576 159 571.6 169.6 563.8 177.5L475.6 265.7L374.3 164.4L462.5 76.2C470.4 68.4 481 64 492 64zM76.2 462.5L340.4 198.3L441.7 299.6L177.5 563.8C169.6 571.6 159 576 148 576C137 576 126.4 571.6 118.5 563.8L76.2 521.5C68.4 513.6 64 503 64 492C64 481 68.4 470.4 76.2 462.5z"/></svg>
-                                <!-- bon -->
-                            </div>
-
-                            <div>
-                                <h3 class="font-semibold text-green-800">
-                                    Suivi personnalisé
-                                </h3>
-
-                                <p class="mt-1 text-sm leading-5 text-gray-600">
-                                    Assurer un accompagnement individualisé afin d'identifier les besoins, mesurer les progrès et adapter les actions proposées.
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-            </div>
-            </div>
-        </section>
-
-        <!-- ========================================================= -->
-        <!-- MODAL : PROTÉGER -->
-        <!-- ========================================================= -->
-
-        <section class="mb-16" id="Protéger">
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
-            <div class="rounded-3xl bg-white shadow-2xl">
-                <div class="grid grid-cols-1 gap-8 p-6 md:grid-cols-2 md:p-10">
-                    <div class="flex flex-col justify-center">
-                        <div class="flex items-center gap-5">
-
-                            <div class="flex h-20 w-20 items-center justify-center
-<<<<<<< HEAD
-                               rounded-full bg-green-600
-                               shadow-lg shadow-green-600/30">
-=======
-                               rounded-full bg-blue-600
-                               shadow-lg shadow-blue-600/30">
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
-                                <!-- Icône livre -->
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832
-                                5.477 9.246 5 7.5 5S4.168
-                                5.477 3 6.253v13C4.168
-                                18.477 5.754 18 7.5
-                                18s3.332.477 4.5 1.253m0-13
-                                C13.168 5.477 14.754 5
-                                16.5 5S19.832 5.477 21
-                                6.253v13C19.832 18.477
-                                18.246 18 16.5 18s-3.332
-                                .477-4.5 1.253" />
-                                </svg>
-                            </div>
-
-                            <div>
-                                <h1 class="text-4xl font-bold tracking-tight
-<<<<<<< HEAD
-                                   text-green-700">
-                                    Accompagner
-                                </h1>
-
-                                <p class="mt-1 text-lg font-medium text-gray-700">
-                                    Nous accompagnons les jeunes et les adultes dans leur parcours éducatif <br>
-                                    et professionnel, en leur offrant des conseils, du mentorat et un soutien
-                                    personnalisé.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="my-6 h-1 w-14 rounded-full bg-green-600"></div>
-=======
-                                   text-blue-700">
-                                    PROTEGER
-                                </h1>
-
-                                <p class="mt-1 text-lg font-medium text-gray-700">
-                                    Nous nous engageons à protéger les droits et le bien-être <br>
-                                    des jeunes et des adultes, en veillant à ce qu'ils puissent <br>
-                                    apprendre et se développer dans un environnement sûr et respectueux.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="my-6 h-1 w-14 rounded-full bg-blue-600"></div>
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
-
-                        <p class="text-base leading-7 text-gray-600">
-                            Nous croyons que l'éducation est le fondement d'une société éclairée et autonome. C'est
-                            pourquoi nous œuvrons pour rendre l'éducation accessible à tous, sans distinction.
-                        </p>
-                    </div>
-
-
-
-                    <div class="relative overflow-hidden rounded-2xl">
-
-<<<<<<< HEAD
-                        <img src="Assets/accompagner.jpg" alt="Formation"
-=======
-                        <img src="Assets/protection.jpg" alt="Formation"
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
-                            class="h-full min-h-[250px] w-full object-cover">
-
-
-                        <div class="absolute inset-0 bg-gradient-to-t
-                           from-blue-950/50 to-transparent"></div>
-
-                    </div>
-
-                </div>
-
-                <!-- ========================= -->
-                <!-- CONTENU -->
-                <!-- ========================= -->
-
-                <div class="grid grid-cols-1 gap-10 px-6 pb-8 md:grid-cols-2 md:px-10">
-<<<<<<< HEAD
-                    <section class="mb-8">
-                        <div class="mb-5 flex items-center gap-3">
-
-                            <div class="flex h-10 w-10 items-center justify-center
-                               rounded-full bg-green-100">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600" fill="none"
-=======
-                    <section>
-                        <div class="mb-5 flex items-center gap-3">
-
-                            <div class="flex h-10 w-10 items-center justify-center
-                               rounded-full bg-blue-100">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600" fill="none"
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
-                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2" />
-                                    <circle cx="12" cy="12" r="9" />
-                                </svg>
-                            </div>
-
-                            <div>
-<<<<<<< HEAD
-                                <h2 class="text-xl font-bold text-green-800">
-                                    Nos objectifs
-                                </h2>
-
-                                <div class="mt-1 h-1 w-8 rounded bg-green-500"></div>
-=======
-                                <h2 class="text-xl font-bold text-blue-800">
-                                    Nos objectifs
-                                </h2>
-
-                                <div class="mt-1 h-1 w-8 rounded bg-blue-500"></div>
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
-                            </div>
-
-                        </div>
-
-
-                        <!-- Objectif 1 -->
-<<<<<<< HEAD
-                        <div class="flex gap-4 border-b border-green-100
-                           py-4">
-                            <span class="flex h-6 w-6 shrink-0 items-center
-                               justify-center rounded-full
-                               border-2 border-green-500
-                               text-green-500">
-=======
-                        <div class="flex gap-4 border-b border-gray-100
-                           py-4">
-                            <span class="flex h-6 w-6 shrink-0 items-center
-                               justify-center rounded-full
-                               border-2 border-blue-500
-                               text-blue-500">
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
-                                ✓
-                            </span>
-
-                            <p class="text-sm leading-6 text-gray-600">
-<<<<<<< HEAD
                                 Rendre l'éducation de qualité accessible
                                 aux enfants et aux jeunes.
-=======
-                               Protéger les personnes vulnérables et les communautés défavorisées.
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
                             </p>
                         </div>
 
@@ -1388,23 +967,14 @@
                            py-4">
                             <span class="flex h-6 w-6 shrink-0 items-center
                                justify-center rounded-full
-<<<<<<< HEAD
                                border-2 border-green-500
                                text-green-500">
-=======
-                               border-2 border-blue-500
-                               text-blue-500">
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
                                 ✓
                             </span>
 
                             <p class="text-sm leading-6 text-gray-600">
-<<<<<<< HEAD
                                 Favoriser le développement de compétences
                                 utiles pour la vie et l'emploi.
-=======
-                               Promouvoir la dignité, les droits et l'égalité des chances pour tous.
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
                             </p>
                         </div>
 
@@ -1414,23 +984,14 @@
                            py-4">
                             <span class="flex h-6 w-6 shrink-0 items-center
                                justify-center rounded-full
-<<<<<<< HEAD
                                border-2 border-green-500
                                text-green-500">
-=======
-                               border-2 border-blue-500
-                               text-blue-500">
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
                                 ✓
                             </span>
 
                             <p class="text-sm leading-6 text-gray-600">
-<<<<<<< HEAD
                                 Promouvoir l'esprit critique, la créativité
                                 et l'ouverture d'esprit.
-=======
-                                Sensibiliser les populations aux enjeux liés à la protection de l'environnement.
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
                             </p>
                         </div>
 
@@ -1440,30 +1001,20 @@
 
                             <span class="flex h-6 w-6 shrink-0 items-center
                                justify-center rounded-full
-<<<<<<< HEAD
                                border-2 border-green-500
                                text-green-500">
-=======
-                               border-2 border-blue-500
-                               text-blue-500">
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
                                 ✓
                             </span>
 
                             <p class="text-sm leading-6 text-gray-600">
-<<<<<<< HEAD
                                 Lutter contre l'abandon scolaire
                                 et l'analphabétisme.
-=======
-                                Favoriser un environnement sûr, sain et respectueux pour les communautés
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
                             </p>
 
                         </div>
 
                     </section>
 
-<<<<<<< HEAD
 
                     <!-- ========================= -->
                     <!-- ACTIONS -->
@@ -1650,31 +1201,12 @@
                         </p>
                     </div>
 
-=======
-
-                    <!-- ========================= -->
-                    <!-- ACTIONS -->
-                    <!-- ========================= -->
-
-                    <section>
-
-                        <div class="mb-5 flex items-center gap-3">
-
-                            <div class="flex h-10 w-10 items-center justify-center
-                               rounded-full bg-blue-100">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m9-9H3" />
-                                </svg>
-                            </div>
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
 
                             <div>
                                 <h2 class="text-xl font-bold text-blue-800">
                                     Nos actions clés
                                 </h2>
 
-<<<<<<< HEAD
                     <div class="relative overflow-hidden rounded-2xl">
 
                         <img src="Assets/protection.jpg" alt="Formation"
@@ -1683,112 +1215,6 @@
 
                         <div class="absolute inset-0 bg-gradient-to-t
                            from-blue-950/50 to-transparent"></div>
-=======
-                                <div class="mt-1 h-1 w-8 rounded bg-blue-500"></div>
-                            </div>
-
-                        </div>
-
-
-                        <!-- Action 1 -->
-                        <div class="mb-3 flex gap-4 rounded-xl border
-                           border-gray-100 bg-gray-50 p-4
-                           transition hover:border-blue-200
-                           hover:bg-blue-50">
-
-                            <div class="flex h-11 w-11 shrink-0 items-center
-                               justify-center rounded-lg bg-blue-100
-                               text-blue-600">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Pro v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc.--><path d="M480 576L192 576C139 576 96 533 96 480L96 160C96 107 139 64 192 64L496 64C522.5 64 544 85.5 544 112L544 400C544 420.9 530.6 438.7 512 445.3L512 512C529.7 512 544 526.3 544 544C544 561.7 529.7 576 512 576L480 576zM192 448C174.3 448 160 462.3 160 480C160 497.7 174.3 512 192 512L448 512L448 448L192 448zM224 216C224 229.3 234.7 240 248 240L424 240C437.3 240 448 229.3 448 216C448 202.7 437.3 192 424 192L248 192C234.7 192 224 202.7 224 216zM248 288C234.7 288 224 298.7 224 312C224 325.3 234.7 336 248 336L424 336C437.3 336 448 325.3 448 312C448 298.7 437.3 288 424 288L248 288z"/></svg>
-
-                                <!-- bon -->
-                            </div>
-
-                            <div>
-                                <h3 class="font-semibold text-blue-800">
-                                    Protection des personnes vulnérables
-                                </h3>
-
-                                <p class="mt-1 text-sm leading-5 text-gray-600">
-                                    Identifier les besoins et apporter un soutien adapté aux personnes et familles en situation de vulnérabilité
-                                </p>
-                            </div>
-
-                        </div>
-
-
-                        <!-- Action 2 -->
-                        <div class="mb-3 flex gap-4 rounded-xl border
-                           border-gray-100 bg-gray-50 p-4
-                           transition hover:border-blue-200
-                           hover:bg-blue-50">
-
-                            <div class="flex h-11 w-11 shrink-0 items-center
-                               justify-center rounded-lg bg-blue-100
-                               text-blue-600">
-                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M128 128C128 92.7 156.7 64 192 64L341.5 64C358.5 64 374.8 70.7 386.8 82.7L493.3 189.3C505.3 201.3 512 217.6 512 234.6L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 128zM336 122.5L336 216C336 229.3 346.7 240 360 240L453.5 240L336 122.5zM216 128C202.7 128 192 138.7 192 152C192 165.3 202.7 176 216 176L264 176C277.3 176 288 165.3 288 152C288 138.7 277.3 128 264 128L216 128zM216 224C202.7 224 192 234.7 192 248C192 261.3 202.7 272 216 272L264 272C277.3 272 288 261.3 288 248C288 234.7 277.3 224 264 224L216 224zM286.3 384C275 384 264.4 389.1 257.4 397.9L197.3 473C189 483.3 190.7 498.5 201 506.7C211.3 514.9 226.5 513.3 234.7 502.9L281.8 444.1L297 494.8C300 505 309.4 511.9 320 511.9L424 511.9C437.3 511.9 448 501.2 448 487.9C448 474.6 437.3 463.9 424 463.9L337.9 463.9L321.8 410.3C317.1 394.6 302.7 383.9 286.3 383.9z"/></svg>
-                                <!-- bon -->
-                            </div>
-
-                            <div>
-                                <h3 class="font-semibold text-blue-800">
-                                    Sensibilisation et prévention
-                                </h3>
-
-                                <p class="mt-1 text-sm leading-5 text-gray-600">
-                                    Informer les communautés sur les violences, discriminations, risques sociaux et comportements à risque.
-                                </p>
-                            </div>
-
-                        </div>
-
-
-                        <!-- Action 3 -->
-                        <div class="mb-3 flex gap-4 rounded-xl border
-                           border-gray-100 bg-gray-50 p-4
-                           transition hover:border-blue-200
-                           hover:bg-blue-50">
-
-                            <div class="flex h-11 w-11 shrink-0 items-center
-                               justify-center rounded-lg bg-blue-100
-                               text-blue-600">
-                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M256 144C256 117.5 277.5 96 304 96L336 96C362.5 96 384 117.5 384 144L384 496C384 522.5 362.5 544 336 544L304 544C277.5 544 256 522.5 256 496L256 144zM64 336C64 309.5 85.5 288 112 288L144 288C170.5 288 192 309.5 192 336L192 496C192 522.5 170.5 544 144 544L112 544C85.5 544 64 522.5 64 496L64 336zM496 160L528 160C554.5 160 576 181.5 576 208L576 496C576 522.5 554.5 544 528 544L496 544C469.5 544 448 522.5 448 496L448 208C448 181.5 469.5 160 496 160z"/></svg>
-                                <!-- bon -->
-                            </div>
-
-                            <div>
-                                <h3 class="font-semibold text-blue-800">
-                                    Éducation à la citoyenneté
-                                </h3>
-
-                                <p class="mt-1 text-sm leading-5 text-gray-600">
-                                   Encourager la responsabilité, la solidarité et la participation des citoyens au développement de leur communauté.
-                                </p>
-                            </div>
-
-                        </div>
-
-
-                        <!-- Action 4 -->
-                        <div class="flex gap-4 rounded-xl border
-                           border-gray-100 bg-gray-50 p-4
-                           transition hover:border-blue-200
-                           hover:bg-blue-50">
-
-                            <div class="flex h-11 w-11 shrink-0 items-center
-                               justify-center rounded-lg bg-blue-100
-                               text-blue-600">
-                               <!-- <i class="fa-solid fa-wand-magic-sparkles text-grenn-500"></i> -->
-                               
-                               <svg xmlns="http://www.w3.org/2000/svg" class="text-green-500" viewBox="0 0 640 640" ><!--!Font Awesome Pro v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2026 Fonticons, Inc.--><path d="M295.4 37L310.2 73.8L347 88.6C350 89.8 352 92.8 352 96C352 99.2 350 102.2 347 103.4L310.2 118.2L295.4 155C294.2 158 291.2 160 288 160C284.8 160 281.8 158 280.6 155L265.8 118.2L229 103.4C226 102.2 224 99.2 224 96C224 92.8 226 89.8 229 88.6L265.8 73.8L280.6 37C281.8 34 284.8 32 288 32C291.2 32 294.2 34 295.4 37zM142.7 105.7L164.2 155.8L214.3 177.3C220.2 179.8 224 185.6 224 192C224 198.4 220.2 204.2 214.3 206.7L164.2 228.2L142.7 278.3C140.2 284.2 134.4 288 128 288C121.6 288 115.8 284.2 113.3 278.3L91.8 228.2L41.7 206.7C35.8 204.2 32 198.4 32 192C32 185.6 35.8 179.8 41.7 177.3L91.8 155.8L113.3 105.7C115.8 99.8 121.6 96 128 96C134.4 96 140.2 99.8 142.7 105.7zM496 368C502.4 368 508.2 371.8 510.7 377.7L532.2 427.8L582.3 449.3C588.2 451.8 592 457.6 592 464C592 470.4 588.2 476.2 582.3 478.7L532.2 500.2L510.7 550.3C508.2 556.2 502.4 560 496 560C489.6 560 483.8 556.2 481.3 550.3L459.8 500.2L409.7 478.7C403.8 476.2 400 470.4 400 464C400 457.6 403.8 451.8 409.7 449.3L459.8 427.8L481.3 377.7C483.8 371.8 489.6 368 496 368zM492 64C503 64 513.6 68.4 521.5 76.2L563.8 118.5C571.6 126.4 576 137 576 148C576 159 571.6 169.6 563.8 177.5L475.6 265.7L374.3 164.4L462.5 76.2C470.4 68.4 481 64 492 64zM76.2 462.5L340.4 198.3L441.7 299.6L177.5 563.8C169.6 571.6 159 576 148 576C137 576 126.4 571.6 118.5 563.8L76.2 521.5C68.4 513.6 64 503 64 492C64 481 68.4 470.4 76.2 462.5z"/></svg>
-                                <!-- bon -->
-                            </div>
-
-                            <div>
-                                <h3 class="font-semibold text-blue-800">
-                                    Partenariats de protection
-                                </h3>
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
 
                                 <p class="mt-1 text-sm leading-5 text-gray-600">
                                    collaborer avec les acteurs publics, privés et associatifs pour renforcer l'impact des actions de protection sociale et environnementale.
@@ -1800,7 +1226,6 @@
                     </section>
 
                 </div>
-<<<<<<< HEAD
 
                 <!-- ========================= -->
                 <!-- CONTENU -->
@@ -2044,18 +1469,6 @@
         <!-- MODAL : PROGRAMME -->
         <!-- ========================================================= -->
 
-=======
-
-            </div>
-            </div>
-            </div>
-        </section>
-
-        <!-- ========================================================= -->
-        <!-- MODAL : PROGRAMME -->
-        <!-- ========================================================= -->
-
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
         <section id="programme" class="sct_formation mb-8 flex flex-col justify-center items-center mb-16">
             <div class="text-center flex flex-col gap-4 mb-2xl">
                 <h1 class="text-5xl font-bold">Les piliers du programme</h1>
@@ -2084,11 +1497,7 @@
                         </div>
                     </div>
 
-<<<<<<< HEAD
                     <div class="border-2 border-blue-700 border-bleu-700 w-[120px]"></div>
-=======
-                    <div class="bo border-2 border-blue-700 border-bleu-700 w-[120px]"></div>
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
 
 
                     <div class="border border-blue-700 rounded-2xl size-64">
@@ -2103,11 +1512,7 @@
                             class="w-full h-full object-cover flex-shrink-0 rounded-2xl">
                     </div>
 
-<<<<<<< HEAD
                     <div class="border-2 border-blue-500 w-[120px]"></div>
-=======
-                    <div class="bo border-2 border-blue-500 w-[120px]"></div>
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
 
                     <div class="flex justify-between items-center gap-16 p-8 border-b-4 rounded-4xl border-blue-500">
                         <div>
@@ -2148,11 +1553,7 @@
                         </div>
                     </div>
 
-<<<<<<< HEAD
                     <div class="border-2 border-green-500 w-[120px] h-[1px]"></div>
-=======
-                    <div class="bo border-2 border-green-500 w-[120px] h-[1px]"></div>
->>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
 
                     <div class="border border-green-500 rounded-2xl size-64 kola">
                         <img src="Assets/dev.jpg" alt="Formation GVAS"

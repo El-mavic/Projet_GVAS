@@ -4,12 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <meta name="description"
     content="GVAS - Groupement des Volontaires pour l'Action Sociale. Éduquer, former, accompagner et protéger pour un avenir durable.">
+    <meta name="author" content="El_Mavic BAKALA">
+    <meta name="author" content="Célina LUEMBA">
+    <meta name="author" content="Gloire NGUIMBI">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+
   <title>GVAS — Groupement des Volontaires pour l'Action Sociale</title>
-  <meta name="author" content="El_Mavic BAKALA">
-  <meta name="author" content="Célina LUEMBA">
-  <meta name="author" content="Gloire NGUIMBI">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -17,7 +20,6 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="assets/logo.png" type="image/png">
 </head>
 
 <body>
