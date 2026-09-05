@@ -13,13 +13,12 @@
         </a>
 
         <nav class="nav-3d" id="mainNav">
-            <a href="../../index.php">Acceuil</a>
-            <a href="#mission">Notre mission</a>
-            <a href="#valeurs">Nos valeurs</a>
-            <a href="#actions">Public cidlé</a>
+            <a href="../../ong.php">Accueil</a>
+            <a href="../../Vika/index.html">Qui sommes-nous ?</a>
+            <a href="../../vika/mission.html">Notre Mission</a>
 
             <a href="#footer" class="join-3d">
-                <span>Contatez-nous</span>
+                <span>Contactez-nous</span>
                 <b>↗</b>
             </a>
         </nav>

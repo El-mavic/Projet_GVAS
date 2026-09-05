@@ -19,10 +19,10 @@
 
                 <!-- Navigation -->
                 <nav class="footer-nav">
-                    <a href="#accueil">Accueil</a>
-                    <a href="#mission">Mission</a>
-                    <a href="#valeurs">Valeurs</a>
-                    <a href="#actualites">Actualités</a>
+                    <a href="../../ong.php">Accueil</a>
+                    <a href="../../Vika/mission.html">Mission</a>
+                    <a href="../../ong.php/#valeurs">Valeurs</a>
+                    <a href="../../ong.php/#actions">Actualités</a>
 
                 </nav>
 
@@ -84,7 +84,7 @@
                                 <div class="partner-item">
                                     <div class="partner-logo">
                                         <a href="">
-                                            <img src="../images/Partenaires/AJEC.png"
+                                            <img src="../../Vika/images/Partenaires/AJEC.png"
                                                 alt="AJEC"></a>
                                     </div>
                                     <span>AJEC</span>
@@ -94,7 +94,7 @@
                                 <div class="partner-item">
                                     <div class="partner-logo">
                                         <a href="">
-                                            <img src="../images/Partenaires/MZ.png"
+                                            <img src="../../Vika/images/Partenaires/MZ.jpeg"
                                                 alt="MZ Services"></a>
                                     </div>
                                     <span>MZ Services</span>
@@ -104,7 +104,7 @@
                                 <div class="partner-item">
                                     <div class="partner-logo">
                                         <a href="">
-                                            <img src="../images/Partenaires/cvmc.png"
+                                            <img src="../../Vika/images/Partenaires/cvmc.png"
                                                 alt="CVMC"></a>
                                     </div>
                                     <span>cvmc</span>
@@ -115,7 +115,7 @@
                                 <div class="partner-item">
                                     <div class="partner-logo">
                                         <a href="">
-                                            <img src="../images/Partenaires/VIP.png"
+                                            <img src="../../Vika/images/Partenaires/VIP.png"
                                                 alt="VIP"></a>
                                     </div>
                                     <span>VIP</span>
@@ -125,7 +125,7 @@
                                 <div class="partner-item">
                                     <div class="partner-logo">
                                         <a href="">
-                                            <img src="../images/Partenaires/Ecole.png"
+                                            <img src="../../Vika/images/Partenaires/Ecole.png"
                                                 alt="École"></a>
                                     </div>
                                     <span>École</span>
@@ -135,7 +135,7 @@
                                 <div class="partner-item">
                                     <div class="partner-logo">
                                         <a href="">
-                                            <img src="../images/Partenaires/FEELEC.png"
+                                            <img src="../../Vika/images/Partenaires/feelec.jpeg"
                                                 alt="FEELEC"></a>
                                     </div>
                                     <span>FEELEC</span>
