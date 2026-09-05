@@ -11,8 +11,15 @@ main {
    TABLETTE
 ========================================================= */
 
+<<<<<<< HEAD
 @media (max-width: 768px) {
 
+=======
+@media (max-width: 828px) {
+     .sct1 .p_sct1 {
+        width:auto;
+  }
+>>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
   
 }
 
@@ -21,8 +28,15 @@ main {
    MOBILE
 ========================================================= */
 
+<<<<<<< HEAD
 @media (max-width: 600px) {
 
+=======
+@media (max-width: 480px) {
+    .sct1 .span_sct1 {
+        font-size: 20px;
+    }
+>>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
  
 }
 
@@ -31,9 +45,79 @@ main {
    TRÈS PETIT MOBILE
 ========================================================= */
 
+<<<<<<< HEAD
 @media (max-width: 400px) {
 
  
+=======
+@media (max-width: 760px) {
+  /* Grand mobile */
+   .sct1 .link {
+    display:flex;
+    flex-direction: column; 
+  }
+
+  .sct_caro .sct_caro1 {
+    display:flex;
+    flex-direction: column; 
+  }
+
+  .stc_caro .stc_caro_text {
+    width: auto;
+  } 
+
+  .sct_formation h1 {
+    font-size: 20px;
+  }
+
+   .sct_formation .une_formation .la_formation {
+    display:flex;
+    flex-direction:column;
+  }
+
+     .sct_formation .une_formation .la_formation .bo {
+    height: 70px;
+    width: 1px;
+  }
+  
+  /*
+  .span_sct1 { 
+    font-size: 20px;
+  }
+
+  .h_Sct1 {
+    font-size: 15px;
+  } */
+
+  .sct1 .p_sct1 {
+    font-size: 15px;
+    width:auto;
+  }
+
+  .sct1 .image {
+    display: none;
+  }
+
+  /* Sct_bar */
+  .sct_bar h1 {
+    font-size: 20px
+  }
+
+}
+
+/* barrage */
+
+@media (min-width: 1024px) {
+  /* Desktop */
+}
+
+@media (min-width: 1280px) {
+  /* Grand desktop */
+}
+
+@media (min-width: 1440px) {
+  /* Très grand desktop */
+>>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
 }
 
 
