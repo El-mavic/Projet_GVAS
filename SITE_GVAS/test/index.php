@@ -10,7 +10,7 @@ unset($_SESSION['success'], $_SESSION['error']);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programme Vacances Utiles | GVAS</title>
+    <title>FICHE DE RENSEIGNEMENT NUMERIQUE | GVAS</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
@@ -29,10 +29,8 @@ unset($_SESSION['success'], $_SESSION['error']);
             <span> <i class="fa-solid fa-phone"> </i> 06 620 89 94 / 05 344 40 20</span>
             <span> <i class="fa-solid fa-map-marker-alt"> </i> Pointe-Noire, Congo</span>
             <a href="login.php" class="icon"> <i class="fas fa-user-shield"></i></a>
-<<<<<<< HEAD
-=======
             <a href="../index.php" class="icon"> <i class="fas fa-home"></i></a>
->>>>>>> b4c06f7624d579de73bf89738da3106e038e7601
+
 
         </div>
     </header>
@@ -41,7 +39,7 @@ unset($_SESSION['success'], $_SESSION['error']);
         <section class="hero">
             <div>
                 <p class="eyebrow">INSCRIPTION EN LIGNE</p>
-                <h1>Programme Vacances Utiles</h1>
+                <h1>FICHE DE RENSEIGNEMENT NUMERIQUE</h1>
                 <p>Remplissez soigneusement ce formulaire pour enregistrer votre inscription.</p>
             </div>
             <div class="hero-badge">2026</div>

@@ -113,7 +113,7 @@
             locaux pour apporter des réponses concrètes aux défis sociaux,
             éducatifs et environnementaux.
           </p>
-          <a href="Vika/index.html" class="text-link">En savoir plus sur GVAS <span><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
+          <a href="Vika/index.PHP" class="text-link">En savoir plus sur GVAS <span><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
         </div>
 
         <div class="mission-card reveal">
@@ -320,7 +320,7 @@
           target="_blank" class="fab-item">
           <span class="footer-contact-item">
             <span class="contact-icon"> <i class="fa-solid fa-location-dot"></i></span>
-            <span> Mpaka x-or Pointe-Noire, Congo </span>
+            <span> Mpaka x-or Pointe-Noire, République Du Congo </span>
           </span>
         </a>
       </div>
