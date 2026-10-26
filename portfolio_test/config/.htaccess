@@ -1,0 +1,4 @@
+Options -Indexes
+<Files "yabetoo.php">
+    Require all denied
+</Files>
