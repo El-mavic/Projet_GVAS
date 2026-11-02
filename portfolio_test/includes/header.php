@@ -68,3 +68,4 @@
     </header>
 
     <main class="page">
+        <script src="assets/js/script.js"></script>

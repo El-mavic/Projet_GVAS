@@ -3430,81 +3430,25 @@ body {
 }
 
 /********************************* Animation*************************/
-
 /* ========================================
    ANIMATION DU HEADER : BAS VERS LE HAUT
 ======================================== */
-
+/* Header qui disparaît au défilement */
 .topbar {
-  animation: headerIntro 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
-@keyframes headerIntro {
-  from {
-    opacity: 0;
-    transform: translateY(35px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Animation du logo */
-
-.topbar .brand {
-  animation: brandIntro 0.7s ease-out 0.15s both;
-}
-
-@keyframes brandIntro {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Animation successive des liens */
-
-.topbar .nav a {
-  animation: navIntro 0.5s ease-out both;
-}
-
-.topbar .nav a:nth-child(1) {
-  animation-delay: 0.2s;
-}
-
-.topbar .nav a:nth-child(2) {
-  animation-delay: 0.3s;
-}
-
-.topbar .nav a:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-.topbar .nav a:nth-child(4) {
-  animation-delay: 0.5s;
-}
-
-@keyframes navIntro {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Header masqué */
+.topbar.header-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* Accessibilité */
-
 @media (prefers-reduced-motion: reduce) {
   .topbar,
   .topbar .brand,
