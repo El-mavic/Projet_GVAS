@@ -80,3 +80,31 @@ document.addEventListener('DOMContentLoaded', () => {
   form.querySelector('[name="cv"]')?.addEventListener('change', event => updateCv(event.target.files?.[0] || null));
   update();
 });
+
+//Animation du header lors du scroll.
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const header = document.querySelector(".topbar");
+
+  if (!header) return;
+
+  let lastScroll = window.scrollY;
+
+  window.addEventListener("scroll", function () {
+
+    const currentScroll = window.scrollY;
+
+    if (currentScroll > lastScroll && currentScroll > 100) {
+      // On descend : cacher le header
+      header.classList.add("header-hidden");
+    } else {
+      // On remonte : afficher le header
+      header.classList.remove("header-hidden");
+    }
+
+    lastScroll = currentScroll;
+  });
+
+});
+
