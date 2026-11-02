@@ -55,7 +55,7 @@
                     target="_blank" class="fab-item">
                     <span class="footer-contact-item">
                         <span class="contact-icon"> <i class="fa-solid fa-location-dot"></i></span>
-                        <span> Mpaka x-or Pointe-Noire, Congo </span>
+                        <span> Mpaka x-or Pointe-Noire, République Du Congo </span>
                     </span>
                 </a>
             </div>
@@ -1531,84 +1531,84 @@
         }
     </style>
 
-</body>
+    </body>
 
 
-<script>
-    const ouvrirPartenaires =
-        document.getElementById(
-            "ouvrirPartenaires"
-        );
-
-
-    const fermerPartenaires =
-        document.getElementById(
-            "fermerPartenaires"
-        );
-
-
-    const partnersOverlay =
-        document.getElementById(
-            "partnersOverlay"
-        );
-
-    ouvrirPartenaires?.addEventListener(
-        "click",
-        (event) => {
-
-            event.preventDefault();
-
-            partnersOverlay?.classList.add(
-                "active"
+    <script>
+        const ouvrirPartenaires =
+            document.getElementById(
+                "ouvrirPartenaires"
             );
 
-        }
-    );
 
-    fermerPartenaires?.addEventListener(
-        "click",
-        () => {
-
-            partnersOverlay?.classList.remove(
-                "active"
+        const fermerPartenaires =
+            document.getElementById(
+                "fermerPartenaires"
             );
 
-        }
-    );
 
-    partnersOverlay?.addEventListener(
-        "click",
-        (event) => {
+        const partnersOverlay =
+            document.getElementById(
+                "partnersOverlay"
+            );
 
-            if (
-                event.target === partnersOverlay
-            ) {
+        ouvrirPartenaires?.addEventListener(
+            "click",
+            (event) => {
 
-                partnersOverlay.classList.remove(
+                event.preventDefault();
+
+                partnersOverlay?.classList.add(
                     "active"
                 );
 
             }
+        );
 
-        }
-    );
+        fermerPartenaires?.addEventListener(
+            "click",
+            () => {
 
-
-    document.addEventListener(
-        "keydown",
-        (event) => {
-
-            if (
-                event.key === "Escape" &&
-                partnersOverlay?.classList.contains("active")
-            ) {
-
-                partnersOverlay.classList.remove(
+                partnersOverlay?.classList.remove(
                     "active"
                 );
 
             }
+        );
 
-        }
-    );
-</script>
+        partnersOverlay?.addEventListener(
+            "click",
+            (event) => {
+
+                if (
+                    event.target === partnersOverlay
+                ) {
+
+                    partnersOverlay.classList.remove(
+                        "active"
+                    );
+
+                }
+
+            }
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            (event) => {
+
+                if (
+                    event.key === "Escape" &&
+                    partnersOverlay?.classList.contains("active")
+                ) {
+
+                    partnersOverlay.classList.remove(
+                        "active"
+                    );
+
+                }
+
+            }
+        );
+    </script>

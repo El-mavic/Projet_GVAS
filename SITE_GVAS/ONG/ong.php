@@ -4,12 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <meta name="description"
     content="GVAS - Groupement des Volontaires pour l'Action Sociale. Éduquer, former, accompagner et protéger pour un avenir durable.">
+    <meta name="author" content="El_Mavic BAKALA">
+    <meta name="author" content="Célina LUEMBA">
+    <meta name="author" content="Gloire NGUIMBI">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+
   <title>GVAS — Groupement des Volontaires pour l'Action Sociale</title>
-  <meta name="author" content="El_Mavic BAKALA">
-  <meta name="author" content="Célina LUEMBA">
-  <meta name="author" content="Gloire NGUIMBI">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -17,9 +20,8 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="assets/logo.png" type="image/png">
 </head>
-z
+
 <body>
   <!-- HEADER 3D -->
   <header class="header-3d" id="siteHeader">
@@ -113,7 +115,11 @@ z
             locaux pour apporter des réponses concrètes aux défis sociaux,
             éducatifs et environnementaux.
           </p>
+<<<<<<< HEAD
           <a href="Vika/index.html" class="text-link">En savoir plus sur GVAS <span><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
+=======
+          <a href="Vika/index.PHP" class="text-link">En savoir plus sur GVAS <span><i class="fa-solid fa-arrow-up-right-from-square"></i></span></a>
+>>>>>>> fa581cc541a0eab5cb13b3112ac84b9b121a09e9
         </div>
 
         <div class="mission-card reveal">
@@ -320,7 +326,11 @@ z
           target="_blank" class="fab-item">
           <span class="footer-contact-item">
             <span class="contact-icon"> <i class="fa-solid fa-location-dot"></i></span>
+<<<<<<< HEAD
             <span> Mpaka x-or Pointe-Noire, Congo </span>
+=======
+            <span> Mpaka x-or Pointe-Noire, République Du Congo </span>
+>>>>>>> fa581cc541a0eab5cb13b3112ac84b9b121a09e9
           </span>
         </a>
       </div>

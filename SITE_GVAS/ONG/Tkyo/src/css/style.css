@@ -11,10 +11,13 @@ main {
    TABLETTE
 ========================================================= */
 
+
+
 @media (max-width: 828px) {
      .sct1 .p_sct1 {
         width:auto;
   }
+
   
 }
 
@@ -23,17 +26,22 @@ main {
    MOBILE
 ========================================================= */
 
+
 @media (max-width: 480px) {
     .sct1 .span_sct1 {
         font-size: 20px;
     }
- 
+
 }
 
 
 /* =========================================================
    TRÈS PETIT MOBILE
 ========================================================= */
+
+
+@media (max-width: 400px) {
+
 
 @media (max-width: 760px) {
   /* Grand mobile */
@@ -102,6 +110,7 @@ main {
 
 @media (min-width: 1440px) {
   /* Très grand desktop */
+
 }
 
 
@@ -198,4 +207,5 @@ header {
 
 .sct2 .sct2_touche1:hover span {
     color: #ffffff;
+}
 }

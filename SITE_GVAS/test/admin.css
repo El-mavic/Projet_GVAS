@@ -647,26 +647,13 @@ td {
    ========================================================= */
 
 .login-page {
-    /*
-     * Prend au minimum toute la hauteur
-     * de l'écran.
-     */
+
     min-height: 100vh;
 
-    /*
-     * Centre la carte de connexion
-     * horizontalement et verticalement.
-     */
     display: grid;
-
     place-items: center;
+    background-color: #d2d2d6;
 
-    /*
-     * Dégradé bleu de l'arrière-plan.
-     */
-    background: linear-gradient(135deg,
-            #092943,
-            #1e5a87);
 }
 
 
@@ -698,7 +685,7 @@ td {
     width: 58px;
     height: 58px;
 
-    border: 3px solid #d7a62b;
+    border: 3px solid yellow;
 
     border-radius: 50%;
 
@@ -706,7 +693,7 @@ td {
 
     place-items: center;
 
-    color: #123d68;
+    color: black;
 
     font-weight: 900;
 
