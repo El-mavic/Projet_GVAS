@@ -647,6 +647,7 @@ td {
    ========================================================= */
 
 .login-page {
+<<<<<<< HEAD
     /*
      * Prend au minimum toute la hauteur
      * de l'écran.
@@ -667,6 +668,15 @@ td {
     background: linear-gradient(135deg,
             #092943,
             #1e5a87);
+=======
+
+    min-height: 100vh;
+
+    display: grid;
+    place-items: center;
+    background-color: #d2d2d6;
+
+>>>>>>> fa581cc541a0eab5cb13b3112ac84b9b121a09e9
 }
 
 
@@ -698,7 +708,11 @@ td {
     width: 58px;
     height: 58px;
 
+<<<<<<< HEAD
     border: 3px solid #d7a62b;
+=======
+    border: 3px solid yellow;
+>>>>>>> fa581cc541a0eab5cb13b3112ac84b9b121a09e9
 
     border-radius: 50%;
 
@@ -706,7 +720,11 @@ td {
 
     place-items: center;
 
+<<<<<<< HEAD
     color: #123d68;
+=======
+    color: black;
+>>>>>>> fa581cc541a0eab5cb13b3112ac84b9b121a09e9
 
     font-weight: 900;
 

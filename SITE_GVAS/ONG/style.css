@@ -973,9 +973,13 @@ button {
 
 .mission-card>span {
   font-size: 10px;
+<<<<<<< HEAD
 
   letter-spacing: 2.4px;
 
+=======
+  letter-spacing: 2.4px;
+>>>>>>> fa581cc541a0eab5cb13b3112ac84b9b121a09e9
   font-weight: 800;
 
   color: #8fd76d;

@@ -55,7 +55,11 @@
                     target="_blank" class="fab-item">
                     <span class="footer-contact-item">
                         <span class="contact-icon"> <i class="fa-solid fa-location-dot"></i></span>
+<<<<<<< HEAD
                         <span> Mpaka x-or Pointe-Noire, Congo </span>
+=======
+                        <span> Mpaka x-or Pointe-Noire, République Du Congo </span>
+>>>>>>> fa581cc541a0eab5cb13b3112ac84b9b121a09e9
                     </span>
                 </a>
             </div>
@@ -1531,6 +1535,7 @@
         }
     </style>
 
+<<<<<<< HEAD
 </body>
 
 
@@ -1585,10 +1590,41 @@
             ) {
 
                 partnersOverlay.classList.remove(
+=======
+    </body>
+
+
+    <script>
+        const ouvrirPartenaires =
+            document.getElementById(
+                "ouvrirPartenaires"
+            );
+
+
+        const fermerPartenaires =
+            document.getElementById(
+                "fermerPartenaires"
+            );
+
+
+        const partnersOverlay =
+            document.getElementById(
+                "partnersOverlay"
+            );
+
+        ouvrirPartenaires?.addEventListener(
+            "click",
+            (event) => {
+
+                event.preventDefault();
+
+                partnersOverlay?.classList.add(
+>>>>>>> fa581cc541a0eab5cb13b3112ac84b9b121a09e9
                     "active"
                 );
 
             }
+<<<<<<< HEAD
 
         }
     );
@@ -1604,11 +1640,61 @@
             ) {
 
                 partnersOverlay.classList.remove(
+=======
+        );
+
+        fermerPartenaires?.addEventListener(
+            "click",
+            () => {
+
+                partnersOverlay?.classList.remove(
+>>>>>>> fa581cc541a0eab5cb13b3112ac84b9b121a09e9
                     "active"
                 );
 
             }
+<<<<<<< HEAD
 
         }
     );
 </script>
+=======
+        );
+
+        partnersOverlay?.addEventListener(
+            "click",
+            (event) => {
+
+                if (
+                    event.target === partnersOverlay
+                ) {
+
+                    partnersOverlay.classList.remove(
+                        "active"
+                    );
+
+                }
+
+            }
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            (event) => {
+
+                if (
+                    event.key === "Escape" &&
+                    partnersOverlay?.classList.contains("active")
+                ) {
+
+                    partnersOverlay.classList.remove(
+                        "active"
+                    );
+
+                }
+
+            }
+        );
+    </script>
+>>>>>>> fa581cc541a0eab5cb13b3112ac84b9b121a09e9
