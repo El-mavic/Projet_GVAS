@@ -11,13 +11,15 @@ main {
    TABLETTE
 ========================================================= */
 
+<<<<<<< HEAD
+@media (max-width: 768px) {
 
-
+=======
 @media (max-width: 828px) {
      .sct1 .p_sct1 {
         width:auto;
   }
-
+>>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
   
 }
 
@@ -26,12 +28,16 @@ main {
    MOBILE
 ========================================================= */
 
+<<<<<<< HEAD
+@media (max-width: 600px) {
 
+=======
 @media (max-width: 480px) {
     .sct1 .span_sct1 {
         font-size: 20px;
     }
-
+>>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
+ 
 }
 
 
@@ -39,10 +45,11 @@ main {
    TRÈS PETIT MOBILE
 ========================================================= */
 
-
+<<<<<<< HEAD
 @media (max-width: 400px) {
 
-
+ 
+=======
 @media (max-width: 760px) {
   /* Grand mobile */
    .sct1 .link {
@@ -110,7 +117,7 @@ main {
 
 @media (min-width: 1440px) {
   /* Très grand desktop */
-
+>>>>>>> 72c684e8dbaaa98e86b9253f2f384cce72bef13e
 }
 
 
@@ -207,5 +214,4 @@ header {
 
 .sct2 .sct2_touche1:hover span {
     color: #ffffff;
-}
 }

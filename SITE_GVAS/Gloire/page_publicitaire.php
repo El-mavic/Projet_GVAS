@@ -186,10 +186,15 @@ if (!isset($_SESSION['visite_' . $page])) {
                         <div class="div">
                             <img src="Assets/Img/img pub/Articles informatiques/boitierD.jpg" alt="boitierD">
                         </div>
-=======
-                                    Disponibles en stock
+
+                        <div class="dav">
+                            <h1>DESCRIPTION</h1>
+                            <h2>BOITIERS DISQUE DURE</h2>
+                            <ul>
                                 <li>
->>>>>>> fa581cc541a0eab5cb13b3112ac84b9b121a09e9
+                                    Disponibles en stock
+                                </li>   
+                                <li>
                                     1To
                                 </li>
                                 <li>

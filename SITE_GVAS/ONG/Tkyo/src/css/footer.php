@@ -55,7 +55,11 @@
                     target="_blank" class="fab-item">
                     <span class="footer-contact-item">
                         <span class="contact-icon"> <i class="fa-solid fa-location-dot"></i></span>
+<<<<<<< HEAD
+                        <span> Mpaka x-or Pointe-Noire, Congo </span>
+=======
                         <span> Mpaka x-or Pointe-Noire, République Du Congo </span>
+>>>>>>> fa581cc541a0eab5cb13b3112ac84b9b121a09e9
                     </span>
                 </a>
             </div>
@@ -1531,6 +1535,62 @@
         }
     </style>
 
+<<<<<<< HEAD
+</body>
+
+
+<script>
+    const ouvrirPartenaires =
+        document.getElementById(
+            "ouvrirPartenaires"
+        );
+
+
+    const fermerPartenaires =
+        document.getElementById(
+            "fermerPartenaires"
+        );
+
+
+    const partnersOverlay =
+        document.getElementById(
+            "partnersOverlay"
+        );
+
+    ouvrirPartenaires?.addEventListener(
+        "click",
+        (event) => {
+
+            event.preventDefault();
+
+            partnersOverlay?.classList.add(
+                "active"
+            );
+
+        }
+    );
+
+    fermerPartenaires?.addEventListener(
+        "click",
+        () => {
+
+            partnersOverlay?.classList.remove(
+                "active"
+            );
+
+        }
+    );
+
+    partnersOverlay?.addEventListener(
+        "click",
+        (event) => {
+
+            if (
+                event.target === partnersOverlay
+            ) {
+
+                partnersOverlay.classList.remove(
+=======
     </body>
 
 
@@ -1559,10 +1619,28 @@
                 event.preventDefault();
 
                 partnersOverlay?.classList.add(
+>>>>>>> fa581cc541a0eab5cb13b3112ac84b9b121a09e9
                     "active"
                 );
 
             }
+<<<<<<< HEAD
+
+        }
+    );
+
+
+    document.addEventListener(
+        "keydown",
+        (event) => {
+
+            if (
+                event.key === "Escape" &&
+                partnersOverlay?.classList.contains("active")
+            ) {
+
+                partnersOverlay.classList.remove(
+=======
         );
 
         fermerPartenaires?.addEventListener(
@@ -1570,10 +1648,17 @@
             () => {
 
                 partnersOverlay?.classList.remove(
+>>>>>>> fa581cc541a0eab5cb13b3112ac84b9b121a09e9
                     "active"
                 );
 
             }
+<<<<<<< HEAD
+
+        }
+    );
+</script>
+=======
         );
 
         partnersOverlay?.addEventListener(
@@ -1612,3 +1697,4 @@
             }
         );
     </script>
+>>>>>>> fa581cc541a0eab5cb13b3112ac84b9b121a09e9

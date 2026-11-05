@@ -1057,17 +1057,17 @@
 
                             <div>
                                 <h3 class="font-semibold text-green-800">
-
-                                Orientation et Conseil
+                                    Soutien scolaire et fournitures
                                 </h3>
 
                                 <p class="mt-1 text-sm leading-5 text-gray-600">
+                                    Nous apportons un soutien matériel et
                                     pédagogique aux élèves en difficulté.
-
                                 </p>
                             </div>
 
                         </div>
+
 
                         <!-- Action 2 -->
                         <div class="mb-3 flex gap-4 rounded-xl border
