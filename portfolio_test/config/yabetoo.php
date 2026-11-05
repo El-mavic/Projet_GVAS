@@ -1,36 +1,29 @@
-<!-- ?php
- Configuration Yabetoo Pay : la clé secrète reste exclusivement côté serveur. */
-return [
-    'secret_key' => getenv('YABETOO_SECRET_KEY') ?: 'REMPLACER_PAR_VOTRE_CLE_SECRETE',
-    // sandbox pour les tests ; production pour les paiements réels.
-    'mode' => getenv('YABETOO_MODE') ?: 'sandbox',
-    // Prix de publication en FCFA, modifiable ici.
-    'publication_amount' => (int)(getenv('YABETOO_PUBLICATION_AMOUNT') ?: 1000),
-]; -->
-
-
-
 <?php
 
 /**
  * Configuration Yabetoo Pay
- * Mode de test local pour le développement.
+ * La clé secrète ne doit jamais être affichée dans le navigateur.
  */
 
 return [
-    // Clé secrète utilisée uniquement pour les paiements réels.
-    'secret_key' => getenv('YABETOO_SECRET_KEY')
-        ?: 'REMPLACER_PAR_VOTRE_CLE_SECRETE',
 
-    // Mode de paiement : sandbox ou production.
+    // Account ID de ton compte Yabetoo Pay
+    'account_id' => trim(
+        (string)(getenv('YABETOO_ACCOUNT_ID') ?: 'acct_01M2TS1XPZF0NEHEXF4HC3R86D')
+    ),
+
+    // Clé secrète API
+    // INSÈRE TA NOUVELLE CLÉ SECRÈTE DANS LE FICHIER .env
+    'secret_key' => trim(
+        (string)(getenv('YABETOO_SECRET_KEY') ?: '')
+    ),
+
+    // Mode de paiement : sandbox pour les tests
     'mode' => getenv('YABETOO_MODE') ?: 'sandbox',
 
-    // Prix de publication en FCFA.
+    // Prix de publication en FCFA
     'publication_amount' => (int)(
         getenv('YABETOO_PUBLICATION_AMOUNT') ?: 1000
     ),
 
-    // TEST LOCAL : simule la confirmation du paiement.
-    // À désactiver impérativement avant la mise en ligne.
-    'local_test' => true,
 ];
