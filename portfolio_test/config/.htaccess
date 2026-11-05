@@ -1,4 +1,11 @@
 Options -Indexes
+
+# Bloquer l'accès au fichier .env
+<Files ".env">
+    Require all denied
+</Files>
+
+# Bloquer l'accès aux fichiers de configuration Yabetoo
 <Files "yabetoo.php">
     Require all denied
 </Files>

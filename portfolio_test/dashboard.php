@@ -197,16 +197,16 @@ require 'includes/header.php';
         </p>
 
 
-        <!-- <a class="button-primary btn-paiement" href="paiement.php">
+        <a class="button-primary btn-paiement" href="paiement.php">
             <i class="fas fa-lock"></i>
             <span>Publier mon portfolio</span>
 
-        </a> -->
+        </a>
 
-        <a class="button-primary btn-paiement" href="publier_test.php">
+        <!-- <a class="button-primary btn-paiement" href="publier_test.php">
             <i class="fas fa-globe"></i>
             <span>Publier mon portfolio</span>
-        </a>
+        </a> -->
 
 
         <p class="muted" style="margin-top: 0.75rem;">
@@ -234,7 +234,7 @@ require 'includes/header.php';
 
             <h3 class="form-section-title">Informations principales</h3>
 
-            <label>Nom complet 
+            <label>Nom complet
                 <input name="nom" required minlength="2" value="<?= e($u['nom']) ?>">
             </label>
 
