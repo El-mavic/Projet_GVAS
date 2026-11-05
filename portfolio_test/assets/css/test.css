@@ -1,20 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
 }
 
-:root{
+:root {
     --bleu-moyen: #315A8B;
     --gris: #868b9c4e;
     --craie: #f4f7efd1;
 }
 
 body {
-    font-family:"poppin";
-    
+    font-family: "cambria", "serif";
+
 }
+
 .navbar {
     position: sticky;
     top: 12px;
@@ -40,18 +41,20 @@ body {
 .navbar a {
     color: white;
 }
-.navbar span{
+
+.navbar span {
     font-size: 1.3em;
     font-weight: bold;
     color: white;
 }
+
 .navbar img {
     width: 70px;
     border-radius: 50%;
-    background:rgba(5, 29, 77, 0.94);
+    background: rgba(5, 29, 77, 0.94);
 }
 
-.navbar-logo{
+.navbar-logo {
     display: flex;
     flex-direction: column;
 }
@@ -59,22 +62,23 @@ body {
 .navbar .navlinks ul {
     display: flex;
 }
-.navbar .navlinks ul li{
+
+.navbar .navlinks ul li {
     margin: 0 25px;
     padding: 11px 12px;
     box-shadow: 2px 3px rgba(6, 92, 239, 0.8);
     font-size: 1.3em;
     border-radius: 20px;
-    background:rgba(5, 29, 77, 0.94);
+    background: rgba(5, 29, 77, 0.94);
     transition:
-    color 0.25s ease,
-    background 0.25s ease,
-    border-color 0.25s ease,
-    box-shadow 0.25s ease,
-    transform 0.25s ease;
+        color 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
 }
 
-.navbar .navlinks ul li:hover{
+.navbar .navlinks ul li:hover {
 
     background: var(--gris);
     color: rgba(9, 9, 97, 0.689);
@@ -83,7 +87,7 @@ body {
 }
 
 
-.navbar .menu-burger{
+.navbar .menu-burger {
     display: none;
     position: absolute;
     top: 30px;
@@ -91,15 +95,17 @@ body {
     width: 10px;
 }
 
-@media screen and (max-width: 911px){
-    .navbar{
+@media screen and (max-width: 911px) {
+    .navbar {
         padding: 0;
         display: flex;
     }
+
     .topbar {
-    display: none;
-  }
-    .navlinks{
+        display: none;
+    }
+
+    .navlinks {
         position: absolute;
         background-color: rgba(243, 235, 235, 0.168);
         width: 100%;
@@ -113,32 +119,35 @@ body {
         margin-left: -100%;
         transition: all 0.5s ease;
     }
-    .navlinks.mobile-menu{
+
+    .navlinks.mobile-menu {
         margin-left: 0;
     }
-     .navlinks ul{
+
+    .navlinks ul {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-     .navbar .navlinks ul li{
+    .navbar .navlinks ul li {
         margin: 25px 0;
     }
-    
 
-    .navbar-logo{
+
+    .navbar-logo {
         position: absolute;
         top: 6px;
         left: 50px;
     }
 
 
-    .name{
+    .name {
         top: 50px;
         position: absolute;
     }
-    .navbar .menu-burger{
+
+    .navbar .menu-burger {
         display: block;
         width: 40px;
     }
