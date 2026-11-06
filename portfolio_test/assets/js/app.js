@@ -331,3 +331,14 @@ document.addEventListener('DOMContentLoaded', () => {
      revealObserver.observe(element);
    });
 
+// menu burgeer
+
+
+const menuburger = document.querySelector(".menu-burger")
+const navlinks = document.querySelector(".navlinks")
+menuburger.addEventListener('click',()=>{
+  navlinks.classList.toggle('mobile-menu')
+  document.body.classList.toggle("menu-open");
+        
+})
+ 

@@ -11,18 +11,62 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/test.css">
+
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
+
+    <!-- menu burger -->
+
+
+    <nav class="navbar">
+        
+        <div class="navbar-logo">
+            <a href="index.php" class="pic"><img src="../Mes_images/logo1.png" alt="Profolio"></a>
+            <span class="name">Profolio</span>
+        </div>
+
+        <div class="navlinks">
+            <ul>
+
+                <?php if (basename($_SERVER['PHP_SELF']) === 'index.php'): ?>
+                    <li>
+                        <a href="admin_login.php" class="nav-cta">
+                            <i class="fas fa-user-shield"></i>
+                        </a>
+                    </li>
+                <?php endif; ?>
+
+                <?php if (!empty($_SESSION['user_id'])): ?>
+
+                    <li><a href="dashboard.php">Mon espace</a></li>
+                    <li><a href="logout.php" class="nav-cta">Déconnexion</a></li>
+
+                <?php else: ?>
+
+                    <li><a href="login.php">Connexion</a></li>
+                    <li><a href="register.php" class="nav-cta">Créer</a></li>
+
+                <?php endif; ?>
+
+            </ul>
+        </div>
+        <!-- Images du bouton burger -->
+        <img src="../Mes_images/burger.png" alt="menu-burger" class="menu-burger">
+    </nav>
+
+
+
     <header class="topbar">
 
 
 
         <a href="index.php" class="logo">
-            <img src="../Mes_images/logo.png" alt="Logo Portfolio">
+            <img src="../Mes_images/logo1.png" alt="Logo Portfolio" class="pic">
         </a>
         <div class="header-message">
             <div class="message-track">
