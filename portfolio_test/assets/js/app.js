@@ -371,52 +371,66 @@ document.addEventListener('DOMContentLoaded', () => {
 // Rotation du téléphone avec transition pour ne pas casser l'effet./.
 
 
-   window.addEventListener('scroll', function() {
-    const maxScroll = 300;
-    const scrollY = window.scrollY;
-    const tel = document.querySelector('.phone');
-    if (!tel) return;
-    const rotation = Math.max(0, 0 - (scrollY / maxScroll) * -0);
-    const translateY = (scrollY / 300) * 20;
-     tel.style.transform = `rotate(${rotation}deg)`;
-     tel.style.transition = 'transform 18s ease';
-   });
+window.addEventListener('scroll', function () {
+  const maxScroll = 300;
+  const scrollY = window.scrollY;
+  const tel = document.querySelector('.phone');
+  if (!tel) return;
+  const rotation = Math.max(0, 0 - (scrollY / maxScroll) * -0);
+  const translateY = (scrollY / 300) * 20;
+  tel.style.transform = `rotate(${rotation}deg)`;
+  tel.style.transition = 'transform 18s ease';
+});
 
-   document.addEventListener('DOMContentLoaded', function () {
-     const header = document.querySelector('.topbar');
-     if (!header) return;
+document.addEventListener('DOMContentLoaded', function () {
+  const header = document.querySelector('.topbar');
+  if (!header) return;
 
-     const onScrollHeader = () => {
-       const currentScroll = window.scrollY;
-       if (currentScroll <= 8) {
-         header.classList.remove('header-hidden');
-         return;
-       }
-       header.classList.add('header-hidden');
-     };
+  const onScrollHeader = () => {
+    const currentScroll = window.scrollY;
+    if (currentScroll <= 8) {
+      header.classList.remove('header-hidden');
+      return;
+    }
+    header.classList.add('header-hidden');
+  };
 
-     onScrollHeader();
-     window.addEventListener('scroll', onScrollHeader, { passive: true });
-   });
+  onScrollHeader();
+  window.addEventListener('scroll', onScrollHeader, { passive: true });
+});
 
-   const revealObserver = new IntersectionObserver(
-     entries => {
-       entries.forEach(entry => {
-         if (entry.isIntersecting) {
-           entry.target.classList.add('visible');
-           revealObserver.unobserve(entry.target);
-         }
-       });
-     },
-     { threshold: 0.12 }
-   );
+const revealObserver = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.12 }
+);
 
-   const revealTargets = document.querySelectorAll('.hero, .results-head, .join-banner, .profolio-about, .profolio-how-it-works');
+const revealTargets = document.querySelectorAll('.hero, .results-head, .join-banner, .profolio-about, .profolio-how-it-works');
 
-   revealTargets.forEach((element, index) => {
-     element.classList.add('reveal');
-     element.style.transitionDelay = `${index * 120}ms`;
-     revealObserver.observe(element);
-   });
+revealTargets.forEach((element, index) => {
+  element.classList.add('reveal');
+  element.style.transitionDelay = `${index * 120}ms`;
+  revealObserver.observe(element);
+});
 
+<<<<<<< HEAD
+// menu burgeer
+
+
+const menuburger = document.querySelector(".menu-burger")
+const navlinks = document.querySelector(".navlinks")
+menuburger.addEventListener('click', () => {
+  navlinks.classList.toggle('mobile-menu')
+  document.body.classList.toggle("menu-open");
+
+})
+
+=======
  
+>>>>>>> 60cbdef2f1fb4c056bead0162e1fc90c1b9ab033

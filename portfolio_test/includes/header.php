@@ -110,8 +110,6 @@
 
     <header class="topbar">
 
-
-
         <a href="index.php" class="logo">
             <img src="../Mes_images/logo1.png" alt="Logo Portfolio" class="pic">
         </a>
