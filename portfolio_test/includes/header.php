@@ -55,6 +55,7 @@
 
             </ul>
         </div>
+        <!-- Images du bouton burger -->
         <img src="../Mes_images/burger.png" alt="menu-burger" class="menu-burger">
     </nav>
 
