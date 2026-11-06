@@ -812,7 +812,7 @@ textarea {
   box-shadow:
     0 40px 100px rgba(255, 255, 255, 0.5),
     0 0 0 1px rgba(255, 255, 255, 0.05);
-  animation: slideUp 5s ease-in;
+  animation: slideUp 2s ease-in;
 }
 
 .phone-bar {
@@ -854,7 +854,7 @@ textarea {
   font-size: 28px;
   z-index: 1;
   backdrop-filter: blur(4px);
-  animation: slideUp 10s ease-in;
+  animation: slideUp 3s ease-in;
 }
 @keyframes slideUp {
   from {
@@ -1667,6 +1667,8 @@ textarea {
   height: 100%;
   object-fit: cover;
   /* border-radius: 50%; */
+  border-radius: 50%;
+  background: rgba(5, 29, 77, 0.94);
 }
 
 /* Tablettes */
