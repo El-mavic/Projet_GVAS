@@ -33,19 +33,30 @@
         <nav class="nav">
 
 
-            <?php if (basename($_SERVER['PHP_SELF']) === 'index.php'): ?>
-                <a href="admin_login.php" class="nav-cta">
-                    <i class="fas fa-user-shield"> </i>
-
-                </a>
-            <?php endif; ?>
-
-
             <?php if (!empty($_SESSION['user_id'])): ?>
 
-                <a href="dashboard.php">
-                    Mon espace
-                </a>
+                <?php if (basename($_SERVER['PHP_SELF']) === 'dashboard.php'): ?>
+                    <a href="dashboard.php#paiement" class="header-payment-button" data-dashboard-panel="payment">
+                        <i class="fa-solid fa-credit-card"></i>
+                        Paiement
+                    </a>
+                <?php endif; ?>
+
+                <div class="space-menu">
+                    <button class="space-menu-toggle" type="button" aria-expanded="false" aria-controls="space-menu-dropdown">
+                        Mon espace <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="space-menu-dropdown" id="space-menu-dropdown" hidden>
+                        <a href="dashboard.php">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Mon tableau de bord</span>
+                        </a>
+                        <a href="dashboard.php#supprimer-compte" data-dashboard-panel="danger">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span>Zone sensible</span>
+                        </a>
+                    </div>
+                </div>
 
                 <a href="logout.php" class="nav-cta">
                     Déconnexion
@@ -58,7 +69,7 @@
                 </a>
 
                 <a class="nav-cta" href="register.php">
-                    Créer
+                    Créer un compte
                 </a>
 
             <?php endif; ?>

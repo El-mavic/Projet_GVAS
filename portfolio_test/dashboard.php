@@ -154,6 +154,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 }
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SERVER['HTTP_X_AUTOSAVE'])) {
+    header('Content-Type: application/json; charset=utf-8');
+    echo json_encode([
+        'success' => $erreur === '',
+        'message' => $erreur !== '' ? $erreur : ($ok !== '' ? $ok : 'Informations enregistrées.')
+    ], JSON_UNESCAPED_UNICODE);
+    exit;
+}
 $projects = [];
 try {
     $stmt = $pdo->prepare('SELECT id, titre, description, image, lien, created_at FROM projets WHERE user_id = ? ORDER BY created_at DESC');
@@ -183,180 +191,189 @@ require 'includes/header.php';
 </section>
 
 <?php if ($erreur): ?><div class="alert dashboard-alert"><?= e($erreur) ?></div><?php endif; ?><?php if ($ok): ?><div class="success dashboard-alert"><?= e($ok) ?></div><?php endif; ?>
-<?php if (($u['payment_status'] ?? 'unpaid') !== 'paid'): ?>
-
-    <section class="auth-card editor-card" style="margin: 1rem 0; border: 1px solid #f0c36d;">
-
-        <span class="section-kicker">ÉTAPE AVANT PUBLICATION</span>
-
-        <h2>Votre portfolio n’est pas encore public</h2>
-        <p class="bba">
-            Enregistrez vos informations, puis payez les frais de publication.
-            Votre profil sera visible sur l’accueil après confirmation du paiement
-            par Yabetoo Pay.
-        </p>
-
-
-        <a class="button-primary btn-paiement" href="paiement.php">
-            <i class="fas fa-lock"></i>
-            <span>Publier mon portfolio</span>
-
-        </a>
-
-        <!-- <a class="button-primary btn-paiement" href="publier_test.php">
-            <i class="fas fa-globe"></i>
-            <span>Publier mon portfolio</span>
-        </a> -->
-
-
-        <p class="muted" style="margin-top: 0.75rem;">
-            État du paiement : non payé
-        </p>
-
-    </section>
-
-<?php else: ?>
-    <div class="success dashboard-alert">Paiement confirmé. Vous pouvez gérer
-        la visibilité de votre portfolio depuis le formulaire ci-dessous.</div>
-<?php endif; ?>
+<dialog class="dashboard-modal payment-modal" id="paiement" aria-labelledby="payment-modal-title">
+    <div class="dashboard-modal-content">
+        <button class="dashboard-modal-close" type="button" data-close-dashboard-modal aria-label="Fermer">&times;</button>
+        <?php if (($u['payment_status'] ?? 'unpaid') !== 'paid'): ?>
+            <span class="section-kicker">ÉTAPE AVANT PUBLICATION</span>
+            <h2 id="payment-modal-title">Votre portfolio n’est pas encore public</h2>
+            <p>
+                Enregistrez vos informations, puis payez les frais de publication.
+                Votre profil sera visible sur l’accueil après confirmation du paiement par Yabetoo Pay.
+            </p>
+            <a class="button-primary btn-paiement" href="paiement.php">
+                <i class="fas fa-lock"></i>
+                <span>Publier mon portfolio</span>
+            </a>
+            <p class="muted payment-status">État du paiement : non payé</p>
+        <?php else: ?>
+            <span class="section-kicker">PAIEMENT</span>
+            <h2 id="payment-modal-title">Paiement confirmé</h2>
+            <div class="success dashboard-alert">
+                Votre paiement est confirmé. Vous pouvez gérer la visibilité de votre portfolio depuis le formulaire ci-dessous.
+            </div>
+        <?php endif; ?>
+    </div>
+</dialog>
 
 <div class="profile-editor-layout">
 
     <section class="auth-card editor-card profile-editor-form">
 
-        <h2>Compléter mon portfolio</h2>
-        <p>Complétez vos informations et suivez leur aperçu en direct.</p>
+        <button class="portfolio-editor-toggle" type="button" data-profile-editor-toggle aria-expanded="false" aria-controls="portfolio-profile-editor-body">
+            <span class="portfolio-editor-toggle-icon"><i class="fa-solid fa-user-pen"></i></span>
+            <span class="portfolio-editor-toggle-copy">
+                <strong>Compléter mon portfolio</strong>
+                <small>Identité, formation, compétences et projets · 3 étapes</small>
+            </span>
+            <span class="portfolio-editor-toggle-chevron" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+        </button>
 
-        <form method="post" enctype="multipart/form-data" class="stack-form">
+        <div class="portfolio-profile-editor-body" id="portfolio-profile-editor-body" hidden>
+            <p class="portfolio-editor-intro">Complétez vos informations et suivez leur aperçu en direct.</p>
+
+            <form method="post" enctype="multipart/form-data" class="stack-form portfolio-carousel-form" id="portfolio-profile-form">
 
             <input type="hidden" name="csrf" value="<?= e($_SESSION['csrf']) ?>">
             <input type="hidden" name="action" value="save_profile">
 
-            <h3 class="form-section-title">Informations principales</h3>
-
-            <label>Nom complet
-                <input name="nom" required minlength="2" value="<?= e($u['nom']) ?>">
-            </label>
-
-            <label>E-mail *
-                <input type="email" name="email" required value="<?= e($u['email']) ?>">
-            </label>
-
-            <label>Métier ou spécialité
-                <input name="metier" placeholder="Ex. Développeur web" value="<?= e($u['metier'] ?? '') ?>">
-            </label>
-
-            <label>Compétences <span class="muted">(séparées par des virgules)</span>
-                <input name="competences" placeholder="PHP, gestion de projet, design..." value="<?= e($u['competences'] ?? '') ?>">
-            </label>
-
-            <label>Présentation personnelle
-                <textarea name="bio" rows="5" placeholder="Présentez votre parcours..."><?= e($u['bio'] ?? '') ?></textarea>
-            </label>
-
-            <div class="form-two">
-                <label>Téléphone
-                    <input type="tel" name="telephone" value="<?= e($u['telephone'] ?? '') ?>">
-                </label>
-
-                <label>Ville / pays
-                    <input name="localisation" value="<?= e($u['localisation'] ?? '') ?>">
-                </label>
+            <div class="portfolio-carousel-progress" aria-label="Étapes du formulaire">
+                <button type="button" class="carousel-step is-active" data-carousel-step="0" aria-current="step">
+                    <span>1</span> Identité
+                </button>
+                <button type="button" class="carousel-step" data-carousel-step="1">
+                    <span>2</span> Formation & compétences
+                </button>
+                <button type="button" class="carousel-step" data-show-project-step>
+                    <span>3</span> Projets
+                </button>
             </div>
 
-            <h3 class="form-section-title">Détails complémentaires</h3>
+            <div class="portfolio-carousel-slides">
+                <section class="portfolio-carousel-slide is-active" data-carousel-slide="0">
+                    <div class="carousel-slide-heading">
+                        <span class="carousel-slide-icon"><i class="fa-solid fa-user"></i></span>
+                        <div>
+                            <span class="section-kicker">ÉTAPE 1</span>
+                            <h3>Identité</h3>
+                            <p>Présentez votre identité professionnelle.</p>
+                        </div>
+                    </div>
 
-            <label>Formation et études
-                <textarea name="formation" rows="3" placeholder="Diplômes, écoles et formations..."><?= e($u['formation'] ?? '') ?></textarea>
-            </label>
+                    <label>Nom complet
+                        <input name="nom" required minlength="2" value="<?= e($u['nom']) ?>">
+                    </label>
+                    <label>E-mail *
+                        <input type="email" name="email" required value="<?= e($u['email']) ?>">
+                    </label>
+                    <label>Métier ou spécialité
+                        <input name="metier" placeholder="Ex. Développeur web" value="<?= e($u['metier'] ?? '') ?>">
+                    </label>
+                    <label>Présentation personnelle
+                        <textarea name="bio" rows="5" placeholder="Présentez votre parcours..."><?= e($u['bio'] ?? '') ?></textarea>
+                    </label>
+                    <div class="form-two">
+                        <label>Téléphone
+                            <input type="tel" name="telephone" value="<?= e($u['telephone'] ?? '') ?>">
+                        </label>
+                        <label>Ville / pays
+                            <input name="localisation" value="<?= e($u['localisation'] ?? '') ?>">
+                        </label>
+                    </div>
 
-            <label>Expérience professionnelle
-                <textarea name="experience" rows="4" placeholder="Expériences, missions et résultats..."><?= e($u['experience'] ?? '') ?></textarea>
-            </label>
+                    <h4 class="form-section-title">Photo de profil, couverture et CV</h4>
+                    <?php if (!empty($u['photo'])): ?>
+                        <div class="upload-preview">
+                            <img src="<?= e($u['photo']) ?>" alt="Photo de profil actuelle">
+                            <span>Photo de profil actuelle</span>
+                        </div>
+                    <?php endif; ?>
+                    <label>Photo de profil <span class="muted">(JPG, PNG, WEBP · 3 Mo max.)</span>
+                        <input type="file" name="photo" accept="image/jpeg,image/png,image/webp">
+                        <small>Laissez vide pour conserver la photo actuelle.</small>
+                    </label>
+                    <?php if (!empty($u['cover_photo'])): ?>
+                        <div class="cover-preview" style="background-image: url('<?= e(str_replace(["'", '\\'], ['%27', '%5C'], $u['cover_photo'])) ?>')">
+                            <span>Couverture actuelle</span>
+                        </div>
+                    <?php endif; ?>
+                    <label>Photo de couverture <span class="muted">(JPG, PNG, WEBP · 3 Mo max.)</span>
+                        <input type="file" name="cover_photo" accept="image/jpeg,image/png,image/webp">
+                        <small>Laissez vide pour conserver la couverture actuelle.</small>
+                    </label>
+                    <?php if (!empty($u['cv_path'])): ?>
+                        <p class="current-file">CV actuel :
+                            <a href="cv.php?id=<?= (int) $id ?>" target="_blank" rel="noopener noreferrer">Consulter le CV ↗</a>
+                        </p>
+                    <?php endif; ?>
+                    <label>CV <span class="muted">(PDF, DOC, DOCX · 5 Mo max.)</span>
+                        <input type="file" name="cv" accept=".pdf,.doc,.docx">
+                        <small>Laissez vide pour conserver le CV actuel.</small>
+                    </label>
 
-            <label>Certifications et distinctions
-                <textarea name="certifications" rows="3" placeholder="Certificats, attestations, prix..."><?= e($u['certifications'] ?? '') ?></textarea>
-            </label>
+                    <h4 class="form-section-title">Liens professionnels</h4>
+                    <label>Site web
+                        <input type="url" name="site_web" placeholder="https://..." value="<?= e($u['site_web'] ?? '') ?>">
+                    </label>
+                    <label>LinkedIn
+                        <input type="url" name="linkedin" placeholder="https://linkedin.com/in/..." value="<?= e($u['linkedin'] ?? '') ?>">
+                    </label>
+                    <?php if (($u['payment_status'] ?? 'unpaid') === 'paid'): ?>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="public" value="1" <?= !empty($u['public']) ? 'checked' : '' ?>>
+                            Mon portfolio est visible dans les recherches
+                        </label>
+                    <?php else: ?>
+                        <p class="muted">La visibilité publique sera activée après confirmation du paiement.</p>
+                    <?php endif; ?>
+                </section>
 
-            <div class="form-two">
-                <label>Langues
-                    <input name="langues" placeholder="Français, anglais..." value="<?= e($u['langues'] ?? '') ?>">
-                </label>
+                <section class="portfolio-carousel-slide" data-carousel-slide="1">
+                    <div class="carousel-slide-heading">
+                        <span class="carousel-slide-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                        <div>
+                            <span class="section-kicker">ÉTAPE 2</span>
+                            <h3>Formation & compétences</h3>
+                            <p>Présentez vos connaissances et votre parcours.</p>
+                        </div>
+                    </div>
 
-                <label>Centres d’intérêt
-                    <input name="centre_interet" value="<?= e($u['centre_interet'] ?? '') ?>">
-                </label>
+                    <label>Compétences <span class="muted">(séparées par des virgules)</span>
+                        <input name="competences" placeholder="PHP, gestion de projet, design..." value="<?= e($u['competences'] ?? '') ?>">
+                    </label>
+                    <label>Formation et études
+                        <textarea name="formation" rows="3" placeholder="Diplômes, écoles et formations..."><?= e($u['formation'] ?? '') ?></textarea>
+                    </label>
+                    <label>Expérience professionnelle
+                        <textarea name="experience" rows="4" placeholder="Expériences, missions et résultats..."><?= e($u['experience'] ?? '') ?></textarea>
+                    </label>
+                    <label>Certifications et distinctions
+                        <textarea name="certifications" rows="3" placeholder="Certificats, attestations, prix..."><?= e($u['certifications'] ?? '') ?></textarea>
+                    </label>
+                    <div class="form-two">
+                        <label>Langues
+                            <input name="langues" placeholder="Français, anglais..." value="<?= e($u['langues'] ?? '') ?>">
+                        </label>
+                        <label>Centres d’intérêt
+                            <input name="centre_interet" value="<?= e($u['centre_interet'] ?? '') ?>">
+                        </label>
+                    </div>
+                    <div class="autosave-status" data-autosave-status role="status" aria-live="polite">
+                        Les modifications sont enregistrées automatiquement.
+                    </div>
+                </section>
             </div>
 
-            <h3 class="form-section-title">Photo de profil, couverture et CV</h3>
-
-            <?php if (!empty($u['photo'])): ?>
-                <div class="upload-preview">
-                    <img src="<?= e($u['photo']) ?>" alt="Photo de profil actuelle">
-                    <span>Photo de profil actuelle</span>
-                </div>
-            <?php endif; ?>
-
-            <label>Photo de profil <span class="muted">(JPG, PNG, WEBP · 3 Mo max.)</span>
-                <input type="file" name="photo" accept="image/jpeg,image/png,image/webp">
-                <small>Laissez vide pour conserver la photo actuelle.</small>
-            </label>
-
-            <?php if (!empty($u['cover_photo'])): ?>
-                <div class="cover-preview" style="background-image: url('<?= e(str_replace(["'", '\\'], ['%27', '%5C'], $u['cover_photo'])) ?>')">
-                    <span>Couverture actuelle</span>
-                </div>
-            <?php endif; ?>
-
-            <label>Photo de couverture <span class="muted">(JPG, PNG, WEBP · 3 Mo max.)</span>
-                <input type="file" name="cover_photo" accept="image/jpeg,image/png,image/webp">
-                <small>Laissez vide pour conserver la couverture actuelle.</small>
-            </label>
-
-            <?php if (!empty($u['cv_path'])): ?>
-                <p class="current-file">
-                    CV actuel :
-                    <a href="cv.php?id=<?= (int) $id ?>" target="_blank" rel="noopener noreferrer">
-                        Consulter le CV ↗
-                    </a>
-                </p>
-            <?php endif; ?>
-
-            <label>CV <span class="muted">(PDF, DOC, DOCX · 5 Mo max.)</span>
-                <input type="file" name="cv" accept=".pdf,.doc,.docx">
-                <small>Laissez vide pour conserver le CV actuel.</small>
-            </label>
-
-            <h3 class="form-section-title">Liens professionnels</h3>
-
-            <label>Site web
-                <input type="url" name="site_web" placeholder="https://..." value="<?= e($u['site_web'] ?? '') ?>">
-            </label>
-
-            <label>LinkedIn
-                <input type="url" name="linkedin" placeholder="https://linkedin.com/in/..." value="<?= e($u['linkedin'] ?? '') ?>">
-            </label>
-
-            <?php if (($u['payment_status'] ?? 'unpaid') === 'paid'): ?>
-
-                <label class="checkbox-label">
-                    <input type="checkbox" name="public" value="1" <?= !empty($u['public']) ? 'checked' : '' ?>>
-                    Mon portfolio est visible dans les recherches
-                </label>
-
-            <?php else: ?>
-
-                <p class="muted">
-                    La visibilité publique sera activée après confirmation du paiement.
-                </p>
-
-            <?php endif; ?>
-
-            <button class="button-primary" type="submit">
-                Enregistrer les informations →
-            </button>
-
-        </form>
+            <div class="portfolio-carousel-actions">
+                <button class="button-secondary carousel-prev" type="button" data-carousel-prev disabled>
+                    ← Précédent
+                </button>
+                <button class="button-primary carousel-next" type="button" data-carousel-next>
+                    Suivant →
+                </button>
+            </div>
+            </form>
+        </div>
 
     </section>
 
@@ -490,12 +507,22 @@ require 'includes/header.php';
 
 
 <!-- Mes projets -->
-<section class="auth-card editor-card projects-editor" id="realisations">
+<section class="auth-card editor-card projects-editor portfolio-project-slide" id="realisations" hidden>
 
-    <span class="section-kicker">VOTRE TRAVAIL</span>
+    <div class="carousel-slide-heading project-carousel-heading">
+        <span class="carousel-slide-icon"><i class="fa-solid fa-folder-open"></i></span>
+        <div>
+            <span class="section-kicker">ÉTAPE 3</span>
+            <h2>Projets</h2>
+            <p>Présentez vos projets avec une description, une image et un lien.</p>
+        </div>
+    </div>
 
-    <h2>Mes réalisations et projets</h2>
-    <p>Présentez vos projets avec une description, une image et un lien.</p>
+    <div class="portfolio-carousel-progress projects-progress" aria-label="Étapes du formulaire">
+        <button type="button" class="carousel-step" data-show-identity-step><span>1</span> Identité</button>
+        <button type="button" class="carousel-step" data-show-profile-step="1"><span>2</span> Formation & compétences</button>
+        <button type="button" class="carousel-step is-active" aria-current="step"><span>3</span> Projets</button>
+    </div>
 
     <form method="post" enctype="multipart/form-data" class="stack-form project-form">
 
@@ -526,6 +553,18 @@ require 'includes/header.php';
         </button>
 
     </form>
+
+    <div class="portfolio-carousel-actions projects-carousel-actions">
+        <button class="button-secondary carousel-prev" type="button" data-show-profile-step="1">
+            ← Précédent
+        </button>
+        <?php if (($u['payment_status'] ?? 'unpaid') !== 'paid'): ?>
+            <a class="button-primary projects-publish-payment" href="paiement.php">
+                <i class="fa-solid fa-lock"></i>
+                Mettre mon portfolio en ligne
+            </a>
+        <?php endif; ?>
+    </div>
 
     <h3 class="form-section-title">Projets publiés (<?= count($projects) ?>)</h3>
 
@@ -584,31 +623,48 @@ require 'includes/header.php';
 
 </section>
 
-<!-- Suppression du compte -->
-<section class="auth-card editor-card account-danger-zone" id="supprimer-compte">
+<!-- Zone sensible -->
+<dialog class="dashboard-modal danger-zone-modal" id="supprimer-compte" aria-labelledby="danger-zone-title">
+    <div class="dashboard-modal-content account-danger-zone">
+        <button class="dashboard-modal-close" type="button" data-close-dashboard-modal aria-label="Fermer">&times;</button>
+        <h2 id="danger-zone-title">Zone sensible</h2>
+        <p>Les actions de cette zone sont définitives. Vérifiez-les attentivement avant de continuer.</p>
+        <button class="button-secondary danger-button" type="button" data-open-delete-account>
+            Supprimer mon compte
+        </button>
+    </div>
+</dialog>
 
-    <span class="section-kicker">ZONE SENSIBLE</span>
-
-    <h2>Supprimer mon compte</h2>
-    <p>Cette action est définitive. Votre profil, votre CV, vos photos et tous vos projets seront supprimés.</p>
-
-    <form method="post" class="stack-form"
-        onsubmit="return confirm('Confirmez-vous la suppression définitive de votre compte et de tous vos projets ? Cette action est irréversible.');">
+<dialog class="delete-account-dialog" id="delete-account-dialog" aria-labelledby="delete-account-title">
+    <form method="post" class="delete-account-dialog-content">
 
         <input type="hidden" name="csrf" value="<?= e($_SESSION['csrf']) ?>">
         <input type="hidden" name="action" value="delete_account">
+
+        <div class="delete-account-icon" aria-hidden="true">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+        </div>
+
+        <h2 id="delete-account-title">Supprimer mon compte</h2>
+        <p class="delete-account-warning">
+            Cette action est définitive. Votre profil, votre CV, vos photos et tous vos projets seront supprimés.
+        </p>
 
         <label>Confirmez avec votre mot de passe
             <input type="password" name="confirm_password"
                 autocomplete="current-password" required>
         </label>
 
-        <button class="button-secondary danger-button" type="submit">
-            Supprimer définitivement mon compte
-        </button>
+        <div class="delete-account-actions">
+            <button class="button-secondary" type="button" data-close-delete-account>
+                Annuler
+            </button>
+            <button class="button-secondary danger-button delete-account-confirm" type="submit">
+                Supprimer définitivement
+            </button>
+        </div>
 
     </form>
-
-</section>
+</dialog>
 
 <?php require 'includes/footer.php'; ?>

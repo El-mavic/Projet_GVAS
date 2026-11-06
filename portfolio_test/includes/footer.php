@@ -10,9 +10,14 @@
                 <i class="fa-solid fa-house"></i> Accueil
             </a>
 
-            <a href="login.php">
-                <i class="fa-solid fa-right-to-bracket"></i> Connexion
-            </a>
+            <div class="footer-login-menu">
+                <a href="login.php" class="footer-login-link">
+                    <i class="fa-solid fa-right-to-bracket"></i> Connexion
+                </a>
+                <a href="admin_login.php" class="footer-admin-link" aria-label="Connexion administrateur">
+                    <i class="fas fa-user-shield"></i>
+                </a>
+            </div>
         </div>
 
         <div class="footer-column">
