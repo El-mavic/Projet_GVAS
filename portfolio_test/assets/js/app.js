@@ -1,4 +1,41 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const burgerButton = document.querySelector('.menu-burger');
+  const mobileMenu = document.querySelector('.navlinks');
+  const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+
+  const setMobileMenu = isOpen => {
+    mobileMenu?.classList.toggle('mobile-menu', isOpen);
+    mobileMenuOverlay?.classList.toggle('is-visible', isOpen);
+    burgerButton?.classList.toggle('is-open', isOpen);
+    document.body.classList.toggle('menu-open', isOpen);
+    burgerButton?.setAttribute('aria-expanded', String(isOpen));
+    burgerButton?.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+  };
+
+  burgerButton?.addEventListener('click', event => {
+    event.stopPropagation();
+    const isOpen = !mobileMenu?.classList.contains('mobile-menu');
+    setMobileMenu(isOpen);
+  });
+
+  mobileMenuOverlay?.addEventListener('click', () => setMobileMenu(false));
+
+  const closeMobileMenu = () => setMobileMenu(false);
+
+  mobileMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  document.addEventListener('click', event => {
+    if (!mobileMenu?.classList.contains('mobile-menu')) return;
+    if (mobileMenu.contains(event.target) || burgerButton?.contains(event.target)) return;
+    closeMobileMenu();
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && mobileMenu?.classList.contains('mobile-menu')) closeMobileMenu();
+  });
+
   const spaceMenu = document.querySelector('.space-menu');
   const spaceMenuToggle = spaceMenu?.querySelector('.space-menu-toggle');
   const spaceMenuDropdown = spaceMenu?.querySelector('.space-menu-dropdown');
@@ -331,14 +368,4 @@ document.addEventListener('DOMContentLoaded', () => {
      revealObserver.observe(element);
    });
 
-// menu burgeer
-
-
-const menuburger = document.querySelector(".menu-burger")
-const navlinks = document.querySelector(".navlinks")
-menuburger.addEventListener('click',()=>{
-  navlinks.classList.toggle('mobile-menu')
-  document.body.classList.toggle("menu-open");
-        
-})
  
