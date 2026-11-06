@@ -2416,14 +2416,9 @@ textarea {
 }
 
 .logo:hover::after,
-.logo:focus-visible::after,
-.logo:hover img,
-.logo:focus-visible img {
-  animation-duration: 1.4s;
-}
-
-.logo:hover::after,
 .logo:focus-visible::after {
+  animation: none;
+  transform: none;
   border-color: rgba(173, 211, 255, 0.85);
   border-right-color: #177afc;
   opacity: 1;
@@ -2431,6 +2426,7 @@ textarea {
 
 .logo:hover img,
 .logo:focus-visible img {
+  animation: none;
   transform: scale(1.08);
   filter: brightness(1.12) drop-shadow(0 0 12px rgba(104, 174, 255, 1));
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.48), 0 0 28px rgba(23, 122, 252, 0.9);
@@ -3408,6 +3404,88 @@ body {
   .phone-input-group {
     grid-template-columns: 108px minmax(0, 1fr);
   }
+}
+
+/* Champs répétables du parcours professionnel */
+.profile-repeaters {
+  display: grid;
+  gap: 16px;
+}
+
+.profile-repeater {
+  padding: 16px;
+  border: 1px solid #dde7f5;
+  border-radius: 16px;
+  background: #f9fbff;
+}
+
+.profile-repeater-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.profile-repeater-heading div {
+  display: grid;
+  gap: 3px;
+}
+
+.profile-repeater-heading strong {
+  color: var(--navy);
+  font-size: 15px;
+}
+
+.profile-repeater-heading span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.profile-repeat-add,
+.profile-repeat-remove {
+  flex: 0 0 auto;
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.profile-repeat-add {
+  color: #fff;
+  background: linear-gradient(135deg, #177afc, #1748c8);
+  box-shadow: 0 7px 18px rgba(23, 122, 252, 0.28);
+}
+
+.profile-repeat-remove {
+  color: #b42318;
+  background: #fee4e2;
+}
+
+.profile-repeat-items {
+  display: grid;
+  gap: 8px;
+}
+
+.profile-repeat-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 38px;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile-repeat-row input {
+  min-width: 0;
+}
+
+@media (max-width: 520px) {
+  .profile-repeater { padding: 13px; }
+  .profile-repeat-row { grid-template-columns: minmax(0, 1fr) 36px; }
+  .profile-repeat-add, .profile-repeat-remove { width: 36px; height: 36px; }
 }
 
 /* Mise en page professionnelle de l'éditeur de portfolio */

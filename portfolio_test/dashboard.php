@@ -358,44 +358,49 @@ $dashboardGreeting = 'Bonjour';
                     <label>Compétences <span class="muted">(séparées par des virgules)</span>
                         <input name="competences" placeholder="PHP, gestion de projet, design..." value="<?= e($u['competences'] ?? '') ?>">
                     </label>
-                    <label>Formation et études
-                        <textarea name="formation" rows="3" placeholder="Diplômes, écoles et formations..."><?= e($u['formation'] ?? '') ?></textarea>
-                    </label>
-                    <label>Expérience professionnelle
-                        <textarea name="experience" rows="4" placeholder="Expériences, missions et résultats..."><?= e($u['experience'] ?? '') ?></textarea>
-                    </label>
-                    <label>Certifications et distinctions
-                        <textarea name="certifications" rows="3" placeholder="Certificats, attestations, prix..."><?= e($u['certifications'] ?? '') ?></textarea>
-                    </label>
-                    <div class="form-two">
-                        <label>Langues
-                            <input name="langues" list="langues-suggestions" placeholder="Choisissez ou saisissez une langue" value="<?= e($u['langues'] ?? '') ?>">
-                            <datalist id="langues-suggestions">
-                                <option value="Français"></option>
-                                <option value="Anglais"></option>
-                                <option value="Espagnol"></option>
-                                <option value="Allemand"></option>
-                                <option value="Portuguais"></option>
-                                <option value="Italien"></option>
-                                <option value="Arabe"></option>
-                                <option value="Lingala"></option>
-                                <option value="Chinois"></option>
-                            </datalist>
-                        </label>
-                        <label>Centres d’intérêt
-                            <input name="centre_interet" list="interets-suggestions" placeholder="Choisissez ou saisissez vos loisirs" value="<?= e($u['centre_interet'] ?? '') ?>">
-                            <datalist id="interets-suggestions">
-                                <option value="Lecture"></option>
-                                <option value="Musique"></option>
-                                <option value="Sport"></option>
-                                <option value="Voyages"></option>
-                                <option value="Photographie"></option>
-                                <option value="Programmation"></option>
-                                <option value="Cuisine"></option>
-                                <option value="Art et dessin"></option>
-                                <option value="Jeux vidéo"></option>
-                            </datalist>
-                        </label>
+                    <div class="profile-repeaters">
+                        <div class="profile-repeater" data-profile-repeater="formation" data-placeholder="Ex. Licence en informatique — Université de Pointe-Noire">
+                            <div class="profile-repeater-heading">
+                                <div><strong>Formation et études</strong><span>Ajoutez chaque diplôme ou formation séparément.</span></div>
+                                <button type="button" class="profile-repeat-add" data-add-profile-item aria-label="Ajouter une formation"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="profile-repeat-items"></div>
+                            <input type="hidden" name="formation" value="<?= e($u['formation'] ?? '') ?>">
+                        </div>
+                        <div class="profile-repeater" data-profile-repeater="experience" data-placeholder="Ex. Développeur web — Entreprise BHS — 2024 à aujourd’hui">
+                            <div class="profile-repeater-heading">
+                                <div><strong>Expérience professionnelle</strong><span>Ajoutez chaque mission ou expérience séparément.</span></div>
+                                <button type="button" class="profile-repeat-add" data-add-profile-item aria-label="Ajouter une expérience"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="profile-repeat-items"></div>
+                            <input type="hidden" name="experience" value="<?= e($u['experience'] ?? '') ?>">
+                        </div>
+                        <div class="profile-repeater" data-profile-repeater="certifications" data-placeholder="Ex. Certification développeur web — Organisation — 2024">
+                            <div class="profile-repeater-heading">
+                                <div><strong>Certifications et distinctions</strong><span>Ajoutez chaque certificat, prix ou distinction séparément.</span></div>
+                                <button type="button" class="profile-repeat-add" data-add-profile-item aria-label="Ajouter une certification"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="profile-repeat-items"></div>
+                            <input type="hidden" name="certifications" value="<?= e($u['certifications'] ?? '') ?>">
+                        </div>
+                    </div>
+                    <div class="profile-repeaters profile-repeaters-options">
+                        <div class="profile-repeater" data-profile-repeater="langues" data-placeholder="Choisissez ou saisissez une langue">
+                            <div class="profile-repeater-heading">
+                                <div><strong>Langues</strong><span>Ajoutez chaque langue séparément.</span></div>
+                                <button type="button" class="profile-repeat-add" data-add-profile-item aria-label="Ajouter une langue"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="profile-repeat-items" data-repeat-suggestions="Français, Anglais, Espagnol, Allemand, Portugais, Italien, Arabe, Lingala, Chinois"></div>
+                            <input type="hidden" name="langues" value="<?= e($u['langues'] ?? '') ?>">
+                        </div>
+                        <div class="profile-repeater" data-profile-repeater="centre_interet" data-placeholder="Choisissez ou saisissez un centre d’intérêt">
+                            <div class="profile-repeater-heading">
+                                <div><strong>Centres d’intérêt</strong><span>Ajoutez chaque loisir séparément.</span></div>
+                                <button type="button" class="profile-repeat-add" data-add-profile-item aria-label="Ajouter un centre d’intérêt"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="profile-repeat-items" data-repeat-suggestions="Lecture, Musique, Sport, Voyages, Photographie, Programmation, Cuisine, Art et dessin, Jeux vidéo"></div>
+                            <input type="hidden" name="centre_interet" value="<?= e($u['centre_interet'] ?? '') ?>">
+                        </div>
                     </div>
                     <div class="autosave-status" data-autosave-status role="status" aria-live="polite">
                         Les modifications sont enregistrées automatiquement.
