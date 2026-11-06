@@ -3,15 +3,33 @@
 <html lang="fr">
 
 <head>
+    <!-- Encodage et affichage responsive -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Recherchez des professionnels et découvrez leurs portfolios.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <!-- Référencement et partage sur les réseaux sociaux -->
+    <meta name="description" content="Recherchez des professionnels et découvrez leurs portfolios sur Profolio.">
+    <meta name="keywords" content="Profolio, portfolio professionnel, talents, CV, professionnels, projets">
+    <meta name="author" content="Équipe BHS">
+    <meta name="robots" content="index, follow">
+
+    <!-- Apparence et couleur de l'application mobile -->
+    <meta name="theme-color" content="#061a3d">
+    <meta name="color-scheme" content="light">
+    <meta name="format-detection" content="telephone=no">
+
+    
+
     <title><?= e($pageTitle) ?> — Mon Portfolio</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/test.css">
+    <link rel="icon" type="image/png" href="../Mes_images/logo1.png">
+
+
 
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -33,12 +51,27 @@
         <div class="navlinks" id="navlinks-menu">
             <span class="mobile-menu-title">Navigation</span>
             <ul>
-                <li class="mobile-menu-home<?= basename($_SERVER['PHP_SELF']) === 'index.php' ? ' is-active' : '' ?>">
-                    <a href="index.php"><i class="fa-solid fa-house"></i> Accueil</a>
-                </li>
-                <li class="mobile-menu-about<?= basename($_SERVER['PHP_SELF']) === 'apropos.php' ? ' is-active' : '' ?>">
-                    <a href="apropos.php"><i class="fa-solid fa-circle-info"></i> À propos</a>
-                </li>
+                <?php $currentPage = basename($_SERVER['PHP_SELF']); ?>
+                <?php if ($currentPage === 'apropos.php'): ?>
+                    <li class="mobile-menu-home">
+                        <a href="index.php"><i class="fa-solid fa-house"></i> Accueil</a>
+                    </li>
+                <?php elseif ($currentPage === 'index.php'): ?>
+                    <li class="mobile-menu-about">
+                        <a href="apropos.php"><i class="fa-solid fa-circle-info"></i> À propos</a>
+                    </li>
+                <?php elseif ($currentPage === 'dashboard.php'): ?>
+                    <li class="mobile-menu-home">
+                        <a href="index.php"><i class="fa-solid fa-house"></i> Accueil</a>
+                    </li>
+                <?php else: ?>
+                    <li class="mobile-menu-home">
+                        <a href="index.php"><i class="fa-solid fa-house"></i> Accueil</a>
+                    </li>
+                    <li class="mobile-menu-about">
+                        <a href="apropos.php"><i class="fa-solid fa-circle-info"></i> À propos</a>
+                    </li>
+                <?php endif; ?>
                 <?php if (!empty($_SESSION['user_id'])): ?>
                     <?php if (basename($_SERVER['PHP_SELF']) === 'dashboard.php'): ?>
                         <li class="mobile-menu-payment">
@@ -72,7 +105,6 @@
             <span></span>
         </button>
     </nav>
-    <button class="mobile-menu-overlay" type="button" aria-label="Fermer le menu"></button>
 
 
 
@@ -91,7 +123,12 @@
         </div>
         <nav class="nav">
 
-            <a href="apropos.php"> À propos</a>
+            <?php $currentHeaderPage = basename($_SERVER['PHP_SELF']); ?>
+            <?php if ($currentHeaderPage === 'apropos.php' || $currentHeaderPage === 'dashboard.php'): ?>
+                <a href="index.php"> Accueil</a>
+            <?php else: ?>
+                <a href="apropos.php"> À propos</a>
+            <?php endif; ?>
 
             <?php if (!empty($_SESSION['user_id'])): ?>
 
