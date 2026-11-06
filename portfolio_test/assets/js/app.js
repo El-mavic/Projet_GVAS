@@ -1,9 +1,207 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const spaceMenu = document.querySelector('.space-menu');
+  const spaceMenuToggle = spaceMenu?.querySelector('.space-menu-toggle');
+  const spaceMenuDropdown = spaceMenu?.querySelector('.space-menu-dropdown');
+
+  const closeSpaceMenu = () => {
+    if (!spaceMenuToggle || !spaceMenuDropdown) return;
+    spaceMenuDropdown.hidden = true;
+    spaceMenuToggle.setAttribute('aria-expanded', 'false');
+  };
+
+  spaceMenuToggle?.addEventListener('click', event => {
+    event.stopPropagation();
+    const willOpen = spaceMenuDropdown?.hidden ?? true;
+    if (spaceMenuDropdown) spaceMenuDropdown.hidden = !willOpen;
+    spaceMenuToggle.setAttribute('aria-expanded', String(willOpen));
+  });
+
+  document.addEventListener('click', event => {
+    if (spaceMenu && !spaceMenu.contains(event.target)) closeSpaceMenu();
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      closeSpaceMenu();
+      spaceMenuToggle?.focus();
+    }
+  });
+
+  const showDashboardPanel = panelName => {
+    if (!window.location.pathname.endsWith('/dashboard.php') && !window.location.pathname.endsWith('dashboard.php')) return;
+    const panel = document.getElementById(panelName);
+    if (!(panel instanceof HTMLDialogElement)) return;
+    if (!panel.open) panel.showModal();
+  };
+
+  document.querySelectorAll('[data-dashboard-panel]').forEach(link => {
+    link.addEventListener('click', event => {
+      if (window.location.pathname.endsWith('/dashboard.php') || window.location.pathname.endsWith('dashboard.php')) {
+        event.preventDefault();
+        const panelName = link.dataset.dashboardPanel === 'danger' ? 'supprimer-compte' : 'paiement';
+        closeSpaceMenu();
+        showDashboardPanel(panelName);
+      }
+    });
+  });
+
+  document.querySelectorAll('[data-close-dashboard-modal]').forEach(button => {
+    button.addEventListener('click', () => button.closest('dialog')?.close());
+  });
+
+  document.querySelectorAll('.dashboard-modal').forEach(dialog => {
+    dialog.addEventListener('click', event => {
+      if (event.target === dialog) dialog.close();
+    });
+  });
+
+  if (window.location.hash === '#paiement') showDashboardPanel('paiement');
+  if (window.location.hash === '#supprimer-compte') showDashboardPanel('supprimer-compte');
+
   document.querySelectorAll('input[type="search"]').forEach(input => {
     input.addEventListener('keydown', event => {
       if (event.key === 'Escape') input.value = '';
     });
   });
+
+  const profileLayout = document.querySelector('.profile-editor-layout');
+  const projectsSlide = document.querySelector('.portfolio-project-slide');
+  const profileEditor = document.querySelector('.profile-editor-form');
+  const livePreview = document.querySelector('.portfolio-live-preview');
+  const profileForm = document.getElementById('portfolio-profile-form');
+  const profileEditorToggle = document.querySelector('[data-profile-editor-toggle]');
+  const profileEditorBody = document.getElementById('portfolio-profile-editor-body');
+
+  profileEditorToggle?.addEventListener('click', () => {
+    const willOpen = profileEditorBody?.hidden ?? false;
+    if (!profileEditorBody) return;
+    profileEditorBody.hidden = !willOpen;
+    profileEditorToggle.setAttribute('aria-expanded', String(willOpen));
+    profileEditorToggle.closest('.profile-editor-form')?.classList.toggle('is-open', willOpen);
+    if (willOpen) profileLayout?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  if (profileLayout && projectsSlide && livePreview) {
+    profileLayout.insertBefore(projectsSlide, livePreview);
+  }
+
+  const showProfileStep = step => {
+    if (!profileLayout || !projectsSlide || !profileForm) return;
+    profileLayout.hidden = false;
+    if (profileEditor) profileEditor.hidden = false;
+    if (livePreview) livePreview.hidden = false;
+    projectsSlide.hidden = true;
+    if (profileEditorBody && profileEditorToggle) {
+      profileEditorBody.hidden = false;
+      profileEditorToggle.setAttribute('aria-expanded', 'true');
+      profileEditorToggle.closest('.profile-editor-form')?.classList.add('is-open');
+    }
+    profileForm.querySelectorAll('[data-carousel-slide]').forEach((slide, index) => {
+      slide.classList.toggle('is-active', index === step);
+      slide.setAttribute('aria-hidden', index === step ? 'false' : 'true');
+    });
+    profileForm.querySelectorAll('[data-carousel-step]').forEach((button, index) => {
+      button.classList.toggle('is-active', index === step);
+      if (index === step) button.setAttribute('aria-current', 'step');
+      else button.removeAttribute('aria-current');
+    });
+    const previousButton = profileForm.querySelector('[data-carousel-prev]');
+    if (previousButton) previousButton.disabled = step === 0;
+    const nextButton = profileForm.querySelector('[data-carousel-next]');
+    if (nextButton) nextButton.textContent = step === 0 ? 'Suivant →' : 'Voir les projets →';
+    profileLayout.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  const showProjectsStep = () => {
+    if (!profileLayout || !projectsSlide || !profileEditor || !livePreview) return;
+    profileLayout.hidden = false;
+    profileEditor.hidden = true;
+    livePreview.hidden = false;
+    projectsSlide.hidden = false;
+    profileLayout.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  const autosaveStatus = profileForm?.querySelector('[data-autosave-status]');
+  let autosaveTimer;
+  let autosaveController;
+
+  const saveProfileAutomatically = () => {
+    if (!profileForm) return;
+    clearTimeout(autosaveTimer);
+    autosaveTimer = setTimeout(async () => {
+      if (autosaveController) autosaveController.abort();
+      autosaveController = new AbortController();
+      if (autosaveStatus) autosaveStatus.textContent = 'Enregistrement…';
+
+      try {
+        const response = await fetch(window.location.href, {
+          method: 'POST',
+          body: new FormData(profileForm),
+          headers: { 'X-Autosave': '1' },
+          signal: autosaveController.signal
+        });
+        const result = await response.json();
+        if (autosaveStatus) {
+          autosaveStatus.textContent = result.success ? '✓ Modifications enregistrées' : result.message;
+          autosaveStatus.classList.toggle('is-error', !result.success);
+        }
+      } catch (error) {
+        if (error.name !== 'AbortError' && autosaveStatus) {
+          autosaveStatus.textContent = 'L’enregistrement automatique a échoué.';
+          autosaveStatus.classList.add('is-error');
+        }
+      }
+    }, 700);
+  };
+
+  profileForm?.querySelectorAll('input:not([type="hidden"]), textarea, select').forEach(field => {
+    field.addEventListener(field.type === 'checkbox' || field.type === 'file' ? 'change' : 'input', saveProfileAutomatically);
+  });
+
+  profileForm?.querySelectorAll('[data-carousel-step]').forEach(button => {
+    button.addEventListener('click', () => showProfileStep(Number(button.dataset.carouselStep)));
+  });
+  profileForm?.querySelector('[data-carousel-prev]')?.addEventListener('click', () => {
+    const currentSlide = Number(profileForm.querySelector('[data-carousel-slide].is-active')?.dataset.carouselSlide || 0);
+    showProfileStep(Math.max(0, currentSlide - 1));
+  });
+  profileForm?.querySelector('[data-carousel-next]')?.addEventListener('click', () => {
+    const currentSlide = profileForm.querySelector('[data-carousel-slide].is-active');
+    const requiredFields = [...(currentSlide?.querySelectorAll('[required]') || [])];
+    if (requiredFields.some(field => !field.checkValidity())) {
+      requiredFields.find(field => !field.checkValidity())?.reportValidity();
+      return;
+    }
+    const slideNumber = Number(currentSlide?.dataset.carouselSlide || 0);
+    if (slideNumber === 0) showProfileStep(1);
+    else showProjectsStep();
+  });
+  profileForm?.querySelector('[data-show-project-step]')?.addEventListener('click', showProjectsStep);
+  document.querySelectorAll('[data-show-profile-step]').forEach(button => {
+    button.addEventListener('click', () => showProfileStep(Number(button.dataset.showProfileStep)));
+  });
+  document.querySelector('[data-show-identity-step]')?.addEventListener('click', () => showProfileStep(0));
+
+  const deleteDialog = document.getElementById('delete-account-dialog');
+  if (deleteDialog) {
+    document.querySelector('[data-open-delete-account]')?.addEventListener('click', () => {
+      document.getElementById('supprimer-compte')?.close();
+      deleteDialog.showModal();
+      deleteDialog.querySelector('[name="confirm_password"]')?.focus();
+    });
+
+    document.querySelector('[data-close-delete-account]')?.addEventListener('click', () => {
+      deleteDialog.close();
+    });
+
+    deleteDialog.addEventListener('click', event => {
+      if (event.target === deleteDialog) deleteDialog.close();
+    });
+
+    deleteDialog.addEventListener('close', () => {
+      deleteDialog.querySelector('[name="confirm_password"]')?.select();
+    });
+  }
 });
 
 // Aperçu du portfolio actualisé pendant que le membre remplit son profil.
@@ -92,41 +290,55 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!tel) return;
     const rotation = Math.max(0, 0 - (scrollY / maxScroll) * -0);
     const translateY = (scrollY / 300) * 20;
-    // if (tel) {
-    tel.style.transform = `rotate(${rotation}deg)`;
-    tel.style.transition = 'transform 18s ease';
-    // }
-  });
+     tel.style.transform = `rotate(${rotation}deg)`;
+     tel.style.transition = 'transform 18s ease';
+   });
+
+   document.addEventListener('DOMContentLoaded', function () {
+     const header = document.querySelector('.topbar');
+     if (!header) return;
+
+     const onScrollHeader = () => {
+       const currentScroll = window.scrollY;
+       if (currentScroll <= 8) {
+         header.classList.remove('header-hidden');
+         return;
+       }
+       header.classList.add('header-hidden');
+     };
+
+     onScrollHeader();
+     window.addEventListener('scroll', onScrollHeader, { passive: true });
+   });
+
+   const revealObserver = new IntersectionObserver(
+     entries => {
+       entries.forEach(entry => {
+         if (entry.isIntersecting) {
+           entry.target.classList.add('visible');
+           revealObserver.unobserve(entry.target);
+         }
+       });
+     },
+     { threshold: 0.12 }
+   );
+
+   const revealTargets = document.querySelectorAll('.hero, .results-head, .join-banner, .profolio-about, .profolio-how-it-works');
+
+   revealTargets.forEach((element, index) => {
+     element.classList.add('reveal');
+     element.style.transitionDelay = `${index * 120}ms`;
+     revealObserver.observe(element);
+   });
+
+// menu burgeer
 
 
-
-  
-
-  
-//Animation du header lors du scroll.
-
-document.addEventListener("DOMContentLoaded", function () {
-
-  const header = document.querySelector(".topbar");
-
-  if (!header) return;
-
-  let lastScroll = window.scrollY;
-
-  window.addEventListener("scroll", function () {
-
-    const currentScroll = window.scrollY;
-
-    if (currentScroll > lastScroll && currentScroll > 100) {
-      // On descend : cacher le header
-      header.classList.add("header-hidden");
-    } else {
-      // On remonte : afficher le header
-      header.classList.remove("header-hidden");
-    }
-
-    lastScroll = currentScroll;
-  });
-
-});
-
+const menuburger = document.querySelector(".menu-burger")
+const navlinks = document.querySelector(".navlinks")
+menuburger.addEventListener('click',()=>{
+  navlinks.classList.toggle('mobile-menu')
+  document.body.classList.toggle("menu-open");
+        
+})
+ 
