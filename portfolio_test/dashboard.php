@@ -204,7 +204,7 @@ $dashboardGreeting = 'Bonjour';
                 Votre profil sera visible sur l’accueil après confirmation du paiement par Yabetoo Pay.
             </p>
             <a class="button-primary btn-paiement" href="paiement.php">
-                <i class="fas fa-lock"></i>
+                <i class="fa-solid fa-paper-plane"></i>
                 <span>Publier mon portfolio</span>
             </a>
             <p class="muted payment-status">État du paiement : non payé</p>
@@ -294,7 +294,24 @@ $dashboardGreeting = 'Bonjour';
                             </span>
                         </label>
                         <label>Ville / pays
-                            <input name="localisation" value="<?= e($u['localisation'] ?? '') ?>">
+                            <input name="localisation" list="suggestions-localisation" autocomplete="address-level2" placeholder="Choisir ou saisir une ville, un pays" value="<?= e($u['localisation'] ?? '') ?>">
+                            <datalist id="suggestions-localisation">
+                                <option value="Brazzaville, République du Congo"></option>
+                                <option value="Pointe-Noire, République du Congo"></option>
+                                <option value="Dolisie, République du Congo"></option>
+                                <option value="Nkayi, République du Congo"></option>
+                                <option value="Ouésso, République du Congo"></option>
+                                <option value="Mouyondzi, République du Congo"></option>
+                                <option value="Impfondo, République du Congo"></option>
+                                <option value="Kinshasa, République démocratique du Congo"></option>
+                                <option value="Lubumbashi, République démocratique du Congo"></option>
+                                <option value="Goma, République démocratique du Congo"></option>
+                                <option value="Libreville, Gabon"></option>
+                                <option value="Douala, Cameroun"></option>
+                                <option value="Yaoundé, Cameroun"></option>
+                                <option value="Abidjan, Côte d'Ivoire"></option>
+                                <option value="Paris, France"></option>
+                            </datalist>
                         </label>
                     </div>
 
@@ -624,7 +641,7 @@ $dashboardGreeting = 'Bonjour';
         </button>
         <?php if (($u['payment_status'] ?? 'unpaid') !== 'paid'): ?>
             <a class="button-primary projects-publish-payment" href="paiement.php">
-                <i class="fa-solid fa-lock"></i>
+                <i class="fa-solid fa-paper-plane"></i>
                 <span>Publier mon portfolio en ligne</span>
             </a>
         <?php endif; ?>

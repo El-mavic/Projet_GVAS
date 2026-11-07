@@ -1,4 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const feedbackForm = document.getElementById('public-feedback-form');
+  const feedbackMessage = feedbackForm?.querySelector('[name="feedback_message"]');
+  const feedbackCounter = document.getElementById('feedback-character-current');
+  const feedbackStatus = document.getElementById('public-feedback-status');
+
+  feedbackMessage?.addEventListener('input', () => {
+    if (feedbackCounter) feedbackCounter.textContent = feedbackMessage.value.length;
+  });
+
+  feedbackForm?.addEventListener('submit', event => {
+    event.preventDefault();
+    if (!feedbackForm.checkValidity()) {
+      feedbackForm.reportValidity();
+      return;
+    }
+    if (feedbackStatus) {
+      feedbackStatus.textContent = 'Merci pour votre message. Votre retour a bien été préparé pour l’équipe Profolio.';
+      feedbackStatus.classList.add('is-success');
+    }
+    feedbackForm.reset();
+    if (feedbackCounter) feedbackCounter.textContent = '0';
+  });
+
   const setupProfileRepeaters = () => {
     document.querySelectorAll('[data-profile-repeater]').forEach(repeater => {
       const itemsContainer = repeater.querySelector('.profile-repeat-items');
