@@ -506,149 +506,89 @@ require __DIR__ . '/includes/header.php';
 
 ?>
 
-<section class="auth-card auth-wide">
-
-    <span class="section-kicker">
-        PUBLICATION DU PORTFOLIO
-    </span>
-
-    <h1>Publier mon portfolio</h1>
-
-
-    <?php if ($success): ?>
-
-        <div class="success">
-            <?= e($success) ?>
-        </div>
-
-        <a class="button-primary" href="dashboard.php">
-            Retour à mon espace →
-        </a>
-
-        <a class="button-secondary" href="index.php">
-            Voir la page d’accueil →
-        </a>
-
-
-    <?php elseif (($user['payment_status'] ?? 'unpaid') === 'paid'): ?>
-
-        <div class="success">
-            Votre paiement est déjà confirmé.
-            Votre portfolio est publié.
-        </div>
-
-        <a class="button-primary" href="dashboard.php">
-            Retour à mon espace →
-        </a>
-
-
-    <?php else: ?>
-
-        <p>
-            Le paiement de publication coûte
-
-            <strong>
-                <?= number_format($amount, 0, ',', ' ') ?> FCFA
-            </strong>.
-
-            Une fois le paiement confirmé par Yabetoo Pay,
-            votre portfolio sera automatiquement publié
-            sur la page d’accueil.
-        </p>
-
-
-        <?php if ($error): ?>
-
-            <div class="alert">
-                <?= e($error) ?>
+<div class="payment-page">
+    <section class="payment-layout">
+        <aside class="payment-summary" aria-label="Résumé de la publication">
+            <span class="section-kicker">PUBLICATION DU PORTFOLIO</span>
+            <div class="payment-summary-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+            <h1>Publier mon portfolio</h1>
+            <p>Rendez votre profil professionnel visible au public grâce à une publication sécurisée.</p>
+            <div class="payment-price">
+                <span>Frais de publication</span>
+                <strong><?= number_format($amount, 0, ',', ' ') ?> FCFA</strong>
             </div>
+            <ul class="payment-benefits">
+                <li><i class="fa-solid fa-circle-check"></i> Portfolio visible sur la page d’accueil</li>
+                <li><i class="fa-solid fa-circle-check"></i> Paiement sécurisé par Yabetoo Pay</li>
+                <li><i class="fa-solid fa-circle-check"></i> Publication activée après confirmation</li>
+            </ul>
+        </aside>
 
-        <?php endif; ?>
+        <div class="payment-content">
+            <?php if ($success): ?>
+                <div class="payment-state payment-state-success">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <h2>Publication confirmée</h2>
+                    <div class="success"><?= e($success) ?></div>
+                    <div class="payment-actions">
+                        <a class="button-primary" href="dashboard.php"><i class="fa-solid fa-table-columns"></i> Retour à mon espace</a>
+                        <a class="button-secondary" href="index.php"><i class="fa-solid fa-house"></i> Voir l’accueil</a>
+                    </div>
+                </div>
+            <?php elseif (($user['payment_status'] ?? 'unpaid') === 'paid'): ?>
+                <div class="payment-state payment-state-success">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <h2>Votre portfolio est publié</h2>
+                    <div class="success">Votre paiement est confirmé. Votre portfolio est désormais visible.</div>
+                    <div class="payment-actions">
+                        <a class="button-primary" href="dashboard.php"><i class="fa-solid fa-table-columns"></i> Retour à mon espace</a>
+                    </div>
+                </div>
+            <?php else: ?>
+                <div class="payment-form-heading">
+                    <span class="section-kicker">FINALISER LE PAIEMENT</span>
+                    <h2>Choisissez Mobile Money</h2>
+                    <p>Confirmez votre opérateur et le numéro à utiliser pour le paiement.</p>
+                </div>
 
+                <?php if ($error): ?>
+                    <div class="alert"><?= e($error) ?></div>
+                <?php endif; ?>
 
-        <form method="post" class="stack-form">
+                <form method="post" class="stack-form payment-form">
+                    <input type="hidden" name="csrf" value="<?= e($_SESSION['csrf_payment']) ?>">
+                    <label>
+                        Opérateur Mobile Money
+                        <select name="operator" required>
+                            <option value="">Choisissez un opérateur</option>
+                            <option value="mtn" <?= (($_POST['operator'] ?? '') === 'mtn') ? 'selected' : '' ?>>MTN Mobile Money</option>
+                            <option value="airtel" <?= (($_POST['operator'] ?? '') === 'airtel') ? 'selected' : '' ?>>Airtel Money</option>
+                        </select>
+                    </label>
 
-            <input
-                type="hidden"
-                name="csrf"
-                value="<?= e($_SESSION['csrf_payment']) ?>">
+                    <label>
+                        Numéro Mobile Money
+                        <div class="payment-phone-input">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <input type="tel" name="phone" required placeholder="+242 00 000 00 00" value="<?= e($_POST['phone'] ?? '') ?>" autocomplete="tel">
+                        </div>
+                        <small>Utilisez le numéro associé à votre compte Mobile Money, au format +242 00 000 00 00.</small>
+                    </label>
 
+                    <button class="button-primary payment-submit" type="submit">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Payer <?= number_format($amount, 0, ',', ' ') ?> FCFA avec Yabetoo Pay
+                    </button>
+                </form>
 
-            <label>
-                Opérateur Mobile Money
-
-                <select name="operator" required>
-
-                    <option value="">
-                        Choisissez un opérateur
-                    </option>
-
-                    <option
-                        value="mtn"
-                        <?= (($_POST['operator'] ?? '') === 'mtn') ? 'selected' : '' ?>>
-                        MTN Mobile Money
-                    </option>
-
-                    <option
-                        value="airtel"
-                        <?= (($_POST['operator'] ?? '') === 'airtel') ? 'selected' : '' ?>>
-                        Airtel Money
-                    </option>
-
-                </select>
-            </label>
-
-
-            <label>
-                Numéro Mobile Money
-
-                <input
-                    type="tel"
-                    name="phone"
-                    required
-                    placeholder="+242 00 000 00 00"
-                    value="<?= e($_POST['phone'] ?? '') ?>"
-                    autocomplete="tel">
-
-                <small>
-                    Utilisez le numéro associé à votre compte
-                    Mobile Money, au format +242 00 000 00 00.
-                </small>
-
-            </label>
-
-
-            <button
-                class="button-primary"
-                type="submit">
-                Payer <?= number_format($amount, 0, ',', ' ') ?>
-                FCFA avec Yabetoo Pay
-            </button>
-
-        </form>
-
-
-        <p class="muted" style="margin-top:1rem">
-
-            Mode actuel :
-
-            <?= $mode === 'sandbox' ? 'test (sandbox)' : 'production' ?>.
-
-            Votre profil reste privé tant que le paiement
-            n'est pas confirmé.
-
-        </p>
-
-
-        <a
-            class="button-secondary"
-            href="dashboard.php">
-            Retourner compléter mon portfolio
-        </a>
-
-    <?php endif; ?>
-
-</section>
-
+                <div class="payment-footnote">
+                    <span><i class="fa-solid fa-lock"></i> Paiement sécurisé</span>
+                    <span>Mode : <?= $mode === 'sandbox' ? 'test (sandbox)' : 'production' ?></span>
+                </div>
+                <a class="payment-back-link" href="dashboard.php"><i class="fa-solid fa-arrow-left"></i> Retourner compléter mon portfolio</a>
+            <?php endif; ?>
+        </div>
+    </section>
+</div>
 
 <?php require __DIR__ . '/includes/footer.php'; ?>

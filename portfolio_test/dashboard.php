@@ -173,12 +173,14 @@ $_SESSION['csrf'] = bin2hex(random_bytes(32));
 $pageTitle = 'Mon espace';
 require 'includes/header.php';
 ?>
+<?php
+// Le texte initial évite un affichage vide avant le réglage JavaScript avec l'heure du navigateur.
+$dashboardGreeting = 'Bonjour';
+?>
+    <h1 class="section-kicker" style="font-size: 25px; margin: 3px;">VOTRE ESPACE PERSONNEL</h1>
 
 <section class="dashboard-intro">
-
-    <span class="section-kicker">VOTRE ESPACE PERSONNEL</span>
-
-    <h1>Bonjour <?= e($u['nom']) ?> </h1>
+    <h1><span class="dashboard-greeting"><?= e($dashboardGreeting) ?></span> <?= e($u['nom']) ?> <span> !</span> </h1>
 
     <p>Complétez votre profil, ajoutez votre CV et présentez vos réalisations.</p>
 
@@ -202,7 +204,7 @@ require 'includes/header.php';
                 Votre profil sera visible sur l’accueil après confirmation du paiement par Yabetoo Pay.
             </p>
             <a class="button-primary btn-paiement" href="paiement.php">
-                <i class="fas fa-lock"></i>
+                <i class="fa-solid fa-paper-plane"></i>
                 <span>Publier mon portfolio</span>
             </a>
             <p class="muted payment-status">État du paiement : non payé</p>
@@ -238,15 +240,15 @@ require 'includes/header.php';
             <input type="hidden" name="action" value="save_profile">
 
             <div class="portfolio-carousel-progress" aria-label="Étapes du formulaire">
-                <button type="button" class="carousel-step is-active" data-carousel-step="0" aria-current="step">
+                <div class="carousel-step is-active" data-carousel-step="0" aria-current="step">
                     <span>1</span> Identité
-                </button>
-                <button type="button" class="carousel-step" data-carousel-step="1">
+                </div>
+                <div class="carousel-step" data-carousel-step="1">
                     <span>2</span> Formation & compétences
-                </button>
-                <button type="button" class="carousel-step" data-show-project-step>
+                </div>
+                <div class="carousel-step" data-carousel-step="2">
                     <span>3</span> Projets
-                </button>
+                </div>
             </div>
 
             <div class="portfolio-carousel-slides">
@@ -274,14 +276,47 @@ require 'includes/header.php';
                     </label>
                     <div class="form-two">
                         <label>Téléphone
-                            <input type="tel" name="telephone" value="<?= e($u['telephone'] ?? '') ?>">
+                            <span class="phone-input-group">
+                                <select name="indicatif_telephone" class="phone-country-code" aria-label="Indicatif téléphonique">
+                                    <option value="+242">🇨🇬 +242</option>
+                                    <option value="+33">🇫🇷 +33</option>
+                                    <option value="+237">🇨🇲 +237</option>
+                                    <option value="+32">🇧🇪 +32</option>
+                                    <option value="+221">🇸🇳 +221</option>
+                                    <option value="+225">🇨🇮 +225</option>
+                                    <option value="+1">🇨🇦 +1</option>
+                                    <option value="+1">🇺🇸 +1</option>
+                                    <option value="other">Autre indicatif</option>
+                                </select>
+                                <input type="tel" name="indicatif_personnalise" class="phone-custom-code" inputmode="tel" autocomplete="tel-country-code" placeholder="Ex. +44" aria-label="Indicatif personnalisé" hidden>
+                                <input type="tel" name="telephone_local" inputmode="tel" autocomplete="tel-national" placeholder="06 420 14 15" value="">
+                                <input type="hidden" name="telephone" value="<?= e($u['telephone'] ?? '') ?>">
+                            </span>
                         </label>
                         <label>Ville / pays
-                            <input name="localisation" value="<?= e($u['localisation'] ?? '') ?>">
+                            <input name="localisation" list="suggestions-localisation" autocomplete="address-level2" placeholder="Choisir ou saisir une ville, un pays" value="<?= e($u['localisation'] ?? '') ?>">
+                            <datalist id="suggestions-localisation">
+                                <option value="Brazzaville, République du Congo"></option>
+                                <option value="Pointe-Noire, République du Congo"></option>
+                                <option value="Dolisie, République du Congo"></option>
+                                <option value="Nkayi, République du Congo"></option>
+                                <option value="Ouésso, République du Congo"></option>
+                                <option value="Mouyondzi, République du Congo"></option>
+                                <option value="Impfondo, République du Congo"></option>
+                                <option value="Kinshasa, République démocratique du Congo"></option>
+                                <option value="Lubumbashi, République démocratique du Congo"></option>
+                                <option value="Goma, République démocratique du Congo"></option>
+                                <option value="Libreville, Gabon"></option>
+                                <option value="Douala, Cameroun"></option>
+                                <option value="Yaoundé, Cameroun"></option>
+                                <option value="Abidjan, Côte d'Ivoire"></option>
+                                <option value="Paris, France"></option>
+                            </datalist>
                         </label>
                     </div>
 
                     <h4 class="form-section-title">Photo de profil, couverture et CV</h4>
+                    <div class="portfolio-media-upload-grid">
                     <?php if (!empty($u['photo'])): ?>
                         <div class="upload-preview">
                             <img src="<?= e($u['photo']) ?>" alt="Photo de profil actuelle">
@@ -310,14 +345,28 @@ require 'includes/header.php';
                         <input type="file" name="cv" accept=".pdf,.doc,.docx">
                         <small>Laissez vide pour conserver le CV actuel.</small>
                     </label>
+                    </div>
 
                     <h4 class="form-section-title">Liens professionnels</h4>
-                    <label>Site web
-                        <input type="url" name="site_web" placeholder="https://..." value="<?= e($u['site_web'] ?? '') ?>">
-                    </label>
-                    <label>LinkedIn
-                        <input type="url" name="linkedin" placeholder="https://linkedin.com/in/..." value="<?= e($u['linkedin'] ?? '') ?>">
-                    </label>
+                    <div class="profile-links-grid">
+                        <label><i class="fa-solid fa-globe"></i> Site web
+                            <input type="url" name="site_web" placeholder="https://..." value="<?= e($u['site_web'] ?? '') ?>">
+                        </label>
+                        <label><i class="fab fa-linkedin"></i> LinkedIn
+                            <input type="url" name="linkedin" placeholder="https://linkedin.com/in/..." value="<?= e($u['linkedin'] ?? '') ?>">
+                        </label>
+                        <label><i class="fab fa-github"></i> GitHub <span class="muted">(optionnel)</span>
+                            <input type="url" name="github" placeholder="https://github.com/votre-profil">
+                        </label>
+                    </div>
+                    <div class="profile-repeater profile-professional-links" data-profile-repeater="liens_professionnels" data-input-type="url" data-placeholder="https://autre-profil-professionnel.com">
+                        <div class="profile-repeater-heading">
+                            <div><strong>Autres liens professionnels</strong><span>Ajoutez autant de liens utiles que nécessaire.</span></div>
+                            <button type="button" class="profile-repeat-add" data-add-profile-item aria-label="Ajouter un lien professionnel"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <div class="profile-repeat-items"></div>
+                        <input type="hidden" name="liens_professionnels" value="">
+                    </div>
                     <?php if (($u['payment_status'] ?? 'unpaid') === 'paid'): ?>
                         <label class="checkbox-label">
                             <input type="checkbox" name="public" value="1" <?= !empty($u['public']) ? 'checked' : '' ?>>
@@ -338,25 +387,57 @@ require 'includes/header.php';
                         </div>
                     </div>
 
-                    <label>Compétences <span class="muted">(séparées par des virgules)</span>
-                        <input name="competences" placeholder="PHP, gestion de projet, design..." value="<?= e($u['competences'] ?? '') ?>">
-                    </label>
-                    <label>Formation et études
-                        <textarea name="formation" rows="3" placeholder="Diplômes, écoles et formations..."><?= e($u['formation'] ?? '') ?></textarea>
-                    </label>
-                    <label>Expérience professionnelle
-                        <textarea name="experience" rows="4" placeholder="Expériences, missions et résultats..."><?= e($u['experience'] ?? '') ?></textarea>
-                    </label>
-                    <label>Certifications et distinctions
-                        <textarea name="certifications" rows="3" placeholder="Certificats, attestations, prix..."><?= e($u['certifications'] ?? '') ?></textarea>
-                    </label>
-                    <div class="form-two">
-                        <label>Langues
-                            <input name="langues" placeholder="Français, anglais..." value="<?= e($u['langues'] ?? '') ?>">
-                        </label>
-                        <label>Centres d’intérêt
-                            <input name="centre_interet" value="<?= e($u['centre_interet'] ?? '') ?>">
-                        </label>
+                    <div class="profile-repeater" data-profile-repeater="competences" data-placeholder="Ex. PHP, gestion de projet, design graphique">
+                        <div class="profile-repeater-heading">
+                            <div><strong>Compétences</strong><span>Ajoutez chaque compétence séparément.</span></div>
+                            <button type="button" class="profile-repeat-add" data-add-profile-item aria-label="Ajouter une compétence"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <div class="profile-repeat-items"></div>
+                        <input type="hidden" name="competences" value="<?= e($u['competences'] ?? '') ?>">
+                    </div>
+                    <div class="profile-repeaters">
+                        <div class="profile-repeater" data-profile-repeater="formation" data-placeholder="Ex. Licence en informatique — Université de Pointe-Noire">
+                            <div class="profile-repeater-heading">
+                                <div><strong>Formation et études</strong><span>Ajoutez chaque diplôme ou formation séparément.</span></div>
+                                <button type="button" class="profile-repeat-add" data-add-profile-item aria-label="Ajouter une formation"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="profile-repeat-items"></div>
+                            <input type="hidden" name="formation" value="<?= e($u['formation'] ?? '') ?>">
+                        </div>
+                        <div class="profile-repeater" data-profile-repeater="experience" data-placeholder="Ex. Développeur web — Entreprise BHS — 2024 à aujourd’hui">
+                            <div class="profile-repeater-heading">
+                                <div><strong>Expérience professionnelle</strong><span>Ajoutez chaque mission ou expérience séparément.</span></div>
+                                <button type="button" class="profile-repeat-add" data-add-profile-item aria-label="Ajouter une expérience"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="profile-repeat-items"></div>
+                            <input type="hidden" name="experience" value="<?= e($u['experience'] ?? '') ?>">
+                        </div>
+                        <div class="profile-repeater" data-profile-repeater="certifications" data-placeholder="Légende du diplôme ou certificat — Ex. Certification développeur web — 2024">
+                            <div class="profile-repeater-heading">
+                                <div><strong>Certifications et distinctions</strong><span>Ajoutez chaque certificat, prix ou distinction séparément.</span></div>
+                                <button type="button" class="profile-repeat-add" data-add-profile-item aria-label="Ajouter une certification"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="profile-repeat-items"></div>
+                            <input type="hidden" name="certifications" value="<?= e($u['certifications'] ?? '') ?>">
+                        </div>
+                    </div>
+                    <div class="profile-repeaters profile-repeaters-options">
+                        <div class="profile-repeater" data-profile-repeater="langues" data-placeholder="Choisissez ou saisissez une langue">
+                            <div class="profile-repeater-heading">
+                                <div><strong>Langues</strong><span>Ajoutez chaque langue séparément.</span></div>
+                                <button type="button" class="profile-repeat-add" data-add-profile-item aria-label="Ajouter une langue"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="profile-repeat-items" data-repeat-suggestions="Français, Anglais, Espagnol, Allemand, Portugais, Italien, Arabe, Lingala, Chinois"></div>
+                            <input type="hidden" name="langues" value="<?= e($u['langues'] ?? '') ?>">
+                        </div>
+                        <div class="profile-repeater" data-profile-repeater="centre_interet" data-placeholder="Choisissez ou saisissez un centre d’intérêt">
+                            <div class="profile-repeater-heading">
+                                <div><strong>Centres d’intérêt</strong><span>Ajoutez chaque loisir séparément.</span></div>
+                                <button type="button" class="profile-repeat-add" data-add-profile-item aria-label="Ajouter un centre d’intérêt"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="profile-repeat-items" data-repeat-suggestions="Lecture, Musique, Sport, Voyages, Photographie, Programmation, Cuisine, Art et dessin, Jeux vidéo"></div>
+                            <input type="hidden" name="centre_interet" value="<?= e($u['centre_interet'] ?? '') ?>">
+                        </div>
                     </div>
                     <div class="autosave-status" data-autosave-status role="status" aria-live="polite">
                         Les modifications sont enregistrées automatiquement.
@@ -549,7 +630,7 @@ require 'includes/header.php';
         </label>
 
         <button class="button-primary" type="submit">
-            + Publier cette réalisation
+            + Ajouter cette réalisation
         </button>
 
     </form>
@@ -560,8 +641,8 @@ require 'includes/header.php';
         </button>
         <?php if (($u['payment_status'] ?? 'unpaid') !== 'paid'): ?>
             <a class="button-primary projects-publish-payment" href="paiement.php">
-                <i class="fa-solid fa-lock"></i>
-                Mettre mon portfolio en ligne
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Publier mon portfolio en ligne</span>
             </a>
         <?php endif; ?>
     </div>

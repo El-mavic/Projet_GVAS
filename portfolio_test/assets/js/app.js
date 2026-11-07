@@ -1,11 +1,188 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const feedbackForm = document.getElementById('public-feedback-form');
+  const feedbackMessage = feedbackForm?.querySelector('[name="feedback_message"]');
+  const feedbackCounter = document.getElementById('feedback-character-current');
+  const feedbackStatus = document.getElementById('public-feedback-status');
+
+  feedbackMessage?.addEventListener('input', () => {
+    if (feedbackCounter) feedbackCounter.textContent = feedbackMessage.value.length;
+  });
+
+  feedbackForm?.addEventListener('submit', event => {
+    event.preventDefault();
+    if (!feedbackForm.checkValidity()) {
+      feedbackForm.reportValidity();
+      return;
+    }
+    if (feedbackStatus) {
+      feedbackStatus.textContent = 'Merci pour votre message. Votre retour a bien été préparé pour l’équipe Profolio.';
+      feedbackStatus.classList.add('is-success');
+    }
+    feedbackForm.reset();
+    if (feedbackCounter) feedbackCounter.textContent = '0';
+  });
+
+  const setupProfileRepeaters = () => {
+    document.querySelectorAll('[data-profile-repeater]').forEach(repeater => {
+      const itemsContainer = repeater.querySelector('.profile-repeat-items');
+      const hiddenValue = repeater.querySelector('input[type="hidden"]');
+      const placeholder = repeater.dataset.placeholder || '';
+      const suggestions = itemsContainer.dataset.repeatSuggestions?.split(',').map(value => value.trim()).filter(Boolean) || [];
+      if (!itemsContainer || !hiddenValue) return;
+
+      const syncRepeater = () => {
+        const values = Array.from(itemsContainer.querySelectorAll('[data-profile-repeat-field]'))
+          .map(input => input.value.trim())
+          .filter(Boolean);
+        hiddenValue.value = values.join('\n');
+      };
+
+      const addRepeaterRow = (value = '') => {
+        const row = document.createElement('div');
+        row.className = 'profile-repeat-row';
+        const input = document.createElement('input');
+        input.type = repeater.dataset.inputType === 'url' ? 'url' : 'text';
+        input.dataset.profileRepeatField = '';
+        input.placeholder = placeholder;
+        input.value = value;
+        input.autocomplete = 'off';
+        if (suggestions.length) {
+          const suggestionsId = `${repeater.dataset.profileRepeater}-suggestions-${Math.random().toString(36).slice(2)}`;
+          input.setAttribute('list', suggestionsId);
+          const datalist = document.createElement('datalist');
+          datalist.id = suggestionsId;
+          suggestions.forEach(suggestion => {
+            const option = document.createElement('option');
+            option.value = suggestion;
+            datalist.appendChild(option);
+          });
+          row.appendChild(datalist);
+        }
+        const remove = document.createElement('button');
+        remove.type = 'button';
+        remove.className = 'profile-repeat-remove';
+        remove.setAttribute('aria-label', 'Supprimer cet élément');
+        remove.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+        input.addEventListener('input', () => {
+          syncRepeater();
+          input.dispatchEvent(new Event('change', { bubbles: true }));
+        });
+        remove.addEventListener('click', () => {
+          row.remove();
+          syncRepeater();
+          if (!itemsContainer.children.length) addRepeaterRow();
+          itemsContainer.querySelector('[data-profile-repeat-field]')?.dispatchEvent(new Event('change', { bubbles: true }));
+        });
+        if (repeater.dataset.profileRepeater === 'certifications') {
+          row.classList.add('profile-repeat-row-with-media');
+          const media = document.createElement('div');
+          media.className = 'profile-repeat-media';
+          const fileLabel = document.createElement('label');
+          fileLabel.className = 'profile-repeat-file';
+          fileLabel.innerHTML = '<i class="fa-solid fa-image"></i><span>Ajouter une image</span>';
+          const fileInput = document.createElement('input');
+          fileInput.type = 'file';
+          fileInput.name = 'certification_images[]';
+          fileInput.accept = 'image/jpeg,image/png,image/webp';
+          const preview = document.createElement('img');
+          preview.className = 'profile-repeat-media-preview';
+          preview.alt = 'Aperçu du diplôme ou certificat';
+          preview.hidden = true;
+          fileInput.addEventListener('change', () => {
+            const file = fileInput.files?.[0];
+            if (!file) {
+              preview.hidden = true;
+              preview.removeAttribute('src');
+              return;
+            }
+            const reader = new FileReader();
+            reader.onload = () => {
+              preview.src = String(reader.result);
+              preview.hidden = false;
+            };
+            reader.readAsDataURL(file);
+          });
+          fileLabel.appendChild(fileInput);
+          media.append(fileLabel, preview);
+          row.append(input, media, remove);
+        } else {
+          row.append(input, remove);
+        }
+        itemsContainer.appendChild(row);
+      };
+
+      const existingSeparator = ['langues', 'centre_interet', 'competences'].includes(repeater.dataset.profileRepeater) ? /[\n,]+/ : /\n+/;
+      const existingValues = hiddenValue.value.split(existingSeparator).map(value => value.trim()).filter(Boolean);
+      existingValues.forEach(value => addRepeaterRow(value));
+      if (!itemsContainer.children.length) addRepeaterRow();
+
+      repeater.querySelector('[data-add-profile-item]')?.addEventListener('click', () => {
+        addRepeaterRow();
+        itemsContainer.lastElementChild?.querySelector('input')?.focus();
+      });
+    });
+  };
+  setupProfileRepeaters();
+
+  const profilePhoneForm = document.getElementById('portfolio-profile-form');
+  const phoneCode = profilePhoneForm?.querySelector('[name="indicatif_telephone"]');
+  const phoneLocal = profilePhoneForm?.querySelector('[name="telephone_local"]');
+  const phoneCustomCode = profilePhoneForm?.querySelector('[name="indicatif_personnalise"]');
+  const phoneValue = profilePhoneForm?.querySelector('[name="telephone"]');
+
+  const syncProfilePhone = () => {
+    if (!phoneCode || !phoneLocal || !phoneValue) return;
+    const localNumber = phoneLocal.value.replace(/[^0-9]/g, '').replace(/^0/, '');
+    const useCustomCode = phoneCode.value === 'other';
+    let prefix = phoneCode.value;
+    if (useCustomCode && phoneCustomCode) {
+      prefix = phoneCustomCode.value.trim().replace(/[^+0-9]/g, '');
+      if (prefix && !prefix.startsWith('+')) prefix = `+${prefix}`;
+    }
+    phoneCustomCode?.toggleAttribute('hidden', !useCustomCode);
+    phoneCustomCode?.closest('.phone-input-group')?.toggleAttribute('data-custom-code', useCustomCode);
+    phoneValue.value = localNumber ? `${prefix}${localNumber}` : phoneValue.value;
+  };
+
+  if (phoneCode && phoneLocal && phoneValue) {
+    const savedPhone = phoneValue.value.trim();
+    if (/^\+/.test(savedPhone)) {
+      const matchingCode = Array.from(phoneCode.options)
+        .filter(option => option.value !== 'other')
+        .find(option => savedPhone.startsWith(option.value));
+      if (matchingCode) {
+        phoneCode.value = matchingCode.value;
+        phoneLocal.value = savedPhone.slice(matchingCode.value.length);
+      } else {
+        phoneCode.value = 'other';
+        const codeMatch = savedPhone.match(/^\+\d{1,4}/);
+        if (phoneCustomCode) phoneCustomCode.value = codeMatch?.[0] || '';
+        phoneLocal.value = codeMatch ? savedPhone.slice(codeMatch[0].length) : savedPhone;
+      }
+    } else {
+      phoneLocal.value = savedPhone;
+    }
+    phoneCode.addEventListener('change', syncProfilePhone);
+    phoneLocal.addEventListener('input', syncProfilePhone);
+    phoneCustomCode?.addEventListener('input', syncProfilePhone);
+    syncProfilePhone();
+  }
+
+  profilePhoneForm?.addEventListener('submit', syncProfilePhone);
+
+  const dashboardGreeting = document.querySelector('.dashboard-greeting');
+  const updateDashboardGreeting = () => {
+    if (!dashboardGreeting) return;
+    const hour = new Date().getHours();
+    dashboardGreeting.textContent = hour >= 6 && hour < 18 ? 'Bonjour' : 'Bonsoir';
+  };
+  updateDashboardGreeting();
+  window.setInterval(updateDashboardGreeting, 60000);
+
   const burgerButton = document.querySelector('.menu-burger');
   const mobileMenu = document.querySelector('.navlinks');
-  const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
-
   const setMobileMenu = isOpen => {
     mobileMenu?.classList.toggle('mobile-menu', isOpen);
-    mobileMenuOverlay?.classList.toggle('is-visible', isOpen);
     burgerButton?.classList.toggle('is-open', isOpen);
     document.body.classList.toggle('menu-open', isOpen);
     burgerButton?.setAttribute('aria-expanded', String(isOpen));
@@ -17,8 +194,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const isOpen = !mobileMenu?.classList.contains('mobile-menu');
     setMobileMenu(isOpen);
   });
-
-  mobileMenuOverlay?.addEventListener('click', () => setMobileMenu(false));
 
   const closeMobileMenu = () => setMobileMenu(false);
 
@@ -155,6 +330,11 @@ document.addEventListener('DOMContentLoaded', () => {
     profileEditor.hidden = true;
     livePreview.hidden = false;
     projectsSlide.hidden = false;
+    profileForm.querySelectorAll('[data-carousel-step]').forEach((step, index) => {
+      step.classList.toggle('is-active', index === 2);
+      if (index === 2) step.setAttribute('aria-current', 'step');
+      else step.removeAttribute('aria-current');
+    });
     profileLayout.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
@@ -195,9 +375,6 @@ document.addEventListener('DOMContentLoaded', () => {
     field.addEventListener(field.type === 'checkbox' || field.type === 'file' ? 'change' : 'input', saveProfileAutomatically);
   });
 
-  profileForm?.querySelectorAll('[data-carousel-step]').forEach(button => {
-    button.addEventListener('click', () => showProfileStep(Number(button.dataset.carouselStep)));
-  });
   profileForm?.querySelector('[data-carousel-prev]')?.addEventListener('click', () => {
     const currentSlide = Number(profileForm.querySelector('[data-carousel-slide].is-active')?.dataset.carouselSlide || 0);
     showProfileStep(Math.max(0, currentSlide - 1));
@@ -213,7 +390,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (slideNumber === 0) showProfileStep(1);
     else showProjectsStep();
   });
-  profileForm?.querySelector('[data-show-project-step]')?.addEventListener('click', showProjectsStep);
   document.querySelectorAll('[data-show-profile-step]').forEach(button => {
     button.addEventListener('click', () => showProfileStep(Number(button.dataset.showProfileStep)));
   });
@@ -254,7 +430,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('preview-skills');
     if (!container) return;
     container.replaceChildren();
-    value('competences').split(',').map(s => s.trim()).filter(Boolean).slice(0, 14).forEach(skill => {
+    value('competences').split(/[\n,]+/).map(s => s.trim()).filter(Boolean).slice(0, 14).forEach(skill => {
       const tag = document.createElement('span');
       tag.textContent = skill;
       container.appendChild(tag);
@@ -263,7 +439,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const updateExtra = () => {
     const langs = value('langues');
     const interests = value('centre_interet');
-    setText('preview-extra', [langs, interests].filter(Boolean).join(' · '), 'Vos langues et centres d’intérêt apparaîtront ici.');
+    const formatList = text => text.split(/[\n,]+/).map(item => item.trim()).filter(Boolean).join(' · ');
+    const extraParts = [];
+    if (langs) extraParts.push(`Langues : ${formatList(langs)}`);
+    if (interests) extraParts.push(`Loisirs : ${formatList(interests)}`);
+    setText('preview-extra', extraParts.join('\n'), 'Vos langues et centres d’intérêt apparaîtront ici.');
   };
   const updateCv = file => {
     const container = document.getElementById('preview-cv');
@@ -309,7 +489,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     updateSkills(); updateExtra();
   };
-  form.querySelectorAll('input:not([type=file]), textarea').forEach(el => el.addEventListener('input', update));
+  form.querySelectorAll('input:not([type=file]), textarea').forEach(el => {
+    el.addEventListener('input', update);
+    el.addEventListener('change', update);
+  });
   form.querySelector('[name="photo"]')?.addEventListener('change', () => updateImage('photo', 'preview-photo'));
   form.querySelector('[name="cover_photo"]')?.addEventListener('change', () => updateImage('cover_photo', 'preview-cover', true));
   form.querySelector('[name="cv"]')?.addEventListener('change', event => updateCv(event.target.files?.[0] || null));
@@ -368,6 +551,7 @@ revealTargets.forEach((element, index) => {
   revealObserver.observe(element);
 });
 
+<<<<<<< HEAD
 
 // menu burgeer
 
@@ -381,3 +565,5 @@ menuburger.addEventListener('click', () => {
 })
 
 
+=======
+>>>>>>> 1da3a5ae72a0207ca9cf74fdbf6e42a15e82e66e
