@@ -73,7 +73,41 @@ document.addEventListener('DOMContentLoaded', () => {
           if (!itemsContainer.children.length) addRepeaterRow();
           itemsContainer.querySelector('[data-profile-repeat-field]')?.dispatchEvent(new Event('change', { bubbles: true }));
         });
-        row.append(input, remove);
+        if (repeater.dataset.profileRepeater === 'certifications') {
+          row.classList.add('profile-repeat-row-with-media');
+          const media = document.createElement('div');
+          media.className = 'profile-repeat-media';
+          const fileLabel = document.createElement('label');
+          fileLabel.className = 'profile-repeat-file';
+          fileLabel.innerHTML = '<i class="fa-solid fa-image"></i><span>Ajouter une image</span>';
+          const fileInput = document.createElement('input');
+          fileInput.type = 'file';
+          fileInput.name = 'certification_images[]';
+          fileInput.accept = 'image/jpeg,image/png,image/webp';
+          const preview = document.createElement('img');
+          preview.className = 'profile-repeat-media-preview';
+          preview.alt = 'Aperçu du diplôme ou certificat';
+          preview.hidden = true;
+          fileInput.addEventListener('change', () => {
+            const file = fileInput.files?.[0];
+            if (!file) {
+              preview.hidden = true;
+              preview.removeAttribute('src');
+              return;
+            }
+            const reader = new FileReader();
+            reader.onload = () => {
+              preview.src = String(reader.result);
+              preview.hidden = false;
+            };
+            reader.readAsDataURL(file);
+          });
+          fileLabel.appendChild(fileInput);
+          media.append(fileLabel, preview);
+          row.append(input, media, remove);
+        } else {
+          row.append(input, remove);
+        }
         itemsContainer.appendChild(row);
       };
 
