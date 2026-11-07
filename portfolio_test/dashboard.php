@@ -412,7 +412,7 @@ $dashboardGreeting = 'Bonjour';
                             <div class="profile-repeat-items"></div>
                             <input type="hidden" name="experience" value="<?= e($u['experience'] ?? '') ?>">
                         </div>
-                        <div class="profile-repeater" data-profile-repeater="certifications" data-placeholder="Ex. Certification développeur web — Organisation — 2024">
+                        <div class="profile-repeater" data-profile-repeater="certifications" data-placeholder="Légende du diplôme ou certificat — Ex. Certification développeur web — 2024">
                             <div class="profile-repeater-heading">
                                 <div><strong>Certifications et distinctions</strong><span>Ajoutez chaque certificat, prix ou distinction séparément.</span></div>
                                 <button type="button" class="profile-repeat-add" data-add-profile-item aria-label="Ajouter une certification"><i class="fa-solid fa-plus"></i></button>

@@ -3489,6 +3489,58 @@ body {
   min-width: 0;
 }
 
+.profile-repeat-row-with-media {
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 220px) 38px;
+  align-items: start;
+}
+
+.profile-repeat-media {
+  display: grid;
+  gap: 8px;
+}
+
+.profile-repeat-file {
+  position: relative;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  overflow: hidden;
+  border: 1px dashed #90afe1;
+  border-radius: 10px;
+  color: #245eaa;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.profile-repeat-file input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.profile-repeat-media-preview {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #dbe3ef;
+  background: #fff;
+}
+
+@media (max-width: 700px) {
+  .profile-repeat-row-with-media {
+    grid-template-columns: minmax(0, 1fr) 38px;
+  }
+
+  .profile-repeat-media { grid-column: 1 / -1; grid-row: 2; }
+}
+
 @media (max-width: 520px) {
   .profile-repeater { padding: 13px; }
   .profile-repeat-row { grid-template-columns: minmax(0, 1fr) 36px; }
