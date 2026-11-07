@@ -125,7 +125,7 @@
             <?php if ($currentHeaderPage === 'apropos.php' || $currentHeaderPage === 'dashboard.php'): ?>
                 <a href="index.php"> Accueil</a>
             <?php else: ?>
-                <a href="apropos.php"> À propos</a>
+                <a href="apropos.php" class="about"> À propos</a>
             <?php endif; ?>
 
             <?php if (!empty($_SESSION['user_id'])): ?>
