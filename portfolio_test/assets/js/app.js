@@ -1,11 +1,63 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const profilePhoneForm = document.getElementById('portfolio-profile-form');
+  const phoneCode = profilePhoneForm?.querySelector('[name="indicatif_telephone"]');
+  const phoneLocal = profilePhoneForm?.querySelector('[name="telephone_local"]');
+  const phoneCustomCode = profilePhoneForm?.querySelector('[name="indicatif_personnalise"]');
+  const phoneValue = profilePhoneForm?.querySelector('[name="telephone"]');
+
+  const syncProfilePhone = () => {
+    if (!phoneCode || !phoneLocal || !phoneValue) return;
+    const localNumber = phoneLocal.value.replace(/[^0-9]/g, '').replace(/^0/, '');
+    const useCustomCode = phoneCode.value === 'other';
+    let prefix = phoneCode.value;
+    if (useCustomCode && phoneCustomCode) {
+      prefix = phoneCustomCode.value.trim().replace(/[^+0-9]/g, '');
+      if (prefix && !prefix.startsWith('+')) prefix = `+${prefix}`;
+    }
+    phoneCustomCode?.toggleAttribute('hidden', !useCustomCode);
+    phoneCustomCode?.closest('.phone-input-group')?.toggleAttribute('data-custom-code', useCustomCode);
+    phoneValue.value = localNumber ? `${prefix}${localNumber}` : phoneValue.value;
+  };
+
+  if (phoneCode && phoneLocal && phoneValue) {
+    const savedPhone = phoneValue.value.trim();
+    if (/^\+/.test(savedPhone)) {
+      const matchingCode = Array.from(phoneCode.options)
+        .filter(option => option.value !== 'other')
+        .find(option => savedPhone.startsWith(option.value));
+      if (matchingCode) {
+        phoneCode.value = matchingCode.value;
+        phoneLocal.value = savedPhone.slice(matchingCode.value.length);
+      } else {
+        phoneCode.value = 'other';
+        const codeMatch = savedPhone.match(/^\+\d{1,4}/);
+        if (phoneCustomCode) phoneCustomCode.value = codeMatch?.[0] || '';
+        phoneLocal.value = codeMatch ? savedPhone.slice(codeMatch[0].length) : savedPhone;
+      }
+    } else {
+      phoneLocal.value = savedPhone;
+    }
+    phoneCode.addEventListener('change', syncProfilePhone);
+    phoneLocal.addEventListener('input', syncProfilePhone);
+    phoneCustomCode?.addEventListener('input', syncProfilePhone);
+    syncProfilePhone();
+  }
+
+  profilePhoneForm?.addEventListener('submit', syncProfilePhone);
+
+  const dashboardGreeting = document.querySelector('.dashboard-greeting');
+  const updateDashboardGreeting = () => {
+    if (!dashboardGreeting) return;
+    const hour = new Date().getHours();
+    dashboardGreeting.textContent = hour >= 6 && hour < 18 ? 'Bonjour' : 'Bonsoir';
+  };
+  updateDashboardGreeting();
+  window.setInterval(updateDashboardGreeting, 60000);
+
   const burgerButton = document.querySelector('.menu-burger');
   const mobileMenu = document.querySelector('.navlinks');
-  const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
-
   const setMobileMenu = isOpen => {
     mobileMenu?.classList.toggle('mobile-menu', isOpen);
-    mobileMenuOverlay?.classList.toggle('is-visible', isOpen);
     burgerButton?.classList.toggle('is-open', isOpen);
     document.body.classList.toggle('menu-open', isOpen);
     burgerButton?.setAttribute('aria-expanded', String(isOpen));
@@ -17,8 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const isOpen = !mobileMenu?.classList.contains('mobile-menu');
     setMobileMenu(isOpen);
   });
-
-  mobileMenuOverlay?.addEventListener('click', () => setMobileMenu(false));
 
   const closeMobileMenu = () => setMobileMenu(false);
 
@@ -155,6 +205,11 @@ document.addEventListener('DOMContentLoaded', () => {
     profileEditor.hidden = true;
     livePreview.hidden = false;
     projectsSlide.hidden = false;
+    profileForm.querySelectorAll('[data-carousel-step]').forEach((step, index) => {
+      step.classList.toggle('is-active', index === 2);
+      if (index === 2) step.setAttribute('aria-current', 'step');
+      else step.removeAttribute('aria-current');
+    });
     profileLayout.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
@@ -195,9 +250,6 @@ document.addEventListener('DOMContentLoaded', () => {
     field.addEventListener(field.type === 'checkbox' || field.type === 'file' ? 'change' : 'input', saveProfileAutomatically);
   });
 
-  profileForm?.querySelectorAll('[data-carousel-step]').forEach(button => {
-    button.addEventListener('click', () => showProfileStep(Number(button.dataset.carouselStep)));
-  });
   profileForm?.querySelector('[data-carousel-prev]')?.addEventListener('click', () => {
     const currentSlide = Number(profileForm.querySelector('[data-carousel-slide].is-active')?.dataset.carouselSlide || 0);
     showProfileStep(Math.max(0, currentSlide - 1));
@@ -213,7 +265,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (slideNumber === 0) showProfileStep(1);
     else showProjectsStep();
   });
-  profileForm?.querySelector('[data-show-project-step]')?.addEventListener('click', showProjectsStep);
   document.querySelectorAll('[data-show-profile-step]').forEach(button => {
     button.addEventListener('click', () => showProfileStep(Number(button.dataset.showProfileStep)));
   });

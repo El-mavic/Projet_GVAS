@@ -31,7 +31,7 @@
             </a>
 
             <a href="tel:+242064201415" class="box2">
-                <i class="fa-solid fa-phone"></i> +242 06 420 14 15
+                <i class="fa-solid fa-phone"></i> (+242) 06 420 14 15
             </a>
 
             <a class="box3">

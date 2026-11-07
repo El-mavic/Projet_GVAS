@@ -173,12 +173,14 @@ $_SESSION['csrf'] = bin2hex(random_bytes(32));
 $pageTitle = 'Mon espace';
 require 'includes/header.php';
 ?>
+<?php
+// Le texte initial évite un affichage vide avant le réglage JavaScript avec l'heure du navigateur.
+$dashboardGreeting = 'Bonjour';
+?>
+    <h1 class="section-kicker" style="font-size: 25px; margin: 3px;">VOTRE ESPACE PERSONNEL</h1>
 
 <section class="dashboard-intro">
-
-    <span class="section-kicker">VOTRE ESPACE PERSONNEL</span>
-
-    <h1>Bonjour <?= e($u['nom']) ?> </h1>
+    <h1><span class="dashboard-greeting"><?= e($dashboardGreeting) ?></span> <?= e($u['nom']) ?> <span> !</span> </h1>
 
     <p>Complétez votre profil, ajoutez votre CV et présentez vos réalisations.</p>
 
@@ -238,15 +240,15 @@ require 'includes/header.php';
             <input type="hidden" name="action" value="save_profile">
 
             <div class="portfolio-carousel-progress" aria-label="Étapes du formulaire">
-                <button type="button" class="carousel-step is-active" data-carousel-step="0" aria-current="step">
+                <div class="carousel-step is-active" data-carousel-step="0" aria-current="step">
                     <span>1</span> Identité
-                </button>
-                <button type="button" class="carousel-step" data-carousel-step="1">
+                </div>
+                <div class="carousel-step" data-carousel-step="1">
                     <span>2</span> Formation & compétences
-                </button>
-                <button type="button" class="carousel-step" data-show-project-step>
+                </div>
+                <div class="carousel-step" data-carousel-step="2">
                     <span>3</span> Projets
-                </button>
+                </div>
             </div>
 
             <div class="portfolio-carousel-slides">
@@ -274,7 +276,22 @@ require 'includes/header.php';
                     </label>
                     <div class="form-two">
                         <label>Téléphone
-                            <input type="tel" name="telephone" value="<?= e($u['telephone'] ?? '') ?>">
+                            <span class="phone-input-group">
+                                <select name="indicatif_telephone" class="phone-country-code" aria-label="Indicatif téléphonique">
+                                    <option value="+242">🇨🇬 +242</option>
+                                    <option value="+33">🇫🇷 +33</option>
+                                    <option value="+237">🇨🇲 +237</option>
+                                    <option value="+32">🇧🇪 +32</option>
+                                    <option value="+221">🇸🇳 +221</option>
+                                    <option value="+225">🇨🇮 +225</option>
+                                    <option value="+1">🇨🇦 +1</option>
+                                    <option value="+1">🇺🇸 +1</option>
+                                    <option value="other">Autre indicatif</option>
+                                </select>
+                                <input type="tel" name="indicatif_personnalise" class="phone-custom-code" inputmode="tel" autocomplete="tel-country-code" placeholder="Ex. +44" aria-label="Indicatif personnalisé" hidden>
+                                <input type="tel" name="telephone_local" inputmode="tel" autocomplete="tel-national" placeholder="06 420 14 15" value="">
+                                <input type="hidden" name="telephone" value="<?= e($u['telephone'] ?? '') ?>">
+                            </span>
                         </label>
                         <label>Ville / pays
                             <input name="localisation" value="<?= e($u['localisation'] ?? '') ?>">
@@ -352,10 +369,32 @@ require 'includes/header.php';
                     </label>
                     <div class="form-two">
                         <label>Langues
-                            <input name="langues" placeholder="Français, anglais..." value="<?= e($u['langues'] ?? '') ?>">
+                            <input name="langues" list="langues-suggestions" placeholder="Choisissez ou saisissez une langue" value="<?= e($u['langues'] ?? '') ?>">
+                            <datalist id="langues-suggestions">
+                                <option value="Français"></option>
+                                <option value="Anglais"></option>
+                                <option value="Espagnol"></option>
+                                <option value="Allemand"></option>
+                                <option value="Portuguais"></option>
+                                <option value="Italien"></option>
+                                <option value="Arabe"></option>
+                                <option value="Lingala"></option>
+                                <option value="Chinois"></option>
+                            </datalist>
                         </label>
                         <label>Centres d’intérêt
-                            <input name="centre_interet" value="<?= e($u['centre_interet'] ?? '') ?>">
+                            <input name="centre_interet" list="interets-suggestions" placeholder="Choisissez ou saisissez vos loisirs" value="<?= e($u['centre_interet'] ?? '') ?>">
+                            <datalist id="interets-suggestions">
+                                <option value="Lecture"></option>
+                                <option value="Musique"></option>
+                                <option value="Sport"></option>
+                                <option value="Voyages"></option>
+                                <option value="Photographie"></option>
+                                <option value="Programmation"></option>
+                                <option value="Cuisine"></option>
+                                <option value="Art et dessin"></option>
+                                <option value="Jeux vidéo"></option>
+                            </datalist>
                         </label>
                     </div>
                     <div class="autosave-status" data-autosave-status role="status" aria-live="polite">
@@ -561,7 +600,7 @@ require 'includes/header.php';
         <?php if (($u['payment_status'] ?? 'unpaid') !== 'paid'): ?>
             <a class="button-primary projects-publish-payment" href="paiement.php">
                 <i class="fa-solid fa-lock"></i>
-                Mettre mon portfolio en ligne
+                Publier mon portfolio en ligne
             </a>
         <?php endif; ?>
     </div>
