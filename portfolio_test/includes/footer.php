@@ -10,6 +10,10 @@
                 <i class="fa-solid fa-house"></i> Accueil
             </a>
 
+            <a href="apropos.php">
+                <i class="fa-solid fa-circle-info"></i> À propos
+            </a>
+
             <div class="footer-login-menu">
                 <a href="login.php" class="footer-login-link">
                     <i class="fa-solid fa-right-to-bracket"></i> Connexion
@@ -40,7 +44,7 @@
 
     <div class="footer-bottom">
        <div class="footer-bottom-text">
-             © <?= date('Y') ?> Mon Portfolio. Tous droits réservés.
+             © <?= date('Y') ?> <strong>Profolio</strong> — Une création de l’équipe BHS.
         </div>
     </div>
 

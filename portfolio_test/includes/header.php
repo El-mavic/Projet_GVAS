@@ -30,34 +30,49 @@
             <span class="name">Profolio</span>
         </div>
 
-        <div class="navlinks">
+        <div class="navlinks" id="navlinks-menu">
+            <span class="mobile-menu-title">Navigation</span>
             <ul>
-
-                <?php if (basename($_SERVER['PHP_SELF']) === 'index.php'): ?>
-                    <li>
-                        <a href="admin_login.php" class="nav-cta">
-                            <i class="fas fa-user-shield"></i>
-                        </a>
+                <li class="mobile-menu-home<?= basename($_SERVER['PHP_SELF']) === 'index.php' ? ' is-active' : '' ?>">
+                    <a href="index.php"><i class="fa-solid fa-house"></i> Accueil</a>
+                </li>
+                <li class="mobile-menu-about<?= basename($_SERVER['PHP_SELF']) === 'apropos.php' ? ' is-active' : '' ?>">
+                    <a href="apropos.php"><i class="fa-solid fa-circle-info"></i> À propos</a>
+                </li>
+                <?php if (!empty($_SESSION['user_id'])): ?>
+                    <?php if (basename($_SERVER['PHP_SELF']) === 'dashboard.php'): ?>
+                        <li class="mobile-menu-payment">
+                            <a href="dashboard.php#paiement" data-dashboard-panel="payment"><i class="fa-solid fa-credit-card"></i> Paiement</a>
+                        </li>
+                    <?php endif; ?>
+                    <li class="mobile-menu-space<?= basename($_SERVER['PHP_SELF']) === 'dashboard.php' ? ' is-active' : '' ?>">
+                        <a href="dashboard.php"><i class="fa-solid fa-user"></i> Mon tableau de bord</a>
+                    </li>
+                    <?php if (basename($_SERVER['PHP_SELF']) === 'dashboard.php'): ?>
+                        <li class="mobile-menu-danger">
+                            <a href="dashboard.php#supprimer-compte" data-dashboard-panel="danger"><i class="fa-solid fa-shield-halved"></i> Zone sensible</a>
+                        </li>
+                    <?php endif; ?>
+                    <li class="mobile-menu-session">
+                        <a href="logout.php" class="nav-cta"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</a>
+                    </li>
+                <?php else: ?>
+                    <li class="mobile-menu-session">
+                        <a href="login.php"><i class="fa-solid fa-right-to-bracket"></i> Connexion</a>
+                    </li>
+                    <li class="mobile-menu-register">
+                        <a href="register.php" class="nav-cta"><i class="fa-solid fa-user-plus"></i> Créer un compte</a>
                     </li>
                 <?php endif; ?>
-
-                <?php if (!empty($_SESSION['user_id'])): ?>
-
-                    <li><a href="dashboard.php">Mon espace</a></li>
-                    <li><a href="logout.php" class="nav-cta">Déconnexion</a></li>
-
-                <?php else: ?>
-
-                    <li><a href="login.php">Connexion</a></li>
-                    <li><a href="register.php" class="nav-cta">Créer</a></li>
-
-                <?php endif; ?>
-
             </ul>
         </div>
-        <!-- Images du bouton burger -->
-        <img src="../Mes_images/burger.png" alt="menu-burger" class="menu-burger">
+        <button class="menu-burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navlinks-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
+    <button class="mobile-menu-overlay" type="button" aria-label="Fermer le menu"></button>
 
 
 
@@ -74,6 +89,7 @@
         </div>
         <nav class="nav">
 
+            <a href="apropos.php"> À propos</a>
 
             <?php if (!empty($_SESSION['user_id'])): ?>
 
