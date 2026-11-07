@@ -1,4 +1,72 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const setupProfileRepeaters = () => {
+    document.querySelectorAll('[data-profile-repeater]').forEach(repeater => {
+      const itemsContainer = repeater.querySelector('.profile-repeat-items');
+      const hiddenValue = repeater.querySelector('input[type="hidden"]');
+      const placeholder = repeater.dataset.placeholder || '';
+      const suggestions = itemsContainer.dataset.repeatSuggestions?.split(',').map(value => value.trim()).filter(Boolean) || [];
+      if (!itemsContainer || !hiddenValue) return;
+
+      const syncRepeater = () => {
+        const values = Array.from(itemsContainer.querySelectorAll('[data-profile-repeat-field]'))
+          .map(input => input.value.trim())
+          .filter(Boolean);
+        hiddenValue.value = values.join('\n');
+      };
+
+      const addRepeaterRow = (value = '') => {
+        const row = document.createElement('div');
+        row.className = 'profile-repeat-row';
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.dataset.profileRepeatField = '';
+        input.placeholder = placeholder;
+        input.value = value;
+        input.autocomplete = 'off';
+        if (suggestions.length) {
+          const suggestionsId = `${repeater.dataset.profileRepeater}-suggestions-${Math.random().toString(36).slice(2)}`;
+          input.setAttribute('list', suggestionsId);
+          const datalist = document.createElement('datalist');
+          datalist.id = suggestionsId;
+          suggestions.forEach(suggestion => {
+            const option = document.createElement('option');
+            option.value = suggestion;
+            datalist.appendChild(option);
+          });
+          row.appendChild(datalist);
+        }
+        const remove = document.createElement('button');
+        remove.type = 'button';
+        remove.className = 'profile-repeat-remove';
+        remove.setAttribute('aria-label', 'Supprimer cet élément');
+        remove.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+        input.addEventListener('input', () => {
+          syncRepeater();
+          input.dispatchEvent(new Event('change', { bubbles: true }));
+        });
+        remove.addEventListener('click', () => {
+          row.remove();
+          syncRepeater();
+          if (!itemsContainer.children.length) addRepeaterRow();
+          itemsContainer.querySelector('[data-profile-repeat-field]')?.dispatchEvent(new Event('change', { bubbles: true }));
+        });
+        row.append(input, remove);
+        itemsContainer.appendChild(row);
+      };
+
+      const existingSeparator = ['langues', 'centre_interet'].includes(repeater.dataset.profileRepeater) ? /[\n,]+/ : /\n+/;
+      const existingValues = hiddenValue.value.split(existingSeparator).map(value => value.trim()).filter(Boolean);
+      existingValues.forEach(value => addRepeaterRow(value));
+      if (!itemsContainer.children.length) addRepeaterRow();
+
+      repeater.querySelector('[data-add-profile-item]')?.addEventListener('click', () => {
+        addRepeaterRow();
+        itemsContainer.lastElementChild?.querySelector('input')?.focus();
+      });
+    });
+  };
+  setupProfileRepeaters();
+
   const profilePhoneForm = document.getElementById('portfolio-profile-form');
   const phoneCode = profilePhoneForm?.querySelector('[name="indicatif_telephone"]');
   const phoneLocal = profilePhoneForm?.querySelector('[name="telephone_local"]');
@@ -360,7 +428,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     updateSkills(); updateExtra();
   };
-  form.querySelectorAll('input:not([type=file]), textarea').forEach(el => el.addEventListener('input', update));
+  form.querySelectorAll('input:not([type=file]), textarea').forEach(el => {
+    el.addEventListener('input', update);
+    el.addEventListener('change', update);
+  });
   form.querySelector('[name="photo"]')?.addEventListener('change', () => updateImage('photo', 'preview-photo'));
   form.querySelector('[name="cover_photo"]')?.addEventListener('change', () => updateImage('cover_photo', 'preview-cover', true));
   form.querySelector('[name="cv"]')?.addEventListener('change', event => updateCv(event.target.files?.[0] || null));
@@ -419,15 +490,3 @@ revealTargets.forEach((element, index) => {
   revealObserver.observe(element);
 });
 
-// menu burgeer
-
-
-const menuburger = document.querySelector(".menu-burger")
-const navlinks = document.querySelector(".navlinks")
-menuburger.addEventListener('click', () => {
-  navlinks.classList.toggle('mobile-menu')
-  document.body.classList.toggle("menu-open");
-
-})
-
- 
