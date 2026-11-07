@@ -368,7 +368,7 @@ revealTargets.forEach((element, index) => {
   revealObserver.observe(element);
 });
 
-<<<<<<< HEAD
+
 // menu burgeer
 
 
@@ -380,6 +380,4 @@ menuburger.addEventListener('click', () => {
 
 })
 
-=======
- 
->>>>>>> 60cbdef2f1fb4c056bead0162e1fc90c1b9ab033
+
