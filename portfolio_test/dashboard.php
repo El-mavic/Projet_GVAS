@@ -299,6 +299,7 @@ $dashboardGreeting = 'Bonjour';
                     </div>
 
                     <h4 class="form-section-title">Photo de profil, couverture et CV</h4>
+                    <div class="portfolio-media-upload-grid">
                     <?php if (!empty($u['photo'])): ?>
                         <div class="upload-preview">
                             <img src="<?= e($u['photo']) ?>" alt="Photo de profil actuelle">
@@ -327,14 +328,28 @@ $dashboardGreeting = 'Bonjour';
                         <input type="file" name="cv" accept=".pdf,.doc,.docx">
                         <small>Laissez vide pour conserver le CV actuel.</small>
                     </label>
+                    </div>
 
                     <h4 class="form-section-title">Liens professionnels</h4>
-                    <label>Site web
-                        <input type="url" name="site_web" placeholder="https://..." value="<?= e($u['site_web'] ?? '') ?>">
-                    </label>
-                    <label>LinkedIn
-                        <input type="url" name="linkedin" placeholder="https://linkedin.com/in/..." value="<?= e($u['linkedin'] ?? '') ?>">
-                    </label>
+                    <div class="profile-links-grid">
+                        <label><i class="fa-solid fa-globe"></i> Site web
+                            <input type="url" name="site_web" placeholder="https://..." value="<?= e($u['site_web'] ?? '') ?>">
+                        </label>
+                        <label><i class="fab fa-linkedin"></i> LinkedIn
+                            <input type="url" name="linkedin" placeholder="https://linkedin.com/in/..." value="<?= e($u['linkedin'] ?? '') ?>">
+                        </label>
+                        <label><i class="fab fa-github"></i> GitHub <span class="muted">(optionnel)</span>
+                            <input type="url" name="github" placeholder="https://github.com/votre-profil">
+                        </label>
+                    </div>
+                    <div class="profile-repeater profile-professional-links" data-profile-repeater="liens_professionnels" data-input-type="url" data-placeholder="https://autre-profil-professionnel.com">
+                        <div class="profile-repeater-heading">
+                            <div><strong>Autres liens professionnels</strong><span>Ajoutez autant de liens utiles que nécessaire.</span></div>
+                            <button type="button" class="profile-repeat-add" data-add-profile-item aria-label="Ajouter un lien professionnel"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <div class="profile-repeat-items"></div>
+                        <input type="hidden" name="liens_professionnels" value="">
+                    </div>
                     <?php if (($u['payment_status'] ?? 'unpaid') === 'paid'): ?>
                         <label class="checkbox-label">
                             <input type="checkbox" name="public" value="1" <?= !empty($u['public']) ? 'checked' : '' ?>>
@@ -355,9 +370,14 @@ $dashboardGreeting = 'Bonjour';
                         </div>
                     </div>
 
-                    <label>Compétences <span class="muted">(séparées par des virgules)</span>
-                        <input name="competences" placeholder="PHP, gestion de projet, design..." value="<?= e($u['competences'] ?? '') ?>">
-                    </label>
+                    <div class="profile-repeater" data-profile-repeater="competences" data-placeholder="Ex. PHP, gestion de projet, design graphique">
+                        <div class="profile-repeater-heading">
+                            <div><strong>Compétences</strong><span>Ajoutez chaque compétence séparément.</span></div>
+                            <button type="button" class="profile-repeat-add" data-add-profile-item aria-label="Ajouter une compétence"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <div class="profile-repeat-items"></div>
+                        <input type="hidden" name="competences" value="<?= e($u['competences'] ?? '') ?>">
+                    </div>
                     <div class="profile-repeaters">
                         <div class="profile-repeater" data-profile-repeater="formation" data-placeholder="Ex. Licence en informatique — Université de Pointe-Noire">
                             <div class="profile-repeater-heading">
@@ -593,7 +613,7 @@ $dashboardGreeting = 'Bonjour';
         </label>
 
         <button class="button-primary" type="submit">
-            + Publier cette réalisation
+            + Ajouter cette réalisation
         </button>
 
     </form>
@@ -605,7 +625,7 @@ $dashboardGreeting = 'Bonjour';
         <?php if (($u['payment_status'] ?? 'unpaid') !== 'paid'): ?>
             <a class="button-primary projects-publish-payment" href="paiement.php">
                 <i class="fa-solid fa-lock"></i>
-                Publier mon portfolio en ligne
+                <span>Publier mon portfolio en ligne</span>
             </a>
         <?php endif; ?>
     </div>

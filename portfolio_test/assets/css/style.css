@@ -1932,22 +1932,21 @@ textarea {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  min-height: 52px;
-  padding: 14px 22px;
-  border: 2px solid #fff;
-  border-radius: 14px;
+  min-height: 46px;
+  padding: 11px 18px;
+  border: 1px solid #177afc;
+  border-radius: 10px;
   color: #fff !important;
-  background: linear-gradient(135deg, #177afc, #1748c8);
-  box-shadow: 0 10px 28px rgba(23, 122, 252, 0.42), 0 0 0 5px rgba(23, 122, 252, 0.14);
-  font-size: 16px;
-  font-weight: 800;
-  text-transform: uppercase;
-  animation: publishPulse 2s ease-in-out infinite;
+  background: #177afc;
+  box-shadow: 0 5px 14px rgba(23, 122, 252, 0.18);
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .projects-publish-payment:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 15px 34px rgba(23, 122, 252, 0.52), 0 0 0 7px rgba(23, 122, 252, 0.18);
+  transform: translateY(-1px);
+  background: #146cd8;
+  box-shadow: 0 7px 16px rgba(23, 122, 252, 0.24);
 }
 
 @keyframes publishPulse {
@@ -3412,6 +3411,14 @@ body {
   gap: 16px;
 }
 
+[data-carousel-slide="1"] > .profile-repeater {
+  margin-bottom: 16px;
+}
+
+[data-carousel-slide="1"] > .profile-repeaters-options {
+  margin-top: 16px;
+}
+
 .profile-repeater {
   padding: 16px;
   border: 1px solid #dde7f5;
@@ -3486,6 +3493,77 @@ body {
   .profile-repeater { padding: 13px; }
   .profile-repeat-row { grid-template-columns: minmax(0, 1fr) 36px; }
   .profile-repeat-add, .profile-repeat-remove { width: 36px; height: 36px; }
+}
+
+/* Médias et liens professionnels du formulaire de portfolio */
+.portfolio-media-upload-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  align-items: stretch;
+}
+
+.portfolio-media-upload-grid > label,
+.profile-links-grid > label {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid #e0e7f1;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+}
+
+.portfolio-media-upload-grid .upload-preview,
+.portfolio-media-upload-grid .cover-preview {
+  grid-row: auto;
+}
+
+.portfolio-media-upload-grid input[type="file"] {
+  width: 100%;
+}
+
+.profile-links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.profile-professional-links {
+  margin-top: 14px;
+}
+
+.portfolio-carousel-actions > button,
+.projects-carousel-actions > button,
+.projects-carousel-actions > a {
+  min-width: 145px;
+  min-height: 46px;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-carousel-actions > button {
+  display: inline-flex;
+}
+
+@media (max-width: 900px) {
+  .portfolio-media-upload-grid,
+  .profile-links-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-media-upload-grid,
+  .profile-links-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-carousel-actions > button,
+  .projects-carousel-actions > button,
+  .projects-carousel-actions > a {
+    width: 100%;
+  }
 }
 
 /* Mise en page professionnelle de l'éditeur de portfolio */

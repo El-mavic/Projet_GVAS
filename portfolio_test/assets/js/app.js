@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const row = document.createElement('div');
         row.className = 'profile-repeat-row';
         const input = document.createElement('input');
-        input.type = 'text';
+        input.type = repeater.dataset.inputType === 'url' ? 'url' : 'text';
         input.dataset.profileRepeatField = '';
         input.placeholder = placeholder;
         input.value = value;
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         itemsContainer.appendChild(row);
       };
 
-      const existingSeparator = ['langues', 'centre_interet'].includes(repeater.dataset.profileRepeater) ? /[\n,]+/ : /\n+/;
+      const existingSeparator = ['langues', 'centre_interet', 'competences'].includes(repeater.dataset.profileRepeater) ? /[\n,]+/ : /\n+/;
       const existingValues = hiddenValue.value.split(existingSeparator).map(value => value.trim()).filter(Boolean);
       existingValues.forEach(value => addRepeaterRow(value));
       if (!itemsContainer.children.length) addRepeaterRow();
@@ -373,7 +373,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('preview-skills');
     if (!container) return;
     container.replaceChildren();
-    value('competences').split(',').map(s => s.trim()).filter(Boolean).slice(0, 14).forEach(skill => {
+    value('competences').split(/[\n,]+/).map(s => s.trim()).filter(Boolean).slice(0, 14).forEach(skill => {
       const tag = document.createElement('span');
       tag.textContent = skill;
       container.appendChild(tag);
@@ -382,7 +382,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const updateExtra = () => {
     const langs = value('langues');
     const interests = value('centre_interet');
-    setText('preview-extra', [langs, interests].filter(Boolean).join(' · '), 'Vos langues et centres d’intérêt apparaîtront ici.');
+    const formatList = text => text.split(/[\n,]+/).map(item => item.trim()).filter(Boolean).join(' · ');
+    const extraParts = [];
+    if (langs) extraParts.push(`Langues : ${formatList(langs)}`);
+    if (interests) extraParts.push(`Loisirs : ${formatList(interests)}`);
+    setText('preview-extra', extraParts.join('\n'), 'Vos langues et centres d’intérêt apparaîtront ici.');
   };
   const updateCv = file => {
     const container = document.getElementById('preview-cv');
