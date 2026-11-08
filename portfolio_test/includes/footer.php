@@ -1,16 +1,16 @@
 </main>
 
-<footer class="footer">
+<footer class="footer" id="footer">
 
     <div class="footer-container">
 
         <div class="footer-column">
 
-            <a href="index.php">
+            <a href="index.php" class="footer-login-link">
                 <i class="fa-solid fa-house"></i> Accueil
             </a>
 
-            <a href="apropos.php">
+            <a href="apropos.php" class="footer-login-link">
                 <i class="fa-solid fa-circle-info"></i> À propos
             </a>
 
@@ -43,8 +43,8 @@
     </div>
 
     <div class="footer-bottom">
-       <div class="footer-bottom-text">
-             © <?= date('Y') ?> <strong>Profolio</strong> — Une création de l’équipe BHS.
+        <div class="footer-bottom-text">
+            © <?= date('Y') ?> <strong>Profolio</strong> — Une création de l’équipe BHS.
         </div>
     </div>
 

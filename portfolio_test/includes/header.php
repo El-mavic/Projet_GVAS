@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <!-- Référencement et partage sur les réseaux sociaux -->
+    <!-- Référencementt et partage sur les réseaux sociaux -->
     <meta name="description" content="Recherchez des professionnels et découvrez leurs portfolios sur Profolio.">
     <meta name="keywords" content="Profolio, portfolio professionnel, talents, CV, professionnels, projets">
     <meta name="author" content="Équipe BHS">

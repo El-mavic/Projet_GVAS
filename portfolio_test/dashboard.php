@@ -447,10 +447,10 @@ $dashboardGreeting = 'Bonjour';
 
             <div class="portfolio-carousel-actions">
                 <button class="button-secondary carousel-prev" type="button" data-carousel-prev disabled>
-                    ← Précédent
+                    Précédent
                 </button>
                 <button class="button-primary carousel-next" type="button" data-carousel-next>
-                    Suivant →
+                    Suivant
                 </button>
             </div>
             </form>

@@ -48,7 +48,7 @@ require 'includes/header.php';
             <span>Création de la plateforme</span>
             <strong>Équipe BHS</strong>
             <p>Profolio est une création de l’équipe BHS, conçue pour transformer les profils professionnels en opportunités concrètes.</p>
-            <a class="bhs-contact-button" href="#" aria-label="Nous contacter, portfolio BHS bientôt disponible">
+            <a class="bhs-contact-button" href="#footer" aria-label="Nous contacter, portfolio BHS bientôt disponible">
                 <i class="fa-solid fa-paper-plane"></i>
                 Nous contacter
             </a>
@@ -94,62 +94,5 @@ require 'includes/header.php';
         Commencer maintenant
         <i class="fa-solid fa-arrow-right"></i>
     </a>
-</section>
-
-<section class="public-feedback reveal" aria-labelledby="public-feedback-title">
-    <div class="public-feedback-intro">
-        <span class="section-kicker">SIGNALER OU NOUS ÉCRIRE</span>
-        <h2 id="public-feedback-title">Votre voix nous aide à améliorer Profolio</h2>
-        <p>Vous rencontrez un problème, vous avez une question ou une suggestion ? Laissez-nous un message. Nous lirons chaque signalement avec attention.</p>
-
-        <div class="public-feedback-notice">
-            <i class="fa-solid fa-shield-halved"></i>
-            <p><strong>Vous pouvez être sincère.</strong><br>Votre message reste destiné à l’équipe de gestion de Profolio.</p>
-        </div>
-    </div>
-
-    <form class="public-feedback-form" id="public-feedback-form" action="#" method="post">
-        <div class="feedback-form-row">
-            <label>
-                Nom
-                <input type="text" name="feedback_name" autocomplete="name" placeholder="Votre nom" required>
-            </label>
-            <label>
-                Adresse e-mail
-                <input type="email" name="feedback_email" autocomplete="email" placeholder="vous@exemple.com" required>
-            </label>
-        </div>
-
-        <label>
-            Objet du message
-            <select name="feedback_subject" required>
-                <option value="" selected disabled>Choisissez le type de message</option>
-                <option value="question">Question</option>
-                <option value="suggestion">Suggestion</option>
-                <option value="problem">Problème technique</option>
-                <option value="account">Compte ou connexion</option>
-                <option value="other">Autre</option>
-            </select>
-        </label>
-
-        <label>
-            Votre message
-            <textarea name="feedback_message" rows="6" maxlength="1000" placeholder="Expliquez-nous votre souci ou partagez votre suggestion…" required></textarea>
-            <span class="feedback-character-count"><span id="feedback-character-current">0</span>/1000</span>
-        </label>
-
-        <div class="feedback-form-footer">
-            <label class="feedback-consent">
-                <input type="checkbox" name="feedback_contact_consent">
-                <span>Je peux être recontacté à propos de ce message.</span>
-            </label>
-            <button class="public-feedback-submit" type="submit">
-                <span>Envoyer le message</span>
-                <i class="fa-solid fa-paper-plane"></i>
-            </button>
-        </div>
-        <p class="public-feedback-status" id="public-feedback-status" role="status" aria-live="polite"></p>
-    </form>
-</section>
 
 <?php require 'includes/footer.php'; ?>

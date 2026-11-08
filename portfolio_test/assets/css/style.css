@@ -571,12 +571,12 @@ textarea {
     right: auto;
     width: 44px;
     height: 44px;
-    padding: 10px;
+    padding: 8px;
     flex-direction: column;
     justify-content: center;
     gap: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 50%;
+    border: 0.1px solid transparent;
+    border-radius: 20%;
     background: rgba(255, 255, 255, 0.08);
     cursor: pointer;
   }
@@ -607,9 +607,11 @@ textarea {
   .navbar .navlinks {
     z-index: 1400;
     width: min(330px, 88vw);
-    height: 100dvh;
+    min-height: 60vh;
+
+    height: auto;
     margin-left: -100%;
-    padding: 112px 24px 40px;
+    padding: 20px 24px 40px;
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
@@ -619,7 +621,7 @@ textarea {
       rgba(163, 180, 206, 0.662),
       rgba(116, 127, 149, 0.786)
     );
-    border: 2px solid var(--blue)
+    border: 2px solid (blue)
   }
 
   .navbar .mobile-menu-title {
@@ -644,8 +646,8 @@ textarea {
     border-color: rgba(159, 196, 255, 0.42);
     background: linear-gradient(
       135deg,
-      rgba(23, 122, 252, 0.34),
-      rgba(255, 255, 255, 0.09)
+      rgba(53, 87, 212, 0.444)
+      rgba(255, 255, 255, 0.327)
     );
   }
 
@@ -680,15 +682,10 @@ textarea {
     text-align: center;
   }
 
-  .navbar .mobile-menu-payment {
-    background: rgba(23, 122, 252, 0.18) !important;
-    border-color: rgba(137, 190, 255, 0.32) !important;
-  }
-
   .navbar .mobile-menu-danger {
     margin-top: 18px !important;
-    border-color: rgba(248, 113, 113, 0.22) !important;
-    background: rgba(127, 29, 29, 0.22) !important;
+    border-color: rgba(159, 88, 88, 0.468) !important;
+    background: rgba(127, 29, 29, 0.484) !important;
   }
 
   .navbar .mobile-menu-session {
@@ -2048,7 +2045,7 @@ textarea {
 
 .profolio-how-it-works {
   position: relative;
-  margin: 28px 0 52px;
+  margin: 28px 0 5px;
   padding: clamp(28px, 5vw, 58px);
   overflow: hidden;
   border: 1px solid rgba(23, 122, 252, 0.16);
@@ -2652,9 +2649,18 @@ textarea {
   border-radius: 50px 50px 0 0;
 }
 
-.footer .box2 {
+.footer .box2,
+.footer .box1,
+.footer .box1 {
   border-right: 1px solid #b0ccef;
   padding: 0 10px;
+}
+
+.footer .footer-login-link{
+
+  border-left: 1px solid #b0ccef;
+  padding: 0 10px;
+
 }
 
 .footer .box1 {
@@ -2663,6 +2669,7 @@ textarea {
 }
 
 .footer .box3 {
+  border-right: 1px solid #b0ccef;
   padding: 0 10px;
 }
 
@@ -5923,7 +5930,6 @@ main.page > *:nth-child(n + 2) {
 }
 .footer .box1,
 .footer .box3 {
-  border-right: 0;
   padding: 8px 12px;
 }
 .footer-bottom .footer-bottom-text {
@@ -5938,24 +5944,7 @@ main.page > *:nth-child(n + 2) {
     background: linear-gradient(135deg, #061a3d, #0b3478) !important;
     border: 1px solid rgba(255, 255, 255, 0.12);
   }
-/* 
-  .navbar-logo {
-    position: static;
-    display: flex;
-    align-items: center;
-  }
-  .navbar-logo .pic {
-    display: grid;
-    place-items: center;
-  }
-  .navbar-logo img {
-    width: 54px;
-    height: 54px;
-    border-radius: 50%;
-  }
-  .navbar-logo .name {
-    margin-left: 10px;
-  } */
+
 }
 
 @media (min-width: 601px) and (max-width: 1100px) {
