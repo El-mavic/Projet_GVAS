@@ -543,7 +543,7 @@ const revealObserver = new IntersectionObserver(
   { threshold: 0.12 }
 );
 
-const revealTargets = document.querySelectorAll('.hero, .results-head, .join-banner, .profolio-about, .profolio-how-it-works');
+const revealTargets = document.querySelectorAll('.hero, .results-head, .join-banner, .profolio-about, .profolio-how-it-works, .about-page-hero');
 
 revealTargets.forEach((element, index) => {
   element.classList.add('reveal');
