@@ -595,9 +595,10 @@ textarea {
   .navbar .navlinks {
     z-index: 1400;
     width: min(330px, 88vw);
-    min-height: 60vh;
-
     height: auto;
+    max-height: 100dvh;
+    overflow-y: auto;
+    overscroll-behavior: auto;
     margin-left: -100%;
     padding: 20px 24px 40px;
     flex-direction: column;
@@ -613,9 +614,10 @@ textarea {
   .navbar .mobile-menu-title {
     margin-bottom: 14px;
     padding: 0 8px;
-    color: rgba(255, 255, 255, 0.72);
-    font-size: 12px;
+    color: rgb(239, 239, 245);
+    font-size: 20px;
     font-weight: 800;
+    font: bold;
     letter-spacing: 0.16em;
     text-transform: uppercase;
   }
