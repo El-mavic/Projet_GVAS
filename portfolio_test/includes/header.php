@@ -18,10 +18,10 @@
     <meta name="color-scheme" content="light">
     <meta name="format-detection" content="telephone=no">
 
-    
+
 
     <title><?= e($pageTitle) ?> — Mon Portfolio</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -42,7 +42,7 @@
 
 
     <nav class="navbar">
-        
+
         <div class="navbar-logo">
             <a href="index.php" class="pic"><img src="../Mes_images/logo1.png" alt="Profolio"></a>
             <span class="name">Profolio</span>
@@ -172,6 +172,5 @@
         </nav>
 
     </header>
-
-    <main class="page">
-        <script src="assets/js/script.js"></script>
+    <script src="assets/js/app.js" defer></script>
+    <!-- <main class="page"> -->
