@@ -88,7 +88,7 @@ textarea {
   gap: 12px;
 
   color: #ffffff;
-  font-family: "time new roman", serif;
+  font-family: cambria, serif;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -1568,7 +1568,7 @@ textarea {
 .join-banner h2,
 .editor-card h2 {
   font-size: 37px;
-  font-family: "Inter", Cochin, Georgia, Times, serif;
+  font-family: cambria, serif;
   letter-spacing: -0.035em;
   margin: 7px 0;
   color: var(--white);
@@ -1697,8 +1697,8 @@ textarea {
   background: #e7edff;
   color: #2f50bb;
   font:
-    800 25px Manrope,
-    sans-serif;
+    800 25px cambria,
+    serif;
 }
 
 .profile-content {
@@ -1707,8 +1707,8 @@ textarea {
 
 .profile-content h3 {
   font:
-    800 17px Manrope,
-    sans-serif;
+    800 17px cambria,
+    serif;
   margin: 0 0 2px;
   overflow-wrap: anywhere;
 }
@@ -1776,7 +1776,7 @@ textarea {
 
 .empty-state h3 {
   font: 800 22px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: cambria, serif;
   margin: 0;
   font-size: 22px;
 }
@@ -2253,7 +2253,7 @@ textarea {
 
 .join-banner h2 {
   margin: 5px 0 10px;
-  font-family: cambria, "times new roman", times, serif;
+  font-family: cambria, serif;
   color: #ffffff;
   font-size: clamp(21px, 2.5vw, 29px);
   font-weight: 800;
@@ -2589,43 +2589,6 @@ textarea {
     width: 100%;
     height: 100%;
   }
-
-  .footer {
-    padding: 18px 14px 8px;
-    border-radius: 26px 26px 0 0;
-  }
-
-  .footer .footer-container,
-  .footer .footer-column,
-  .footer-bottom {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .footer .footer-container {
-    gap: 14px;
-  }
-
-  .footer .footer-column {
-    width: 100%;
-    gap: 12px;
-  }
-
-  .footer a,
-  .footer .box1,
-  .footer .box2,
-  .footer .box3 {
-    width: 100%;
-    justify-content: flex-start;
-    padding: 0;
-    border-right: none;
-  }
-
-  .footer-bottom .footer-bottom-text {
-    font-size: 0.76rem;
-    line-height: 1.5;
-    padding-top: 14px;
-  }
 }
 
 /* Très petits écrans */
@@ -2662,10 +2625,8 @@ textarea {
 }
 
 .footer .footer-login-link{
-
-  border-left: 1px solid #b0ccef;
+  /* border-left: 1px solid #b0ccef; */
   padding: 0 10px;
-
 }
 
 .footer .box1 {
@@ -2804,8 +2765,8 @@ textarea {
   overflow: hidden;
   color: #3155c9;
   font:
-    800 48px Manrope,
-    sans-serif;
+    800 48px cambria,
+    serif;
 }
 
 .detail-avatar img {
@@ -2816,8 +2777,8 @@ textarea {
 
 .detail-info h1 {
   font:
-    800 clamp(28px, 4vw, 42px) Manrope,
-    sans-serif;
+    800 clamp(28px, 4vw, 42px) cambria,
+    serif;
   letter-spacing: -0.04em;
   margin: 5px 0;
 }
@@ -2886,8 +2847,8 @@ textarea {
 
 .project-card h3 {
   font:
-    800 18px Manrope,
-    sans-serif;
+    800 18px cambria,
+    serif;
   margin: 0 0 8px;
 }
 
@@ -2974,7 +2935,7 @@ body {
 /* Titre principal */
 .auth-card h1 {
   color: #10264d;
-  font-family: cambria, "times new roman", times, serif;
+  font-family: cambria, serif;
   text-align: center;
   font-size: 34px;
   font-weight: 800;
@@ -3476,8 +3437,8 @@ body {
   padding: 13px 0 8px;
   border-bottom: 1px solid var(--line);
   font:
-    800 16px Manrope,
-    sans-serif;
+    800 16px cambria,
+    serif;
   color: var(--navy);
 }
 
@@ -3488,48 +3449,25 @@ body {
 }
 
 .phone-input-group {
-  display: grid;
-  grid-template-columns: 116px minmax(0, 1fr);
-  align-items: stretch;
-  gap: 8px;
+  display: block;
 }
 
-.phone-input-group select,
-.phone-input-group input {
-  min-height: 50px;
-}
-
-.phone-input-group select {
+.phone-input-group .iti {
   width: 100%;
-  padding: 0 10px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  color: var(--navy);
-  background: #fff;
-  cursor: pointer;
 }
 
 .phone-input-group input {
   margin: 0;
+  min-height: 50px;
 }
 
-.stack-form input[list] {
-  background-image:
-    linear-gradient(45deg, transparent 50%, #177afc 50%),
-    linear-gradient(135deg, #177afc 50%, transparent 50%);
-  background-position:
-    calc(100% - 18px) 50%,
-    calc(100% - 13px) 50%;
-  background-size:
-    5px 5px,
-    5px 5px;
-  background-repeat: no-repeat;
-  padding-right: 38px;
+.stack-form input.iti__search-input {
+  padding: 8px 40px;
 }
 
-@media (max-width: 520px) {
-  .phone-input-group {
-    grid-template-columns: 108px minmax(0, 1fr);
+@media (max-width: 500px) {
+  .stack-form input.iti__search-input {
+    font-size: 16px;
   }
 }
 
@@ -3597,6 +3535,14 @@ body {
 }
 
 .profile-repeat-remove {
+  color: #64748b;
+  background: #f1f5f9;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.profile-repeat-remove:hover {
   color: #b42318;
   background: #fee4e2;
 }
@@ -3833,19 +3779,7 @@ body {
   border-bottom: 1px solid #e7edf7;
 }
 
-.phone-input-group[data-custom-code] {
-  grid-template-columns: 116px 86px minmax(0, 1fr);
-}
-
-.phone-custom-code {
-  text-align: center;
-}
-
 @media (max-width: 520px) {
-  .phone-input-group[data-custom-code] {
-    grid-template-columns: 108px 82px minmax(0, 1fr);
-  }
-
   .profile-editor-form.editor-card,
   .portfolio-live-preview {
     border-radius: 18px;
@@ -4015,7 +3949,7 @@ body {
 .detail-box h3 {
   font: 800 16px;
   margin: 13px 0 7px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: cambria, serif;
 }
 
 .detail-box p {
@@ -4357,8 +4291,8 @@ body {
   overflow: hidden;
   color: #3155c9;
   font:
-    800 30px Manrope,
-    sans-serif;
+    800 30px cambria,
+    serif;
   z-index: 2;
 }
 
@@ -4379,8 +4313,8 @@ body {
 
 .live-profile-content h3 {
   font:
-    800 21px Manrope,
-    sans-serif;
+    800 21px cambria,
+    serif;
   overflow-wrap: anywhere;
   margin: 0 0 3px;
 }
@@ -5282,11 +5216,18 @@ body {
 }
 
 .danger-button {
-  color: #b91c1c !important;
-  border-color: #fca5a5 !important;
+  color: #64748b !important;
+  border-color: #cbd5e1 !important;
+  background: #fff !important;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .danger-button:hover {
+  color: #b42318 !important;
+  border-color: #fca5a5 !important;
   background: #fef2f2 !important;
 }
 
@@ -5423,8 +5364,8 @@ body {
 
 .admin-stats article strong {
   font:
-    800 32px/1.2 Manrope,
-    sans-serif;
+    800 32px/1.2 cambria,
+    serif;
   color: var(--navy);
 }
 
@@ -5453,8 +5394,8 @@ body {
 .admin-panel-heading h2,
 .admin-security h2 {
   font:
-    800 24px Manrope,
-    sans-serif;
+    800 24px cambria,
+    serif;
   letter-spacing: -0.03em;
   margin: 6px 0;
 }
@@ -5602,8 +5543,16 @@ body {
 }
 
 .mini-danger {
-  background: #fff0ef;
-  color: #a52c25;
+  background: #f1f5f9;
+  color: #64748b;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.mini-danger:hover {
+  background: #fee4e2;
+  color: #b42318;
 }
 
 .mini-link {
@@ -5876,7 +5825,7 @@ main.page>*:nth-child(n + 2) {
 .about-page-hero h1 {
   max-width: 850px;
   margin: 0 auto;
-  font-family: "Manrope", sans-serif;
+  font-family: cambria, serif;
   font-size: clamp(36px, 6vw, 68px);
   line-height: 1.02;
   letter-spacing: -0.035em;
@@ -5945,6 +5894,11 @@ main.page>*:nth-child(n + 2) {
   justify-content: flex-end;
 }
 
+.footer .box1,
+.footer .box3 {
+  padding: 8px 12px;
+}
+
 .footer a {
   min-height: 40px;
   padding: 8px 12px;
@@ -5954,13 +5908,6 @@ main.page>*:nth-child(n + 2) {
 
 .footer a:hover {
   background: rgba(255, 255, 255, 0.08);
-}
-
-
-
-.footer .box1,
-.footer .box3 {
-  padding: 8px 12px;
 }
 
 
@@ -6018,83 +5965,93 @@ main.page>*:nth-child(n + 2) {
 
 .navbar-logo .name {
   margin-left: 10px;
+}
 
-  @media (min-width: 601px) and (max-width: 1100px) {
-    .footer {
-      padding-inline: 24px;
-    }
-
-    .footer .footer-container {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px 24px;
-    }
-
-    .footer .footer-column,
-    .footer .footer-column:last-child {
-      flex: 1 1 520px;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px 14px;
-    }
-
-    .footer a {
-      flex: 0 1 auto;
-
-    }
+@media (min-width: 614px) and (max-width: 1100px) {
+  .footer {
+    padding-inline: 24px;
   }
 
-  @media (max-width: 600px) {
-    .about-page-hero {
-      border-radius: 22px;
-    }
+  .footer .footer-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 24px;
+  }
 
-    .about-page-hero p {
-      font-size: 15px;
-    }
+  .footer .footer-column,
+  .footer .footer-column:last-child {
+    flex: 1 1 420px;
+    min-width: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 14px;
+  }
 
+  .footer a {
+    flex: 0 1 auto;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+}
 
-    .about-page-hero p {
-      font-size: 15px;
-    }
+@media (max-width: 613px) {
+  .about-page-hero {
+    border-radius: 22px;
+  }
 
-    .footer {
-      margin-top: 30px;
-      border-radius: 22px 22px 0 0;
-    }
+  .about-page-hero p {
+    font-size: 15px;
+  }
 
+  .footer {
+    margin-top: 30px;
+    padding: 12px 10px 8px;
+    border-radius: 22px 22px 0 0;
+  }
 
-    .footer {
-      padding: 12px 10px 8px;
-    }
+  .footer .footer-container {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 6px;
+  }
 
+  .footer .footer-column,
+  .footer .footer-column:last-child {
+    width: 100%;
+    min-width: 0;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2px;
+  }
 
-    .footer {
-      padding: 12px 10px 8px;
-    }
+  .footer .footer-login-menu {
+    justify-content: center;
+  }
 
-    .footer .footer-container {
-      flex-direction: column;
-      gap: 6px;
-    }
+  .footer .footer-login-link {
+    padding: 6px 8px;
+  }
 
-    .footer .footer-column,
-    .footer .footer-column:last-child {
-      width: 100%;
-      justify-content: center;
-      gap: 4px 8px;
-    }
+  .footer .box1,
+  .footer .box2,
+  .footer .box3 {
+    border-right: none;
+    padding: 6px 8px;
+  }
 
-    .footer a {
-      min-height: 34px;
-      padding: 6px 8px;
-      font-size: 12px;
-    }
+  .footer a {
+    min-height: 34px;
+    justify-content: center;
+    padding: 6px 8px;
+    font-size: 12px;
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
 
-    .footer-bottom .footer-bottom-text {
-      margin-top: 8px;
-      padding-top: 8px;
-    }
+  .footer-bottom .footer-bottom-text {
+    margin-top: 8px;
+    padding-top: 8px;
   }
 }
 

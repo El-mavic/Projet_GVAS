@@ -50,6 +50,9 @@
 
 </footer>
 
+<?php if (basename($_SERVER['PHP_SELF']) === 'dashboard.php'): ?>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@29.5.0/dist/js/intlTelInput.min.js" defer></script>
+<?php endif; ?>
 <script src="assets/js/app.js" defer></script>
 
 </body>

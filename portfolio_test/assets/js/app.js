@@ -125,50 +125,50 @@ document.addEventListener('DOMContentLoaded', () => {
   setupProfileRepeaters();
 
   const profilePhoneForm = document.getElementById('portfolio-profile-form');
-  const phoneCode = profilePhoneForm?.querySelector('[name="indicatif_telephone"]');
-  const phoneLocal = profilePhoneForm?.querySelector('[name="telephone_local"]');
-  const phoneCustomCode = profilePhoneForm?.querySelector('[name="indicatif_personnalise"]');
-  const phoneValue = profilePhoneForm?.querySelector('[name="telephone"]');
+  const phoneInput = profilePhoneForm?.querySelector('[name="telephone"]');
+  if (profilePhoneForm && phoneInput && typeof window.intlTelInput === 'function') {
+    const phoneInputInstance = window.intlTelInput(phoneInput, {
+      initialCountry: 'cg',
+      countrySearch: true,
+      countrySelectorMode: 'AUTO',
+      separateDialCode: true,
+      loadUtils: () => import('https://cdn.jsdelivr.net/npm/intl-tel-input@29.5.0/dist/js/utils.js')
+    });
 
-  const syncProfilePhone = () => {
-    if (!phoneCode || !phoneLocal || !phoneValue) return;
-    const localNumber = phoneLocal.value.replace(/[^0-9]/g, '').replace(/^0/, '');
-    const useCustomCode = phoneCode.value === 'other';
-    let prefix = phoneCode.value;
-    if (useCustomCode && phoneCustomCode) {
-      prefix = phoneCustomCode.value.trim().replace(/[^+0-9]/g, '');
-      if (prefix && !prefix.startsWith('+')) prefix = `+${prefix}`;
+    if (phoneInput.value.trim()) {
+      phoneInputInstance.setNumber(phoneInput.value.trim());
     }
-    phoneCustomCode?.toggleAttribute('hidden', !useCustomCode);
-    phoneCustomCode?.closest('.phone-input-group')?.toggleAttribute('data-custom-code', useCustomCode);
-    phoneValue.value = localNumber ? `${prefix}${localNumber}` : phoneValue.value;
-  };
 
-  if (phoneCode && phoneLocal && phoneValue) {
-    const savedPhone = phoneValue.value.trim();
-    if (/^\+/.test(savedPhone)) {
-      const matchingCode = Array.from(phoneCode.options)
-        .filter(option => option.value !== 'other')
-        .find(option => savedPhone.startsWith(option.value));
-      if (matchingCode) {
-        phoneCode.value = matchingCode.value;
-        phoneLocal.value = savedPhone.slice(matchingCode.value.length);
-      } else {
-        phoneCode.value = 'other';
-        const codeMatch = savedPhone.match(/^\+\d{1,4}/);
-        if (phoneCustomCode) phoneCustomCode.value = codeMatch?.[0] || '';
-        phoneLocal.value = codeMatch ? savedPhone.slice(codeMatch[0].length) : savedPhone;
+    profilePhoneForm.addEventListener('submit', async event => {
+      if (!phoneInput.value.trim()) return;
+
+      event.preventDefault();
+
+      try {
+        await phoneInputInstance.promise;
+        const internationalNumber = phoneInputInstance.getNumber();
+        if (internationalNumber) {
+          phoneInput.value = internationalNumber;
+        } else {
+          const digits = phoneInput.value.replace(/\D/g, '');
+          const country = phoneInputInstance.getSelectedCountry();
+          if (digits && country?.dialCode) {
+            phoneInput.value = phoneInput.value.trim().startsWith('+')
+              ? `+${digits}`
+              : `+${country.dialCode}${digits.replace(/^0/, '')}`;
+          }
+        }
+        HTMLFormElement.prototype.submit.call(profilePhoneForm);
+      } catch (error) {
+        console.error('Impossible de charger les outils de formatage du téléphone.', error);
+        window.alert('Le numéro n’a pas pu être préparé. Vérifiez votre connexion et réessayez.');
       }
-    } else {
-      phoneLocal.value = savedPhone;
-    }
-    phoneCode.addEventListener('change', syncProfilePhone);
-    phoneLocal.addEventListener('input', syncProfilePhone);
-    phoneCustomCode?.addEventListener('input', syncProfilePhone);
-    syncProfilePhone();
+    });
+  } else if (profilePhoneForm && phoneInput) {
+    const fallbackNotice = document.createElement('small');
+    fallbackNotice.textContent = 'Sélecteur indisponible. Saisissez le numéro avec son indicatif international (ex. +242).';
+    phoneInput.insertAdjacentElement('afterend', fallbackNotice);
   }
-
-  profilePhoneForm?.addEventListener('submit', syncProfilePhone);
 
   const dashboardGreeting = document.querySelector('.dashboard-greeting');
   const updateDashboardGreeting = () => {
@@ -320,7 +320,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const previousButton = profileForm.querySelector('[data-carousel-prev]');
     if (previousButton) previousButton.disabled = step === 0;
     const nextButton = profileForm.querySelector('[data-carousel-next]');
-    if (nextButton) nextButton.textContent = step === 0 ? 'Suivant →' : 'Voir les projets →';
+    if (nextButton) nextButton.textContent = step === 0 ? 'Suivant →' : 'Voir les projets';
     profileLayout.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
