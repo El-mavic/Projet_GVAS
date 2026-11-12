@@ -21,12 +21,12 @@
 
 
     <title><?= e($pageTitle) ?> — Mon Portfolio</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/test.css">
+    <?php if (basename($_SERVER['PHP_SELF']) === 'dashboard.php'): ?>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@29.5.0/dist/css/intlTelInput.css">
+    <?php endif; ?>
     <link rel="icon" type="image/png" href="../Mes_images/logo1.png">
 
 

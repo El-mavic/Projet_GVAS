@@ -277,40 +277,26 @@ $dashboardGreeting = 'Bonjour';
                     <div class="form-two">
                         <label>Téléphone
                             <span class="phone-input-group">
-                                <select name="indicatif_telephone" class="phone-country-code" aria-label="Indicatif téléphonique">
-                                    <option value="+242">🇨🇬 +242</option>
-                                    <option value="+33">🇫🇷 +33</option>
-                                    <option value="+237">🇨🇲 +237</option>
-                                    <option value="+32">🇧🇪 +32</option>
-                                    <option value="+221">🇸🇳 +221</option>
-                                    <option value="+225">🇨🇮 +225</option>
-                                    <option value="+1">🇨🇦 +1</option>
-                                    <option value="+1">🇺🇸 +1</option>
-                                    <option value="other">Autre indicatif</option>
-                                </select>
-                                <input type="tel" name="indicatif_personnalise" class="phone-custom-code" inputmode="tel" autocomplete="tel-country-code" placeholder="Ex. +44" aria-label="Indicatif personnalisé" hidden>
-                                <input type="tel" name="telephone_local" inputmode="tel" autocomplete="tel-national" placeholder="06 420 14 15" value="">
-                                <input type="hidden" name="telephone" value="<?= e($u['telephone'] ?? '') ?>">
+                                <input type="tel" name="telephone" inputmode="tel" autocomplete="tel" placeholder="+242 06 420 14 15" value="<?= e($u['telephone'] ?? '') ?>">
                             </span>
                         </label>
                         <label>Ville / pays
                             <input name="localisation" list="suggestions-localisation" autocomplete="address-level2" placeholder="Choisir ou saisir une ville, un pays" value="<?= e($u['localisation'] ?? '') ?>">
                             <datalist id="suggestions-localisation">
-                                <option value="Brazzaville, République du Congo"></option>
-                                <option value="Pointe-Noire, République du Congo"></option>
-                                <option value="Dolisie, République du Congo"></option>
-                                <option value="Nkayi, République du Congo"></option>
-                                <option value="Ouésso, République du Congo"></option>
-                                <option value="Mouyondzi, République du Congo"></option>
-                                <option value="Impfondo, République du Congo"></option>
-                                <option value="Kinshasa, République démocratique du Congo"></option>
-                                <option value="Lubumbashi, République démocratique du Congo"></option>
-                                <option value="Goma, République démocratique du Congo"></option>
-                                <option value="Libreville, Gabon"></option>
-                                <option value="Douala, Cameroun"></option>
-                                <option value="Yaoundé, Cameroun"></option>
-                                <option value="Abidjan, Côte d'Ivoire"></option>
-                                <option value="Paris, France"></option>
+                                <option value="Brazzaville"></option>
+                                <option value="Pointe-Noire"></option>
+                                <option value="Dolisie"></option>
+                                <option value="Nkayi"></option>
+                                <option value="Ouésso"></option>
+                                <option value="Mouyondzi"></option>
+                                <option value="Impfondo"></option>
+                                <option value="Kinshasa"></option>
+                                <option value="Lubumbashi"></option>
+                                <option value="Goma"></option>
+                                <option value="Gabon"></option>
+                                <option value="Cameroun"></option>
+                                <option value="Côte d'Ivoire"></option>
+                                <option value="France"></option>
                             </datalist>
                         </label>
                     </div>
@@ -637,7 +623,7 @@ $dashboardGreeting = 'Bonjour';
 
     <div class="portfolio-carousel-actions projects-carousel-actions">
         <button class="button-secondary carousel-prev" type="button" data-show-profile-step="1">
-            ← Précédent
+            Précédent
         </button>
         <?php if (($u['payment_status'] ?? 'unpaid') !== 'paid'): ?>
             <a class="button-primary projects-publish-payment" href="paiement.php">
@@ -669,7 +655,7 @@ $dashboardGreeting = 'Bonjour';
 
                         <?php if (!empty($project['lien'])): ?>
                             <a href="<?= e($project['lien']) ?>" target="_blank" rel="noopener">
-                                Ouvrir le lien ↗
+                                Ouvrir le lien
                             </a>
                         <?php endif; ?>
 
