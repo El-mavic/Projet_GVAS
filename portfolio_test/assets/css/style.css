@@ -6006,6 +6006,12 @@ main.page>*:nth-child(n + 2) {
     justify-content: center;
     gap: 2px;
   }
+.footer .footer-column:last-child a{
+  width: fit-content;
+  max-width: 100%;
+  align-self: center;
+}
+
 
   .footer .footer-login-menu {
     display: flex;
