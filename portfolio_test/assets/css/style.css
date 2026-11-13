@@ -1746,7 +1746,7 @@ textarea {
 .profile-link {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 8px;
   margin-top: 17px;
   padding: 11px 13px;
