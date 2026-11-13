@@ -5925,24 +5925,6 @@ main.page>*:nth-child(n + 2) {
     border: 1px solid rgba(255, 255, 255, 0.12);
   }
 
-  /* 
-  .navbar-logo {
-    position: static;
-    display: flex;
-    align-items: center;
-  }
-  .navbar-logo .pic {
-    display: grid;
-    place-items: center;
-  }
-  .navbar-logo img {
-    width: 54px;
-    height: 54px;
-    border-radius: 50%;
-  }
-  .navbar-logo .name {
-    margin-left: 10px;
-  } */
 }
 
 
@@ -6026,11 +6008,20 @@ main.page>*:nth-child(n + 2) {
   }
 
   .footer .footer-login-menu {
+    display: flex;
+    /* flex-direction: center; */
+    align-items: center;
+    width: 100%;
     justify-content: center;
   }
 
   .footer .footer-login-link {
-    padding: 6px 8px;
+    margin: 0 auto;
+    /* padding: 6px 8px; */
+  }
+  .footer .footer-admin-link{
+    position: absolute;
+    left: calc(50% + 57px);
   }
 
   .footer .box1,

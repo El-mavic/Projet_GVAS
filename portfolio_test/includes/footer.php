@@ -19,7 +19,7 @@
                     <i class="fa-solid fa-right-to-bracket"></i> Connexion
                 </a>
                 <a href="admin_login.php" class="footer-admin-link" aria-label="Connexion administrateur">
-                    <i class="fas fa-user-shield"></i>
+                    <i class="fa-solid fa-user-shield"></i>
                 </a>
             </div>
         </div>
