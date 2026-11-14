@@ -34,6 +34,12 @@
                 <i class="fa-solid fa-phone"></i> (+242) 06 420 14 15
             </a>
 
+            <span style="font: bold; font-size: 18px; display: flex; align-items: center;">|</span>
+
+            <a href="tel:+242055671120" class="box2">
+                <i class="fa-solid fa-phone"></i>(+242) 05 567 11 20
+            </a>
+
             <a class="box3">
                 <i class="fa-solid fa-location-dot"></i>
                 Pointe-Noire, République du Congo

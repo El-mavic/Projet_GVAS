@@ -189,16 +189,16 @@ require 'includes/header.php';
         <div class="cercle-grand"></div>
         <div class="cercle-moyen"></div>
 
-        <img src="Mes_images/group.png" class="orbe orbe-1">
-        <img src="Mes_images/pers.png" class="orbe orbe-3">
-        <img src="Mes_images/work.png" class="orbe orbe-4">
+        <img src="Mes_images/group.jpeg" class="orbe orbe-1">
+        <img src="Mes_images/pers.jpeg" class="orbe orbe-3">
+        <img src="Mes_images/work.jpeg" class="orbe orbe-4">
 
         <div class="phone">
             <div class="phone- bar"></div>
             <div class="phone-screen">
                 <img src="Mes_images/pic.png" alt="Aperçu portfolio" style="width:100%; object-fit:cover; margin:0; border-radius:8px;">
-                <img src="Mes_images/test1.jpg" alt="Aperçu portfolio" style="width:100%; object-fit:cover; margin:0; border-radius:8px;">
-                <img src="Mes_images/test2.jpg" alt="Aperçu portfolio" style="width:100%; object-fit:cover; margin:0; border-radius:8px;">
+                <img src="Mes_images/test1.png" alt="Aperçu portfolio" style="width:100%; object-fit:cover; margin:0; border-radius:8px;">
+                <img src="Mes_images/test2.png" alt="Aperçu portfolio" style="width:100%; object-fit:cover; margin:0; border-radius:8px;">
 
 
             </div>
