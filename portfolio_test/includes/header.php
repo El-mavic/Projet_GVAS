@@ -21,7 +21,7 @@
 
 
     <title><?= e($pageTitle) ?> — Mon Portfolio</title>
-    
+
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/test.css">
     <?php if (basename($_SERVER['PHP_SELF']) === 'dashboard.php'): ?>
@@ -49,7 +49,7 @@
         </div>
 
         <div class="navlinks" id="navlinks-menu">
-            <span class="mobile-menu-title">Navigation</span>
+
             <ul>
                 <?php $currentPage = basename($_SERVER['PHP_SELF']); ?>
                 <?php if ($currentPage === 'apropos.php'): ?>

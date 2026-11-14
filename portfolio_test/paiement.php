@@ -34,7 +34,7 @@ $yabetoo = require __DIR__ . '/config/yabetoo.php';
 
 $secretKey = trim((string)($yabetoo['secret_key'] ?? ''));
 
-$amount = max(1, (int)($yabetoo['publication_amount'] ?? 1000));
+$amount = 10000; // Montant fixe de publication en FCFA
 
 $mode = ($yabetoo['mode'] ?? 'sandbox') === 'production'
     ? 'production'
@@ -199,9 +199,9 @@ if (
         }
 
         // Vérification du numéro congolais
-        elseif (!preg_match('/^\+?242[0-9]{9}$/', $phone)) {
+        elseif (!preg_match('/^(?:\+?242)?[0-9]{9}$/', $phone)) {
 
-            $error = 'Saisissez un numéro du Congo-Brazzaville au format +242XXXXXXXXX.';
+            $error = 'Saisissez un numéro valide de 9 chiffres, avec ou sans indicatif +242.';
         } else {
 
             // Suppression du signe +
@@ -519,7 +519,7 @@ require __DIR__ . '/includes/header.php';
             </div>
             <ul class="payment-benefits">
                 <li><i class="fa-solid fa-circle-check"></i> Portfolio visible sur la page d’accueil</li>
-                <li><i class="fa-solid fa-circle-check"></i> Paiement sécurisé par Yabetoo Pay</li>
+                <li><i class="fa-solid fa-circle-check"></i> Paiement sécurisé </li>
                 <li><i class="fa-solid fa-circle-check"></i> Publication activée après confirmation</li>
             </ul>
         </aside>
@@ -567,17 +567,17 @@ require __DIR__ . '/includes/header.php';
                     </label>
 
                     <label>
-                        Numéro Mobile Money
+                        Inserer votre numéro.
                         <div class="payment-phone-input">
                             <i class="fa-solid fa-mobile-screen-button"></i>
                             <input type="tel" name="phone" required placeholder="+242 00 000 00 00" value="<?= e($_POST['phone'] ?? '') ?>" autocomplete="tel">
                         </div>
-                        <small>Utilisez le numéro associé à votre compte Mobile Money, au format +242 00 000 00 00.</small>
+                        <small>Utilisez le numéro associé à votre compte, au format +242 00 000 00 00.</small>
                     </label>
 
                     <button class="button-primary payment-submit" type="submit">
                         <i class="fa-solid fa-paper-plane"></i>
-                        Payer <?= number_format($amount, 0, ',', ' ') ?> FCFA avec Yabetoo Pay
+                        Payer <?= number_format($amount, 0, ',', ' ') ?> FCFA
                     </button>
                 </form>
 

@@ -23,7 +23,7 @@ return [
 
     // Prix de publication en FCFA
     'publication_amount' => (int)(
-        getenv('YABETOO_PUBLICATION_AMOUNT') ?: 1000
+        getenv('YABETOO_PUBLICATION_AMOUNT') ?: 5000
     ),
 
 ];
