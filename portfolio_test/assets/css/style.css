@@ -1733,7 +1733,7 @@ textarea {
 .profile-link {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 8px;
   margin-top: 17px;
   padding: 11px 13px;
@@ -5913,24 +5913,6 @@ main.page>*:nth-child(n + 2) {
     border: 1px solid rgba(255, 255, 255, 0.12);
   }
 
-  /* 
-  .navbar-logo {
-    position: static;
-    display: flex;
-    align-items: center;
-  }
-  .navbar-logo .pic {
-    display: grid;
-    place-items: center;
-  }
-  .navbar-logo img {
-    width: 54px;
-    height: 54px;
-    border-radius: 50%;
-  }
-  .navbar-logo .name {
-    margin-left: 10px;
-  } */
 }
 
 
@@ -6012,13 +5994,28 @@ main.page>*:nth-child(n + 2) {
     justify-content: center;
     gap: 2px;
   }
+.footer .footer-column:last-child a{
+  width: fit-content;
+  max-width: 100%;
+  align-self: center;
+}
+
 
   .footer .footer-login-menu {
+    display: flex;
+    /* flex-direction: center; */
+    align-items: center;
+    width: 100%;
     justify-content: center;
   }
 
   .footer .footer-login-link {
-    padding: 6px 8px;
+    margin: 0 auto;
+    /* padding: 6px 8px; */
+  }
+  .footer .footer-admin-link{
+    position: absolute;
+    left: calc(50% + 57px);
   }
 
   .footer .box1,

@@ -399,7 +399,7 @@ require 'includes/header.php';
                     <a
                         class="profile-link"
                         href="profil.php?id=<?= (int) $p['id'] ?>">
-                        Voir le portfolio <span>↗</span>
+                        Voir le portfolio <span></span>
                     </a>
 
 
