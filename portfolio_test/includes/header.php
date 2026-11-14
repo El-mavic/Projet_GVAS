@@ -18,10 +18,10 @@
     <meta name="color-scheme" content="light">
     <meta name="format-detection" content="telephone=no">
 
-    
+
 
     <title><?= e($pageTitle) ?> — Mon Portfolio</title>
-    
+
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/test.css">
     <?php if (basename($_SERVER['PHP_SELF']) === 'dashboard.php'): ?>
@@ -42,14 +42,14 @@
 
 
     <nav class="navbar">
-        
+
         <div class="navbar-logo">
             <a href="index.php" class="pic"><img src="../Mes_images/logo1.png" alt="Profolio"></a>
             <span class="name">Profolio</span>
         </div>
 
         <div class="navlinks" id="navlinks-menu">
-            <span class="mobile-menu-title">Navigation</span>
+
             <ul>
                 <?php $currentPage = basename($_SERVER['PHP_SELF']); ?>
                 <?php if ($currentPage === 'apropos.php'): ?>
