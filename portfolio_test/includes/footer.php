@@ -31,8 +31,12 @@
             </a>
 
             <a href="tel:+242064201415" class="box2">
-                <i class="fa-solid fa-phone"></i> (+242) 06 420 14 15
+                <i class="fa-solid fa-phone"></i> (+242) 06 420 14 15 / (+242) 05 567 11 20
             </a>
+            <!-- <span style="font: bold; font-size: 18px; display: flex; align-items: center;">|</span> -->
+            <!-- <a href="tel:+242064201415" class="box2">
+                <i class="fa-solid fa-phone"></i> 
+            </a> -->
 
             <a class="box3">
                 <i class="fa-solid fa-location-dot"></i>
