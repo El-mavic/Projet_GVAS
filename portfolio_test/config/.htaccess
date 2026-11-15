@@ -1,11 +1,13 @@
+
+# Désactiver l'affichage du contenu des dossiers
 Options -Indexes
 
-# Bloquer l'accès au fichier .env
-<Files ".env">
-    Require all denied
-</Files>
-
-# Bloquer l'accès aux fichiers de configuration Yabetoo
+# Bloquer l'accès direct à yabetoo.php
 <Files "yabetoo.php">
     Require all denied
 </Files>
+
+# Bloquer les fichiers .env et leurs variantes
+<FilesMatch "^\.env(?:\..*)?$">
+    Require all denied
+</FilesMatch>
