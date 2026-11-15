@@ -1248,9 +1248,6 @@ textarea {
   right: 17px;
 }
 
-/* ========================================
-   TABLETTES
-======================================== */
 
 @media screen and (min-width: 911px) and (max-width: 1300px) {
   .orbe {
@@ -2612,8 +2609,7 @@ textarea {
 }
 
 .footer .box2,
-.footer .box1,
-.footer .box1 {
+.footer .box1{
   border-right: 1px solid #b0ccef;
   padding: 0 10px;
 }
@@ -2653,12 +2649,7 @@ textarea {
     align-items: center;
 }
 
-.footer-phone-btn {
-    margin: 0;
-    line-height: 1;
-    background: none;
-    border: none;
-}
+
 
 
 .footer-phone-dropdown {
@@ -2752,7 +2743,8 @@ textarea {
 }
 
 .footer a:hover,
-.footer a:hover i {
+.footer a:hover i,
+.footer button:hover i {
   color: #ffffff;
 }
 
@@ -5979,12 +5971,12 @@ main.page > *:nth-child(n + 2) {
 }
 
 .footer .box1,
-.footer .box3,
-.footer-phone-btn{
+.footer .box3{
   padding: 8px 12px;
 }
 
-.footer a {
+.footer a,
+.footer-phone-btn {
   min-height: 40px;
   padding: 8px 12px;
   border-radius: 12px;
@@ -5992,7 +5984,7 @@ main.page > *:nth-child(n + 2) {
 }
 
 .footer a:hover,
-.footer-phone-btn {
+.footer .footer-phone-btn:hover {
   background: rgba(255, 255, 255, 0.08);
 }
 
@@ -6129,7 +6121,7 @@ main.page > *:nth-child(n + 2) {
   }
   
   .footer a,
-  .footer-phone-dropdown a {
+  .footer-phone-btn {
     min-height: 34px;
     justify-content: center;
     padding: 6px 8px;
@@ -6137,9 +6129,7 @@ main.page > *:nth-child(n + 2) {
     text-align: center;
     overflow-wrap: anywhere;
   }
-.footer-phone-btn{
-  font-size: 12px;
-}
+
   .footer-bottom .footer-bottom-text {
     margin-top: 8px;
     padding-top: 8px;
@@ -6189,6 +6179,24 @@ main.page > *:nth-child(n + 2) {
 .footer .footer-phone-menu.active .footer-phone-btn .phone-arrow,
 .footer .footer-phone-btn[aria-expanded="true"] .phone-arrow {
     transform: rotate(180deg) !important;
+}
+
+.footer .footer-phone-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  color: var(--craie);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.footer .footer-phone-btn:hover{
+  color: var(--white);
+  transition: transform 0.2s ease;
 }
 
 /* Accessibilité */
