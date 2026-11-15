@@ -68,7 +68,7 @@ $secretKey = trim((string)($yabetoo['secret_key'] ?? ''));
 
 
 
-$amount = 10000; // Montant fixe de publication en FCFA
+$amount = 2500; // Montant fixe de publication en FCFA
 
 
 
