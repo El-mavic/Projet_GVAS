@@ -2649,9 +2649,6 @@ textarea {
     align-items: center;
 }
 
-
-
-
 .footer-phone-dropdown {
     position: absolute;
     bottom: calc(100% + 6px);
@@ -2727,7 +2724,8 @@ textarea {
     }
 }
 
-.footer a {
+.footer a,
+.footer-phone-btn {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -6187,7 +6185,6 @@ main.page > *:nth-child(n + 2) {
   gap: 8px;
   padding: 8px 12px;
   font-family: inherit;
-  font-size: inherit;
   font-weight: 600;
   color: var(--craie);
   background: transparent;
