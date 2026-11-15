@@ -1,0 +1,14 @@
+
+# Fichiers sensibles
+.env
+.env.*
+!.env.example
+
+# Dépendances
+/vendor/
+/node_modules/
+
+# Fichiers temporaires
+*.log
+.DS_Store
+Thumbs.db
