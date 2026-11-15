@@ -1,29 +1,39 @@
+
 <?php
 
 /**
  * Configuration Yabetoo Pay
- * La clé secrète ne doit jamais être affichée dans le navigateur.
+ * Les informations sensibles sont conservées dans .env.
  */
 
+$accountId = trim((string) getenv('YABETOO_ACCOUNT_ID'));
+$secretKey = trim((string) getenv('YABETOO_SECRET_KEY'));
+$mode = strtolower(trim((string) (getenv('YABETOO_MODE') ?: 'sandbox')));
+$amount = (int) (getenv('YABETOO_PUBLICATION_AMOUNT') ?: 10000);
+
+// Vérification du mode
+if (!in_array($mode, ['sandbox', 'production'], true)) {
+    throw new RuntimeException('Mode Yabetoo Pay invalide.');
+}
+
+// Vérification des paramètres obligatoires
+if ($accountId === '' || $secretKey === '') {
+    throw new RuntimeException(
+        'Configuration Yabetoo Pay incomplète. Vérifiez le fichier .env.'
+    );
+}
+
+// Vérification du montant
+if ($amount !== 10000) {
+    throw new RuntimeException(
+        'Le montant de publication doit être de 10 000 FCFA.'
+    );
+}
+
 return [
-
-    // Account ID de ton compte Yabetoo Pay
-    'account_id' => trim(
-        (string)(getenv('YABETOO_ACCOUNT_ID') ?: 'acct_01M2TS1XPZF0NEHEXF4HC3R86D')
-    ),
-
-    // Clé secrète API
-    // INSÈRE TA NOUVELLE CLÉ SECRÈTE DANS LE FICHIER .env
-    'secret_key' => trim(
-        (string)(getenv('YABETOO_SECRET_KEY') ?: '')
-    ),
-
-    // Mode de paiement : sandbox pour les tests
-    'mode' => getenv('YABETOO_MODE') ?: 'sandbox',
-
-    // Prix de publication en FCFA
-    'publication_amount' => (int)(
-        getenv('YABETOO_PUBLICATION_AMOUNT') ?: 5000
-    ),
-
+    'account_id' => $accountId,
+    'secret_key' => $secretKey,
+    'mode' => $mode,
+    'publication_amount' => $amount,
+    'currency' => 'XAF',
 ];
