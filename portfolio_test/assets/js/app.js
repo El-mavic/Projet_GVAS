@@ -551,3 +551,38 @@ revealTargets.forEach((element, index) => {
   revealObserver.observe(element);
 });
 
+// Menu déroulant des numéros de téléphone
+
+const phoneMenu = document.querySelector(".footer-phone-menu");
+const phoneBtn = document.querySelector(".footer-phone-btn");
+
+if (phoneMenu && phoneBtn) {
+
+    phoneBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        phoneMenu.classList.toggle("active");
+
+        const isOpen = phoneMenu.classList.contains("active");
+
+        phoneBtn.setAttribute("aria-expanded", isOpen);
+    });
+
+    document.addEventListener("click", (e) => {
+
+        if (!phoneMenu.contains(e.target)) {
+            phoneMenu.classList.remove("active");
+            phoneBtn.setAttribute("aria-expanded", "false");
+        }
+
+    });
+
+    document.addEventListener("keydown", (e) => {
+
+        if (e.key === "Escape") {
+            phoneMenu.classList.remove("active");
+            phoneBtn.setAttribute("aria-expanded", "false");
+        }
+
+    });
+}

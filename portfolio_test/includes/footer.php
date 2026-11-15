@@ -34,11 +34,35 @@
                 <i class="fa-solid fa-phone"></i> (+242) 06 420 14 15
             </a>
 
-            <span style="font: bold; font-size: 18px; display: flex; align-items: center;">|</span>
+            <span class="footer-sep">|</span>
 
             <a href="tel:+242055671120" class="box2">
                 <i class="fa-solid fa-phone"></i>(+242) 05 567 11 20
-            </a>
+            </a> 
+
+            <div class="footer-phone-menu">
+
+                <button type="button" class="footer-phone-btn" aria-expanded="false">
+                    <i class="fa-solid fa-phone"></i>
+                    Téléphone
+                    <i class="fa-solid fa-chevron-down phone-arrow"></i>
+                </button>
+
+                <div class="footer-phone-dropdown">
+
+                    <a href="tel:+242064201415">
+                        <i class="fa-solid fa-phone"></i>
+                        (+242) 06 420 14 15
+                    </a>
+
+                    <a href="tel:+242055671120">
+                        <i class="fa-solid fa-phone"></i>
+                        (+242) 05 567 11 20
+                    </a>
+
+                </div>
+
+            </div>
 
             <a class="box3">
                 <i class="fa-solid fa-location-dot"></i>
