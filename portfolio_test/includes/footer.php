@@ -44,7 +44,7 @@
 
                 <button type="button" class="footer-phone-btn" aria-expanded="false">
                     <i class="fa-solid fa-phone"></i>
-                    Téléphone
+                    Contacts 
                     <i class="fa-solid fa-chevron-down phone-arrow"></i>
                 </button>
 
