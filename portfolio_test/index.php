@@ -112,6 +112,46 @@ $stmt->execute($params);
 
 $profils = $stmt->fetchAll();
 
+$heroProfileImages = [];
+$heroImageQuery = $pdo->query("
+    SELECT nom, photo
+    FROM users
+    WHERE public = 1
+      AND payment_status = 'paid'
+      AND photo IS NOT NULL
+      AND photo <> ''
+    ORDER BY id DESC
+    LIMIT 24
+");
+
+foreach ($heroImageQuery->fetchAll() as $profileImage) {
+    $heroProfileImages[] = [
+        'src' => (string) $profileImage['photo'],
+        'alt' => 'Photo de ' . (string) $profileImage['nom'],
+    ];
+}
+
+$heroProfileImagesJson = json_encode(
+    $heroProfileImages,
+    JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_AMP | JSON_HEX_QUOT
+);
+if ($heroProfileImagesJson === false) {
+    throw new RuntimeException('Impossible de préparer les photos de profil : ' . json_last_error_msg());
+}
+
+$fallbackHeroImages = [
+    ['src' => 'Mes_images/group.jpeg', 'alt' => 'Exemple de profil'],
+    ['src' => 'Mes_images/pers.jpeg', 'alt' => 'Exemple de profil'],
+    ['src' => 'Mes_images/work.jpeg', 'alt' => 'Exemple de profil'],
+];
+$heroImageSlots = [];
+for ($slot = 0; $slot < 3; $slot++) {
+    $heroImageSlots[] = $heroProfileImages
+        ? $heroProfileImages[$slot % count($heroProfileImages)]
+        : $fallbackHeroImages[$slot];
+}
+$heroImageClasses = ['orbe-1', 'orbe-3', 'orbe-4'];
+
 
 // ========================================
 // 6. AFFICHER L'EN-TÊTE
@@ -185,13 +225,19 @@ require 'includes/header.php';
         </div>
 
     </div>
-    <div class="hero-droite">
+    <div class="hero-droite" data-profile-images="<?= e($heroProfileImagesJson) ?>">
         <div class="cercle-grand"></div>
         <div class="cercle-moyen"></div>
 
-        <img src="Mes_images/group.jpeg" class="orbe orbe-1">
-        <img src="Mes_images/pers.jpeg" class="orbe orbe-3">
-        <img src="Mes_images/work.jpeg" class="orbe orbe-4">
+        <div class="hero-profile-images">
+            <?php foreach ($heroImageSlots as $slot => $image): ?>
+                <img
+                    src="<?= e($image['src']) ?>"
+                    alt="<?= e($image['alt']) ?>"
+                    class="orbe <?= e($heroImageClasses[$slot]) ?>"
+                    data-profile-slot="<?= (int) $slot ?>">
+            <?php endforeach; ?>
+        </div>
 
         <div class="phone">
             <div class="phone- bar"></div>
@@ -208,6 +254,7 @@ require 'includes/header.php';
 
 </section>
 
+<main class="index-content">
 
 <!-- ========================================
      8. TITRE DES RÉSULTATS ET FILTRES

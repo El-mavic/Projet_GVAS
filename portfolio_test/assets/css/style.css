@@ -5842,7 +5842,7 @@ main.page > *:nth-child(n + 2) {
   overflow: hidden;
   margin: 28px 0 18px;
   padding: clamp(38px, 7vw, 82px) clamp(24px, 6vw, 70px);
-  border-radius: 30px;
+  border-radius: 0;
   text-align: center;
   background:
     radial-gradient(
@@ -5877,10 +5877,23 @@ main.page > *:nth-child(n + 2) {
 }
 
 .about-page-hero::after {
-  width: 210px;
-  height: 210px;
-  right: -110px;
-  top: -120px;
+  width: clamp(280px, 42vw, 540px);
+  height: clamp(210px, 31.5vw, 405px);
+  right: 4%;
+  top: 50%;
+  border: 0;
+  border-radius: 0;
+  background: url("../../Mes_images/logo.png") center / contain no-repeat;
+  mix-blend-mode: multiply;
+  opacity: 0.22;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.about-page-hero h1,
+.about-page-hero p {
+  position: relative;
+  z-index: 1;
 }
 
 .about-page-eyebrow {
@@ -6054,7 +6067,7 @@ main.page > *:nth-child(n + 2) {
 
 @media (max-width: 613px) {
   .about-page-hero {
-    border-radius: 22px;
+    border-radius: 0;
   }
 
   .about-page-hero p {
@@ -6200,6 +6213,301 @@ main.page > *:nth-child(n + 2) {
 @media (prefers-reduced-motion: reduce) {
   .message-track {
     animation: none;
+  }
+}
+
+/* Contacts compacts et cohérents sur toutes les tailles d’écran */
+.footer .box1,
+.footer .box3,
+.footer .footer-phone-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 8px 12px;
+  border-right: 1px solid #b0ccef;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  max-width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #e4eaff;
+  border-radius: 10px;
+  background: #f4f7ff;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 911px) {
+  body .navbar {
+    min-height: 68px;
+    padding: 8px 14px;
+    gap: 12px;
+  }
+
+  body .navbar .navbar-logo {
+    position: static;
+    top: auto;
+    left: auto;
+    flex-direction: row;
+  }
+
+  body .navbar .navbar-logo img {
+    width: 44px;
+    height: 44px;
+  }
+
+  body .navbar .navbar-logo .name {
+    position: static;
+    top: auto;
+    font-size: 1rem;
+  }
+
+  body .navbar .menu-burger {
+    display: flex;
+    position: relative;
+    top: auto;
+    right: auto;
+    flex: 0 0 40px;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    width: 40px;
+    height: 40px;
+    padding: 7px;
+    gap: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .navbar .navlinks {
+    width: min(290px, 86vw);
+    box-sizing: border-box;
+    padding: 14px 16px 20px;
+  }
+
+  .navbar .navlinks ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  body .navbar .navlinks ul li {
+    margin: 5px 0;
+    padding: 0;
+    font-size: 1rem;
+  }
+
+  .navbar .navlinks ul li a {
+    gap: 10px;
+    padding: 10px 12px;
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  .navbar .mobile-menu-danger,
+  .navbar .mobile-menu-session {
+    margin-top: 10px !important;
+  }
+}
+
+/* Le bouton Contacts remplace les numéros visibles sur toutes les largeurs */
+.footer .footer-column .box2,
+.footer .footer-sep {
+  display: none !important;
+}
+
+.footer .footer-phone-menu {
+  display: inline-flex !important;
+}
+
+.footer .footer-phone-dropdown {
+  z-index: 10001;
+}
+
+.footer .footer-phone-dropdown a {
+  min-height: 0;
+  padding: 5px 7px;
+  font-size: 12px;
+}
+
+@media (max-width: 613px) {
+  .footer .box1,
+  .footer .box3,
+  .footer .footer-phone-btn {
+    min-height: 34px;
+    padding: 6px 8px;
+    border-right: 0;
+    font-size: 12px;
+  }
+
+  .footer .footer-phone-menu {
+    align-self: center;
+  }
+
+  .contact-links {
+    gap: 8px;
+  }
+
+  .contact-links a {
+    padding: 7px 9px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .navbar .navlinks {
+    width: min(270px, 88vw);
+    padding: 12px 13px 18px;
+  }
+
+  .navbar .navlinks ul li a {
+    gap: 8px;
+    padding: 9px 10px;
+    font-size: 13px;
+  }
+}
+
+/* Aligner le contenu de l’index sur le header */
+.index-content,
+.about-content {
+  width: calc(100% - 40px);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.profile-editor-layout {
+  width: calc(100% - 40px);
+  max-width: 1400px;
+  margin: 20px auto 0;
+}
+
+.index-content > .results-head {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.index-content > .pagination {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.index-content > .join-banner,
+.index-content > .empty-state {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 911px) {
+  .index-content,
+  .about-content,
+  .profile-editor-layout {
+    width: calc(100% - 24px);
+  }
+}
+
+/* Images de profils disposées autour du téléphone */
+.hero-droite {
+  min-height: 720px;
+  flex-direction: row;
+  gap: 0;
+}
+
+.hero-profile-images {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  width: auto;
+  height: auto;
+  pointer-events: none;
+}
+
+.hero-droite .hero-profile-images img.orbe {
+  position: absolute;
+  display: block;
+  width: clamp(80px, 11vw, 148px);
+  height: clamp(80px, 11vw, 148px);
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  box-shadow: 0 16px 36px rgba(2, 18, 48, 0.32);
+  box-sizing: border-box;
+  object-fit: cover;
+  backdrop-filter: none;
+  z-index: 0;
+  transition: opacity 0.35s ease;
+}
+
+.hero-droite .hero-profile-images .orbe-1 {
+  top: calc(50% - 225px);
+  bottom: auto;
+  left: max(4px, calc(50% - clamp(220px, 21vw, 240px)));
+  right: auto;
+}
+
+.hero-droite .hero-profile-images .orbe-3 {
+  top: calc(50% + 125px);
+  bottom: auto;
+  left: max(4px, calc(50% - clamp(220px, 21vw, 240px)));
+  right: auto;
+}
+
+.hero-droite .hero-profile-images .orbe-4 {
+  top: calc(50% - 45px);
+  bottom: auto;
+  right: max(4px, calc(50% - clamp(220px, 21vw, 240px)));
+  left: auto;
+}
+
+.hero-droite .hero-profile-images img.orbe.is-changing {
+  opacity: 0.2;
+}
+
+@media screen and (max-width: 620px) {
+  .hero-droite {
+    min-height: 690px;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .hero-profile-images {
+    position: relative;
+    inset: auto;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-droite .hero-profile-images img.orbe {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    flex: 0 1 76px;
+    width: 76px;
+    height: 76px;
+    z-index: 1;
+  }
+
+  .hero-droite .hero-profile-images .orbe-1,
+  .hero-droite .hero-profile-images .orbe-3,
+  .hero-droite .hero-profile-images .orbe-4 {
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
   }
 }
 

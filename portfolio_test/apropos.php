@@ -9,6 +9,8 @@ require 'includes/header.php';
     <p>Découvrez l’histoire, les valeurs et le fonctionnement de Profolio, la vitrine professionnelle imaginée par l’équipe BHS.</p>
 </section>
 
+<main class="about-content">
+
 <section class="profolio-about reveal">
     <div class="profolio-about-heading">
         <h2>À PROPOS DE LA PLATE-FORME PROFOLIO</h2>
@@ -94,5 +96,6 @@ require 'includes/header.php';
         Commencer maintenant
         <i class="fa-solid fa-arrow-right"></i>
     </a>
+</section>
 
 <?php require 'includes/footer.php'; ?>

@@ -172,5 +172,4 @@
         </nav>
 
     </header>
-    <script src="assets/js/app.js" defer></script>
     <!-- <main class="page"> -->

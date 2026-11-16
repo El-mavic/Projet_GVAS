@@ -124,6 +124,46 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   setupProfileRepeaters();
 
+  const profileCarousel = document.querySelector('.hero-droite[data-profile-images]');
+  if (profileCarousel && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const profiles = JSON.parse(profileCarousel.dataset.profileImages || '[]');
+    const slots = Array.from(profileCarousel.querySelectorAll('[data-profile-slot]'));
+
+    if (profiles.length > 1 && slots.length) {
+      let nextProfileIndex = profiles.length > slots.length ? slots.length : 1;
+      let nextSlotIndex = 0;
+
+      const rotateProfileImage = () => {
+        const slot = slots[nextSlotIndex];
+        const profile = profiles[nextProfileIndex];
+        const image = new Image();
+
+        image.onload = () => {
+          slot.classList.add('is-changing');
+          window.setTimeout(() => {
+            slot.src = profile.src;
+            slot.alt = profile.alt;
+            slot.classList.remove('is-changing');
+          }, 180);
+          nextProfileIndex = (nextProfileIndex + 1) % profiles.length;
+          nextSlotIndex = (nextSlotIndex + 1) % slots.length;
+          window.setTimeout(rotateProfileImage, 2800);
+        };
+
+        image.onerror = () => {
+          console.error('Impossible de charger une photo de profil du carrousel.', profile.src);
+          nextProfileIndex = (nextProfileIndex + 1) % profiles.length;
+          nextSlotIndex = (nextSlotIndex + 1) % slots.length;
+          window.setTimeout(rotateProfileImage, 2800);
+        };
+
+        image.src = profile.src;
+      };
+
+      window.setTimeout(rotateProfileImage, 2800);
+    }
+  }
+
   const profilePhoneForm = document.getElementById('portfolio-profile-form');
   const phoneInput = profilePhoneForm?.querySelector('[name="telephone"]');
   if (profilePhoneForm && phoneInput && typeof window.intlTelInput === 'function') {

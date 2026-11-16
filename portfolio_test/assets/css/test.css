@@ -94,7 +94,6 @@ body {
 
 @media screen and (max-width: 911px) {
   .navbar {
-    padding: 0;
     display: flex;
   }
 
@@ -131,20 +130,8 @@ body {
     margin: 25px 0;
   }
 
-  .navbar-logo {
-    position: absolute;
-    top: 6px;
-    left: 50px;
-  }
-
-  .name {
-    top: 50px;
-    position: absolute;
-  }
-
   .navbar .menu-burger {
     display: flex;
-    width: 35px;
     cursor: pointer;
   }
   
