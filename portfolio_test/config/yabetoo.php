@@ -9,7 +9,7 @@
 $accountId = trim((string) getenv('YABETOO_ACCOUNT_ID'));
 $secretKey = trim((string) getenv('YABETOO_SECRET_KEY'));
 $mode = strtolower(trim((string) (getenv('YABETOO_MODE') ?: 'sandbox')));
-$amount = (int) (getenv('YABETOO_PUBLICATION_AMOUNT') ?: 10000);
+$amount = (int) (getenv('YABETOO_PUBLICATION_AMOUNT') ?: 2500);
 
 // Vérification du mode
 if (!in_array($mode, ['sandbox', 'production'], true)) {
@@ -24,9 +24,9 @@ if ($accountId === '' || $secretKey === '') {
 }
 
 // Vérification du montant
-if ($amount !== 10000) {
+if ($amount !== 2500) {
     throw new RuntimeException(
-        'Le montant de publication doit être de 10 000 FCFA.'
+        'Le montant de publication doit être de 2500 FCFA.'
     );
 }
 
